@@ -5,9 +5,9 @@
 This is an open-source project to develop python software modules
 for diffraction and the study of atomic structure of materials.
 
-<h2>Products</h2>
+<h1>Products</h1>
 
-<h3>DiffPy library</h3>
+<h2>DiffPy library</h2>
 <p>
 A library of python modules for carrying out tasks in
 diffraction.  This is at an early stage of development and is not yet
@@ -16,7 +16,7 @@ has been already used to build two easy-to-use end applications.
 </p>
 
 
-<h3>DiffPy applications</h3>
+<h2>DiffPy applications</h2>
 <ul>
   <li>
   <strong>PDFgui</strong> - a program for full-profile fitting of the atomic
@@ -33,7 +33,7 @@ has been already used to build two easy-to-use end applications.
 </ul>
 </p>
 
-<h2>References</h2>
+<h1>References</h1>
 
 <p>
 PDFgui and PDFfit2 are intended for scientific research that will be
@@ -50,17 +50,17 @@ PDFfit2 and PDFgui: Computer programs for studying
 nanostructure in crystals</a>, J. Phys: Condens. Matter, in print.
 </cite>
 
-<h2>Acknowledgements</h2>
+<h1>Acknowledgements</h1>
 
-<h3>Developers</h3>
-<p><small>
+<h2>Developers</h2>
+<p>
 The active DiffPy team is Pavol Juhas, Chris Farrow, Emil Bozin, Simon Billinge,
 Dmitry Bryndin, Jiwu Liu, Wenduo Zhou.  The development is centered in the
 Department of Physics and Astronomy, Michigan State University
-</small></p>
+</p>
 
-<h3>Funding</h3>
-<p><small>
+<h2>Funding</h2>
+<p>
 This software was developed as part of the
 Distributed Data Analysis of Neutron Scattering Experiments (DANSE)
 project funded by the US National Science Foundation under grant
@@ -69,12 +69,12 @@ DMR-0304391 in the Billinge-group, and with support from Michigan State
 University.  Any opinions, findings, and conclusions or recommendations
 expressed in this material are those of the author(s) and do not
 necessarily reflect the views of the respective funding bodies.
-</small></p>
+</p>
 
-<h3>Other</h3>
-<p><small>
+<h2>Other</h2>
+<p>
   <a href="http://www.vim.org">www.vim.org</a>
   for splendid editor and inspiration for this website.
-</small></p>
+</p>
 
 <!--#include virtual="include/footer.html" -->
