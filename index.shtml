@@ -1,0 +1,80 @@
+<!--#include file="include/header.html" -->
+
+<h1>Welcome to the DiffPy project.</h1>
+
+This is an open-source project to develop python software modules
+for diffraction and the study of atomic structure of materials.
+
+<h2>Products</h2>
+
+<h3>DiffPy library</h3>
+<p>
+A library of python modules for carrying out tasks in
+diffraction.  This is at an early stage of development and is not yet
+ready for code development by non-experts.  Nevertheless, DiffPy
+has been already used to build two easy-to-use end applications.
+</p>
+
+
+<h3>DiffPy applications</h3>
+<ul>
+  <li>
+  <strong>PDFgui</strong> - a program for full-profile fitting of the atomic
+  pair distribution function (PDF) derived from x-ray or neutron diffraction data.
+  This is a graphical front end for the PDFfit2 refinement program,
+  with built in graphical and structure visualization capabilities. 
+  It is currently in beta release and it is distributed as a part of the DiffPy library.
+  </li>
+  <li>
+  <strong>PDFfit2</strong> - the structure refinement engine for fitting
+  structural models to experimentally derived PDFs.  This is used as calculation
+  backand of PDFgui, but can be run separately.
+  </li>
+</ul>
+</p>
+
+<h2>References</h2>
+
+<p>
+PDFgui and PDFfit2 are intended for scientific research that will be
+published in the open literature and are free to use.
+Please cite the following paper in all your scientific publications
+using one of our programs.
+</p>
+
+<cite>
+C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, J. Bloch, Th. Proffen
+and S. J. L. Billinge,
+<a href="doc/pdfgui/Farrow-jpcm-subm.pdf">
+PDFfit2 and PDFgui: Computer programs for studying
+nanostructure in crystals</a>, J. Phys: Condens. Matter, in print.
+</cite>
+
+<h2>Acknowledgements</h2>
+
+<h3>Developers</h3>
+<p><small>
+The active DiffPy team is Pavol Juhas, Chris Farrow, Emil Bozin, Simon Billinge,
+Dmitry Bryndin, Jiwu Liu, Wenduo Zhou.  The development is centered in the
+Department of Physics and Astronomy, Michigan State University
+</small></p>
+
+<h3>Funding</h3>
+<p><small>
+This software was developed as part of the
+Distributed Data Analysis of Neutron Scattering Experiments (DANSE)
+project funded by the US National Science Foundation under grant
+DMR-0520547.  Developments of PDFfit2 were funded by NSF grant
+DMR-0304391 in the Billinge-group, and with support from Michigan State
+University.  Any opinions, findings, and conclusions or recommendations
+expressed in this material are those of the author(s) and do not
+necessarily reflect the views of the respective funding bodies.
+</small></p>
+
+<h3>Other</h3>
+<p><small>
+  <a href="http://www.vim.org">www.vim.org</a>
+  for splendid editor and inspiration for this website.
+</small></p>
+
+<!--#include file="include/footer.html" -->

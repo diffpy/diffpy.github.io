@@ -1,0 +1,60 @@
+<!--#include file="include/header.html" -->
+
+<h1>Documentation</h1>
+
+<h2>User manuals</h2>
+<table>
+  <tr>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+  </tr>
+  <tr>
+    <td width="100" valign="top">
+      <strong>PDFgui</strong>
+    </td>
+    <td>
+      user manual formatted as
+      <a href="doc/pdfgui/pdfgui.html">HTML</a>,
+      <a href="doc/pdfgui/pdfgui.pdf">PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+  </tr>
+  <tr>
+    <td width="100" valign="top">
+      <strong>PDFfit2</strong>
+    </td>
+    <td>
+      Documentation is not yet available besides built-in help system.
+      Since commands and variable names are quite similar to the old PDFFIT,
+      you can use this
+      <a href="doc/pdffit/pdf_man.pdf">manual</a>
+      and
+      <a href="doc/pdffit/pdf_cmd.pdf">command reference</a>
+      to get started with the program.
+    </td>
+  </tr>
+</table>
+
+<h2>Publications</h2>
+
+<ol type="1">
+<li>
+C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, J. Bloch, Th. Proffen
+and S. J. L. Billinge,
+<a href="doc/pdfgui/Farrow-jpcm-subm.pdf">
+PDFfit2 and PDFgui: Computer programs for studying
+nanostructure in crystals</a>,
+<i>J. Phys: Condens. Matter.</i>, in print.
+</li><br>
+
+<li>
+Th. Proffen and S. J. L. Billinge,
+<a href="http://journals.iucr.org/j/issues/1999/03/00/gl0603/gl0603.pdf">
+PDFFIT a program for full profile structural refinement of the atomic pair
+distribution function</a>, <i>J. Appl. Crystallogr.</i>
+<b>32</b>, 572 (1999).
+</li><br>
+</ol>
+
+<!--#include file="include/footer.html" -->

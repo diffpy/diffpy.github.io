@@ -1,0 +1,45 @@
+<!--#include file="include/header.html" -->
+
+<h1>Community</h1>
+
+<p>
+For a bright future of DiffPy project it is essential to build a strong
+community of users and contributing developers.  There are several
+Google groups for support and development of DiffPy and related applications.
+</p>
+
+<table>
+  <tr>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+  </tr>
+  <tr>
+    <td width="100" valign="top">
+      <a href="http://groups.google.com/group/diffpy-users">diffpy-users</a>
+    </td>
+    <td>
+      Help on usage of PDFgui, PDFfit2 and other DiffPy components. 
+      This group should become a knowledge base for PDFgui user tips,
+      tricks and troubleshooting.  Feel free to ask your question here.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+  </tr>
+  <tr>
+    <td width="100" valign="top">
+      <a href="http://groups.google.com/group/diffpy-dev">diffpy-dev</a>
+    </td>
+    <td>
+      For discussions about development and changes of PDFgui, PDFfit2 and
+      DiffPy library in general.  Materials scientists, chemists physicists,
+      engineers - please contribute by telling us your needs or sharing your
+      suggestions here.
+    </td>
+  </tr>
+</table>
+
+<p>
+To report or browse bugs, please use the link at the sidebar of this page.
+</p>
+
+<!--#include file="include/footer.html" -->
