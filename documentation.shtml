@@ -1,4 +1,4 @@
-<!--#include file="include/header.html" -->
+<!--#include virtual="include/header.html" -->
 
 <h1>Documentation</h1>
 
@@ -57,4 +57,4 @@ distribution function</a>, <i>J. Appl. Crystallogr.</i>
 </li><br>
 </ol>
 
-<!--#include file="include/footer.html" -->
+<!--#include virtual="include/footer.html" -->

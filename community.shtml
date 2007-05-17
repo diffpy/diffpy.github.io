@@ -1,4 +1,4 @@
-<!--#include file="include/header.html" -->
+<!--#include virtual="include/header.html" -->
 
 <h1>Community</h1>
 
@@ -42,4 +42,4 @@ Google groups for support and development of DiffPy and related applications.
 To report or browse bugs, please use the link at the sidebar of this page.
 </p>
 
-<!--#include file="include/footer.html" -->
+<!--#include virtual="include/footer.html" -->
