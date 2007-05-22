@@ -10,33 +10,53 @@ Google groups for support and development of DiffPy and related applications.
 
 <table>
   <tr>
-    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="10" alt=""> </td>
   </tr>
   <tr>
     <td width="100" valign="top">
       <a href="http://groups.google.com/group/diffpy-users">diffpy-users</a>
     </td>
     <td>
+      <p>
       Help on usage of PDFgui, PDFfit2 and other DiffPy components. 
       This group should become a knowledge base for PDFgui user tips,
-      tricks and troubleshooting.  Feel free to ask your question here.
+      tricks and troubleshooting.  Feel free to ask your question here.<br>
+      </p>
+      <form action="http://groups.google.com/group/diffpy-users/boxsubscribe">
+        Subscribe email:
+	<input type=text name=email>
+	<input type=submit name="sub" value="Subscribe">
+      </form>
     </td>
   </tr>
   <tr>
-    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="10" alt=""> </td>
   </tr>
   <tr>
     <td width="100" valign="top">
       <a href="http://groups.google.com/group/diffpy-dev">diffpy-dev</a>
     </td>
     <td>
+      <p>
       For discussions about development and changes of PDFgui, PDFfit2 and
       DiffPy library in general.  Materials scientists, chemists physicists,
       engineers - please contribute by telling us your needs or sharing your
       suggestions here.
+      </p>
+      <form action="http://groups.google.com/group/diffpy-dev/boxsubscribe">
+        Subscribe email:
+	<input type=text name=email>
+	<input type=submit name="sub" value="Subscribe">
+      </form>
     </td>
   </tr>
 </table>
+
+<p>
+You can also share your comments, suggestions, praise or complaints by
+sending email to 
+<a href="mailto:billinge@pa.msu.edu">Simon J. Billinge</a>.
+</p>
 
 <p>
 To report or browse bugs, please use the link at the sidebar of this page.
