@@ -1,0 +1,12 @@
+<!--#include virtual="include/header.html" -->
+
+<h1>Download</h1>
+
+By downloading and using this program you are agreeing to the following
+conditions.
+
+<pre>
+<!--#include virtual="LICENSE.txt" -->
+</pre>
+
+<h1>DiffPy Releases</h1>

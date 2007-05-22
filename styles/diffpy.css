@@ -159,5 +159,5 @@ tr.tableheader th {
 
 td.checker {
 	background-color: #007f00;
-	background-image: url(../images/checkerboard.png);
+	background-image: url(/images/checkerboard.png);
 }
