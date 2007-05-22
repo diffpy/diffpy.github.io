@@ -28,7 +28,7 @@ has been already used to build two easy-to-use end applications.
   <li>
   <strong>PDFfit2</strong> - the structure refinement engine for fitting
   structural models to experimentally derived PDFs.  This is used as calculation
-  backand of PDFgui, but can be run separately.
+  backend of PDFgui, but can be run separately.
   </li>
 </ul>
 
@@ -46,7 +46,7 @@ C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, J. Bloch, Th. Proffen
 and S. J. L. Billinge,
 <a href="doc/pdfgui/Farrow-jpcm-subm.pdf">
 PDFfit2 and PDFgui: Computer programs for studying
-nanostructure in crystals</a>, J. Phys: Condens. Matter, in print.
+nanostructure in crystals</a>, J. Phys: Condens. Matter, in press.
 </cite>
 
 <h1>Acknowledgements</h1>
