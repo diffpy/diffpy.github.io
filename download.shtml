@@ -2,6 +2,13 @@
 
 <h1>Download</h1>
 
+<a href="#unix">Unix</a> -
+<a href="#windows">Windows</a> -
+<a href="#subversion">Subversion</a> -
+<a href="#releases">Releases</a> 
+
+<h2>License</h2>
+
 <p>
 By downloading and using this program you are agreeing to the following
 conditions.
@@ -11,10 +18,77 @@ conditions.
 <!--#include virtual="LICENSE.txt" -->
 </pre> </blockquote>
 
+<a name="unix"></a>
+<h2>Unix, Linux, MAC</h2>
+
+<p>
+DiffPy is installed from a '.tgz' source archive on Unix-like operating systems.
+Download the latest <b>diffpy-VERSION.tgz</b> file from the list below and
+unpack it using
+</p>
+<pre>
+    tar -xzf diffpy-VERSION.tgz
+</pre>
+
+<p>
+DiffPy requires several external libraries and applications.
+Consult the
+<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt?format=raw">README.txt</a>
+file included with the distribution and make sure they are all
+in place.  To install DiffPy, execute as a root
+</p>
+<pre>
+    python setup.py install
+</pre>
+
+<p>
+For more detailed installation instructions see
+<a href="doc/pdfgui/pdfgui.html">PDFgui manual</a>.
+</p>
+
+<a name="windows"></a>
+<h2>Windows</h2>
+
+<p>
+DiffPy is provided as self-installing archive for Windows systems.  Download
+the latest <b>diffpy-VERSION.exe</b> file, launch the executable and follow
+the prompts.
+</p>
+
+<a name="subversion"></a>
+<h2>Subversion repository</h2>
+
+<p>
+The latest development sources of DiffPy are available in a public subversion
+code repository.  To obtain the latest code, run
+</p>
+<pre>
+    svn checkout svn://svn@danse.us/diffraction/diffraction/diffpy
+</pre>
+
+<p>
+The installation procedure is the same as for Unix-like operating systems:
+</p>
+<pre>
+    python setup.py install
+</pre>
+
+<p>
+The DiffPy subversion repository can be also browsed online
+<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/">here</a>.
+</p>
+
+<p>&nbsp;</p>
+
+<a name="releases"></a>
 <h1>DiffPy Releases</h1>
 
 <p>
-<!--#include virtual="download_index.py" -->
+Please, join in the
+<a href="community.shtml">community</a>
+forum for tips and tricks and feedback.
 </p>
+
+<!--#include virtual="download_index.py" -->
 
 <!--#include virtual="include/footer.html" -->
