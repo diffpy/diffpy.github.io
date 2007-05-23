@@ -52,7 +52,7 @@ def getDownloadHTMLCode():
     nw = getNameWidth(lst)
     fmt = "%-@NWs%-20s%-8s%s".replace('@NW', str(nw))
     header = ("<pre>" + fmt + '<hr>') % \
-            ('Name', 'Last modified', 'Size', 'Downloads')
+            ('Name', 'Date', 'Size', 'Downloads')
     bodylines = []
     for d in lst:
         anchor = '<a href="%(relpath)s">%(name)s</a>' % d
