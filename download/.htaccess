@@ -1,5 +1,3 @@
-HeaderName "../download.shtml"
-ReadmeName "../include/footer.html"
-IndexOptions +SuppressColumnSorting +SuppressHTMLPreamble +SuppressIcon
 IndexOrderDefault Descending Date
-IndexIgnore ..
+IndexOptions +SuppressIcon
+IndexIgnore .. stats.txt

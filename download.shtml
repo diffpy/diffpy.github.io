@@ -2,11 +2,19 @@
 
 <h1>Download</h1>
 
+<p>
 By downloading and using this program you are agreeing to the following
 conditions.
+</p>
 
-<pre>
+<blockquote class="license"> <pre>
 <!--#include virtual="LICENSE.txt" -->
-</pre>
+</pre> </blockquote>
 
 <h1>DiffPy Releases</h1>
+
+<p>
+<!--#include virtual="download_index.py" -->
+</p>
+
+<!--#include virtual="include/footer.html" -->
