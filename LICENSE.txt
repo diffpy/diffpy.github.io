@@ -6,9 +6,10 @@ If you use this program to do productive scientific research that leads
 to publication, we ask that you acknowledge use of the program by citing
 the following paper in your publication:
 
-     C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, J. Bloch, Th. Proffen
-     and S. J. L. Billinge, PDFfit2 and PDFgui: Computer programs for studying
-     nanostructure in crystals, J. Phys: Condens. Matter, in print.
+     C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, E. S. Bozin,
+     J. Bloch, Th. Proffen and S. J. L. Billinge, PDFfit2 and PDFgui:
+     Computer programs for studying nanostructure in crystals,
+     J. Phys: Condens. Matter , to be published (2007).
 
 Copyright 2006, Board of Trustees of Michigan State University,
 All rights reserved.
