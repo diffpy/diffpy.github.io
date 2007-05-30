@@ -22,7 +22,7 @@ has been already used to build two easy-to-use end applications.
   <strong>PDFgui</strong> - a program for full-profile fitting of the atomic
   pair distribution function (PDF) derived from x-ray or neutron diffraction data.
   This is a graphical front end for the PDFfit2 refinement program,
-  with built in graphical and structure visualization capabilities. 
+  with built in graphical and structure visualization capabilities.
   It is currently in beta release and it is distributed as a part of the DiffPy library.
   </li>
   <li>
@@ -42,8 +42,8 @@ using one of our programs.
 </p>
 
 <cite>
-C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, J. Bloch, Th. Proffen
-and S. J. L. Billinge,
+C. L. Farrow, P. Juhas, J. W. Liu, D. Bryndin, E. S. Bozin, J. Bloch,
+Th. Proffen and S. J. L. Billinge,
 <a href="doc/pdfgui/Farrow-jpcm-subm.pdf">
 PDFfit2 and PDFgui: Computer programs for studying
 nanostructure in crystals</a>, J. Phys: Condens. Matter, in press.
