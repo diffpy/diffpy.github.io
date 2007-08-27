@@ -43,7 +43,7 @@ def getDownloadList():
     return lst
 
 def getNameWidth(lst):
-    width = max([len(d['name']) for d in lst])
+    width = max([len(d['name']) for d in lst] + [0])
     width = 4 * (width/4 + 1)
     return width
 
