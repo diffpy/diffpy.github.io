@@ -1,11 +1,11 @@
 import os
-from mod_python import apache
 
-thisdir = os.path.dirname(os.path.abspath(__file__))
+_thisdir = os.path.dirname(os.path.abspath(__file__))
+_diffpydir = os.path.dirname(_thisdir)
 
-def getDownloadList():
+def _getDownloadList():
     import re
-    downloaddir = os.path.join(thisdir, 'download')
+    downloaddir = os.path.join(_diffpydir, 'download')
     ignore = re.compile(r'^[.]|stats.txt')
     lst = []
     for f in os.listdir(downloaddir):
@@ -42,14 +42,14 @@ def getDownloadList():
                 time.localtime(d['mtime']) )
     return lst
 
-def getNameWidth(lst):
+def _getNameWidth(lst):
     width = max([len(d['name']) for d in lst] + [0])
     width = 4 * (width/4 + 1)
     return width
 
-def getDownloadHTMLCode():
-    lst = getDownloadList()
-    nw = getNameWidth(lst)
+def _getDownloadHTMLCode():
+    lst = _getDownloadList()
+    nw = _getNameWidth(lst)
     fmt = "%-@NWs%-20s%-8s%s".replace('@NW', str(nw))
     header = ("<pre>" + fmt + '<hr>') % \
             ('Name', 'Date', 'Size', 'Downloads')
@@ -63,12 +63,12 @@ def getDownloadHTMLCode():
     code = header + "\n".join(bodylines) + footer
     return code
 
-def handler(req):
+def index(req):
 
     req.content_type = "text/html"
-    req.write(getDownloadHTMLCode())
+    req.write(_getDownloadHTMLCode())
+    return
 
-    return apache.OK
 #   <pre>Name                    Last modified      Size  Description<hr><a href="diffpy-1.0b.1232.tgz">diffpy-1.0b.1232.tgz</a>    14-May-2007 21:00  6.9M  
 #   <a href="diffpy-1.0b.1232.exe">diffpy-1.0b.1232.exe</a>    14-May-2007 21:00   20M  
 #   <a href="diffpy-1.0b.1218.tgz">diffpy-1.0b.1218.tgz</a>    07-May-2007 11:00  7.3M  

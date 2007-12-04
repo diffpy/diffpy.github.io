@@ -1,0 +1,36 @@
+<html>
+
+<p>
+This form is for automated error submission and testing.<br>
+If you got here anyway, please report bugs at
+<a href="http://groups.google.com/group/diffpy-dev/">
+http://groups.google.com/group/diffpy-dev/
+</a>
+</p>
+
+<p>
+<form action="/html/diffpy/cgi-bin/postbugreport.py/email" method="POST">
+  Reporter:
+  <input type="text" name="reporter" size=64 maxlength=256><br>
+
+  Summary:
+  <input type="text" name="summary" size=64 maxlength=1024><br>
+
+  Description:<br>
+  <textarea name="description" rows=10 cols=72 maxlength=4096></textarea><br>
+  <br>
+
+  Component:
+  <input type="text" name="component" maxlength=256><br>
+
+  Version:
+  <input type="text" name="version" maxlength=256><br>
+
+  Traceback:<br>
+  <textarea name="traceback" rows=10 cols=72 maxlength=8192></textarea><br>
+
+  <input type="submit">
+</form>
+</p>
+
+</html>
