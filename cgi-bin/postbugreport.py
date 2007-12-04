@@ -1,15 +1,17 @@
 #!/usr/bin/python
 
 
-_BUGEMAIL = "juhasp@msu.edu"
+_BUGEMAIL = "diffpy-dev@googlegroups.com"
 _SMTP_SERVER = "localhost"
 
 _MSG = """\
-From: diffpy@diffpy.org
-Subject: %(summary)s
+From: diffpy
+Subject: [%(component)s bug] %(summary)s
 To: %(bugemail)s
 
 reporter: %(reporter)s
+
+summary: %(summary)s 
 
 description: %(description)s 
 
@@ -26,6 +28,7 @@ def email(req, **kwargs):
     # process form arguments
     flds = {
         'reporter' : 'anonymous',
+        'summary' : '',
         'description' : '',
         'component' : '',
         'version' : '',
