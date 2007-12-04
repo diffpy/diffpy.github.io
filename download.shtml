@@ -89,6 +89,6 @@ Please, join in the
 forum for tips and tricks and feedback.
 </p>
 
-<!--#include virtual="cgi-bin/download_index.py" -->
+<!--#include virtual="pybin/download_index.py" -->
 
 <!--#include virtual="include/footer.html" -->
