@@ -33,7 +33,7 @@ unpack it using
 <p>
 DiffPy requires several external libraries and applications.
 Consult the
-<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt?format=raw">README.txt</a>
+<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt">README.txt</a>
 file included with the distribution and make sure they are all
 in place.  To install DiffPy, execute as a root
 </p>
