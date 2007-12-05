@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
-
+_BUGSENDER = "diffpy@diffpy.org"
 _BUGEMAIL = "diffpy-dev@googlegroups.com"
 _SMTP_SERVER = "localhost"
 
 _MSG = """\
-From: diffpy
+From: %(bugsender)s
 Subject: [%(component)s bug] %(summary)s
 To: %(bugemail)s
 
@@ -36,6 +36,7 @@ def email(req, **kwargs):
     }
     flds.update(kwargs)
     flds['bugemail'] = _BUGEMAIL
+    flds['bugsender'] = _BUGSENDER
     # check required fields
     required_fields = ('summary', 'description')
     missing_fields = [f for f in required_fields if not flds.get(f)]
@@ -50,7 +51,7 @@ def email(req, **kwargs):
     # send it out
     import smtplib
     conn = smtplib.SMTP(_SMTP_SERVER)
-    conn.sendmail(flds['reporter'], [_BUGEMAIL], msg)
+    conn.sendmail(_BUGSENDER, [_BUGEMAIL], msg)
     conn.quit()
     # show message that was sent:
     out = "\n".join([

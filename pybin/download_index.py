@@ -64,10 +64,7 @@ def _getDownloadHTMLCode():
     return code
 
 def index(req):
-
-    req.content_type = "text/html"
-    req.write(_getDownloadHTMLCode())
-    return
+    return _getDownloadHTMLCode()
 
 #   <pre>Name                    Last modified      Size  Description<hr><a href="diffpy-1.0b.1232.tgz">diffpy-1.0b.1232.tgz</a>    14-May-2007 21:00  6.9M  
 #   <a href="diffpy-1.0b.1232.exe">diffpy-1.0b.1232.exe</a>    14-May-2007 21:00   20M  

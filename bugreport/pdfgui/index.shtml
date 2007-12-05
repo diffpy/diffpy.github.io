@@ -9,7 +9,7 @@ http://groups.google.com/group/diffpy-dev/
 </p>
 
 <p>
-<form action="/html/diffpy/pybin/postbugreport.py/email" method="POST">
+<form action="/pybin/postbugreport.py/email" method="POST">
   Reporter:
   <input type="text" name="reporter" size=64 maxlength=256><br>
 
