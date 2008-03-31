@@ -1,7 +1,7 @@
 <!--#include virtual="include/header.html" -->
 
 <h1>Welcome to the DiffPy project.</h1>
-check check
+
 <p>
 This is an open-source project to develop python software modules
 for diffraction and the study of atomic structure of materials.
