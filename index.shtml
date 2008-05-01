@@ -7,17 +7,18 @@ This is an open-source project to develop python software modules
 for diffraction and the study of atomic structure of materials.
 DiffPy is developed as part of
 <a href="http://danse.us/">DANSE</a>,
-a software construction project funded by NSF to provide data
+a software construction project funded by the
+<a href="http://www.nsf.gov/">National Science Foundation</a>.
+to provide data
 analysis software tools for neutron scattering experiments that
 will be carried out at the 
-<a href="http://neutrons.ornl.gov/aboutsns/aboutsns.shtml">Spallation Neutron Source</a>
+<a href="http://neutrons.ornl.gov/aboutsns/aboutsns.shtml">
+  Spallation Neutron Source
+</a>
 at
 <a href="http://www.ornl.gov/">Oak Ridge National Laboratory</a>.
 </p>
-<p>
-This work is funded by the
-<a href="http://www.nsf.gov/">National Science Foundation</a>.
-</p>
+
 
 <h1>Products</h1>
 
