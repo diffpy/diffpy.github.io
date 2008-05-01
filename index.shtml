@@ -7,8 +7,12 @@ This is an open-source project to develop python software modules
 for diffraction and the study of atomic structure of materials.
 DiffPy is developed as part of
 <a href="http://danse.us/">DANSE</a>,
-a software framework for Distributed Data Analysis for
-Neutron Scattering Experiments.  
+a software construction project funded by NSF to provide data
+analysis software tools for neutron scattering experiments that
+will be carried out at the 
+<a href="http://neutrons.ornl.gov/aboutsns/aboutsns.shtml">Spallation Neutron Source</a>
+at
+<a href="http://www.ornl.gov/">Oak Ridge National Laboratory</a>.
 </p>
 <p>
 This work is funded by the
@@ -67,8 +71,11 @@ nanostructure in crystals</a>,
 <h2>Developers</h2>
 <p>
 The active DiffPy team is Pavol Juhas, Chris Farrow, Emil Bozin, Simon Billinge,
-Dmitry Bryndin, Jiwu Liu, Wenduo Zhou.  The development is centered in the
-Department of Physics and Astronomy, Michigan State University
+Dmitry Bryndin, Jiwu Liu, Wenduo Zhou.  
+Early developments were made in the Department of Physics and
+Astronomy, Michigan State University.  The development is now
+centered in the Department of Applied Physics and Applied Mathematics
+at Columbia University.
 </p>
 
 <h2>Funding</h2>
