@@ -33,7 +33,7 @@ unpack it using
 <p>
 DiffPy requires several external libraries and applications.
 Consult the
-<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt">README.txt</a>
+<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt?rev=1792">README.txt</a>
 file included with the distribution and make sure they are all
 in place.  To install DiffPy, execute as a root
 </p>
@@ -75,7 +75,7 @@ The installation procedure is the same as for Unix-like operating systems:
 
 <p>
 The DiffPy subversion repository can be also browsed online
-<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/">here</a>.
+<a href="http://danse.us/trac/diffraction/browser/diffraction/">here</a>.
 </p>
 
 <p>&nbsp;</p>
