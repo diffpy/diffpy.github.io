@@ -4,13 +4,14 @@
 
 <a href="#unix">Unix</a> -
 <a href="#windows">Windows</a> -
+<a href="#updates">Updates</a> -
 <a href="#subversion">Subversion</a> -
 <a href="#releases">Releases</a> 
 
 <h2>License</h2>
 
 <p>
-By downloading and using this program you are agreeing to the following
+By downloading and using this software you are agreeing to the following
 conditions.
 </p>
 
@@ -18,27 +19,49 @@ conditions.
 <!--#include virtual="LICENSE.txt" -->
 </pre> </blockquote>
 
+
 <a name="unix"></a>
-<h2>Unix, Linux, MAC</h2>
+<h2>Unix, Linux, Mac</h2>
 
 <p>
-DiffPy is installed from a '.tgz' source archive on Unix-like operating systems.
-Download the latest <b>diffpy-VERSION.tgz</b> file from the list below and
-unpack it using
+The installation of DiffPy requires several external libraries and applications.
+Consult the
+<a href="http://danse.us/trac/diffraction/browser/releases/diffpy-1.0/unix/README.txt">README.txt</a>
+file included with the distribution and make sure these requirements are all
+in place.
 </p>
+
+<p>
+The DiffPy components are registered at the Python Package Index (PyPI),
+therefore the most straightforward way to install is to execute
+<i>easy_install&nbsp;MODULE_NAME</i>.  The easy_install command
+downloads, unzips and installs the required package together with
+its requirements, for example
+</p>
+
 <pre>
-    tar -xzf diffpy-VERSION.tgz
+    easy_install diffpy.pdfgui
 </pre>
 
 <p>
-DiffPy requires several external libraries and applications.
-Consult the
-<a href="http://danse.us/trac/diffraction/browser/diffraction/diffpy/README.txt?rev=1792">README.txt</a>
-file included with the distribution and make sure they are all
-in place.  To install DiffPy, execute as a root
+would install diffpy.pdfgui together with diffpy.pdffit2 and diffpy.Structure
+that are required for its function.  The <i>easy_install</i> command is a part
+of Python setuptools library.
+If it is not available, install the "python-setuptools"
+package with the system package manager or use the ".tgz" archive
+below, which comes with <i>easy_install</i> included.
 </p>
+
+<p>
+If you prefer to install from local files, download the latest
+<b>diffpy-VERSION.tgz</b> archive list below, unpack
+and run the enclosed easy_install script
+</p>
+
 <pre>
-    python setup.py install
+    tar -xzf diffpy-VERSION.tgz
+    cd diffpy-VERSION
+    ./easy_install diffpy.pdfgui
 </pre>
 
 <p>
@@ -46,39 +69,67 @@ For more detailed installation instructions see
 <a href="doc/pdfgui/pdfgui.html">PDFgui manual</a>.
 </p>
 
+
 <a name="windows"></a>
 <h2>Windows</h2>
 
 <p>
 DiffPy is provided as self-installing archive for Windows systems.  Download
-the latest <b>diffpy-VERSION.exe</b> file, launch the executable and follow
+the latest <b>diffpy-VERSION.exe</b> file below, run it and follow
 the prompts.
 </p>
+
+
+<a name="updates"></a>
+<h2>DiffPy updates</h2>
+
+<p>
+Both Unix and Windows platforms can use the <i>easy_install</i> command
+to obtain the latest updates to the code.  For example, to obtain any
+new PDFgui upgrades, run
+</p>
+
+<pre>
+    easy_install -U diffpy.pdfgui
+</pre>
+
+<p>
+This installs only the changed DiffPy components.  These will
+be released more more frequently than the complete installation
+archives.
+</p>
+
 
 <a name="subversion"></a>
 <h2>Subversion repository</h2>
 
 <p>
-The latest development sources of DiffPy are available in a public subversion
-code repository.  To obtain the latest code, run
+The latest development sources of DiffPy packages are available in
+a public subversion code repository.  To install the latest development
+version of a DiffPy component called MODULE_NAME, run
 </p>
 <pre>
-    svn checkout svn://svn@danse.us/diffraction/diffraction/diffpy
+    easy_install -U \
+	svn://svn@danse.us/diffraction/diffraction/MODULE_NAME/trunk
 </pre>
 
 <p>
-The installation procedure is the same as for Unix-like operating systems:
+Another option is to install in a development mode, which is more
+convenient for code checking and debugging.  This can be done as
 </p>
+
 <pre>
-    python setup.py install
+    svn checkout \
+	svn://svn@danse.us/diffraction/diffraction/MODULE_NAME
+    cd MODULE_NAME/trunk
+    python setup.py develop
 </pre>
 
 <p>
-The DiffPy subversion repository can be also browsed online
-<a href="http://danse.us/trac/diffraction/browser/diffraction/">here</a>.
+The DiffPy subversion repository can be browsed online
+<a href="http://danse.us/trac/diffraction/browser/">here</a>.
 </p>
 
-<p>&nbsp;</p>
 
 <a name="releases"></a>
 <h1>DiffPy Releases</h1>
