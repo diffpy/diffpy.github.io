@@ -1,4 +1,4 @@
-<!--#include virtual="include/header.html" -->
+<!--#include virtual="inc_header.html" -->
 
 <h1>Welcome to the DiffPy project.</h1>
 
@@ -97,4 +97,4 @@ necessarily reflect the views of the respective funding bodies.
   for splendid editor and inspiration for this website.
 </p>
 
-<!--#include virtual="include/footer.html" -->
+<!--#include virtual="inc_footer.html" -->

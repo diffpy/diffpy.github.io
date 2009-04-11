@@ -1,4 +1,4 @@
-<!--#include virtual="include/header.html" -->
+<!--#include virtual="inc_header.html" -->
 
 <h1>Download</h1>
 
@@ -91,4 +91,4 @@ forum for tips and tricks and feedback.
 
 <!--#include virtual="pybin/download_index.py" -->
 
-<!--#include virtual="include/footer.html" -->
+<!--#include virtual="inc_footer.html" -->

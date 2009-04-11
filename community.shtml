@@ -1,4 +1,4 @@
-<!--#include virtual="include/header.html" -->
+<!--#include virtual="inc_header.html" -->
 
 <h1>Community</h1>
 
@@ -62,4 +62,4 @@ sending email to
 To report or browse bugs, please use the link at the sidebar of this page.
 </p>
 
-<!--#include virtual="include/footer.html" -->
+<!--#include virtual="inc_footer.html" -->
