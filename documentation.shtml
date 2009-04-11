@@ -15,23 +15,56 @@
       user manual formatted as
       <a href="doc/pdfgui/pdfgui.html">HTML</a>,
       <a href="doc/pdfgui/pdfgui.pdf">PDF</a>
+      <br>
+      tutorial files in a
+      <a href="doc/pdfgui/pdfgui-tutorial.zip">zip archive</a>
+      <br>
+      auto-generated
+      <a href="http://docs.danse.us/diffraction/diffpy.pdfgui/">API documentation</a>
     </td>
   </tr>
   <tr>
     <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
   </tr>
+
   <tr>
     <td width="100" valign="top">
       <strong>PDFfit2</strong>
     </td>
     <td>
-      Documentation is not yet available besides built-in help system.
-      Since commands and variable names are quite similar to the old PDFFIT,
-      you can use this
+      user manual not available.
+      To get started, check the
+      <a href="doc/pdffit2/pdffit2-examples.zip">examples</a>
+      from the code distribution and the pdffit2 built-in help.
+      For a complete reference, see the auto-generated
+      <a href="http://docs.danse.us/diffraction/diffpy.pdffit2/">API</a>,
+      especially for the class PdfFit.
+      <p>
+      Functions and variables are quite similar as
+      in the old PDFFIT, so its
       <a href="doc/pdffit/pdf_man.pdf">manual</a>
       and
       <a href="doc/pdffit/pdf_cmd.pdf">command reference</a>
-      to get started with the program.
+      should help as well.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"> <img src="images/spacer.png" width="1" height="5" alt=""> </td>
+  </tr>
+
+  <tr>
+    <td width="100" valign="top">
+      <strong>Structure</strong>
+    </td>
+    <td>
+      user manual not available.
+      To get started, see
+      <a href="doc/Structure/Structure-examples.zip">examples</a>
+      from the code distribution and the auto-generated
+      <a href="http://docs.danse.us/diffraction/diffpy.Structure/">API</a>.
+      For more information contact the developers or ask at the
+      diffpy-users Google group.
     </td>
   </tr>
 </table>
@@ -49,15 +82,14 @@
 
 <ol type="1">
 <li>
-C.&nbsp;L.&nbsp;Farrow, P.&nbsp;Juhas, J.&nbsp;W.&nbsp;Liu,
-D.&nbsp;Bryndin, E.&nbsp;S.&nbsp;Bozin,
+C.&nbsp;L.&nbsp;Farrow, P.&nbsp;Juhás, J.&nbsp;W.&nbsp;Liu,
+D.&nbsp;Bryndin, E.&nbsp;S.&nbsp;Božin,
 J.&nbsp;Bloch, Th.&nbsp;Proffen and
 S.&nbsp;J.&nbsp;L.&nbsp;Billinge,
 <a href="http://stacks.iop.org/0953-8984/19/335219">
 PDFfit2 and PDFgui: computer programs for studying
 nanostructure in crystals</a>,
 <i>J.&nbsp;Phys.: Condens. Matter</i> <b>19</b>, 335219 (2007)
-<p></p>
 </li>
 
 <li>
@@ -66,7 +98,6 @@ Th.&nbsp;Proffen and S.&nbsp;J.&nbsp;L.&nbsp;Billinge,
 PDFFIT a program for full profile structural refinement of the atomic pair
 distribution function</a>, <i>J.&nbsp;Appl. Crystallogr.</i>
 <b>32</b>, 572 (1999)
-<p></p>
 </li>
 </ol>
 
