@@ -20,30 +20,47 @@ at
 </p>
 
 
+<h1>News</h1>
+
+<ul>
+  <li>
+  2009-04-10 - release 1.0-r3067.  Contains many improvements and
+  bugfixes, simple installation and easy code updates.
+  </li>
+</ul>
+
 <h1>Products</h1>
 
 <h2>DiffPy library</h2>
 <p>
-A library of python modules for carrying out tasks in
-diffraction.  This is at an early stage of development and is not yet
-ready for code development by non-experts.  Nevertheless, DiffPy
-has been already used to build two easy-to-use end applications.
+A library of Python modules for carrying out structure analysis tasks
+from diffraction data.  The modules are at different stages of development
+and some are not yet ready for usage by non-experts.  Nevertheless, the
+components listed below should be stable enough and hopefully useful
+to a broader non-expert community.
 </p>
 
 
-<h2>DiffPy applications</h2>
+<h2>DiffPy components</h2>
 <ul>
   <li>
   <strong>PDFgui</strong> - a program for full-profile fitting of the atomic
   pair distribution function (PDF) derived from x-ray or neutron diffraction data.
   This is a graphical front end for the PDFfit2 refinement program,
   with built in graphical and structure visualization capabilities.
-  It is currently in beta release and it is distributed as a part of the DiffPy library.
   </li>
   <li>
   <strong>PDFfit2</strong> - the structure refinement engine for fitting
-  structural models to experimentally derived PDFs.  This is used as calculation
-  backend of PDFgui, but can be run separately.
+  structural models to experimentally derived PDFs.  It is used as calculation
+  engine for PDFgui, but can be used separately in simple Python scripts or
+  as a command-line program.
+  </li>
+
+  <li>
+  <strong>Structure</strong> - simple storage and manipulation
+  of crystal structure data.  Supports reading and writing in several structure
+  formats, coordinate transformations, symmetry expansion and generation of
+  symmetry constraints.
   </li>
 </ul>
 
@@ -57,8 +74,8 @@ using one of our programs.
 </p>
 
 <blockquote>
-  C.&nbsp;L.&nbsp;Farrow, P.&nbsp;Juhas, J.&nbsp;W.&nbsp;Liu,
-  D.&nbsp;Bryndin, E.&nbsp;S.&nbsp;Bozin, J.&nbsp;Bloch,
+  C.&nbsp;L.&nbsp;Farrow, P.&nbsp;Juhás, J.&nbsp;W.&nbsp;Liu,
+  D.&nbsp;Bryndin, E.&nbsp;S.&nbsp;Božin, J.&nbsp;Bloch,
   Th.&nbsp;Proffen and S.&nbsp;J.&nbsp;L.&nbsp;Billinge,
 <a href="http://stacks.iop.org/0953-8984/19/335219">
 PDFfit2 and PDFgui: computer programs for studying
@@ -71,12 +88,12 @@ nanostructure in crystals</a>,
 
 <h2>Developers</h2>
 <p>
-The active DiffPy team is Pavol Juhas, Chris Farrow, Emil Bozin, Simon Billinge,
-Dmitry Bryndin, Jiwu Liu, Wenduo Zhou.  
-Early developments were made in the Department of Physics and
-Astronomy, Michigan State University.  The development is now
-centered in the Department of Applied Physics and Applied Mathematics
-at Columbia University.
+The active DiffPy team is Pavol Juhás, Chris Farrow, Emil Božin, Simon Billinge,
+Wenduo Zhou, Peng Tian and Timur Dykhne.  The project was started at the Department
+of Physics and Astronomy, Michigan State University.  The development team
+has now mostly relocated to the Department of Applied Physics and Applied
+Mathematics at Columbia University in the city of New York.  The former members
+of the project while at Michigan State were Jiwu Liu and Dmitriy Bryndin.
 </p>
 
 <h2>Funding</h2>
@@ -84,9 +101,11 @@ at Columbia University.
 This software was developed as part of the
 Distributed Data Analysis of Neutron Scattering Experiments (DANSE)
 project funded by the US National Science Foundation under grant
-DMR-0520547.  Developments of PDFfit2 were funded by NSF grant
-DMR-0304391 in the Billinge-group, and with support from Michigan State
-University.  Any opinions, findings, and conclusions or recommendations
+DMR-0520547.  More information on DANSE can be
+found at http://danse.us.  The early developments of PDFfit2 were funded
+by NSF grant DMR-0304391 in the Billinge-group, and with support from
+Michigan State University.  Any opinions, findings, and conclusions
+or recommendations
 expressed in this material are those of the author(s) and do not
 necessarily reflect the views of the respective funding bodies.
 </p>
