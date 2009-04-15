@@ -1,10 +1,10 @@
 IndexOptions FancyIndexing SuppressIcon NameWidth=* VersionSort
 IndexOptions SuppressHTMLPreamble
 
-HeaderName header.html
-ReadmeName footer.html
+HeaderName .header.html
+ReadmeName .footer.html
 
-IndexIgnore .. *.html 
+IndexIgnore ..
 
 # DESCRIPTIONS BEGIN
 # DESCRIPTIONS END
