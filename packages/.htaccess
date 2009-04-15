@@ -1,2 +1,10 @@
-IndexOptions FancyIndexing SuppressIcon NameWidth=*
-IndexIgnore ..
+IndexOptions FancyIndexing SuppressIcon NameWidth=* VersionSort
+IndexOptions SuppressHTMLPreamble
+
+HeaderName header.html
+ReadmeName footer.html
+
+IndexIgnore .. *.html 
+
+# DESCRIPTIONS BEGIN
+# DESCRIPTIONS END
