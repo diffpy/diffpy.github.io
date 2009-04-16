@@ -2,11 +2,12 @@ import os
 import re
 import time
 
+# Constants
+
 _thisdir = os.path.dirname(os.path.abspath(__file__))
 _diffpydir = os.path.dirname(_thisdir)
 _statsfile = os.path.join(_diffpydir, 'stats.txt')
 
-rv = ''
 
 def _getDownloadList(drel):
     """Obtain data needed for creating download table for a directory.
@@ -52,10 +53,12 @@ def _getDownloadList(drel):
                 time.localtime(d['mtime']) )
     return lst
 
+
 def _getNameWidth(lst):
     width = max([len(d['name']) for d in lst] + [0])
     width = 4 * (width/4 + 1)
     return width
+
 
 def _getDownloadHTMLCode(drel):
     lst = _getDownloadList(drel)
@@ -72,6 +75,9 @@ def _getDownloadHTMLCode(drel):
     footer = '<hr></pre>'
     code = header + "\n".join(bodylines) + footer
     return code
+
+
+# Published items
 
 def index(req):
     return download(req)
