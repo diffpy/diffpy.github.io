@@ -34,7 +34,7 @@ in place.
 <p>
 The DiffPy components are registered at the Python Package Index (PyPI),
 therefore the most straightforward way to install is to execute
-<i>easy_install&nbsp;MODULE_NAME</i>.  The easy_install command
+<tt>easy_install&nbsp;MODULE_NAME</tt>.  The easy_install command
 downloads, unzips and installs the required package together with
 its requirements, for example
 </p>
@@ -45,17 +45,22 @@ its requirements, for example
 
 <p>
 would install diffpy.pdfgui together with diffpy.pdffit2 and diffpy.Structure
-that are required for its function.  The <i>easy_install</i> command is a part
-of Python setuptools library.
+that are required for its function.  The programs can be then started
+as <tt>pdfgui</tt> or <tt>pdffit2</tt>.
+</p>
+
+<p>
+The <tt>easy_install</tt> command is a
+part of the Python setuptools library.
 If it is not available, install the "python-setuptools"
 package with the system package manager or use the ".tgz" archive
-below, which comes with <i>easy_install</i> included.
+below, which comes with <tt>easy_install</tt> included.
 </p>
 
 <p>
 If you prefer to install from local files, download the latest
 <b>diffpy-VERSION.tgz</b> archive list below, unpack
-and run the enclosed easy_install script
+and run the enclosed <tt>easy_install</tt> script
 </p>
 
 <pre>
@@ -79,14 +84,36 @@ the latest <b>diffpy-VERSION.exe</b> file below, run it and follow
 the prompts.
 </p>
 
+<p>
+The self-installing archive includes a complete installation of Python
+that is used to run PDFgui and PDFfit2.  Nevertheless, PDFgui (and other
+DiffPy components) can be also installed under existing Python tree. 
+This requires Python 2.5 with several external Python packages,
+namely setuptools, numpy, wxPython and matplotlib.
+To add PDFgui to an existing Python tree, start Windows command prompt
+and run the <tt>easy_install</tt> script from the <tt>Python25/Scripts</tt>
+directory
+</p>
+
+<pre>
+    cd c:\Python25\Scripts
+    ..\python.exe easy_install-script.py diffpy.pdfgui
+</pre>
+
+<p>
+This installs library files under <tt>Python25/Lib/site-packages</tt>
+and executable scripts for <tt>pdfgui</tt> and <tt>pdffit2</tt> under
+<tt>Python25/Scripts</tt>.
+</p>
+
 
 <a name="updates"></a>
 <h2>DiffPy updates</h2>
 
 <p>
-Both Unix and Windows platforms can use the <i>easy_install</i> command
-to obtain the latest updates to the code.  For example, to obtain any
-new PDFgui upgrades, run
+Both Unix and Windows platforms can use the <tt>easy_install</tt> command
+to obtain the latest updates to the code.  For example, to upgrade
+PDFgui, run
 </p>
 
 <pre>
@@ -94,9 +121,11 @@ new PDFgui upgrades, run
 </pre>
 
 <p>
-This installs only the changed DiffPy components.  These will
-be released more more frequently than the complete installation
-archives.
+This installs only the changed DiffPy components as they become
+available at the DiffPy
+<a href="packages/">package repository</a>.  These packages
+are smaller and will be updated more frequently than the complete
+installation archives.
 </p>
 
 
@@ -115,7 +144,8 @@ version of a DiffPy component called MODULE_NAME, run
 
 <p>
 Another option is to install in a development mode, which is more
-convenient for code checking and debugging.  This can be done as
+convenient for debugging and experimenting with the code. 
+This can be done as
 </p>
 
 <pre>
@@ -143,8 +173,8 @@ forum for tips and tricks and feedback.
 <!--#include virtual="pybin/download_index.py/download" -->
 
 <small>
-  Older releases are available in the
-  <a href="download/archive">archive</a>.
+  The older releases can be found in the
+  <a href="download/archive">downloads archive</a>.
 </small>
 
 
