@@ -142,4 +142,10 @@ forum for tips and tricks and feedback.
 
 <!--#include virtual="pybin/download_index.py/download" -->
 
+<small>
+  Older releases are available in the
+  <a href="download/archive">archive</a>.
+</small>
+
+
 <!--#include virtual="inc_footer.html" -->
