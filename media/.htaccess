@@ -1,2 +1,2 @@
 IndexOptions FancyIndexing SuppressIcon NameWidth=*
-IndexIgnore ..
+# IndexIgnore ..

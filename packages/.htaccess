@@ -4,7 +4,7 @@ IndexOptions SuppressHTMLPreamble
 HeaderName .header.html
 ReadmeName .footer.html
 
-IndexIgnore ..
+# IndexIgnore ..
 
 # DESCRIPTIONS BEGIN
 # DESCRIPTIONS END
