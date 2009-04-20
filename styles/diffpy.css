@@ -168,3 +168,8 @@ td.checker {
 }
 
 li { padding-bottom: 6pt }
+
+IMG.middle {
+    vertical-align: top;
+    border: 0;
+}

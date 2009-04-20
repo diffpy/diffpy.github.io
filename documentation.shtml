@@ -91,7 +91,7 @@ PDFfit2 and PDFgui: computer programs for studying
 nanostructure in crystals</a>,
 <i>J.&nbsp;Phys.: Condens. Matter</i> <b>19</b>, 335219 (2007)
 <a href="doc/pdfgui/Farrow-jpcm-2007.pdf">
-  <img src="images/pdficon_small.gif" border=0 alt="Farrow-jpcm-2007.pdf">
+  <img src="images/pdficon_small.gif" alt="Farrow-jpcm-2007.pdf" class=middle>
 </a>
 </li>
 
@@ -102,7 +102,7 @@ PDFFIT a program for full profile structural refinement of the atomic pair
 distribution function</a>, <i>J.&nbsp;Appl. Crystallogr.</i>
 <b>32</b>, 572 (1999)
 <a href="doc/pdfgui/Proffen-jac-1999.pdf">
-  <img src="images/pdficon_small.gif" border=0 alt="Proffen-jac-1999.pdf">
+  <img src="images/pdficon_small.gif" alt="Proffen-jac-1999.pdf" class=middle>
 </a>
 </li>
 </ol>
