@@ -27,6 +27,10 @@ def email(req, **kwargs):
     """
     # process form arguments
     flds = {
+        # hidden data entries
+        'bugemail' : _BUGEMAIL,
+        'bugsender' : _BUGSENDER,
+        # entries from the form
         'reporter' : 'anonymous',
         'summary' : '',
         'description' : '',
@@ -35,8 +39,6 @@ def email(req, **kwargs):
         'traceback' : ''
     }
     flds.update(kwargs)
-    flds['bugemail'] = _BUGEMAIL
-    flds['bugsender'] = _BUGSENDER
     # check required fields
     required_fields = ('summary', 'description')
     missing_fields = [f for f in required_fields if not flds.get(f)]
@@ -51,12 +53,12 @@ def email(req, **kwargs):
     # send it out
     import smtplib
     conn = smtplib.SMTP(_SMTP_SERVER)
-    conn.sendmail(_BUGSENDER, [_BUGEMAIL], msg)
+    conn.sendmail(flds['bugsender'], [flds['bugemail']], msg)
     conn.quit()
     # show message that was sent:
     out = "\n".join([
             "<html>",
-            "<p>Bugreport emailed to %s" % _BUGEMAIL,
+            "<p>Bugreport emailed to %s" % flds['bugemail'],
             "</p>",
             "<pre>" + msg + "</pre></html>"
             ]) + "\n"

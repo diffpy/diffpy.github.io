@@ -17,6 +17,8 @@ http://groups.google.com/group/diffpy-dev/
 </p>
 
 <form action="/pybin/postbugreport.py/email" method="POST">
+  <input type="hidden" name="bugsender" value="diffpy@diffpy.org">
+  <input type="hidden" name="bugemail" value="diffpy-dev@googlegroups.com">
   Reporter:
   <input type="text" name="reporter" size=64 maxlength=256><br>
 
