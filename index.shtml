@@ -31,22 +31,22 @@ at
 
 <h1>Products</h1>
 
-<ul>
-  <li>
-  <strong>PDFgetX3</strong> - a command-line utility for
-  converting X-ray powder diffraction data to atomic pair
-  distribution functions (PDF).  PDFgetX3 is easy to use, fast
-  and convenient for automated batch processing.  The
-  interactive mode provides complete access to all parameters
-  and intermediate results, as well as live-plotting feature for
-  parameters tuning and visualization of their effects on the
-  results.  PDFgetX3 can be used either as a standalone
-  application or as a Python library of PDF-processing
-  functions.
-  <i>The software is free for open academic research, but requires
-  paid license for commercial use.</i>
-</li>
-</ul>
+<h2>PDFgetX3</h2>
+
+<p>
+PDFgetX3 is a command-line utility for
+converting X-ray powder diffraction data to atomic pair
+distribution functions (PDF).  PDFgetX3 is easy to use, fast
+and convenient for automated batch processing.  The
+interactive mode provides complete access to all parameters
+and intermediate results, as well as live-plotting feature for
+parameters tuning and visualization of their effects on the
+results.  PDFgetX3 can be used either as a standalone
+application or as a Python library of PDF-processing
+functions.
+<i>The software is free for open academic research, but requires
+paid license for commercial use.</i>
+</p>
 
 
 <h2>DiffPy library</h2>
