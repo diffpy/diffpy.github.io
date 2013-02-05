@@ -87,8 +87,8 @@ to a broader non-expert community.
 <p>
 PDFgui and PDFfit2 are intended for scientific research that will be
 published in the open literature and are free to use.
-Please cite the following paper in all your scientific publications
-using one of our programs.
+Please cite the following paper in your scientific publications
+using one of these programs:
 </p>
 
 <blockquote>
@@ -101,8 +101,25 @@ nanostructure in crystals</a>,
 <i>J.&nbsp;Phys.: Condens. Matter</i> <b>19</b>,  335219 (2007)
 <a href="doc/pdfgui/Farrow-jpcm-2007.pdf">
   <img src="images/pdficon_small.gif" alt="Farrow-jpcm-2007.pdf" class=middle>
-</a>
+</a>.
 <p></p>
+</blockquote>
+
+<p>
+For publications using the PDFgetX3 program please cite
+</p>
+
+<blockquote>
+P.&nbsp;Juhás and T.&nbsp;Davis, C.&nbsp;L.&nbsp;Farrow,
+S.&nbsp;J.&nbsp;L.&nbsp;Billinge,
+<a href="http://arxiv.org/abs/1211.7126">
+PDFgetX3: A rapid and highly automatable program for
+processing powder diffraction data into total scattering pair
+distribution functions</a>,
+<i>eprint&nbsp;arXiv: 1211.7126</i>, (2012)
+<a href="http://arxiv.org/pdf/1211.7126">
+  <img src="images/pdficon_small.gif" alt="Farrow-jpcm-2007.pdf" class=middle>
+</a>.
 </blockquote>
 
 <h1>Acknowledgements</h1>
