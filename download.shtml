@@ -5,12 +5,16 @@
 <h2>PDFgetX3</h2>
 
 <p>
-PDFgetX3 can be obtained from the
+PDFgetX3-academic can be obtained from the
 <a href="http://columbia.flintbox.com/public/project/">
-FIXME Columbia flintbox website</a>,
-provided it would be used for open academic research.
+Columbia flintbox website</a>,
+provided it will be used for open academic research
+(<a href=doc/pdfgetx3/install.html>installation instructions</a>).
+</p>
+
+<p>
 If you plan to use PDFgetX3 in any other way, please contact
-<b>FIXME Simon J. Billinge or CTV</b>.
+<a href="mailto:techventures@columbia.edu">Columbia Technology Ventures</a>.
 </p>
 
 <h2>DiffPy Library</h2>
