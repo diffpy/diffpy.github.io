@@ -1,9 +1,0 @@
-IndexOptions FancyIndexing SuppressIcon NameWidth=* VersionSort
-IndexOptions SuppressHTMLPreamble
-IndexOrderDefault Descending Date
-
-HeaderName .header.html
-ReadmeName .footer.html
-
-# DESCRIPTIONS BEGIN
-# DESCRIPTIONS END
