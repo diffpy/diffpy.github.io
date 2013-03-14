@@ -112,13 +112,13 @@ For publications using the PDFgetX3 program please cite
 <blockquote>
 P.&nbsp;Juhás and T.&nbsp;Davis, C.&nbsp;L.&nbsp;Farrow,
 S.&nbsp;J.&nbsp;L.&nbsp;Billinge,
-<a href="http://arxiv.org/abs/1211.7126">
+<a href="http://dx.doi.org/10.1107/S0021889813005190">
 PDFgetX3: A rapid and highly automatable program for
 processing powder diffraction data into total scattering pair
 distribution functions</a>,
-<i>eprint&nbsp;arXiv: 1211.7126</i>, (2012)
-<a href="http://arxiv.org/pdf/1211.7126">
-  <img src="images/pdficon_small.gif" alt="Farrow-jpcm-2007.pdf" class=middle>
+<i>J. Appl. Cryst.</i> <b>46</b>, 560-566 (2013)
+<a href="doc/pdfgetx3/Juhas-jac-2013.pdf">
+  <img src="images/pdficon_small.gif" alt="Juhas-jac-2013.pdf" class=middle>
 </a>.
 </blockquote>
 
