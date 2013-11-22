@@ -14,6 +14,6 @@ development of DiffPy and related applications.
   physicists, engineers - please contribute by telling us your needs or sharing your suggestions here.
 
 You can also share your comments, suggestions, praise or complaints by sending email to 
-Simon J. Billinge.
+`Simon J. Billinge <sb2896@columbia.edu>`_.
 
-To report or browse bugs, please use the link at the sidebar of this page.
+To report or browse bugs, please use the link at the top of this page.
