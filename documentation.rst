@@ -8,8 +8,8 @@ User manuals
 - **PDFgetX3** user manual formatted as `HTML <http://www.diffpy.org/doc/pdfgetx3/index.html>`_, 
   `PDF` and the `tutorial files`
 
-- **PDFgui** user manual formatted as `HTML <http://www.diffpy.org/doc/pdfgui/pdfgui.html>`_, `PDF` 
-  tutorial files in a `zip archive <http://www.diffpy.org/doc/pdfgui/pdfgui-tutorial.zip>`_ 
+- **PDFgui** user manual formatted as `HTML <http://www.diffpy.org/doc/pdfgui/pdfgui.html>`__, `PDF` 
+  tutorial files in a `zip archive <http://www.diffpy.org/doc/pdfgui/pdfgui-tutorial.zip>`__ 
   auto-generated `API documentation <http://docs.danse.us/diffraction/diffpy.pdfgui/>`_
 
 - **PDFfit2** user manual not available. To get started, see 
