@@ -175,3 +175,30 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+# Publish to diffpy.github.io
+
+GITWEBREPOURL = https://github.com/diffpy/diffpy.github.io.git
+GITLASTCOMMIT = $(shell git rev-parse HEAD)
+
+publish: publish-prepare publish-push
+
+publish-prepare:
+	@test -d _build/html || \
+	    ( echo >&2 "Run 'make html' first!"; false )
+	test -d _build/diffpy.github.io || \
+	    git clone -b master $(GITWEBREPOURL) _build/diffpy.github.io
+	cd _build/diffpy.github.io && \
+	    git pull $(GITWEBREPOURL) master
+	rsync -acv --delete --exclude=.git --exclude=.rsync-exclude \
+	    --exclude-from=_build/diffpy.github.io/.rsync-exclude \
+	    --link-dest=$(PWD)/_build/html _build/html/ _build/diffpy.github.io/
+	cd _build/diffpy.github.io && \
+	    git add --all . && \
+	    git diff --cached --quiet || \
+	    git commit -m "Synchronized with the source at $(GITLASTCOMMIT)."
+
+publish-push:
+	cd _build/diffpy.github.io && \
+	    git push $(GITWEBREPOURL) master
+
