@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to the DiffPy project. &mdash; DiffPy 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/diffpy.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DiffPy 1.0 documentation" href="#" />
+    <link rel="next" title="Community" href="community.html" /> 
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <div class="logo"><a href="#">
+            <img class="logo" src="_static/diffpy_logo_header.png" alt="Logo"/>
+          </a></div>
+       
+        <div class="rel">
+          <a href="#">Home</a> · 
+<a href="community.html">Community</a> ·
+<a href="documentation.html">Documentation</a> · 
+<a href="download.html">Download</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+             
+            
+        
+        <div class="document">
+            
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-the-diffpy-project">
+<h1>Welcome to the DiffPy project.<a class="headerlink" href="#welcome-to-the-diffpy-project" title="Permalink to this headline">¶</a></h1>
+<p>This is an open-source project to develop python software modules for diffraction
+and the study of atomic structure of materials. DiffPy is developed as part of <a class="reference external" href="http://danse.us/">DANSE</a>,
+a software construction project funded by the <a class="reference external" href="http://www.nsf.gov/">National Science Foundation</a> to provide
+data analysis software tools for neutron scattering experiments that will be carried
+out at the <a class="reference external" href="http://neutrons.ornl.gov/">Spallation Neutron Source</a> at <a class="reference external" href="http://www.ornl.gov/">Oak Ridge National Laboratory</a>.</p>
+</div>
+<div class="section" id="news">
+<h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>2013-02-05 - initial release of the PDFgetX3 program.</li>
+</ul>
+</div>
+<div class="section" id="products">
+<h1>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h1>
+<p><strong>PDFgetX3</strong></p>
+<p>PDFgetX3 is a command-line utility for converting X-ray powder diffraction data to
+atomic pair distribution functions (PDF). PDFgetX3 is easy to use, fast and convenient
+for automated batch processing. The interactive mode provides complete access to all
+parameters and intermediate results, as well as live-plotting feature for parameters
+tuning and visualization of their effects on the results. PDFgetX3 can be used either
+as a standalone application or as a Python library of PDF-processing functions. <em>The
+software is free for open academic research, but requires paid license for commercial use.</em></p>
+<p><strong>DiffPy library</strong></p>
+<p>A library of Python modules for carrying out structure analysis tasks from diffraction data.
+The modules are at different stages of development and some are not yet ready for usage by
+non-experts. Nevertheless, the components listed below should be stable enough and hopefully
+useful to a broader non-expert community.</p>
+<p><strong>DiffPy components</strong></p>
+<ul class="simple">
+<li><strong>PDFgui</strong> - a program for full-profile fitting of the atomic pair distribution function (PDF)
+derived from x-ray or neutron diffraction data. This is a graphical front end for the
+PDFfit2 refinement program, with built in graphical and structure visualization capabilities.</li>
+<li><strong>PDFfit2</strong> - the structure refinement engine for fitting structural models to experimentally
+derived PDFs. It is used as calculation engine for PDFgui, but can be used separately
+in simple Python scripts or as a command-line program.</li>
+<li><strong>Structure</strong> - simple storage and manipulation of crystal structure data. Supports reading
+and writing in several structure formats, coordinate transformations, symmetry expansion
+and generation of symmetry constraints.</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p>PDFgui and PDFfit2 are intended for scientific research that will be published in
+the open literature and are free to use. Please cite the following paper in your
+scientific publications using one of these programs:</p>
+<blockquote>
+<div>C. L. Farrow, P. Juhás, J. W. Liu, D. Bryndin, E. S. Božin, J. Bloch, Th. Proffen and
+S. J. L. Billinge, <a class="reference external" href="http://iopscience.iop.org/0953-8984/19/33/335219/">PDFfit2 and PDFgui: computer programs for studying nanostructure in
+crystals</a>, <em>J. Phys.: Condens.
+Mat.</em> <strong>19</strong>, 335219 (2007) <a class="reference external" href="_static/Farrow-jpcm-2007.pdf"><img alt="downloadImageFarrow" src="_images/pdficon_small.png" /></a></div></blockquote>
+<p>For publications using the PDFgetX3 program please cite</p>
+<blockquote>
+<div>P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, <a class="reference external" href="http://scripts.iucr.org/cgi-bin/paper?S0021889813005190">PDFgetX3: A rapid and highly
+automatable program for processing powder diffraction data into total scattering pair
+distribution functions</a>,
+<em>J. Appl. Crystallogr.</em> <strong>46</strong>, 560-566 (2013) <a class="reference external" href="_static/Juhas-jac-2013.pdf"><img alt="downloadImageJuhas" src="_images/pdficon_small.png" /></a></div></blockquote>
+</div>
+<div class="section" id="acknowledgements">
+<h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h1>
+<p><strong>Developers</strong></p>
+<p>The active DiffPy team is Pavol Juhás, Chris Farrow, Emil Božin, Simon Billinge, Wenduo Zhou,
+Peng Tian and Timur Davis. The project was started at the Department of Physics and Astronomy,
+Michigan State University. The development team has now mostly relocated to the Department of
+Applied Physics and Applied Mathematics at Columbia University in the city of New York. The
+former members of the project while at Michigan State were Jiwu Liu and Dmitriy Bryndin.</p>
+<p><strong>Funding</strong></p>
+<p>This software was developed as part of the Distributed Data Analysis of Neutron Scattering
+Experiments (DANSE) project funded by the US National Science Foundation under grant DMR-0520547.
+More information on DANSE can be found at <a class="reference external" href="http://danse.us">http://danse.us</a>. The early developments of PDFfit2 were
+funded by NSF grant DMR-0304391 in the Billinge-group, and with support from Michigan State
+University. Any opinions, findings, and conclusions or recommendations expressed in this material
+are those of the author(s) and do not necessarily reflect the views of the respective funding bodies.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+          </div>
+      </div>
+        </div>
+        <div class="clearer"></div>
+    </div>
+    </div>
+
+    <div class="footer-wrapper">
+      
+    <div class="footer">
+        &copy; Copyright 2013, Kevin Knox.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+    </div>
+
+  </body>
+</html>
