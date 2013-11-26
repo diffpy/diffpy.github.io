@@ -196,7 +196,7 @@ publish-prepare:
 	cd _build/diffpy.github.io && \
 	    git add --all . && \
 	    git diff --cached --quiet || \
-	    git commit -m "Synchronized with the source at $(GITLASTCOMMIT)."
+	    git commit -m "Synchronized with diffpy/diffpy-website@$(GITLASTCOMMIT)."
 
 publish-push:
 	cd _build/diffpy.github.io && \
