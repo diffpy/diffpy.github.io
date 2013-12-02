@@ -1,6 +1,7 @@
 Documentation
 =============
 
+.. include:: abbreviations.txt
 
 User manuals
 ============
@@ -38,15 +39,8 @@ Reports
 Publications
 ============
 
-#. P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, `PDFgetX3: A rapid and highly automatable 
-   program for processing powder diffraction data into total scattering pair distribution functions
-   <http://arxiv.org/abs/1211.7126>`_, *eprint arXiv: 1211.7126*, (2012)  Farrow-jpcm-2007.pdf
+#. |citeJuhasJac13|
 
-#. C. L. Farrow, P. Juhás, J. W. Liu, D. Bryndin, E. S. Božin, J. Bloch, Th. Proffen and S. J. L. 
-   Billinge, `PDFfit2 and PDFgui: computer programs for studying nanostructure in crystals
-   <http://iopscience.iop.org/0953-8984/19/33/335219/>`_, *J. Phys.: Condens. Mat.* **19**, 
-   335219 (2007)  Farrow-jpcm-2007.pdf
+#. |citeFarrowJpcm07|
 
-#. Th. Proffen and S. J. L. Billinge, `PDFFIT a program for full profile structural refinement of the 
-   atomic pair distribution function <http://journals.iucr.org/j/issues/1999/03/00/gl0603/>`_, 
-   *J. Appl. Crystallogr.* **32**, 572 (1999)  Proffen-jac-1999.pdf
+#. |citeProffenJac99|
