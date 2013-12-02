@@ -178,7 +178,7 @@ pseudoxml:
 
 # Publish to diffpy.github.io
 
-GITREPOPATH = $(shell git rev-parse --git-dir)
+GITREPOPATH = $(PWD)/.git
 GITREMOTE = origin
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse HEAD)
@@ -189,6 +189,7 @@ publish: publish-prepare publish-push
 publish-prepare:
 	@test -d _build/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
+	git fetch $(GITREMOTE) master:master
 	test -d _build/master || \
 	    git clone -b master $(GITREPOPATH) _build/master
 	cd _build/master && \
