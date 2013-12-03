@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.phase.Phase</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.phase-module.html">Module&nbsp;phase</a> ::
+        Class&nbsp;Phase
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.phase.Phase-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Phase</h1><p class="nomargin-top"><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                       object --+            
+                                |            
+refinementdata.hdf5.object.Object --+        
+                                    |        
+   refinementdata.refinable.Refinable --+    
+                                        |    
+       refinementdata.structure.Structure --+
+                                            |
+                                           <strong class="uidshort">Phase</strong>
+</pre>
+
+<hr />
+<pre class="literalblock">
+A Phase object saves the structure to be refined. It contains the 
+a list of variables to represent a structure. such as a, b, c, alpha, beta, 
+gamma and so on. 
+
+data member:
+    spacegroup: space group of the structure
+    a,b,c:  the lattice constant
+    alpha,beta,gamma: the lattice angle
+
+This class is also an interface for the Structure class in 
+diffpy.refinementdata.structure package, to provide convenient access functions
+to the structure data 
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">owner</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">handle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">shape</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getAlpha" class="summary-sig-name">getAlpha</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the alpha value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAlpha">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getAlphaSigma" class="summary-sig-name">getAlphaSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the alpha value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAlphaSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getAtomByName" class="summary-sig-name">getAtomByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Get the atom by its name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAtomByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getBeta" class="summary-sig-name">getBeta</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the beta value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getBeta">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getBetaSigma" class="summary-sig-name">getBetaSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the standard deviation beta value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getBetaSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getEngineType" class="summary-sig-name">getEngineType</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the engine type for this refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getEngineType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getGamma" class="summary-sig-name">getGamma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the gamma value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getGamma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getGammaSigma" class="summary-sig-name">getGammaSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the standard deviation gamma value in degree</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getGammaSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeA" class="summary-sig-name">getLatticeA</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the lattice parameter a in angstroms</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeA">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeASigma" class="summary-sig-name">getLatticeASigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the standard deviation of lattice parameter a in angstroms</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeASigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeB" class="summary-sig-name">getLatticeB</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the lattice parameter b in anstrom</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeBSigma" class="summary-sig-name">getLatticeBSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the standard deviation of lattice parameter b in anstrom</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeBSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeC" class="summary-sig-name">getLatticeC</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the lattice parameter c in anstrom</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeC">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getLatticeCSigma" class="summary-sig-name">getLatticeCSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the standard deviation of lattice parameter c in anstrom</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeCSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getName" class="summary-sig-name">getName</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the phase name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getNumOfAtoms" class="summary-sig-name">getNumOfAtoms</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get number of atoms in the phase</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getNumOfAtoms">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#getSpaceGroup" class="summary-sig-name">getSpaceGroup</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the space group of the phase</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getSpaceGroup">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#listAtomNames" class="summary-sig-name">listAtomNames</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the atom names</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.listAtomNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.phase.Phase-class.html#listAtoms" class="summary-sig-name">listAtoms</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the atoms</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.listAtoms">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.structure.Structure</code></b>:
+      <code>readSource</code>,
+      <code>writeSource</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.refinable.Refinable</code></b>:
+      <code>addHistory</code>,
+      <code>addHistoryByPath</code>,
+      <code>addSigma</code>,
+      <code>addSigmaByPath</code>,
+      <code>findRefinement</code>,
+      <code>getHistory</code>,
+      <code>getHistoryByPath</code>,
+      <code>getSigma</code>,
+      <code>getSigmaByPath</code>,
+      <code>listHistories</code>,
+      <code>listRefined</code>,
+      <code>loadLocalObjects</code>,
+      <code>removeHistory</code>,
+      <code>update</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>addObject</code>,
+      <code>copy</code>,
+      <code>copyMeta</code>,
+      <code>delete</code>,
+      <code>exportFile</code>,
+      <code>get</code>,
+      <code>getAttr</code>,
+      <code>getByPath</code>,
+      <code>getFlatIndex</code>,
+      <code>getMetaData</code>,
+      <code>getMultiDimIndex</code>,
+      <code>getObject</code>,
+      <code>getPyObj</code>,
+      <code>hasAttr</code>,
+      <code>hasMeta</code>,
+      <code>importFile</code>,
+      <code>isDescendant</code>,
+      <code>list</code>,
+      <code>listAttrs</code>,
+      <code>listNames</code>,
+      <code>listObjects</code>,
+      <code>load</code>,
+      <code>loadLocalData</code>,
+      <code>loadObject</code>,
+      <code>move</code>,
+      <code>range</code>,
+      <code>readStr</code>,
+      <code>removeObject</code>,
+      <code>rename</code>,
+      <code>repeat</code>,
+      <code>replicate</code>,
+      <code>reshape</code>,
+      <code>save</code>,
+      <code>set</code>,
+      <code>setAttr</code>,
+      <code>setByPath</code>,
+      <code>setLabels</code>,
+      <code>setPyObj</code>,
+      <code>unset</code>,
+      <code>unsetAttr</code>,
+      <code>writeStr</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>labels</code>,
+      <code>name</code>,
+      <code>ndim</code>,
+      <code>path</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">owner</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">handle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">shape</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Constructor. The construction of a Phase object is taken care of by the
+Project. Users do not have to call this function directly. 
+
+@type owner:    a data object
+@param owner:    the owner, which is usually a Refinement object.
+@type name:    string
+@param name:    the node name.
+@type handle:    a HDF5Handle object
+@param handle:    a HDF5Handle pointing to the underlying HDF5 node. 
+@type shape:    tuple
+@param shape:    the shape of the data object. Each element denotes 
+                the number of elements in each dimension
+
+A name is passed to the initialization method when creating a node.
+
+A handle is passed to the inialization method in two cases:
+    1.  when loading from a HDF5 file;
+    2.  when creating a HDF5 file but the object is a hard link to 
+        a preexisiting one.
+        
+In the case when both name and handle are given, name will be simply ignored.
+In the case when neither name nor handle is given, an exception will be raised.
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAlpha"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAlpha</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAlpha">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the alpha value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>if index is None, return the alpha value list in a Dataset if 
+          index is a number or tuple, return the a value as a float</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAlphaSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAlphaSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAlphaSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the alpha value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>if index is None, return the alpha value list in a Dataset if 
+          index is a number or tuple, return the a value as a float</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAtomByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAtomByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getAtomByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the atom by its name</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - the atom name</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the atom object with the name if exists. None if no such phase 
+          object. The program will emit a warning if duplicate atom names 
+          exist, and the first atom obj with the same name will be returned</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBeta"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBeta</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getBeta">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the beta value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>if index is None, return the beta value list in a Dataset if 
+          index is a number or tuple, return the a value as a float</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBetaSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBetaSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getBetaSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the standard deviation beta value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the beta standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getEngineType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getEngineType</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getEngineType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the engine type for this refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the string of the engine type, for example 
+          <i>&quot;gsas&quot;</i> or <i>&quot;fullprof&quot;</i></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getGamma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getGamma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getGamma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the gamma value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>return the gamma values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getGammaSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getGammaSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getGammaSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the standard deviation gamma value in degree</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>return the gamma standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeA</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeA">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the lattice parameter a in angstroms</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice a values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeASigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeASigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeASigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the standard deviation of lattice parameter a in angstroms</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice a values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeB"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeB</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeB">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the lattice parameter b in anstrom</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice b values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeBSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeBSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeBSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the standard deviation of lattice parameter b in anstrom</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice b standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeC"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeC</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeC">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the lattice parameter c in anstrom</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice c values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLatticeCSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLatticeCSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getLatticeCSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the standard deviation of lattice parameter c in anstrom</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the lattice c standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getName</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the phase name</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>string</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNumOfAtoms"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNumOfAtoms</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getNumOfAtoms">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get number of atoms in the phase</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>number of atoms</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSpaceGroup"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSpaceGroup</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.getSpaceGroup">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the space group of the phase</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>return the space group string list</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listAtomNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listAtomNames</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.listAtomNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the atom names</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of atom names in this phase</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listAtoms"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listAtoms</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.phase-pysrc.html#Phase.listAtoms">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the atoms</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of Atom objects</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:57 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

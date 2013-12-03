@@ -1,0 +1,258 @@
+.. _introduction:
+
+##########################
+Introduction
+##########################
+
+=======================
+What can SrRietveld Do?
+=======================
+
+* Diffraction data Rietveld refinement
+
+Multiple step refinement on single experiment or co-refinement on several data sets.
+
+* Sequential Rietveld refinement
+
+Sequential fitting on data sets from a series of experiments
+
+* Calculate theoretical pattern
+
+Calculate the line profile from known structure parameters and instrument parameters
+
+* Examine the refinement results
+
+Easily view the results from single / sequential refinements and pattern calculation. 
+
+=======================
+Merits
+=======================
+* Highly automated computation
+* User friendly and easy to learn
+* Capability to process enormous amount of data in a timely basis
+* Analysis on sequential data sets
+* Compatible with main stream Rietveld refinement engines
+* Designed in modules connected with application programming interfaces (APIs), extensible to work with more engines and able to work as a module with other applications. 
+
+Rietveld refinement is a process of determining accurate atomic structural 
+information about crystalline materials from neutron or x-ray powder diffraction.
+There are a number of Rietveld computer programs available, both freeware and 
+commercial. What they have in common is that they require extensive interactions 
+with the scientist operating them because of the difficulty in converging fits of
+the models to the data. They have poor convergence and there is a sharp learning 
+curve for using them. The codes were mostly written beginning in the 1980's and 
+1990's and are monolithic Fortran programs and it is very difficult to automate 
+and extend them.
+
+The goal of the SrRietveld project is to mitigate these problems and make a 
+Rietveld program that is highly automated, easy to use, and can handle the high 
+data-rates at POWGEN, and other high throughput neutron and X-ray diffractometers. 
+There is insufficient time 
+and resources to write completely new, modular, Rietveld codes 
+within the DANSE project, so the approach in the SrRietveld project was to wrap 
+existing Rietveld legacy codes in Python wrappers, allowing 
+scripts written in Python to automate and control the execution of the existing codes. 
+In the SrRietveld 3.0a release we have implemented the two most popular Rietveld 
+programs, Fullprof and GSAS, as engines running in the Python environment. 
+The design includes a Rietveld API (application programming interface) which 
+allows users to write scripts in Python that can execute different refinement 
+engines. In the current release this means that the same data can be refined with
+either Fullprof or GSAS, or both. In the future it will allow us to change out 
+the Rietveld engine with any other Rietveld legacy code, or newly written code, 
+and users' scripts will still be operable. 
+
+=====================
+SrRietveld
+=====================
+
+SrRietveld is an open-source crystal structure refinement user-interface (UI) for
+reciprocal-space fitting of powder data, or Rietveld analysis.
+
+SrRietveld is being developed as part of the DANSE software project that is 
+building data analysis and modeling software to make optimal use of neutron 
+diffraction data coming from the Spallation Neutron Source.
+
+SrRietveld is reliable.  It will provide the expected features of Rietveld 
+analysis software, such as that provided by FullProf or GSAS, as well as features
+that simplify typical and advanced usage.
+
+SrRietveld is easy to use.  It will provide users with tools to set up Rietveld 
+refinement in relatively trivial time and launch a series of Rietveld refinement 
+automatically or semi-automatically until convergence, allowing complex refinement
+tasks to be automated and simplified. Meanwhile, SrRietveld provides users tools
+to analyze the refinement result visually.
+
+In addition to providing users with ease-of-use, we wish to enable new science. 
+In order to satisfy ever-changing user community, extensible, non-proprietary and
+supported software, such as SrRietveld, will enable innovation and empower users.
+
+SrRietveld is fully extensible.  It will work by allowing the user to write 
+scripts in a Python-based scripting language that control and automate the 
+refinement process It is also then straightforward for a developer to build 
+simple gui's on top of the scripts. A library of helper functions is available 
+to simplify common tasks.
+
+The major commands available in the current release are listed below
+
+* supporting diffraction pattern calculation
+
+  1. applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data; 
+
+* supporting both FullProf and GSAS as refinement engines. 
+  Exchanging underlying refinement engine is seamless to users
+
+* supporting automatic/semi-automatic launched Le-Bail and Rietveld refinements on 
+  single measurements toward final convergence
+
+  1. applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data;
+  #. allowing the user to trace each parameter's value at each refinement step for further analysis;
+  #. allowing the user to plot patterns of each refinement step after refinement is finished for further analysis. 
+
+* supporting sequential fitting on a series of measurements from in-situ diffraction experiment,
+  applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data;
+
+  1. providing user with fast access to refined parameters and refinement result (residuals);
+  #. allowing user to access the refinement detail of each single measurement for further analysis; 
+
+
+--------------------
+Design principles
+--------------------
+
+SrRietveld has been designed to provide users with an easy-to-use yet powerful
+interface for fitting structure models to powder diffraction data. 
+It makes use of an object oriented, component based architecture, 
+which makes it highly extensible and maintainable.  
+
+SrRietveld is written in the Python programming language. Python features a
+relaxed and friendly syntax, supports *write once, run anywhere*
+portability, and has extensive libraries and modules for virtually every
+task. Software codes written in a variety of programming languages can be
+bound into Python, which allows them to be used together. Python is becoming
+a popular choice in the scientific computation community.
+
+SrRietveld is built upon RietveldAPI, which is a library of python scripts to set up,
+manage and analyze Rietveld refinements.
+
+General users can use pre-built scripts to quickly and easily carry out 
+refinements that are offered as part of the SrRietveld application. In the future,
+these will be controlled through a graphical user interface, though currently 
+they are executed from the command line.
+
+Power users can build their customized Rietveld refinements by writing high-level 
+scripts using SrRietveld and rietveldAPI library modules. 
+
+In the 1.0 Beta release, SrRietveld provides the users with a series of 
+command line scripts to set up, launch and analyze Rietveld refinements. 
+
+--------------
+Capabilities
+--------------
+
+SrRietveld will allow users to perform powerful refinement tasks with little effort.
+Python has a friendly and powerful scripting interface that enables
+SrRietveld to interact with other Python modules such as matplotlib for
+plotting and pymol for structure visualization. The scripting interface to
+SrRietveld allows one to easily string together a series of related Rietveld
+refinements, analyze the refinement results and optionally feed the results
+into other Python-enabled programs. 
+SrRietveld will soon be enabled to run distributed on a computer cluster 
+in order to deal with computationally intensive tasks
+such as the analysis of data flow high throughput instruments. 
+Once-difficult refinement strategies, such as
+parametric optimization and global optimization are also planned for a
+future release. Users can also look forward to automatic Rietveld refinement
+that requires a minimal amount of prior knowledge about a crystal structure.
+
+SrRietveld can manage multiple fits at once.
+Each fit can have multiple experimental data sets and structure models.
+Fits in a sequence can call upon other fits for their starting parameters,
+and configured fits can be queued to run while the user is away. All the
+initial, final, and intermediate data are stored in a platform independent
+project file that can be loaded on any computer. 
+
+SrRietveld uses the `matplotlib <http://matplotlib.sourceforge.net>`_
+Python package for 2D plotting of data and results. 
+Matplotlib has a friendly interface so the user can quickly and easily view the
+results of a fitting. 
+SrRietveld lets users plot data from a series of fits and plot it against 
+selected meta-data (temperature, doping, etc.).
+
+
+=================
+Fullprof and GSAS
+=================
+
+The FullProf and GSAS programs have been mainly developed for Rietveld analysis 
+(structure profile refinement) of
+neutron (constant wavelength, time of flight, nuclear and magnetic scattering) 
+or X-ray powder diffraction data
+collected at constant or variable step in scattering angle 2theta. 
+The programs can also be used as a Profile Matching 
+(or pattern decomposition using Le Bail method) tool,
+without knowledge of the structure. 
+Not all the functionalities of Fullprof and GSAS are available in SrRietveld
+as the ??? functions must be implemented in the API.  
+Currently most of the powder diffraction functionalities, except magnetic scattering,
+are implemented. 
+There is no support for single crystal diffraction in SrRietveld. 
+
+
+.. Single crystal refinement 
+.. can also be performed alone or
+.. in combination with powder data. Time of flight (TOF) neutron data analysis is
+.. also available. 
+
+The Fullprof engine and GSAS engine wrappers, called PyFullProf and PyGSAS respectively,
+can be used either directly from the Python
+command line, or as part of larger and more complex software
+applications. 
+
+
+================
+Availability
+================
+
+SrRietveld, FullProf and GSAS are open source.
+SrRietveld is distributed under a BSD license.
+They run on Linux, and all major Unix systems. The source
+code is freely available. For more information please contact Professor
+Simon Billinge (sb2896@columbia.edu)
+or consult the web-page
+`http://www.diffpy.org <http://www.diffpy.org>`_.
+News of updates and releases will be posted at this website 
+and on the SrRietveld-users group at
+`http://groups.google.com/group/SrRietveld-users <http://groups.google.com/group/SrRietveld-users>`_. 
+
+===============
+Copyright
+===============
+Copyright @copyright{} 2008, Trustees of Columbia University in the City of New
+York, all rights reserved.
+
+====================
+Acknowledgement
+====================
+This program is part of the DiffPy and DANSE open-source projects
+and is available subject to the conditions and terms laid out below.
+
+If you use this program to do productive scientific research that leads
+to publication, we ask that you acknowledge use of the program by citing
+the following paper in your publication:
+
+1. Wenduo Zhou, Peng Tian, Christopher L. Farrow, P. Juhas and S. J. L. Billinge, 
+   To be published.
+
+Copyright 2008, Trustees of Columbia University in the City of New York.
+
+For more information please visit the project web-page: `http://www.diffpy.org/ <http://www.diffpy.org/>`_
+or email Prof. Simon Billinge at sb2896@@columbia.edu
+
+This version of SrRietveld makes use of the FullProf and GSAS Rietveld refinement engine.
+If you use this program, as well as citing the paper above, you should acknowledge
+use of FullProf and/or GSAS by citing the paper describing the FullProf and/or GSAS: 
+
+1. J. Rodriguez-Carvajal, Recent advances in magnetic structure determination by neutron 
+   powder diffraction, Physica B, 192, 55-69 (1993). 
+#. Larson A C and von Dreele R B 2000 General structure analysis system(GSAS) 
+   Los Alamos National Laboratory Report No. LAUR 87-748 unpublished

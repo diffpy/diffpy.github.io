@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.exceptions</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;exceptions
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.exceptions-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="diffpy.srrietveld.exceptions-module.html">Module diffpy.srrietveld.exceptions</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment"># diffpy.srrietveld by DANSE Diffraction group</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment">#                   Simon J. L. Billinge</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment">#                   (c) 2010 Trustees of the Columbia University</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment">#                   in the City of New York.  All rights reserved.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment"># File coded by:    Jiwu Liu</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"># See AUTHORS.txt for a list of people who contributed.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"># See LICENSE.txt for license information.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="SrrError"></a><div id="SrrError-def"><a name="L15"></a><tt class="py-lineno">15</tt> <a class="py-toggle" href="#" id="SrrError-toggle" onclick="return toggle('SrrError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrError-class.html">SrrError</a><tt class="py-op">(</tt><tt class="py-base-class">Exception</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrError-expanded"><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-docstring">"""Basic SrRietveld exception class."""</tt> </tt>
+<a name="SrrError.__init__"></a><div id="SrrError.__init__-def"><a name="L17"></a><tt class="py-lineno">17</tt> <a class="py-toggle" href="#" id="SrrError.__init__-toggle" onclick="return toggle('SrrError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">,</tt> <tt class="py-param">errType</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrError.__init__-expanded"><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-name">Exception</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Method diffpy.srrietveld.addon.datafile.DataFileConverter.__init__()=diffpy.srrietveld.addon.datafile.DataFileConverter-class.html#__init__,Method diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__()=diffpy.srrietveld.addon.debyefitting.DebyeFitting-class.html#__init__,Method diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__()=diffpy.srrietveld.addon.mcsampling.MonteCarloSampling-class.html#__init__,Method diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__()=diffpy.srrietveld.addon.structurefile.StructureFileConverter-class.html#__init__,Method diffpy.srrietveld.atom.Atom.__init__()=diffpy.srrietveld.atom.Atom-class.html#__init__,Method diffpy.srrietveld.buildfit.BuildFit.__init__()=diffpy.srrietveld.buildfit.BuildFit-class.html#__init__,Method diffpy.srrietveld.convert.datafile.DataFile.__init__()=diffpy.srrietveld.convert.datafile.DataFile-class.html#__init__,Method diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__()=diffpy.srrietveld.convert.gsasinstparser.GSASInstFile-class.html#__init__,Method diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__()=diffpy.srrietveld.convert.listfilereader.ListFileReader-class.html#__init__,Method diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__()=diffpy.srrietveld.convert.strategyfile.StrategyFile-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__()=diffpy.srrietveld.convert.xmlparser.BackgroundXML-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__()=diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__()=diffpy.srrietveld.convert.xmlparser.InstrumentXML-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__()=diffpy.srrietveld.convert.xmlparser.StrategyXML-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.StructureXML.__init__()=diffpy.srrietveld.convert.xmlparser.StructureXML-class.html#__init__,Method diffpy.srrietveld.convert.xmlparser.XMLFile.__init__()=diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrConfigError.__init__()=diffpy.srrietveld.exceptions.SrrConfigError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrError.__init__()=diffpy.srrietveld.exceptions.SrrError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrFileError.__init__()=diffpy.srrietveld.exceptions.SrrFileError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrIOError.__init__()=diffpy.srrietveld.exceptions.SrrIOError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrInputError.__init__()=diffpy.srrietveld.exceptions.SrrInputError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrRunTimeError.__init__()=diffpy.srrietveld.exceptions.SrrRunTimeError-class.html#__init__,Method diffpy.srrietveld.exceptions.SrrValueError.__init__()=diffpy.srrietveld.exceptions.SrrValueError-class.html#__init__,Method diffpy.srrietveld.fitrt.FitRT.__init__()=diffpy.srrietveld.fitrt.FitRT-class.html#__init__,Method diffpy.srrietveld.objectinfo.ObjectInfo.__init__()=diffpy.srrietveld.objectinfo.ObjectInfo-class.html#__init__,Method diffpy.srrietveld.pattern.ExcludedRegion.__init__()=diffpy.srrietveld.pattern.ExcludedRegion-class.html#__init__,Method diffpy.srrietveld.pattern.Pattern.__init__()=diffpy.srrietveld.pattern.Pattern-class.html#__init__,Method diffpy.srrietveld.phase.Phase.__init__()=diffpy.srrietveld.phase.Phase-class.html#__init__,Method diffpy.srrietveld.profile.Profile.__init__()=diffpy.srrietveld.profile.Profile-class.html#__init__,Method diffpy.srrietveld.project.Project.__init__()=diffpy.srrietveld.project.Project-class.html#__init__,Method diffpy.srrietveld.refinement.Refinement.__init__()=diffpy.srrietveld.refinement.Refinement-class.html#__init__,Method diffpy.srrietveld.utility.UTF8Recoder.__init__()=diffpy.srrietveld.utility.UTF8Recoder-class.html#__init__,Method diffpy.srrietveld.utility.UnicodeReader.__init__()=diffpy.srrietveld.utility.UnicodeReader-class.html#__init__,Method diffpy.srrietveld.utility.UnicodeWriter.__init__()=diffpy.srrietveld.utility.UnicodeWriter-class.html#__init__,Method trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__()=trunk.diffpy.srrietveld.applications.refine.ReadInput-class.html#__init__"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-0', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">info</tt> <tt class="py-op">=</tt> <tt class="py-name">info</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">type</tt> <tt class="py-op">=</tt> <tt class="py-name">errType</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="SrrError.__str__"></a><div id="SrrError.__str__-def"><a name="L27"></a><tt class="py-lineno">27</tt> <a class="py-toggle" href="#" id="SrrError.__str__-toggle" onclick="return toggle('SrrError.__str__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrError-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrError.__str__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrError.__str__-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">info</tt> </tt>
+</div></div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="SrrConfigError"></a><div id="SrrConfigError-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="SrrConfigError-toggle" onclick="return toggle('SrrConfigError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrConfigError-class.html">SrrConfigError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrConfigError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrConfigError-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-docstring">""" SrRietveld config exception."""</tt> </tt>
+<a name="SrrConfigError.__init__"></a><div id="SrrConfigError.__init__-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="SrrConfigError.__init__-toggle" onclick="return toggle('SrrConfigError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrConfigError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrConfigError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrConfigError.__init__-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">         </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt id="link-1" class="py-name" targets="Class diffpy.srrietveld.exceptions.SrrError=diffpy.srrietveld.exceptions.SrrError-class.html"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-1', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-2', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="SrrFileError"></a><div id="SrrFileError-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="SrrFileError-toggle" onclick="return toggle('SrrFileError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrFileError-class.html">SrrFileError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrFileError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrFileError-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-docstring">'''SrRietveld file exception'''</tt> </tt>
+<a name="SrrFileError.__init__"></a><div id="SrrFileError.__init__-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="SrrFileError.__init__-toggle" onclick="return toggle('SrrFileError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrFileError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrFileError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrFileError.__init__-expanded"><a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt id="link-3" class="py-name"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-3', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="SrrIOError"></a><div id="SrrIOError-def"><a name="L49"></a><tt class="py-lineno">49</tt> <a class="py-toggle" href="#" id="SrrIOError-toggle" onclick="return toggle('SrrIOError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrIOError-class.html">SrrIOError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrIOError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrIOError-expanded"><a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-docstring">'''SrRietveld input / output exception'''</tt> </tt>
+<a name="SrrIOError.__init__"></a><div id="SrrIOError.__init__-def"><a name="L51"></a><tt class="py-lineno">51</tt> <a class="py-toggle" href="#" id="SrrIOError.__init__-toggle" onclick="return toggle('SrrIOError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrIOError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrIOError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrIOError.__init__-expanded"><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt id="link-5" class="py-name"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-5', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-6', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">     </tt>
+<a name="SrrRunTimeError"></a><div id="SrrRunTimeError-def"><a name="L59"></a><tt class="py-lineno">59</tt> <a class="py-toggle" href="#" id="SrrRunTimeError-toggle" onclick="return toggle('SrrRunTimeError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrRunTimeError-class.html">SrrRunTimeError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrRunTimeError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrRunTimeError-expanded"><a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">    <tt class="py-docstring">'''SrRietveld run time exception'''</tt> </tt>
+<a name="SrrRunTimeError.__init__"></a><div id="SrrRunTimeError.__init__-def"><a name="L61"></a><tt class="py-lineno">61</tt> <a class="py-toggle" href="#" id="SrrRunTimeError.__init__-toggle" onclick="return toggle('SrrRunTimeError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrRunTimeError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrRunTimeError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrRunTimeError.__init__-expanded"><a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt id="link-7" class="py-name"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-7', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-8', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="SrrValueError"></a><div id="SrrValueError-def"><a name="L68"></a><tt class="py-lineno">68</tt> <a class="py-toggle" href="#" id="SrrValueError-toggle" onclick="return toggle('SrrValueError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrValueError-class.html">SrrValueError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrValueError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrValueError-expanded"><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">    <tt class="py-docstring">'''SrRietveld value exception'''</tt> </tt>
+<a name="SrrValueError.__init__"></a><div id="SrrValueError.__init__-def"><a name="L70"></a><tt class="py-lineno">70</tt> <a class="py-toggle" href="#" id="SrrValueError.__init__-toggle" onclick="return toggle('SrrValueError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrValueError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrValueError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrValueError.__init__-expanded"><a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt id="link-9" class="py-name"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-9', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-10', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="SrrInputError"></a><div id="SrrInputError-def"><a name="L77"></a><tt class="py-lineno">77</tt> <a class="py-toggle" href="#" id="SrrInputError-toggle" onclick="return toggle('SrrInputError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrInputError-class.html">SrrInputError</a><tt class="py-op">(</tt><tt class="py-base-class">SrrError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrInputError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="SrrInputError-expanded"><a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">    <tt class="py-docstring">'''SrRietveld exception by user input'''</tt> </tt>
+<a name="SrrInputError.__init__"></a><div id="SrrInputError.__init__-def"><a name="L79"></a><tt class="py-lineno">79</tt> <a class="py-toggle" href="#" id="SrrInputError.__init__-toggle" onclick="return toggle('SrrInputError.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.exceptions.SrrInputError-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">info</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="SrrInputError.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="SrrInputError.__init__-expanded"><a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">        <tt class="py-docstring">"""initialize</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line"><tt class="py-docstring">        info -- description string</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">        <tt id="link-11" class="py-name"><a title="diffpy.srrietveld.exceptions.SrrError" class="py-name" href="#" onclick="return doclink('link-11', 'SrrError', 'link-1');">SrrError</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="diffpy.srrietveld.addon.datafile.DataFileConverter.__init__
+diffpy.srrietveld.addon.debyefitting.DebyeFitting.__init__
+diffpy.srrietveld.addon.mcsampling.MonteCarloSampling.__init__
+diffpy.srrietveld.addon.structurefile.StructureFileConverter.__init__
+diffpy.srrietveld.atom.Atom.__init__
+diffpy.srrietveld.buildfit.BuildFit.__init__
+diffpy.srrietveld.convert.datafile.DataFile.__init__
+diffpy.srrietveld.convert.gsasinstparser.GSASInstFile.__init__
+diffpy.srrietveld.convert.listfilereader.ListFileReader.__init__
+diffpy.srrietveld.convert.strategyfile.StrategyFile.__init__
+diffpy.srrietveld.convert.xmlparser.BackgroundXML.__init__
+diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML.__init__
+diffpy.srrietveld.convert.xmlparser.InstrumentXML.__init__
+diffpy.srrietveld.convert.xmlparser.StrategyXML.__init__
+diffpy.srrietveld.convert.xmlparser.StructureXML.__init__
+diffpy.srrietveld.convert.xmlparser.XMLFile.__init__
+diffpy.srrietveld.exceptions.SrrConfigError.__init__
+diffpy.srrietveld.exceptions.SrrError.__init__
+diffpy.srrietveld.exceptions.SrrFileError.__init__
+diffpy.srrietveld.exceptions.SrrIOError.__init__
+diffpy.srrietveld.exceptions.SrrInputError.__init__
+diffpy.srrietveld.exceptions.SrrRunTimeError.__init__
+diffpy.srrietveld.exceptions.SrrValueError.__init__
+diffpy.srrietveld.fitrt.FitRT.__init__
+diffpy.srrietveld.objectinfo.ObjectInfo.__init__
+diffpy.srrietveld.pattern.ExcludedRegion.__init__
+diffpy.srrietveld.pattern.Pattern.__init__
+diffpy.srrietveld.phase.Phase.__init__
+diffpy.srrietveld.profile.Profile.__init__
+diffpy.srrietveld.project.Project.__init__
+diffpy.srrietveld.refinement.Refinement.__init__
+diffpy.srrietveld.utility.UTF8Recoder.__init__
+diffpy.srrietveld.utility.UnicodeReader.__init__
+diffpy.srrietveld.utility.UnicodeWriter.__init__
+trunk.diffpy.srrietveld.applications.refine.ReadInput.__init__" class="py-name" href="#" onclick="return doclink('link-12', '__init__', 'link-0');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">info</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__class__</tt><tt class="py-op">.</tt><tt class="py-name">__name__</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line"><tt class="py-comment"># version</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable diffpy.srrietveld.addon.datafile.__id__=diffpy.srrietveld.addon.datafile-module.html#__id__,Variable diffpy.srrietveld.addon.debyefitting.__id__=diffpy.srrietveld.addon.debyefitting-module.html#__id__,Variable diffpy.srrietveld.addon.structurefile.__id__=diffpy.srrietveld.addon.structurefile-module.html#__id__,Variable diffpy.srrietveld.applications.__id__=diffpy.srrietveld.applications-module.html#__id__,Variable diffpy.srrietveld.applications.srhelp.__id__=diffpy.srrietveld.applications.srhelp-module.html#__id__,Variable diffpy.srrietveld.atom.__id__=diffpy.srrietveld.atom-module.html#__id__,Variable diffpy.srrietveld.bugreport.__id__=diffpy.srrietveld.bugreport-module.html#__id__,Variable diffpy.srrietveld.buildfit.__id__=diffpy.srrietveld.buildfit-module.html#__id__,Variable diffpy.srrietveld.convert.datafile.__id__=diffpy.srrietveld.convert.datafile-module.html#__id__,Variable diffpy.srrietveld.convert.gsasinstparser.__id__=diffpy.srrietveld.convert.gsasinstparser-module.html#__id__,Variable diffpy.srrietveld.convert.listfilereader.__id__=diffpy.srrietveld.convert.listfilereader-module.html#__id__,Variable diffpy.srrietveld.convert.strategyfile.__id__=diffpy.srrietveld.convert.strategyfile-module.html#__id__,Variable diffpy.srrietveld.convert.xmlparser.__id__=diffpy.srrietveld.convert.xmlparser-module.html#__id__,Variable diffpy.srrietveld.exceptions.__id__=diffpy.srrietveld.exceptions-module.html#__id__,Variable diffpy.srrietveld.export.__id__=diffpy.srrietveld.export-module.html#__id__,Variable diffpy.srrietveld.fitrt.__id__=diffpy.srrietveld.fitrt-module.html#__id__,Variable diffpy.srrietveld.objectinfo.__id__=diffpy.srrietveld.objectinfo-module.html#__id__,Variable diffpy.srrietveld.paramnames.__id__=diffpy.srrietveld.paramnames-module.html#__id__,Variable diffpy.srrietveld.pattern.__id__=diffpy.srrietveld.pattern-module.html#__id__,Variable diffpy.srrietveld.phase.__id__=diffpy.srrietveld.phase-module.html#__id__,Variable diffpy.srrietveld.profile.__id__=diffpy.srrietveld.profile-module.html#__id__,Variable diffpy.srrietveld.project.__id__=diffpy.srrietveld.project-module.html#__id__,Variable diffpy.srrietveld.refinement.__id__=diffpy.srrietveld.refinement-module.html#__id__,Variable diffpy.srrietveld.version.__id__=diffpy.srrietveld.version-module.html#__id__,Variable trunk.diffpy.srrietveld.applications.refine.__id__=trunk.diffpy.srrietveld.applications.refine-module.html#__id__"><a title="diffpy.srrietveld.addon.datafile.__id__
+diffpy.srrietveld.addon.debyefitting.__id__
+diffpy.srrietveld.addon.structurefile.__id__
+diffpy.srrietveld.applications.__id__
+diffpy.srrietveld.applications.srhelp.__id__
+diffpy.srrietveld.atom.__id__
+diffpy.srrietveld.bugreport.__id__
+diffpy.srrietveld.buildfit.__id__
+diffpy.srrietveld.convert.datafile.__id__
+diffpy.srrietveld.convert.gsasinstparser.__id__
+diffpy.srrietveld.convert.listfilereader.__id__
+diffpy.srrietveld.convert.strategyfile.__id__
+diffpy.srrietveld.convert.xmlparser.__id__
+diffpy.srrietveld.exceptions.__id__
+diffpy.srrietveld.export.__id__
+diffpy.srrietveld.fitrt.__id__
+diffpy.srrietveld.objectinfo.__id__
+diffpy.srrietveld.paramnames.__id__
+diffpy.srrietveld.pattern.__id__
+diffpy.srrietveld.phase.__id__
+diffpy.srrietveld.profile.__id__
+diffpy.srrietveld.project.__id__
+diffpy.srrietveld.refinement.__id__
+diffpy.srrietveld.version.__id__
+trunk.diffpy.srrietveld.applications.refine.__id__" class="py-name" href="#" onclick="return doclink('link-13', '__id__', 'link-13');">__id__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"$Id: exceptions.py 6300 2011-03-10 21:34:27Z yshang $"</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line"><tt class="py-comment"># End of file</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:58 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

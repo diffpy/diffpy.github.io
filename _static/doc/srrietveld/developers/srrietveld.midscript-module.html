@@ -1,0 +1,2118 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.midscript</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;midscript
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.midscript-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module midscript</h1><span class="codelink"><a href="srrietveld.midscript-pysrc.html">source&nbsp;code</a></span><br /><br />
+<p>container for a series of middle-level API supporting end-user scripts
+  these API are NOT defined in standard diffpy.rietveldapi they are in the 
+  mode of conceptual testing and subject to major modification</p>
+  External Methods List:
+  <ul>
+    <li>
+      initTCHProfilePseudoVoigt(parameterdict=None, peakrange=8.0, 
+      u=1.0, v=1.0, w=1.0, x=0.0, y=0.0)
+    </li>
+    <li>
+      getPatterns(fit):
+    </li>
+  </ul><br /><br />
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#getPatterns" class="summary-sig-name">getPatterns</a>(<span class="summary-sig-arg">fit</span>)</span><br />
+      Get all the patterns of a Fit instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#getPatterns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#setPattern" class="summary-sig-name">setPattern</a>(<span class="summary-sig-arg">pat</span>,
+        <span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>)</span><br />
+      basic functions to set up a Pattern...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#setPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#mapStructure" class="summary-sig-name">mapStructure</a>(<span class="summary-sig-arg">sourcefit</span>,
+        <span class="summary-sig-arg">targetfit</span>)</span><br />
+      Map the strcture parameters from a Fit instance to another instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#mapStructure">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initTOFPattern" class="summary-sig-name">initTOFPattern</a>(<span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">bank</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">dangle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">excludedregions</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dtt1</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dtt2</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">zshift</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">xcross</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">width</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      initialize and set up a TOF pattern with all necessary parameters...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initTOFPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="initThermalTOFPattern"></a><span class="summary-sig-name">initThermalTOFPattern</span>(<span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">bank</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">dangle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">excludedregions</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dtt1</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dtt2</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">zshift</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">dtt1t</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dtt2t</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">zerot</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">xcross</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">width</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialize Thermal Neutron TOF Pattern</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initThermalTOFPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#setCWPattern" class="summary-sig-name">setCWPattern</a>(<span class="summary-sig-arg">pat</span>,
+        <span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">wavelength</span>,
+        <span class="summary-sig-arg">wavelength2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">ratio</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">zshift</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">region</span>=<span class="summary-sig-default">None</span>)</span><br />
+      set up a Constant Wavelength Pattern pattern with all necessary parameters...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#setCWPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initCWXrayPattern" class="summary-sig-name">initCWXrayPattern</a>(<span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">wavelength</span>,
+        <span class="summary-sig-arg">wavelength2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">ratio</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">zshift</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">region</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">resfname</span>=<span class="summary-sig-default">None</span>)</span><br />
+      initalize and set up a constant wavelength X-ray pattern with all necessary parameters...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCWXrayPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initCWNeutronPattern" class="summary-sig-name">initCWNeutronPattern</a>(<span class="summary-sig-arg">dfname</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">wavelength</span>,
+        <span class="summary-sig-arg">wavelength2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">ratio</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">zshift</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">region</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">resfname</span>=<span class="summary-sig-default">None</span>)</span><br />
+      initialize and set up a constant wavelength neutron pattern with all necessary parameters...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCWNeutronPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="initBackground"></a><span class="summary-sig-name">initBackground</span>(<span class="summary-sig-arg">backgroundType</span>,
+        <span class="summary-sig-arg">backgroundPoints</span>)</span><br />
+      initialize a Background instance and set value to it</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initBackground">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initPolynomialBackground" class="summary-sig-name">initPolynomialBackground</a>(<span class="summary-sig-arg">backgroundPoints</span>,
+        <span class="summary-sig-arg">order</span>=<span class="summary-sig-default">12</span>)</span><br />
+      initialze a Polynomial background</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPolynomialBackground">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initInterpolatedBackground" class="summary-sig-name">initInterpolatedBackground</a>(<span class="summary-sig-arg">backgroundpoints</span>,
+        <span class="summary-sig-arg">btype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">linear</code><code class="variable-quote">'</code></span>)</span><br />
+      user will use the background interpolated from a list of user-selected ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initInterpolatedBackground">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#setExcludedRegion" class="summary-sig-name">setExcludedRegion</a>(<span class="summary-sig-arg">pattern</span>,
+        <span class="summary-sig-arg">excludedregionslist</span>)</span><br />
+      Set excluded regions to a pattern...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#setExcludedRegion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#setRefineRegion" class="summary-sig-name">setRefineRegion</a>(<span class="summary-sig-arg">pattern</span>,
+        <span class="summary-sig-arg">regionlist</span>)</span><br />
+      user defines the region to refine in a more directed manner than ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#setRefineRegion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#reloadData" class="summary-sig-name">reloadData</a>(<span class="summary-sig-arg">myfit</span>,
+        <span class="summary-sig-arg">datafilename</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Load another data file to current Fit instance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#reloadData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#addAtom" class="summary-sig-name">addAtom</a>(<span class="summary-sig-arg">phase</span>,
+        <span class="summary-sig-arg">atomtype</span>,
+        <span class="summary-sig-arg">fractcoordinate</span>,
+        <span class="summary-sig-arg">occ</span>,
+        <span class="summary-sig-arg">biso</span>,
+        <span class="summary-sig-arg">baniso</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">atomtag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>)</span><br />
+      add an atom to a phase instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#addAtom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#Cubic" class="summary-sig-name">Cubic</a>(<span class="summary-sig-arg">a</span>)</span><br />
+      set the lattice to be cubic...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#Cubic">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#genLattice" class="summary-sig-name">genLattice</a>(<span class="summary-sig-arg">a</span>,
+        <span class="summary-sig-arg">b</span>,
+        <span class="summary-sig-arg">c</span>,
+        <span class="summary-sig-arg">alpha</span>,
+        <span class="summary-sig-arg">beta</span>,
+        <span class="summary-sig-arg">gamma</span>)</span><br />
+      generate a Lattice withtout further knowledge...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#genLattice">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initCrystalPhase" class="summary-sig-name">initCrystalPhase</a>(<span class="summary-sig-arg">lattice</span>,
+        <span class="summary-sig-arg">spacegroup</span>,
+        <span class="summary-sig-arg">phasename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      initialize and set a CrystalPhase instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCrystalPhase">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#replaceStructureModel" class="summary-sig-name">replaceStructureModel</a>(<span class="summary-sig-arg">thefit</span>,
+        <span class="summary-sig-arg">modeltuplelist</span>,
+        <span class="summary-sig-arg">cindex</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>)</span><br />
+      Replace the structure model inside a Fit object...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#replaceStructureModel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initProfilePseudoVoigtIkedaCarpenter" class="summary-sig-name">initProfilePseudoVoigtIkedaCarpenter</a>(<span class="summary-sig-arg">sig0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam2</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      new and set up a Pseudo-Voig Ikeda-Carpenter peak profile instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfilePseudoVoigtIkedaCarpenter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initPseudoVoigtExpDSpacing" class="summary-sig-name">initPseudoVoigtExpDSpacing</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>,
+        <span class="summary-sig-arg">sig0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam2</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      New and set up a PsuedoVoigt Exponent D-Spacing...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPseudoVoigtExpDSpacing">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initPseudoVoigtExp" class="summary-sig-name">initPseudoVoigtExp</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>,
+        <span class="summary-sig-arg">sig0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">sig2</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">gam2</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      New and set up a PsuedoVoigt Exponent back-to-back...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPseudoVoigtExp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initExponentialDecay" class="summary-sig-name">initExponentialDecay</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">alph0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">alph1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta1</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      Initializae a Thermal Expoential-Decay Object...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initExponentialDecay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initThermalExponentialDecay" class="summary-sig-name">initThermalExponentialDecay</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">alph0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta0</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">alph1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">alph0t</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta0t</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">alph1t</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta1t</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      Initializae a Thermal Expoential-Decay Object...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initThermalExponentialDecay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initCylindricalAbsorptionCorrection" class="summary-sig-name">initCylindricalAbsorptionCorrection</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">abs1</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">abs2</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      Initialize and set up an Absorption-Correction object...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCylindricalAbsorptionCorrection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#set2ThetaSymmetricPeakProfile" class="summary-sig-name">set2ThetaSymmetricPeakProfile</a>(<span class="summary-sig-arg">prof</span>,
+        <span class="summary-sig-arg">peakrange</span>,
+        <span class="summary-sig-arg">u</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">w</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">resfile</span>=<span class="summary-sig-default">None</span>)</span><br />
+      set up a 2-theta symmetric peak profile...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#set2ThetaSymmetricPeakProfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initProfileGaussian" class="summary-sig-name">initProfileGaussian</a>(<span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>,
+        <span class="summary-sig-arg">u</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">w</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      initalize and set up a Gaussian PeakProfile instance</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileGaussian">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initProfilePseudoVoigt" class="summary-sig-name">initProfilePseudoVoigt</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>,
+        <span class="summary-sig-arg">u</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">w</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">eta0</span>=<span class="summary-sig-default">1.0</span>)</span><br />
+      initialize and set up a Pseudo Voigt Peak Profile instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfilePseudoVoigt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initProfileTCHPseudoVoigt" class="summary-sig-name">initProfileTCHPseudoVoigt</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>,
+        <span class="summary-sig-arg">u</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">w</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+      initialize and set up a Thomas-Cox-Hasting (TCH) Pseudo Voigt Peak Profile instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileTCHPseudoVoigt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#initProfileSplitPseudoVoigt" class="summary-sig-name">initProfileSplitPseudoVoigt</a>(<span class="summary-sig-arg">parameterdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">peakrange</span>=<span class="summary-sig-default">8.0</span>)</span><br />
+      initialize and set up a Thomas-Cox-Hasting (TCH) Pseudo Voigt Peak Profile instance...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileSplitPseudoVoigt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#genPeakProfile" class="summary-sig-name">genPeakProfile</a>(<span class="summary-sig-arg">peakprofilename</span>,
+        <span class="summary-sig-arg">parameterdict</span>)</span><br />
+      Generate a proper PeakProfile object according to some given name...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#genPeakProfile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#genFit" class="summary-sig-name">genFit</a>(<span class="summary-sig-arg">instrument</span>,
+        <span class="summary-sig-arg">phaseslist</span>,
+        <span class="summary-sig-arg">experimentslist</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Generate a Fit instance (Feature fixed)...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#genFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#addComponent" class="summary-sig-name">addComponent</a>(<span class="summary-sig-arg">fit</span>,
+        <span class="summary-sig-arg">pattern</span>,
+        <span class="summary-sig-arg">phases</span>,
+        <span class="summary-sig-arg">background</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">bkgdvaluelist</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">bkgdorigin</span>=<span class="summary-sig-default">7000.0</span>,
+        <span class="summary-sig-arg">peakprofile</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">expdecay</span>=<span class="summary-sig-default">None</span>)</span><br />
+      generate a RietveldComponent to a Fit instance
+
+arguments
+- pattern       :   Pattern instance
+- phases        :   list of Phase instance
+- background    :   Background instance
+- bkgdvaluelist :   list of 2-tuple/float (defualt=None)
+                    1-tuple: b1, b2, ....</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#addComponent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#locateRefinableParameter" class="summary-sig-name">locateRefinableParameter</a>(<span class="summary-sig-arg">startobj</span>,
+        <span class="summary-sig-arg">paraname</span>,
+        <span class="summary-sig-arg">info</span>=<span class="summary-sig-default">None</span>)</span><br />
+      locate the parent object of a specific refinable parameter...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#locateRefinableParameter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.midscript-module.html#checkMust" class="summary-sig-name">checkMust</a>(<span class="summary-sig-arg">fit</span>)</span><br />
+      check a list of important parameters that must be set right!...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.midscript-pysrc.html#checkMust">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__id__"></a><span class="summary-name">__id__</span> = <code title="'$Id: midscript.py 2918 2009-03-18 19:26:39Z wdzhou $'"><code class="variable-quote">'</code><code class="variable-string">$Id: midscript.py 2918 2009-03-18 19:26:39Z wdzhou $</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.midscript-module.html#myEngine" class="summary-name">myEngine</a> = <code title="&lt;diffpy.srrietveld.refinebackend.RietveldEngine instance at 0xb7ac124c\
+&gt;">&lt;diffpy.srrietveld.refinebackend.RietveldEngine ins<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="getPatterns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPatterns</span>(<span class="sig-arg">fit</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#getPatterns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Get all the patterns of a Fit instance
+
+Argument    
+- fit   :   Fit instance
+
+Return  :   list of Patterns
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="setPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setPattern</span>(<span class="sig-arg">pat</span>,
+        <span class="sig-arg">dfname</span>,
+        <span class="sig-arg">parser</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#setPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+basic functions to set up a Pattern
+
+argument:
+- pat       :   Pattern instance
+- dfname    :   string, data file name
+- parser    :   Parser() instance
+
+return  --  None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="mapStructure"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">mapStructure</span>(<span class="sig-arg">sourcefit</span>,
+        <span class="sig-arg">targetfit</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#mapStructure">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Map the strcture parameters from a Fit instance to another instance
+
+Requirement:
+* source-Fit and target-Fit have the same Fit structure and same 
+  Crystal structure
+
+Argument:
+- sourcefit :   Fit instance
+- targetfit :   Fit instance
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initTOFPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initTOFPattern</span>(<span class="sig-arg">dfname</span>,
+        <span class="sig-arg">parser</span>,
+        <span class="sig-arg">bank</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">dangle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">excludedregions</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dtt1</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dtt2</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">zshift</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">xcross</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">width</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initTOFPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set up a TOF pattern with all necessary parameters
+
+arguement
+- dfname            :   string, data file name
+- parser            :   Parser() instance
+- dangle            :   double, detector angle
+- bank              :   int, bank number (default=1)
+- excludedregions   :   list of 2-tuples (default=None): excluded region
+- dtt1              :   float (default=None)
+- dtt2              :   float (default=None)
+- resfile           :   resolution file (default=None)
+
+return  --  TOFPattern instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="setCWPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setCWPattern</span>(<span class="sig-arg">pat</span>,
+        <span class="sig-arg">dfname</span>,
+        <span class="sig-arg">parser</span>,
+        <span class="sig-arg">wavelength</span>,
+        <span class="sig-arg">wavelength2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">ratio</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">zshift</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">region</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#setCWPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+set up a Constant Wavelength Pattern pattern with all necessary parameters
+
+arguement
+- dfname        :   string, data file name
+- parser        :   Parser() instance
+- region        :   list of 2-tuples (default=None): refine region
+- wavelength    :   float, (first) wave length in A
+- wavelength2   :   float, 2nd wave length in A
+- resfile       :   resolution file (default=None)
+
+return  --  None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initCWXrayPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initCWXrayPattern</span>(<span class="sig-arg">dfname</span>,
+        <span class="sig-arg">parser</span>,
+        <span class="sig-arg">wavelength</span>,
+        <span class="sig-arg">wavelength2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">ratio</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">zshift</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">region</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">resfname</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCWXrayPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initalize and set up a constant wavelength X-ray pattern with all necessary parameters
+
+arguement
+- dfname        :   string, data file name
+- parser        :   Parser() instance
+- region        :   list of 2-tuples (default=None): refine region
+- wavelength    :   float, (first) wave length in A
+- wavelength2   :   float, 2nd wave length in A
+- resfile       :   resolution file (default=None)
+
+return  --  CWXrayPattern instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initCWNeutronPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initCWNeutronPattern</span>(<span class="sig-arg">dfname</span>,
+        <span class="sig-arg">parser</span>,
+        <span class="sig-arg">wavelength</span>,
+        <span class="sig-arg">wavelength2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">ratio</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">zshift</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">region</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">resfname</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCWNeutronPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set up a constant wavelength neutron pattern with all necessary parameters
+
+arguement
+- dfname        :   string, data file name
+- parser        :   Parser() instance
+- region        :   list of 2-tuples (default=None): refine region
+- wavelength    :   float, (first) wave length in A
+- wavelength2   :   float, 2nd wave length in A
+- resfile       :   resolution file (default=None)
+
+return  --  CWNeutronPattern instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initPolynomialBackground"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initPolynomialBackground</span>(<span class="sig-arg">backgroundPoints</span>,
+        <span class="sig-arg">order</span>=<span class="sig-default">12</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPolynomialBackground">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>initialze a Polynomial background</p>
+  <p>backgroundPoints    :   list of float</p>
+  return              :   PolynomialBackground instance
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initInterpolatedBackground"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initInterpolatedBackground</span>(<span class="sig-arg">backgroundpoints</span>,
+        <span class="sig-arg">btype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">linear</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initInterpolatedBackground">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+user will use the background interpolated from a list of user-selected 
+background points
+
+argument
+- backgroundpoints  :   2D numpy array or a list of 2 (or more) tuples 
+                        as backgroundpoints[x][0] is the position
+                        and backgroundpoints[x][1] is the background
+- btype             :   string, background type
+
+return  --  a Background instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="setExcludedRegion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setExcludedRegion</span>(<span class="sig-arg">pattern</span>,
+        <span class="sig-arg">excludedregionslist</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#setExcludedRegion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Set excluded regions to a pattern
+
+Argument:
+- pattern               :   diffpy.rietveldapi.DiffractionPattern
+- excludedregionslist   :   list of dict [&quot;Begin&quot;, &quot;End&quot;]
+
+Return                  :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="setRefineRegion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setRefineRegion</span>(<span class="sig-arg">pattern</span>,
+        <span class="sig-arg">regionlist</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#setRefineRegion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+user defines the region to refine in a more directed manner than 
+defining excluded region
+
+The refine regions (i.e., excluded regions) defined before will be removed
+by this method
+
+if regionlist = empty list:    region to be refined
+
+argument
+- parentobj :   A RietveldComponent or Pattern instance
+                to hold this diffraction data
+- regionlist:   2D numpy array or a list of 2 (or more) tuples
+                as the region to refine
+
+return  --  None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="reloadData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reloadData</span>(<span class="sig-arg">myfit</span>,
+        <span class="sig-arg">datafilename</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#reloadData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Load another data file to current Fit instance. 
+If bankid is given, data file will be set to specific bank.
+Otherwise, the datafilename will be set to all banks/components
+
+Argument:
+- myfit         :   Fit instance
+- datafilename  :   str
+- bankid        :   int
+
+Return          :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="addAtom"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addAtom</span>(<span class="sig-arg">phase</span>,
+        <span class="sig-arg">atomtype</span>,
+        <span class="sig-arg">fractcoordinate</span>,
+        <span class="sig-arg">occ</span>,
+        <span class="sig-arg">biso</span>,
+        <span class="sig-arg">baniso</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">atomtag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#addAtom">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+add an atom to a phase instance
+
+argument
+- phase             :   a Phase instance
+- atomtype          :   string, atom's type
+- fraccoordinate    :   list of float, (x,y,z)
+- occ               :   float, occupancy number
+- biso              :   float, isotropic thermal factor B
+- baniso            :   list/6-tuple/numpy array for B11, B22, B33, B12, B13, B23
+- atomtag           :   tag of the atom, default to be 'auto'
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Cubic"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Cubic</span>(<span class="sig-arg">a</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#Cubic">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+set the lattice to be cubic
+
+argument
+- a :   float, lattice size in \AA
+
+return  --  Lattice instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genLattice"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genLattice</span>(<span class="sig-arg">a</span>,
+        <span class="sig-arg">b</span>,
+        <span class="sig-arg">c</span>,
+        <span class="sig-arg">alpha</span>,
+        <span class="sig-arg">beta</span>,
+        <span class="sig-arg">gamma</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#genLattice">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+generate a Lattice withtout further knowledge
+
+Arguments:
+- a
+- b
+- c
+- alpha
+- beta
+- gamma
+
+Return  :   diffpy.rietveldapi.Lattice
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initCrystalPhase"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initCrystalPhase</span>(<span class="sig-arg">lattice</span>,
+        <span class="sig-arg">spacegroup</span>,
+        <span class="sig-arg">phasename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCrystalPhase">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set a CrystalPhase instance
+
+argument
+- lattice   :   Lattice instance
+- spacegroup:   string, space group
+- phasename :   string, name of the phase
+
+return  --  CrystalPhase instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="replaceStructureModel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">replaceStructureModel</span>(<span class="sig-arg">thefit</span>,
+        <span class="sig-arg">modeltuplelist</span>,
+        <span class="sig-arg">cindex</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#replaceStructureModel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Replace the structure model inside a Fit object
+
+Argument:
+- thefit    :   Fit instance
+- modeltuple:   list 3-tuples:  (Lattice, List of Atoms, str/Space group)
+- cindex    :   int, or str/&quot;all&quot;:  component
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initProfilePseudoVoigtIkedaCarpenter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initProfilePseudoVoigtIkedaCarpenter</span>(<span class="sig-arg">sig0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam2</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfilePseudoVoigtIkedaCarpenter">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+new and set up a Pseudo-Voig Ikeda-Carpenter peak profile instance
+
+argument
+- sig0  :   float,
+- sig1  :   float,
+- sig2  :   float,
+- gam0  :   float,
+- gam1  :   float,
+- gam2  :   float,
+- alph0 :   float,
+- beta0 :   float,
+- alph1 :   float
+- kappa :   float
+- resfname  :   string, resolution file name (default=None)
+- bank  :   integer, optional bank number in resolution file
+
+return  --   (PseudoVoigtIkedaCarpenter, ExponentialDecay) instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initPseudoVoigtExpDSpacing"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initPseudoVoigtExpDSpacing</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>,
+        <span class="sig-arg">sig0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam2</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPseudoVoigtExpDSpacing">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+New and set up a PsuedoVoigt Exponent D-Spacing
+
+Prioty:
+
+argument
+- sig0  :   float,
+- sig1  :   float,
+- sig2  :   float,
+- gam0  :   float,
+- gam1  :   float,
+- gam2  :   float,
+- kappa :   float
+
+return  --   PseudoVoigtIkedaCarpenter instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initPseudoVoigtExp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initPseudoVoigtExp</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>,
+        <span class="sig-arg">sig0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">sig2</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">gam2</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initPseudoVoigtExp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+New and set up a PsuedoVoigt Exponent back-to-back
+
+argument
+- sig0  :   float,
+- sig1  :   float,
+- sig2  :   float,
+- gam0  :   float,
+- gam1  :   float,
+- gam2  :   float,
+
+return  --   PseudoVoigtIkedaCarpenter instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initExponentialDecay"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initExponentialDecay</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">alph0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">alph1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta1</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initExponentialDecay">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Initializae a Thermal Expoential-Decay Object
+
+Priority:   Data in parameterdict will override  
+
+Argument:
+- parameterdict :   dictionary
+- alph0     :   float,
+- beta0     :   float,
+- alph1     :   float,
+- beta1     :   float,
+
+Return      :   ExpDecayFunction object
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initThermalExponentialDecay"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initThermalExponentialDecay</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">alph0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta0</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">alph1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">alph0t</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta0t</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">alph1t</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta1t</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initThermalExponentialDecay">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Initializae a Thermal Expoential-Decay Object
+
+Priority:   Data in parameterdict will override  
+
+Argument:
+- parameterdict :   dictionary
+- alph0     :   float,
+- beta0     :   float,
+- alph1     :   float,
+- beta1     :   float,
+- alph0t    :   float,
+- beta0t    :   float,
+- alph1t    :   float,
+- beta1t    :   float,
+
+Return      :   ThermalExpDecayFunction object
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initCylindricalAbsorptionCorrection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initCylindricalAbsorptionCorrection</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">abs1</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">abs2</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initCylindricalAbsorptionCorrection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Initialize and set up an Absorption-Correction object
+
+Arguments:
+- parameterdict :   dictionary
+
+Return          :   AbsorptionCorrection instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="set2ThetaSymmetricPeakProfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set2ThetaSymmetricPeakProfile</span>(<span class="sig-arg">prof</span>,
+        <span class="sig-arg">peakrange</span>,
+        <span class="sig-arg">u</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">v</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">w</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">resfile</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#set2ThetaSymmetricPeakProfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+set up a 2-theta symmetric peak profile
+
+argument:
+- peakrange :   float,
+- u
+- v
+- w
+- x
+- y
+- resfile   :   string, file name of resolution file
+
+return  --  None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initProfileGaussian"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initProfileGaussian</span>(<span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>,
+        <span class="sig-arg">u</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">v</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">w</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileGaussian">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>initalize and set up a Gaussian PeakProfile instance</p>
+  return  --  GaussianProfile
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initProfilePseudoVoigt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initProfilePseudoVoigt</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>,
+        <span class="sig-arg">u</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">v</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">w</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">eta0</span>=<span class="sig-default">1.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfilePseudoVoigt">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set up a Pseudo Voigt Peak Profile instance
+
+Arguements:
+- parameterdict :   dictionary
+
+return  --  PseudoVoigtProfile
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initProfileTCHPseudoVoigt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initProfileTCHPseudoVoigt</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>,
+        <span class="sig-arg">u</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">v</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">w</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">0.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileTCHPseudoVoigt">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set up a Thomas-Cox-Hasting (TCH) Pseudo Voigt Peak Profile instance
+
+Arguements:
+- parameterdict :   dictionary
+
+return  --  PseudoVoigtProfile
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="initProfileSplitPseudoVoigt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">initProfileSplitPseudoVoigt</span>(<span class="sig-arg">parameterdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">peakrange</span>=<span class="sig-default">8.0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#initProfileSplitPseudoVoigt">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+initialize and set up a Thomas-Cox-Hasting (TCH) Pseudo Voigt Peak Profile instance
+
+Arguements:
+- parameterdict :   dictionary
+
+return  --  PseudoVoigtProfile
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genPeakProfile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genPeakProfile</span>(<span class="sig-arg">peakprofilename</span>,
+        <span class="sig-arg">parameterdict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#genPeakProfile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Generate a proper PeakProfile object according to some given name
+
+Argument:
+- peakprofilename   :   string, name of peak profile
+- parameterdict     :   dictionary, parameter for init the peak profile
+
+Return              :   Rietveld PeakProfile instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genFit</span>(<span class="sig-arg">instrument</span>,
+        <span class="sig-arg">phaseslist</span>,
+        <span class="sig-arg">experimentslist</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#genFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Generate a Fit instance (Feature fixed)
+
+Arguement:
+- instrument        :   Instrument instance
+- phaseslist        :   List of diffpy.srrietvel.Phase
+- experimentslist   :   list, of list of measurements
+
+Return              :   diffpy.srrietvel.Fit
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="addComponent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addComponent</span>(<span class="sig-arg">fit</span>,
+        <span class="sig-arg">pattern</span>,
+        <span class="sig-arg">phases</span>,
+        <span class="sig-arg">background</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">bkgdvaluelist</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">bkgdorigin</span>=<span class="sig-default">7000.0</span>,
+        <span class="sig-arg">peakprofile</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">expdecay</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#addComponent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+generate a RietveldComponent to a Fit instance
+
+arguments
+- pattern       :   Pattern instance
+- phases        :   list of Phase instance
+- background    :   Background instance
+- bkgdvaluelist :   list of 2-tuple/float (defualt=None)
+                    1-tuple: b1, b2, ....
+                    2-tuple: (tof1, b1), (tof2, b2), ... 
+- bkgdorigin    :   float, polynomial background origin
+- peakprofile   :   diffpy.rietveldapi.PeakProfile instance (default=None)
+- expdecay      :   diffpy.rietveldapi.ExpDecayFunction instance (default=None)
+
+return  --  RietveldComponent
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="locateRefinableParameter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">locateRefinableParameter</span>(<span class="sig-arg">startobj</span>,
+        <span class="sig-arg">paraname</span>,
+        <span class="sig-arg">info</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#locateRefinableParameter">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+locate the parent object of a specific refinable parameter
+
+arguments
+startobj    :   object to search for a parameter of it or in the object belonged to it
+paraname    :   string, name of parameter
+info        :   string, some additional information for this parameter in order to avoid
+                two parameters with the same/similar name
+
+return  --  ???
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="checkMust"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">checkMust</span>(<span class="sig-arg">fit</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.midscript-pysrc.html#checkMust">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+check a list of important parameters that must be set right!
+
+argument
+- fit   :   Fit instance
+
+return  --  Boolean
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="myEngine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">myEngine</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;diffpy.srrietveld.refinebackend.RietveldEngine instance at 0xb7ac124c<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:22 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

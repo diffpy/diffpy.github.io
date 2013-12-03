@@ -1,0 +1,93 @@
+.. _introduction:
+
+##########################
+Introduction
+##########################
+
+===================
+What is SrRietveld?
+===================
+
+SrRietveld is a highly automated software toolkit designed to simplify Rietveld 
+refinement using neutron and x-ray powder diffraction data. It is designed to simplify
+and automate the refinement of large numbers of datasets, such as are becoming available
+from modern high-throughput powder diffractometers.  SrRietveld takes the
+existing Rietveld programs, GSAS and FullProf, and wraps them in a Python 
+layer allowing the Rietveld refinement process to be automated in 
+creative ways. The Python wrapping allows tasks to be automated, such as the
+strategy (which parameters are switched on in which order) for a single
+dataset, and the automation and visualization of refinements of large numbers of datasets.
+
+SrRietveld is the Rietveld refinement application of the NSF DMR funded 
+`DANSE <http://danse.us>`_ (Distributed Data Analysis for Neutron Scattering 
+Experiments) software project.
+
+
+===================
+Design Principles
+===================
+
+SrRietveld is developed in the Python language using object 
+oriented programming (OOP) concepts. Python is extensively used in
+scientific software development. It is cross-platform and suitable for fast 
+development. Also there are many well designed packages for scientific 
+programming and modeling, such as Matplotlib, Numpy and Scipy. The OOP design 
+enables SrRietveld to be easily maintained and extended.
+
+The philosophy of the SrRietveld design is to improve the efficiency of a 
+typical work flow by controlling existing Rietveld refinement engines. A uniform
+data structure is implemented in SrRietveld so that the differences in input and
+output in different refinement engines will not be noticeable to the users; 
+i.e., the same data can be refined using either GSAS or FullProf. Pre-written 
+scripts are provided for automating common tasks, such as refining from coarse 
+guesses of initial parameters, sequential refinement, etc.. It is also possible 
+for advanced users to develop their own macro scripts and contribute to the 
+development of SrRietveld. 
+
+=======================
+What can SrRietveld do?
+=======================
+
+The functions of SrRietveld include:
+
+* *Automatic and user-guided Le-Bail and Rietveld refinements*
+  
+    Perform multi-step refinement on single experiment data sets
+* *Sequential Rietveld refinement*
+  
+    Sequentially fit related data sets from a series of experiments
+* *Examine the refinement results*
+  
+    Plot refinement parameters or calculated patterns at each refinement step
+* *Work with different diffraction types*
+  
+    Analyze data from time-of-flight neutron, constant wavelength neutron, and constant wavelength X-ray diffraction experiments
+
+=======================
+Merits
+=======================
+* Highly automated Rietveld execution
+* User-friendly and easy to learn
+* Automated analysis of large data sets
+* Uses conventional refinement engines, such as GSAS and FullProf
+* Modular software design allowing extension by expert users 
+   
+=========
+Community
+=========
+
+`SrRietveld-dev Google groups <http://groups.google.com/group/srrietveld-dev>`_ --
+Please share your comments, desires and suggestions with the developers by 
+posting to the DiffPy developers' forum. 
+
+===========
+Contact Us
+===========
+
+   | Professor Simon Billinge
+   | Applied Physics and Applied Mathematics Department
+   | The Fu Foundation School of Engineering and Applied Science
+   | 200 S. W. Mudd Building
+   | MC 4701, 500 W. 120th Street
+   | New York, NY 10027
+   | email: sb2896@columbia.edu

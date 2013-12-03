@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.utilrapdf</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;utilrapdf
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.utilrapdf-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="srrietveld.utilrapdf-module.html">Module srrietveld.utilrapdf</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># diffpy.srrietveld by DANSE Diffraction group</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   Simon J. L. Billinge</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   (c) 2008 Trustees of the Columbia University</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   in the City of New York.  All rights reserved.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># File coded by:    Wenduo Zhou</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See AUTHORS.txt for a list of people who contributed.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See LICENSE.txt for license information.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-docstring">"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">Utility functions for RAPDF Only</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable srrietveld.__id__=srrietveld-module.html#__id__,Variable srrietveld.atominfo.__id__=srrietveld.atominfo-module.html#__id__,Variable srrietveld.autobackgroundselect.__id__=srrietveld.autobackgroundselect-module.html#__id__,Variable srrietveld.auxiliary.__id__=srrietveld.auxiliary-module.html#__id__,Variable srrietveld.datafileconverter.__id__=srrietveld.datafileconverter-module.html#__id__,Variable srrietveld.datamanager.__id__=srrietveld.datamanager-module.html#__id__,Variable srrietveld.dataprocessnpdf.__id__=srrietveld.dataprocessnpdf-module.html#__id__,Variable srrietveld.enduserscripts.__id__=srrietveld.enduserscripts-module.html#__id__,Variable srrietveld.gsasfileparser.__id__=srrietveld.gsasfileparser-module.html#__id__,Variable srrietveld.instrument.__id__=srrietveld.instrument-module.html#__id__,Variable srrietveld.io.__id__=srrietveld.io-module.html#__id__,Variable srrietveld.mar_utilities.__id__=srrietveld.mar_utilities-module.html#__id__,Variable srrietveld.measurements.__id__=srrietveld.measurements-module.html#__id__,Variable srrietveld.midscript.__id__=srrietveld.midscript-module.html#__id__,Variable srrietveld.mixedphaseanalyzer.__id__=srrietveld.mixedphaseanalyzer-module.html#__id__,Variable srrietveld.modelrw.__id__=srrietveld.modelrw-module.html#__id__,Variable srrietveld.monitormem.__id__=srrietveld.monitormem-module.html#__id__,Variable srrietveld.parallelrefinecontrol.__id__=srrietveld.parallelrefinecontrol-module.html#__id__,Variable srrietveld.phasescript.__id__=srrietveld.phasescript-module.html#__id__,Variable srrietveld.plot2d.__id__=srrietveld.plot2d-module.html#__id__,Variable srrietveld.qbackgrounds.__id__=srrietveld.qbackgrounds-module.html#__id__,Variable srrietveld.refinebackend.__id__=srrietveld.refinebackend-module.html#__id__,Variable srrietveld.refineguides.__id__=srrietveld.refineguides-module.html#__id__,Variable srrietveld.refinehistory.__id__=srrietveld.refinehistory-module.html#__id__,Variable srrietveld.refinemanager.__id__=srrietveld.refinemanager-module.html#__id__,Variable srrietveld.refinesetup.__id__=srrietveld.refinesetup-module.html#__id__,Variable srrietveld.refinestrategy.__id__=srrietveld.refinestrategy-module.html#__id__,Variable srrietveld.sequentialrefinecontrol.__id__=srrietveld.sequentialrefinecontrol-module.html#__id__,Variable srrietveld.spacegroupinfo.__id__=srrietveld.spacegroupinfo-module.html#__id__,Variable srrietveld.srrietveldconfiguration.__id__=srrietveld.srrietveldconfiguration-module.html#__id__,Variable srrietveld.stringutilfunction.__id__=srrietveld.stringutilfunction-module.html#__id__,Variable srrietveld.uisupport.__id__=srrietveld.uisupport-module.html#__id__,Variable srrietveld.utilbackground.__id__=srrietveld.utilbackground-module.html#__id__,Variable srrietveld.utilinstrument.__id__=srrietveld.utilinstrument-module.html#__id__,Variable srrietveld.utilplot.__id__=srrietveld.utilplot-module.html#__id__,Variable srrietveld.utilrapdf.__id__=srrietveld.utilrapdf-module.html#__id__,Variable srrietveld.utilrefineguide.__id__=srrietveld.utilrefineguide-module.html#__id__,Variable srrietveld.utilsequentialrefine.__id__=srrietveld.utilsequentialrefine-module.html#__id__,Variable srrietveld.utilunits.__id__=srrietveld.utilunits-module.html#__id__,Variable srrietveld.viewer3d.__id__=srrietveld.viewer3d-module.html#__id__,Variable srrietveld.viserrors.__id__=srrietveld.viserrors-module.html#__id__,Variable srrietveld.xmlgenerator.__id__=srrietveld.xmlgenerator-module.html#__id__,Variable srrietveld.xmlinterface.__id__=srrietveld.xmlinterface-module.html#__id__"><a title="srrietveld.__id__
+srrietveld.atominfo.__id__
+srrietveld.autobackgroundselect.__id__
+srrietveld.auxiliary.__id__
+srrietveld.datafileconverter.__id__
+srrietveld.datamanager.__id__
+srrietveld.dataprocessnpdf.__id__
+srrietveld.enduserscripts.__id__
+srrietveld.gsasfileparser.__id__
+srrietveld.instrument.__id__
+srrietveld.io.__id__
+srrietveld.mar_utilities.__id__
+srrietveld.measurements.__id__
+srrietveld.midscript.__id__
+srrietveld.mixedphaseanalyzer.__id__
+srrietveld.modelrw.__id__
+srrietveld.monitormem.__id__
+srrietveld.parallelrefinecontrol.__id__
+srrietveld.phasescript.__id__
+srrietveld.plot2d.__id__
+srrietveld.qbackgrounds.__id__
+srrietveld.refinebackend.__id__
+srrietveld.refineguides.__id__
+srrietveld.refinehistory.__id__
+srrietveld.refinemanager.__id__
+srrietveld.refinesetup.__id__
+srrietveld.refinestrategy.__id__
+srrietveld.sequentialrefinecontrol.__id__
+srrietveld.spacegroupinfo.__id__
+srrietveld.srrietveldconfiguration.__id__
+srrietveld.stringutilfunction.__id__
+srrietveld.uisupport.__id__
+srrietveld.utilbackground.__id__
+srrietveld.utilinstrument.__id__
+srrietveld.utilplot.__id__
+srrietveld.utilrapdf.__id__
+srrietveld.utilrefineguide.__id__
+srrietveld.utilsequentialrefine.__id__
+srrietveld.utilunits.__id__
+srrietveld.viewer3d.__id__
+srrietveld.viserrors.__id__
+srrietveld.xmlgenerator.__id__
+srrietveld.xmlinterface.__id__" class="py-name" href="#" onclick="return doclink('link-0', '__id__', 'link-0');">__id__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"$Id: utilrapdf.py 2792 2009-03-02 15:56:43Z wdzhou $"</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="getRAPDFInstrument"></a><div id="getRAPDFInstrument-def"><a name="L19"></a><tt class="py-lineno">19</tt> <a class="py-toggle" href="#" id="getRAPDFInstrument-toggle" onclick="return toggle('getRAPDFInstrument');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.utilrapdf-module.html#getRAPDFInstrument">getRAPDFInstrument</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="getRAPDFInstrument-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="getRAPDFInstrument-expanded"><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">    Copy the RAPDF instrument XML file from stored location</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">    Argument:</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-docstring">    Return              :   XML file name</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">    <tt class="py-comment"># 1. Parse the location of diffpy.srrietveld</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">import</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package srrietveld=srrietveld-module.html"><a title="srrietveld" class="py-name" href="#" onclick="return doclink('link-1', 'srrietveld', 'link-1');">srrietveld</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">    <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name"><a title="srrietveld" class="py-name" href="#" onclick="return doclink('link-2', 'srrietveld', 'link-1');">srrietveld</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method srrietveld.instrument.ConstWavelengthInstrument.__str__()=srrietveld.instrument.ConstWavelengthInstrument-class.html#__str__,Method srrietveld.instrument.Instrument.__str__()=srrietveld.instrument.Instrument-class.html#__str__,Method srrietveld.instrument.NeutronCWInstrument.__str__()=srrietveld.instrument.NeutronCWInstrument-class.html#__str__,Method srrietveld.instrument.TOFInstrument.__str__()=srrietveld.instrument.TOFInstrument-class.html#__str__,Method srrietveld.instrument.XrayInstrument.__str__()=srrietveld.instrument.XrayInstrument-class.html#__str__,Method srrietveld.mar_utilities.MarSetup.__str__()=srrietveld.mar_utilities.MarSetup-class.html#__str__,Method srrietveld.mar_utilities.SpecMarExposure.__str__()=srrietveld.mar_utilities.SpecMarExposure-class.html#__str__,Method srrietveld.refineguides.RefineGuide.__str__()=srrietveld.refineguides.RefineGuide-class.html#__str__,Method srrietveld.refinehistory.RefineHistory.__str__()=srrietveld.refinehistory.RefineHistory-class.html#__str__,Method srrietveld.refinestrategy.RefineStrategy.__str__()=srrietveld.refinestrategy.RefineStrategy-class.html#__str__,Method srrietveld.sequentialrefinecontrol.SeqRefineController.__str__()=srrietveld.sequentialrefinecontrol.SeqRefineController-class.html#__str__"><a title="srrietveld.instrument.ConstWavelengthInstrument.__str__
+srrietveld.instrument.Instrument.__str__
+srrietveld.instrument.NeutronCWInstrument.__str__
+srrietveld.instrument.TOFInstrument.__str__
+srrietveld.instrument.XrayInstrument.__str__
+srrietveld.mar_utilities.MarSetup.__str__
+srrietveld.mar_utilities.SpecMarExposure.__str__
+srrietveld.refineguides.RefineGuide.__str__
+srrietveld.refinehistory.RefineHistory.__str__
+srrietveld.refinestrategy.RefineStrategy.__str__
+srrietveld.sequentialrefinecontrol.SeqRefineController.__str__" class="py-name" href="#" onclick="return doclink('link-3', '__str__', 'link-3');">__str__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-name">terms</tt> <tt class="py-op">=</tt> <tt class="py-name">s</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">t</tt> <tt class="py-keyword">in</tt> <tt class="py-name">terms</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">t</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-string">"__init__.pyc"</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">1</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">            <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt class="py-name">t</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">            <tt class="py-keyword">break</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-name">location</tt> <tt class="py-op">=</tt> <tt class="py-name">s</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"__init__.pyc"</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"'"</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-string">"XMLs/Instruments/"</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">    <tt class="py-name">filename</tt> <tt class="py-op">=</tt> <tt class="py-string">"rapdf.xml"</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">    <tt class="py-name">cmd</tt> <tt class="py-op">=</tt> <tt class="py-string">"cp %-30s ."</tt><tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">location</tt><tt class="py-op">+</tt><tt class="py-name">filename</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">system</tt><tt class="py-op">(</tt><tt class="py-name">cmd</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">filename</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:24 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
