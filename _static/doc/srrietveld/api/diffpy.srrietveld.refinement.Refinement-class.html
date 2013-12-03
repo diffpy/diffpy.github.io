@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.refinement.Refinement</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.refinement-module.html">Module&nbsp;refinement</a> ::
+        Class&nbsp;Refinement
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.refinement.Refinement-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Refinement</h1><p class="nomargin-top"><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                       object --+            
+                                |            
+refinementdata.hdf5.object.Object --+        
+                                    |        
+   refinementdata.refinable.Refinable --+    
+                                        |    
+     refinementdata.refinement.Refinement --+
+                                            |
+                                           <strong class="uidshort">Refinement</strong>
+</pre>
+
+<hr />
+<p>The refinement (fit) class for SrRietveld. A refinement object 
+  contains information for a series of single refinement. It contains the 
+  subobjects such as the Pattern, Profile, and Contribution.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">owner</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">handle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">shape</span>=<span class="summary-sig-default">None</span>)</span><br />
+      constructor</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#addParamToStrategy" class="summary-sig-name">addParamToStrategy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datapath</span>,
+        <span class="summary-sig-arg">step</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add a parameter to strategy.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.addParamToStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpDataFile" class="summary-sig-name">dumpDataFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Dump the datafile for refinement in index</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpDataFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpEngineFile" class="summary-sig-name">dumpEngineFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">basename</span>=<span class="summary-sig-default">None</span>)</span><br />
+      dump the engine file to the directory</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpEngineFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpFileFromDataset" class="summary-sig-name">dumpFileFromDataset</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">ds</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">basename</span>=<span class="summary-sig-default">None</span>)</span><br />
+      dump the files in pattern objects, such as Datafile, MFIL, and 
+      Instrumentfile</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpFileFromDataset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpFiles" class="summary-sig-name">dumpFiles</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Dump the files for refinement, including all the files needed to run 
+      the refinement (datafile, instrument file, incident spectrum file, 
+      engine file)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpFiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpIncidentSpectrumFile" class="summary-sig-name">dumpIncidentSpectrumFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Dump the incident spectrum file (MFIL, only in EXP files for GSAS)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpIncidentSpectrumFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#dumpInstrumentFile" class="summary-sig-name">dumpInstrumentFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">directory</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Dump the instrument file into a folder.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpInstrumentFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#findFileFromDataset" class="summary-sig-name">findFileFromDataset</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ds</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Try to find the file from the information in the dataset</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.findFileFromDataset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getChi2" class="summary-sig-name">getChi2</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the chi square values of the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getChi2">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getDataFileFromPattern" class="summary-sig-name">getDataFileFromPattern</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">rootname</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get a data file object from the numpy array saved in Pattern</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getDataFileFromPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getEngineFileExt" class="summary-sig-name">getEngineFileExt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      get the extension name of the engine file for this fit</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getEngineFileExt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getEngineType" class="summary-sig-name">getEngineType</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the engine type for this refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getEngineType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getInvolvedDatapaths" class="summary-sig-name">getInvolvedDatapaths</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Get the refined parameters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getInvolvedDatapaths">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getName" class="summary-sig-name">getName</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the name of the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getNumOfCycles" class="summary-sig-name">getNumOfCycles</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the number of cycles of the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfCycles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getNumOfPatterns" class="summary-sig-name">getNumOfPatterns</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the number of patterns in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfPatterns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getNumOfPhases" class="summary-sig-name">getNumOfPhases</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get number of phases in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfPhases">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getOneStepStrategy" class="summary-sig-name">getOneStepStrategy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Rietveld</code><code class="variable-quote">'</code></span>)</span><br />
+      Combine the strategy steps into one step, so the refinement can run 
+      this strategy step and skep running through the steps</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getOneStepStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getParamListForStrategy" class="summary-sig-name">getParamListForStrategy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datapath</span>)</span><br />
+      Handling different mechanisms for different engines.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getParamListForStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#getPhaseByName" class="summary-sig-name">getPhaseByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Get the phase object by its name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getPhaseByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#isParamTurnedOn" class="summary-sig-name">isParamTurnedOn</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datapath</span>,
+        <span class="summary-sig-arg">step</span>=<span class="summary-sig-default">None</span>)</span><br />
+      check if the dataset is included in the strategy</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.isParamTurnedOn">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listEnvParamNames" class="summary-sig-name">listEnvParamNames</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the environment parameter names on which the refinements are 
+      organized.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listEnvParamNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listEnvParams" class="summary-sig-name">listEnvParams</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the environment parameter objects on which the refinements are 
+      organized.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listEnvParams">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listPatterns" class="summary-sig-name">listPatterns</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the Pattern objects in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPatterns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listPhaseNames" class="summary-sig-name">listPhaseNames</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return a list of phase names in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPhaseNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listPhases" class="summary-sig-name">listPhases</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      List the Phase objects in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPhases">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#listProfiles" class="summary-sig-name">listProfiles</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get a list of Profile objects in the refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listProfiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#loadDataFile" class="summary-sig-name">loadDataFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datafile</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      load the data file to the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadDataFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#loadIncidentSpectrumFile" class="summary-sig-name">loadIncidentSpectrumFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mfil</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Load the incident spectrum file path into the object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadIncidentSpectrumFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#loadInstrumentFile" class="summary-sig-name">loadInstrumentFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">instrumentfile</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bankid</span>=<span class="summary-sig-default">0</span>)</span><br />
+      load the instrument file path to the pattern instrumentfile - the abs
+      path to the instrument file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadInstrumentFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#loadStrategyFile" class="summary-sig-name">loadStrategyFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fullpath</span>)</span><br />
+      load the strategy from a text file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadStrategyFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#removeParamFromStrategy" class="summary-sig-name">removeParamFromStrategy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datapath</span>,
+        <span class="summary-sig-arg">step</span>=<span class="summary-sig-default">None</span>)</span><br />
+      remove parameter from the strategy</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.removeParamFromStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#saveEngineFile" class="summary-sig-name">saveEngineFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enginefile</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Save the engine file content to the datasets</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.saveEngineFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#saveFilePathToDataset" class="summary-sig-name">saveFilePathToDataset</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">absPath</span>,
+        <span class="summary-sig-arg">ds</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">basepath</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Save the absolute file path to the dataset</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.saveFilePathToDataset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#setStrategy" class="summary-sig-name">setStrategy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">strategylist</span>)</span><br />
+      Set the strategy to refinement object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.setStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.refinement.Refinement-class.html#writeStrateyFile" class="summary-sig-name">writeStrateyFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fullpath</span>)</span><br />
+      write the strategy to a local file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.writeStrateyFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.refinement.Refinement</code></b>:
+      <code>addPattern</code>,
+      <code>addStructure</code>,
+      <code>checkStatus</code>,
+      <code>getStatus</code>,
+      <code>isFinished</code>,
+      <code>isRunning</code>,
+      <code>isSubmitted</code>,
+      <code>loadLocalData</code>,
+      <code>removePattern</code>,
+      <code>removeStructure</code>,
+      <code>resetStatus</code>,
+      <code>setStatus</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.refinable.Refinable</code></b>:
+      <code>addHistory</code>,
+      <code>addHistoryByPath</code>,
+      <code>addSigma</code>,
+      <code>addSigmaByPath</code>,
+      <code>findRefinement</code>,
+      <code>getHistory</code>,
+      <code>getHistoryByPath</code>,
+      <code>getSigma</code>,
+      <code>getSigmaByPath</code>,
+      <code>listHistories</code>,
+      <code>listRefined</code>,
+      <code>loadLocalObjects</code>,
+      <code>removeHistory</code>,
+      <code>update</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>addObject</code>,
+      <code>copy</code>,
+      <code>copyMeta</code>,
+      <code>delete</code>,
+      <code>exportFile</code>,
+      <code>get</code>,
+      <code>getAttr</code>,
+      <code>getByPath</code>,
+      <code>getFlatIndex</code>,
+      <code>getMetaData</code>,
+      <code>getMultiDimIndex</code>,
+      <code>getObject</code>,
+      <code>getPyObj</code>,
+      <code>hasAttr</code>,
+      <code>hasMeta</code>,
+      <code>importFile</code>,
+      <code>isDescendant</code>,
+      <code>list</code>,
+      <code>listAttrs</code>,
+      <code>listNames</code>,
+      <code>listObjects</code>,
+      <code>load</code>,
+      <code>loadObject</code>,
+      <code>move</code>,
+      <code>range</code>,
+      <code>readStr</code>,
+      <code>removeObject</code>,
+      <code>rename</code>,
+      <code>repeat</code>,
+      <code>replicate</code>,
+      <code>reshape</code>,
+      <code>save</code>,
+      <code>set</code>,
+      <code>setAttr</code>,
+      <code>setByPath</code>,
+      <code>setLabels</code>,
+      <code>setPyObj</code>,
+      <code>unset</code>,
+      <code>unsetAttr</code>,
+      <code>writeStr</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.refinement.Refinement</code></b>:
+      <code>ERROR</code>,
+      <code>FINISHED</code>,
+      <code>NORMAL</code>,
+      <code>RUNNING</code>,
+      <code>SUBMITTED</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="diffpy.srrietveld.refinement.Refinement-class.html#numStrategySteps" class="summary-name">numStrategySteps</a><br />
+      Get the number of strategy steps
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="diffpy.srrietveld.refinement.Refinement-class.html#strategy" class="summary-name">strategy</a><br />
+      Get the strategy list from the fit object
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>labels</code>,
+      <code>name</code>,
+      <code>ndim</code>,
+      <code>path</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">owner</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">handle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">shape</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>constructor</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addParamToStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addParamToStrategy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datapath</span>,
+        <span class="sig-arg">step</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.addParamToStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a parameter to strategy. The included parameters will be turned on
+  in the refinement.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datapath</code></strong> (string) - the dataset signature path to be added to the strategy</li>
+        <li><strong class="pname"><code>step</code></strong> (integer) - the step of the strategy to which the parameter will be added
+          <ul>
+            <li>
+              None, the parameter will be added to all steps
+            </li>
+            <li>
+              step &gt;= total number of existing steps, a new step will be
+              added to the strategy list. The new step includes the new 
+              parameter, and all previously included parameters
+            </li>
+            <li>
+              0 &lt;= step &lt; total number of existing steps, the new 
+              parameter will be added to the step
+            </li>
+          </ul></li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpDataFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpDataFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpDataFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Dump the datafile for refinement in index</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>directory</code></strong> (directory path string) - the directory where the data files will be saved</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the single refinement</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer) - the bank id of the pattern to look for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the list of data file path saved, listed same as the bank number 
+          if the file is not found or not set, the item is None</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpEngineFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpEngineFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">basename</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpEngineFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>dump the engine file to the directory</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>directory</code></strong> (directory path string) - the directory where the file will be saved</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the data index of the engine file</li>
+        <li><strong class="pname"><code>basename</code></strong> (string) - the file name of the engine file</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the path of the engine file</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpFileFromDataset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpFileFromDataset</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">ds</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">basename</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpFileFromDataset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>dump the files in pattern objects, such as Datafile, MFIL, and 
+  Instrumentfile</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ds</code></strong> (a Dataset object) - the dataset stores the file path information</li>
+        <li><strong class="pname"><code>basename</code></strong> (string) - if defined, will be used as the file name @return - the paths of 
+          the dumped new file</li>
+        <li><strong class="pname"><code>directory</code></strong> (directory path string @param directory - the directory where the 
+          file will be saved)</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple @param index - the index in the dataset)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpFiles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpFiles</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpFiles">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Dump the files for refinement, including all the files needed to run 
+  the refinement (datafile, instrument file, incident spectrum file, engine
+  file)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>directory</code></strong> (directory path string) - the directory where the files will be saved</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the refinement to dump</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpIncidentSpectrumFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpIncidentSpectrumFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpIncidentSpectrumFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Dump the incident spectrum file (MFIL, only in EXP files for GSAS)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>directory</code></strong> (directory path string) - the directory where the file will be saved</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the dataset</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer) - the bank id of the pattern to look for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the new path of the saved file</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dumpInstrumentFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dumpInstrumentFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">directory</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.dumpInstrumentFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Dump the instrument file into a folder. Usually the instrument files 
+  are the same for all data set.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>directory</code></strong> (directory path string) - the directory where the file will be moved to</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the dataset, default to be the first in the list</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer) - the bank id of the pattern to look for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the new path of the instrument file</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findFileFromDataset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findFileFromDataset</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ds</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.findFileFromDataset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Try to find the file from the information in the dataset</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ds</code></strong> (a Dataset object) - the dataset which stores the file path information</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index in the dataset</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the file absolute path if the file is found, None otherwise</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getChi2"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getChi2</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getChi2">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the chi square values of the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the chi square values of the refinement</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getDataFileFromPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getDataFileFromPattern</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">rootname</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getDataFileFromPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get a data file object from the numpy array saved in Pattern</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the single refinement</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer) - the bank id of the pattern to look for</li>
+        <li><strong class="pname"><code>rootname</code></strong> (string) - the rootname of the data file, which is the file name without the
+          extension</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a Datafile object</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getEngineFileExt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getEngineFileExt</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getEngineFileExt">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get the extension name of the engine file for this fit</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>string of file extension, for example &quot;EXP&quot; or 
+          &quot;pcr&quot;</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getEngineType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getEngineType</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getEngineType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the engine type for this refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the string of the engine type, for example 
+          <i>&quot;gsas&quot;</i> or <i>&quot;fullprof&quot;</i></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getInvolvedDatapaths"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getInvolvedDatapaths</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">step</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getInvolvedDatapaths">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the refined parameters. The datasets ever included in the strategy
+  list will be listed. The order of the datasets when they turned on is 
+  ignored</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>step</code></strong> (integer) - the strategy step, if step is a valid integer, then get the 
+          datasets in that step; if none, get all the datasets in all steps</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the a list of Dataset objects</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getName</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the name of the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the refinement name</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNumOfCycles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNumOfCycles</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfCycles">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the number of cycles of the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the chi square values of the refinement</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNumOfPatterns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNumOfPatterns</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfPatterns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the number of patterns in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>number of patterns</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNumOfPhases"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNumOfPhases</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getNumOfPhases">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get number of phases in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>number of phases</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getOneStepStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getOneStepStrategy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Rietveld</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getOneStepStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Combine the strategy steps into one step, so the refinement can run 
+  this strategy step and skep running through the steps</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>type</code></strong> (string) - the type of the refinement, default to be Rietveld. Possible 
+          value can be &quot;Rietveld&quot; or &quot;LeBail&quot;</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the one step strategy list</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getParamListForStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getParamListForStrategy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datapath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getParamListForStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Handling different mechanisms for different engines. For example, for 
+  gsas, some parameters such as all background parameters have to be added 
+  or removed all together. Also the lattice parameters have to be combined 
+  in GSAS as well.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datapath</code></strong> (string) - the data path, which denotes the ownership tree of a dataset. It 
+          reads as Pattern[0].Back[0], Phase[0].Atom[1].x, or Phase[0].a</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of paths of the parameter data object that should be 
+          combined with the passed in datapath</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getPhaseByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPhaseByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.getPhaseByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the phase object by its name</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - the phase name to obtain</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the phase object with the name if exists. None if no such phase 
+          object. The program will emit a warning if duplicate phase names 
+          exist, and the first phase obj with the same name will be 
+          returned</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="isParamTurnedOn"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isParamTurnedOn</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datapath</span>,
+        <span class="sig-arg">step</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.isParamTurnedOn">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>check if the dataset is included in the strategy</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datapath</code></strong> (string) - the signature path string of the data. For ordinary data, just 
+          dataset.path for data with extra index, its dataset.path + '[%i]'
+          % extraindex</li>
+        <li><strong class="pname"><code>step</code></strong> (integer) - the strategy step to be investigate. If None, return True if the 
+          dataset is included in any step</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>True if the dataset is included, False otherwise</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listEnvParamNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listEnvParamNames</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listEnvParamNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the environment parameter names on which the refinements are 
+  organized. For example, the temperature or pressure series</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the environment parameter names</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listEnvParams"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listEnvParams</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listEnvParams">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the environment parameter objects on which the refinements are 
+  organized. For example, the temperature or pressure series</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of environment parameter objects</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listPatterns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listPatterns</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPatterns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the Pattern objects in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of patterns</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listPhaseNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listPhaseNames</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPhaseNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return a list of phase names in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of phase names</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listPhases"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listPhases</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listPhases">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List the Phase objects in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of phases</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listProfiles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listProfiles</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.listProfiles">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get a list of Profile objects in the refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of Profile objects</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="loadDataFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">loadDataFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datafile</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadDataFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>load the data file to the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datafile</code></strong> (file path string) - the data file absolute path</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the single refinement</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer) - the bank id of the pattern, default to be 0</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="loadIncidentSpectrumFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">loadIncidentSpectrumFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mfil</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadIncidentSpectrumFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Load the incident spectrum file path into the object</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mfil</code></strong> (file path string) - the abs path of the incident spectrum file MFIL</li>
+        <li><strong class="pname"><code>index</code></strong> (the index of the single refinement) - integer or tuple</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integers) - the bank id of the pattern</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="loadInstrumentFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">loadInstrumentFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">instrumentfile</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">bankid</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadInstrumentFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>load the instrument file path to the pattern instrumentfile - the abs 
+  path to the instrument file</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the single refinement</li>
+        <li><strong class="pname"><code>bankid</code></strong> (integer or tuple) - the bankid of the pattern</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="loadStrategyFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">loadStrategyFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fullpath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.loadStrategyFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>load the strategy from a text file</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fullpath</code></strong> (file path string) - the stratey file path</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeParamFromStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeParamFromStrategy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datapath</span>,
+        <span class="sig-arg">step</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.removeParamFromStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>remove parameter from the strategy</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datapath</code></strong> (string) - the data signature path to be removed from the strategy</li>
+        <li><strong class="pname"><code>step</code></strong> (integer) - the strategy step.
+          <ul>
+            <li>
+              None, will remove the strategy from all steps
+            </li>
+            <li>
+              0 &lt;= step &lt; total number of existing steps, the new 
+              parameter will be removed from the step
+            </li>
+          </ul></li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="saveEngineFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">saveEngineFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enginefile</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.saveEngineFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Save the engine file content to the datasets</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>enginefile</code></strong> (filepath string) - the engine file path</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the single refinement</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="saveFilePathToDataset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">saveFilePathToDataset</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">absPath</span>,
+        <span class="sig-arg">ds</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">basepath</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.saveFilePathToDataset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Save the absolute file path to the dataset</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ds</code></strong> (Dataset object) - the dataset to store the file path information</li>
+        <li><strong class="pname"><code>index</code></strong> (integer or tuple) - the index of the dataset</li>
+        <li><strong class="pname"><code>absPath</code></strong> (file path string) - the absolute path of the data file</li>
+        <li><strong class="pname"><code>basepath</code></strong> (directory path string) - the basepath used to determine the relative path, the 
+          project.basepath will be used if basepath None</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setStrategy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">strategylist</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.setStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the strategy to refinement object</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>strategylist</code></strong> (list) - a list with strategy steps</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="writeStrateyFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeStrateyFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fullpath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.refinement-pysrc.html#Refinement.writeStrateyFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>write the strategy to a local file</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fullpath</code></strong> (file path string) - the file path to write to</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Property Details</span></td>
+</tr>
+</table>
+<a name="numStrategySteps"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">numStrategySteps</h3>
+  <p>Get the number of strategy steps</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.numStrategySteps(<span class="summary-sig-arg">self</span>)</span>
+        - Get the number of strategy steps
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="strategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">strategy</h3>
+  <p>Get the strategy list from the fit object</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.strategy(<span class="summary-sig-arg">self</span>)</span>
+        - Get the strategy list from the fit object
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:58 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

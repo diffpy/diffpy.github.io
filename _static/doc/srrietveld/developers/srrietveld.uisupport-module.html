@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.uisupport</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;uisupport
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.uisupport-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module uisupport</h1><span class="codelink"><a href="srrietveld.uisupport-pysrc.html">source&nbsp;code</a></span><br /><br />
+<pre class="literalblock">
+
+Supporting User Interface Applications, including
+1. Fitting
+2. I/O
+
+3. Auxiliary:
+   - convertDataFormat          convert a data file to SrRietveld compatible
+        (datafilename, engine)  according to engine
+
+   - getRefinementStrategy      generate a RefineStrategy 
+        (strategytype, strategyfname, instrumenttype, engine):
+
+   - genMeasurementXML
+Using:  Standard Infomation Dictionary as Input. 
+        The definition of the unified information dictionary will be defined in developer manual
+
+</pre><br /><br />
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#singleRaPDFFit" class="summary-sig-name">singleRaPDFFit</a>(<span class="summary-sig-arg">infodict</span>)</span><br />
+      Refining a single data set against the model for RAPDF...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#singleRaPDFFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#sequentialFit" class="summary-sig-name">sequentialFit</a>(<span class="summary-sig-arg">myinstrument</span>,
+        <span class="summary-sig-arg">infodict</span>)</span><br />
+      Sequential Fitting...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#sequentialFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#independentFit" class="summary-sig-name">independentFit</a>(<span class="summary-sig-arg">myinstrument</span>,
+        <span class="summary-sig-arg">infodict</span>)</span><br />
+      Fitting diffraction data with input structure model ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#independentFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#genFileListFromTemplate" class="summary-sig-name">genFileListFromTemplate</a>(<span class="summary-sig-arg">datafiletemplate</span>,
+        <span class="summary-sig-arg">directory</span>)</span><br />
+      Generate data file list from template data file and...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genFileListFromTemplate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#genFileListFromInfoFile" class="summary-sig-name">genFileListFromInfoFile</a>(<span class="summary-sig-arg">infofilename</span>,
+        <span class="summary-sig-arg">directory</span>)</span><br />
+      Generate a list of files by information file name...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genFileListFromInfoFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#mapDataFileToStructure" class="summary-sig-name">mapDataFileToStructure</a>(<span class="summary-sig-arg">structuresdict</span>,
+        <span class="summary-sig-arg">datafiletuplist</span>)</span><br />
+      Used in refining diffraction data in parallel
+Upon input structures related to environement values and 
+data files related to environment values, map the structure
+to data file
+
+Argument:
+- struturesdict :   dict.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#mapDataFileToStructure">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#convertCHIDataFileFormatGSAS" class="summary-sig-name">convertCHIDataFileFormatGSAS</a>(<span class="summary-sig-arg">infodict</span>)</span><br />
+      Convert the chi file to diffpy.srrietveld understandable XYSigma data file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertCHIDataFileFormatGSAS">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#convertCHIDataFileFormatFullProf" class="summary-sig-name">convertCHIDataFileFormatFullProf</a>(<span class="summary-sig-arg">infodict</span>)</span><br />
+      Convert the chi file to diffpy.srrietveld understandable XYSigma data file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertCHIDataFileFormatFullProf">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#genRAPDFXMLTemplate" class="summary-sig-name">genRAPDFXMLTemplate</a>(<span class="summary-sig-arg">genxmlname</span>)</span><br />
+      Generate RAPDF sequential fitting input XML...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genRAPDFXMLTemplate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#readRAPDFXML" class="summary-sig-name">readRAPDFXML</a>(<span class="summary-sig-arg">xmlfname</span>)</span><br />
+      Read RaPDF input XML file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#readRAPDFXML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#convertDataFormat" class="summary-sig-name">convertDataFormat</a>(<span class="summary-sig-arg">datafilename</span>,
+        <span class="summary-sig-arg">engine</span>,
+        <span class="summary-sig-arg">helpdict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rootfilename</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">newdir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Conver the input data file (single file) to SrRietveld ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertDataFormat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#convertDataFilesFormat" class="summary-sig-name">convertDataFilesFormat</a>(<span class="summary-sig-arg">engine</span>,
+        <span class="summary-sig-arg">inputinfodict</span>,
+        <span class="summary-sig-arg">helpdict</span>,
+        <span class="summary-sig-arg">rootfilename</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">newdir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Converted/</code><code class="variable-quote">'</code></span>)</span><br />
+      Convert multiple files data format to diffpy.srrietveld 
+standard XYSigma data file
+
+Argument:
+- engine        :   int
+- inputinfodict :   dictionary as standard SrRietveld refine/
+                    seqeuntialfit inputinfodict
+- helpdict      :   dictionary for helping information for
+                    special case.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertDataFilesFormat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#isOfTemplate" class="summary-sig-name">isOfTemplate</a>(<span class="summary-sig-arg">fname</span>,
+        <span class="summary-sig-arg">template</span>)</span><br />
+      Judge a file name is conformted to a given template...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#isOfTemplate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.uisupport-module.html#getRefinementStrategy" class="summary-sig-name">getRefinementStrategy</a>(<span class="summary-sig-arg">strategytype</span>,
+        <span class="summary-sig-arg">strategyfname</span>,
+        <span class="summary-sig-arg">instrumenttype</span>,
+        <span class="summary-sig-arg">engine</span>)</span><br />
+      Determine the refinement strategy according to instrument type and other ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.uisupport-pysrc.html#getRefinementStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__id__"></a><span class="summary-name">__id__</span> = <code title="'$Id: uisupport.py 2922 2009-03-20 15:46:57Z wdzhou $'"><code class="variable-quote">'</code><code class="variable-string">$Id: uisupport.py 2922 2009-03-20 15:46:57Z wdzhou $</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_MEMCHECK"></a><span class="summary-name">_MEMCHECK</span> = <code title="True">True</code><br />
+      Fitting Script Including I/O
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="singleRaPDFFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">singleRaPDFFit</span>(<span class="sig-arg">infodict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#singleRaPDFFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Refining a single data set against the model for RAPDF
+
+Argument:
+- infodict  :   dictionary, with tree structure
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="sequentialFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sequentialFit</span>(<span class="sig-arg">myinstrument</span>,
+        <span class="sig-arg">infodict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#sequentialFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Sequential Fitting
+
+Arguments:
+- myinstrument  :   Instrument
+- infodict      :   dict, as standard SrRietveld inputinfodict
+
+Return              :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="independentFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">independentFit</span>(<span class="sig-arg">myinstrument</span>,
+        <span class="sig-arg">infodict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#independentFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Fitting diffraction data with input structure model 
+independently
+
+Arguments:
+- myinstrument  :   Instrument
+- infodict  : dict
+
+Return      : None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genFileListFromTemplate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genFileListFromTemplate</span>(<span class="sig-arg">datafiletemplate</span>,
+        <span class="sig-arg">directory</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genFileListFromTemplate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Generate data file list from template data file and
+interpret the file name with environment parameters
+
+Argument:
+- datafiletemplate  :   str
+- directory         :   str, directory the data file located
+
+Return  :   list, of tuple
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genFileListFromInfoFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genFileListFromInfoFile</span>(<span class="sig-arg">infofilename</span>,
+        <span class="sig-arg">directory</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genFileListFromInfoFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Generate a list of files by information file name
+with the environment parameters
+
+Argument:
+- infofilename  :   str
+- directory     :   str
+
+Return          :   list, of 2-tuple, (data file name, environment parameter value)
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="mapDataFileToStructure"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">mapDataFileToStructure</span>(<span class="sig-arg">structuresdict</span>,
+        <span class="sig-arg">datafiletuplist</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#mapDataFileToStructure">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Used in refining diffraction data in parallel
+Upon input structures related to environement values and 
+data files related to environment values, map the structure
+to data file
+
+Argument:
+- struturesdict :   dict.  key = environement value.  value = Crystal Structure
+- datafiletuplelist:list.  
+
+Return          :   dict
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="convertCHIDataFileFormatGSAS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convertCHIDataFileFormatGSAS</span>(<span class="sig-arg">infodict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertCHIDataFileFormatGSAS">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Convert the chi file to diffpy.srrietveld understandable XYSigma data file
+
+Argument:
+- infodict  :   dictionary
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="convertCHIDataFileFormatFullProf"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convertCHIDataFileFormatFullProf</span>(<span class="sig-arg">infodict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertCHIDataFileFormatFullProf">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Convert the chi file to diffpy.srrietveld understandable XYSigma data file
+
+Argument:
+- infodict  :   dictionary
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="genRAPDFXMLTemplate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">genRAPDFXMLTemplate</span>(<span class="sig-arg">genxmlname</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#genRAPDFXMLTemplate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Generate RAPDF sequential fitting input XML
+
+Argument:
+- genxmlname    :   str, XML file name
+
+Return          :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="readRAPDFXML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readRAPDFXML</span>(<span class="sig-arg">xmlfname</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#readRAPDFXML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Read RaPDF input XML file
+
+Argument:
+- xmlfname  :   str, XML file name
+
+Return      :   dictionary, information
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="convertDataFormat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convertDataFormat</span>(<span class="sig-arg">datafilename</span>,
+        <span class="sig-arg">engine</span>,
+        <span class="sig-arg">helpdict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rootfilename</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">newdir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertDataFormat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Conver the input data file (single file) to SrRietveld 
+acceptible data file
+
+Argument:
+- datafilename  :   str
+- engine        :   str (1: Fullprof, 2: GSAS)
+- helpfiledict  :   dictionary
+
+Return          :   dict, converted data file name
+                    key = bank ID (Constant Wavelength Instrument: bank ID = 0)
+                    value = data file name
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="convertDataFilesFormat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convertDataFilesFormat</span>(<span class="sig-arg">engine</span>,
+        <span class="sig-arg">inputinfodict</span>,
+        <span class="sig-arg">helpdict</span>,
+        <span class="sig-arg">rootfilename</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">newdir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Converted/</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#convertDataFilesFormat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Convert multiple files data format to diffpy.srrietveld 
+standard XYSigma data file
+
+Argument:
+- engine        :   int
+- inputinfodict :   dictionary as standard SrRietveld refine/
+                    seqeuntialfit inputinfodict
+- helpdict      :   dictionary for helping information for
+                    special case. 
+                    Definition of keys refers to convertDataFormat()
+- rootfilename  :   str, root of data file name (w/o posfix)
+- newdir        :   str, new directory to write the data file
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="isOfTemplate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isOfTemplate</span>(<span class="sig-arg">fname</span>,
+        <span class="sig-arg">template</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#isOfTemplate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Judge a file name is conformted to a given template
+
+Argument:
+- fname     :   str
+- template  :   str
+
+Return      :   True/False
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRefinementStrategy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRefinementStrategy</span>(<span class="sig-arg">strategytype</span>,
+        <span class="sig-arg">strategyfname</span>,
+        <span class="sig-arg">instrumenttype</span>,
+        <span class="sig-arg">engine</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.uisupport-pysrc.html#getRefinementStrategy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Determine the refinement strategy according to instrument type and other 
+information
+
+Argument:
+- instrumenttype    :   str
+
+Return              :   RefineStrategy instance
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:22 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

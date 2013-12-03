@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.plot2d</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;plot2d
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.plot2d-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module plot2d</h1><span class="codelink"><a href="srrietveld.plot2d-pysrc.html">source&nbsp;code</a></span><br /><br />
+<pre class="literalblock">
+plot2d.py is in charge of plotting some 2D graph with 
+publication standard output
+
+created on 2007.09.27
+
+Main Client Method:
+    plot2D(plotset, unitx, unity, infolist, colorlist, stylelist, marklist):
+
+        plot a 2D graph for one or a coule of lines on a same graph
+
+        Arguments:
+        plotset         --  list of array, number of array = 2*line
+                            [x1, y1, x2, y2, ...], where xi, yi are
+                            lists containing the column data
+        unitx           --  string, information/unit of x-axis
+        unity           --  string, information/unit of y-axis
+        infolist        --  list  , label of each line (y1, y2, ... )  
+        colorlist       --  list  , string, color of each line (y1, y2, ... )
+        sytlelist       --  list  , string, style of each line (y1, y2, ... )
+        marklist        --  list  , string, mark  of each line (y1, y2, ... )
+
+        plotset :  Length = #Line * 2;
+        infolist, colorlist, stylelist, marklist: Length = #Line * 2
+
+Classes Definition
+-  class PlotInfo2D
+   *  __init__(self, listx, listy, color=&quot;black&quot;, style=&quot;solid&quot;, mark=&quot;none&quot;, label=&quot;&quot;)
+-  class Plot2D
+   *  __init__(self, stringx = &quot;&quot;, stringy = &quot;&quot;, plotlist=[])
+
+</pre><br /><br />
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.plot2d.Plot2D-class.html" class="summary-name">Plot2D</a><br />
+      Class to handle plotting a 2D graph containing multiple lines...
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.plot2d.PlotInfo2D-class.html" class="summary-name">PlotInfo2D</a><br />
+      class PlotInfo2D contains the plot information for plotting a 2D figure...
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.plot2d.PlotMatLib-class.html" class="summary-name">PlotMatLib</a><br />
+      Class PlotMatLib is dedicated to make plots by matplot lib...
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#plotFit" class="summary-sig-name">plotFit</a>(<span class="summary-sig-arg">fit</span>)</span><br />
+      Plot the patterns in a fit.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#plotPattern" class="summary-sig-name">plotPattern</a>(<span class="summary-sig-arg">pat</span>)</span><br />
+      Plot a pattern.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#_plotPattern" class="summary-sig-name">_plotPattern</a>(<span class="summary-sig-arg">pat</span>)</span><br />
+      Plot the observed and fit DiffractionPattern data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_plotPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#plotObservedPattern" class="summary-sig-name">plotObservedPattern</a>(<span class="summary-sig-arg">pat</span>)</span><br />
+      Plot the observed DiffractionPattern data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotObservedPattern">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#plot2D" class="summary-sig-name">plot2D</a>(<span class="summary-sig-arg">plotset</span>,
+        <span class="summary-sig-arg">unitx</span>,
+        <span class="summary-sig-arg">unity</span>,
+        <span class="summary-sig-arg">infolist</span>,
+        <span class="summary-sig-arg">colorlist</span>,
+        <span class="summary-sig-arg">stylelist</span>,
+        <span class="summary-sig-arg">marklist</span>,
+        <span class="summary-sig-arg">xlimtuple</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ylimtuple</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>)</span><br />
+      plot a 2D graph for one or a coule of lines on a same graph
+
+Arguments:
+plotset         --  list of array, number of array = 2*line
+                    [x1, y1, x2, y2, ...], where xi, yi are
+                    lists containing the column data
+unitx           --  string, information/unit of x-axis
+unity           --  string, information/unit of y-axis
+infolist        --  list  , label of each line (y1, y2, ...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plot2D">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_isFloat"></a><span class="summary-sig-name">_isFloat</span>(<span class="summary-sig-arg">f</span>)</span><br />
+      Test if an object is a float.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_isFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_isFloatList"></a><span class="summary-sig-name">_isFloatList</span>(<span class="summary-sig-arg">L</span>)</span><br />
+      Test if a list contains only floats.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_isFloatList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_isInt"></a><span class="summary-sig-name">_isInt</span>(<span class="summary-sig-arg">f</span>)</span><br />
+      Test if an object is a int.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_isInt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_isIntList"></a><span class="summary-sig-name">_isIntList</span>(<span class="summary-sig-arg">L</span>)</span><br />
+      Test if a list contains only ints.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_isIntList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#_rebinArray" class="summary-sig-name">_rebinArray</a>(<span class="summary-sig-arg">A</span>,
+        <span class="summary-sig-arg">xold</span>,
+        <span class="summary-sig-arg">xnew</span>)</span><br />
+      Rebin the an array by interpolating over the new x range.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_rebinArray">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.plot2d-module.html#removeRegion" class="summary-sig-name">removeRegion</a>(<span class="summary-sig-arg">xs</span>,
+        <span class="summary-sig-arg">yslist</span>,
+        <span class="summary-sig-arg">excludedregion</span>)</span><br />
+      Remove a region (on x) from (xs, [y1s, y2s]) list pair...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.plot2d-pysrc.html#removeRegion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__id__"></a><span class="summary-name">__id__</span> = <code title="'$Id: plot2d.py 2839 2009-03-10 21:36:23Z wdzhou $'"><code class="variable-quote">'</code><code class="variable-string">$Id: plot2d.py 2839 2009-03-10 21:36:23Z wdzhou $</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_offsetMultiplier"></a><span class="summary-name">_offsetMultiplier</span> = <code title="1.5">1.5</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="plotFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotFit</span>(<span class="sig-arg">fit</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Plot the patterns in a fit.</p>
+  <p>It wraps method: plotPattern()</p>
+  <p>Argument: fit     -   An instance of Fit or a list of instances.</p>
+  Return  -   None
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotPattern</span>(<span class="sig-arg">pat</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Plot a pattern.
+
+pat     --  An instance of DiffractionPattern or a list of
+            DiffractionPattern instances. If the fit has been performed,
+            this will plot the data, fit and difference.  Otherwise, it will
+            just plot the observed pattern.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_plotPattern"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_plotPattern</span>(<span class="sig-arg">pat</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_plotPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Plot the observed and fit DiffractionPattern data.
+
+pat     --  An instance of DiffractionPattern or a list of
+            DiffractionPattern instances. If the fit has been performed,
+            this will plot the data, fit and difference.  Otherwise, it will
+            just plot the observed pattern.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotObservedPattern"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotObservedPattern</span>(<span class="sig-arg">pat</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plotObservedPattern">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Plot the observed DiffractionPattern data.
+
+pat     --  An instance of DiffractionPattern or a list of
+            DiffractionPattern instances.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="plot2D"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot2D</span>(<span class="sig-arg">plotset</span>,
+        <span class="sig-arg">unitx</span>,
+        <span class="sig-arg">unity</span>,
+        <span class="sig-arg">infolist</span>,
+        <span class="sig-arg">colorlist</span>,
+        <span class="sig-arg">stylelist</span>,
+        <span class="sig-arg">marklist</span>,
+        <span class="sig-arg">xlimtuple</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ylimtuple</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">auto</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#plot2D">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+plot a 2D graph for one or a coule of lines on a same graph
+
+Arguments:
+plotset         --  list of array, number of array = 2*line
+                    [x1, y1, x2, y2, ...], where xi, yi are
+                    lists containing the column data
+unitx           --  string, information/unit of x-axis
+unity           --  string, information/unit of y-axis
+infolist        --  list  , label of each line (y1, y2, ... )
+colorlist       --  list  , string, color of each line (y1, y2, ... )
+sytellist       --  list  , string, style of each line (y1, y2, ... )
+marklist        --  list  , string, mark  of each line (y1, y2, ... )
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_rebinArray"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_rebinArray</span>(<span class="sig-arg">A</span>,
+        <span class="sig-arg">xold</span>,
+        <span class="sig-arg">xnew</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#_rebinArray">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Rebin the an array by interpolating over the new x range.</p>
+  <p>Arguments: A       --  Array to interpolate xold    --  Old sampling 
+  array xnew    --  New sampling array</p>
+  <p>This uses cubic spline interpolation.</p>
+  Returns: A new array over the new sampling array.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeRegion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeRegion</span>(<span class="sig-arg">xs</span>,
+        <span class="sig-arg">yslist</span>,
+        <span class="sig-arg">excludedregion</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.plot2d-pysrc.html#removeRegion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+
+Remove a region (on x) from (xs, [y1s, y2s]) list pair
+
+Argument:
+- xs    :   list/array of float
+- ys    :   list/array of float
+- excludedregion    :   tuple (x, y)
+
+Return  :   2-tuple 
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:22 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>
