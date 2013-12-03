@@ -15,18 +15,21 @@ If you plan to use PDFgetX3 in any other way, please contact
 DiffPy Library
 ==============
 
-`Unix, Linux, Mac <http://www.diffpy.org/download.shtml#unix>`_ - 
-`Windows <http://www.diffpy.org/download.shtml#windows>`_ - 
-`Updates <http://www.diffpy.org/download.shtml#updates>`_ - 
-`Subversion <http://www.diffpy.org/download.shtml#subversion>`_ - 
-`Releases <http://www.diffpy.org/download.shtml#releases>`_
+:ref:`unix` - 
+:ref:`windows` -
+:ref:`updates` -
+:ref:`subversion` -
+:ref:`releases`
 
 License
 =======
 
 By downloading and using this software you are agreeing to the following conditions.
 
+  .. include:: _static/CMI_LICENSE.txt
+    :literal:
 
+.. _unix:
 
 Unix, Linux, Mac
 ================
@@ -60,6 +63,7 @@ list below, unpack and run the enclosed ``easy_install`` script::
     
 For more detailed installation instructions see PDFgui manual.
 
+.. _windows:
 
 Windows
 ========
@@ -80,6 +84,7 @@ the ``Python25/Scripts`` directory::
 This installs library files under ``Python25/Lib/site-packages`` and executable scripts for 
 ``pdfgui`` and ``pdffit2`` under ``Python25/Scripts``.
 
+.. _updates:
 
 DiffPy updates
 ==============
@@ -92,6 +97,8 @@ updates to the code. For example, to upgrade PDFgui, run::
 This installs only the changed DiffPy components as they become available at the DiffPy 
 `package repository <http://www.diffpy.org/packages/>`_. These packages are smaller and 
 will be updated more frequently than the complete installation archives.
+
+.. _subversion:
 
 Subversion repository
 =====================
@@ -110,3 +117,17 @@ and experimenting with the code. This can be done as::
     
 The DiffPy subversion repository can be browsed online `here <http://danse.us/trac/diffraction/browser/>`_.
 
+.. _releases:
+
+DiffPy Releases
+===============
+
+Please, join the :ref:`community` forum for tips, tricks, and feedback. 
+
+
+.. toctree::
+   :hidden:
+
+   community
+   documentation
+   download
