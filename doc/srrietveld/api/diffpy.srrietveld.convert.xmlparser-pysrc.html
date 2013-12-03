@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.convert.xmlparser</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.convert-module.html">Package&nbsp;convert</a> ::
+        Module&nbsp;xmlparser
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.convert.xmlparser-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="diffpy.srrietveld.convert.xmlparser-module.html">Module diffpy.srrietveld.convert.xmlparser</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"># diffpy.srrietveld by DANSE Diffraction group</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#                   Simon J. L. Billinge</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#                   (c) 2009 Trustees of the Columbia University</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#                   in the City of New York.  All rights reserved.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"># File coded by:    Peng Tian</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"># See AUTHORS.txt for a list of people who contributed.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"># See LICENSE.txt for license information.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">""" XMLfile parser is to parse XML input files. """</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable diffpy.srrietveld.addon.datafile.__id__=diffpy.srrietveld.addon.datafile-module.html#__id__,Variable diffpy.srrietveld.addon.debyefitting.__id__=diffpy.srrietveld.addon.debyefitting-module.html#__id__,Variable diffpy.srrietveld.addon.structurefile.__id__=diffpy.srrietveld.addon.structurefile-module.html#__id__,Variable diffpy.srrietveld.applications.__id__=diffpy.srrietveld.applications-module.html#__id__,Variable diffpy.srrietveld.applications.srhelp.__id__=diffpy.srrietveld.applications.srhelp-module.html#__id__,Variable diffpy.srrietveld.atom.__id__=diffpy.srrietveld.atom-module.html#__id__,Variable diffpy.srrietveld.bugreport.__id__=diffpy.srrietveld.bugreport-module.html#__id__,Variable diffpy.srrietveld.buildfit.__id__=diffpy.srrietveld.buildfit-module.html#__id__,Variable diffpy.srrietveld.convert.datafile.__id__=diffpy.srrietveld.convert.datafile-module.html#__id__,Variable diffpy.srrietveld.convert.gsasinstparser.__id__=diffpy.srrietveld.convert.gsasinstparser-module.html#__id__,Variable diffpy.srrietveld.convert.listfilereader.__id__=diffpy.srrietveld.convert.listfilereader-module.html#__id__,Variable diffpy.srrietveld.convert.strategyfile.__id__=diffpy.srrietveld.convert.strategyfile-module.html#__id__,Variable diffpy.srrietveld.convert.xmlparser.__id__=diffpy.srrietveld.convert.xmlparser-module.html#__id__,Variable diffpy.srrietveld.exceptions.__id__=diffpy.srrietveld.exceptions-module.html#__id__,Variable diffpy.srrietveld.export.__id__=diffpy.srrietveld.export-module.html#__id__,Variable diffpy.srrietveld.fitrt.__id__=diffpy.srrietveld.fitrt-module.html#__id__,Variable diffpy.srrietveld.objectinfo.__id__=diffpy.srrietveld.objectinfo-module.html#__id__,Variable diffpy.srrietveld.paramnames.__id__=diffpy.srrietveld.paramnames-module.html#__id__,Variable diffpy.srrietveld.pattern.__id__=diffpy.srrietveld.pattern-module.html#__id__,Variable diffpy.srrietveld.phase.__id__=diffpy.srrietveld.phase-module.html#__id__,Variable diffpy.srrietveld.profile.__id__=diffpy.srrietveld.profile-module.html#__id__,Variable diffpy.srrietveld.project.__id__=diffpy.srrietveld.project-module.html#__id__,Variable diffpy.srrietveld.refinement.__id__=diffpy.srrietveld.refinement-module.html#__id__,Variable diffpy.srrietveld.version.__id__=diffpy.srrietveld.version-module.html#__id__,Variable trunk.diffpy.srrietveld.applications.refine.__id__=trunk.diffpy.srrietveld.applications.refine-module.html#__id__"><a title="diffpy.srrietveld.addon.datafile.__id__
+diffpy.srrietveld.addon.debyefitting.__id__
+diffpy.srrietveld.addon.structurefile.__id__
+diffpy.srrietveld.applications.__id__
+diffpy.srrietveld.applications.srhelp.__id__
+diffpy.srrietveld.atom.__id__
+diffpy.srrietveld.bugreport.__id__
+diffpy.srrietveld.buildfit.__id__
+diffpy.srrietveld.convert.datafile.__id__
+diffpy.srrietveld.convert.gsasinstparser.__id__
+diffpy.srrietveld.convert.listfilereader.__id__
+diffpy.srrietveld.convert.strategyfile.__id__
+diffpy.srrietveld.convert.xmlparser.__id__
+diffpy.srrietveld.exceptions.__id__
+diffpy.srrietveld.export.__id__
+diffpy.srrietveld.fitrt.__id__
+diffpy.srrietveld.objectinfo.__id__
+diffpy.srrietveld.paramnames.__id__
+diffpy.srrietveld.pattern.__id__
+diffpy.srrietveld.phase.__id__
+diffpy.srrietveld.profile.__id__
+diffpy.srrietveld.project.__id__
+diffpy.srrietveld.refinement.__id__
+diffpy.srrietveld.version.__id__
+trunk.diffpy.srrietveld.applications.refine.__id__" class="py-name" href="#" onclick="return doclink('link-0', '__id__', 'link-0');">__id__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"$Id: xmlparser.py 5658 2010-07-09 20:05:34Z juhas $"</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">dom</tt><tt class="py-op">.</tt><tt class="py-name">minidom</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="XMLFile"></a><div id="XMLFile-def"><a name="L21"></a><tt class="py-lineno"> 21</tt> <a class="py-toggle" href="#" id="XMLFile-toggle" onclick="return toggle('XMLFile');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.XMLFile-class.html">XMLFile</a><tt class="py-op">:</tt> </tt>
+</div><div id="XMLFile-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="XMLFile-expanded"><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">    <tt class="py-docstring">""" Parser XML file"""</tt> </tt>
+<a name="XMLFile.__init__"></a><div id="XMLFile.__init__-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="XMLFile.__init__-toggle" onclick="return toggle('XMLFile.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="XMLFile.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="XMLFile.__init__-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">        <tt class="py-docstring">""" Initialization """</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="XMLFile.importXMLFile"></a><div id="XMLFile.importXMLFile-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="XMLFile.importXMLFile-toggle" onclick="return toggle('XMLFile.importXMLFile');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#importXMLFile">importXMLFile</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">filename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="XMLFile.importXMLFile-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="XMLFile.importXMLFile-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-docstring">""" Import general XML file """</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">            <tt class="py-name">xmlfile</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">filename</tt><tt class="py-op">,</tt> <tt class="py-string">"r"</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">            <tt class="py-name">rietxml</tt> <tt class="py-op">=</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">dom</tt><tt class="py-op">.</tt><tt class="py-name">minidom</tt><tt class="py-op">.</tt><tt class="py-name">parse</tt><tt class="py-op">(</tt><tt class="py-name">xmlfile</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-name">xmlfile</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method diffpy.srrietveld.project.Project.close()=diffpy.srrietveld.project.Project-class.html#close"><a title="diffpy.srrietveld.project.Project.close" class="py-name" href="#" onclick="return doclink('link-1', 'close', 'link-1');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt class="py-name">IOError</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-name">errmsg</tt> <tt class="py-op">=</tt> <tt class="py-string">"%-10s Cannot Be Found"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">filename</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">IOError</tt><tt class="py-op">(</tt><tt class="py-name">errmsg</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">rietxml</tt> </tt>
+</div><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="XMLFile.xmlToDict"></a><div id="XMLFile.xmlToDict-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="XMLFile.xmlToDict-toggle" onclick="return toggle('XMLFile.xmlToDict');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#xmlToDict">xmlToDict</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">xmlnode</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="XMLFile.xmlToDict-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="XMLFile.xmlToDict-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-docstring">""" Convert an XML object to a dictionary """</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">rdict</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-comment"># 1. Attribution</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">xmlnode</tt><tt class="py-op">.</tt><tt class="py-name">attributes</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">index</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">xmlnode</tt><tt class="py-op">.</tt><tt class="py-name">attributes</tt><tt class="py-op">.</tt><tt class="py-name">length</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt class="py-name">attrname</tt> <tt class="py-op">=</tt> <tt class="py-name">xmlnode</tt><tt class="py-op">.</tt><tt class="py-name">attributes</tt><tt class="py-op">.</tt><tt class="py-name">item</tt><tt class="py-op">(</tt><tt class="py-name">index</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt class="py-name">attrval</tt>  <tt class="py-op">=</tt> <tt class="py-name">xmlnode</tt><tt class="py-op">.</tt><tt class="py-name">attributes</tt><tt class="py-op">.</tt><tt class="py-name">getNamedItem</tt><tt class="py-op">(</tt><tt class="py-name">attrname</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">value</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                    <tt class="py-name">rdict</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">attrname</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">attrval</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                    <tt class="py-keyword">continue</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">                        <tt class="py-name">rdict</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">attrname</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">attrval</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                        <tt class="py-keyword">continue</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                        <tt class="py-name">rdict</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">attrname</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">attrval</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-comment"># 2. Recursive to call child nodes</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">child</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xmlnode</tt><tt class="py-op">.</tt><tt class="py-name">childNodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">child</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">rdict</tt><tt class="py-op">.</tt><tt class="py-name">has_key</tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">child</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                <tt class="py-name">rdict</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">child</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt class="py-name">rdict</tt><tt class="py-op">[</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">child</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Method diffpy.srrietveld.convert.xmlparser.XMLFile.xmlToDict()=diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#xmlToDict"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.xmlToDict" class="py-name" href="#" onclick="return doclink('link-2', 'xmlToDict', 'link-2');">xmlToDict</a></tt><tt class="py-op">(</tt><tt class="py-name">child</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">rdict</tt> </tt>
+</div></div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="StructureXML"></a><div id="StructureXML-def"><a name="L67"></a><tt class="py-lineno"> 67</tt> <a class="py-toggle" href="#" id="StructureXML-toggle" onclick="return toggle('StructureXML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.StructureXML-class.html">StructureXML</a><tt class="py-op">(</tt><tt class="py-base-class">XMLFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StructureXML-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="StructureXML-expanded"><a name="StructureXML.__init__"></a><div id="StructureXML.__init__-def"><a name="L68"></a><tt class="py-lineno"> 68</tt> <a class="py-toggle" href="#" id="StructureXML.__init__-toggle" onclick="return toggle('StructureXML.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.StructureXML-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">structurefilename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StructureXML.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StructureXML.__init__-expanded"><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module diffpy.srrietveld.addon.structurefile=diffpy.srrietveld.addon.structurefile-module.html"><a title="diffpy.srrietveld.addon.structurefile" class="py-name" href="#" onclick="return doclink('link-3', 'structurefile', 'link-3');">structurefile</a></tt> <tt class="py-op">=</tt> <tt class="py-name">structurefilename</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">structurexml</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile()=diffpy.srrietveld.convert.xmlparser.XMLFile-class.html#importXMLFile"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile" class="py-name" href="#" onclick="return doclink('link-4', 'importXMLFile', 'link-4');">importXMLFile</a></tt><tt class="py-op">(</tt><tt class="py-name">structurefilename</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="StructureXML.parseStructureXML"></a><div id="StructureXML.parseStructureXML-def"><a name="L73"></a><tt class="py-lineno"> 73</tt> <a class="py-toggle" href="#" id="StructureXML.parseStructureXML-toggle" onclick="return toggle('StructureXML.parseStructureXML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.StructureXML-class.html#parseStructureXML">parseStructureXML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StructureXML.parseStructureXML-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StructureXML.parseStructureXML-expanded"><a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">childnode</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">structurexml</tt><tt class="py-op">.</tt><tt class="py-name">childNodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">childnode</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt> <tt class="py-op">==</tt> <tt class="py-string">"MODEL"</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt class="py-name">modelnode</tt> <tt class="py-op">=</tt> <tt class="py-name">childnode</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-keyword">break</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">childnode</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt> <tt class="py-op">!=</tt> <tt class="py-string">"MODEL"</tt> <tt class="py-keyword">or</tt> <tt class="py-name">modelnode</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt><tt class="py-op">(</tt><tt class="py-string">"Not recognized xml format!"</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strudict</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.xmlToDict" class="py-name" href="#" onclick="return doclink('link-5', 'xmlToDict', 'link-2');">xmlToDict</a></tt><tt class="py-op">(</tt><tt class="py-name">modelnode</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strudict</tt> </tt>
+</div></div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="InstrumentXML"></a><div id="InstrumentXML-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="InstrumentXML-toggle" onclick="return toggle('InstrumentXML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.InstrumentXML-class.html">InstrumentXML</a><tt class="py-op">(</tt><tt class="py-base-class">XMLFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstrumentXML-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="InstrumentXML-expanded"><a name="InstrumentXML.__init__"></a><div id="InstrumentXML.__init__-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="InstrumentXML.__init__-toggle" onclick="return toggle('InstrumentXML.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.InstrumentXML-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">instrumentfilename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstrumentXML.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="InstrumentXML.__init__-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">instrumentfile</tt> <tt class="py-op">=</tt> <tt class="py-name">instrumentfilename</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">instrumentxml</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile" class="py-name" href="#" onclick="return doclink('link-6', 'importXMLFile', 'link-4');">importXMLFile</a></tt><tt class="py-op">(</tt><tt class="py-name">instrumentfilename</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="InstrumentXML.parseInstrumentXML"></a><div id="InstrumentXML.parseInstrumentXML-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="InstrumentXML.parseInstrumentXML-toggle" onclick="return toggle('InstrumentXML.parseInstrumentXML');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.InstrumentXML-class.html#parseInstrumentXML">parseInstrumentXML</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="InstrumentXML.parseInstrumentXML-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="InstrumentXML.parseInstrumentXML-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">childnode</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">instrumentxml</tt><tt class="py-op">.</tt><tt class="py-name">childNodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">childnode</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt> <tt class="py-op">==</tt> <tt class="py-string">"INSTRUMENT"</tt><tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                <tt class="py-name">instrumentnode</tt> <tt class="py-op">=</tt> <tt class="py-name">childnode</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">                <tt class="py-keyword">break</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">childnode</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt> <tt class="py-op">!=</tt> <tt class="py-string">"INSTRUMENT"</tt> <tt class="py-keyword">or</tt> <tt class="py-name">instrumentnode</tt> <tt class="py-op">==</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt><tt class="py-op">(</tt><tt class="py-string">"Not recognized xml format!"</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">instdict</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.xmlToDict" class="py-name" href="#" onclick="return doclink('link-7', 'xmlToDict', 'link-2');">xmlToDict</a></tt><tt class="py-op">(</tt><tt class="py-name">instrumentnode</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">instdict</tt> </tt>
+</div></div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="StrategyXML"></a><div id="StrategyXML-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="StrategyXML-toggle" onclick="return toggle('StrategyXML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.StrategyXML-class.html">StrategyXML</a><tt class="py-op">(</tt><tt class="py-base-class">XMLFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StrategyXML-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="StrategyXML-expanded"><a name="StrategyXML.__init__"></a><div id="StrategyXML.__init__-def"><a name="L102"></a><tt class="py-lineno">102</tt> <a class="py-toggle" href="#" id="StrategyXML.__init__-toggle" onclick="return toggle('StrategyXML.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.StrategyXML-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">strategyfilename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="StrategyXML.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="StrategyXML.__init__-expanded"><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module diffpy.srrietveld.convert.strategyfile=diffpy.srrietveld.convert.strategyfile-module.html"><a title="diffpy.srrietveld.convert.strategyfile" class="py-name" href="#" onclick="return doclink('link-8', 'strategyfile', 'link-8');">strategyfile</a></tt> <tt class="py-op">=</tt> <tt class="py-name">strategyfilename</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">strategyxml</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile" class="py-name" href="#" onclick="return doclink('link-9', 'importXMLFile', 'link-4');">importXMLFile</a></tt><tt class="py-op">(</tt><tt class="py-name">strategyfilename</tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="BackgroundXML"></a><div id="BackgroundXML-def"><a name="L107"></a><tt class="py-lineno">107</tt> <a class="py-toggle" href="#" id="BackgroundXML-toggle" onclick="return toggle('BackgroundXML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.BackgroundXML-class.html">BackgroundXML</a><tt class="py-op">(</tt><tt class="py-base-class">XMLFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BackgroundXML-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="BackgroundXML-expanded"><a name="BackgroundXML.__init__"></a><div id="BackgroundXML.__init__-def"><a name="L108"></a><tt class="py-lineno">108</tt> <a class="py-toggle" href="#" id="BackgroundXML.__init__-toggle" onclick="return toggle('BackgroundXML.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.BackgroundXML-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">backgroundfilename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BackgroundXML.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BackgroundXML.__init__-expanded"><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">backgroundfile</tt> <tt class="py-op">=</tt> <tt class="py-name">backgroundfilename</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">backgroundxml</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile" class="py-name" href="#" onclick="return doclink('link-10', 'importXMLFile', 'link-4');">importXMLFile</a></tt><tt class="py-op">(</tt><tt class="py-name">backgroundfilename</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="BackgroundXML.addToInstDict"></a><div id="BackgroundXML.addToInstDict-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="BackgroundXML.addToInstDict-toggle" onclick="return toggle('BackgroundXML.addToInstDict');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.BackgroundXML-class.html#addToInstDict">addToInstDict</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">instdict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="BackgroundXML.addToInstDict-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="BackgroundXML.addToInstDict-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-name">instdict</tt><tt class="py-op">[</tt><tt class="py-string">"BACKGROUND"</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">childnode</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">backgroundxml</tt><tt class="py-op">.</tt><tt class="py-name">childNodes</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">childnode</tt><tt class="py-op">.</tt><tt class="py-name">localName</tt> <tt class="py-op">==</tt> <tt class="py-string">"BACKGROUND"</tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                <tt class="py-name">instdict</tt><tt class="py-op">[</tt><tt class="py-string">"BACKGROUND"</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.xmlToDict" class="py-name" href="#" onclick="return doclink('link-11', 'xmlToDict', 'link-2');">xmlToDict</a></tt><tt class="py-op">(</tt><tt class="py-name">childnode</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt><tt class="py-op">(</tt><tt class="py-string">"Not recognized xml format!"</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">instdict</tt> </tt>
+</div></div><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="ExcludedRegionXML"></a><div id="ExcludedRegionXML-def"><a name="L122"></a><tt class="py-lineno">122</tt> <a class="py-toggle" href="#" id="ExcludedRegionXML-toggle" onclick="return toggle('ExcludedRegionXML');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML-class.html">ExcludedRegionXML</a><tt class="py-op">(</tt><tt class="py-base-class">XMLFile</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ExcludedRegionXML-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ExcludedRegionXML-expanded"><a name="ExcludedRegionXML.__init__"></a><div id="ExcludedRegionXML.__init__-def"><a name="L123"></a><tt class="py-lineno">123</tt> <a class="py-toggle" href="#" id="ExcludedRegionXML.__init__-toggle" onclick="return toggle('ExcludedRegionXML.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.srrietveld.convert.xmlparser.ExcludedRegionXML-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">excludedregionfilename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ExcludedRegionXML.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="ExcludedRegionXML.__init__-expanded"><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">excludedregionfile</tt> <tt class="py-op">=</tt> <tt class="py-name">excludedregionfilename</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">exrexml</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="diffpy.srrietveld.convert.xmlparser.XMLFile.importXMLFile" class="py-name" href="#" onclick="return doclink('link-12', 'importXMLFile', 'link-4');">importXMLFile</a></tt><tt class="py-op">(</tt><tt class="py-name">excludedregionfilename</tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div></div><a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:58 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.enduserscripts</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;enduserscripts
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.enduserscripts-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="srrietveld.enduserscripts-module.html">Module srrietveld.enduserscripts</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># diffpy.srrietveld by DANSE Diffraction group</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   Simon J. L. Billinge</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   (c) 2008 Trustees of the Columbia University</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   in the City of New York.  All rights reserved.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># File coded by:    Wenduo Zhou</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See AUTHORS.txt for a list of people who contributed.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See LICENSE.txt for license information.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-docstring">"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">  End-user scripts/commands to set up a refinement</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">  Providing a set of functions/methods for power users/developers to </tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">  generate a simple script based on RietveldAPI to do structure refinement.</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">  Warning!  On 2008.10.02 NO OTHER diffpy.srrietveld Script is Using Any Method In This Script Now!</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring"> </tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring">  Created on  2008.05.07</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">  Methods List:</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">  * simpleFit(Data, bgData, Instrument, Model)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">  * refineByScript(fit, scriptsfname)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">  * plot2D(fit)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">  Example 1:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit = simpleFit(Data = "mydata.dat", bgData = "mybackground.dat",</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">           Instrument = "GEM", Model = ["structure1.cif", structure2.cif"])</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.refine( all )   </tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; plot( fit )</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; visualizeStructure( fit )</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring">  </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">  Example 2: some extra configurability to give the user more control.</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.setFitRange([(begin, end, bankNo),(begin, end, bankNo)...])</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.setExcludedRegion([(begin, end, bankNo),(begin, end, bankNo)...])</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; varList=[latParms, scale]  </tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.refine(varList)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; varList=varList.append([fracCoords])</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.refine(varList)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">  </tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">  Example 3:  prints out all the contents of latParms object</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">  &gt; fit.showLatParms()  </tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable srrietveld.__id__=srrietveld-module.html#__id__,Variable srrietveld.atominfo.__id__=srrietveld.atominfo-module.html#__id__,Variable srrietveld.autobackgroundselect.__id__=srrietveld.autobackgroundselect-module.html#__id__,Variable srrietveld.auxiliary.__id__=srrietveld.auxiliary-module.html#__id__,Variable srrietveld.datafileconverter.__id__=srrietveld.datafileconverter-module.html#__id__,Variable srrietveld.datamanager.__id__=srrietveld.datamanager-module.html#__id__,Variable srrietveld.dataprocessnpdf.__id__=srrietveld.dataprocessnpdf-module.html#__id__,Variable srrietveld.enduserscripts.__id__=srrietveld.enduserscripts-module.html#__id__,Variable srrietveld.gsasfileparser.__id__=srrietveld.gsasfileparser-module.html#__id__,Variable srrietveld.instrument.__id__=srrietveld.instrument-module.html#__id__,Variable srrietveld.io.__id__=srrietveld.io-module.html#__id__,Variable srrietveld.mar_utilities.__id__=srrietveld.mar_utilities-module.html#__id__,Variable srrietveld.measurements.__id__=srrietveld.measurements-module.html#__id__,Variable srrietveld.midscript.__id__=srrietveld.midscript-module.html#__id__,Variable srrietveld.mixedphaseanalyzer.__id__=srrietveld.mixedphaseanalyzer-module.html#__id__,Variable srrietveld.modelrw.__id__=srrietveld.modelrw-module.html#__id__,Variable srrietveld.monitormem.__id__=srrietveld.monitormem-module.html#__id__,Variable srrietveld.parallelrefinecontrol.__id__=srrietveld.parallelrefinecontrol-module.html#__id__,Variable srrietveld.phasescript.__id__=srrietveld.phasescript-module.html#__id__,Variable srrietveld.plot2d.__id__=srrietveld.plot2d-module.html#__id__,Variable srrietveld.qbackgrounds.__id__=srrietveld.qbackgrounds-module.html#__id__,Variable srrietveld.refinebackend.__id__=srrietveld.refinebackend-module.html#__id__,Variable srrietveld.refineguides.__id__=srrietveld.refineguides-module.html#__id__,Variable srrietveld.refinehistory.__id__=srrietveld.refinehistory-module.html#__id__,Variable srrietveld.refinemanager.__id__=srrietveld.refinemanager-module.html#__id__,Variable srrietveld.refinesetup.__id__=srrietveld.refinesetup-module.html#__id__,Variable srrietveld.refinestrategy.__id__=srrietveld.refinestrategy-module.html#__id__,Variable srrietveld.sequentialrefinecontrol.__id__=srrietveld.sequentialrefinecontrol-module.html#__id__,Variable srrietveld.spacegroupinfo.__id__=srrietveld.spacegroupinfo-module.html#__id__,Variable srrietveld.srrietveldconfiguration.__id__=srrietveld.srrietveldconfiguration-module.html#__id__,Variable srrietveld.stringutilfunction.__id__=srrietveld.stringutilfunction-module.html#__id__,Variable srrietveld.uisupport.__id__=srrietveld.uisupport-module.html#__id__,Variable srrietveld.utilbackground.__id__=srrietveld.utilbackground-module.html#__id__,Variable srrietveld.utilinstrument.__id__=srrietveld.utilinstrument-module.html#__id__,Variable srrietveld.utilplot.__id__=srrietveld.utilplot-module.html#__id__,Variable srrietveld.utilrapdf.__id__=srrietveld.utilrapdf-module.html#__id__,Variable srrietveld.utilrefineguide.__id__=srrietveld.utilrefineguide-module.html#__id__,Variable srrietveld.utilsequentialrefine.__id__=srrietveld.utilsequentialrefine-module.html#__id__,Variable srrietveld.utilunits.__id__=srrietveld.utilunits-module.html#__id__,Variable srrietveld.viewer3d.__id__=srrietveld.viewer3d-module.html#__id__,Variable srrietveld.viserrors.__id__=srrietveld.viserrors-module.html#__id__,Variable srrietveld.xmlgenerator.__id__=srrietveld.xmlgenerator-module.html#__id__,Variable srrietveld.xmlinterface.__id__=srrietveld.xmlinterface-module.html#__id__"><a title="srrietveld.__id__
+srrietveld.atominfo.__id__
+srrietveld.autobackgroundselect.__id__
+srrietveld.auxiliary.__id__
+srrietveld.datafileconverter.__id__
+srrietveld.datamanager.__id__
+srrietveld.dataprocessnpdf.__id__
+srrietveld.enduserscripts.__id__
+srrietveld.gsasfileparser.__id__
+srrietveld.instrument.__id__
+srrietveld.io.__id__
+srrietveld.mar_utilities.__id__
+srrietveld.measurements.__id__
+srrietveld.midscript.__id__
+srrietveld.mixedphaseanalyzer.__id__
+srrietveld.modelrw.__id__
+srrietveld.monitormem.__id__
+srrietveld.parallelrefinecontrol.__id__
+srrietveld.phasescript.__id__
+srrietveld.plot2d.__id__
+srrietveld.qbackgrounds.__id__
+srrietveld.refinebackend.__id__
+srrietveld.refineguides.__id__
+srrietveld.refinehistory.__id__
+srrietveld.refinemanager.__id__
+srrietveld.refinesetup.__id__
+srrietveld.refinestrategy.__id__
+srrietveld.sequentialrefinecontrol.__id__
+srrietveld.spacegroupinfo.__id__
+srrietveld.srrietveldconfiguration.__id__
+srrietveld.stringutilfunction.__id__
+srrietveld.uisupport.__id__
+srrietveld.utilbackground.__id__
+srrietveld.utilinstrument.__id__
+srrietveld.utilplot.__id__
+srrietveld.utilrapdf.__id__
+srrietveld.utilrefineguide.__id__
+srrietveld.utilsequentialrefine.__id__
+srrietveld.utilunits.__id__
+srrietveld.viewer3d.__id__
+srrietveld.viserrors.__id__
+srrietveld.xmlgenerator.__id__
+srrietveld.xmlinterface.__id__" class="py-name" href="#" onclick="return doclink('link-0', '__id__', 'link-0');">__id__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"$Id: enduserscripts.py 2792 2009-03-02 15:56:43Z wdzhou $"</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt class="py-name">rietveldapi</tt><tt class="py-op">.</tt><tt class="py-name">Fit</tt> <tt class="py-keyword">as</tt> <tt class="py-name">SUFit</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package srrietveld=srrietveld-module.html"><a title="srrietveld" class="py-name" href="#" onclick="return doclink('link-1', 'srrietveld', 'link-1');">srrietveld</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module srrietveld.instrument=srrietveld.instrument-module.html"><a title="srrietveld.instrument" class="py-name" href="#" onclick="return doclink('link-2', 'instrument', 'link-2');">instrument</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">IT</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module srrietveld.modelrw=srrietveld.modelrw-module.html"><a title="srrietveld.modelrw" class="py-name" href="#" onclick="return doclink('link-3', 'modelrw', 'link-3');">modelrw</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">MRW</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Module srrietveld.midscript=srrietveld.midscript-module.html"><a title="srrietveld.midscript" class="py-name" href="#" onclick="return doclink('link-4', 'midscript', 'link-4');">midscript</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">MS</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="srrietveld" class="py-name" href="#" onclick="return doclink('link-5', 'srrietveld', 'link-1');">srrietveld</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module srrietveld.refineguides=srrietveld.refineguides-module.html"><a title="srrietveld.refineguides" class="py-name" href="#" onclick="return doclink('link-6', 'refineguides', 'link-6');">refineguides</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-comment"># Initialize Globle Information about Refinement</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-7" class="py-name" targets="Variable srrietveld.enduserscripts.All=srrietveld.enduserscripts-module.html#All"><a title="srrietveld.enduserscripts.All" class="py-name" href="#" onclick="return doclink('link-7', 'All', 'link-7');">All</a></tt>         <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable srrietveld.enduserscripts.zeroShift=srrietveld.enduserscripts-module.html#zeroShift"><a title="srrietveld.enduserscripts.zeroShift" class="py-name" href="#" onclick="return doclink('link-8', 'zeroShift', 'link-8');">zeroShift</a></tt>   <tt class="py-op">=</tt> <tt id="link-9" class="py-name" targets="Class srrietveld.refineguides.ZeroGuide=srrietveld.refineguides.ZeroGuide-class.html"><a title="srrietveld.refineguides.ZeroGuide" class="py-name" href="#" onclick="return doclink('link-9', 'ZeroGuide', 'link-9');">ZeroGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable srrietveld.enduserscripts.fracCoords=srrietveld.enduserscripts-module.html#fracCoords"><a title="srrietveld.enduserscripts.fracCoords" class="py-name" href="#" onclick="return doclink('link-10', 'fracCoords', 'link-10');">fracCoords</a></tt>  <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable srrietveld.enduserscripts.latParms=srrietveld.enduserscripts-module.html#latParms"><a title="srrietveld.enduserscripts.latParms" class="py-name" href="#" onclick="return doclink('link-11', 'latParms', 'link-11');">latParms</a></tt>    <tt class="py-op">=</tt> <tt id="link-12" class="py-name" targets="Class srrietveld.refineguides.LatticeGuide=srrietveld.refineguides.LatticeGuide-class.html"><a title="srrietveld.refineguides.LatticeGuide" class="py-name" href="#" onclick="return doclink('link-12', 'LatticeGuide', 'link-12');">LatticeGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable srrietveld.enduserscripts.scale=srrietveld.enduserscripts-module.html#scale"><a title="srrietveld.enduserscripts.scale" class="py-name" href="#" onclick="return doclink('link-13', 'scale', 'link-13');">scale</a></tt>       <tt class="py-op">=</tt> <tt id="link-14" class="py-name" targets="Class srrietveld.refineguides.ScaleGuide=srrietveld.refineguides.ScaleGuide-class.html"><a title="srrietveld.refineguides.ScaleGuide" class="py-name" href="#" onclick="return doclink('link-14', 'ScaleGuide', 'link-14');">ScaleGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="simpleFit"></a><div id="simpleFit-def"><a name="L62"></a><tt class="py-lineno"> 62</tt> <a class="py-toggle" href="#" id="simpleFit-toggle" onclick="return toggle('simpleFit');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.enduserscripts-module.html#simpleFit">simpleFit</a><tt class="py-op">(</tt><tt class="py-param">Data</tt><tt class="py-op">,</tt> <tt class="py-param">bgData</tt><tt class="py-op">,</tt> <tt class="py-param">Instrument</tt><tt class="py-op">,</tt> <tt class="py-param">Model</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="simpleFit-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="simpleFit-expanded"><a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">    generate a Fit instance in a simple setup</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-docstring">    Arguements:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-docstring">    Data    :   string,     data file name</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-docstring">    bgData  :   string,     background data file name (interpolated background)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-docstring">    Instrument: string,     instrument name</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">    Model   :   list of string, list of structure file name</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">    Return  :   Fit instance</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-comment"># 1. initialize Fit()</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">fit</tt> <tt class="py-op">=</tt> <tt class="py-name">SUFit</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-comment"># 2. get Instrument</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">thisInstrument</tt> <tt class="py-op">=</tt> <tt class="py-name">IT</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Function srrietveld.instrument.getInstrument()=srrietveld.instrument-module.html#getInstrument,Method srrietveld.xmlinterface.InstrumentXMLParser.getInstrument()=srrietveld.xmlinterface.InstrumentXMLParser-class.html#getInstrument"><a title="srrietveld.instrument.getInstrument
+srrietveld.xmlinterface.InstrumentXMLParser.getInstrument" class="py-name" href="#" onclick="return doclink('link-15', 'getInstrument', 'link-15');">getInstrument</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name" targets="Class srrietveld.instrument.Instrument=srrietveld.instrument.Instrument-class.html"><a title="srrietveld.instrument.Instrument" class="py-name" href="#" onclick="return doclink('link-16', 'Instrument', 'link-16');">Instrument</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-comment"># 3. set up structure</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># FIXME Need to implement a wrapper on CIF reader</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">phases</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">ciffname</tt> <tt class="py-keyword">in</tt> <tt class="py-name">Model</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-name">lattice</tt><tt class="py-op">,</tt> <tt class="py-name">spacegroup</tt><tt class="py-op">,</tt> <tt class="py-name">atoms</tt> <tt class="py-op">=</tt> <tt class="py-name">MRW</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Function srrietveld.modelrw.importCIF()=srrietveld.modelrw-module.html#importCIF"><a title="srrietveld.modelrw.importCIF" class="py-name" href="#" onclick="return doclink('link-17', 'importCIF', 'link-17');">importCIF</a></tt><tt class="py-op">(</tt><tt class="py-name">ciffname</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-name">phase</tt> <tt class="py-op">=</tt> <tt class="py-name">MS</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Function srrietveld.midscript.initCrystalPhase()=srrietveld.midscript-module.html#initCrystalPhase"><a title="srrietveld.midscript.initCrystalPhase" class="py-name" href="#" onclick="return doclink('link-18', 'initCrystalPhase', 'link-18');">initCrystalPhase</a></tt><tt class="py-op">(</tt><tt class="py-name">lattice</tt><tt class="py-op">,</tt> <tt class="py-name">spacegroup</tt><tt class="py-op">,</tt> <tt class="py-name">phasename</tt><tt class="py-op">=</tt><tt class="py-name">ciffname</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">atom</tt> <tt class="py-keyword">in</tt> <tt class="py-name">atoms</tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-name">MS</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Function srrietveld.midscript.addAtom()=srrietveld.midscript-module.html#addAtom"><a title="srrietveld.midscript.addAtom" class="py-name" href="#" onclick="return doclink('link-19', 'addAtom', 'link-19');">addAtom</a></tt><tt class="py-op">(</tt><tt class="py-name">phase</tt><tt class="py-op">,</tt> <tt class="py-name">atom</tt><tt class="py-op">[</tt><tt class="py-string">"type"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">atom</tt><tt class="py-op">[</tt><tt class="py-string">"fraccoordinate"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">atom</tt><tt class="py-op">[</tt><tt class="py-string">"occ"</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">atom</tt><tt class="py-op">[</tt><tt class="py-string">"biso"</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">phases</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">phase</tt><tt class="py-op">)</tt>             </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt class="py-comment"># 4. set up RietveldComponent and data, including default excluded region/fit range</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">thisInstrument</tt><tt class="py-op">.</tt><tt class="py-name">setRietveldComponents</tt><tt class="py-op">(</tt><tt class="py-name">fit</tt><tt class="py-op">,</tt> <tt class="py-name">Data</tt><tt class="py-op">,</tt> <tt class="py-name">bgData</tt><tt class="py-op">,</tt> <tt class="py-name">phases</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">fit</tt> </tt>
+</div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="refineByScript"></a><div id="refineByScript-def"><a name="L96"></a><tt class="py-lineno"> 96</tt> <a class="py-toggle" href="#" id="refineByScript-toggle" onclick="return toggle('refineByScript');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.enduserscripts-module.html#refineByScript">refineByScript</a><tt class="py-op">(</tt><tt class="py-param">fit</tt><tt class="py-op">,</tt> <tt class="py-param">scriptsfname</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="refineByScript-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="refineByScript-expanded"><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-docstring">    do a series of refien by scripts</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring">    Arguement:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">    - fit           :   diffpy.rietveldapi.Fit</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    - scriptsfname  :   string, script file name</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">    Return          :   None</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-keyword">def</tt> <tt class="py-def-name">getRefineGuideByName</tt><tt class="py-op">(</tt><tt class="py-param">refineguidename</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">refineguidename</tt> <tt class="py-op">==</tt> <tt class="py-string">"zeroShift"</tt><tt class="py-op">:</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-20" class="py-name"><a title="srrietveld.refineguides.ZeroGuide" class="py-name" href="#" onclick="return doclink('link-20', 'ZeroGuide', 'link-9');">ZeroGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">refineguidename</tt> <tt class="py-op">==</tt> <tt class="py-string">"latParms"</tt><tt class="py-op">:</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-21" class="py-name"><a title="srrietveld.refineguides.LatticeGuide" class="py-name" href="#" onclick="return doclink('link-21', 'LatticeGuide', 'link-12');">LatticeGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">refineguidename</tt> <tt class="py-op">==</tt> <tt class="py-string">"scale"</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt id="link-22" class="py-name"><a title="srrietveld.refineguides.ScaleGuide" class="py-name" href="#" onclick="return doclink('link-22', 'ScaleGuide', 'link-14');">ScaleGuide</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-name">wstring</tt> <tt class="py-op">=</tt> <tt class="py-string">"getRefineGuideByName:   Name %-10s has not been implemented"</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt><tt class="py-op">(</tt><tt class="py-name">wstring</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">    <tt class="py-comment"># 1. get the refine sequennce list</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">sfile</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">scriptsfname</tt><tt class="py-op">,</tt> <tt class="py-string">"r"</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-name">lines</tt> <tt class="py-op">=</tt> <tt class="py-name">sfile</tt><tt class="py-op">.</tt><tt class="py-name">readlines</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">    <tt class="py-name">sfile</tt><tt class="py-op">.</tt><tt class="py-name">close</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt class="py-name">step</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt class="py-name">refinedict</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">    <tt class="py-name">refinelist</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">lines</tt><tt class="py-op">:</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">        <tt class="py-name">lines</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">lines</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'+'</tt> <tt class="py-keyword">or</tt> <tt class="py-name">lines</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">'-'</tt><tt class="py-op">:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">            <tt class="py-name">terms</tt> <tt class="py-op">=</tt> <tt class="py-name">lines</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">            <tt class="py-name">rlist</tt> <tt class="py-op">=</tt> <tt class="py-name">refinelist</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">lines</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">"+"</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">gindex</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xrange</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">terms</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                    <tt class="py-name">rguide</tt> <tt class="py-op">=</tt> <tt class="py-name">getRefineGuideByName</tt><tt class="py-op">(</tt><tt class="py-name">terms</tt><tt class="py-op">[</tt><tt class="py-name">gindex</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">                    <tt class="py-name">rlist</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">rguide</tt><tt class="py-op">)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                <tt class="py-keyword">raise</tt> <tt class="py-name">NotImplementedError</tt><tt class="py-op">(</tt><tt class="py-string">"for - case"</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">            <tt class="py-name">refinedict</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">rlist</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">            <tt class="py-name">refinelist</tt> <tt class="py-op">=</tt> <tt class="py-name">rlist</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">            <tt class="py-name">step</tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-name">totsteps</tt> <tt class="py-op">=</tt> <tt class="py-name">step</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-comment"># 2. do in steps</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">for</tt> <tt class="py-name">step</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xrange</tt><tt class="py-op">(</tt><tt class="py-name">totsteps</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">        <tt class="py-name">refinelist</tt> <tt class="py-op">=</tt> <tt class="py-name">refinedict</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">        <tt class="py-name">fit</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method srrietveld.parallelrefinecontrol.ParallelRefinementControl.refine()=srrietveld.parallelrefinecontrol.ParallelRefinementControl-class.html#refine,Method srrietveld.refinemanager.MultiStepRefineManager.refine()=srrietveld.refinemanager.MultiStepRefineManager-class.html#refine,Method srrietveld.sequentialrefinecontrol.SeqRefineController.refine()=srrietveld.sequentialrefinecontrol.SeqRefineController-class.html#refine"><a title="srrietveld.parallelrefinecontrol.ParallelRefinementControl.refine
+srrietveld.refinemanager.MultiStepRefineManager.refine
+srrietveld.sequentialrefinecontrol.SeqRefineController.refine" class="py-name" href="#" onclick="return doclink('link-23', 'refine', 'link-23');">refine</a></tt><tt class="py-op">(</tt><tt class="py-name">refinelist</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> </tt>
+</div><a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="plot2D"></a><div id="plot2D-def"><a name="L155"></a><tt class="py-lineno">155</tt> <a class="py-toggle" href="#" id="plot2D-toggle" onclick="return toggle('plot2D');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.enduserscripts-module.html#plot2D">plot2D</a><tt class="py-op">(</tt><tt class="py-param">fit</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="plot2D-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="plot2D-expanded"><a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-docstring">    plotting the result of pattern </tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"><tt class="py-docstring">    Arguement</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-docstring">    - fit   :   Fit instance</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">    <tt class="py-keyword">import</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="srrietveld" class="py-name" href="#" onclick="return doclink('link-24', 'srrietveld', 'link-1');">srrietveld</a></tt><tt class="py-op">.</tt><tt id="link-25" class="py-name" targets="Module srrietveld.plot2d=srrietveld.plot2d-module.html"><a title="srrietveld.plot2d" class="py-name" href="#" onclick="return doclink('link-25', 'plot2d', 'link-25');">plot2d</a></tt> <tt class="py-keyword">as</tt> <tt class="py-name">P2D</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">    <tt class="py-name">P2D</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Function srrietveld.plot2d.plotFit()=srrietveld.plot2d-module.html#plotFit"><a title="srrietveld.plot2d.plotFit" class="py-name" href="#" onclick="return doclink('link-26', 'plotFit', 'link-26');">plotFit</a></tt><tt class="py-op">(</tt><tt class="py-name">fit</tt><tt class="py-op">)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">    <tt class="py-comment"># compnum = fit.getNumComponents()</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># for cindex in xrange(compnum):</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment">#     comp = fit.getComponent(cindex)</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment">#     pat  = comp.getPattern()</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment">#     P2D.plotPattern(pat)</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> </tt>
+</div><a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:24 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction &mdash; SrRietveld v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '1.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SrRietveld v1.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">SrRietveld v1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Introduction</a><ul>
+<li><a class="reference external" href="#what-can-srrietveld-do">What can SrRietveld Do?</a></li>
+<li><a class="reference external" href="#merits">Merits</a></li>
+<li><a class="reference external" href="#srrietveld">SrRietveld</a><ul>
+<li><a class="reference external" href="#design-principles">Design principles</a></li>
+<li><a class="reference external" href="#capabilities">Capabilities</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#fullprof-and-gsas">Fullprof and GSAS</a></li>
+<li><a class="reference external" href="#availability">Availability</a></li>
+<li><a class="reference external" href="#copyright">Copyright</a></li>
+<li><a class="reference external" href="#acknowledgement">Acknowledgement</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/intro_wz.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-can-srrietveld-do">
+<h2>What can SrRietveld Do?<a class="headerlink" href="#what-can-srrietveld-do" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Diffraction data Rietveld refinement</li>
+</ul>
+<p>Multiple step refinement on single experiment or co-refinement on several data sets.</p>
+<ul class="simple">
+<li>Sequential Rietveld refinement</li>
+</ul>
+<p>Sequential fitting on data sets from a series of experiments</p>
+<ul class="simple">
+<li>Calculate theoretical pattern</li>
+</ul>
+<p>Calculate the line profile from known structure parameters and instrument parameters</p>
+<ul class="simple">
+<li>Examine the refinement results</li>
+</ul>
+<p>Easily view the results from single / sequential refinements and pattern calculation.</p>
+</div>
+<div class="section" id="merits">
+<h2>Merits<a class="headerlink" href="#merits" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Highly automated computation</li>
+<li>User friendly and easy to learn</li>
+<li>Capability to process enormous amount of data in a timely basis</li>
+<li>Analysis on sequential data sets</li>
+<li>Compatible with main stream Rietveld refinement engines</li>
+<li>Designed in modules connected with application programming interfaces (APIs), extensible to work with more engines and able to work as a module with other applications.</li>
+</ul>
+<p>Rietveld refinement is a process of determining accurate atomic structural
+information about crystalline materials from neutron or x-ray powder diffraction.
+There are a number of Rietveld computer programs available, both freeware and
+commercial. What they have in common is that they require extensive interactions
+with the scientist operating them because of the difficulty in converging fits of
+the models to the data. They have poor convergence and there is a sharp learning
+curve for using them. The codes were mostly written beginning in the 1980&#8217;s and
+1990&#8217;s and are monolithic Fortran programs and it is very difficult to automate
+and extend them.</p>
+<p>The goal of the SrRietveld project is to mitigate these problems and make a
+Rietveld program that is highly automated, easy to use, and can handle the high
+data-rates at POWGEN, and other high throughput neutron and X-ray diffractometers.
+There is insufficient time
+and resources to write completely new, modular, Rietveld codes
+within the DANSE project, so the approach in the SrRietveld project was to wrap
+existing Rietveld legacy codes in Python wrappers, allowing
+scripts written in Python to automate and control the execution of the existing codes.
+In the SrRietveld 3.0a release we have implemented the two most popular Rietveld
+programs, Fullprof and GSAS, as engines running in the Python environment.
+The design includes a Rietveld API (application programming interface) which
+allows users to write scripts in Python that can execute different refinement
+engines. In the current release this means that the same data can be refined with
+either Fullprof or GSAS, or both. In the future it will allow us to change out
+the Rietveld engine with any other Rietveld legacy code, or newly written code,
+and users&#8217; scripts will still be operable.</p>
+</div>
+<div class="section" id="srrietveld">
+<h2>SrRietveld<a class="headerlink" href="#srrietveld" title="Permalink to this headline">¶</a></h2>
+<p>SrRietveld is an open-source crystal structure refinement user-interface (UI) for
+reciprocal-space fitting of powder data, or Rietveld analysis.</p>
+<p>SrRietveld is being developed as part of the DANSE software project that is
+building data analysis and modeling software to make optimal use of neutron
+diffraction data coming from the Spallation Neutron Source.</p>
+<p>SrRietveld is reliable.  It will provide the expected features of Rietveld
+analysis software, such as that provided by FullProf or GSAS, as well as features
+that simplify typical and advanced usage.</p>
+<p>SrRietveld is easy to use.  It will provide users with tools to set up Rietveld
+refinement in relatively trivial time and launch a series of Rietveld refinement
+automatically or semi-automatically until convergence, allowing complex refinement
+tasks to be automated and simplified. Meanwhile, SrRietveld provides users tools
+to analyze the refinement result visually.</p>
+<p>In addition to providing users with ease-of-use, we wish to enable new science.
+In order to satisfy ever-changing user community, extensible, non-proprietary and
+supported software, such as SrRietveld, will enable innovation and empower users.</p>
+<p>SrRietveld is fully extensible.  It will work by allowing the user to write
+scripts in a Python-based scripting language that control and automate the
+refinement process It is also then straightforward for a developer to build
+simple gui&#8217;s on top of the scripts. A library of helper functions is available
+to simplify common tasks.</p>
+<p>The major commands available in the current release are listed below</p>
+<ul class="simple">
+<li>supporting diffraction pattern calculation<ol class="arabic">
+<li>applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data;</li>
+</ol>
+</li>
+<li>supporting both FullProf and GSAS as refinement engines.
+Exchanging underlying refinement engine is seamless to users</li>
+<li>supporting automatic/semi-automatic launched Le-Bail and Rietveld refinements on
+single measurements toward final convergence<ol class="arabic">
+<li>applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data;</li>
+<li>allowing the user to trace each parameter&#8217;s value at each refinement step for further analysis;</li>
+<li>allowing the user to plot patterns of each refinement step after refinement is finished for further analysis.</li>
+</ol>
+</li>
+<li>supporting sequential fitting on a series of measurements from in-situ diffraction experiment,
+applied to neutron time-of-flight (multiple banks), neutron constant wavelength, X-ray diffraction data;<ol class="arabic">
+<li>providing user with fast access to refined parameters and refinement result (residuals);</li>
+<li>allowing user to access the refinement detail of each single measurement for further analysis;</li>
+</ol>
+</li>
+</ul>
+<div class="section" id="design-principles">
+<h3>Design principles<a class="headerlink" href="#design-principles" title="Permalink to this headline">¶</a></h3>
+<p>SrRietveld has been designed to provide users with an easy-to-use yet powerful
+interface for fitting structure models to powder diffraction data.
+It makes use of an object oriented, component based architecture,
+which makes it highly extensible and maintainable.</p>
+<p>SrRietveld is written in the Python programming language. Python features a
+relaxed and friendly syntax, supports <em>write once, run anywhere</em>
+portability, and has extensive libraries and modules for virtually every
+task. Software codes written in a variety of programming languages can be
+bound into Python, which allows them to be used together. Python is becoming
+a popular choice in the scientific computation community.</p>
+<p>SrRietveld is built upon RietveldAPI, which is a library of python scripts to set up,
+manage and analyze Rietveld refinements.</p>
+<p>General users can use pre-built scripts to quickly and easily carry out
+refinements that are offered as part of the SrRietveld application. In the future,
+these will be controlled through a graphical user interface, though currently
+they are executed from the command line.</p>
+<p>Power users can build their customized Rietveld refinements by writing high-level
+scripts using SrRietveld and rietveldAPI library modules.</p>
+<p>In the 1.0 Beta release, SrRietveld provides the users with a series of
+command line scripts to set up, launch and analyze Rietveld refinements.</p>
+</div>
+<div class="section" id="capabilities">
+<h3>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this headline">¶</a></h3>
+<p>SrRietveld will allow users to perform powerful refinement tasks with little effort.
+Python has a friendly and powerful scripting interface that enables
+SrRietveld to interact with other Python modules such as matplotlib for
+plotting and pymol for structure visualization. The scripting interface to
+SrRietveld allows one to easily string together a series of related Rietveld
+refinements, analyze the refinement results and optionally feed the results
+into other Python-enabled programs.
+SrRietveld will soon be enabled to run distributed on a computer cluster
+in order to deal with computationally intensive tasks
+such as the analysis of data flow high throughput instruments.
+Once-difficult refinement strategies, such as
+parametric optimization and global optimization are also planned for a
+future release. Users can also look forward to automatic Rietveld refinement
+that requires a minimal amount of prior knowledge about a crystal structure.</p>
+<p>SrRietveld can manage multiple fits at once.
+Each fit can have multiple experimental data sets and structure models.
+Fits in a sequence can call upon other fits for their starting parameters,
+and configured fits can be queued to run while the user is away. All the
+initial, final, and intermediate data are stored in a platform independent
+project file that can be loaded on any computer.</p>
+<p>SrRietveld uses the <a class="reference external" href="http://matplotlib.sourceforge.net">matplotlib</a>
+Python package for 2D plotting of data and results.
+Matplotlib has a friendly interface so the user can quickly and easily view the
+results of a fitting.
+SrRietveld lets users plot data from a series of fits and plot it against
+selected meta-data (temperature, doping, etc.).</p>
+</div>
+</div>
+<div class="section" id="fullprof-and-gsas">
+<h2>Fullprof and GSAS<a class="headerlink" href="#fullprof-and-gsas" title="Permalink to this headline">¶</a></h2>
+<p>The FullProf and GSAS programs have been mainly developed for Rietveld analysis
+(structure profile refinement) of
+neutron (constant wavelength, time of flight, nuclear and magnetic scattering)
+or X-ray powder diffraction data
+collected at constant or variable step in scattering angle 2theta.
+The programs can also be used as a Profile Matching
+(or pattern decomposition using Le Bail method) tool,
+without knowledge of the structure.
+Not all the functionalities of Fullprof and GSAS are available in SrRietveld
+as the ??? functions must be implemented in the API.
+Currently most of the powder diffraction functionalities, except magnetic scattering,
+are implemented.
+There is no support for single crystal diffraction in SrRietveld.</p>
+<p>The Fullprof engine and GSAS engine wrappers, called PyFullProf and PyGSAS respectively,
+can be used either directly from the Python
+command line, or as part of larger and more complex software
+applications.</p>
+</div>
+<div class="section" id="availability">
+<h2>Availability<a class="headerlink" href="#availability" title="Permalink to this headline">¶</a></h2>
+<p>SrRietveld, FullProf and GSAS are open source.
+SrRietveld is distributed under a BSD license.
+They run on Linux, and all major Unix systems. The source
+code is freely available. For more information please contact Professor
+Simon Billinge (<a class="reference external" href="mailto:sb2896&#37;&#52;&#48;columbia&#46;edu">sb2896<span>&#64;</span>columbia<span>&#46;</span>edu</a>)
+or consult the web-page
+<a class="reference external" href="http://www.diffpy.org">http://www.diffpy.org</a>.
+News of updates and releases will be posted at this website
+and on the SrRietveld-users group at
+<a class="reference external" href="http://groups.google.com/group/SrRietveld-users">http://groups.google.com/group/SrRietveld-users</a>.</p>
+</div>
+<div class="section" id="copyright">
+<h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline">¶</a></h2>
+<p>Copyright &#64;copyright{} 2008, Trustees of Columbia University in the City of New
+York, all rights reserved.</p>
+</div>
+<div class="section" id="acknowledgement">
+<h2>Acknowledgement<a class="headerlink" href="#acknowledgement" title="Permalink to this headline">¶</a></h2>
+<p>This program is part of the DiffPy and DANSE open-source projects
+and is available subject to the conditions and terms laid out below.</p>
+<p>If you use this program to do productive scientific research that leads
+to publication, we ask that you acknowledge use of the program by citing
+the following paper in your publication:</p>
+<ol class="arabic simple">
+<li>Wenduo Zhou, Peng Tian, Christopher L. Farrow, P. Juhas and S. J. L. Billinge,
+To be published.</li>
+</ol>
+<p>Copyright 2008, Trustees of Columbia University in the City of New York.</p>
+<p>For more information please visit the project web-page: <a class="reference external" href="http://www.diffpy.org/">http://www.diffpy.org/</a>
+or email Prof. Simon Billinge at sb2896&#64;&#64;columbia.edu</p>
+<p>This version of SrRietveld makes use of the FullProf and GSAS Rietveld refinement engine.
+If you use this program, as well as citing the paper above, you should acknowledge
+use of FullProf and/or GSAS by citing the paper describing the FullProf and/or GSAS:</p>
+<ol class="arabic simple">
+<li>J. Rodriguez-Carvajal, Recent advances in magnetic structure determination by neutron
+powder diffraction, Physica B, 192, 55-69 (1993).</li>
+<li>Larson A C and von Dreele R B 2000 General structure analysis system(GSAS)
+Los Alamos National Laboratory Report No. LAUR 87-748 unpublished</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">SrRietveld v1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2011, Peng Tian, Wenduo Zhou, Jiwu Liu, Yingrui Shang, Chris Farrow, Pavol Juhas, Emil Bozin, and Simon Billinge.
+      Last updated on Jun 16, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
+    </div>
+  </body>
+</html>
