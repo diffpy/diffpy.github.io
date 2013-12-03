@@ -192,7 +192,7 @@ publish-prepare:
 	test -d _build/master || \
 	    git clone -b master $(GITREPOPATH) _build/master
 	cd _build/master && \
-	    git pull $(GITREPOPATH) master
+	    git pull $(GITREMOTEURL) master
 	rsync -acv --exclude=.git --exclude=.rsync-exclude \
 	    --exclude-from=_build/master/.rsync-exclude \
 	    --link-dest=$(PWD)/_build/html _build/html/ _build/master/
@@ -204,4 +204,4 @@ publish-prepare:
 	    git push $(GITREPOPATH) master
 
 publish-push:
-	git push $(GITREMOTE) master
+	git push $(GITREMOTE) source master
