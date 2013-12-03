@@ -6,12 +6,12 @@ Documentation
 User manuals
 ============
 
-- **PDFgetX3** user manual formatted as `HTML <http://www.diffpy.org/doc/pdfgetx3/index.html>`_,
-  `PDF <_static/PDFgetX3_manual.pdf>`__ and the `tutorial files <_static/pdfgetx3-examples.zip>`__.
+- **PDFgetX3** user manual formatted as `HTML <doc/pdfgetx3/index.html>`_,
+  `PDF <doc/pdfgetx3/PDFgetX3_manual.pdf>`__ and the `tutorial files <doc/pdfgetx3/pdfgetx3-examples.zip>`__.
 
-- **PDFgui** user manual formatted as `HTML <http://www.diffpy.org/doc/pdfgui/pdfgui.html>`__,
-  `PDF <_static/pdfgui.pdf>`__,
-  tutorial files in a `zip archive <http://www.diffpy.org/doc/pdfgui/pdfgui-tutorial.zip>`__
+- **PDFgui** user manual formatted as `HTML <doc/pdfgui/pdfgui.html>`__,
+  `PDF <doc/pdfgui/pdfgui.pdf>`__,
+  tutorial files in a `zip archive <doc/pdfgui/pdfgui-tutorial.zip>`__
   auto-generated `API documentation <http://docs.danse.us/diffraction/diffpy.pdfgui/>`_
 
 - **PDFfit2** user manual not available. To get started, see
@@ -20,8 +20,8 @@ User manuals
   auto-generated `API <http://docs.danse.us/diffraction/diffpy.pdffit2/>`_, in particular
   for the class PdfFit.
 
-  Functions and variables are quite similar as in the old PDFFIT, so its `manual <_static/pdf_man.pdf>`__
-  and `command reference <_static/pdf_cmd.pdf>`__ should help as well.
+  Functions and variables are quite similar as in the old PDFFIT, so its `manual <doc/pdffit/pdf_man.pdf>`__
+  and `command reference <doc/pdffit/pdf_cmd.pdf>`__ should help as well.
 
 - **Structure**	user manual not available. To get started, see
   `examples <http://danse.us/trac/diffraction/browser/diffraction/diffpy.Structure/trunk/examples/>`__
@@ -35,7 +35,7 @@ Reports
 
 - 2007-08-27 - `NSF nugget`_ describing PDFgui.
 
-.. _nsf nugget: http://www.diffpy.org/nuggetDANSE0708.html
+.. _nsf nugget: nuggetDANSE0708.html
 
 
 Publications
