@@ -7,6 +7,8 @@
 Welcome to the DiffPy project.
 ==============================
 
+.. include:: abbreviations.txt
+
 This is an open-source project to develop python software modules for diffraction 
 and the study of atomic structure of materials. DiffPy is developed as part of DANSE_, 
 a software construction project funded by the `National Science Foundation`_ to provide 
@@ -68,24 +70,11 @@ PDFgui and PDFfit2 are intended for scientific research that will be published i
 the open literature and are free to use. Please cite the following paper in your 
 scientific publications using one of these programs:
 
-    C. L. Farrow, P. Juhás, J. W. Liu, D. Bryndin, E. S. Božin, J. Bloch, Th. Proffen and 
-    S. J. L. Billinge, `PDFfit2 and PDFgui: computer programs for studying nanostructure in 
-    crystals <http://iopscience.iop.org/0953-8984/19/33/335219/>`_, *J. Phys.: Condens. 
-    Mat.* **19**, 335219 (2007) |downloadImageFarrow|
- 
-.. |downloadImageFarrow| image:: pdficon_small.png
-   :target: _static/Farrow-jpcm-2007.pdf
+    |citeFarrowJpcm07|
 
 For publications using the PDFgetX3 program please cite
 
-    P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, `PDFgetX3: A rapid and highly 
-    automatable program for processing powder diffraction data into total scattering pair 
-    distribution functions <http://scripts.iucr.org/cgi-bin/paper?S0021889813005190>`_, 
-    *J. Appl. Crystallogr.* **46**, 560-566 (2013) |downloadImageJuhas| 
-
-.. |downloadImageJuhas| image:: pdficon_small.png
-   :target: _static/Juhas-jac-2013.pdf
-
+    |citeJuhasJac13|
 
 
 Acknowledgements
