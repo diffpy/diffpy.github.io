@@ -9,7 +9,7 @@
    |downloadJuhasJac13|
 
 .. |downloadJuhasJac13| image:: pdficon_small.png
-   :target: _static/Juhas-jac-2013.pdf
+   :target: doc/pdfgetx3/Juhas-jac-2013.pdf
 
 
 .. |citeFarrowJpcm07| replace::
@@ -21,7 +21,7 @@
    |downloadFarrowJpcm07|
  
 .. |downloadFarrowJpcm07| image:: pdficon_small.png
-   :target: _static/Farrow-jpcm-2007.pdf
+   :target: doc/pdfgui/Farrow-jpcm-2007.pdf
 
 
 .. |citeProffenJac99| replace::
@@ -32,4 +32,4 @@
    |downloadProffenJac99|
 
 .. |downloadProffenJac99| image:: pdficon_small.png
-   :target: _static/Proffen-jac-1999.pdf
+   :target: doc/pdffit/Proffen-jac-1999.pdf
