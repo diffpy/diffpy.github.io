@@ -35,7 +35,7 @@ Reports
 
 - 2007-08-27 - `NSF nugget`_ describing PDFgui.
 
-.. _nsf nugget: nuggetDANSE0708.html
+.. _nsf nugget: NSFnugget.html
 
 
 Publications
