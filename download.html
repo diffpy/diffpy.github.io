@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -16,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -27,7 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="DiffPy 1.0 documentation" href="index.html" />
-    <link rel="next" title="Community" href="community.html" />
+    <link rel="next" title="Enabling new science in nanoscale structure characterization of complex materials" href="NSFnugget.html" />
     <link rel="prev" title="Documentation" href="documentation.html" /> 
   </head>
   <body>
@@ -74,7 +73,6 @@ be used for open academic research.
 <p><a class="reference internal" href="#unix"><em>Unix, Linux, Mac</em></a> -
 <a class="reference internal" href="#windows"><em>Windows</em></a> -
 <a class="reference internal" href="#updates"><em>DiffPy updates</em></a> -
-<a class="reference internal" href="#subversion"><em>Subversion repository</em></a> -
 <a class="reference internal" href="#releases"><em>DiffPy Releases</em></a></p>
 </div>
 <div class="section" id="license">
@@ -149,8 +147,9 @@ required for its function. The programs can be then started as <tt class="docuti
 <p>The <tt class="docutils literal"><span class="pre">easy_install</span></tt> command is a part of the Python setuptools library. If it is not available,
 install the &#8220;python-setuptools&#8221; package with the system package manager or use the &#8221;.tgz&#8221; archive
 below, which comes with <tt class="docutils literal"><span class="pre">easy_install</span></tt> included.</p>
-<p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong> archive
-list below, unpack and run the enclosed <tt class="docutils literal"><span class="pre">easy_install</span></tt> script:</p>
+<p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong>
+from the <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">download archive</a>,
+unpack and run the enclosed <tt class="docutils literal"><span class="pre">easy_install</span></tt> script:</p>
 <div class="highlight-python"><pre>tar -xzf diffpy-VERSION.tgz
 cd diffpy-VERSION
 ./easy_install diffpy.pdfgui</pre>
@@ -180,28 +179,15 @@ updates to the code. For example, to upgrade PDFgui, run:</p>
 <div class="highlight-python"><pre>easy_install -U diffpy.pdfgui</pre>
 </div>
 <p>This installs only the changed DiffPy components as they become available at the DiffPy
-<a class="reference external" href="http://www.diffpy.org/packages/">package repository</a>. These packages are smaller and
+<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/packages/">package repository</a>.
+These packages are smaller and
 will be updated more frequently than the complete installation archives.</p>
-</div>
-<div class="section" id="subversion-repository">
-<span id="subversion"></span><h1>Subversion repository<a class="headerlink" href="#subversion-repository" title="Permalink to this headline">¶</a></h1>
-<p>The latest development sources of DiffPy packages are available in a public subversion code
-repository. To install the latest development version of a DiffPy component called <tt class="docutils literal"><span class="pre">MODULE_NAME</span></tt>, run:</p>
-<div class="highlight-python"><pre>easy_install -U svn://svn@danse.us/diffraction/diffraction/MODULE_NAME/trunk</pre>
-</div>
-<p>Another option is to install in a development mode, which is more convenient for debugging
-and experimenting with the code. This can be done as:</p>
-<div class="highlight-python"><pre>svn checkout svn://svn@danse.us/diffraction/diffraction/MODULE_NAME
-cd MODULE_NAME/trunk
-python setup.py develop</pre>
-</div>
-<p>The DiffPy subversion repository can be browsed online <a class="reference external" href="http://danse.us/trac/diffraction/browser/">here</a>.</p>
 </div>
 <div class="section" id="diffpy-releases">
 <span id="releases"></span><h1>DiffPy Releases<a class="headerlink" href="#diffpy-releases" title="Permalink to this headline">¶</a></h1>
-<p>Please, join the <a class="reference internal" href="community.html#community"><em>Community</em></a> forum for tips, tricks, and feedback.</p>
-<div class="toctree-wrapper compound">
-</div>
+<p>Please, join the <a class="reference external" href="community.html">community</a> forum for tips, tricks, and feedback.
+Current releases are available for download
+<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">here</a>.</p>
 </div>
 
 
@@ -216,7 +202,7 @@ python setup.py develop</pre>
       
     <div class="footer">
         &copy; Copyright 2013, Kevin Knox.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
     </div>
     </div>
 

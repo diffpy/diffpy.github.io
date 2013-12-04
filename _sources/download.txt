@@ -18,7 +18,6 @@ DiffPy Library
 :ref:`unix` - 
 :ref:`windows` -
 :ref:`updates` -
-:ref:`subversion` -
 :ref:`releases`
 
 License
@@ -54,8 +53,9 @@ The ``easy_install`` command is a part of the Python setuptools library. If it i
 install the "python-setuptools" package with the system package manager or use the ".tgz" archive 
 below, which comes with ``easy_install`` included.
 
-If you prefer to install from local files, download the latest **diffpy-VERSION.tgz** archive 
-list below, unpack and run the enclosed ``easy_install`` script::
+If you prefer to install from local files, download the latest **diffpy-VERSION.tgz** 
+from the `download archive <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`_,
+unpack and run the enclosed ``easy_install`` script::
 
     tar -xzf diffpy-VERSION.tgz
     cd diffpy-VERSION
@@ -95,39 +95,36 @@ updates to the code. For example, to upgrade PDFgui, run::
     easy_install -U diffpy.pdfgui
     
 This installs only the changed DiffPy components as they become available at the DiffPy 
-`package repository <http://www.diffpy.org/packages/>`_. These packages are smaller and 
+`package repository <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/packages/>`_. 
+These packages are smaller and 
 will be updated more frequently than the complete installation archives.
 
-.. _subversion:
+.. 
+    remove subversion info for now
+    .. _subversion:
 
-Subversion repository
-=====================
+    Subversion repository
+    =====================
 
-The latest development sources of DiffPy packages are available in a public subversion code 
-repository. To install the latest development version of a DiffPy component called ``MODULE_NAME``, run::
+    The latest development sources of DiffPy packages are available in a public subversion code 
+    repository. To install the latest development version of a DiffPy component called ``MODULE_NAME``, run::
 
-    easy_install -U svn://svn@danse.us/diffraction/diffraction/MODULE_NAME/trunk
+       easy_install -U svn://svn@danse.us/diffraction/diffraction/MODULE_NAME/trunk
     
-Another option is to install in a development mode, which is more convenient for debugging 
-and experimenting with the code. This can be done as::
+    Another option is to install in a development mode, which is more convenient for debugging 
+    and experimenting with the code. This can be done as::
 
-    svn checkout svn://svn@danse.us/diffraction/diffraction/MODULE_NAME
-    cd MODULE_NAME/trunk
-    python setup.py develop
+       svn checkout svn://svn@danse.us/diffraction/diffraction/MODULE_NAME
+       cd MODULE_NAME/trunk
+       python setup.py develop
     
-The DiffPy subversion repository can be browsed online `here <http://danse.us/trac/diffraction/browser/>`_.
+    The DiffPy subversion repository can be browsed online `here <http://danse.us/trac/diffraction/browser/>`_.
 
 .. _releases:
 
 DiffPy Releases
 ===============
 
-Please, join the :ref:`community` forum for tips, tricks, and feedback. 
-
-
-.. toctree::
-   :hidden:
-
-   community
-   documentation
-   download
+Please, join the `community <community.html>`_ forum for tips, tricks, and feedback. 
+Current releases are available for download 
+`here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
