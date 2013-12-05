@@ -104,6 +104,20 @@ will be updated more frequently than the complete installation archives.
 DiffPy Releases
 ===============
 
+
+==============================		==================		============
+Name                         		Date         			Size
+==============================		==================		============
+`diffpy-1.0-r3067.exe`_	      		2009-04-10  			21.5 M
+`diffpy-1.0-r3067.tgz`_	      		2009-04-10			6.4 M
+==============================		==================		============
+
+.. _diffpy-1.0-r3067.exe:
+   https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe
+.. _diffpy-1.0-r3067.tgz:
+   https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz
+
+
 Please, join the `community <community.html>`_ forum for tips, tricks, and feedback. 
-Current releases are available for download 
+Older releases are available for download 
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
