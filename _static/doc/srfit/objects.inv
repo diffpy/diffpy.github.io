@@ -1,8 +1,0 @@
-# Sphinx inventory version 1
-# Project: SrFit
-# Version: 1.0
-diffpy.srfit.fitbase.parameter.ParameterAdapter class extending.html
-diffpy.srfit.fitbase.fithook.FitHook.reset method extending.html
-diffpy.srfit.fitbase.restraint.Restraint.penalty method extending.html
-diffpy.srfit.fitbase.fithook.FitHook.postcall method extending.html
-diffpy.srfit.fitbase.fithook.FitHook.precall method extending.html
