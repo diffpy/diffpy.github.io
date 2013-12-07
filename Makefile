@@ -182,7 +182,7 @@ pseudoxml:
 
 # Publish to diffpy.github.io
 
-GITREPOPATH = $(PWD)/.git
+GITREPOPATH = $(CURDIR)/.git
 GITREMOTE = origin
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse HEAD)
@@ -199,7 +199,7 @@ publish-prepare:
 	    git pull $(GITREMOTEURL) master
 	rsync -acv --exclude=.git --exclude=.rsync-exclude \
 	    --exclude-from=_build/master/.rsync-exclude \
-	    --link-dest=$(PWD)/_build/html _build/html/ _build/master/
+	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/master/
 	cd _build/master && \
 	    git add --all . && \
 	    git diff --cached --quiet || \
