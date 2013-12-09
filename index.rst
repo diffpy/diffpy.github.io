@@ -33,6 +33,12 @@ News
 Products
 ========
 
+**DiffPy-CMI**
+
+DiffPy-CMI is a highly flexible library of Python modules for carrying out customizable structure 
+analysis tasks from diffraction data. `DiffPy-CMI installation instructions <downloads/diffpycmi.html>`_
+
+
 **PDFgetX3**
 
 PDFgetX3 is a command-line utility for converting X-ray powder diffraction data to 
@@ -42,26 +48,16 @@ parameters and intermediate results, as well as live-plotting feature for parame
 tuning and visualization of their effects on the results. PDFgetX3 can be used either 
 as a standalone application or as a Python library of PDF-processing functions. *The 
 software is free for open academic research, but requires paid license for commercial use.*
+`PDFgetX3 installation instructions <downloads/pdfgetx3.html>`_
 
-**DiffPy library**
+**PDFgui** 
 
-A library of Python modules for carrying out structure analysis tasks from diffraction data. 
-The modules are at different stages of development and some are not yet ready for usage by 
-non-experts. Nevertheless, the components listed below should be stable enough and hopefully 
-useful to a broader non-expert community.
-
-**DiffPy components**
-
-- **PDFgui** - a program for full-profile fitting of the atomic pair distribution function (PDF) 
-  derived from x-ray or neutron diffraction data. This is a graphical front end for the 
-  PDFfit2 refinement program, with built in graphical and structure visualization capabilities.
-- **PDFfit2** - the structure refinement engine for fitting structural models to experimentally 
-  derived PDFs. It is used as calculation engine for PDFgui, but can be used separately 
-  in simple Python scripts or as a command-line program.
-- **Structure** - simple storage and manipulation of crystal structure data. Supports reading 
-  and writing in several structure formats, coordinate transformations, symmetry expansion 
-  and generation of symmetry constraints.
-
+For users who do not have the expertise or necessity for command line analysis, PDFgui is
+a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is 
+capable of full-profile fitting of the atomic pair distribution function (PDF) 
+derived from x-ray or neutron diffraction data 
+and comes with built in graphical and structure visualization capabilities.
+`PDFgui installation instructions <downloads/pdfgui.html>`_
 
 References
 ==========
