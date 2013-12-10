@@ -8,5 +8,3 @@ By downloading and using this software you are agreeing to the following conditi
 
   .. include:: CMI_LICENSE.txt
     :literal:
-
-
