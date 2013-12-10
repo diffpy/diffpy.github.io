@@ -49,7 +49,7 @@ unpack and run the enclosed ``easy_install`` script::
     cd diffpy-VERSION
     ./easy_install diffpy.pdfgui
     
-For more detailed installation instructions see the `PDFgui manual </doc/pdfgui/pdfgui.html>`_.
+For more detailed installation instructions see the `PDFgui manual <../doc/pdfgui/pdfgui.html>`_.
 
 .. _windows:
 
