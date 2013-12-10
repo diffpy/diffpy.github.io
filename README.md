@@ -8,4 +8,4 @@ Sphinx sources for the diffpy.org web page.  This repository contains 3 branches
 3. `archive` converted subversion repository for the old diffpy.org sources
 
 Please, see the [Wiki](https://github.com/diffpy/diffpy.github.io/wiki) for more
-information and tips about updating this web page. 
+information and tips about this project.
