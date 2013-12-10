@@ -94,11 +94,13 @@ PDFgui Releases
 
 
 ======================== ================== ============ ===================================
-Name                     Date               Size
+Name                     Date               Size         Description
 ======================== ================== ============ ===================================
 `diffpy-1.0-r3067.exe`_	 2009-04-10         21.5 M        Windows self extracting installer
 `diffpy-1.0-r3067.tgz`_	 2009-04-10         6.4 M         Unix tarball
 ======================== ================== ============ ===================================
+
+|
 
 .. _diffpy-1.0-r3067.exe:
    https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe
