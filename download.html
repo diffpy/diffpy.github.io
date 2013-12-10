@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -16,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -27,7 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="DiffPy 1.0 documentation" href="index.html" />
-    <link rel="next" title="Enabling new science in nanoscale structure characterization of complex materials" href="NSFnugget.html" />
+    <link rel="next" title="PDFgui" href="downloads/pdfgui.html" />
     <link rel="prev" title="Documentation" href="documentation.html" /> 
   </head>
   <body>
@@ -60,158 +59,19 @@
   <div class="section" id="download">
 <h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
 </div>
+<div class="section" id="diffpy-cmi">
+<h1>DiffPy-CMI<a class="headerlink" href="#diffpy-cmi" title="Permalink to this headline">¶</a></h1>
+<p>Instructions for installing <a class="reference external" href="downloads/diffpycmi.html">DiffPy-CMI</a></p>
+</div>
 <div class="section" id="pdfgetx3">
 <h1>PDFgetX3<a class="headerlink" href="#pdfgetx3" title="Permalink to this headline">¶</a></h1>
-<p>PDFgetX3-academic can be obtained from the
-<a class="reference external" href="http://columbia.flintbox.com/public/project/22569/">Columbia flintbox</a>, provided it will
-be used for open academic research.
-<a class="reference external" href="http://www.diffpy.org/doc/pdfgetx3/install.html">Installation instructions</a>.</p>
-<p>If you plan to use PDFgetX3 in any other way, please contact
-<a class="reference external" href="mailto:techtransfer&#37;&#52;&#48;columbia&#46;edu">Beth Kauderer</a> at Columbia Technology Ventures.</p>
+<p>Instructions for installing <a class="reference external" href="downloads/pdfgetx3.html">PDFgetX3</a></p>
 </div>
-<div class="section" id="diffpy-library">
-<h1>DiffPy Library<a class="headerlink" href="#diffpy-library" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="#unix"><em>Unix, Linux, Mac</em></a> -
-<a class="reference internal" href="#windows"><em>Windows</em></a> -
-<a class="reference internal" href="#updates"><em>DiffPy updates</em></a> -
-<a class="reference internal" href="#releases"><em>DiffPy Releases</em></a></p>
+<div class="section" id="pdfgui">
+<h1>PDFgui<a class="headerlink" href="#pdfgui" title="Permalink to this headline">¶</a></h1>
+<p>Instructions for installing <a class="reference external" href="downloads/pdfgui.html">PDFgui</a></p>
+<div class="toctree-wrapper compound">
 </div>
-<div class="section" id="license">
-<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
-<p>By downloading and using this software you are agreeing to the following conditions.</p>
-<blockquote>
-<div><div class="highlight-python"><pre>This software was initially developed at Michigan State University and
-Columbia University as part of the National Science Foundation funded 
-DANSE (Distributed data Analysis of Neutron Scattering Experiments) 
-project. Continued development is taking place at Brookhaven National 
-Laboratory under the complex modeling initiative. The software is 
-available subject to the conditions and terms laid out below.
-
-Copyright 2006-2007, Board of Trustees of Michigan State University,
-Copyright 2008-2012, Board of Trustees of Columbia University in the
-city of New York.  
-Copyright 2013, Brookhaven National Laboratory (Copyright holder 
-indicated in each source file).
-
-For more information please visit the project web-page:
-    http://www.diffpy.org/
-or email Prof. Simon Billinge at sb2896@columbia.edu
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
-
-  * Neither the name of the copyright holder nor the names of its
-    contributors may be used to endorse or promote products derived from
-    this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDER "AS IS".  COPYRIGHT HOLDER
-EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, EITHER
-EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS, ADEQUACY OR SUITABILITY
-FOR A PARTICULAR PURPOSE, AND ANY WARRANTIES OF FREEDOM FROM
-INFRINGEMENT OF ANY DOMESTIC OR FOREIGN PATENT, COPYRIGHTS, TRADE
-SECRETS OR OTHER PROPRIETARY RIGHTS OF ANY PARTY.  IN NO EVENT SHALL
-COPYRIGHT HOLDER BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
-USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-THIS SOFTWARE OR RELATING TO THIS AGREEMENT, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="unix-linux-mac">
-<span id="unix"></span><h1>Unix, Linux, Mac<a class="headerlink" href="#unix-linux-mac" title="Permalink to this headline">¶</a></h1>
-<p>The installation of DiffPy requires several external libraries and applications.
-Consult the <a class="reference external" href="http://danse.us/trac/diffraction/browser/releases/diffpy-1.0/unix/README.txt">README.txt</a>
-file included with the distribution and make sure these
-requirements are all in place.</p>
-<p>The DiffPy components are registered at the Python Package Index (PyPI), therefore
-the most straightforward way to install is to execute <tt class="docutils literal"><span class="pre">easy_install</span> <span class="pre">MODULE_NAME</span></tt>. The
-easy_install command downloads, unzips and installs the required package together with
-its requirements, for example:</p>
-<div class="highlight-python"><pre>easy_install diffpy.pdfgui</pre>
-</div>
-<p>would install diffpy.pdfgui together with diffpy.pdffit2 and diffpy.Structure that are
-required for its function. The programs can be then started as <tt class="docutils literal"><span class="pre">pdfgui</span></tt> or <tt class="docutils literal"><span class="pre">pdffit2</span></tt>.</p>
-<p>The <tt class="docutils literal"><span class="pre">easy_install</span></tt> command is a part of the Python setuptools library. If it is not available,
-install the &#8220;python-setuptools&#8221; package with the system package manager or use the &#8221;.tgz&#8221; archive
-below, which comes with <tt class="docutils literal"><span class="pre">easy_install</span></tt> included.</p>
-<p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong>
-from the <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">download archive</a>,
-unpack and run the enclosed <tt class="docutils literal"><span class="pre">easy_install</span></tt> script:</p>
-<div class="highlight-python"><pre>tar -xzf diffpy-VERSION.tgz
-cd diffpy-VERSION
-./easy_install diffpy.pdfgui</pre>
-</div>
-<p>For more detailed installation instructions see PDFgui manual.</p>
-</div>
-<div class="section" id="windows">
-<span id="id1"></span><h1>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h1>
-<p>DiffPy is provided as self-installing archive for Windows systems. Download the latest
-<strong>diffpy-VERSION.exe</strong> file below, run it and follow the prompts.</p>
-<p>The self-installing archive includes a complete installation of Python that is used to
-run PDFgui and PDFfit2. Nevertheless, PDFgui (and other DiffPy components) can be also
-installed under existing Python tree. This requires Python 2.5 with several external
-Python packages, namely setuptools, numpy, wxPython and matplotlib. To add PDFgui to an
-existing Python tree, start Windows command prompt and run the <tt class="docutils literal"><span class="pre">easy_install</span></tt> script from
-the <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt> directory:</p>
-<div class="highlight-python"><pre>cd c:\Python25\Scripts
-..\python.exe easy_install-script.py diffpy.pdfgui</pre>
-</div>
-<p>This installs library files under <tt class="docutils literal"><span class="pre">Python25/Lib/site-packages</span></tt> and executable scripts for
-<tt class="docutils literal"><span class="pre">pdfgui</span></tt> and <tt class="docutils literal"><span class="pre">pdffit2</span></tt> under <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt>.</p>
-</div>
-<div class="section" id="diffpy-updates">
-<span id="updates"></span><h1>DiffPy updates<a class="headerlink" href="#diffpy-updates" title="Permalink to this headline">¶</a></h1>
-<p>Both Unix and Windows platforms can use the <tt class="docutils literal"><span class="pre">easy_install</span></tt> command to obtain the latest
-updates to the code. For example, to upgrade PDFgui, run:</p>
-<div class="highlight-python"><pre>easy_install -U diffpy.pdfgui</pre>
-</div>
-<p>This installs only the changed DiffPy components as they become available at the DiffPy
-<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/packages/">package repository</a>.
-These packages are smaller and
-will be updated more frequently than the complete installation archives.</p>
-</div>
-<div class="section" id="diffpy-releases">
-<span id="releases"></span><h1>DiffPy Releases<a class="headerlink" href="#diffpy-releases" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="30%" />
-<col width="20%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Date</th>
-<th class="head">Size</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe">diffpy-1.0-r3067.exe</a></td>
-<td>2009-04-10</td>
-<td>21.5 M</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz">diffpy-1.0-r3067.tgz</a></td>
-<td>2009-04-10</td>
-<td>6.4 M</td>
-</tr>
-</tbody>
-</table>
-<p>Please, join the <a class="reference external" href="community.html">community</a> forum for tips, tricks, and feedback.
-Older releases are available for download
-<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">here</a>.</p>
 </div>
 
 
@@ -226,7 +86,7 @@ Older releases are available for download
       
     <div class="footer">
         &copy; Copyright 2013, Kevin Knox.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
     </div>
     </div>
 
