@@ -36,8 +36,7 @@ Products
 **DiffPy-CMI**
 
 DiffPy-CMI is a highly flexible library of Python modules for carrying out customizable structure 
-analysis tasks from diffraction data. `DiffPy-CMI installation instructions <downloads/diffpycmi.html>`_
-
+analysis tasks from diffraction data. `Installation instructions <downloads/diffpycmi.html>`__.
 
 **PDFgetX3**
 
@@ -48,7 +47,7 @@ parameters and intermediate results, as well as live-plotting feature for parame
 tuning and visualization of their effects on the results. PDFgetX3 can be used either 
 as a standalone application or as a Python library of PDF-processing functions. *The 
 software is free for open academic research, but requires paid license for commercial use.*
-`PDFgetX3 installation instructions <downloads/pdfgetx3.html>`_
+`Documentation <doc/pdfgetx3/index.html>`__. `Installation instructions <downloads/pdfgetx3.html>`__.
 
 **PDFgui** 
 
@@ -57,7 +56,7 @@ a convenient and easy to use graphical front end for the PDFfit2 refinement prog
 capable of full-profile fitting of the atomic pair distribution function (PDF) 
 derived from x-ray or neutron diffraction data 
 and comes with built in graphical and structure visualization capabilities.
-`PDFgui installation instructions <downloads/pdfgui.html>`_
+`Documentation <doc/pdfgui/pdfgui.html>`__. `Installation instructions <downloads/pdfgui.html>`__.
 
 References
 ==========
