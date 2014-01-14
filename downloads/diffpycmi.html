@@ -60,6 +60,11 @@
   <div class="section" id="diffpy-cmi">
 <h1>DiffPy-CMI<a class="headerlink" href="#diffpy-cmi" title="Permalink to this headline">¶</a></h1>
 </div>
+<div class="section" id="platforms">
+<h1>Platforms<a class="headerlink" href="#platforms" title="Permalink to this headline">¶</a></h1>
+<p>DiffPy-CMI is currently only available to Linux and Unix users.
+<a class="reference internal" href="#linux"><em>Unix, Linux</em></a></p>
+</div>
 <div class="section" id="license">
 <h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
 <p>By downloading and using this software you are agreeing to the following conditions.</p>
@@ -114,6 +119,63 @@ POSSIBILITY OF SUCH DAMAGE.
 </pre>
 </div>
 </div></blockquote>
+</div>
+<div class="section" id="unix-linux">
+<span id="linux"></span><h1>Unix, Linux<a class="headerlink" href="#unix-linux" title="Permalink to this headline">¶</a></h1>
+<p>To install DiffPy-CMI follow the steps below:</p>
+<ol class="arabic">
+<li><p class="first">The following libraries must be installed in order for DiffPy-CMI to
+work properly:</p>
+<p><strong>libgsl0-dev</strong></p>
+<p><strong>libboost-all-dev</strong></p>
+<p><strong>python-dev</strong></p>
+<p><strong>python-setuptools</strong></p>
+<p><strong>python-numpy</strong></p>
+<p><strong>python-scipy</strong></p>
+<p><strong>python-matplotlib</strong></p>
+<p><strong>python-lxml</strong></p>
+<p><strong>ipython</strong></p>
+<p>All the required dependencies can be installed from the command line
+by using <tt class="docutils literal"><span class="pre">apt-get</span></tt> or a similar package manager:</p>
+<div class="highlight-python"><pre>sudo apt-get install \
+    libgsl0-dev \
+    libboost-all-dev \
+    python-dev \
+    python-setuptools \
+    python-numpy \
+    python-scipy \
+    python-matplotlib \
+    python-lxml \
+    ipython</pre>
+</div>
+</li>
+<li><p class="first">Download and extract the most recent
+<a class="reference external" href="http://slapper.apam.columbia.edu/diffpy-daily-builds/">diffpy-CMI tarball</a>
+into a directory of your choice.</p>
+</li>
+<li><p class="first">Create a symbolic link to the diffpy-CMI directory inside the Python
+directory for user files.</p>
+<p>For a one-user installation determine the Python directory for user
+files, create it if it does not exist yet, and put a symbolic
+link to the diffpy-1.0.pth file inside this folder. This can be done
+by executing the follwing code from within your diffpy-CMI directory:</p>
+<div class="highlight-python"><pre>D="$(python -c 'import site; print site.USER_SITE')"
+mkdir -p "$D"
+ln -si $PWD/diffpy-1.0.pth "$D"/</pre>
+</div>
+<p>For a system-wide installation create symbolic link in the directory
+for system-wide Python packages. Again, the following code should be
+executed from within your diffpy-CMI directory:</p>
+<div class="highlight-python"><pre>sudo ln -si $PWD/diffpy-1.0.pth /usr/local/lib/python2.7/dist-packages/</pre>
+</div>
+<p>Note that it is essential to use a symbolic link.  Making a copy of the
+pth file will not work.</p>
+</li>
+<li><p class="first">Test the installation by running:</p>
+<div class="highlight-python"><pre>./runtests.sh</pre>
+</div>
+</li>
+</ol>
 </div>
 
 
