@@ -27,22 +27,36 @@ To install DiffPy-CMI follow the steps below:
    work properly:
 
    **libgsl0-dev**
+      The GNU Scientific Library (GSL) is a collection of routines for
+      numerical analysis.
 
    **libboost-all-dev**
+      A set of useful C++ libraries.
 
    **python-dev**
-
+      Header files, a static library and development tools for building 
+      Python modules.
+ 
    **python-setuptools**
+      A collection of enhancements to the Python distutils that allow 
+      developers to more easily build and distribute Python packages.
 
    **python-numpy**
+      General-purpose array-processing for efficient manipulation of
+      large multi-dimensional arrays.
 
    **python-scipy**
+      The fundamental library for scientific computing with Python.
 
    **python-matplotlib**
+      A python 2D plotting library which produces publication quality 
+      figures in a variety of hardcopy formats and interactive environments.
 
    **python-lxml**
+      Python library for processing XML.
 
    **ipython**
+      An enhanced interactive Python shell.
 
    All the required dependencies can be installed from the command line
    by using ``apt-get`` or a similar package manager::
