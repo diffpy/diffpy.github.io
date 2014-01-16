@@ -97,6 +97,7 @@ are those of the author(s) and do not necessarily reflect the views of the respe
 .. toctree::
    :hidden:
 
+   diffpycmi 
    community
    documentation
    download
