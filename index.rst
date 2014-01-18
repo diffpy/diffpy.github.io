@@ -78,7 +78,7 @@ Acknowledgements
 
 **Developers**
 
-The active DiffPy team is Pavol Juhás, Chris Farrow, Emil Božin, Simon Billinge, Wenduo Zhou, 
+The active DiffPy team is Pavol Juhás, Chris Farrow, Emil Božin, Simon J.L. Billinge, Wenduo Zhou,
 Peng Tian and Timur Davis. The project was started at the Department of Physics and Astronomy, 
 Michigan State University. The development team has now mostly relocated to the Department of 
 Applied Physics and Applied Mathematics at Columbia University in the city of New York. The 
