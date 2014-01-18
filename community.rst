@@ -32,6 +32,6 @@ development of DiffPy and related applications.
 |
 
 You can also share your comments, suggestions, praise or complaints by sending email to 
-`Simon J. Billinge <sb2896@columbia.edu>`_.
+`Simon J. L. Billinge <sb2896@columbia.edu>`_.
 
 To report or browse bugs, please use the link at the top of this page.
