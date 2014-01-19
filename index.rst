@@ -4,24 +4,33 @@
    contain the root `toctree` directive.
 
 
-Welcome to the DiffPy project.
-==============================
+Welcome to the DiffPy and Diffpy-CMI projects.
+==============================================
 
 .. include:: abbreviations.txt
 
 This is an open-source project to develop python software modules for diffraction 
-and the study of atomic structure of materials. DiffPy is developed as part of DANSE_, 
+and the study of atomic structure of materials.  It is the home of the Diffpy-CMI 
+Complex Modeling framework, a modular software framework for robust and extensible 
+modeling of diffraction data.  We welcome contributions to this project from the 
+community.
+
+The project is currently centered at `Brookhaven National Laboratory`_, a US `Department of 
+Energy, Office of Basic Energy Sciences`_ (DOE-BES_) funded laboratory. 
+Many parts of the code were developed under the diffraction part of the DANSE_ project,
 a software construction project funded by the `National Science Foundation`_ to provide 
-data analysis software tools for neutron scattering experiments that will be carried 
-out at the `Spallation Neutron Source`_ at `Oak Ridge National Laboratory`_.
+data analysis software tools for neutron scattering experiments.  This project was centered 
+Columbia University and previously Michigan State University.
 
 .. _danse: http://danse.us/
 
 .. _national science foundation: http://www.nsf.gov/
 
-.. _spallation neutron source: http://neutrons.ornl.gov/
+.. _department of energy, office of basic energy sciences: http://http://science.energy.gov/bes/
 
-.. _oak ridge national laboratory: http://www.ornl.gov/
+.. _doe-bes: http://http://science.energy.gov/bes/
+
+.. _brookhaven national laboratory: http://www.bnl.gov/
 
 
 News
