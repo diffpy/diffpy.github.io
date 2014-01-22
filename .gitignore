@@ -1,2 +1,6 @@
 _build
 *.bak
+
+#eclipse
+.project
+.pydevproject
