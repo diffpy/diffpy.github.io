@@ -6,6 +6,8 @@ Documentation
 User manuals
 ============
 
+- **DiffPy-CMI** documentation can be found `here <diffpycmi.html>`_.
+
 - **PDFgetX3** user manual formatted as `HTML <doc/pdfgetx3/index.html>`_,
   `PDF <doc/pdfgetx3/PDFgetX3_manual.pdf>`__ and the `tutorial files <doc/pdfgetx3/pdfgetx3-examples.zip>`__.
 

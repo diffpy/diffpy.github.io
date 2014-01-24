@@ -49,7 +49,7 @@ To install DiffPy-CMI follow the steps below:
       The fundamental library for scientific computing with Python.
 
    **python-matplotlib**
-      A python 2D plotting library which produces publication quality 
+      A Python 2D plotting library which produces publication quality 
       figures in a variety of hardcopy formats and interactive environments.
 
    **python-lxml**
