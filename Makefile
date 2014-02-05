@@ -197,7 +197,7 @@ publish-prepare:
 	    git clone -b master $(GITREPOPATH) _build/master
 	cd _build/master && \
 	    git pull $(GITREMOTEURL) master
-	rsync -acv --exclude=.git --exclude=.rsync-exclude \
+	rsync -acv --delete --exclude=.git --exclude=.rsync-exclude \
 	    --exclude-from=_build/master/.rsync-exclude \
 	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/master/
 	cd _build/master && \
