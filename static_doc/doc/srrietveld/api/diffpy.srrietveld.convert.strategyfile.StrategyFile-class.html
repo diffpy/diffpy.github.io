@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.convert.strategyfile.StrategyFile</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.convert-module.html">Package&nbsp;convert</a> ::
+        <a href="diffpy.srrietveld.convert.strategyfile-module.html">Module&nbsp;strategyfile</a> ::
+        Class&nbsp;StrategyFile
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.convert.strategyfile.StrategyFile-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class StrategyFile</h1><p class="nomargin-top"><span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile">source&nbsp;code</a></span></p>
+<p>Parse the strategy file into a list of dictionaries for later 
+  refinement [{method: [[fullpath, value, constrain formula], ...]}, {...},
+  ...]</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ResetVariableId"></a><span class="summary-sig-name">ResetVariableId</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      When input strategylist, need to reset variableid.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.ResetVariableId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fit</span>,
+        <span class="summary-sig-arg">strategyfile</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">strategy</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addNewStep"></a><span class="summary-sig-name">addNewStep</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>,
+        <span class="summary-sig-arg">method</span>,
+        <span class="summary-sig-arg">paramlist</span>)</span><br />
+      Addd new strategystep</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.addNewStep">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addParam"></a><span class="summary-sig-name">addParam</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>,
+        <span class="summary-sig-arg">posid</span>,
+        <span class="summary-sig-arg">fullpath</span>,
+        <span class="summary-sig-arg">value</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">formula</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add the fullpath into parameter list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.addParam">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addPosParam"></a><span class="summary-sig-name">addPosParam</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">id</span>,
+        <span class="summary-sig-arg">param</span>)</span><br />
+      Add the parameter into paramlist</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.addPosParam">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Clean the strategy list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getNewVariableId"></a><span class="summary-sig-name">getNewVariableId</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get new variable id</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getNewVariableId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getNumStep"></a><span class="summary-sig-name">getNumStep</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get total number of steps</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getNumStep">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPosParamFullPath"></a><span class="summary-sig-name">getPosParamFullPath</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">id</span>)</span><br />
+      Get Fullpath for id parameter in strategyeditor</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getPosParamFullPath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getPosParamListId"></a><span class="summary-sig-name">getPosParamListId</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">id</span>)</span><br />
+      Get corresponding paramlist to id of strategyeditor</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getPosParamListId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getStepMethod"></a><span class="summary-sig-name">getStepMethod</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>)</span><br />
+      Get method for certain step</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getStepMethod">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getStepParamList"></a><span class="summary-sig-name">getStepParamList</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>)</span><br />
+      Get strategy for certain step</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getStepParamList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getStrategy"></a><span class="summary-sig-name">getStrategy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the strategy list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getStrategyId"></a><span class="summary-sig-name">getStrategyId</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stepstrategy</span>)</span><br />
+      Get the order of the stepstrategy</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getStrategyId">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getStrategyStep"></a><span class="summary-sig-name">getStrategyStep</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>)</span><br />
+      Get the step dict</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.getStrategyStep">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="mergeParamList"></a><span class="summary-sig-name">mergeParamList</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">newparam</span>,
+        <span class="summary-sig-arg">paramlist</span>)</span><br />
+      Form a new paramlist</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.mergeParamList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.convert.strategyfile.StrategyFile-class.html#parseStrategyFile" class="summary-sig-name">parseStrategyFile</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Parse .txt format file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.parseStrategyFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="readFile"></a><span class="summary-sig-name">readFile</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.readFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="removePosParam"></a><span class="summary-sig-name">removePosParam</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">id</span>)</span><br />
+      Remove the position in strategyeditor from parameter list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.removePosParam">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="removeStep"></a><span class="summary-sig-name">removeStep</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">step</span>)</span><br />
+      Remove the step from list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.removeStep">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setStrategy"></a><span class="summary-sig-name">setStrategy</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">strategylist</span>)</span><br />
+      Set new list to strategylist</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.setStrategy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="transRefinables"></a><span class="summary-sig-name">transRefinables</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">generalpath</span>,
+        <span class="summary-sig-arg">generalformula</span>)</span><br />
+      Translate the generalpath and generalformula in strategyfile And 
+      return the pftuplelist containing the list of parameters for the 
+      project.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.transRefinables">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.convert.strategyfile.StrategyFile-class.html#writeToFile" class="summary-sig-name">writeToFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fullpath</span>)</span><br />
+      write the strateg list to a local file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.writeToFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="parseStrategyFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseStrategyFile</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.parseStrategyFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Parse .txt format file
+strateylist = [{method: [[fullpath, value, constrain formula], ...]}, {...}, ...]
+       method: 'Rietveld' or 'Lebail'
+       fullpath: full path of parameter;
+       value: initial value of refined parameter;
+       formula of constraint: 1.0*Var_paramname
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="writeToFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeToFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fullpath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.convert.strategyfile-pysrc.html#StrategyFile.writeToFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>write the strateg list to a local file. The strategy is read from the 
+  strategy member variable, no the lines fullpath - the file path to write 
+  into return</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:57 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

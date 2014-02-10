@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.atom.Atom</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.atom-module.html">Module&nbsp;atom</a> ::
+        Class&nbsp;Atom
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.atom.Atom-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Atom</h1><p class="nomargin-top"><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                       object --+        
+                                |        
+refinementdata.hdf5.object.Object --+    
+                                    |    
+   refinementdata.refinable.Refinable --+
+                                        |
+                                       <strong class="uidshort">Atom</strong>
+</pre>
+
+<hr />
+<pre class="literalblock">
+Atom is a Refinable component which contains multiple parameters.
+A composite function may also contain other functions.
+
+data member:
+    
+    formula: a string of the function definition in C style
+    variables: a space separated string of all variables in the formula
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">owner</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">handle</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">formula</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">variables</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">shape</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialization.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getBiso" class="summary-sig-name">getBiso</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the Biso values</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getBiso">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getBisoSigma" class="summary-sig-name">getBisoSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the Biso standard deviations</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getBisoSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getEngineType" class="summary-sig-name">getEngineType</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the engine type for this refinement</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getEngineType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getName" class="summary-sig-name">getName</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get atom name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getOccupation" class="summary-sig-name">getOccupation</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the occupations of the atom</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getOccupation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getType" class="summary-sig-name">getType</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get atom type</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getUiso" class="summary-sig-name">getUiso</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the Uiso values</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getUiso">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getUisoSigma" class="summary-sig-name">getUisoSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the Uiso standard deviations</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getUisoSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getX" class="summary-sig-name">getX</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the x fractional coordinates</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getXSigma" class="summary-sig-name">getXSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the x fractional coordinate standard deviations</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getXSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getY" class="summary-sig-name">getY</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the y fractional coordinates</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getYSigma" class="summary-sig-name">getYSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the y fractional coordinate standard deviations</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getYSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getZ" class="summary-sig-name">getZ</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the z fractional coordinates</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getZ">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.atom.Atom-class.html#getZSigma" class="summary-sig-name">getZSigma</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the z fractional coordinate standard deviations</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getZSigma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.refinable.Refinable</code></b>:
+      <code>addHistory</code>,
+      <code>addHistoryByPath</code>,
+      <code>addSigma</code>,
+      <code>addSigmaByPath</code>,
+      <code>findRefinement</code>,
+      <code>getHistory</code>,
+      <code>getHistoryByPath</code>,
+      <code>getSigma</code>,
+      <code>getSigmaByPath</code>,
+      <code>listHistories</code>,
+      <code>listRefined</code>,
+      <code>loadLocalObjects</code>,
+      <code>removeHistory</code>,
+      <code>update</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>addObject</code>,
+      <code>copy</code>,
+      <code>copyMeta</code>,
+      <code>delete</code>,
+      <code>exportFile</code>,
+      <code>get</code>,
+      <code>getAttr</code>,
+      <code>getByPath</code>,
+      <code>getFlatIndex</code>,
+      <code>getMetaData</code>,
+      <code>getMultiDimIndex</code>,
+      <code>getObject</code>,
+      <code>getPyObj</code>,
+      <code>hasAttr</code>,
+      <code>hasMeta</code>,
+      <code>importFile</code>,
+      <code>isDescendant</code>,
+      <code>list</code>,
+      <code>listAttrs</code>,
+      <code>listNames</code>,
+      <code>listObjects</code>,
+      <code>load</code>,
+      <code>loadLocalData</code>,
+      <code>loadObject</code>,
+      <code>move</code>,
+      <code>range</code>,
+      <code>readStr</code>,
+      <code>removeObject</code>,
+      <code>rename</code>,
+      <code>repeat</code>,
+      <code>replicate</code>,
+      <code>reshape</code>,
+      <code>save</code>,
+      <code>set</code>,
+      <code>setAttr</code>,
+      <code>setByPath</code>,
+      <code>setLabels</code>,
+      <code>setPyObj</code>,
+      <code>unset</code>,
+      <code>unsetAttr</code>,
+      <code>writeStr</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>labels</code>,
+      <code>name</code>,
+      <code>ndim</code>,
+      <code>path</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">owner</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">handle</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">formula</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">variables</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">shape</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialization.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>owner</code></strong> (a data project) - the owner, which is usually a refinement.</li>
+        <li><strong class="pname"><code>handle</code></strong> (a HDF5Handle object) - a HDF5Handle pointing to the underlying HDF5 node.</li>
+        <li><strong class="pname"><code>formula</code></strong> (string) - a string of the function definition in C style</li>
+        <li><strong class="pname"><code>variables</code></strong> (a space separated string) - a space separated string of all variables
+          <p>A name is passed to the initialization method when creating a 
+          node.</p>
+          <p>A handle is passed to the inialization method in two 
+          cases:</p>
+          <ol start="1">
+            <li>
+              when loading from a HDF5 file;
+            </li>
+            <li>
+              when creating a HDF5 file but the object is a hard link to a 
+              preexisiting one.
+            </li>
+          </ol>
+          <p>In the case when both name and handle are given, name will be 
+          simply ignored. In the case when neither name nor handle is 
+          given, an exception will be raised.</p>
+          <p>Generally, in the scripting interface, users do not have to 
+          call this constructor directly</p></li>
+        <li><strong class="pname"><code>name</code></strong> (string @param name     the name of the pattern)</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBiso"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBiso</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getBiso">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the Biso values</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the Biso values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBisoSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBisoSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getBisoSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the Biso standard deviations</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the Biso standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getEngineType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getEngineType</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getEngineType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the engine type for this refinement</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the string of the engine type, for example 
+          <i>&quot;gsas&quot;</i> or <i>&quot;fullprof&quot;</i></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getName</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get atom name. The atom name is the atom type with the id number</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the atom name string</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getOccupation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getOccupation</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getOccupation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the occupations of the atom</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the occupation values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getType"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getType</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getType">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get atom type</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the atoms type</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getUiso"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getUiso</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getUiso">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the Uiso values</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the Uiso values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getUisoSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getUisoSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getUisoSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the Uiso standard deviations</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the Uiso standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getX</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getX">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the x fractional coordinates</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the x fractional coordinate values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getXSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getXSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getXSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the x fractional coordinate standard deviations</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the x fractional coordinate standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getY"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getY</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getY">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the y fractional coordinates</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the y fractional coordinate values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getYSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getYSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getYSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the y fractional coordinate standard deviations</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the y fractional coordinate standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getZ"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getZ</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getZ">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the z fractional coordinates</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the z fractional coordinate values</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getZSigma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getZSigma</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.atom-pysrc.html#Atom.getZSigma">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the z fractional coordinate standard deviations</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the z fractional coordinate standard deviations</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:57 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

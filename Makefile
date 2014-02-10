@@ -51,10 +51,10 @@ clean:
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-	@test $(BUILDDIR)/html/_static/doc -ef $(BUILDDIR)/html/doc || \
-	    ln -sf _static/doc $(BUILDDIR)/html/doc
-	@test $(BUILDDIR)/html/_static/bugreport -ef $(BUILDDIR)/html/bugreport || \
-	    ln -sf _static/bugreport $(BUILDDIR)/html/bugreport
+#	@test $(BUILDDIR)/html/_static/doc -ef $(BUILDDIR)/html/doc || \
+#	    ln -sf _static/doc $(BUILDDIR)/html/doc
+#	@test $(BUILDDIR)/html/_static/bugreport -ef $(BUILDDIR)/html/bugreport || \
+#	    ln -sf _static/bugreport $(BUILDDIR)/html/bugreport
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 

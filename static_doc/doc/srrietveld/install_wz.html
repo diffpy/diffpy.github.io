@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; SrRietveld v1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '1.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SrRietveld v1.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">SrRietveld v1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="#">Installation</a><ul>
+<li><a class="reference external" href="#linux">Linux</a></li>
+<li><a class="reference external" href="#mac-osx">Mac OSX</a></li>
+<li><a class="reference external" href="#windows">Windows</a></li>
+<li><a class="reference external" href="#required-third-party-packages">Required third party packages:</a><ul>
+<li><a class="reference external" href="#community">Community</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/install_wz.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <p><a class="reference external" href="modindex.html"><em>Module Index</em></a></p>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>The easist way to setup SrRietveld in your computer is to use the <em>easy_install</em> tool kit with Python.</p>
+<p>SrRietveld will use several Diffpy libraries, including:</p>
+<ol class="arabic simple">
+<li>diffpy.refinementapi</li>
+<li>diffpy.rietveldapi</li>
+<li>diffpy.Structure:  this package need not be installed again if you have PDFgui installed.</li>
+<li>diffpy.pyfullprof</li>
+<li>diffpy.pygsas</li>
+<li>diffpy.srrietveld</li>
+</ol>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<p>For detailed installation instruments, see below.</p>
+<p>Prerequisite</p>
+<ol class="arabic simple">
+<li>Python: you must have python 2.3 or later installed</li>
+<li>numpy</li>
+<li>scipy</li>
+<li>Fullprof: fp2k must be in PATH</li>
+<li>GSAS: gsas/exec must be in PATH</li>
+<li>pexpect: without this package, SrRietveld is not able to use GSAS as refinement engine.</li>
+</ol>
+<p>Installation Procedure</p>
+<ol class="arabic simple">
+<li>Unzip and untar (e.g., tar -xzvf diffpy.package.gz) the downloaded tar balls</li>
+<li>In the order of diffpy.refinemenapi, diffpy.rietveldapi, diffpy.pyfullprof,
+diffpy.pygsas,  diffpy.srrietveld, install the package as</li>
+</ol>
+<blockquote>
+<ol class="arabic">
+<li><p class="first">enter the directory unpacked from the tar ball</p>
+</li>
+<li><dl class="first docutils">
+<dt>execute only::</dt>
+<dd><p class="first last">&gt; sudo ./setup.py install</p>
+</dd>
+</dl>
+</li>
+</ol>
+</blockquote>
+<p>SrRietveld will be deployed to the analysis computer of SNS&#8217; POWGEN.</p>
+<p>The enthusiastic testers can download the diffpy libraries from DANSE&#8217;s repository at:
+svn&#64;&#64;danse.us/diffraction</p>
+</div>
+<div class="section" id="mac-osx">
+<h2>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h2>
+<p>Prerequisite</p>
+<ol class="arabic simple">
+<li>Python: you must have python 2.3 or later installed on Linux</li>
+<li>numpy</li>
+<li>scipy</li>
+<li>Fullprof: fp2k must be in PATH</li>
+<li>GSAS: gsas/exec must be in PATH</li>
+<li>pexpect: without this package, SrRietveld is not able to use GSAS as refinement engine.</li>
+</ol>
+<p>Installation Procedure</p>
+<ol class="arabic simple">
+<li>Unzip and untar (e.g., tar -xzvf diffpy.package.gz) the downloaded tar balls</li>
+<li>In the order of diffpy.refinemenapi, diffpy.rietveldapi, diffpy.pyfullprof,
+diffpy.pygsas,  diffpy.srrietveld, install the package as</li>
+</ol>
+<blockquote>
+<ol class="arabic simple">
+<li>enter the directory unpacked from the tar ball</li>
+<li>execute:
+<tt class="docutils literal"><span class="pre">&gt;</span> <span class="pre">sudo</span> <span class="pre">./setup.py</span> <span class="pre">install</span></tt></li>
+</ol>
+</blockquote>
+<p>SrRietveld is able to work on Mac computers using Intel processors
+because Fullprof has a release only to Mac with Intel processors.
+The installation of SrRietveld on Mac OSX is exactly the same as the procedure for Linux.
+We suggest users to download and use MacPython in Bash shell,
+rather than the Python package coming with the operating system.</p>
+<p>The enthusiastic testers can download the diffpy libraries from DANSE&#8217;s repository at:
+<a class="reference external" href="mailto:svn&#37;&#52;&#48;danse&#46;us/diffraction">svn<span>&#64;</span>danse<span>&#46;</span>us/diffraction</a></p>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>Windows is not currently supported.</p>
+</div>
+<div class="section" id="required-third-party-packages">
+<h2>Required third party packages:<a class="headerlink" href="#required-third-party-packages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>python: <a class="reference external" href="http://www.python.org">http://www.python.org</a> Python interpreter, minimum version 2.3</li>
+<li>numpy: <a class="reference external" href="http://numpy.scipy.org">http://numpy.scipy.org</a> Numerical Python, minimum version 0.9.8</li>
+<li>wxPython: <a class="reference external" href="http://wxpython.org">http://wxpython.org</a> GUI toolkit for Python, minimum version 2.6,
+(recommended 2.8)</li>
+<li>python-matplotlib: <a class="reference external" href="http://matplotlib.sourceforge.net">http://matplotlib.sourceforge.net</a>
+plotting library for Python, minimum version 0.90</li>
+<li>GSAS:</li>
+<li>FullProf:</li>
+</ul>
+<div class="section" id="community">
+<h3>Community<a class="headerlink" href="#community" title="Permalink to this headline">¶</a></h3>
+<p>There are several Google groups for support and development of SrRietveld
+and other DiffPy software.  Visit the links below for message archives
+or instructions on subscription and posting.</p>
+<p><a class="reference external" href="http://groups.google.com/group/srrietveld-dev">srrietveld-dev</a>
+Please share your comments, desires and suggestions with the developers
+by posting to the Diffpy developers&#8217; forum, or by emailing Simon Billinge (<a class="reference external" href="mailto:sb2896&#37;&#52;&#48;columbia&#46;edu">sb2896<span>&#64;</span>columbia<span>&#46;</span>edu</a>).
+Since we are in the alpha-testing phase there are no user community pages.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">SrRietveld v1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2011, Peng Tian, Wenduo Zhou, Jiwu Liu, Yingrui Shang, Chris Farrow, Pavol Juhas, Emil Bozin, and Simon Billinge.
+      Last updated on Jun 16, 2011.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.4.
+    </div>
+  </body>
+</html>
