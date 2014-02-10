@@ -23,7 +23,7 @@ Unix, Linux, Mac
 ================
 
 The installation of PDFgui requires several external libraries and applications.
-Consult the `README.txt <http://danse.us/trac/diffraction/browser/releases/diffpy-1.0/unix/README.txt>`_
+Consult the `README.txt <https://github.com/diffpy/diffpy.pdfgui>`_
 file included with the distribution and make sure these
 requirements are all in place.
 
