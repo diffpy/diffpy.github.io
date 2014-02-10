@@ -6,7 +6,7 @@ Documentation
 User manuals
 ============
 
-- **DiffPy-CMI** documentation can be found `here <diffpycmi.html>`_.
+- **DiffPy-CMI** documentation can be found `here <doc/diffpycmi.html>`_.
 
 - **PDFgetX3** user manual formatted as `HTML <doc/pdfgetx3/index.html>`_,
   `PDF <doc/pdfgetx3/PDFgetX3_manual.pdf>`__ and the `tutorial files <doc/pdfgetx3/pdfgetx3-examples.zip>`__.
@@ -25,9 +25,7 @@ User manuals
   Functions and variables are quite similar as in the old PDFFIT, so its `manual <doc/pdffit/pdf_man.pdf>`__
   and `command reference <doc/pdffit/pdf_cmd.pdf>`__ should help as well.
 
-- **Structure**	user manual not available. To get started, see
-  `examples <http://danse.us/trac/diffraction/browser/diffraction/diffpy.Structure/trunk/examples/>`__
-  in the source code tree and the auto-generated `API <http://docs.danse.us/diffraction/diffpy.Structure/>`__.
+- **Structure**	See the auto-generated `API <http://docs.danse.us/diffraction/diffpy.Structure/>`__.
   For more information contact the developers or ask at the diffpy-dev Google group.
 
 
