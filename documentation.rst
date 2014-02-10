@@ -25,7 +25,8 @@ User manuals
   Functions and variables are quite similar as in the old PDFFIT, so its `manual <doc/pdffit/pdf_man.pdf>`__
   and `command reference <doc/pdffit/pdf_cmd.pdf>`__ should help as well.
 
-- **Structure**	See the auto-generated `API <http://docs.danse.us/diffraction/diffpy.Structure/>`__.
+- **Structure**	Documentation `here <doc/Structure/>`__. 
+  
   For more information contact the developers or ask at the diffpy-dev Google group.
 
 
