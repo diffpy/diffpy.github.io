@@ -1,0 +1,235 @@
+.. _xml_interface:
+
+##########################
+The XML Interface
+##########################
+
+Currently SrRietveld is running from command lines in a terminal. The input values are provided in the format of data files, mostly in the form of XML files. 
+
+There are three major files: the instrument file, the structure file, and the refinement strategy file
+
+.. _instrument_file:
+
+============================
+Instrument File
+============================
+
+	The instrument file is passed into the *--instrument* or *-i* option in refinement or sequential refinement. The instrument file can either be *.iparm* files or *.xml* data files. A typical *.xml* file will be read as follows::
+
+		<?xml version="1.0" ?>
+		<INSTRUMENT Name="11_IDC" Type="Xray">
+			<BACKGROUND Type="Polynomial" Order="3" Coefficients="1230,-34"/>
+			<ENERGY Lambda="0.107751" Lambda2="0.107751" Ratio="0.0" Resolution="5.0e-3"/>
+			<PEAKPROFILE Scale="1.25" Ctof="0.003" Type="TCHPseudoVoigtProfile" U="1400.38" V="0.0" W="18.0919" X="0.0" Y="5.0" Z="0.0"/>
+			<SETUP Zero="-0.18">
+				<EXCLUDEDREGION Begin="0.0" End="0.51"/>
+				<EXCLUDEDREGION Begin="30.0" End="50.0"/> 
+			</SETUP>
+		</INSTRUMENT>
+
+	The tags in the xml file is discussed as follows:
+	
+---------------------------
+<INSTRUMENT/>
+---------------------------
+	This is the root XML tag, which contains all the information of the instrument. There are two attibutes: *Name*, and *Type*. The *Name* tag is merely a note on the experiment instrument name. The value for *Type* can be::
+		
+		"Constant Wave Length"
+		"Xray"
+		"NeutronCW"
+		"TOF"
+		"ThermalNeutronTOF"
+		
+---------------------------
+<BACKGROUND/>
+---------------------------		
+	
+	The background type and specifications are contained in this tag. The background type can be defined as following values::
+		
+		"Interpolated"
+		"Polynomial"
+		"Chebyschev"
+		"CFourier"
+		"QExp"
+		"QExpInv"
+
+	.. note::
+		If the background type is "Interpolated", a file with customer picked background points have to be provide to the refinement engine
+		
+	The order of the background function s provided in the "Order" attribute, if applicable. The default value for "Order" is 12, if not provided in the XML file.
+	
+	Also, the user can provide the coefficients to the refinement engine, and the coefficients of the background equation should be separated with comma::
+	
+		Coefficients="b0,b1"
+		
+---------------------------
+<ENERGY/>
+---------------------------		
+
+	The energy related instrument information is specified in this tag. 
+	
+	The attributes:
+	
+	**Lambda1, Lambda2** - wavelengths, unit is Ångström.
+	
+	**Ratio** - 
+	
+	**Resolution** - ΔE/E
+	
+----------------------------
+<PEAKPROFILE/>
+----------------------------			
+
+	This tag contains the peak profile information in the refinement. The attributes include:
+	
+	**Scale** - The scale on the height of the peaks
+	
+	**Ctof** - Peak width cutoff
+	
+	**U, V, W, X, Y, Z** - The peak profile coefficients
+	
+	**Type** - Type of peak profile, which can be::
+	
+		"GaussianProfile"
+		"TCHPseudoVoigtProfile"
+		"FCJPseudoVoigtProfile"
+		"FCJMicroPVProfile"
+		"GaussianExp"
+		"TOFPseudoVoigtIkedaCarpenter"
+		"PseudoVoigtExp"
+		"PseudoVoigtMicroExp" 
+        
+----------------------------
+<SETUP/>
+----------------------------	        
+
+	This tag contains other setups in the instrument related refinement parameters. Users can specify the excluded regions in a sub tag *<EXCLUDEDREGION />*. The attribute:
+	
+	**Zero** - The zero shift value on the calculated pattern
+	
+		
+.. _structure_file:		
+
+============================
+Structure File
+============================
+
+	The structure file contains the initial value of the material structure. A typical structure information file can be read as following::
+	
+		<?xml version="1.0" ?>
+		<MODEL>
+			<PHASE Name="BaFe2As2" SpaceGroup="I 4/m m m" Type="User" a="3.95" alpha="90.0" b="3.95" beta="90.0" c="12.945" gamma="90.0">
+				<ATOM occ='1.0' Element='Ba' Uiso='0.01251' Tag='BA' y='0.0' x='0.0' z='0.0'/>
+				<ATOM occ='1.0' Element='Fe' Uiso='0.005159' Tag='FE' y='0.5' x='0.0' z='0.25'/>
+				<ATOM occ='1.0' Element='As' Uiso='0.003928' Tag='AS' y='0.0' x='0.0' z='0.353539'/>
+			</PHASE>
+		</MODEL>
+	
+	The *<MODEL />* tag is the root node, which contains all the information for the proposed structure model. Inside the model, there could be more than one phase. The structure information for each phase is contained in the *<PHASE />* tag. 
+	
+----------------------------
+<PHASE/>
+----------------------------	 	
+
+	The attributes in this tag can be:
+	
+	**Name** - The name of the phase
+	
+	**SpaceGroup** - The space group indicator of this phase
+	
+	**Type** - If the value is *User*, the engine will read the structure information in this xml file.
+	If the type value is *CIF*, the engine will read the **CIFName** attribute value as the CIF file name and read the structure information in the CIF file. 
+	
+	**CIFName** - The value should be the CIF file name which contains the structure information. This attribute is only available when the **Type** is set to be *"CIF"*
+	
+	**a, b, c, alpha, beta, gamma** - The lattice contants of the phase model
+
+
+----------------------------
+<ATOM/>
+----------------------------	 	
+	This contains the atom information under a phase. 
+	
+	**occ** - Occupation of the atom
+	
+	**Element** - The element name of the atom
+	
+	**Uiso** - The initial guess of the Uiso value of this atom
+	
+	**Tag** - The tag to be displayed for this atom in the result visualization
+	
+	**x, y, z** - The position information of the atom
+	
+	
+.. _strategy_file:
+	
+============================
+Strategy File
+============================
+	
+	Users can define the refinement strategy by editing the strategy file. A typical strategy file reads as following::
+	
+		<?xml version="1.0" ?>
+		<REFINESTRATEGY>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="1">
+				<ADDGUIDE Guide="ScaleGuide" Stage="1"/>
+			</STEP>    
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="2">
+				<ADDGUIDE Guide="ZeroGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="3">
+				<ADDGUIDE Guide="BackgroundGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="4">
+				<ADDGUIDE Guide="LatticeGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="5">
+				<ADDGUIDE Guide="BackgroundGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="6">
+				<ADDGUIDE Guide="FractionalCoordinateGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="7">
+				<ADDGUIDE Guide="PeakShapeGuide" Stage="1"/>
+			</STEP>
+			<STEP Refine-Type="rietveld" Stage="1" Step-Number="8">
+				<ADDGUIDE Guide="ADPGuide" Stage="1"/>
+			</STEP>
+		</REFINESTRATEGY>
+	
+	It can be seen that under the root node *<REFINESTRATEGY/>* the refinement steps are defined. 
+	
+----------------------------
+<STEP/>
+----------------------------
+	
+	This tag defines the steps in the strategy.
+	
+	**Refine-Type** - *rietveld* or *lebail*
+	
+	**Stage** - An integer indicates the stage of the refinement
+	
+	**Step-Number** - An integer indicates the order of the steps, the bigger the later
+	 
+	 The child node *<ADDGUIDE/>* or *<REMOVEGUIDE/>* can be added to the *<STEP/>* node
+	 
+--------------------------------
+<ADDGUIDE/> and <REMOVEGUIDE/>
+--------------------------------
+	
+	The tag defines the details of the step to remove or add.
+	
+	**Guide** - The parameter to refine. The value for this attribute can be::
+	
+		"ADPGuide"
+		"BackgroundGuide"
+		"FractionalCoordinateGuide"
+		"LatticeGuide"
+		"OccupancyGuide"
+		"PeakShapeGuide"
+		"ScaleGuide"
+		"ExpDecayGuide"
+		"ZeroGuide"
+		"AbsorptionCorrectionGuide"
+		"WavelengthGuide"
+	

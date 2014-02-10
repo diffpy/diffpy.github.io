@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.refinehistory</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;refinehistory
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.refinehistory-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="srrietveld.refinehistory-module.html">Module srrietveld.refinehistory</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># diffpy.srrietveld by DANSE Diffraction group</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   Simon J. L. Billinge</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   (c) 2008 Trustees of the Columbia University</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#                   in the City of New York.  All rights reserved.</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># File coded by:    Wenduo Zhou</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See AUTHORS.txt for a list of people who contributed.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># See LICENSE.txt for license information.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##############################################################################</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">  Refine-History provides the auxiliary classes and external methods for </tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">  Multiple-step refinement controller </tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">  </tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">  Created On: 2008.09.17</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable srrietveld.__id__=srrietveld-module.html#__id__,Variable srrietveld.atominfo.__id__=srrietveld.atominfo-module.html#__id__,Variable srrietveld.autobackgroundselect.__id__=srrietveld.autobackgroundselect-module.html#__id__,Variable srrietveld.auxiliary.__id__=srrietveld.auxiliary-module.html#__id__,Variable srrietveld.datafileconverter.__id__=srrietveld.datafileconverter-module.html#__id__,Variable srrietveld.datamanager.__id__=srrietveld.datamanager-module.html#__id__,Variable srrietveld.dataprocessnpdf.__id__=srrietveld.dataprocessnpdf-module.html#__id__,Variable srrietveld.enduserscripts.__id__=srrietveld.enduserscripts-module.html#__id__,Variable srrietveld.gsasfileparser.__id__=srrietveld.gsasfileparser-module.html#__id__,Variable srrietveld.instrument.__id__=srrietveld.instrument-module.html#__id__,Variable srrietveld.io.__id__=srrietveld.io-module.html#__id__,Variable srrietveld.mar_utilities.__id__=srrietveld.mar_utilities-module.html#__id__,Variable srrietveld.measurements.__id__=srrietveld.measurements-module.html#__id__,Variable srrietveld.midscript.__id__=srrietveld.midscript-module.html#__id__,Variable srrietveld.mixedphaseanalyzer.__id__=srrietveld.mixedphaseanalyzer-module.html#__id__,Variable srrietveld.modelrw.__id__=srrietveld.modelrw-module.html#__id__,Variable srrietveld.monitormem.__id__=srrietveld.monitormem-module.html#__id__,Variable srrietveld.parallelrefinecontrol.__id__=srrietveld.parallelrefinecontrol-module.html#__id__,Variable srrietveld.phasescript.__id__=srrietveld.phasescript-module.html#__id__,Variable srrietveld.plot2d.__id__=srrietveld.plot2d-module.html#__id__,Variable srrietveld.qbackgrounds.__id__=srrietveld.qbackgrounds-module.html#__id__,Variable srrietveld.refinebackend.__id__=srrietveld.refinebackend-module.html#__id__,Variable srrietveld.refineguides.__id__=srrietveld.refineguides-module.html#__id__,Variable srrietveld.refinehistory.__id__=srrietveld.refinehistory-module.html#__id__,Variable srrietveld.refinemanager.__id__=srrietveld.refinemanager-module.html#__id__,Variable srrietveld.refinesetup.__id__=srrietveld.refinesetup-module.html#__id__,Variable srrietveld.refinestrategy.__id__=srrietveld.refinestrategy-module.html#__id__,Variable srrietveld.sequentialrefinecontrol.__id__=srrietveld.sequentialrefinecontrol-module.html#__id__,Variable srrietveld.spacegroupinfo.__id__=srrietveld.spacegroupinfo-module.html#__id__,Variable srrietveld.srrietveldconfiguration.__id__=srrietveld.srrietveldconfiguration-module.html#__id__,Variable srrietveld.stringutilfunction.__id__=srrietveld.stringutilfunction-module.html#__id__,Variable srrietveld.uisupport.__id__=srrietveld.uisupport-module.html#__id__,Variable srrietveld.utilbackground.__id__=srrietveld.utilbackground-module.html#__id__,Variable srrietveld.utilinstrument.__id__=srrietveld.utilinstrument-module.html#__id__,Variable srrietveld.utilplot.__id__=srrietveld.utilplot-module.html#__id__,Variable srrietveld.utilrapdf.__id__=srrietveld.utilrapdf-module.html#__id__,Variable srrietveld.utilrefineguide.__id__=srrietveld.utilrefineguide-module.html#__id__,Variable srrietveld.utilsequentialrefine.__id__=srrietveld.utilsequentialrefine-module.html#__id__,Variable srrietveld.utilunits.__id__=srrietveld.utilunits-module.html#__id__,Variable srrietveld.viewer3d.__id__=srrietveld.viewer3d-module.html#__id__,Variable srrietveld.viserrors.__id__=srrietveld.viserrors-module.html#__id__,Variable srrietveld.xmlgenerator.__id__=srrietveld.xmlgenerator-module.html#__id__,Variable srrietveld.xmlinterface.__id__=srrietveld.xmlinterface-module.html#__id__"><a title="srrietveld.__id__
+srrietveld.atominfo.__id__
+srrietveld.autobackgroundselect.__id__
+srrietveld.auxiliary.__id__
+srrietveld.datafileconverter.__id__
+srrietveld.datamanager.__id__
+srrietveld.dataprocessnpdf.__id__
+srrietveld.enduserscripts.__id__
+srrietveld.gsasfileparser.__id__
+srrietveld.instrument.__id__
+srrietveld.io.__id__
+srrietveld.mar_utilities.__id__
+srrietveld.measurements.__id__
+srrietveld.midscript.__id__
+srrietveld.mixedphaseanalyzer.__id__
+srrietveld.modelrw.__id__
+srrietveld.monitormem.__id__
+srrietveld.parallelrefinecontrol.__id__
+srrietveld.phasescript.__id__
+srrietveld.plot2d.__id__
+srrietveld.qbackgrounds.__id__
+srrietveld.refinebackend.__id__
+srrietveld.refineguides.__id__
+srrietveld.refinehistory.__id__
+srrietveld.refinemanager.__id__
+srrietveld.refinesetup.__id__
+srrietveld.refinestrategy.__id__
+srrietveld.sequentialrefinecontrol.__id__
+srrietveld.spacegroupinfo.__id__
+srrietveld.srrietveldconfiguration.__id__
+srrietveld.stringutilfunction.__id__
+srrietveld.uisupport.__id__
+srrietveld.utilbackground.__id__
+srrietveld.utilinstrument.__id__
+srrietveld.utilplot.__id__
+srrietveld.utilrapdf.__id__
+srrietveld.utilrefineguide.__id__
+srrietveld.utilsequentialrefine.__id__
+srrietveld.utilunits.__id__
+srrietveld.viewer3d.__id__
+srrietveld.viserrors.__id__
+srrietveld.xmlgenerator.__id__
+srrietveld.xmlinterface.__id__" class="py-name" href="#" onclick="return doclink('link-0', '__id__', 'link-0');">__id__</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"$Id: refinehistory.py 2792 2009-03-02 15:56:43Z wdzhou $"</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory"></a><div id="RefineHistory-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="RefineHistory-toggle" onclick="return toggle('RefineHistory');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html">RefineHistory</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="RefineHistory-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">    Class RefineHistory records how a multiple-step refinement proceeds</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">    in a concise and informative manner. </tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">    It will serve the users with insight about the refinements. </tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">    Methods List:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">    @ __init__</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">    * Contruction:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">    @ addInfoOfStep(self, step, reftype, residtuple, varnameslist)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">    @ addSkipStep(self, step)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-docstring">    * Information Retrieval:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-docstring">    @ getResidueValues(self, step)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">    * Internal</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">    @ getNewVariablesList(self, step)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">    Class Variables:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">    @</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="RefineHistory.__init__"></a><div id="RefineHistory.__init__-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="RefineHistory.__init__-toggle" onclick="return toggle('RefineHistory.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.__init__-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        initialization</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_numsteps</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_refType</tt>  <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rp</tt>       <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_chi2</tt>     <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rwp</tt>      <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_re</tt>       <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_varNames</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_skipStepsList</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory.__str__"></a><div id="RefineHistory.__str__-def"><a name="L60"></a><tt class="py-lineno"> 60</tt> <a class="py-toggle" href="#" id="RefineHistory.__str__-toggle" onclick="return toggle('RefineHistory.__str__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#__str__">__str__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.__str__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.__str__-expanded"><a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-docstring">        Customized output</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-name">rstring</tt>  <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-name">rstring</tt> <tt class="py-op">+=</tt> <tt class="py-string">"%-10s%-10s%-10s%-15s%-40s\n"</tt><tt class="py-op">%</tt><tt class="py-op">(</tt><tt class="py-string">"Step"</tt><tt class="py-op">,</tt> <tt class="py-string">"Skip"</tt><tt class="py-op">,</tt> <tt class="py-string">"Type"</tt><tt class="py-op">,</tt> <tt class="py-string">"Rp"</tt><tt class="py-op">,</tt> <tt class="py-string">"New Variables"</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">step</tt> <tt class="py-keyword">in</tt> <tt class="py-name">xrange</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_numsteps</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_skipStepsList</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-name">step</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                <tt class="py-name">skipbool</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                <tt class="py-name">skipbool</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-name">newvarnames</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Method srrietveld.refinehistory.RefineHistory.getNewVariablesList()=srrietveld.refinehistory.RefineHistory-class.html#getNewVariablesList"><a title="srrietveld.refinehistory.RefineHistory.getNewVariablesList" class="py-name" href="#" onclick="return doclink('link-1', 'getNewVariablesList', 'link-1');">getNewVariablesList</a></tt><tt class="py-op">(</tt><tt class="py-name">step</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">            <tt class="py-name">rstring</tt> <tt class="py-op">+=</tt> <tt class="py-string">"%-10s%-10s%-10s%-15s%-40s\n"</tt><tt class="py-op">%</tt> \ </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-name">step</tt><tt class="py-op">,</tt> <tt class="py-name">skipbool</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_refType</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rp</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">newvarnames</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">rstring</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory.addInfoOfStep"></a><div id="RefineHistory.addInfoOfStep-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="RefineHistory.addInfoOfStep-toggle" onclick="return toggle('RefineHistory.addInfoOfStep');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#addInfoOfStep">addInfoOfStep</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">step</tt><tt class="py-op">,</tt> <tt class="py-param">reftype</tt><tt class="py-op">,</tt> <tt class="py-param">residtuple</tt><tt class="py-op">,</tt> <tt class="py-param">varnameslist</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.addInfoOfStep-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.addInfoOfStep-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-docstring">        Set the information of for a certain step</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-docstring">        Arguement:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">        - step      :   int, step number</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">        - reftype   :   str, "l" or "r" for Le-Bail or Rietveld</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">        - residtuple:   tuple of floats as rp, chi2, rwp, re</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt class="py-docstring">        - varnameslist: list, names of variables refined</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_refType</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">reftype</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rp</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_chi2</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rwp</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_re</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">residtuple</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_varNames</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">varnameslist</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_numsteps</tt> <tt class="py-op">=</tt> <tt class="py-name">step</tt><tt class="py-op">+</tt><tt class="py-number">1</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory.addSkipStep"></a><div id="RefineHistory.addSkipStep-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="RefineHistory.addSkipStep-toggle" onclick="return toggle('RefineHistory.addSkipStep');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#addSkipStep">addSkipStep</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">step</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.addSkipStep-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.addSkipStep-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">        add a step to be step skipped</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">        Argument:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">        - step  :   int, step number</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">        Return  :   None</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_skipStepsList</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">step</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory.getResidueValues"></a><div id="RefineHistory.getResidueValues-def"><a name="L111"></a><tt class="py-lineno">111</tt> <a class="py-toggle" href="#" id="RefineHistory.getResidueValues-toggle" onclick="return toggle('RefineHistory.getResidueValues');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#getResidueValues">getResidueValues</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">step</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.getResidueValues-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.getResidueValues-expanded"><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-docstring">        Get all the 4 residue values of a certain step</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">        Arguement:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">        - step  :   int</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">        Return  :   4-float-tuple (rp, chi2, rwp, rexp)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-name">rtuple</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rp</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_chi2</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_rp</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_re</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">rtuple</tt> </tt>
+</div><a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="RefineHistory.getNewVariablesList"></a><div id="RefineHistory.getNewVariablesList-def"><a name="L125"></a><tt class="py-lineno">125</tt> <a class="py-toggle" href="#" id="RefineHistory.getNewVariablesList-toggle" onclick="return toggle('RefineHistory.getNewVariablesList');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="srrietveld.refinehistory.RefineHistory-class.html#getNewVariablesList">getNewVariablesList</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">step</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="RefineHistory.getNewVariablesList-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="RefineHistory.getNewVariablesList-expanded"><a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">        <tt class="py-docstring">"""</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">        Get the new added refined variables</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-docstring">        Arguement:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-docstring">        - step  :   int, step number</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">        Return  :   list of str as variables names</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-name">rlist</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">step</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">rlist</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">            <tt class="py-name">currvarlist</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_varNames</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">]</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">            <tt class="py-name">prevvarlist</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_varNames</tt><tt class="py-op">[</tt><tt class="py-name">step</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">varname</tt> <tt class="py-keyword">in</tt> <tt class="py-name">currvarlist</tt><tt class="py-op">:</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">prevvarlist</tt><tt class="py-op">.</tt><tt class="py-name">count</tt><tt class="py-op">(</tt><tt class="py-name">varname</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                    <tt class="py-name">rlist</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">varname</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">        <tt class="py-comment"># END-IF-ELSE</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">rlist</tt> </tt>
+</div></div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:25 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.srrietveld.project.Project</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        <a href="diffpy.srrietveld.project-module.html">Module&nbsp;project</a> ::
+        Class&nbsp;Project
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.srrietveld.project.Project-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Project</h1><p class="nomargin-top"><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                       object --+        
+                                |        
+refinementdata.hdf5.object.Object --+    
+                                    |    
+       refinementdata.project.Project --+
+                                        |
+                                       <strong class="uidshort">Project</strong>
+</pre>
+
+<hr />
+<p>Project class defines a SrRietveld refinement project. It consists of 
+  a number of single refinements. A project can call different Rietveld 
+  engines to run its refinements.</p>
+  <p>A project object contains the list of refinemenets, and list of 
+  jobs.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">path</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mainframe</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Create a SrRietveld project from saved project data file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#addJob" class="summary-sig-name">addJob</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job</span>)</span><br />
+      Add a job to the job list of the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.addJob">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#addToZip" class="summary-sig-name">addToZip</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">zipFilePath</span>)</span><br />
+      Archive the project data file, and other associated files, such as 
+      the histogram files, instrument files, and incident spectrum files 
+      into a zip folder.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.addToZip">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#close" class="summary-sig-name">close</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Close the opened project.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.close">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#deleteJob" class="summary-sig-name">deleteJob</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job</span>)</span><br />
+      Delete job from the job list</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.deleteJob">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#exportEngineFit" class="summary-sig-name">exportEngineFit</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">refinementObj</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Build an engine fit based on given fit and index.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.exportEngineFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#getRefinementByName" class="summary-sig-name">getRefinementByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Get the refinement object by its name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.getRefinementByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#importDataFiles" class="summary-sig-name">importDataFiles</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the data files and instrument files into the pattern objects</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importDataFiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#importEngineFile" class="summary-sig-name">importEngineFile</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fullpath</span>,
+        <span class="summary-sig-arg">refinementObjName</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Import an engine file (EXP or pcr files).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importEngineFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#importEngineFit" class="summary-sig-name">importEngineFit</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">enginefit</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">fullpath</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Import an engine Fit object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importEngineFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#importProject" class="summary-sig-name">importProject</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">projPath</span>)</span><br />
+      Import the refinements from another project file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importProject">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#listParams" class="summary-sig-name">listParams</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">obj</span>,
+        <span class="summary-sig-arg">recursively</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">excluded</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+      List all parameters in an object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.listParams">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#listRefinementNames" class="summary-sig-name">listRefinementNames</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Different from the methdo listRefinemetns, this function will return 
+      a list of names of the refinements</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.listRefinementNames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#plot" class="summary-sig-name">plot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ydatasets</span>,
+        <span class="summary-sig-arg">xdataset</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">xlabel</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Make a plot of selected Dataset objects</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#plotHistory" class="summary-sig-name">plotHistory</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">datasets</span>)</span><br />
+      Make a plot of the historic values of selected parameters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plotHistory">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#plotPatterns" class="summary-sig-name">plotPatterns</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">objects</span>)</span><br />
+      Make a quick plot of patterns.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plotPatterns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#saveToDisk" class="summary-sig-name">saveToDisk</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fullpath</span>)</span><br />
+      Save the project data to local drive.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.saveToDisk">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#updateFit" class="summary-sig-name">updateFit</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fitrt</span>)</span><br />
+      Update the fit data with an fit object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updateFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#updatePaths" class="summary-sig-name">updatePaths</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Update the histogram and instrument file paths saved in the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updatePaths">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#updatePlot" class="summary-sig-name">updatePlot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Update all plots based the data in the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updatePlot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="diffpy.srrietveld.project.Project-class.html#verifyFitName" class="summary-sig-name">verifyFitName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fitName</span>)</span><br />
+      Compare the fitname with existing names of refienments in the 
+      project.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.verifyFitName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.project.Project</code></b>:
+      <code>add</code>,
+      <code>addRefinement</code>,
+      <code>listRefinements</code>,
+      <code>removeRefinement</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>addObject</code>,
+      <code>copy</code>,
+      <code>copyMeta</code>,
+      <code>delete</code>,
+      <code>exportFile</code>,
+      <code>get</code>,
+      <code>getAttr</code>,
+      <code>getByPath</code>,
+      <code>getFlatIndex</code>,
+      <code>getMetaData</code>,
+      <code>getMultiDimIndex</code>,
+      <code>getObject</code>,
+      <code>getPyObj</code>,
+      <code>hasAttr</code>,
+      <code>hasMeta</code>,
+      <code>importFile</code>,
+      <code>isDescendant</code>,
+      <code>list</code>,
+      <code>listAttrs</code>,
+      <code>listNames</code>,
+      <code>listObjects</code>,
+      <code>load</code>,
+      <code>loadLocalData</code>,
+      <code>loadLocalObjects</code>,
+      <code>loadObject</code>,
+      <code>move</code>,
+      <code>range</code>,
+      <code>readStr</code>,
+      <code>removeObject</code>,
+      <code>rename</code>,
+      <code>repeat</code>,
+      <code>replicate</code>,
+      <code>reshape</code>,
+      <code>save</code>,
+      <code>set</code>,
+      <code>setAttr</code>,
+      <code>setByPath</code>,
+      <code>setLabels</code>,
+      <code>setPyObj</code>,
+      <code>unset</code>,
+      <code>unsetAttr</code>,
+      <code>writeStr</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>refinementdata.hdf5.object.Object</code></b>:
+      <code>labels</code>,
+      <code>name</code>,
+      <code>ndim</code>,
+      <code>path</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">path</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mainframe</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a SrRietveld project from saved project data file.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>path</code></strong> (file path string) - the path of the project data file. If it does not exist, an empty
+          project will be created.</li>
+        <li><strong class="pname"><code>mode</code></strong> (one character string, possible value r, w, a) - the mode to open the project.
+          <ul>
+            <li>
+              r -- read,
+            </li>
+            <li>
+              w -- write,
+            </li>
+            <li>
+              a -- append
+            </li>
+          </ul></li>
+        <li><strong class="pname"><code>mainframe</code></strong> (the main frame object) - the pointer to the main window in the GUI object set to be None 
+          in script mode</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addJob"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addJob</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">job</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.addJob">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a job to the job list of the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>job</code></strong> (a Job object) - a refinement job to be added</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addToZip"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addToZip</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">zipFilePath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.addToZip">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Archive the project data file, and other associated files, such as the
+  histogram files, instrument files, and incident spectrum files into a zip
+  folder.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>zipFilePath</code></strong> (zip file path string) - the full path to save the zip file</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="close"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">close</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.close">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Close the opened project.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+    <dt>Overrides:
+        refinementdata.project.Project.close
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="deleteJob"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">deleteJob</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">job</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.deleteJob">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete job from the job list</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>job</code></strong> (a job object) - the job to be deleted</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="exportEngineFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">exportEngineFit</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">refinementObj</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.exportEngineFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Build an engine fit based on given fit and index.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>refinementObj</code></strong> (a diffpy.refinementdata.Refinement object or its derivatives) - a refinement usually contains a series of single refinements The 
+          information will be read from this object to construct a engine 
+          fit, which contains information for a single step refinement</li>
+        <li><strong class="pname"><code>index</code></strong> (tuple or int) - the index of the single refinement in the refinementObj a tuple 
+          represents the index in a multidimensinal data if the 
+          refinementObj is one dimensional, index can be an integer</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>an engine fit object</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRefinementByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRefinementByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.getRefinementByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the refinement object by its name</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - the refinement name to get</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the refinement object with the name, None if there is no such 
+          refinement object. If there are duplicate names, the first 
+          refinement object with this name will be returned, and the 
+          program with emit a warning</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="importDataFiles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importDataFiles</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importDataFiles">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the data files and instrument files into the pattern objects</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="importEngineFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importEngineFile</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fullpath</span>,
+        <span class="sig-arg">refinementObjName</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importEngineFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Import an engine file (EXP or pcr files). A refinement will be created
+  based on the data in the imported engine file.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fullpath</code></strong> (file path string) - the full file path of the engine file to be imported</li>
+        <li><strong class="pname"><code>refinementObjName</code></strong> (string) - the proposed name of the refinement object to be created. If the 
+          refinementObjName is None, the engine file name will be used</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="importEngineFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importEngineFit</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">enginefit</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">fullpath</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importEngineFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Import an engine Fit object. It is provided for backward compatiblity,
+  namely when the fit is created using xml interface.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>enginefit</code></strong> (an engine Fit object) - the engine fit, which contains all the information for one 
+          refinement for that engine (GSAS or FullProf)</li>
+        <li><strong class="pname"><code>name</code></strong> (string) - the name to be assigned to the new Fit object</li>
+        <li><strong class="pname"><code>fullpath</code></strong> (file path string) - the fullpath is used to locate the supplement files (data, 
+          instrument, engine files)</li>
+        <li><strong class="pname"><code>index</code></strong> () - the index to a Fit in a Fit array ( not applicable if shape is 
+          given )</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the new Fit object</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="importProject"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importProject</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">projPath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.importProject">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Import the refinements from another project file.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>projPath</code></strong> (file path string) - the file path of the project to be imported.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listParams"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listParams</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">obj</span>,
+        <span class="sig-arg">recursively</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">excluded</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.listParams">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>List all parameters in an object.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>obj</code></strong> (a data object) - the object whose parameters to be listed</li>
+        <li><strong class="pname"><code>recursively</code></strong> (boolean) - if True, the parameters in the sub-objects will be included. 
+          False otherwise</li>
+        <li><strong class="pname"><code>excluded</code></strong> (a list of objects, whose child parameters should be excluded in 
+          the result)</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of parameters (Dataset object).</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="listRefinementNames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">listRefinementNames</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.listRefinementNames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Different from the methdo listRefinemetns, this function will return a
+  list of names of the refinements</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>the names of the refinements in this project</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ydatasets</span>,
+        <span class="sig-arg">xdataset</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">xlabel</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make a plot of selected Dataset objects</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ydatasets</code></strong> (a list of Dataset objects) - contains the list of y values in the plot</li>
+        <li><strong class="pname"><code>xdataset</code></strong> (a Dataset object) - the x values in the plot. If xdataset is None a list of 
+          consecutive integers will be used</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the plot figure object</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotHistory"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotHistory</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">datasets</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plotHistory">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make a plot of the historic values of selected parameters.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>datasets</code></strong> (a list of Dataset objects) - the data to be plotted</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotPatterns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotPatterns</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">objects</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.plotPatterns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Make a quick plot of patterns.</p>
+  <p>objects -- a list of selected objects</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="saveToDisk"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">saveToDisk</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fullpath</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.saveToDisk">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Save the project data to local drive.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fullpath</code></strong> (file path string) - the file path to save the project data</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="updateFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">updateFit</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fitrt</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updateFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the fit data with an fit object.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fitrt</code></strong> - the run-time fit instance</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="updatePaths"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">updatePaths</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updatePaths">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update the histogram and instrument file paths saved in the 
+  project</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="updatePlot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">updatePlot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.updatePlot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Update all plots based the data in the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (tuple or int) - the index of the curve in the plot</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>no return value</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="verifyFitName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">verifyFitName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fitName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="diffpy.srrietveld.project-pysrc.html#Project.verifyFitName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compare the fitname with existing names of refienments in the project.
+  A valid name will be returned.</p>
+  <ul>
+    <li>
+      All the <i>dots (.)</i> will be replaced with <i>underscore (_)</i>
+    </li>
+    <li>
+      The same refinement names will be surfixed with numbers with brakets 
+      such as <i>Refinement</i>, <i>Refinement (1)</i>, <i>Refinement 
+      (2)</i>
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fitName</code></strong> (string) - refinement name to be verified</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>If fitName is valid, return value will be the same as fitName; if
+          fitName conains invalid characters or has duplications, a valid 
+          refinement name will be returned</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.srrietveld</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Aug 28 23:35:57 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

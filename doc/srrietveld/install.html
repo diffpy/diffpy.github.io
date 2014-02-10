@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; SrRietveld 1.0-r6875 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0-r6875',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SrRietveld 1.0-r6875 documentation" href="index.html" />
+    <link rel="next" title="Tutorial and Example" href="tutorial.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="Tutorial and Example"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SrRietveld 1.0-r6875 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#install-gsas-and-fullprof">Install GSAS and FullProf</a></li>
+<li><a class="reference internal" href="#installation-and-setup-on-windows">Installation and Setup on Windows</a></li>
+<li><a class="reference internal" href="#installation-and-setup-on-linux-mac-and-unix">Installation and Setup on Linux, Mac, and Unix</a><ul>
+<li><a class="reference internal" href="#install-srrietveld">Install SrRietveld</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="next chapter">Tutorial and Example</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">SrRietveld is written in Python and is a cross platform program. Users can install and use SrRietveld on Windows, Linux/Unix, and Mac, on both 32-bit and 64-bit systems.</p>
+</div>
+<div class="section" id="install-gsas-and-fullprof">
+<h2>Install GSAS and FullProf<a class="headerlink" href="#install-gsas-and-fullprof" title="Permalink to this headline">¶</a></h2>
+<p>GSAS and FullProf have to be installed since SrRietveld uses them as backend refinement engines. SrRietveld runs with either engine; however for the greatest functionality we recommend you install both programs.</p>
+<p>If you already have them installed you can use your existing installation.  Otherwise you they can be separately downloaded and installed by going to the respective download websites. Follow the instructions on the following websites for a standard installation of FullProf and GSAS:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>FullProf - <a class="reference external" href="http://www.ill.eu/sites/fullprof/">http://www.ill.eu/sites/fullprof/</a></li>
+<li>GSAS - <a class="reference external" href="https://subversion.xray.aps.anl.gov/trac/EXPGUI/">https://subversion.xray.aps.anl.gov/trac/EXPGUI/</a></li>
+</ol>
+</div></blockquote>
+<p>Please make sure GSAS and FullProf can run correctly on your
+computer. For example, under Linux, <em>tcsh</em> is needed to run the <em>gsas</em>
+command. On Ubuntu/Debian system, the tcsh shell can be installed with
+the following command:</p>
+<div class="highlight-python"><pre>sudo apt-get install tcsh</pre>
+</div>
+<p>GSAS requires the <em>libg2c.so.0</em> shared library, which may not be
+included with the recent system version.  This library can be
+obtained from a previous Ubuntu release at
+<a class="reference external" href="http://packages.ubuntu.com/hardy/libg2c0/">http://packages.ubuntu.com/hardy/libg2c0/</a>.</p>
+<p>More details about the GSAS installation can be found
+<a class="reference external" href="http://www.ncnr.nist.gov/programs/crystallography/software/expgui/expgui_Unix_readme.html">here</a>.</p>
+</div>
+<div class="section" id="installation-and-setup-on-windows">
+<span id="install-on-windows"></span><h2>Installation and Setup on Windows<a class="headerlink" href="#installation-and-setup-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>Windows users can install SrRietveld with a binary installer
+<tt class="file docutils literal"><span class="pre">SrRietveld-VERSION.exe</span></tt>.  Double click the file and follow
+the steps in the installation wizard.</p>
+<p>The SrRietveld program short cut icon will be placed on the desktop after the installation is finished. Double click the desktop icon the SrRietveld program should start. SrRietveld may prompt a setup dialog to initialize the setups, such as the GSAS / FullProf installation paths.</p>
+<p>As mentioned before, to start a refinement with SrRietveld, users have to specify the paths of refinement engines (GSAS or FullProf) in SrRietveld. SrRietveld will try to find the GSAS and FullProf executables in the computer, but user can always go to the menu <em>Edit-&gt;Settings</em> dialog to specify another location.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">During the installation, the Microsoft Virtual C++ Redistributable
+package will also be installed to provide the necessary dynamic-link
+libraries.</p>
+</div>
+</div>
+<div class="section" id="installation-and-setup-on-linux-mac-and-unix">
+<span id="install-on-linux"></span><h2>Installation and Setup on Linux, Mac, and Unix<a class="headerlink" href="#installation-and-setup-on-linux-mac-and-unix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-srrietveld">
+<h3>Install SrRietveld<a class="headerlink" href="#install-srrietveld" title="Permalink to this headline">¶</a></h3>
+<p>SrRietveld is distributed in a source archive <tt class="file docutils literal"><span class="pre">SrRietveld-VERSION.tar.gz</span></tt>.</p>
+<p>SrRietveld requires a number of dependencies (other programs) to run.
+Many of these are bundled with common Linux distributions such as
+Ubuntu. However, you will have to verify that you have the dependencies
+installed before SrRietveld can run.  The dependencies are described in
+<a class="reference internal" href="#dependencies"><em>dependencies</em></a>. SrRietveld can be run with GSAS
+and/or FullProf as the refinement engine.  Either one or the other must
+be installed; however it is recommended to instal both.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please make sure all the <a class="reference internal" href="#dependencies"><em>dependencies</em></a> are
+installed before proceeding further.</p>
+</div>
+<p>SrRietveld can be installed with the following steps:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Unpack the source archive file</p>
+<div class="highlight-python"><pre>tar -zxf SrRietveld-VERSION.tar.gz</pre>
+</div>
+</li>
+<li><p class="first">Change to the extracted distribution directory</p>
+<div class="highlight-python"><pre>cd SrRietveld-VERSION</pre>
+</div>
+</li>
+<li><p class="first">Run the included installation script</p>
+<div class="highlight-python"><pre>sudo ./install_srrietveld.py</pre>
+</div>
+<p>This checks for required Python libraries and if present,
+it installs SrRietveld to default system location.  This requires
+root privileges as granted by the sudo command.  If sudo is not
+available, you can install to the user-writable directories by
+passing <em class="xref std std-option">--prefix</em> or <em class="xref std std-option">--install-dir</em> options to
+the installation script.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>With the <em class="xref std std-option">--prefix=PREFIXDIR</em> option one needs to
+create directories for programs and Python files under the
+PREFIXDIR and add them to the PATH and PYTHONPATH environment
+variables.  These directories can be created as:</p>
+<div class="highlight-python"><pre>mkdir -p PREFIXDIR/bin
+mkdir -p PREFIXDIR/lib/pythonX.Y/site-packages</pre>
+</div>
+<p>where X.Y must be replaced with the actual Python version, for
+example 2.6 for Python 2.6.</p>
+<p>The directories need to be added to the appropriate environment
+variables by adding the following lines to the .bashrc
+(or .profile, .zshenv as appropriate for your system shell):</p>
+<div class="highlight-python"><pre>export PATH="PREFIXDIR/bin:${PATH}"
+export PYTHONPATH="PREFIXDIR/lib/pythonX.Y/site-packages:${PYTHONPATH}"</pre>
+</div>
+<p>After all changes to the shell setup file are made, open a new
+terminal, if you work in the same termial, run the command:</p>
+<div class="highlight-python"><pre>source ~/.bashrc</pre>
+</div>
+<p class="last">which will take the environment changes into effect.</p>
+</div>
+</li>
+<li><p class="first">Test you installation by running</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">srrietveld</span>
+</pre></div>
+</div>
+<p>If it is correctly installed then the SrRietveld GUI window should
+open. If the program fails to run, a detailed error message will
+appear which may help solve the problem. You may also look for
+information from other users at, or post your error message to,
+our support group at
+<a class="reference external" href="http://groups.google.com/group/srrietveld-dev">srrietveld-dev</a>
+to ask for help.</p>
+<p>Please note that GSAS and FullProf have to be installed before
+SrRietveld can run any refinement. Details of how to use
+SrRietveld can be found in the <a class="reference internal" href="tutorial.html"><em>Tutorial</em></a>
+section.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="dependencies">
+<span id="id2"></span><h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<p>SrRietveld require some dependencies when running on Linux/Mac. Most of these dependencies come in many standard Linux installations such as Ubuntu. Please check if they are pre-installed in your computer.</p>
+<p>Otherwise, they can be easily installed by going to the listed websites, downloading and following the installation instructions. If your Linux installation is Ubuntu, see the note below to rapidly download and install all the dependencies.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Python 2.6 or later</dt>
+<dd>Python is installed by default on most Linux systems and can be
+also fetched from <a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a>.</dd>
+<dt>Python development files</dt>
+<dd>Headers and other files for building Python extensions with C.
+This is usually available as <strong>python-dev</strong> package in the system
+package repository.</dd>
+<dt>setuptools</dt>
+<dd>Utility for installing other Python packages.
+Available as <strong>python-setuptools</strong> or <strong>python-distribute</strong> system
+package.  Also available at
+<a class="reference external" href="http://pypi.python.org/pypi/distribute/">http://pypi.python.org/pypi/distribute/</a>.</dd>
+<dt>NumPy 1.1 or later</dt>
+<dd>functions for scientific computing in Python.
+Available as <strong>python-numpy</strong> system package or from <a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>.</dd>
+<dt>Matplotlib 0.90 or later</dt>
+<dd>Python plotting library.
+Available as <strong>python-matplotlib</strong> system package or from
+<a class="reference external" href="http://matplotlib.org/">http://matplotlib.org/</a>.</dd>
+<dt>wxPython 2.8</dt>
+<dd>graphical user interface toolkit in Python.
+Available as <strong>python-wxtools</strong> system package or from <a class="reference external" href="http://wxpython.org/">http://wxpython.org/</a>.</dd>
+<dt>tables 1.6.8 or later</dt>
+<dd>library for manipulating hierarchical data in HDF5 format.
+Available as <strong>python-tables</strong> system package or from
+<a class="reference external" href="http://www.pytables.org/">http://www.pytables.org/</a>.</dd>
+</dl>
+</div></blockquote>
+<p>On Ubuntu Linux the required dependencies can be all installed with a single
+command</p>
+<div class="highlight-python"><pre>sudo apt-get install \
+   python-dev python-distribute python-numpy \
+   python-matplotlib python-wxtools python-tables</pre>
+</div>
+<p>On a Fedora Linux the dependencies could be installed with</p>
+<div class="highlight-python"><pre>sudo yum install \
+   python-devel python-setuptools numpy \
+   python-matplotlib-wx wxPython python-tables</pre>
+</div>
+<p>Other Linux distributions may use different software management tools,
+but the package names should be similar to those above.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="Tutorial and Example"
+             >next</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >previous</a> |</li>
+        <li><a href="index.html">SrRietveld 1.0-r6875 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Peng Tian, Wenduo Zhou, Jiwu Liu, Yingrui Shang, Chris Farrow, Pavol Juhas, Emil Bozin, and Simon Billinge.
+      Last updated on Jan 11, 2013.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

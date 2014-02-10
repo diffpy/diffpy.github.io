@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.xmlinterface</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;xmlinterface
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.xmlinterface-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module xmlinterface</h1><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html">source&nbsp;code</a></span><br /><br />
+<pre class="literalblock">
+Interface to interpret XML input
+
+ Created On: 2008.07.03  Version 2.0 [2009.01.28]
+
+ External XML Utility Methods:
+
+-  importXML(filename)
+-  getXMLNodeAttributes(xmlnode, attrdict)
+-  getAttributeValue(elementnode, key)
+-  xmlToString(xmlobj, level, childno)
+
+ Class   RietXMLParser
+ * Client Methods
+ - __init__()
+ - parseXMLInstrument()
+ - parseXMLMeasurement()
+ - parseXMLModel()
+ - getInstrument()
+ - getModel()
+ - getMeasurement()
+
+ Class InstrumentParser
+
+ Class MeasurmentParser
+
+ Class StructureParser
+
+ Class RefineStrategyXMLParser
+
+  - __init__(self, refinestrategyxmlfilename)
+  - 
+
+ External Method List:
+ * getXMLNodeAttributes(xmlnode, attrdict):  attribute -&gt; dictionary
+
+</pre><br /><br />
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.xmlinterface.InstrumentXMLParser-class.html" class="summary-name">InstrumentXMLParser</a><br />
+      XML Parser to parse an instrument XML file...
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.xmlinterface.StructureXMLParser-class.html" class="summary-name">StructureXMLParser</a><br />
+      XML parser for structure XML file defined in SrRietveld...
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.xmlinterface.MeasurementXMLParser-class.html" class="summary-name">MeasurementXMLParser</a><br />
+      Parsing measurement XML file
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.xmlinterface.RefineStrategyXMLParser-class.html" class="summary-name">RefineStrategyXMLParser</a><br />
+      Parse a RefineStrategy provided by users.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#parseRange" class="summary-sig-name">parseRange</a>(<span class="summary-sig-arg">rangenode</span>)</span><br />
+      Status: being coded</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseRange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#parseExcludedRegion" class="summary-sig-name">parseExcludedRegion</a>(<span class="summary-sig-arg">excludedregionnode</span>)</span><br />
+      Status: being coded</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseExcludedRegion">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#parseBackground" class="summary-sig-name">parseBackground</a>(<span class="summary-sig-arg">backgroundnode</span>)</span><br />
+      Interpret a Background Node</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseBackground">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#xmlFilter" class="summary-sig-name">xmlFilter</a>(<span class="summary-sig-arg">xmlobj</span>)</span><br />
+      Filter an xml.dom.mini.dom object...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlFilter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#importXML" class="summary-sig-name">importXML</a>(<span class="summary-sig-arg">filename</span>)</span><br />
+      Parse an XML file for quick-Rietveld-configuration...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#importXML">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#xmlToString" class="summary-sig-name">xmlToString</a>(<span class="summary-sig-arg">xmlobj</span>,
+        <span class="summary-sig-arg">level</span>,
+        <span class="summary-sig-arg">childno</span>)</span><br />
+      Export an XML object to string</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlToString">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#xmlToDict" class="summary-sig-name">xmlToDict</a>(<span class="summary-sig-arg">xmlnode</span>)</span><br />
+      Convert an XML object to a dictionary...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlToDict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#getAttributeValue" class="summary-sig-name">getAttributeValue</a>(<span class="summary-sig-arg">elementnode</span>,
+        <span class="summary-sig-arg">key</span>)</span><br />
+      Get the value of an attribute in an element node...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getAttributeValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#getXMLNodeAttributes" class="summary-sig-name">getXMLNodeAttributes</a>(<span class="summary-sig-arg">xmlnode</span>,
+        <span class="summary-sig-arg">attrdict</span>)</span><br />
+      Retrieve the attributes (float) of an XML node and store in a dictionary...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getXMLNodeAttributes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#getInstrumentInformation" class="summary-sig-name">getInstrumentInformation</a>(<span class="summary-sig-arg">xmlfilename</span>)</span><br />
+      Get the instrument name from an XML instrument file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getInstrumentInformation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#getStructureInformation" class="summary-sig-name">getStructureInformation</a>(<span class="summary-sig-arg">xmlfilename</span>)</span><br />
+      Get the instrument name from an XML instrument file...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getStructureInformation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="srrietveld.xmlinterface-module.html#importExcludedRegionFile" class="summary-sig-name">importExcludedRegionFile</a>(<span class="summary-sig-arg">xmlfilename</span>)</span><br />
+      Reading the standard Excluded-Region input file,
+and export the excludedregion-list
+
+Argument:
+- xmlfilename   :   str
+
+Return          :   dict.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#importExcludedRegionFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.xmlinterface-module.html#__id__" class="summary-name">__id__</a> = <code title="'$Id: xmlinterface.py 2921 2009-03-20 15:43:13Z wdzhou $'"><code class="variable-quote">'</code><code class="variable-string">$Id: xmlinterface.py 2921 2009-03-20 15:43:13Z wdzho</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="parseRange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseRange</span>(<span class="sig-arg">rangenode</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseRange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Status: being coded</p>
+  <p>Interpret a Range Node to For Min, Max, Step/Resolution</p>
+  Return  :   3-float-tuple:  thmin, thmax, resolution
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="parseExcludedRegion"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseExcludedRegion</span>(<span class="sig-arg">excludedregionnode</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseExcludedRegion">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Status: being coded</p>
+  <p>Interpret an Excluded Region XML node</p>
+  Return  :   3-tuple (float, float, int):  start, end, bankno
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="parseBackground"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseBackground</span>(<span class="sig-arg">backgroundnode</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#parseBackground">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Interpret a Background Node</p>
+  <p>Used by both Measurement XML and Instrument XML</p>
+  Return  :   dictionary: parameters of background, keys including
+  <ul>
+    <li>
+      Type      str
+    </li>
+    <li>
+      Bkpos     flaot
+    </li>
+    <li>
+      Format    str
+    </li>
+    <li>
+      Select    list
+    </li>
+  </ul>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="xmlFilter"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">xmlFilter</span>(<span class="sig-arg">xmlobj</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlFilter">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Filter an xml.dom.mini.dom object
+
+Argument    
+  xmlobj    :   xml.dom.minidom.Document object (Element)
+
+Return      :   xml
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="importXML"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importXML</span>(<span class="sig-arg">filename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#importXML">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Parse an XML file for quick-Rietveld-configuration
+
+Argument:
+  filename  :   string, XML file name
+
+Return      :   an xml.dom.minidom.Document object
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="xmlToString"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">xmlToString</span>(<span class="sig-arg">xmlobj</span>,
+        <span class="sig-arg">level</span>,
+        <span class="sig-arg">childno</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlToString">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Export an XML object to string</p>
+  <p>Argument</p>
+  return  :   string
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="xmlToDict"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">xmlToDict</span>(<span class="sig-arg">xmlnode</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#xmlToDict">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Convert an XML object to a dictionary
+
+Argument:
+  xmlboj    :   xml.dom.minidom.Document object
+
+Return      :   dict
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAttributeValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAttributeValue</span>(<span class="sig-arg">elementnode</span>,
+        <span class="sig-arg">key</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getAttributeValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Get the value of an attribute in an element node
+
+Argument:
+  elementnode   :   an Dom element node instance
+  key           :   string, key/name of an attribute
+
+Return          :   string, value of instrument
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getXMLNodeAttributes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getXMLNodeAttributes</span>(<span class="sig-arg">xmlnode</span>,
+        <span class="sig-arg">attrdict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getXMLNodeAttributes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Retrieve the attributes (float) of an XML node and store in a dictionary
+
+Arguments:
+- xmlnode   :   XML node
+- attribdict:   dictionary 
+
+Return      :   None
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getInstrumentInformation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getInstrumentInformation</span>(<span class="sig-arg">xmlfilename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getInstrumentInformation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Get the instrument name from an XML instrument file
+
+Argument:
+  xmlfilename   :   str
+
+Return          :   dictionary
+                    - str, type of instrument
+                    - str, name of instrument
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getStructureInformation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getStructureInformation</span>(<span class="sig-arg">xmlfilename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#getStructureInformation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Get the instrument name from an XML instrument file
+
+Argument:
+- xmlfilename   :   str
+
+Return          :   dictionary
+                    - str, type of instrument
+                    - str, name of instrument
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="importExcludedRegionFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">importExcludedRegionFile</span>(<span class="sig-arg">xmlfilename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="srrietveld.xmlinterface-pysrc.html#importExcludedRegionFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <pre class="literalblock">
+Reading the standard Excluded-Region input file,
+and export the excludedregion-list
+
+Argument:
+- xmlfilename   :   str
+
+Return          :   dict. key = Bank ID (default = 0).  value = list
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__id__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__id__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">$Id: xmlinterface.py 2921 2009-03-20 15:43:13Z wdzhou $</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:22 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

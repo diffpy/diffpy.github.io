@@ -45,7 +45,7 @@ Products
 **DiffPy-CMI**
 
 DiffPy-CMI is a highly flexible library of Python modules for carrying out customizable structure 
-analysis tasks from diffraction data. `Installation instructions <downloads/diffpycmi.html>`__.
+analysis tasks from diffraction data. `Documentation <doc/diffpycmi.html>`__. `Installation instructions <downloads/diffpycmi.html>`__.
 
 **PDFgetX3**
 
@@ -106,8 +106,8 @@ are those of the author(s) and do not necessarily reflect the views of the respe
 .. toctree::
    :hidden:
 
-   diffpycmi 
    community
    documentation
    download
    NSFnugget
+   doc/diffpycmi
