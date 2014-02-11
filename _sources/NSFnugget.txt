@@ -18,7 +18,7 @@ neutron diffraction.
 
 
 
-.. figure:: _static/images/PDFgui_screenshot_707.png
+.. figure:: images/PDFgui_screenshot_707.png
    :align: center
    :scale: 50 % 
 
