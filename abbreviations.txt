@@ -8,7 +8,7 @@
    *J.  Appl. Crystallogr.* **46**, 560-566 (2013)
    |downloadJuhasJac13|
 
-.. |downloadJuhasJac13| image:: pdficon_small.png
+.. |downloadJuhasJac13| image:: images/pdficon_small.png
    :target: doc/pdfgetx3/Juhas-jac-2013.pdf
 
 
@@ -20,7 +20,7 @@
    *J. Phys.: Condens.  Mat.* **19**, 335219 (2007)
    |downloadFarrowJpcm07|
  
-.. |downloadFarrowJpcm07| image:: pdficon_small.png
+.. |downloadFarrowJpcm07| image:: images/pdficon_small.png
    :target: doc/pdfgui/Farrow-jpcm-2007.pdf
 
 
@@ -31,5 +31,5 @@
    *J. Appl. Crystallogr.* **32**, 572 (1999)
    |downloadProffenJac99|
 
-.. |downloadProffenJac99| image:: pdficon_small.png
+.. |downloadProffenJac99| image:: images/pdficon_small.png
    :target: doc/pdffit/Proffen-jac-1999.pdf
