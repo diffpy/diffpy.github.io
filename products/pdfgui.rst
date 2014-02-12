@@ -1,5 +1,9 @@
+######
 PDFgui
-======
+######
+
+Overview
+========
 
 For users who do not have the expertise or necessity for command line analysis, PDFgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is 
@@ -7,10 +11,14 @@ capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data 
 and comes with built in graphical and structure visualization capabilities.
 
+FIXME: add a pic of user interface
 
 
-Platforms
-=========
+Installation
+============
+
+Follow one of the links below for installation instructions specific to
+your system:
 
 :ref:`unix` -
 :ref:`windows` -
@@ -108,14 +116,27 @@ Name                     Date               Size         Description
 `diffpy-1.0-r3067.tgz`_	 2009-04-10         6.4 M         Unix tarball
 ======================== ================== ============ ===================================
 
-|
-
 .. _diffpy-1.0-r3067.exe:
    https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe
 .. _diffpy-1.0-r3067.tgz:
    https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz
 
-
-Please, join the `community <community.html>`_ forum for tips, tricks, and feedback.
 Older releases are available for download
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
+
+Contribution
+============
+
+Please, join the `community <community.html>`_ forum for tips, tricks, and feedback.
+
+
+Documentation
+=============
+
+The user manual is available `online in html format <../doc/pdfgui>`__
+and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
+
+Tutorial files are available for download as a 
+`zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
+
+FIXME: do we want link to API?
