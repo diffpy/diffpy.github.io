@@ -1,3 +1,0 @@
-<a href="{{pathto('products')}}">Products</a> ·
-<a href="{{pathto('community')}}">Community</a> ·
-<a href="{{pathto('publications')}}">Publications</a>
