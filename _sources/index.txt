@@ -38,7 +38,9 @@ News
 
 - 2013-02-05 - initial release of the PDFgetX3 program.
 
-
+- 2007-08-27 - :doc:`NSF nugget<NSFnugget>` describing PDFgui
+  (**FIXME LATER** ... just a demo we can have top-level document without
+  cluttering the menus)
 
 
 Acknowledgements
@@ -70,20 +72,24 @@ University. Any opinions, findings, and conclusions or recommendations expressed
 are those of the author(s) and do not necessarily reflect the views of the respective funding bodies.
 
 
-Products
-========
+Some TOC entries can be displayed
+=================================
+
 
 .. toctree::
    :maxdepth: 1
 
-   products/diffpycmi
-   products/pdfgui
-   products/pdfgetx3
-   products/pythonpackages 
+   community
+   publications
+
+and those below should be hidden
+================================
 
 .. toctree::
    :hidden:
 
-   community
-   publications
-   products
+   NSFnugget
+   products/diffpycmi
+   products/pdfgui
+   products/pdfgetx3
+   products/pythonpackages 
