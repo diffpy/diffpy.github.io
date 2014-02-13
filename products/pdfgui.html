@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PDFgui &mdash; DiffPy  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="DiffPy  documentation" href="../index.html" />
+    <link rel="up" title="Products" href="../products.html" />
+    <link rel="next" title="PDFgetX3" href="pdfgetx3.html" />
+    <link rel="prev" title="DiffPy-CMI" href="diffpycmi.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/diffpy_logo_header.png">
+          Diffpy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="../community.html">Community</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="diffpycmi.html">DiffPy-CMI</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PDFgui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdfgetx3.html">PDFgetX3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pythonpackages.html">Python Packages</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="pdfgui">
+<h1>PDFgui<a class="headerlink" href="#pdfgui" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>For users who do not have the expertise or necessity for command line analysis, PDFgui is
+a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
+capable of full-profile fitting of the atomic pair distribution function (PDF)
+derived from x-ray or neutron diffraction data
+and comes with built in graphical and structure visualization capabilities.</p>
+<p>FIXME: add a pic of user interface</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Follow one of the links below for installation instructions specific to
+your system:</p>
+<p><a class="reference internal" href="#unix"><em>Unix, Linux, Mac</em></a> -
+<a class="reference internal" href="#windows"><em>Windows</em></a> -
+<a class="reference internal" href="#updates"><em>PDFgui updates</em></a> -
+<a class="reference internal" href="#releases"><em>PDFgui Releases</em></a></p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>By downloading and using this software you are agreeing to the following conditions.</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre>This software was initially developed at Michigan State University and
+Columbia University as part of the National Science Foundation funded 
+DANSE (Distributed data Analysis of Neutron Scattering Experiments) 
+project. Continued development is taking place at Brookhaven National 
+Laboratory under the complex modeling initiative. The software is 
+available subject to the conditions and terms laid out below.
+
+Copyright 2006-2007, Board of Trustees of Michigan State University,
+Copyright 2008-2012, Board of Trustees of Columbia University in the
+city of New York.  
+Copyright 2013, Brookhaven National Laboratory (Copyright holder 
+indicated in each source file).
+
+For more information please visit the project web-page:
+    http://www.diffpy.org/
+or email Prof. Simon Billinge at sb2896@columbia.edu
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+  * Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDER &quot;AS IS&quot;.  COPYRIGHT HOLDER
+EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, EITHER
+EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS, ADEQUACY OR SUITABILITY
+FOR A PARTICULAR PURPOSE, AND ANY WARRANTIES OF FREEDOM FROM
+INFRINGEMENT OF ANY DOMESTIC OR FOREIGN PATENT, COPYRIGHTS, TRADE
+SECRETS OR OTHER PROPRIETARY RIGHTS OF ANY PARTY.  IN NO EVENT SHALL
+COPYRIGHT HOLDER BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE OR RELATING TO THIS AGREEMENT, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="unix-linux-mac">
+<span id="unix"></span><h2>Unix, Linux, Mac<a class="headerlink" href="#unix-linux-mac" title="Permalink to this headline">¶</a></h2>
+<p>The installation of PDFgui requires several external libraries and applications.
+Consult the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">README.txt</a>
+file included with the distribution and make sure these
+requirements are all in place.</p>
+<p>The PDFgui components are registered at the Python Package Index (PyPI), therefore
+the most straightforward way to install is to execute:</p>
+<div class="highlight-python"><div class="highlight"><pre>easy_install diffpy.pdfgui
+</pre></div>
+</div>
+<p>The easy_install command downloads, unzips and installs pdfgui together with
+its requirements,
+diffpy.pdffit2 and diffpy.Structure.
+The program can be then started as <tt class="docutils literal"><span class="pre">pdfgui</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">easy_install</span></tt> command is a part of the Python setuptools library. If it is not available,
+install the &#8220;python-setuptools&#8221; package with the system package manager or use the &#8221;.tgz&#8221; archive
+below, which comes with <tt class="docutils literal"><span class="pre">easy_install</span></tt> included.</p>
+<p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong>
+from the <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">download archive</a>,
+unpack and run the enclosed <tt class="docutils literal"><span class="pre">easy_install</span></tt> script:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -xzf diffpy-VERSION.tgz
+cd diffpy-VERSION
+./easy_install diffpy.pdfgui
+</pre></div>
+</div>
+<p>For more detailed installation instructions see the <a class="reference external" href="../doc/pdfgui/pdfgui.html">PDFgui manual</a>.</p>
+</div>
+<div class="section" id="windows">
+<span id="id1"></span><h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>PDFgui is provided as a self-installing archive for Windows systems. Download the latest
+<strong>diffpy-VERSION.exe</strong> file below, run it and follow the prompts.</p>
+<p>The self-installing archive includes a complete installation of Python that is used to
+run PDFgui. Nevertheless, PDFgui (and other DiffPy components) can be also
+installed under existing Python tree. This requires Python 2.5 with several external
+Python packages, namely setuptools, numpy, wxPython and matplotlib. To add PDFgui to an
+existing Python tree, start Windows command prompt and run the <tt class="docutils literal"><span class="pre">easy_install</span></tt> script from
+the <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt> directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd c:\Python25\Scripts
+..\python.exe easy_install-script.py diffpy.pdfgui
+</pre></div>
+</div>
+<p>This installs library files under <tt class="docutils literal"><span class="pre">Python25/Lib/site-packages</span></tt> and executable scripts for
+<tt class="docutils literal"><span class="pre">pdfgui</span></tt> and <tt class="docutils literal"><span class="pre">pdffit2</span></tt> under <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt>.</p>
+</div>
+<div class="section" id="pdfgui-updates">
+<span id="updates"></span><h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
+<p>Both Unix and Windows platforms can use the <tt class="docutils literal"><span class="pre">easy_install</span></tt> command to obtain the latest
+updates to the code. To upgrade PDFgui, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>easy_install -U diffpy.pdfgui
+</pre></div>
+</div>
+<p>This installs only the changed DiffPy components as they become available at the DiffPy
+<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/packages/">package repository</a>.
+These packages are smaller and
+will be updated more frequently than the complete installation archives.</p>
+</div>
+<div class="section" id="pdfgui-releases">
+<span id="releases"></span><h2>PDFgui Releases<a class="headerlink" href="#pdfgui-releases" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="20%" />
+<col width="13%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Date</th>
+<th class="head">Size</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe">diffpy-1.0-r3067.exe</a></td>
+<td>2009-04-10</td>
+<td>21.5 M</td>
+<td>Windows self extracting installer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz">diffpy-1.0-r3067.tgz</a></td>
+<td>2009-04-10</td>
+<td>6.4 M</td>
+<td>Unix tarball</td>
+</tr>
+</tbody>
+</table>
+<p>Older releases are available for download
+<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">here</a>.</p>
+</div>
+<div class="section" id="contribution">
+<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this headline">¶</a></h2>
+<p>Please, join the <a class="reference external" href="community.html">community</a> forum for tips, tricks, and feedback.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The user manual is available <a class="reference external" href="../doc/pdfgui">online in html format</a>
+and is also downloadable in <a class="reference external" href="../doc/pdfgui/pdfgui.pdf">PDF format</a>.</p>
+<p>Tutorial files are available for download as a
+<a class="reference external" href="../doc/pdfgui/pdfgui-tutorial.zip">zip archive</a>.</p>
+<p>FIXME: do we want link to API?</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

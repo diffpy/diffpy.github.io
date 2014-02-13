@@ -1,22 +1,21 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to the DiffPy and Diffpy-CMI projects. &mdash; DiffPy 1.0 documentation</title>
+    <title>Welcome to the DiffPy and Diffpy-CMI projects. &mdash; DiffPy  documentation</title>
     
-    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/diffpy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0',
+        VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,49 +24,98 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="DiffPy 1.0 documentation" href="#" />
-    <link rel="next" title="Community" href="community.html" /> 
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="DiffPy  documentation" href="#" />
+    <link rel="next" title="DiffPy-CMI" href="products/diffpycmi.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
   </head>
   <body>
-    <div class="header-wrapper">
-      <div class="header">
-          <div class="logo"><a href="#">
-            <img class="logo" src="_static/diffpy_logo_header.png" alt="Logo"/>
-          </a></div>
-       
-        <div class="rel">
-          <a href="#">Home</a> ·
-<a href="community.html">Community</a> ·
-<a href="documentation.html">Documentation</a> ·
-<a href="download.html">Download</a> ·
-<a href="http://groups.google.com/group/diffpy-dev">Report Bugs</a>
-        </div>
-       </div>
-    </div>
 
-    <div class="content-wrapper">
-      <div class="content">
-             
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="_static/diffpy_logo_header.png">
+          Diffpy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
             
-        
-        <div class="document">
+                <li><a href="community.html">Community</a></li>
+                <li><a href="publications.html">Publications</a></li>
             
-      <div class="documentwrapper">
-          <div class="body">
             
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="products/diffpycmi.html">DiffPy-CMI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pdfgui.html">PDFgui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pdfgetx3.html">PDFgetX3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pythonpackages.html">Python Packages</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
   <div class="section" id="welcome-to-the-diffpy-and-diffpy-cmi-projects">
 <h1>Welcome to the DiffPy and Diffpy-CMI projects.<a class="headerlink" href="#welcome-to-the-diffpy-and-diffpy-cmi-projects" title="Permalink to this headline">¶</a></h1>
 <p>This is an open-source project to develop python software modules for diffraction
-and the study of atomic structure of materials.  It is the home of the Diffpy-CMI
+and the study of the atomic structure of materials.  It is the home of the Diffpy-CMI
 Complex Modeling framework, a modular software framework for robust and extensible
 modeling of diffraction data.  We welcome contributions to this project from the
 community.</p>
 <p>The project is currently centered at <a class="reference external" href="http://www.bnl.gov/">Brookhaven National Laboratory</a>, a US <a class="reference external" href="http://http://science.energy.gov/bes/">Department of
-Energy, Office of Basic Energy Sciences</a> (<a class="reference external" href="http://http://science.energy.gov/bes/">DOE-BES</a>) funded laboratory.
+Energy, Office of Basic Energy Sciences</a> funded laboratory.
 Many parts of the code were developed under the diffraction part of the <a class="reference external" href="http://danse.us/">DANSE</a> project,
 a software construction project funded by the <a class="reference external" href="http://www.nsf.gov/">National Science Foundation</a> to provide
-data analysis software tools for neutron scattering experiments.  This project was centered
-Columbia University and previously Michigan State University.</p>
+data analysis software tools for neutron scattering experiments.  This project was previously
+centered at Columbia University and, before that, Michigan State University.</p>
+<img alt="_images/sample_crystal_image.jpg" src="_images/sample_crystal_image.jpg" />
 </div>
 <div class="section" id="news">
 <h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
@@ -75,81 +123,55 @@ Columbia University and previously Michigan State University.</p>
 <li>2013-02-05 - initial release of the PDFgetX3 program.</li>
 </ul>
 </div>
-<div class="section" id="products">
-<h1>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h1>
-<p><strong>DiffPy-CMI</strong></p>
-<p>DiffPy-CMI is a highly flexible library of Python modules for carrying out customizable structure
-analysis tasks from diffraction data. <a class="reference external" href="doc/diffpycmi.html">Documentation</a>. <a class="reference external" href="downloads/diffpycmi.html">Installation instructions</a>.</p>
-<p><strong>PDFgetX3</strong></p>
-<p>PDFgetX3 is a command-line utility for converting X-ray powder diffraction data to
-atomic pair distribution functions (PDF). PDFgetX3 is easy to use, fast and convenient
-for automated batch processing. The interactive mode provides complete access to all
-parameters and intermediate results, as well as live-plotting feature for parameters
-tuning and visualization of their effects on the results. PDFgetX3 can be used either
-as a standalone application or as a Python library of PDF-processing functions. <em>The
-software is free for open academic research, but requires paid license for commercial use.</em>
-<a class="reference external" href="doc/pdfgetx3/index.html">Documentation</a>. <a class="reference external" href="downloads/pdfgetx3.html">Installation instructions</a>.</p>
-<p><strong>PDFgui</strong></p>
-<p>For users who do not have the expertise or necessity for command line analysis, PDFgui is
-a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
-capable of full-profile fitting of the atomic pair distribution function (PDF)
-derived from x-ray or neutron diffraction data
-and comes with built in graphical and structure visualization capabilities.
-<a class="reference external" href="doc/pdfgui/pdfgui.html">Documentation</a>. <a class="reference external" href="downloads/pdfgui.html">Installation instructions</a>.</p>
-</div>
-<div class="section" id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
-<p>PDFgui and PDFfit2 are intended for scientific research that will be published in
-the open literature and are free to use. Please cite the following paper in your
-scientific publications using one of these programs:</p>
-<blockquote>
-<div>C. L. Farrow, P. Juhás, J. W. Liu, D. Bryndin, E. S. Božin, J. Bloch,
-Th. Proffen and S. J. L. Billinge, <a class="reference external" href="http://iopscience.iop.org/0953-8984/19/33/335219/">PDFfit2 and PDFgui: computer
-programs for studying nanostructure in crystals</a>,
-<em>J. Phys.: Condens.  Mat.</em> <strong>19</strong>, 335219 (2007)
-<a class="reference external" href="doc/pdfgui/Farrow-jpcm-2007.pdf"><img alt="downloadFarrowJpcm07" src="_images/pdficon_small.png" /></a></div></blockquote>
-<p>For publications using the PDFgetX3 program please cite</p>
-<blockquote>
-<div>P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, <a class="reference external" href="http://scripts.iucr.org/cgi-bin/paper?S0021889813005190">PDFgetX3:
-A rapid and highly automatable program for processing powder
-diffraction data into total scattering pair distribution functions</a>,
-<em>J.  Appl. Crystallogr.</em> <strong>46</strong>, 560-566 (2013)
-<a class="reference external" href="doc/pdfgetx3/Juhas-jac-2013.pdf"><img alt="downloadJuhasJac13" src="_images/pdficon_small.png" /></a></div></blockquote>
-</div>
 <div class="section" id="acknowledgements">
 <h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h1>
 <p><strong>Developers</strong></p>
-<p>The active DiffPy team is Pavol Juhás, Chris Farrow, Emil Božin, Simon J.L. Billinge, Wenduo Zhou,
-Peng Tian and Timur Davis. The project was started at the Department of Physics and Astronomy,
-Michigan State University. The development team has now mostly relocated to the Department of
-Applied Physics and Applied Mathematics at Columbia University in the city of New York. The
-former members of the project while at Michigan State were Jiwu Liu and Dmitriy Bryndin.</p>
+<p>The active DiffPy development team is Pavol Juhás, Kevin Knox, Xiaohao Yang, Michael McKerns,
+and Simon J. L. Billinge. Former members of the project are Chris Farrow, Emil Božin, Wenduo Zhou,
+Peng Tian, Timur Davis, Jiwu Liu, and Dmitriy Bryndin.</p>
+<p>The project is currently centered at Brookhaven National Laboratory.
+It began at the Department of Physics and Astronomy at
+Michigan State University and, from there, moved to the the Department of
+Applied Physics and Applied Mathematics at Columbia University in the city of New York before
+relocating to Brookhaven National Laboratory.</p>
 <p><strong>Funding</strong></p>
-<p>This software was developed as part of the Distributed Data Analysis of Neutron Scattering
+<p>The DiffPy project is currently supported by Laboratory Directed Research and Development (LDRD)
+Program 12-007 (Complex Modeling) at Brookhaven National Laboratory.
+Previous funding was provided by the Distributed Data Analysis of Neutron Scattering
 Experiments (DANSE) project funded by the US National Science Foundation under grant DMR-0520547.
 More information on DANSE can be found at <a class="reference external" href="http://danse.us">http://danse.us</a>. The early developments of PDFfit2 were
 funded by NSF grant DMR-0304391 in the Billinge-group, and with support from Michigan State
 University. Any opinions, findings, and conclusions or recommendations expressed in this material
 are those of the author(s) and do not necessarily reflect the views of the respective funding bodies.</p>
+</div>
+<div class="section" id="products">
+<h1>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="products/diffpycmi.html">DiffPy-CMI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pdfgui.html">PDFgui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pdfgetx3.html">PDFgetX3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="products/pythonpackages.html">Python Packages</a></li>
+</ul>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 
 
-          </div>
-      </div>
-        </div>
-        <div class="clearer"></div>
     </div>
-    </div>
-
-    <div class="footer-wrapper">
       
-    <div class="footer">
-        &copy; Copyright 2013, Kevin Knox.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
-    </div>
-    </div>
-
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
   </body>
 </html>
