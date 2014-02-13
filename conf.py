@@ -97,6 +97,8 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# Display all warnings for missing links.
+nitpicky = True
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -113,7 +115,7 @@ html_theme_options = {
     'navbar_title': "Diffpy",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Products",
+    # 'navbar_site_name': "Products",
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -124,7 +126,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         ("Community", "community"),
-        ("Publications","publications")
+        ("Publications", "publications")
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
@@ -144,7 +146,7 @@ html_theme_options = {
     # will break.
     #
     # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "false",
+    # 'globaltoc_includehidden': "false",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
