@@ -1,3 +1,5 @@
+Python Packages
+===============
 
    **diffpy.srfit**
       Setup and control of general fitting problems, control of constraints 
