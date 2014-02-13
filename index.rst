@@ -70,10 +70,20 @@ University. Any opinions, findings, and conclusions or recommendations expressed
 are those of the author(s) and do not necessarily reflect the views of the respective funding bodies.
 
 
+Products
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   products/diffpycmi
+   products/pdfgui
+   products/pdfgetx3
+   products/pythonpackages 
+
 .. toctree::
    :hidden:
 
-   products
    community
    publications
-   NSFnugget
+   products
