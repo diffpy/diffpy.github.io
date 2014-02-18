@@ -4,3 +4,4 @@ _build
 #eclipse
 .project
 .pydevproject
+.settings
