@@ -9,7 +9,7 @@ Welcome to the DiffPy and Diffpy-CMI projects.
 
 .. include:: abbreviations.txt
 
-This is an open-source project to develop python software modules for diffraction 
+This is an open-source project to develop python software for diffraction 
 and the study of the atomic structure of materials.  It is the home of the 
 `Diffpy-CMI <products/diffpycmi.html>`_
 Complex Modeling framework, a modular software framework for robust and extensible 
