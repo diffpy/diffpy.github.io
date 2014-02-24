@@ -16,6 +16,8 @@ Complex Modeling framework, a modular software framework for robust and extensib
 modeling of diffraction data.  We welcome contributions to this project from the 
 community.
 
+FIXME BNL Logo
+
 The project is currently centered at `Brookhaven National Laboratory`_, a US `Department of 
 Energy, Office of Basic Energy Sciences`_ funded laboratory. 
 Many parts of the code were developed under the diffraction part of the DANSE_ project,
