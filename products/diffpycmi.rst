@@ -6,6 +6,15 @@ DiffPy-CMI is a highly flexible library of Python modules for carrying out custo
 analysis tasks from diffraction data.
 
 
+* :ref:`overview`
+* :ref:`install`
+* :ref:`getting_started`
+* :ref:`documentation`
+* :ref:`contribution`
+
+
+.. _overview:
+
 Overview
 ========
 
@@ -78,6 +87,8 @@ Externally developed modules
    **sans/pr_inversion**
       FIXME: add description
 
+
+.. _install:
 
 Installation
 ============
@@ -179,6 +190,19 @@ To install DiffPy-CMI follow the steps below:
 
    ./runtests.sh
 
+.. _getting_started:
+
+Getting Started
+===============
+
+If you have successful installed the DiffPy-CMI software to your local
+machine and would like to see some coding examples to get started, check
+out the `cmi_exchange <https://github.com/diffpy/cmi_exchange>`_.
+
+
+
+.. _documentation:
+
 Documentation
 =============
 
@@ -223,6 +247,8 @@ FIXME: add links to documentation
 
    **sans/pr_inversion**
 
+
+.. _contribution:
 
 Contribution
 ============
