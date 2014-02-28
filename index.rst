@@ -9,12 +9,12 @@ Welcome to the DiffPy and Diffpy-CMI projects.
 
 .. include:: abbreviations.txt
 
-This is an open-source project to develop python software for diffraction 
-and the study of the atomic structure of materials.  It is the home of the 
-`Diffpy-CMI <products/diffpycmi.html>`_
-Complex Modeling framework, a modular software framework for robust and extensible 
-modeling of diffraction data.  We welcome contributions to this project from the 
-community.
++----------------------------------------------------------------------+-----------------------------------------+
+|.. figure:: sample_crystal_image.jpg                                  |.. include:: sidebar.rst                 |
+|    :width: 500                                                       |                                         |
+|    :align: center                                                    |                                         |
+|    :height: 250                                                      |                                         |
++----------------------------------------------------------------------+-----------------------------------------+
 
 FIXME BNL Logo
 
@@ -32,9 +32,6 @@ centered at Columbia University and, before that, Michigan State University.
 .. _department of energy, office of basic energy sciences: http://http://science.energy.gov/bes/
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
-
-
-.. image:: sample_crystal_image.jpg
 
 News
 ====
