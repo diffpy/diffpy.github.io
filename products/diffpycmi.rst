@@ -15,77 +15,85 @@ analysis tasks from diffraction data.
 
 .. _overview:
 
-Overview
+Contents
 ========
 
-The following modules are included in the DiffPy-CMI bundle:
+The DiffPy-CMI release includes Python and C++ modules developed by the
+DiffPy team as well as external libraries necessasary for functionality.
 
-Python modules developed by the diffpy team
+Python modules developed by the DiffPy team
 -------------------------------------------
 
-   **diffpy.srfit**
-      Setup and control of general fitting problems, control of constraints 
-      and restraints, complex structure refinement of multiple datasets.
+======================      ============================================
+Module                      Description
+======================      ============================================
+`diffpy.srfit`_             Setup and control of general fitting 
+                            problems, control of constraints and 
+                            restraints, complex structure refinement of
+                            multiple datasets.
 
-   **diffpy.srreal**
-      Python library for calculation of pair based quantities such as
-      the pair distribution function (PDF), bond lengths, and bond valence
-      sums from a structural model.
+`diffpy.srreal`_            Python library for calculation of pair based 
+                            quantities such as the pair distribution 
+                            function (PDF), bond lengths, and bond 
+                            valence sums from a structural model.
 
-   **diffpy.Structure**
-      Handles storage of crystal structure data. Provides functions for 
-      simple crystal structure operations such as calculation of distances 
-      or angles from fractional coordinates as well as spacegroup expansion 
-      and generation of symmetry constraints on atomic positions. Provides
-      import and export of common structure file formats.
+`diffpy.Structure`_         Handles storage of crystal structure data.  
+                            Provides functions for simple crystal 
+                            structure operations such as calculation of 
+                            distances or angles from fractional 
+                            coordinates as well as spacegroup expansion 
+                            and generation of symmetry constraints on 
+                            atomic positions. Provides import and export 
+                            of common structure file formats.
 
-   **diffpy.utils**
-      General purpose shared utilities for the diffpy libraries.
+`diffpy.utils`_             General purpose shared utilities for the 
+                            diffpy libraries.
 
+`pyobjcryst`_               Python bindings to the ObjCryst++ 
+                            Object-Oriented Crystallographic
+                            Library.
 
-C++ modules developed by the diffpy team
-----------------------------------------
+`libdiffpy`_                C++ library for calculation of PDF and 
+                            other real-space quantities.
 
-   **pyobjcryst**
-      Python bindings to the ObjCryst++ Object-Oriented Crystallographic
-      Library.
-
-   **libdiffpy**
-      C++ library fore calculation of PDF and other real-space
-      quantities.
-
-   **pyobjcryst/libobjcryst/ObjCryst**
-
-
-Externally developed modules
-----------------------------
-
-   **periodictable**
-      Extensible periodic table of the elements with support for mass,
-      density, and Xray/neutron scattering information.
-
-   **cxxtest**
-      Testing framework for C++.
-
-   **pycifrw**
-      Support for reading and writing CIF files using Python.
-
-   **cctbx**
-      Libraries for general crystallographic applications, useful for both 
-      small-molecule and macro-molecular crystallography.
+`libobjcryst`_              ObjCryst++ re-packaged for installation 
+                            as a shared library
+======================      ============================================
 
 
-   **sans/data_util**
-      FIXME: add description
+External libraries 
+-------------------
 
-   **sans/sansdataloader**
-      FIXME: add description
+======================      ============================================
+Module                      Description
+======================      ============================================
+**periodictable**           Extensible periodic table of the elements 
+                            with support for mass, density, and 
+                            Xray/neutron scattering information.
 
-   **sans/sansmodels**
-      FIXME: add description
+**cxxtest**                 Testing framework for C++.
 
-   **sans/pr_inversion**
-      FIXME: add description
+**pycifrw**                 Support for reading and writing CIF files 
+                            using Python.
+
+**sans**                    Analysis and modeling of small angle
+                            scattering data.
+======================      ============================================
+
+.. _diffpy.srfit: ../doc/srfit
+
+.. _diffpy.srreal: ../doc/srreal
+
+.. _diffpy.Structure: ../doc/Structure
+
+.. _diffpy.utils: ../doc/utils
+
+.. _pyobjcryst: ../doc/pyobjcryst
+
+.. _libdiffpy: ../doc/libdiffpy
+
+.. _libobjcryst: https://github.com/diffpy/libobjcryst/
+
 
 
 .. _install:
@@ -94,75 +102,30 @@ Installation
 ============
 
 DiffPy-CMI is currently only available to Linux and Unix users.
-:ref:`cmi_linux`
-
-License
-=======
-
-By downloading and using this software you are agreeing to the following conditions.
-
-  .. include:: CMI_LICENSE.txt
-    :literal:
 
 
-.. _cmi_linux:
+By downloading and using this software you are agreeing to the conditions
+specified in 
+`LICENSE.txt <license.html>`_
 
-Unix, Linux
-============
 
 To install DiffPy-CMI follow the steps below:
 
-#. The following libraries must be installed in order for DiffPy-CMI to
-   work properly:
+#. Install the required dependences from the command line by using a
+   suitable package manager.
 
-   **libgsl0-dev**
-      The GNU Scientific Library (GSL) is a collection of routines for
-      numerical analysis.
+   For Ubuntu use ``apt-get``::
 
-   **libboost-all-dev**
-      A set of useful C++ libraries.
+    sudo apt-get install libgsl0-dev libboost-all-dev \
+        python-dev python-setuptools python-numpy \
+        python-scipy python-matplotlib python-lxml ipython 
 
-   **python-dev**
-      Header files, a static library and development tools for building 
-      Python modules.
- 
-   **python-setuptools**
-      A collection of enhancements to the Python distutils that allow 
-      developers to more easily build and distribute Python packages.
+   For Fedora use ``yum``::
 
-   **python-numpy**
-      General-purpose array-processing for efficient manipulation of
-      large multi-dimensional arrays.
-
-   **python-scipy**
-      The fundamental library for scientific computing with Python.
-
-   **python-matplotlib**
-      A Python 2D plotting library which produces publication quality 
-      figures in a variety of hardcopy formats and interactive environments.
-
-   **python-lxml**
-      Python library for processing XML.
-
-   **ipython**
-      An enhanced interactive Python shell.
-
-   All the required dependencies can be installed from the command line
-   by using ``apt-get`` or a similar package manager::
-
-    sudo apt-get install \
-        libgsl0-dev \
-        libboost-all-dev \
-        python-dev \
-        python-setuptools \
-        python-numpy \
-        python-scipy \
-        python-matplotlib \
-        python-lxml \
-        ipython 
+    FIXME - add command line 
 
 #. Download and extract the most recent 
-   `diffpy-CMI tarball <http://slapper.apam.columbia.edu/diffpy-daily-builds/>`_ 
+   `diffpy-CMI tarball <https://github.com/diffpy/pyobjcryst/releases/>`_ 
    into a directory of your choice.
 
 #. Create a symbolic link to the diffpy-CMI directory inside the Python
@@ -207,46 +170,8 @@ Documentation
 =============
 
 Documenation for modules developed by the diffpy team can generally be
-found at diffpy.org/doc/moduleName or by following the links below: 
-
-Diffpy modules
---------------
-
-   `diffpy.srfit <../doc/srfit>`__
-
-   `diffpy.srreal <../doc/srreal>`__
-
-   `diffpy.Structure <../doc/Structure>`__
-
-   `diffpy.utils <../doc/utils>`__
-
-   `pyobjcryst <../doc/pyobjcryst>`__
-
-   `libdiffpy <../doc/libdiffpy>`__
-
-   pyobjcryst/libobjcryst/ObjCryst  FIXME: add documentation
-
-
-External modules
-----------------
-FIXME: add links to documentation
-
-   **periodictable**
-
-   **cxxtest**
-
-   **pycifrw**
-
-   **cctbx**
-
-   **sans/data_util**
-
-   **sans/sansdataloader**
-
-   **sans/sansmodels**
-
-   **sans/pr_inversion**
-
+found at diffpy.org/doc/moduleName or by following the links in the
+tables above. 
 
 .. _contribution:
 
@@ -261,3 +186,38 @@ If you would like to contribute code please visit the
 `diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ group
 The source code can be downloaded from the
 `diffpy project page <https://github.com/diffpy>`__.
+
+
+   ======================      ============================================
+   Library                     Description
+   ======================      ============================================
+   **libgsl0-dev**             The GNU Scientific Library (GSL) is a 
+                               collection of routines for numerical 
+                               analysis.
+
+   **libboost-all-dev**        A set of useful C++ libraries.
+
+   **python-dev**              Header files, a static library and 
+                               development tools for building 
+                               Python modules.
+ 
+   **python-setuptools**       A collection of enhancements to the Python 
+                               distutils that allow developers to more 
+                               easily build and distribute Python packages.
+
+   **python-numpy**            General-purpose array-processing for 
+                               efficient manipulation of large 
+                               multi-dimensional arrays.
+
+   **python-scipy**            The fundamental library for scientific 
+                               computing with Python.
+
+   **python-matplotlib**       A Python 2D plotting library which produces 
+                               publication quality figures in a variety of 
+                               hardcopy formats and interactive environments.
+
+   **python-lxml**             Python library for processing XML.
+
+   **ipython**                 An enhanced interactive Python shell.
+   ======================      ============================================
+
