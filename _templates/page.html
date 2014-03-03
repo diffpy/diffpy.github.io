@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if pagename == 'index' %}
+        {% include 'buttons.html' %}
+	{{ body }}
+    {% else %}
+        {{ body }}
+    {% endif %}
+{% endblock %}
