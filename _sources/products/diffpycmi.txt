@@ -15,11 +15,15 @@ and check back frequently for updates.
 .. figure:: ../logos/CMI-logo.png
    :align: center
 
+.. raw:: html
+
+   <form action="https://github.com/diffpy/diffpy-release/releases">
+    <input type="submit" name="sub" value="Download DiffPy-CMI tarball">
+   </form>
+
 By downloading and using this software you are agreeing to the
 conditions specified in `LICENSE.txt <license.html>`_ 
 
-The current version is 1.0 and is supported on Linux and Unix platforms.
-`Download version 1.0 tarball <https://github.com/diffpy/diffpy-release/releases>`_
 
 
 Getting Started
