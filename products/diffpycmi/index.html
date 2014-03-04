@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>How to Contribute Code &mdash; DiffPy  documentation</title>
+    <title>DiffPy-CMI &mdash; DiffPy  documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="top" title="DiffPy  documentation" href="../../index.html" />
-    <link rel="next" title="PDFgui" href="../pdfgui.html" />
-    <link rel="prev" title="How to Update to the Latest Sources" href="updatesources.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Enabling new science in nanoscale structure characterization of complex materials" href="../../NSFnugget.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -74,7 +74,7 @@
   <ul class="dropdown-menu menu01"
       role="menu"
       aria-labelledby="dLabelMenu01">
-      <li><a href="index.html">DiffPy-CMI</a></li>
+      <li><a href="#">DiffPy-CMI</a></li>
       <li><a href="../pdfgetx3.html">PDFgetX3</a></li>
       <li><a href="../pdfgui.html">PDFgui</a></li>
       <li><a href="../pythonpackages.html">Python Packages</a></li>
@@ -103,54 +103,42 @@
     <div class="col-md-12">
       
     
-        <div class="section" id="how-to-contribute-code">
-<h1>How to Contribute Code<a class="headerlink" href="#how-to-contribute-code" title="Permalink to this headline">¶</a></h1>
-<p>The DiffPy-CMI bundle consists of the following projects, all hosted on
-github.  To contribute code simply fork the project you&#8217;d like to work
-on and issue a pull request.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="67%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Module</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/diffpy.srfit">diffpy.srfit</a></td>
-<td>Setup and control of general fitting
-problems.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/diffpy.srreal">diffpy.srreal</a></td>
-<td>Python library for calculation of pair based
-quantities such as the pair distribution
-function (PDF), bond lengths, and bond
-valence sums.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/diffpy.Structure">diffpy.Structure</a></td>
-<td>Handles storage of crystal structure data.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/diffpy.utils">diffpy.utils</a></td>
-<td>General purpose shared utilities for the
-diffpy libraries.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/pyobjcryst">pyobjcryst</a></td>
-<td>Python bindings to the ObjCryst++
-Object-Oriented Crystallographic
-Library.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/libdiffpy">libdiffpy</a></td>
-<td>C++ library for calculation of PDF and
-other real-space quantities.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/libobjcryst">libobjcryst</a></td>
-<td>ObjCryst++ re-packaged for installation
-as a shared library</td>
-</tr>
-</tbody>
-</table>
+        <div class="section" id="diffpy-cmi">
+<h1>DiffPy-CMI<a class="headerlink" href="#diffpy-cmi" title="Permalink to this headline">¶</a></h1>
+<p>DiffPy-CMI is our complex modeling framework. It is a highly flexible
+library of Python modules for robust modeling of nanostructures in
+crystals, nanomaterials, and amorphous materials.</p>
+<p>This is an early release of codes that are under intense development.
+The scope and documentation will evolve rapidly, but we want to make
+them available at the earliest possible date. Please make use of them
+and give feedback and suggestions for improvement, but please be patient
+and check back frequently for updates.</p>
+<div class="figure align-center">
+<img alt="../../_images/diffpycmi_screenshot.png" src="../../_images/diffpycmi_screenshot.png" />
+</div>
+<div class="container">
+    <div class="span6">
+        <p class="muted">Latest DiffPy-CMI tarball
+        <a href="https://github.com/diffpy/diffpy-release/releases" class="btn btn-large btn-success btn-flat">Download</a></p>
+    </div>
+    </div>
+</div><p>By downloading and using this software you are agreeing to the
+conditions specified in <a class="reference external" href="license.html">LICENSE.txt</a></p>
+<p><a class="reference external" href="install.html">Installation instructions</a></p>
+<div class="section" id="what-next">
+<h2>What next?<a class="headerlink" href="#what-next" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>See examples of usage and contribute your own scripts at the <a class="reference external" href="cmi_exchange.html">cmi_exchange</a></li>
+<li><a class="reference external" href="updatesources.html">Update to the latest sources</a></li>
+<li><a class="reference external" href="contributecode.html">Contribute code</a></li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation for modules developed by the diffpy team can generally be
+found at diffpy.org/doc/moduleName or by visiting the <a class="reference external" href="documentation.html">DiffPy-CMI
+documenation page</a>.</p>
+</div>
 </div>
 
     

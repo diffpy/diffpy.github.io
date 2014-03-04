@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>How to Contribute Code &mdash; DiffPy  documentation</title>
+    <title>Installation &mdash; DiffPy  documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="top" title="DiffPy  documentation" href="../../index.html" />
-    <link rel="next" title="PDFgui" href="../pdfgui.html" />
-    <link rel="prev" title="How to Update to the Latest Sources" href="updatesources.html" />
+    <link rel="next" title="Contents" href="documentation.html" />
+    <link rel="prev" title="DiffPy-CMI" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -103,54 +103,70 @@
     <div class="col-md-12">
       
     
-        <div class="section" id="how-to-contribute-code">
-<h1>How to Contribute Code<a class="headerlink" href="#how-to-contribute-code" title="Permalink to this headline">¶</a></h1>
-<p>The DiffPy-CMI bundle consists of the following projects, all hosted on
-github.  To contribute code simply fork the project you&#8217;d like to work
-on and issue a pull request.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="67%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Module</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/diffpy.srfit">diffpy.srfit</a></td>
-<td>Setup and control of general fitting
-problems.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/diffpy.srreal">diffpy.srreal</a></td>
-<td>Python library for calculation of pair based
-quantities such as the pair distribution
-function (PDF), bond lengths, and bond
-valence sums.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/diffpy.Structure">diffpy.Structure</a></td>
-<td>Handles storage of crystal structure data.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/diffpy.utils">diffpy.utils</a></td>
-<td>General purpose shared utilities for the
-diffpy libraries.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/pyobjcryst">pyobjcryst</a></td>
-<td>Python bindings to the ObjCryst++
-Object-Oriented Crystallographic
-Library.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/diffpy/libdiffpy">libdiffpy</a></td>
-<td>C++ library for calculation of PDF and
-other real-space quantities.</td>
-</tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/diffpy/libobjcryst">libobjcryst</a></td>
-<td>ObjCryst++ re-packaged for installation
-as a shared library</td>
-</tr>
-</tbody>
-</table>
+        <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Once you&#8217;ve downloaded the most recent DiffPy-CMI tarball follow the
+steps below to install:</p>
+<ol class="arabic">
+<li><p class="first">Install the required dependences from the command line by using a
+suitable package manager.</p>
+<p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install libgsl0-dev libboost-all-dev \
+    python-dev python-setuptools python-numpy \
+    python-scipy python-matplotlib python-lxml ipython
+</pre></div>
+</div>
+<p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>FIXME - add command line
+</pre></div>
+</div>
+<p>See below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a></p>
+</li>
+<li><p class="first">Unzip the DiffPy-CMI tarball into a directory of your choice:</p>
+<div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy-version.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create a symbolic link to the DiffPy-CMI directory inside the Python
+directory for user files.</p>
+<p>For a one-user installation determine the Python directory for user
+files, create it if it does not exist yet, and put a symbolic
+link to the diffpy-1.0.pth file inside this folder. This can be done
+by executing the follwing code from within your DiffPy-CMI directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>D=&quot;$(python -c &#39;import site; print site.USER_SITE&#39;)&quot;
+mkdir -p &quot;$D&quot;
+ln -si $PWD/diffpy-1.0.pth &quot;$D&quot;/
+</pre></div>
+</div>
+<p>For a system-wide installation create symbolic link in the directory
+for system-wide Python packages. Again, the following code should be
+executed from within your DiffPy-CMI directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ln -si $PWD/diffpy-1.0.pth /usr/local/lib/python2.7/dist-packages/
+</pre></div>
+</div>
+<p>Note that it is essential to use a symbolic link.  Making a copy of the
+pth file will not work.</p>
+</li>
+<li><p class="first">Test the installation by running:</p>
+<div class="highlight-python"><div class="highlight"><pre>./runtests.sh
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="section" id="description-of-dependencies">
+<span id="dependencies"></span><h2>Description of Dependencies<a class="headerlink" href="#description-of-dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>libgsl0-dev</strong> -  a collection of routines for numerical analysis.</li>
+<li><strong>libboost-all-dev</strong> - a set of useful C++ libraries.</li>
+<li><strong>python-dev</strong> - development tools for Python modules.</li>
+<li><strong>python-setuptools</strong> - enhancements to the Python distutils.</li>
+<li><strong>python-numpy</strong> - general-purpose array-processing for large multi-dimensional arrays.</li>
+<li><strong>python-scipy</strong> - the fundamental library for scientific computing with Python.</li>
+<li><strong>python-matplotlib</strong> - a Python 2D plotting library.</li>
+<li><strong>python-lxml</strong> - a Python library for processing XML.</li>
+<li><strong>ipython</strong> - an enhanced interactive Python shell.</li>
+</ul>
+</div>
 </div>
 
     
