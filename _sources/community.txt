@@ -5,27 +5,24 @@ To ensure a bright future for the DiffPy project it is essential to build a stro
 of users and contributing developers. There are several Google groups for support and 
 development of DiffPy and related applications.
 
-- `diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ Help on usage of PDFgui, 
-  PDFfit2 and other DiffPy components. This group should become a knowledge base for PDFgui 
-  user tips, tricks and troubleshooting. Feel free to ask your question here.
+- `diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ Help on usage of DiffPy-CMI, PDFgetX3, 
+  PDFgui, and other DiffPy components. This group is a knowledge base for PDFgui 
+  user tips, tricks and troubleshooting. Feel free to search for answers or ask your question here.
 
    .. raw:: html
 
       <form action="http://groups.google.com/group/diffpy-users/boxsubscribe">
-              Subscribe email:
-       <input type="text" name="email">
        <input type="submit" name="sub" value="Subscribe">
       </form>
 
-- `diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ For discussions about development 
-  and changes of PDFgui, PDFfit2 and DiffPy library in general. Materials scientists, chemists 
+- `diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ For bug reports, feature requests, and discussions about development 
+  and changes of DiffPy-CMI, PDFgetX3, 
+  PDFgui, and other DiffPy components. Materials scientists, chemists 
   physicists, engineers - please contribute by telling us your needs or sharing your suggestions here.
 
    .. raw:: html
 
       <form action="http://groups.google.com/group/diffpy-dev/boxsubscribe">
-              Subscribe email:
-       <input type="text" name="email">
        <input type="submit" name="sub" value="Subscribe">
       </form>
 

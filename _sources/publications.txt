@@ -3,9 +3,11 @@
 References
 ==========
 
+The following papers in the literature describe the DiffPy products.
+Please cite us if our software has been used in your research.
 
-   |citeJuhasJac13|
+* |citeJuhasJac13|
 
-   |citeFarrowJpcm07|
+* |citeFarrowJpcm07|
 
-   |citeProffenJac99|
+* |citeProffenJac99|

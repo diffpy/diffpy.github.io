@@ -2,185 +2,84 @@
 DiffPy-CMI
 ##########
 
-DiffPy-CMI is a highly flexible library of Python modules for carrying out customizable structure 
-analysis tasks from diffraction data.
+DiffPy-CMI is our complex modeling framework. It is a highly flexible
+library of Python modules for robust modeling of nanostructures in
+crystals, nanomaterials, and amorphous materials.
+
+This is an early release of codes that are under intense development.
+The scope and documentation will evolve rapidly, but we want to make
+them available at the earliest possible date. Please make use of them
+and give feedback and suggestions for improvement, but please be patient
+and check back frequently for updates.
+
+.. figure:: ../logos/CMI-logo.png
+   :align: center
 
 
-* :ref:`overview`
-* :ref:`install`
-* :ref:`getting_started`
-* :ref:`documentation`
-* :ref:`contribution`
+Getting Started
+===============
+
+* :ref:`download` 
+
+* :ref:`install` 
+
+* :ref:`play`
 
 
-.. _overview:
+What next?
+==========
 
-Contents
+* `Contribute user scripts at the cmi_exchange <diffpycmi/userscripts.html>`_
+
+* `Update to the latest sources <diffpycmi/updatesources.html>`_
+
+* `Contribute code <diffpycmi/contributecode.html>`_
+
+
+Documentation
+=============
+
+
+Documentation for modules developed by the diffpy team can generally be
+found at diffpy.org/doc/moduleName or by visiting the `DiffPy-CMI
+documenation page <diffpycmi/documentation.html>`_.
+
+
+====
+
+|
+
+.. _download:
+
+Download
 ========
+By downloading and using this software you are agreeing to the
+conditions specified in `LICENSE.txt <license.html>`_ 
 
-Diffpy modules
----------------
-
-Python modules developed by the diffpy team
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-======================      ============================================
-Module                      Description
-======================      ============================================
-`diffpy.srfit`_             Setup and control of general fitting 
-                            problems, control of constraints and 
-                            restraints, complex structure refinement of
-                            multiple datasets.
-
-`diffpy.srreal`_            Python library for calculation of pair based 
-                            quantities such as the pair distribution 
-                            function (PDF), bond lengths, and bond 
-                            valence sums from a structural model.
-
-`diffpy.Structure`_         Handles storage of crystal structure data.  
-                            Provides functions for simple crystal 
-                            structure operations such as calculation of 
-                            distances or angles from fractional 
-                            coordinates as well as spacegroup expansion 
-                            and generation of symmetry constraints on 
-                            atomic positions. Provides import and export 
-                            of common structure file formats.
-
-`diffpy.utils`_             General purpose shared utilities for the 
-                            diffpy libraries.
-======================      ============================================
-
-
-
-C++ modules developed by the diffpy team
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-======================      ============================================
-Module                      Description
-======================      ============================================
-`pyobjcryst`_               Python bindings to the ObjCryst++ 
-                            Object-Oriented Crystallographic
-                            Library.
-
-`libdiffpy`_                C++ library fore calculation of PDF and 
-                            other real-space quantities.
-======================      ============================================
-
-
-Externally developed modules
------------------------------
-
-======================      ============================================
-Module                      Description
-======================      ============================================
-**periodictable**           Extensible periodic table of the elements 
-                            with support for mass, density, and 
-                            Xray/neutron scattering information.
-
-**cxxtest**                 Testing framework for C++.
-
-**pycifrw**                 Support for reading and writing CIF files 
-                            using Python.
-
-**cctbx**                   Libraries for general crystallographic 
-                            applications, useful for both 
-                            small-molecule 
-                            and macro-molecular crystallography.
-
-**sans**                    Analysis and modeling of small angle
-                            scattering data.
-======================      ============================================
-
-.. _diffpy.srfit: ../doc/srfit
-
-.. _diffpy.srreal: ../doc/srreal
-
-.. _diffpy.Structure: ../doc/Structure
-
-.. _diffpy.utils: ../doc/utils
-
-.. _pyobjcryst: ../doc/pyobjcryst
-
-.. _libdiffpy: ../doc/libdiffpy
+The current version is 1.0 and is supported on Linux and Unix platforms.
+`Download version 1.0 tarball <https://github.com/diffpy/diffpy-release/releases>`_
 
 
 .. _install:
 
-Installation
-============
+Install
+========
 
-DiffPy-CMI is currently only available to Linux and Unix users.
-:ref:`cmi_linux`
+Once you've downloaded the most recent DiffPy-CMI tarball follow the
+steps below to install:
 
-License
-=======
+#. Install the required dependences from the command line by using a
+   suitable package manager.
 
-By downloading and using this software you are agreeing to the following conditions.
+   For Ubuntu use ``apt-get``::
 
-  .. include:: LICENSE.txt
-    :literal:
+    sudo apt-get install libgsl0-dev libboost-all-dev \
+        python-dev python-setuptools python-numpy \
+        python-scipy python-matplotlib python-lxml ipython 
 
+   For Fedora use ``yum``::
 
-.. _cmi_linux:
-
-Unix, Linux
-============
-
-To install DiffPy-CMI follow the steps below:
-
-#. The following libraries must be installed in order for DiffPy-CMI to
-   work properly:
-
-   ======================      ============================================
-   Library                     Description
-   ======================      ============================================
-   **libgsl0-dev**             The GNU Scientific Library (GSL) is a 
-                               collection of routines for numerical 
-                               analysis.
-
-   **libboost-all-dev**        A set of useful C++ libraries.
-
-   **python-dev**              Header files, a static library and 
-                               development tools for building 
-                               Python modules.
- 
-   **python-setuptools**       A collection of enhancements to the Python 
-                               distutils that allow developers to more 
-                               easily build and distribute Python packages.
-
-   **python-numpy**            General-purpose array-processing for 
-                               efficient manipulation of large 
-                               multi-dimensional arrays.
-
-   **python-scipy**            The fundamental library for scientific 
-                               computing with Python.
-
-   **python-matplotlib**       A Python 2D plotting library which produces 
-                               publication quality figures in a variety of 
-                               hardcopy formats and interactive environments.
-
-   **python-lxml**             Python library for processing XML.
-
-   **ipython**                 An enhanced interactive Python shell.
-   ======================      ============================================
-
-   All the required dependencies can be installed from the command line
-   by using ``apt-get`` or a similar package manager::
-
-    sudo apt-get install \
-        libgsl0-dev \
-        libboost-all-dev \
-        python-dev \
-        python-setuptools \
-        python-numpy \
-        python-scipy \
-        python-matplotlib \
-        python-lxml \
-        ipython 
-
-#. Download and extract the most recent 
-   `diffpy-CMI tarball <https://github.com/diffpy/pyobjcryst/releases/>`_ 
-   into a directory of your choice.
+    FIXME - add command line 
 
 #. Create a symbolic link to the diffpy-CMI directory inside the Python
    directory for user files.
@@ -207,36 +106,12 @@ To install DiffPy-CMI follow the steps below:
 
    ./runtests.sh
 
-.. _getting_started:
 
-Getting Started
-===============
+.. _play:
+
+Play
+====
 
 If you have successful installed the DiffPy-CMI software to your local
 machine and would like to see some coding examples to get started, check
 out the `cmi_exchange <https://github.com/diffpy/cmi_exchange>`_.
-
-
-
-.. _documentation:
-
-Documentation
-=============
-
-Documenation for modules developed by the diffpy team can generally be
-found at diffpy.org/doc/moduleName or by following the links in the
-tables above. 
-
-.. _contribution:
-
-Contribution
-============
-
-The diffpy team welcomes feedback and contribution from the community.
-If you have questions, comments, or bugreports please visit the
-`diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ group.
-
-If you would like to contribute code please visit the 
-`diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ group
-The source code can be downloaded from the
-`diffpy project page <https://github.com/diffpy>`__.

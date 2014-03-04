@@ -4,6 +4,8 @@
    contain the root `toctree` directive.
 
 
+FIXME - top of page link only when needed
+
 DiffPy - Atomic Structure Analysis in Python 
 ============================================
 A free and open source software project to provide python software for
@@ -16,14 +18,11 @@ diffraction analysis and the study of the atomic structure of materials.
 .. include:: abbreviations.txt
 
 
-
-This is an open-source project to develop python software for diffraction 
-and the study of the atomic structure of materials.  It is the home of the 
+DiffPy is the home of the 
 `Diffpy-CMI <products/diffpycmi.html>`_
 Complex Modeling framework, a modular software framework for robust and extensible 
 modeling of diffraction data.  We welcome contributions to this project from the 
 community.
-
 
 The project is currently centered at `Brookhaven National Laboratory`_, a US `Department of 
 Energy, Office of Basic Energy Sciences`_ funded laboratory. 
