@@ -18,20 +18,18 @@ and check back frequently for updates.
    :align: center
 
 
-.. raw:: html
 
-   <div class="container">
-       <div class="span6">
-           <p class="muted">Latest DiffPy-CMI tarball
-           <a href="https://github.com/diffpy/diffpy-release/releases" class="btn btn-large btn-success btn-flat">Download</a></p>
-       </div>
-       </div>
-   </div>
+.. `Installation instructions <install.html>`_
 
-By downloading and using this software you are agreeing to the
-conditions specified in `LICENSE.txt <license.html>`_ 
+Getting Started
+===============
 
-`Installation instructions <install.html>`_
+* Agree to the conditions specified in `LICENSE.txt <license.html>`_,
+  then, `Download <https://github.com/diffpy/diffpy-release/releases>`_
+
+* `Install <install.html>`_
+
+* `Play <https://github.com/diffpy/cmi_exchange#cmi-exchange>`_
 
 
 
@@ -51,10 +49,4 @@ Documentation
 Documentation for modules developed by the diffpy team can generally be
 found at diffpy.org/doc/moduleName or by visiting the `DiffPy-CMI
 documenation page <documentation.html>`_.
-
-
-
-
-
-
 

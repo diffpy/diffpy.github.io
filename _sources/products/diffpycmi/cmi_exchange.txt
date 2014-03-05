@@ -7,11 +7,6 @@ framework. If you are new to DiffPy-CMI it is a great place to get
 started.  If you've been working with DiffPy-CMI for a while and feel
 that others would benefit from seeing your code please contribute!
 
-* :ref:`new_users`
-
-* :ref:`contribute_scripts`
-
-
 .. _new_users:
 
 For New Users
@@ -26,10 +21,10 @@ file:
 
 .. image:: ../../images/github_screenshot.png
 
-For now simply follow the download link to get the entire project and
+For now simply follow the download zip link to get the entire project and
 unpack the zip file to a convenient location on your machine.
 
-If you have correctly installed the DiffPy-CMI package you can start
+If you have correctly installed the `DiffPy-CMI <index.html>`_ package you can start
 running the scripts right away!  You'll notice that there are two
 directories: ``cmi_plugins`` and ``cmi_scripts``.  The scripts are
 standalone python scripts that can be run directly from the IPython 
