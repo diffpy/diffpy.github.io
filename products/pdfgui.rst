@@ -5,14 +5,21 @@ PDFgui
 Overview
 ========
 
+
+.. figure:: ../images/PDFgui_screenshot_707.png
+   :align: left 
+   :scale: 40 % 
+
+   Screen-shot of PDFgui during a refinement of multiple data-sets
+
 For users who do not have the expertise or necessity for command line analysis, PDFgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is 
 capable of full-profile fitting of the atomic pair distribution function (PDF) 
 derived from x-ray or neutron diffraction data 
 and comes with built in graphical and structure visualization capabilities.
 
-FIXME: add a pic of user interface
 
+FIXME - make this wrapping look better
 
 Installation
 ============
@@ -124,11 +131,6 @@ Name                     Date               Size         Description
 Older releases are available for download
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
 
-Contribution
-============
-
-Please, join the `community <community.html>`_ forum for tips, tricks, and feedback.
-
 
 Documentation
 =============
@@ -139,4 +141,4 @@ and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
 Tutorial files are available for download as a 
 `zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
 
-FIXME: do we want link to API?
+Please, join the `community <../community.html>`_ forum for tips, tricks, and feedback.

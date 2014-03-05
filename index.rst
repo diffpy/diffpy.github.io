@@ -4,6 +4,7 @@
    contain the root `toctree` directive.
 
 
+
 DiffPy - Atomic Structure Analysis in Python 
 ============================================
 A free and open source software project to provide python software for
@@ -16,14 +17,11 @@ diffraction analysis and the study of the atomic structure of materials.
 .. include:: abbreviations.txt
 
 
-
-This is an open-source project to develop python software for diffraction 
-and the study of the atomic structure of materials.  It is the home of the 
-`Diffpy-CMI <products/diffpycmi.html>`_
+DiffPy is the home of the 
+`Diffpy-CMI <products/diffpycmi/index.html>`_
 Complex Modeling framework, a modular software framework for robust and extensible 
 modeling of diffraction data.  We welcome contributions to this project from the 
 community.
-
 
 The project is currently centered at `Brookhaven National Laboratory`_, a US `Department of 
 Energy, Office of Basic Energy Sciences`_ funded laboratory. 
@@ -33,14 +31,12 @@ data analysis software tools for neutron scattering experiments.  This project w
 centered at Columbia University and, before that, Michigan State University.
 
 
-.. figure:: logos/BNL_logo.jpg
-   :align: center
 
 
 News
 ====
 
-- 2014-03-01 - Release of  `Diffpy-CMI <products/diffpycmi.html>`_
+- 2014-03-01 - Release of  `Diffpy-CMI <products/diffpycmi/index.html>`_
 
 - 2013-02-05 - Initial release of the PDFgetX3 program.
 
@@ -50,10 +46,19 @@ News
 
 .. _national science foundation: http://www.nsf.gov/
 
-.. _department of energy, office of basic energy sciences: http://http://science.energy.gov/bes/
+.. _department of energy, office of basic energy sciences: http://science.energy.gov/bes/
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
 
+----
+
+.. figure:: logos/BNL_logo.jpg
+   :align: left 
+   :target: `Brookhaven National Laboratory`_
+
+.. figure:: logos/DOE_logo.png
+   :align: right
+   :target: `Department of Energy, Office of Basic Energy Sciences`_
 
 .. toctree::
    :hidden:
@@ -61,7 +66,13 @@ News
    community
    publications
    NSFnugget
-   products/diffpycmi
+   products/diffpycmi/index
+   products/diffpycmi/install
+   products/diffpycmi/documentation
+   products/diffpycmi/cmi_exchange
+   products/diffpycmi/license
+   products/diffpycmi/updatesources
+   products/diffpycmi/contributecode
    products/pdfgui
    products/pdfgetx3
    products/pythonpackages 
