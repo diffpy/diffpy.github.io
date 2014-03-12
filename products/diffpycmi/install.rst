@@ -4,18 +4,25 @@ Installation
 Once you've downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:
 
-#. Install the required dependences from the command line by using a
+#. Install the required dependencies from the command line by using a
    suitable package manager.
 
    For Ubuntu use ``apt-get``::
 
-    sudo apt-get install libgsl0-dev libboost-all-dev \
-        python-dev python-setuptools python-numpy \
-        python-scipy python-matplotlib python-lxml ipython 
+    sudo apt-get install \
+        libgsl0-dev libboost-all-dev python-dev \
+        python-setuptools python-numpy python-scipy \
+        python-matplotlib python-lxml ipython \
+        scons git zsh
 
    For Fedora use ``yum``::
 
-    FIXME - add command line 
+    sudo yum install \
+        gsl-devel boost-devel python-devel 
+        python-setuptools numpy scipy  \
+        python-matplotlib python-lxml \
+        python-ipython-notebook scons git zsh
+
 
    See below for a brief :ref:`dependencies`
 
@@ -54,21 +61,27 @@ steps below to install:
 Description of Dependencies
 ----------------------------
 
-* **libgsl0-dev** -  a collection of routines for numerical analysis.
+* **gsl** -  GNU Scientific Library is collection of routines for numerical analysis.
 
-* **libboost-all-dev** - a set of useful C++ libraries.
+* **boost** - a set of useful C++ libraries.
 
 * **python-dev** - development tools for Python modules.
  
 * **python-setuptools** - enhancements to the Python distutils.
 
-* **python-numpy** - general-purpose array-processing for large multi-dimensional arrays.
+* **numpy** - general-purpose array-processing for large multi-dimensional arrays in Python.
 
-* **python-scipy** - the fundamental library for scientific computing with Python.
+* **scipy** - the fundamental library for scientific computing with Python.
 
-* **python-matplotlib** - a Python 2D plotting library.
+* **matplotlib** - a Python 2D plotting library.
 
 * **python-lxml** - a Python library for processing XML.
 
 * **ipython** - an enhanced interactive Python shell.
+
+* **scons** - a software build tool.
+
+* **git** - a version control system.
+
+* **zsh** - an interactive shell and powerful scripting language.
 

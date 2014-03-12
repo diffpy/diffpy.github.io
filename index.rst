@@ -40,7 +40,7 @@ News
 
 - 2013-02-05 - Initial release of the PDFgetX3 program.
 
-- 2007-08-27 - :doc:`NSF nugget<NSFnugget>` describing PDFgui
+- 2007-08-27 - `NSF nugget <NSFnugget.html>`_ describing PDFgui
 
 .. _danse: http://danse.us/
 
@@ -68,7 +68,7 @@ News
    NSFnugget
    products/diffpycmi/index
    products/diffpycmi/install
-   products/diffpycmi/documentation
+   products/diffpycmi/contents
    products/diffpycmi/cmi_exchange
    products/diffpycmi/license
    products/diffpycmi/updatesources
