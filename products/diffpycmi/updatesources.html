@@ -105,6 +105,52 @@
     
         <div class="section" id="how-to-update-to-the-latest-sources">
 <h1>How to Update to the Latest Sources<a class="headerlink" href="#how-to-update-to-the-latest-sources" title="Permalink to this headline">¶</a></h1>
+<p>In order to update and build the source code you must have all the
+dependencies installed. In addition to the dependencies listed in the
+<a class="reference external" href="install.html">installation instructions</a>, you will need <tt class="docutils literal"><span class="pre">mercurial</span></tt>
+and <tt class="docutils literal"><span class="pre">wget</span></tt>.  On Ubuntu and Fedora, the required software can easily be
+installed using the system package manager using the commands shown
+below.</p>
+<blockquote>
+<div><p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
+    libgsl0-dev libboost-all-dev python-dev \
+    python-setuptools python-numpy python-scipy \
+    python-matplotlib python-lxml ipython \
+    scons git zsh mercurial wget
+</pre></div>
+</div>
+<p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install \
+    gsl-devel boost-devel python-devel
+    python-setuptools numpy scipy  \
+    python-matplotlib python-lxml \
+    python-ipython-notebook scons git zsh \
+    mercurial wget
+</pre></div>
+</div>
+</div></blockquote>
+<p>The easiest way to update and recompile the latest sources is to use the
+update script that was packaged with the release bundle, by typing:</p>
+<div class="highlight-python"><div class="highlight"><pre>./update.zsh
+</pre></div>
+</div>
+<p>This will fetch and build the latest version of the source code. You don&#8217;t
+need to re-install the .pth file if you built everything in-place.</p>
+<p>If you only would like to recompile all existing sources codes, type:</p>
+<div class="highlight-python"><div class="highlight"><pre>./update.zsh --compile
+</pre></div>
+</div>
+<p>To update and compile the source codes manually, please refer to the README
+files in the individual project pages on <a class="reference external" href="https://github.com/diffpy">https://github.com/diffpy</a>.</p>
+<p><strong>Note:</strong></p>
+<p>If your installed version of python came from a python distribution
+other than system python (e.g. the Enthought Python Distribution) it may
+not compatible with the system boost library and the build may fail. In
+this case the update script will check the python version and build the
+boost library from sources. However, if you choose to  build everything
+manually, please keep in mind that you may need to rebuild the boost
+library first.</p>
 </div>
 
     

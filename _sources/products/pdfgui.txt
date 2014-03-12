@@ -5,13 +5,6 @@ PDFgui
 Overview
 ========
 
-
-.. figure:: ../images/PDFgui_screenshot_707.png
-   :align: left 
-   :scale: 40 % 
-
-   Screen-shot of PDFgui during a refinement of multiple data-sets
-
 For users who do not have the expertise or necessity for command line analysis, PDFgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is 
 capable of full-profile fitting of the atomic pair distribution function (PDF) 
@@ -19,26 +12,25 @@ derived from x-ray or neutron diffraction data
 and comes with built in graphical and structure visualization capabilities.
 
 
-FIXME - make this wrapping look better
+.. figure:: ../images/PDFgui_screenshot_small.png
+   :align: center 
+
+   Screen-shot of PDFgui during a refinement of multiple data-sets
 
 Installation
 ============
 
+By downloading and using this software you are agreeing to the 
+conditions specified in the `software license <pdfguilicense.html>`_.
+
 Follow one of the links below for installation instructions specific to
 your system:
 
-:ref:`unix` -
-:ref:`windows` -
-:ref:`updates` -
-:ref:`releases`
+* :ref:`unix`
+* :ref:`windows`
+* :ref:`updates`
+* :ref:`releases`
 
-License
-=======
-
-By downloading and using this software you are agreeing to the following conditions.
-
-  .. include:: PDFgui_LICENSE.txt
-    :literal:
 
 .. _unix:
 
@@ -132,13 +124,18 @@ Older releases are available for download
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
 
 
-Documentation
-=============
+Documentation and Help
+======================
 
-The user manual is available `online in html format <../doc/pdfgui>`__
-and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
+*  The user manual is available `online in html format <../doc/pdfgui>`__
+   and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
 
-Tutorial files are available for download as a 
-`zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
+*  Tutorial files are available for download as a 
+   `zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
 
-Please, join the `community <../community.html>`_ forum for tips, tricks, and feedback.
+*  Please, join the `community <../community.html>`_ forum for tips, tricks, and feedback.
+
+.. toctree::
+   :hidden:
+
+   pdfguilicense

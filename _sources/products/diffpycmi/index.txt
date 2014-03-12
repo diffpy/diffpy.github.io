@@ -38,17 +38,38 @@ Getting Started
 What next?
 ==========
 
-* See examples of usage and contribute your own scripts at the `cmi_exchange <cmi_exchange.html>`_
+* `Get tips on using the CMI exchange <cmi_exchange.html>`_
 
 * `Update to the latest sources <updatesources.html>`_
 
 * `Contribute code <contributecode.html>`_
 
 
-Documentation
-=============
+Contents and Documentation
+==========================
 
-Documentation for modules developed by the diffpy team can generally be
-found at diffpy.org/doc/moduleName or by visiting the `DiffPy-CMI
-documenation page <documentation.html>`_.
+*  For a list of packages bundled in the DiffPy-CMI release visit the
+   `contents page <contents.html>`_
 
+*  Documentation for modules developed by the diffpy team can generally be
+   found at diffpy.org/doc/moduleName or by following one of the links
+   below.
+
+   * `diffpy.srfit`_ 
+   * `diffpy.srreal`_
+   * `diffpy.Structure`_
+   * `diffpy.utils`_
+   * `pyobjcryst`_
+   * `libdiffpy`_
+
+.. _diffpy.srfit: ../../doc/srfit/
+
+.. _diffpy.srreal: ../../doc/srreal/
+
+.. _diffpy.Structure: ../../doc/Structure/
+
+.. _diffpy.utils: ../../doc/utils/
+
+.. _pyobjcryst: ../../doc/pyobjcryst/
+
+.. _libdiffpy: ../../doc/libdiffpy/

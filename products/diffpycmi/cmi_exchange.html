@@ -31,7 +31,7 @@
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="top" title="DiffPy  documentation" href="../../index.html" />
     <link rel="next" title="&lt;no title&gt;" href="license.html" />
-    <link rel="prev" title="Contents" href="documentation.html" />
+    <link rel="prev" title="Contents" href="contents.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -105,31 +105,50 @@
     
         <div class="section" id="cmi-exchange">
 <h1>CMI Exchange<a class="headerlink" href="#cmi-exchange" title="Permalink to this headline">¶</a></h1>
-<p>The CMI Exchange is a collection of community developed scripts,
+<p>The <a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">CMI Exchange</a> is a collection of community developed scripts,
 functions, and IPython plugins that make use of the DiffPy-CMI
 framework. If you are new to DiffPy-CMI it is a great place to get
 started.  If you&#8217;ve been working with DiffPy-CMI for a while and feel
 that others would benefit from seeing your code please contribute!</p>
 <div class="section" id="for-new-users">
 <span id="new-users"></span><h2>For New Users<a class="headerlink" href="#for-new-users" title="Permalink to this headline">¶</a></h2>
-<p>Begin by visiting the
-<a class="reference external" href="https://github.com/diffpy/cmi_exchange">CMI Exchange on github</a></p>
-<p>As with all github projects you will see these two links in the sidebar
+<p>Begin by visiting the <a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">CMI Exchange on github</a>.  As with all
+github projects you will see the following two buttons in the sidebar
 allowing you to clone the project in your desktop or download a zip
 file:</p>
 <img alt="../../_images/github_screenshot.png" src="../../_images/github_screenshot.png" />
-<p>For now simply follow the download zip link to get the entire project and
-unpack the zip file to a convenient location on your machine.</p>
-<p>If you have correctly installed the <a class="reference external" href="index.html">DiffPy-CMI</a> package you can start
-running the scripts right away!  You&#8217;ll notice that there are two
-directories: <tt class="docutils literal"><span class="pre">cmi_plugins</span></tt> and <tt class="docutils literal"><span class="pre">cmi_scripts</span></tt>.  The scripts are
-standalone python scripts that can be run directly from the IPython
-command line, whereas the plugins are a set of functions and IPython
-extensions that provide additional functionality to your IPython
-session.</p>
+<p>For now simply follow the download zip link to get the entire project
+and unpack the zip file to a convenient location on your machine.  If
+you have correctly installed the <a class="reference external" href="index.html">DiffPy-CMI</a> package you
+can start running the scripts right away. Just follow the instructions
+in <a class="reference external" href="https://github.com/diffpy/cmi_exchange#new-user-tipsTips">New User Tips</a>.</p>
+<p>You&#8217;ll notice that there are two directories: <tt class="docutils literal"><span class="pre">cmi_plugins</span></tt> and
+<tt class="docutils literal"><span class="pre">cmi_scripts</span></tt>.  The scripts are standalone python scripts that can be
+run directly from the <a class="reference external" href="http://ipython.org/">IPython</a> command line, whereas the plugins are a
+set of functions and  <a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a>
+that provide additional functionality to your IPython session.</p>
+<div class="section" id="scripts">
+<h3>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
+<p>To run a script, simply navigate to the directory containing the .py
+file and type:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ ipython --pylab
+In [1]: %run script_name.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="extensions">
+<h3>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a> are importable IPython modules that can modifpy
+the behavior of the shell to add functionality.  They are installed and
+activated from the IPython command line by running:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [1]: %install_ext name_of_extension.py
+In [2]: %load_ext name_of_extenstion
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="contribute-scripts">
-<span id="id1"></span><h2>Contribute Scripts<a class="headerlink" href="#contribute-scripts" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Contribute Scripts<a class="headerlink" href="#contribute-scripts" title="Permalink to this headline">¶</a></h2>
 <p>To contribute your own script to the CMI Exchange you must first fork
 the project on github.  Once you&#8217;ve added your own code you can issue a
 pull request.</p>
