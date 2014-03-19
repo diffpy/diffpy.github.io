@@ -26,27 +26,25 @@ below.
         mercurial wget
 
 The easiest way to update and recompile the latest sources is to use the
-update script that was packaged with the release bundle, by typing::
+installation script that was packaged with the release bundle.
 
-    ./update.zsh
+To update the codes::
 
-This will fetch and build the latest version of the source code. You don't
-need to re-install the .pth file if you built everything in-place. 
+    ./install --update[=steps]  
+    
+This will perform all or selected software updates from online source repositories.  
+Update steps are comma separated integers or ranges such as '1,3,5-6'. 
 
-If you only would like to recompile all existing sources codes, type::
-
-    ./update.zsh --compile
-
-To update and compile the source codes manually, please refer to the README 
-files in the individual project pages on https://github.com/diffpy.
+To rebuild the source code::
+    
+    ./install --build[=steps]   
+    
+This will rebuild all or specified packages from sources in the src folder. In both
+cases, you could use option -n to display the build steps.
 
 **Note:**
 
-If your installed version of python came from a python distribution
-other than system python (e.g. the Enthought Python Distribution) it may
-not compatible with the system boost library and the build may fail. In
-this case the update script will check the python version and build the
-boost library from sources. However, if you choose to  build everything
-manually, please keep in mind that you may need to rebuild the boost
-library first. 
-
+If your installed version of python came from a python distribution other than 
+system python (e.g. the Enthought Python Distribution) it may not compatible with 
+the system boost library and the build may fail. To resolve the problem, you should
+rebuild boost library and then rebuild all source codes.  

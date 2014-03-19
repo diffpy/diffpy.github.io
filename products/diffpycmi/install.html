@@ -105,6 +105,8 @@
     
         <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p><strong>Note: The current release is for Unix, Linux, and Mac OS X. Windows
+support will be added in a future release so please check back.</strong></p>
 <p>Once you&#8217;ve downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:</p>
 <ol class="arabic">
@@ -115,7 +117,7 @@ suitable package manager.</p>
     libgsl0-dev libboost-all-dev python-dev \
     python-setuptools python-numpy python-scipy \
     python-matplotlib python-lxml ipython \
-    scons git zsh
+    build-essential scons git zsh
 </pre></div>
 </div>
 <p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
@@ -123,7 +125,23 @@ suitable package manager.</p>
     gsl-devel boost-devel python-devel
     python-setuptools numpy scipy  \
     python-matplotlib python-lxml \
-    python-ipython-notebook scons git zsh
+    python-ipython-notebook \
+    gcc-c++ scons git zsh
+</pre></div>
+</div>
+<p>For Mac OS X use <tt class="docutils literal"><span class="pre">macports</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo port install \
+    python27 py27-setuptools py27-ipython py27-lxml \
+    gsl-devel boost py27-numpy py27-scipy py27-matplotlib scons git-core
+
+sudo port select --set ipython ipython27
+sudo port select --set python python27
+</pre></div>
+</div>
+<p>Important: When finished installed the Mac OS X dependencies, adjust
+the shell environment so that MacPorts Python is the first in the
+PATH:</p>
+<div class="highlight-python"><div class="highlight"><pre>export PATH=/opt/local/bin:${PATH}
 </pre></div>
 </div>
 <p>See below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a></p>
