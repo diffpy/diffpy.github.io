@@ -43,7 +43,8 @@ steps below to install:
     export PATH=/opt/local/bin:${PATH}
 
 
-   See below for a brief :ref:`dependencies`
+   See below for a brief :ref:`dependencies` (these should already be
+   installed after following the instructions in step 1).
 
 #. Unzip the DiffPy-CMI tarball into a directory of your choice::
 
