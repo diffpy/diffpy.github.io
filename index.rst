@@ -36,7 +36,7 @@ centered at Columbia University and, before that, Michigan State University.
 News
 ====
 
-- 2014-03-01 - Release of  `DiffPy-CMI <products/diffpycmi/index.html>`_
+- 2014-03-21 - Release of  `DiffPy-CMI <products/diffpycmi/index.html>`_
 
 - 2013-02-05 - Initial release of the PDFgetX3 program.
 
