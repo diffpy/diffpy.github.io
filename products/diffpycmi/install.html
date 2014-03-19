@@ -111,7 +111,7 @@ support will be added in a future release so please check back.</strong></p>
 steps below to install:</p>
 <ol class="arabic">
 <li><p class="first">Install the required dependencies from the command line by using a
-suitable package manager.</p>
+suitable package manager (see below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a>).</p>
 <p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
@@ -133,31 +133,51 @@ suitable package manager.</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install \
     python27 py27-setuptools py27-ipython py27-lxml \
     gsl-devel boost py27-numpy py27-scipy py27-matplotlib scons git-core
-
-sudo port select --set ipython ipython27
+</pre></div>
+</div>
+<p>Make sure the macports versions of ipython and python are active by
+running the following commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo port select --set ipython ipython27
 sudo port select --set python python27
 </pre></div>
 </div>
-<p>Important: When finished installed the Mac OS X dependencies, adjust
+<p>Important: When finished installing the Mac OS X dependencies, adjust
 the shell environment so that MacPorts Python is the first in the
 PATH:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=/opt/local/bin:${PATH}
 </pre></div>
 </div>
-<p>See below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a> (these should already be
-installed after following the instructions in step 1).</p>
+<p><strong>Additional Mac installation hints:</strong></p>
+<ul class="simple">
+<li>We recommend that you upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
+<li>You must install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a> and
+we also recommend that you upgrade to the latest version.</li>
+<li>If you are not familiar with the macports package manager follow
+<a class="reference external" href="http://www.macports.org/install.php">these instructions</a> to
+install it.</li>
+<li>It may take several hours to install all the dependencies using
+macports.  Please be patient.</li>
+</ul>
 </li>
 <li><p class="first">Unzip the DiffPy-CMI tarball into a directory of your choice:</p>
 <div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy-version.tar.gz
 </pre></div>
 </div>
 </li>
+<li><p class="first">To build the code from source execute the following command from
+within your <tt class="docutils literal"><span class="pre">diffpy-version</span></tt> directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>./install
+</pre></div>
+</div>
+<p><strong>Note: for a Mac installation you must build from source.  For
+Unix/Linux it is optional.</strong></p>
+</li>
 <li><p class="first">Create a symbolic link to the DiffPy-CMI directory inside the Python
 directory for user files.</p>
 <p>For a one-user installation determine the Python directory for user
 files, create it if it does not exist yet, and put a symbolic
 link to the diffpy-1.0.pth file inside this folder. This can be done
-by executing the follwing code from within your DiffPy-CMI directory:</p>
+by executing the following code from within your DiffPy-CMI directory:</p>
 <div class="highlight-python"><div class="highlight"><pre>D=&quot;$(python -c &#39;import site; print site.USER_SITE&#39;)&quot;
 mkdir -p &quot;$D&quot;
 ln -si $PWD/diffpy-1.0.pth &quot;$D&quot;/
