@@ -18,7 +18,7 @@ diffraction analysis and the study of the atomic structure of materials.
 
 
 DiffPy is the home of the 
-`Diffpy-CMI <products/diffpycmi/index.html>`_
+`DiffPy-CMI <products/diffpycmi/index.html>`_
 Complex Modeling framework, a modular software framework for robust and extensible 
 modeling of diffraction data.  We welcome contributions to this project from the 
 community.
@@ -36,7 +36,7 @@ centered at Columbia University and, before that, Michigan State University.
 News
 ====
 
-- 2014-03-01 - Release of  `Diffpy-CMI <products/diffpycmi/index.html>`_
+- 2014-03-01 - Release of  `DiffPy-CMI <products/diffpycmi/index.html>`_
 
 - 2013-02-05 - Initial release of the PDFgetX3 program.
 
