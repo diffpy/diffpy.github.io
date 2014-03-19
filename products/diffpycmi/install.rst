@@ -1,6 +1,9 @@
 Installation
 ============
 
+**Note: The current release is for Unix, Linux, and Mac OS X. Windows
+support will be added in a future release so please check back.**
+
 Once you've downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:
 
@@ -13,7 +16,7 @@ steps below to install:
         libgsl0-dev libboost-all-dev python-dev \
         python-setuptools python-numpy python-scipy \
         python-matplotlib python-lxml ipython \
-        scons git zsh
+        build-essential scons git zsh
 
    For Fedora use ``yum``::
 
@@ -21,7 +24,23 @@ steps below to install:
         gsl-devel boost-devel python-devel 
         python-setuptools numpy scipy  \
         python-matplotlib python-lxml \
-        python-ipython-notebook scons git zsh
+        python-ipython-notebook \
+        gcc-c++ scons git zsh
+
+   For Mac OS X use ``macports``::
+
+    sudo port install \
+        python27 py27-setuptools py27-ipython py27-lxml \
+        gsl-devel boost py27-numpy py27-scipy py27-matplotlib scons git-core
+
+    sudo port select --set ipython ipython27
+    sudo port select --set python python27
+
+   Important: When finished installed the Mac OS X dependencies, adjust
+   the shell environment so that MacPorts Python is the first in the
+   PATH::
+
+    export PATH=/opt/local/bin:${PATH}
 
 
    See below for a brief :ref:`dependencies`
