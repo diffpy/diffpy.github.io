@@ -25,7 +25,7 @@ and check back frequently for updates.
 Getting Started
 ===============
 
-* `Download <https://github.com/diffpy/diffpy-release/releases>`_ 
+* `Download <https://github.com/diffpy/diffpy-release/releases/tag/v1.0a1>`_ 
   (by downloading and using this software you are agreeing to the 
   conditions specified in `LICENSE.txt <license.html>`_)
 
