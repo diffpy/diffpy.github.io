@@ -4,8 +4,7 @@ Python Packages
 This is a complete list of all Python packages developed by the DiffPy
 team. For more information about a specific package, follow the link to
 the corresponding github page. With the exception of PDFfit2 all of the
-packages listed below are bundled in the `DiffPy-CMI
-<diffpycmi/index.html>`_ release.
+packages listed below are bundled in the |DiffPyCMI| release.
 
 ======================      ============================================
 Module                      Description
@@ -44,6 +43,4 @@ Module                      Description
 
 .. _diffpy.pdffit2: https://github.com/diffpy/diffpy.pdffit2
 
-
-
-
+.. include:: ../abbreviations.txt

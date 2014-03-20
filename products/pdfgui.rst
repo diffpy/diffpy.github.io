@@ -21,7 +21,7 @@ Installation
 ============
 
 By downloading and using this software you are agreeing to the 
-conditions specified in the `software license <pdfguilicense.html>`_.
+conditions specified in the :doc:`software license <pdfguilicense>`.
 
 Follow one of the links below for installation instructions specific to
 your system:
@@ -127,13 +127,13 @@ Older releases are available for download
 Documentation and Help
 ======================
 
-*  The user manual is available `online in html format <../doc/pdfgui>`__
+*  The user manual is available `online in html format <../doc/pdfgui/index.html>`__
    and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
 
 *  Tutorial files are available for download as a 
    `zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
 
-*  Please, join the `community <../community.html>`_ forum for tips, tricks, and feedback.
+*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
 
 .. toctree::
    :hidden:

@@ -20,16 +20,14 @@ and check back frequently for updates.
 
 
 
-.. `Installation instructions <install.html>`_
-
 Getting Started
 ===============
 
 * `Download <https://github.com/diffpy/diffpy-release/releases/tag/v1.0a1>`_ 
   (by downloading and using this software you are agreeing to the 
-  conditions specified in `LICENSE.txt <license.html>`_)
+  conditions specified in :doc:`LICENSE.txt <license>`)
 
-* `Install <install.html>`_
+* :doc:`Install <install>`
 
 * `Play <https://github.com/diffpy/cmi_exchange#cmi-exchange>`_
 
@@ -38,11 +36,11 @@ Getting Started
 What next?
 ==========
 
-* `Get tips on using the CMI exchange <cmi_exchange.html>`_
+* :doc:`Get tips on using the CMI exchange <cmi_exchange>`
 
-* `Update to the latest sources <updatesources.html>`_
+* :doc:`Update to the latest sources <updatesources>`
 
-* `Contribute code <contributecode.html>`_
+* :doc:`Contribute code <contributecode>`
 
 
 Contents and Documentation
