@@ -50,7 +50,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="../../index.html"><img src="../../_static/diffpy_logo_header.png">
-          Diffpy</a>
+          DiffPy</a>
         <span class="navbar-text navbar-version pull-left"><b></b></span>
       </div>
 
@@ -105,13 +105,19 @@
     
         <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p><strong>Note: The current release is for Unix, Linux, and Mac OS X. Windows
-support will be added in a future release so please check back.</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The current release is for Unix, Linux, and Mac OS X.  Windows
+support will be added in a future release so please check back.</p>
+</div>
 <p>Once you&#8217;ve downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:</p>
 <ol class="arabic">
 <li><p class="first">Install the required dependencies from the command line by using a
 suitable package manager (see below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a>).</p>
+<div class="line-block">
+<div class="line"><strong>Ubuntu</strong></div>
+</div>
 <p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
@@ -119,6 +125,9 @@ suitable package manager (see below for a brief <a class="reference internal" hr
     python-matplotlib python-lxml ipython \
     build-essential scons git zsh
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Fedora</strong></div>
 </div>
 <p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo yum install \
@@ -128,6 +137,23 @@ suitable package manager (see below for a brief <a class="reference internal" hr
     python-ipython-notebook \
     gcc-c++ scons git zsh
 </pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Mac OS X</strong></div>
+</div>
+<p>Please follow these instructions before installing dependencies:</p>
+<ul class="simple">
+<li>We recommend that you upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
+<li>You must install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a> and
+we also recommend that you upgrade to the latest version.</li>
+<li>If you are not familiar with the macports package manager follow
+<a class="reference external" href="http://www.macports.org/install.php">these instructions</a> to
+install it.</li>
+<li>It may take several hours to install all the dependencies using
+macports.  Please be patient.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 <p>For Mac OS X use <tt class="docutils literal"><span class="pre">macports</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install \
@@ -147,17 +173,6 @@ PATH:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=/opt/local/bin:${PATH}
 </pre></div>
 </div>
-<p><strong>Additional Mac installation hints:</strong></p>
-<ul class="simple">
-<li>We recommend that you upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
-<li>You must install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a> and
-we also recommend that you upgrade to the latest version.</li>
-<li>If you are not familiar with the macports package manager follow
-<a class="reference external" href="http://www.macports.org/install.php">these instructions</a> to
-install it.</li>
-<li>It may take several hours to install all the dependencies using
-macports.  Please be patient.</li>
-</ul>
 </li>
 <li><p class="first">Unzip the DiffPy-CMI tarball into a directory of your choice:</p>
 <div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy-version.tar.gz

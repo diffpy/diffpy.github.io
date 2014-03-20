@@ -1,14 +1,18 @@
 Installation
 ============
 
-**Note: The current release is for Unix, Linux, and Mac OS X. Windows
-support will be added in a future release so please check back.**
+.. note::
+
+   The current release is for Unix, Linux, and Mac OS X.  Windows
+   support will be added in a future release so please check back.
 
 Once you've downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:
 
 #. Install the required dependencies from the command line by using a
    suitable package manager (see below for a brief :ref:`dependencies`).
+
+   |  **Ubuntu**
 
    For Ubuntu use ``apt-get``::
 
@@ -18,6 +22,8 @@ steps below to install:
         python-matplotlib python-lxml ipython \
         build-essential scons git zsh
 
+   | **Fedora**
+
    For Fedora use ``yum``::
 
     sudo yum install \
@@ -26,6 +32,22 @@ steps below to install:
         python-matplotlib python-lxml \
         python-ipython-notebook \
         gcc-c++ scons git zsh
+
+   | **Mac OS X**
+
+   Please follow these instructions before installing dependencies:
+
+   * We recommend that you upgrade to the `latest version of OS X
+     <https://www.apple.com/osx/>`_.
+   * You must install `Xcode <https://developer.apple.com/xcode/>`_ and
+     we also recommend that you upgrade to the latest version.
+   * If you are not familiar with the macports package manager follow
+     `these instructions <http://www.macports.org/install.php>`_ to
+     install it.
+   * It may take several hours to install all the dependencies using
+     macports.  Please be patient.
+
+   |
 
    For Mac OS X use ``macports``::
 
@@ -44,18 +66,6 @@ steps below to install:
    PATH::
 
     export PATH=/opt/local/bin:${PATH}
-
-   **Additional Mac installation hints:**
-
-   * We recommend that you upgrade to the `latest version of OS X
-     <https://www.apple.com/osx/>`_.
-   * You must install `Xcode <https://developer.apple.com/xcode/>`_ and
-     we also recommend that you upgrade to the latest version.
-   * If you are not familiar with the macports package manager follow
-     `these instructions <http://www.macports.org/install.php>`_ to
-     install it.
-   * It may take several hours to install all the dependencies using
-     macports.  Please be patient.
 
 
 #. Unzip the DiffPy-CMI tarball into a directory of your choice::
