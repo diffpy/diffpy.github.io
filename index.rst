@@ -3,6 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. raw:: html
+
+   <section class="info">
+     <div class="container">
+         <div class="span6">
+             <p class="muted">DiffPy-CMI is now available!
+             <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
+             <a href="acknowledgements.html">Acknowledgements</a></p>
+         </div>
+         </div>
+     </div>
+     
+   </section>
+
 
 
 DiffPy - Atomic Structure Analysis in Python 
@@ -11,7 +25,7 @@ A free and open source software project to provide python software for
 diffraction analysis and the study of the atomic structure of materials.
 
 
-.. figure:: logos/CMI-logo.png
+.. figure:: logos/CMI-logo_new.png
    :align: center
 
 .. include:: abbreviations.txt
@@ -33,15 +47,6 @@ centered at Columbia University and, before that, Michigan State University.
 
 
 
-News
-====
-
-- 2014-03-21 - Release of  `DiffPy-CMI <products/diffpycmi/index.html>`_
-
-- 2013-02-05 - Initial release of the PDFgetX3 program.
-
-- 2007-08-27 - `NSF nugget <NSFnugget.html>`_ describing PDFgui
-
 .. _danse: http://danse.us/
 
 .. _national science foundation: http://www.nsf.gov/
@@ -50,7 +55,7 @@ News
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
 
-----
+|
 
 .. figure:: logos/BNL_logo.jpg
    :align: left 
@@ -66,6 +71,7 @@ News
    community
    publications
    NSFnugget
+   acknowledgements
    products/diffpycmi/index
    products/diffpycmi/install
    products/diffpycmi/contents
