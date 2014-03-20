@@ -33,3 +33,7 @@
 
 .. |downloadProffenJac99| image:: /images/pdficon_small.png
    :target: /doc/pdffit/Proffen-jac-1999.pdf
+
+
+.. |DiffPyCMI| replace::
+   :doc:`DiffPy-CMI </products/diffpycmi/index>`
