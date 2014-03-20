@@ -54,19 +54,19 @@ What next?
 Contents and Documentation
 ==========================
 
-*  For a list of packages bundled in the DiffPy-CMI release visit the
-   `contents page <contents.html>`_
+For a list of packages bundled in the DiffPy-CMI release visit the
+:ref:`contents page <contents>`.
 
-*  Documentation for modules developed by the diffpy team can generally be
-   found at diffpy.org/doc/moduleName or by following one of the links
-   below.
+Documentation for modules developed by the diffpy team can generally be
+found at *diffpy.org/doc/ModuleName* or by following one of the links
+below.
 
-   * `diffpy.srfit`_ 
-   * `diffpy.srreal`_
-   * `diffpy.Structure`_
-   * `diffpy.utils`_
-   * `pyobjcryst`_
-   * `libdiffpy`_
+   `diffpy.srfit`_ -
+   `diffpy.srreal`_ -
+   `diffpy.Structure`_ -
+   `pyobjcryst`_ -
+   `diffpy.utils`_ -
+   `libdiffpy`_
 
 .. _diffpy.srfit: ../../doc/srfit/
 
