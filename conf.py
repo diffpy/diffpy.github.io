@@ -112,7 +112,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # documentation.
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Diffpy",
+    'navbar_title': "DiffPy",
 
     # Tab name for entire site. (Default: "Site")
     # 'navbar_site_name': "Products",

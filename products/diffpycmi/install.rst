@@ -1,8 +1,10 @@
 Installation
 ============
 
-**Note: The current release is for Unix, Linux, and Mac OS X. Windows
-support will be added in a future release so please check back.**
+.. note::
+
+   The current release is for Unix, Linux, and Mac OS X.  Windows
+   support will be added in a future release so please check back.
 
 Once you've downloaded the most recent DiffPy-CMI tarball follow the
 steps below to install:

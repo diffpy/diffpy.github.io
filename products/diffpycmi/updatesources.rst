@@ -42,9 +42,10 @@ To rebuild the source code::
 This will rebuild all or specified packages from sources in the src folder. In both
 cases, you could use option -n to display the build steps.
 
-**Note:**
+.. note::
 
-If your installed version of python came from a python distribution other than 
-system python (e.g. the Enthought Python Distribution) it may not compatible with 
-the system boost library and the build may fail. To resolve the problem, you should
-rebuild boost library and then rebuild all source codes.  
+   If your installed version of Python came from a Python distribution
+   other than system Python (e.g. the Enthought Python Distribution) it
+   may be incompatible with the system boost library and the build may
+   fail. To resolve the problem, you should rebuild the boost library
+   against Enthought Python and then rebuild all DiffPy-CMI modules.
