@@ -6,12 +6,20 @@ DiffPy-CMI is our complex modeling framework. It is a highly flexible
 library of Python modules for robust modeling of nanostructures in
 crystals, nanomaterials, and amorphous materials.
 
-This is an early release of codes that are under intense development,
-with support for installation on Unix and Linux machines.
-The scope and documentation will evolve rapidly, but we want to make
-them available at the earliest possible date. Please make use of them
-and give feedback and suggestions for improvement, but please be patient
-and check back frequently for updates.
+The software provides functionality for storage and manipulation of
+structure data and calculation of structure-based quantities, such as
+PDF, SAS, bond valence sums, atom overlaps, bond lengths, and
+coordinations. Most importantly the DiffPy-CMI package contains a
+fitting framework for combining multiple experimental inputs in a single
+optimization problem.
+
+This is an early release of code that is under intense development, with
+support for installation on Unix, Linux, and Macintosh machines.  The
+scope and documentation of the project will evolve rapidly, but we want
+to make the code available at the earliest possible date. Please make
+use of the software and provide feedback and suggestions for
+improvement, but please be patient and check back frequently for
+updates.
 
 
 
