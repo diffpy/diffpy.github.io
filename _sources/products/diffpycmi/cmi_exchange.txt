@@ -24,10 +24,10 @@ file:
 
 For now simply follow the download zip link to get the entire project
 and unpack the zip file to a convenient location on your machine.  If
-you have correctly installed the `DiffPy-CMI <index.html>`_ package you
+you have correctly installed the |DiffPyCMI| package you
 can start running the scripts right away. Just follow the instructions
 in `New User Tips
-<https://github.com/diffpy/cmi_exchange#new-user-tips Tips>`_.
+<https://github.com/diffpy/cmi_exchange#new-user-tips>`_.
 
 You'll notice that there are two directories: ``cmi_plugins`` and
 ``cmi_scripts``.  The scripts are standalone python scripts that can be
@@ -73,3 +73,4 @@ If you're new to git and don't know what it means to fork a project
 `begin here <https://help.github.com/articles/fork-a-repo>`_.
 
 
+.. include:: ../../abbreviations.txt

@@ -31,8 +31,7 @@ diffraction analysis and the study of the atomic structure of materials.
 .. include:: abbreviations.txt
 
 
-DiffPy is the home of the 
-`DiffPy-CMI <products/diffpycmi/index.html>`_
+DiffPy is the home of the |DiffPyCMI|
 Complex Modeling framework, a modular software framework for robust and extensible 
 modeling of diffraction data.  We welcome contributions to this project from the 
 community.

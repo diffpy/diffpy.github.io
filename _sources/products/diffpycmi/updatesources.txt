@@ -3,7 +3,7 @@ How to Update to the Latest Sources
 
 In order to update and build the source code you must have all the
 dependencies installed. In addition to the dependencies listed in the
-`installation instructions <install.html>`_, you will need ``mercurial``
+:doc:`installation instructions <install>`, you will need ``mercurial``
 and ``wget``.  On Ubuntu and Fedora, the required software can easily be
 installed using the system package manager using the commands shown
 below.
