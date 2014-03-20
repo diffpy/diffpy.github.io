@@ -25,7 +25,7 @@ A free and open source software project to provide python software for
 diffraction analysis and the study of the atomic structure of materials.
 
 
-.. figure:: logos/CMI-logo_new.png
+.. figure:: logos/CMI-logo.png
    :align: center
 
 .. include:: abbreviations.txt

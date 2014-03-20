@@ -32,6 +32,6 @@ bodies.
 Additional Contributions
 ------------------------
 
-The Diffpy team would like to thank help and comments from multiple
-users during the development of this release: Dragica Podgorski,
+The DiffPy team would like to thank multiple users for their help and
+comments during the development of this release: Dragica Podgorski,
 Valentina Felsen, and Kirsten M. Ø. Jensen. 

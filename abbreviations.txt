@@ -1,7 +1,7 @@
 .. vim: set ft=rst:
 
 .. |citeJuhasJac13| replace::
-   P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, `PDFgetX3:
+   P. Juhás, T. Davis, C. L. Farrow, S. J. L. Billinge, `PDFgetX3:
    A rapid and highly automatable program for processing powder
    diffraction data into total scattering pair distribution functions
    <http://scripts.iucr.org/cgi-bin/paper?S0021889813005190>`__,
