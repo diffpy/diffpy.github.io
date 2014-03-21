@@ -1,13 +1,13 @@
 .. _contents:
 
-Contents
-========
+DiffPy-CMI Contents
+===================
 
 The DiffPy-CMI release includes Python and C++ modules developed by the
-DiffPy team as well as external libraries necessasary for functionality.
+DiffPy team as well as external libraries necessary for functionality.
 
-Python modules developed by the DiffPy team
--------------------------------------------
+Modules developed by the DiffPy team
+------------------------------------
 
 ======================      ============================================
 Module                      Description
@@ -31,9 +31,6 @@ Module                      Description
 
 `libdiffpy`_                C++ library for calculation of PDF and 
                             other real-space quantities.
-
-`libobjcryst`_              ObjCryst++ re-packaged for installation 
-                            as a shared library
 ======================      ============================================
 
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
@@ -59,7 +56,12 @@ Module                      Description
 ======================      ============================================
 `periodictable`_            Extensible periodic table of the elements 
                             with support for mass, density, and 
-                            Xray/neutron scattering information.
+                            X-ray/neutron scattering information.
+
+
+`libobjcryst`_              ObjCryst++, crystallographic library for C++
+                            re-packaged for installation as a shared
+                            library.
 
 `cxxtest`_                  Testing framework for C++.
 ======================      ============================================
