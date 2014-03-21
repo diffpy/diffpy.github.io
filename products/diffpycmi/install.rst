@@ -53,7 +53,7 @@ steps below to install:
 
     sudo port install \
         python27 py27-setuptools py27-ipython py27-lxml \
-        gsl-devel boost py27-numpy py27-scipy py27-matplotlib scons git-core
+        gsl boost py27-numpy py27-scipy py27-matplotlib scons git-core
 
    Make sure the macports versions of ipython and python are active by
    running the following commands:: 
