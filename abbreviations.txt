@@ -37,3 +37,74 @@
 
 .. |DiffPyCMI| replace::
    :doc:`DiffPy-CMI </products/diffpycmi/index>`
+
+.. |citeShiPRL14| replace:: Chenyang Shi, Majid Beidaghi, Michael
+   Naguib, Olha Mashtalir, Yury Gogotsi, and Simon J. L. Billinge,
+   Structure of nanocrystalline Ti\ :sub:`3`\ C\ :sub:`2` MXene using
+   atomic pair distribution function, *Phys. Rev. Lett.*, in press
+   (2014).
+
+.. |citeFarrowJac14| replace:: 
+   Christoper L. Farrow, Chenyang Shi, Pavol Juhás, Xiaogang Peng, and
+   Simon J. L. Billinge, Robust structure and morphology parameters for
+   CdS nanoparticles by combining small angle X-ray scattering and atomic
+   pair distribution function data in a complex modeling framework, *J.
+   Appl. Crystallogr.* **47**, in press (2014).
+
+.. |citeAbeykoonArxiv14| replace::
+   Milinda Abeykoon, Hefei Hu, Lijun Wu, Yimei Zhu, and Simon J. L.
+   Billinge, `Calibration and data collection protocols for reliable
+   lattice parameter values in electron pair distribution function (ePDF)
+   studies <http://arxiv.org/abs/1401.1850>`__, *arXiv*, 1401.1850 (2014).
+
+.. |citeChoiNanol13| replace:: 
+   Joshua J. Choi, Xiaohao Yang, Zachariah M.  Norman, Simon J. L.
+   Billinge, and Jonathan S. Owen, `Structure of methylammonium lead
+   iodide on mesoporous titanium dioxide: active material in high
+   performance metal-organic solar cells
+   <http://pubs.acs.org/doi/abs/10.1021/nl403514x>`__, *Nano Lett.*
+   **14**, 127 (2013).
+
+
+.. |citeJacquesNc13| replace::
+   Simon D. M. Jacques, Marco Di Michiel, Simon A. J. Kimber, Xiaohao
+   Yang, Robert J. Cernik, Andrew M. Beale, and Simon J. L. Billinge,
+   `Pair distribution function computed tomography
+   <http://www.nature.com/ncomms/2013/130930/ncomms3536/full/ncomms3536.html>`__,
+   *Nat. Commun.* **4**, 2536 (2013).
+
+
+.. |citeDavisCgd13| replace::
+   Timur Davis, Matthew Johnson, and Simon J. L. Billinge, `Towards
+   phase quantification at the nanoscale using the total scattering pair
+   distribution function (TSPDF) method: recrystallization of cryomilled
+   sulfamerazine <http://pubs.acs.org/doi/abs/10.1021/cg400179p>`__,
+   *Cryst. Growth Des.* **13**, 4239–4244 (2013).
+
+.. |citeYangPccp13| replace:: 
+   Xiaohao Yang, Ahmad S. Masadeh, James R. McBride, Emil S. Bozin,
+   Sandra J. Rosenthal, and Simon J. L. Billinge, `Confirmation of
+   disordered structure of ultrasmall CdSe nanoparticles from X-ray
+   atomic pair distribution function analysis
+   <http://pubs.rsc.org/en/Content/ArticleLanding/2013/CP/
+   c3cp00111c#!divAbstract>`__,
+   *Phys. Chem. Chem.  Phys.* **15**, 8480 (2013).
+
+.. |citeFarrowJacs13| replace:: 
+   Christopher L. Farrow, D. Kwabena Bediako, Yogesh Surendranath,
+   Daniel G. Nocera, and Simon J. L. Billinge, `Intermediate-range
+   structure of self-assembled cobalt-based oxygen evolving catalysts
+   <http://pubs.acs.org/doi/abs/10.1021/ja401276f?journalCode=
+   jacsat&quickLinkVolume=135&quickLinkPage=6403&selectedTab=
+   citation&volume=135>`__,
+   *J. Am. Chem.  Soc.* **135**, 6403-6406 (2013).
+
+
+.. |citeJensenJacs12| replace:: 
+   Kirsten M. Ø. Jensen, Mogens Christensen, Pavol Juhás, Christoffer
+   Tyrsted, Espen D. Bøjesen, Nina Lock, Simon J. L. Billinge, and Bo B.
+   Iversen, `Revealing the mechanisms behind SnO2 nanoparticle formation
+   and growth during hydrothermal synthesis: an in situ total scattering
+   study <http://pubs.acs.org/doi/abs/10.1021/ja300978f?journalCode=
+   jacsat&quickLinkVolume=134&quickLinkPage=6785&selectedTab=
+   citation&volume=134>`__, *J. Am. Chem. Soc.* **134**, 6785 (2012) 
