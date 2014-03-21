@@ -178,33 +178,25 @@ PATH:</p>
 </pre></div>
 </div>
 </li>
-<li><p class="first">To build the code from source execute the following command from
-within your <tt class="docutils literal"><span class="pre">diffpy-version</span></tt> directory:</p>
+<li><p class="first">Execute the following command from within your <tt class="docutils literal"><span class="pre">diffpy-version</span></tt>
+directory and follow the prompts:</p>
 <div class="highlight-python"><div class="highlight"><pre>./install
 </pre></div>
 </div>
-<p><strong>Note: for a Mac installation you must build from source.  For
-Unix/Linux it is optional.</strong></p>
-</li>
-<li><p class="first">Create a symbolic link to the DiffPy-CMI directory inside the Python
-directory for user files.</p>
-<p>For a one-user installation determine the Python directory for user
-files, create it if it does not exist yet, and put a symbolic
-link to the diffpy-1.0.pth file inside this folder. This can be done
-by executing the following code from within your DiffPy-CMI directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>D=&quot;$(python -c &#39;import site; print site.USER_SITE&#39;)&quot;
-mkdir -p &quot;$D&quot;
-ln -si $PWD/diffpy-1.0.pth &quot;$D&quot;/
+<p>If you prefer to install the software manually, create a symbolic link
+to the diffpy_cmi.pth file in some Python directory that processes
+.pth files.  Note that it is essential to use a symbolic link; making
+a copy of the .pth file will not work.</p>
+<p>For a single-user installation the preferred pth directory can be
+found using:</p>
+<div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.USER_SITE&#39;
 </pre></div>
 </div>
-<p>For a system-wide installation create symbolic link in the directory
-for system-wide Python packages. Again, the following code should be
-executed from within your DiffPy-CMI directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo ln -si $PWD/diffpy-1.0.pth /usr/local/lib/python2.7/dist-packages/
+<p>whereas for a system-wide installation the standard pth locations
+are:</p>
+<div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.getsitepackages()&#39;
 </pre></div>
 </div>
-<p>Note that it is essential to use a symbolic link.  Making a copy of the
-pth file will not work.</p>
 </li>
 <li><p class="first">Test the installation by running:</p>
 <div class="highlight-python"><div class="highlight"><pre>./runtests.sh
