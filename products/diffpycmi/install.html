@@ -30,7 +30,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="top" title="DiffPy  documentation" href="../../index.html" />
-    <link rel="next" title="Contents" href="contents.html" />
+    <link rel="next" title="DiffPy-CMI Contents" href="contents.html" />
     <link rel="prev" title="DiffPy-CMI" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -109,15 +109,16 @@
 <p class="last">The current release is for Unix, Linux, and Mac OS X.  Windows
 support will be added in a future release so please check back.</p>
 </div>
-<p>Once you&#8217;ve downloaded the most recent DiffPy-CMI tarball follow the
-steps below to install:</p>
-<ol class="arabic">
-<li><p class="first">Install the required dependencies from the command line by using a
-suitable package manager (see below for a brief <a class="reference internal" href="#dependencies"><em>Description of Dependencies</em></a>).</p>
-<div class="line-block">
-<div class="line"><strong>Ubuntu</strong></div>
-</div>
-<p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
+<p>Once you have downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
+follow the steps below.</p>
+<div class="section" id="install-system-software">
+<h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Permalink to this headline">¶</a></h2>
+<p>DiffPy-CMI requires the <a class="reference internal" href="#dependencies"><em>system software dependencies</em></a>
+which can be installed from command line using a suitable package manager.
+Here are installation commands for several supported systems.</p>
+<div class="section" id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
+<p>For Ubuntu or other Debian-based Linux distributions use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
     python-setuptools python-numpy python-scipy \
@@ -125,87 +126,106 @@ suitable package manager (see below for a brief <a class="reference internal" hr
     build-essential scons git zsh
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><strong>Fedora</strong></div>
 </div>
-<p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
+<div class="section" id="fedora">
+<h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
+<p>Use <tt class="docutils literal"><span class="pre">yum</span></tt> for Fedora or RedHat Linux:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo yum install \
-    gsl-devel boost-devel python-devel
+    gsl-devel boost-devel python-devel \
     python-setuptools numpy scipy  \
     python-matplotlib python-lxml \
     python-ipython-notebook \
     gcc-c++ scons git zsh
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line"><strong>Mac OS X</strong></div>
 </div>
-<p>Please follow these instructions before installing dependencies:</p>
+<div class="section" id="mac-os-x">
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
+<p>For Mac OS X the system dependencies can be installed using the
+<a class="reference external" href="http://www.macports.org">MacPorts</a> software manager.  A similar
+package system <a class="reference external" href="http://brew.sh">Homebrew</a> works as well, but has
+been considerably less tested with DiffPy-CMI.</p>
+<p>For best results with MacPorts follow these tips:</p>
 <ul class="simple">
-<li>We recommend that you upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
-<li>You must install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a> and
-we also recommend that you upgrade to the latest version.</li>
-<li>If you are not familiar with the macports package manager follow
-<a class="reference external" href="http://www.macports.org/install.php">these instructions</a> to
-install it.</li>
-<li>It may take several hours to install all the dependencies using
-macports.  Please be patient.</li>
+<li>We recommend to upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
+<li>Install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>.
+If already present, we recommend to upgrade to the latest version.</li>
+<li>Be patient, it may take several hours to install all the dependencies
+using MacPorts.</li>
+<li>Installation command may fail on the first run, but usually works
+when repeated.  See MacPorts
+<a class="reference external" href="https://trac.macports.org/wiki/FAQ#buildfails">FAQ</a>
+for more help.</li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>For Mac OS X use <tt class="docutils literal"><span class="pre">macports</span></tt>:</p>
+<p>To install system dependencies with MacPorts, use:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install \
     python27 py27-setuptools py27-ipython py27-lxml \
-    gsl-devel boost py27-numpy py27-scipy py27-matplotlib scons git-core
+    gsl boost py27-numpy py27-scipy py27-matplotlib scons git-core
 </pre></div>
 </div>
-<p>Make sure the macports versions of ipython and python are active by
+<p>Make sure the MacPorts versions of IPython and Python are active by
 running the following commands:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port select --set ipython ipython27
 sudo port select --set python python27
 </pre></div>
 </div>
-<p>Important: When finished installing the Mac OS X dependencies, adjust
+<p><strong>Important:</strong> When finished installing the Mac OS X dependencies, adjust
 the shell environment so that MacPorts Python is the first in the
-PATH:</p>
+PATH.  This can be accomplished by adding the following line to either
+of <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.zshenv</span></tt> file in your HOME directory</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=/opt/local/bin:${PATH}
 </pre></div>
 </div>
-</li>
-<li><p class="first">Unzip the DiffPy-CMI tarball into a directory of your choice:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy-version.tar.gz
+</div>
+</div>
+<div class="section" id="install-diffpy-cmi">
+<h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Permalink to this headline">¶</a></h2>
+<p>Unzip the DiffPy-CMI tarball into a directory of your choice.
+Execute the included <tt class="file docutils literal"><span class="pre">install</span></tt> script and follow the prompts
+(replace VERSION to match the actual filename):</p>
+<div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy_cmi-VERSION.tar.gz
+cd diffpy_cmi-VERSION
+./install
 </pre></div>
 </div>
-</li>
-<li><p class="first">Execute the following command from within your <tt class="docutils literal"><span class="pre">diffpy-version</span></tt>
-directory and follow the prompts:</p>
-<div class="highlight-python"><div class="highlight"><pre>./install
-</pre></div>
-</div>
-<p>If you prefer to install the software manually, create a symbolic link
-to the diffpy_cmi.pth file in some Python directory that processes
-.pth files.  Note that it is essential to use a symbolic link; making
-a copy of the .pth file will not work.</p>
-<p>For a single-user installation the preferred pth directory can be
-found using:</p>
+<p>That should be it, proceed to the Test section.</p>
+<p>For binary tarballs the installation can be also accomplished by
+creating a symbolic link to the <tt class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></tt> file in some Python
+directory that processes <tt class="file docutils literal"><span class="pre">.pth</span></tt> files.</p>
+<p>For a single-user installation the preferred <tt class="file docutils literal"><span class="pre">pth</span></tt> directory can be
+found using</p>
 <div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.USER_SITE&#39;
 </pre></div>
 </div>
-<p>whereas for a system-wide installation the standard pth locations
-are:</p>
+<p>whereas for a system-wide installation the standard <tt class="file docutils literal"><span class="pre">pth</span></tt> locations are</p>
 <div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.getsitepackages()&#39;
 </pre></div>
 </div>
-</li>
-<li><p class="first">Test the installation by running:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is essential to use a symbolic link; making a copy of the
+<tt class="file docutils literal"><span class="pre">.pth</span></tt> file will not work.</p>
+</div>
+</div>
+<div class="section" id="test">
+<h2>3 Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>Execute the included test script, which should report no warnings
+nor errors:</p>
 <div class="highlight-python"><div class="highlight"><pre>./runtests.sh
 </pre></div>
 </div>
-</li>
-</ol>
-<div class="section" id="description-of-dependencies">
-<span id="dependencies"></span><h2>Description of Dependencies<a class="headerlink" href="#description-of-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>If there are failures for binary tarballs, you may need to recompile
+the sources by running <tt class="docutils literal"><span class="pre">./install</span> <span class="pre">--build</span></tt>.</p>
+</div>
+<div class="section" id="contacts">
+<h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h2>
+<p>If you need help with installing this software, please check discussions
+or post your question to the
+<a class="reference external" href="https://groups.google.com/d/forum/diffpy-dev">diffpy-dev</a>
+group.</p>
+<hr class="docutils" />
+<div class="section" id="list-of-software-dependencies">
+<span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</li>
 <li><strong>boost</strong> - a set of useful C++ libraries.</li>
@@ -220,6 +240,7 @@ are:</p>
 <li><strong>git</strong> - a version control system.</li>
 <li><strong>zsh</strong> - an interactive shell and powerful scripting language.</li>
 </ul>
+</div>
 </div>
 </div>
 

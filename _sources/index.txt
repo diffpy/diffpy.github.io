@@ -5,17 +5,11 @@
 
 .. raw:: html
 
-   <section class="info">
-     <div class="container">
-         <div class="span6">
-             <p class="muted">DiffPy-CMI is now available!
-             <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
-             <a href="acknowledgements.html">Acknowledgements</a></p>
-         </div>
-         </div>
-     </div>
-     
-   </section>
+   DiffPy-CMI is now available!
+   &nbsp;
+   <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
+   &nbsp;
+   <a href="acknowledgements.html">Credits</a></p>
 
 
 
@@ -27,9 +21,11 @@ diffraction analysis and the study of the atomic structure of materials.
 
 .. figure:: logos/CMI-logo.png
    :align: center
+   :scale: 90%
+
+.. image:: images/blank1x1.png
 
 .. include:: abbreviations.txt
-
 
 DiffPy is the home of the |DiffPyCMI|
 Complex Modeling framework, a modular software framework for robust and extensible 
@@ -54,7 +50,9 @@ centered at Columbia University and, before that, Michigan State University.
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
 
-|
+.. image:: images/blank1x1.png
+   :align: left
+   :height: 10
 
 .. figure:: logos/BNL_logo.jpg
    :align: left 
