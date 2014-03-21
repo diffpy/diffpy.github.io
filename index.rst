@@ -27,9 +27,11 @@ diffraction analysis and the study of the atomic structure of materials.
 
 .. figure:: logos/CMI-logo.png
    :align: center
+   :scale: 90%
+
+.. image:: images/blank1x1.png
 
 .. include:: abbreviations.txt
-
 
 DiffPy is the home of the |DiffPyCMI|
 Complex Modeling framework, a modular software framework for robust and extensible 
@@ -54,7 +56,9 @@ centered at Columbia University and, before that, Michigan State University.
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
 
-|
+.. image:: images/blank1x1.png
+   :align: left
+   :height: 10
 
 .. figure:: logos/BNL_logo.jpg
    :align: left 
