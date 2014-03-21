@@ -72,35 +72,26 @@ steps below to install:
 
     tar xzf diffpy-version.tar.gz
 
-#. To build the code from source execute the following command from
-   within your ``diffpy-version`` directory::
+#. Execute the following command from within your ``diffpy-version``
+   directory and follow the prompts::
     
     ./install
 
-   **Note: for a Mac installation you must build from source.  For
-   Unix/Linux it is optional.**
+   If you prefer to install the software manually, create a symbolic link
+   to the diffpy_cmi.pth file in some Python directory that processes
+   .pth files.  Note that it is essential to use a symbolic link; making
+   a copy of the .pth file will not work.
 
-#. Create a symbolic link to the DiffPy-CMI directory inside the Python
-   directory for user files.
+   For a single-user installation the preferred pth directory can be
+   found using::
 
-   For a one-user installation determine the Python directory for user
-   files, create it if it does not exist yet, and put a symbolic
-   link to the diffpy-1.0.pth file inside this folder. This can be done 
-   by executing the following code from within your DiffPy-CMI directory::
+    python -c 'import site; print site.USER_SITE'
 
-    D="$(python -c 'import site; print site.USER_SITE')"
-    mkdir -p "$D"
-    ln -si $PWD/diffpy-1.0.pth "$D"/
+   whereas for a system-wide installation the standard pth locations
+   are::
 
-   For a system-wide installation create symbolic link in the directory
-   for system-wide Python packages. Again, the following code should be
-   executed from within your DiffPy-CMI directory::
-
-    sudo ln -si $PWD/diffpy-1.0.pth /usr/local/lib/python2.7/dist-packages/
-
-   Note that it is essential to use a symbolic link.  Making a copy of the
-   pth file will not work.
-
+    python -c 'import site; print site.getsitepackages()' 
+ 
 
 #. Test the installation by running::
 
