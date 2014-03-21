@@ -5,17 +5,11 @@
 
 .. raw:: html
 
-   <section class="info">
-     <div class="container">
-         <div class="span6">
-             <p class="muted">DiffPy-CMI is now available!
-             <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
-             <a href="acknowledgements.html">Acknowledgements</a></p>
-         </div>
-         </div>
-     </div>
-     
-   </section>
+   DiffPy-CMI is now available!
+   &nbsp;
+   <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
+   &nbsp;
+   <a href="acknowledgements.html">Credits</a></p>
 
 
 
