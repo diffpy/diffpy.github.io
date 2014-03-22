@@ -70,7 +70,7 @@
    Simon D. M. Jacques, Marco Di Michiel, Simon A. J. Kimber, Xiaohao
    Yang, Robert J. Cernik, Andrew M. Beale, and Simon J. L. Billinge,
    `Pair distribution function computed tomography
-   <http://www.nature.com/ncomms/2013/130930/ncomms3536/full/ncomms3536.html>`__,
+   <http://dx.doi.org/10.1038/ncomms3536>`__,
    *Nat. Commun.* **4**, 2536 (2013).
 
 
@@ -78,7 +78,7 @@
    Timur Davis, Matthew Johnson, and Simon J. L. Billinge, `Towards
    phase quantification at the nanoscale using the total scattering pair
    distribution function (TSPDF) method: recrystallization of cryomilled
-   sulfamerazine <http://pubs.acs.org/doi/abs/10.1021/cg400179p>`__,
+   sulfamerazine <http://dx.doi.org/10.1021/cg400179p>`__,
    *Cryst. Growth Des.* **13**, 4239–4244 (2013).
 
 .. |citeYangPccp13| replace:: 
@@ -86,17 +86,14 @@
    Sandra J. Rosenthal, and Simon J. L. Billinge, `Confirmation of
    disordered structure of ultrasmall CdSe nanoparticles from X-ray
    atomic pair distribution function analysis
-   <http://pubs.rsc.org/en/Content/ArticleLanding/2013/CP/
-   c3cp00111c#!divAbstract>`__,
+   <http://dx.doi.org/10.1039/C3CP00111C>`__,
    *Phys. Chem. Chem.  Phys.* **15**, 8480 (2013).
 
 .. |citeFarrowJacs13| replace:: 
    Christopher L. Farrow, D. Kwabena Bediako, Yogesh Surendranath,
    Daniel G. Nocera, and Simon J. L. Billinge, `Intermediate-range
    structure of self-assembled cobalt-based oxygen evolving catalysts
-   <http://pubs.acs.org/doi/abs/10.1021/ja401276f?journalCode=
-   jacsat&quickLinkVolume=135&quickLinkPage=6403&selectedTab=
-   citation&volume=135>`__,
+   <http://dx.doi.org/10.1021/ja401276f>`__,
    *J. Am. Chem.  Soc.* **135**, 6403-6406 (2013).
 
 
@@ -105,6 +102,4 @@
    Tyrsted, Espen D. Bøjesen, Nina Lock, Simon J. L. Billinge, and Bo B.
    Iversen, `Revealing the mechanisms behind SnO2 nanoparticle formation
    and growth during hydrothermal synthesis: an in situ total scattering
-   study <http://pubs.acs.org/doi/abs/10.1021/ja300978f?journalCode=
-   jacsat&quickLinkVolume=134&quickLinkPage=6785&selectedTab=
-   citation&volume=134>`__, *J. Am. Chem. Soc.* **134**, 6785 (2012) 
+   study <http://dx.doi.org/10.1021/ja300978f>`__, *J. Am. Chem. Soc.* **134**, 6785 (2012) 
