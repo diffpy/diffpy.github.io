@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _home:
+
 .. raw:: html
 
    DiffPy-CMI is now available!
@@ -22,6 +24,7 @@ diffraction analysis and the study of the atomic structure of materials.
 .. figure:: logos/CMI-logo.png
    :align: center
    :scale: 90%
+   :target: `home`_
 
 .. image:: images/blank1x1.png
 
