@@ -31,7 +31,7 @@ updates.
 Getting Started
 ===============
 
-* `Download <https://github.com/diffpy/diffpy-release/releases/tag/v1.0a1>`_ 
+* `Download <https://github.com/diffpy/diffpy-release/releases/latest>`_
   (use of this software is subject to the conditions in
   :doc:`LICENSE.txt <license>`)
 
