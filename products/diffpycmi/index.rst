@@ -57,7 +57,7 @@ Contents and Documentation
 For a list of packages bundled in the DiffPy-CMI release visit the
 :ref:`contents page <contents>`.
 
-Documentation for modules developed by the diffpy team can generally be
+Documentation for modules developed by the DiffPy team can generally be
 found at *diffpy.org/doc/ModuleName* or by following one of the links
 below.
 
