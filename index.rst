@@ -23,8 +23,6 @@ diffraction analysis and the study of the atomic structure of materials.
 
 .. figure:: logos/CMI-logo.png
    :align: center
-   :scale: 90%
-   :target: `home`_
 
 .. image:: images/blank1x1.png
 
