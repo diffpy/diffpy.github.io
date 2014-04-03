@@ -12,7 +12,11 @@ software is free for open academic research, but requires paid license for comme
 PDFgetX3-academic can be obtained from the
 `Columbia flintbox <http://columbia.flintbox.com/public/project/22569/>`_, provided it will
 be used for open academic research.
-`Installation instructions <doc/pdfgetx3/install.html>`_.
+
+* `Installation instructions <../doc/pdfgetx3/install.html>`_
+* `PDFgetX3 user manual <../doc/pdfgetx3/index.html>`__,
+  `printable manual <../doc/pdfgetx3/PDFgetX3_manual.pdf>`__
+* `tutorial files <../doc/pdfgetx3/pdfgetx3-examples.zip>`__
 
 If you plan to use PDFgetX3 in any other way, please contact
 `Beth Kauderer <techtransfer@columbia.edu>`_ at Columbia Technology Ventures.
