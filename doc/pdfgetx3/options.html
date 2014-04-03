@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Options and parameters &mdash; PDFgetX3 1.0-r2491-20130712 documentation</title>
+    <title>Options and parameters &mdash; PDFgetX3 1.0-r2814-20140402 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '1.0-r2491-20130712',
+        URL_ROOT:    './',
+        VERSION:     '1.0-r2814-20140402',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.0-r2491-20130712 documentation" href="index.html" />
+    <link rel="top" title="PDFgetX3 1.0-r2814-20140402 documentation" href="index.html" />
     <link rel="next" title="The plotdata program" href="plotdata.html" />
     <link rel="prev" title="Interactive mode" href="interact.html" /> 
   </head>
@@ -43,7 +41,7 @@
         <li class="right" >
           <a href="interact.html" title="Interactive mode"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -83,9 +81,10 @@ a processed specimen using each of these forms:</p>
 </div>
 </li>
 <li><p class="first">set in the IPython interactive mode:</p>
-<div class="highlight-python"><pre>pdfgetx3 -i
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 -i
 ...
-In [1]: config.composition = "CaTiO3"</pre>
+In [1]: config.composition = &quot;CaTiO3&quot;
+</pre></div>
 </div>
 </li>
 </ol>
@@ -94,14 +93,14 @@ In [1]: config.composition = "CaTiO3"</pre>
 <h2>Program operation<a class="headerlink" href="#program-operation" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-h">
-<tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display a brief usage information with a list of command line options
 and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-V">
-<tt class="descname">-V</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--version</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-V" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--version"></span><tt class="descname">-V</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--version</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-V" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display the program version and exit.</p>
 </dd></dl>
 
@@ -113,7 +112,7 @@ and exit.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-f">
-<tt class="descname">-f</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--find</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-f" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--find"></span><tt class="descname">-f</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--find</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-f" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <blockquote id="my-findpatterns">
@@ -168,7 +167,7 @@ quotes (&#8221;) when used on the command line.</p>
 </div></blockquote>
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-l">
-<tt class="descname">-l</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--list</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-l" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--list"></span><tt class="descname">-l</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--list</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-l" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all input files and exit.  This is useful with the
 <em class="xref std std-option">--find</em> option to verify if the input files
 are matched as intended.</p>
@@ -179,14 +178,14 @@ are matched as intended.</p>
 <h2>Configuration file options<a class="headerlink" href="#configuration-file-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-c">
-<tt class="descname">-c</tt><tt class="descclassname"> CONFIG</tt><tt class="descclassname">, </tt><tt class="descname">--config</tt><tt class="descclassname">=CONFIG</tt><a class="headerlink" href="#cmdoption-pdfgetx3-c" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--config"></span><tt class="descname">-c</tt><tt class="descclassname"> CONFIG</tt><tt class="descclassname">, </tt><tt class="descname">--config</tt><tt class="descclassname">=CONFIG</tt><a class="headerlink" href="#cmdoption-pdfgetx3-c" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read custom configuration file after loading the default ones.
 Do not load any configuration file when <cite>NONE</cite>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-s">
-<tt class="descname">-s</tt><tt class="descclassname"> NAME</tt><tt class="descclassname">, </tt><tt class="descname">--section</tt><tt class="descclassname">=NAME</tt><a class="headerlink" href="#cmdoption-pdfgetx3-s" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--section"></span><tt class="descname">-s</tt><tt class="descclassname"> NAME</tt><tt class="descclassname">, </tt><tt class="descname">--section</tt><tt class="descclassname">=NAME</tt><a class="headerlink" href="#cmdoption-pdfgetx3-s" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the custom configuration file section <tt class="docutils literal"><span class="pre">[SectionName]</span></tt> after
 loading the <tt class="docutils literal"><span class="pre">[DEFAULT]</span></tt> section.  This is useful for creating
 several configuration variants in a single configuration file.</p>
@@ -203,7 +202,7 @@ to the standard output when FILE is &#8220;-&#8221;.</p>
 for further details.</p>
 </div>
 <div class="section" id="input-and-output-options">
-<h2>Input and output options<a class="headerlink" href="#input-and-output-options" title="Permalink to this headline">¶</a></h2>
+<span id="my-ioparameters"></span><h2>Input and output options<a class="headerlink" href="#input-and-output-options" title="Permalink to this headline">¶</a></h2>
 <dl class="confval">
 <dt id="confval-inputfile">
 <tt class="descname">inputfile</tt><a class="headerlink" href="#confval-inputfile" title="Permalink to this definition">¶</a></dt>
@@ -234,7 +233,7 @@ inverse Ångströms or <em>Q</em> in inverse nanometers.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-b">
-<tt class="descname">-b</tt><tt class="descclassname"> FILE</tt><tt class="descclassname">, </tt><tt class="descname">--background</tt><tt class="descclassname">=FILE</tt><a class="headerlink" href="#cmdoption-pdfgetx3-b" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--background"></span><tt class="descname">-b</tt><tt class="descclassname"> FILE</tt><tt class="descclassname">, </tt><tt class="descname">--background</tt><tt class="descclassname">=FILE</tt><a class="headerlink" href="#cmdoption-pdfgetx3-b" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional datafile with background intensities from an empty sample
 holder.  It must be in the same dataformat as other input files.</p>
 </dd></dl>
@@ -246,7 +245,7 @@ holder.  It must be in the same dataformat as other input files.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-d">
-<tt class="descname">-d</tt><tt class="descclassname"> DATAPATH</tt><tt class="descclassname">, </tt><tt class="descname">--datapath</tt><tt class="descclassname">=DATAPATH</tt><a class="headerlink" href="#cmdoption-pdfgetx3-d" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--datapath"></span><tt class="descname">-d</tt><tt class="descclassname"> DATAPATH</tt><tt class="descclassname">, </tt><tt class="descname">--datapath</tt><tt class="descclassname">=DATAPATH</tt><a class="headerlink" href="#cmdoption-pdfgetx3-d" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more extra directories to be searched for input or
 background data files.   The default path is given by the
 <span class="target" id="index-1"></span><a class="reference internal" href="files.html#envvar-PDFGETX3PATH"><tt class="xref std std-envvar docutils literal"><span class="pre">PDFGETX3PATH</span></tt></a> environment variable.  The <em class="xref std std-option">-d</em>
@@ -266,7 +265,7 @@ inputs.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-o">
-<tt class="descname">-o</tt><tt class="descclassname"> OUTPUT</tt><tt class="descclassname">, </tt><tt class="descname">--output</tt><tt class="descclassname">=OUTPUT</tt><a class="headerlink" href="#cmdoption-pdfgetx3-o" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--output"></span><tt class="descname">-o</tt><tt class="descclassname"> OUTPUT</tt><tt class="descclassname">, </tt><tt class="descname">--output</tt><tt class="descclassname">=OUTPUT</tt><a class="headerlink" href="#cmdoption-pdfgetx3-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output file name, write to the standard output when &#8220;-&#8221;.  The
 <a class="reference internal" href="#cmdoption-pdfgetx3-t"><em class="xref std std-option">-t, --outputtypes</em></a> option controls what results are
 being saved.  Normally the OUTPUT is used as a custom basename for
@@ -324,7 +323,7 @@ be appended as a default filename extension.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-t">
-<tt class="descname">-t</tt><tt class="descclassname"> TYPES</tt><tt class="descclassname">, </tt><tt class="descname">--outputtypes</tt><tt class="descclassname">=TYPES</tt><a class="headerlink" href="#cmdoption-pdfgetx3-t" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--outputtypes"></span><tt class="descname">-t</tt><tt class="descclassname"> TYPES</tt><tt class="descclassname">, </tt><tt class="descname">--outputtypes</tt><tt class="descclassname">=TYPES</tt><a class="headerlink" href="#cmdoption-pdfgetx3-t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Result types to be saved, one or more comma separated values.
 Supported values are &#8220;iq&#8221;, &#8220;sq&#8221;, &#8220;fq&#8221;, &#8220;gr&#8221;, corresponding to the
 <em>I</em>(<em>Q</em>), <em>S</em>(<em>Q</em>), <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves; these are also used as output
@@ -359,7 +358,7 @@ are only meaningful in the configuration file.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-w">
-<tt class="descname">-w</tt><tt class="descclassname"> FLOAT</tt><tt class="descclassname">, </tt><tt class="descname">--wavelength</tt><tt class="descclassname">=FLOAT</tt><a class="headerlink" href="#cmdoption-pdfgetx3-w" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--wavelength"></span><tt class="descname">-w</tt><tt class="descclassname"> FLOAT</tt><tt class="descclassname">, </tt><tt class="descname">--wavelength</tt><tt class="descclassname">=FLOAT</tt><a class="headerlink" href="#cmdoption-pdfgetx3-w" title="Permalink to this definition">¶</a></dt>
 <dd><p>X-ray wavelength in Ångströms.  This value is required
 for the &#8220;twotheta&#8221; dataformat in order to convert the scattering
 angles 2Θ to a momentum transfer <em>Q</em>.  For other data formats
@@ -494,7 +493,7 @@ signal decays to the level of data noise.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-p">
-<tt class="descname">-p</tt><tt class="descclassname"> TYPES</tt><tt class="descclassname">, </tt><tt class="descname">--plot</tt><tt class="descclassname">=TYPES</tt><a class="headerlink" href="#cmdoption-pdfgetx3-p" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--plot"></span><tt class="descname">-p</tt><tt class="descclassname"> TYPES</tt><tt class="descclassname">, </tt><tt class="descname">--plot</tt><tt class="descclassname">=TYPES</tt><a class="headerlink" href="#cmdoption-pdfgetx3-p" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the specified results.  A comma separated list with one or
 more items from &#8220;iq&#8221;, &#8220;sq&#8221;, &#8220;fq&#8221;, &#8220;gr&#8221;.  No plot is produced when
 empty, &#8220;none&#8221; or &#8220;NONE&#8221;.  Setting this option turns on the
@@ -508,7 +507,7 @@ interactive mode.</p>
 
 <dl class="option">
 <dt id="cmdoption-pdfgetx3-i">
-<tt class="descname">-i</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--interact</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-i" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-pdfgetx3--interact"></span><tt class="descname">-i</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--interact</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-pdfgetx3-i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start an IPython interactive session after processing all files.
 Useful for tuning the configuration parameters or interactive
 plotting.  This is always on when plot option has been set.
@@ -587,12 +586,12 @@ in the program.</p>
         <li class="right" >
           <a href="interact.html" title="Interactive mode"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        &copy; Copyright 2014, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Interactive mode &mdash; PDFgetX3 1.0-r2491-20130712 documentation</title>
+    <title>Interactive mode &mdash; PDFgetX3 1.0-r2814-20140402 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '1.0-r2491-20130712',
+        URL_ROOT:    './',
+        VERSION:     '1.0-r2814-20140402',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.0-r2491-20130712 documentation" href="index.html" />
+    <link rel="top" title="PDFgetX3 1.0-r2814-20140402 documentation" href="index.html" />
     <link rel="next" title="Options and parameters" href="options.html" />
     <link rel="prev" title="Files used by PDFgetX3" href="files.html" /> 
   </head>
@@ -43,7 +41,7 @@
         <li class="right" >
           <a href="files.html" title="Files used by PDFgetX3"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -71,7 +69,7 @@ variables related to PDF processing are:</p>
 low-level function that calculates the PDF.  This is a callable
 object, which takes as an argument a pair of input arrays for
 (two-theta, intensity).  It can be also called with a keyword
-argument <cite>filename=FILE</cite>, which would read the input arrays
+argument <tt class="docutils literal"><span class="pre">filename=FILE</span></tt>, which would read the input arrays
 from the specified file.  When called with no arguments,
 it calculates PDF from the last input data.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -87,16 +85,17 @@ it calculates PDF from the last input data.</p>
 <dl class="interactvar">
 <dt id="interactvar-config">
 <tt class="descname">config</tt><a class="headerlink" href="#interactvar-config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instance of the <tt class="xref py py-class docutils literal"><span class="pre">PDFConfig</span></tt> class, which stores all the
-program parameters and a list of input files.  Use <tt class="docutils literal"><span class="pre">print</span> <span class="pre">config</span></tt>
-to show the current configuration values.  This is the same object as
-<tt class="xref py py-data docutils literal"><span class="pre">pdfgetter.config</span></tt>.  Configuration may be changed by
-assigning to a <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> object attribute, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">config</span><span class="o">.</span><span class="n">qmax</span> <span class="o">=</span> <span class="mi">21</span>
+<dd><p>Instance of the <tt class="xref py py-class docutils literal"><span class="pre">PDFConfig</span></tt> class that stores the
+<a class="reference internal" href="options.html#my-ioparameters"><em>parameters and input files</em></a> for the program.
+Use <tt class="docutils literal"><span class="pre">print</span> <span class="pre">config</span></tt> to display the current configuration values.  This
+is the same object as <tt class="xref py py-data docutils literal"><span class="pre">pdfgetter.config</span></tt>.  Configuration may
+be changed by setting a respective attribute of the
+<tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt> object, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [1]: config.qmax = 21
 </pre></div>
 </div>
-<p>The <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> values can be also changed by calling the
-<a class="reference internal" href="#diffpy.pdfgetx.pdfgetter" title="diffpy.pdfgetx.pdfgetter"><tt class="xref py py-func docutils literal"><span class="pre">pdfgetter()</span></tt></a> or <a class="reference internal" href="#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> with a
+<p>The <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> values may be also changed by calling the
+<a class="reference internal" href="#diffpy.pdfgetx.pdfgetter" title="diffpy.pdfgetx.pdfgetter"><tt class="xref py py-func docutils literal"><span class="pre">pdfgetter()</span></tt></a> or <a class="reference internal" href="#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function with a
 corresponding keyword argument, for example
 <tt class="docutils literal"><span class="pre">processFiles(qmax=20,</span> <span class="pre">force=True)</span></tt>.</p>
 </dd></dl>
@@ -144,6 +143,16 @@ plots.  When None, use subplot(N, 1, i) to create the parent axes.</li>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Changes from <tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt> apply only to the configuration
+and results in memory.  Use the <a class="reference internal" href="#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function
+to save them to disk.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="tutorial.html#my-tuneconfig"><em>Interactive tuning of parameters</em></a> tutorial.</p>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -158,9 +167,9 @@ it also saves output files and produces plots as specified by the
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>filename</strong> &#8211; Input datafile or a list of several input files to be processed
-to PDFs and saved or plotted according to the <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt>
-values.</li>
+<li><strong>filename</strong> &#8211; One or more input files to be converted to PDFs and saved or
+plotted according to the <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> settings.  Use the
+previous list of input files when not specified.</li>
 <li><strong>kwargs</strong> &#8211; optional keyword arguments that are applied to the <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt>
 object, for example <cite>(force=True, qmax=18)</cite>.</li>
 </ul>
@@ -168,8 +177,7 @@ object, for example <cite>(force=True, qmax=18)</cite>.</li>
 </tr>
 </tbody>
 </table>
-<p>This function also updates the
-<a class="reference internal" href="#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config.inputfiles</span></tt></a>
+<p>This function updates the <a class="reference internal" href="#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config.inputfiles</span></tt></a>
 list and the <a class="reference internal" href="#interactvar-iraw"><tt class="xref std std-interactvar docutils literal"><span class="pre">iraw</span></tt></a>, <a class="reference internal" href="#interactvar-iq"><tt class="xref std std-interactvar docutils literal"><span class="pre">iq</span></tt></a>,
 <a class="reference internal" href="#interactvar-sq"><tt class="xref std std-interactvar docutils literal"><span class="pre">sq</span></tt></a>, <a class="reference internal" href="#interactvar-fq"><tt class="xref std std-interactvar docutils literal"><span class="pre">fq</span></tt></a> and <a class="reference internal" href="#interactvar-gr"><tt class="xref std std-interactvar docutils literal"><span class="pre">gr</span></tt></a>
 interactive variables.</p>
@@ -339,12 +347,12 @@ current directory when called without <cite>patterns</cite>.</p>
         <li class="right" >
           <a href="files.html" title="Files used by PDFgetX3"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        &copy; Copyright 2014, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

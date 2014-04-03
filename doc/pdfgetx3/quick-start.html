@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Quick-start guide &mdash; PDFgetX3 1.0-r2491-20130712 documentation</title>
+    <title>Quick-start guide &mdash; PDFgetX3 1.0-r2814-20140402 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '1.0-r2491-20130712',
+        URL_ROOT:    './',
+        VERSION:     '1.0-r2814-20140402',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.0-r2491-20130712 documentation" href="index.html" />
+    <link rel="top" title="PDFgetX3 1.0-r2814-20140402 documentation" href="index.html" />
     <link rel="next" title="Tutorial" href="tutorial.html" />
     <link rel="prev" title="Installation" href="install.html" /> 
   </head>
@@ -43,7 +41,7 @@
         <li class="right" >
           <a href="install.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -62,7 +60,8 @@ this is not working yet.</p>
 the input files and run-parameters are supplied either as command-line
 arguments or through a configuration file.  In general, the pdfgetx3 is
 executed from a command shell as</p>
-<div class="highlight-python"><pre>pdfgetx3 [options] input1 input2 ... inputN</pre>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 [options] input1 input2 ... inputN
+</pre></div>
 </div>
 <p>The <tt class="file docutils literal"><span class="pre">inputN</span></tt> stands for an input powder diffraction data.  The
 <tt class="file docutils literal"><span class="pre">inputN</span></tt> file is a simple two-column text file, where the first
@@ -123,7 +122,8 @@ yields the PDF.</li>
 </ul>
 <p>Save the updated configuration file and run pdfgetx3 on the input data
 <tt class="file docutils literal"><span class="pre">FILENAME.chi</span></tt> as</p>
-<div class="highlight-python"><pre>pdfgetx3 --verbose=info -t gr FILENAME.chi</pre>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 --verbose=info -t gr FILENAME.chi
+</pre></div>
 </div>
 <p>Here the <a class="reference internal" href="options.html#cmdoption-pdfgetx3--verbose"><em class="xref std std-option">--verbose=info</em></a> option makes pdfgetx3
 print
@@ -137,7 +137,8 @@ tells the program to save the final <em>G</em>(<em>r</em>) curve as a
 parameters and the input file name.  The .gr file can be therefore
 also used as a configuration file in order to redo the same
 calculation</p>
-<div class="highlight-python"><pre>pdfgetx3 -c FILENAME.gr --plot=fq,gr</pre>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 -c FILENAME.gr --plot=fq,gr
+</pre></div>
 </div>
 <p>Note this command does not include any .chi file and this will as
 a result process the previously used input <tt class="file docutils literal"><span class="pre">FILENAME.chi</span></tt>.
@@ -194,12 +195,12 @@ demonstration of the PDFgetX3 functions.</p>
         <li class="right" >
           <a href="install.html" title="Installation"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        &copy; Copyright 2014, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

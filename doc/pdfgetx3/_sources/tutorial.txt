@@ -4,6 +4,7 @@ Tutorial
 .. include:: abbreviations.txt
 .. program:: pdfgetx3
 .. index:: example files
+.. py:currentmodule:: diffpy.pdfgetx
 
 In this tutorial we will convert several X-ray powder diffraction
 patterns to corresponding PDFs.  Open a terminal on a Unix-based system
@@ -88,8 +89,8 @@ option, to show more details about the program actions. ::
 
 Here we can see what configuration files are searched, which of them
 get loaded and what are the effective values of the processing
-parameters.  Unless the :option:`!--verbose` option is effect, the
-program shows only messages that have either WARNING or ERROR
+parameters.  Unless the :option:`!--verbose` option is in effect, the
+program will show only messages that have either WARNING or ERROR
 importance.  The warning line above indicates no output has been
 written, because that file already exists.  This safety check can be
 overruled with the :option:`--force` option, upon which pdfgetx3 would
@@ -154,7 +155,7 @@ and its content can be displayed with the ``print`` statement as ::
    qmax = 26.0
    ...
 
-The :py:func:`~diffpy.pdfgetx.processFiles` function allows to redo the
+The :py:func:`processFiles` function allows to redo the
 whole calculation and plotting process for additional input files or
 for new parameter values.  To plot the |FQ| and |Gr|
 curves calculated at |Qmax| = 22 |Ainv|, we can call
@@ -264,7 +265,7 @@ it to 26.5 |Ainv| ::
 
 The updated curves looks reasonable without any oscillations and
 breakpoints.  The
-:py:func:`~diffpy.pdfgetx.tuneconfig()`
+:py:func:`tuneconfig()`
 function provides a
 GUI-driven way for visualizing the processing parameters and their
 effect on the results.  Type ``tuneconfig()`` to execute the function,
@@ -417,6 +418,7 @@ The :file:`series-gr` directory should now contain 12 gr files,
 file and 6 other at |Qmax| = 18 |Ainv|.
 
 
+.. index:: tuneconfig (example)
 .. _my-tuneconfig:
 
 Interactive tuning of parameters
@@ -429,7 +431,7 @@ navigate to the :file:`examples/Ni` directory in the shall and process
 the nickel PDF while plotting the |FQ| and |Gr| curves.
 Because of plotting the program will open an interactive IPython
 session.  The tuning mode can be then entered by calling the
-:py:func:`~diffpy.pdfgetx.tuneconfig()`
+:py:func:`tuneconfig()`
 function from the IPython environment ::
 
    $ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
@@ -462,7 +464,7 @@ configured to show arbitrary intermediate results or even visualize
 selected steps in the PDF processing.  We shall demonstrate this by
 showing a live-plot of the polynomial correction together with the final
 PDF.  At first, we shall use the :py:func:`!describe()` method of the
-:py:func:`~diffpy.pdfgetx.pdfgetter` object to print out the chain of
+:py:func:`pdfgetter` object to print out the chain of
 transformations involved in the PDF processing and obtain a reference to
 the transformation object `t4` that applies the polynomial correction.
 The transformation object can be then included in a list of plot
@@ -493,19 +495,34 @@ identifiers that are passed to the :py:func:`!tuneconfig()` function ::
    In [3]: t4 = pdfgetter.getTransformation(4)
    In [4]: tuneconfig([t4, 'gr'])
 
-The `clf()` function used above clears the figure to remove the initial
+The ``clf()`` function used above clears the figure to remove the initial
 |FQ| line from the first panel.  Overall, this should display the
 following plot:
 
 .. image:: images/tunenickelt4gr.png
 
-The tuning can be finished by clicking the *Done* button or closing the
+The tuning can be finished by clicking the ``Done`` button or closing the
 tuneconfig GUI window.  The parameter values can be thereafter adjusted
-to a rounded values by setting a corresponding attribute of the
-:interactvar:`config` object, for example::
+to a rounded values by setting an attribute of the :interactvar:`config`
+object, for example::
 
-   config.bgscale = 1.5
+   In [5]: config.bgscale = 1.5
 
-See the
-:py:func:`~diffpy.pdfgetx.tuneconfig`
-documentation for more details.
+Finally, to save the new results, we shall first confirm
+:confval:`outputtypes` have been correctly set and then use the
+:py:func:`processFiles` function to redo the calculations, plots and
+data output for the updated configuration.  Note that the
+:py:func:`!processFiles` function accepts keyword arguments for
+configuration parameters.  This is used at line ``In [8]`` to
+turn on the :confval:`force` flag and is in effect a shortcut
+for an extra ``config.force = True`` statement. ::
+
+   In [6]: config.outputtypes
+   Out[6]: ['gr']
+   In [7]: processFiles()
+   WARNING:ni300mesh_300k_nor_1-5.gr already exists.
+   WARNING:Use "--force" to overwrite.
+   In [8]: processFiles(force=True)
+
+:file:`ni300mesh_300k_nor_1-5.gr` was successfully saved at an
+updated configuration for there were no warnings after the last call.
