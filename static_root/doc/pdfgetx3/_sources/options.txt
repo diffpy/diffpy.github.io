@@ -127,6 +127,7 @@ Configuration file options
 See also the :ref:`configuration file <my-configfile>` section
 for further details.
 
+.. _my-ioparameters:
 
 Input and output options
 ------------------------------------------------------------------------

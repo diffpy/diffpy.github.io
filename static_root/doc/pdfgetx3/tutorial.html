@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Tutorial &mdash; PDFgetX3 1.0-r2491-20130712 documentation</title>
+    <title>Tutorial &mdash; PDFgetX3 1.0-r2814-20140402 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '1.0-r2491-20130712',
+        URL_ROOT:    './',
+        VERSION:     '1.0-r2814-20140402',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.0-r2491-20130712 documentation" href="index.html" />
+    <link rel="top" title="PDFgetX3 1.0-r2814-20140402 documentation" href="index.html" />
     <link rel="next" title="Files used by PDFgetX3" href="files.html" />
     <link rel="prev" title="Quick-start guide" href="quick-start.html" /> 
   </head>
@@ -43,7 +41,7 @@
         <li class="right" >
           <a href="quick-start.html" title="Quick-start guide"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -79,20 +77,22 @@ parameters for converting the powder pattern to a PDF.  Since all
 processing parameters are already defined in the configuration file,
 the first PDF calculation is very simple and involves running the
 <strong class="command">pdfgetx3</strong> program with the powder data file as an argument:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 ni300mesh_300k_nor_1-5.chi</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 ni300mesh_300k_nor_1-5.chi
+</pre></div>
 </div>
 <p>For the first run there should be no output on the screen,
 however a new file, <tt class="file docutils literal"><span class="pre">ni300mesh_300k_nor_1-5.gr</span></tt> should appear
 in the work directory.  We can use the <strong class="command">plotdata</strong> program,
 installed with PDFgetX3, to plot the output data:</p>
-<div class="highlight-python"><pre>$ plotdata ni300mesh_300k_nor_1-5.gr</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ plotdata ni300mesh_300k_nor_1-5.gr
+</pre></div>
 </div>
 <p>This will open a graph window and start an IPython interactive session.
 To exit and close the figure, type <tt class="docutils literal"><span class="pre">exit()</span></tt> on the IPython prompt.
 Let&#8217;s run the program again, but now with a
 <a class="reference internal" href="options.html#cmdoption-pdfgetx3--verbose"><em class="xref std std-option">--verbose=info</em></a>
 option, to show more details about the program actions.</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --verbose=info ni300mesh_300k_nor_1-5.chi
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --verbose=info ni300mesh_300k_nor_1-5.chi
 
 INFO:log level set to 20
 INFO:checking for environment variable PDFGETX3PATH
@@ -105,30 +105,31 @@ INFO:set config.rmin = 0.0
 INFO:set config.rstep = 0.01
 INFO:set config.rmax = 30.0
 INFO:set config.qmax = 26.0
-INFO:set config.outputtypes = ['gr']
-INFO:set config.dataformat = 'twotheta'
+INFO:set config.outputtypes = [&#39;gr&#39;]
+INFO:set config.dataformat = &#39;twotheta&#39;
 INFO:set config.qmaxinst = 26.5
-INFO:set config.backgroundfile = 'kapton_bgrd_300k_nor_2-3.chi'
+INFO:set config.backgroundfile = &#39;kapton_bgrd_300k_nor_2-3.chi&#39;
 INFO:set config.wavelength = 0.14277400000000001
-INFO:set config.composition = 'Ni'
+INFO:set config.composition = &#39;Ni&#39;
 INFO:finished parsing config file
 INFO:processing command line options
-INFO:set config.verbose = 'info'
+INFO:set config.verbose = &#39;info&#39;
 INFO:finished with command line options
 INFO:using 1 input files from the command line.
-INFO:configuring PDFGetter mode 'xray'
+INFO:configuring PDFGetter mode &#39;xray&#39;
 INFO:calling config_xray
 INFO:started PDF processing.
-INFO:processing 'ni300mesh_300k_nor_1-5.chi'
-INFO:resolved output file '' as 'ni300mesh_300k_nor_1-5.gr'
+INFO:processing &#39;ni300mesh_300k_nor_1-5.chi&#39;
+INFO:resolved output file &#39;&#39; as &#39;ni300mesh_300k_nor_1-5.gr&#39;
 WARNING:ni300mesh_300k_nor_1-5.gr already exists.
-WARNING:Use "--force" to overwrite.
-INFO:elapsed time: 0.13</pre>
+WARNING:Use &quot;--force&quot; to overwrite.
+INFO:elapsed time: 0.13
+</pre></div>
 </div>
 <p>Here we can see what configuration files are searched, which of them
 get loaded and what are the effective values of the processing
-parameters.  Unless the <em class="xref std std-option">--verbose</em> option is effect, the
-program shows only messages that have either WARNING or ERROR
+parameters.  Unless the <em class="xref std std-option">--verbose</em> option is in effect, the
+program will show only messages that have either WARNING or ERROR
 importance.  The warning line above indicates no output has been
 written, because that file already exists.  This safety check can be
 overruled with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3--force"><em class="xref std std-option">--force</em></a> option, upon which pdfgetx3 would
@@ -142,12 +143,12 @@ put it all together, we are now going to redo the original PDF and plot
 its reduced total scattering function <em>F</em>(<em>Q</em>) and the PDF curve <em>G</em>(<em>r</em>).  This
 time the chi file is not necessary, because the input file is already
 listed in the gr file that is now used as a custom configuration:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -c ni300mesh_300k_nor_1-5.gr --plot=fq,gr
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -c ni300mesh_300k_nor_1-5.gr --plot=fq,gr
 
 Welcome to pylab, a matplotlib-based Python environment [backend: GTKAgg].
-For more information, type 'help(pylab)'.
+For more information, type &#39;help(pylab)&#39;.
 WARNING:ni300mesh_300k_nor_1-5.gr already exists.
-WARNING:Use "--force" to overwrite.
+WARNING:Use &quot;--force&quot; to overwrite.
 
 Variables related to PDF processing:
 
@@ -167,8 +168,9 @@ clearSession -- clear all elements from the inputfiles, iraw,
 plotdata     -- plot all or selected columns from a text data file
 loadData     -- load all or selected columns from a text data file
 
-Use "%pdfgetx3" for a fresh run without exiting IPython.
-In [1]:</pre>
+Use &quot;%pdfgetx3&quot; for a fresh run without exiting IPython.
+In [1]:
+</pre></div>
 </div>
 <p>This will open a plot figure similar to</p>
 <img alt="_images/nickelfqgr.png" src="_images/nickelfqgr.png" />
@@ -179,13 +181,14 @@ The IPython environment is preloaded with several extra functions
 and variables related to the PDF processing.  For example, the
 <a class="reference internal" href="interact.html#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt></a> variable stores all the configuration parameters,
 and its content can be displayed with the <tt class="docutils literal"><span class="pre">print</span></tt> statement as</p>
-<div class="highlight-python"><pre>In [1]: print config
+<div class="highlight-python"><div class="highlight"><pre>In [1]: print config
 
-args = ['-c', 'ni300mesh_300k_nor_1-5.gr', '--plot=fq,gr']
+args = [&#39;-c&#39;, &#39;ni300mesh_300k_nor_1-5.gr&#39;, &#39;--plot=fq,gr&#39;]
 configfile = ni300mesh_300k_nor_1-5.gr
 ...
 qmax = 26.0
-...</pre>
+...
+</pre></div>
 </div>
 <p>The <a class="reference internal" href="interact.html#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function allows to redo the
 whole calculation and plotting process for additional input files or
@@ -193,11 +196,12 @@ for new parameter values.  To plot the <em>F</em>(<em>Q</em>) and <em>G</em>(<em
 curves calculated at <em>Q</em><sub>max</sub> = 22 Å<sup>-1</sup>, we can call
 <tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt> and pass it a keyword argument for
 the new qmax as follows:</p>
-<div class="highlight-python"><pre>In [2]: processFiles(qmax=22)
+<div class="highlight-python"><div class="highlight"><pre>In [2]: processFiles(qmax=22)
 
 # the qmax parameter was updated to a new value, thus
 In [3]: config.qmax
-Out[3]: 22</pre>
+Out[3]: 22
+</pre></div>
 </div>
 <p>There should be now two lines in each plot axis corresponding to
 the results at <em>Q</em><sub>max</sub> equal 26 and 22 Å<sup>-1</sup>.  To exit the program,
@@ -210,20 +214,22 @@ for specifying a custom configuration file.  A special argument &#8220;NONE&#822
 will make pdfgetx3 ignore any configuration files and start up in a
 default state.  We can use this feature to process the nickel PDF as if
 we did not have any configuration file:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi
 
-WARNING:Nothing to do, use "-t" or "--plot" options.
+WARNING:Nothing to do, use &quot;-t&quot; or &quot;--plot&quot; options.
 ERROR:Configuration error: wavelength not specified.
-ERROR:See "--help" for more hints.</pre>
+ERROR:See &quot;--help&quot; for more hints.
+</pre></div>
 </div>
 <p>There is an error, for the wavelength is necessary to convert
 the scattering angle 2Θ to momentum transfer <em>Q</em>.  The
 X-ray wavelength was 0.142774 Å, which can be passed with the
 <a class="reference internal" href="options.html#cmdoption-pdfgetx3-w"><em class="xref std std-option">-w, --wavelength</em></a> option:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774
 ...
 ERROR:Configuration error: Chemical composition not known.
-ERROR:See "--help" for more hints.</pre>
+ERROR:See &quot;--help&quot; for more hints.
+</pre></div>
 </div>
 <p>There is still an error.  The PDF calculation needs an average
 X-ray scattering factor of the material, which is obtained from
@@ -232,10 +238,11 @@ with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3--co
 below uses a &#8220;\&#8221; character to indicate the command continues
 on the next line.  Such syntax works in Unix terminals, but
 on Windows the command has to be typed all on a single line:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
            --composition=Ni
 
-WARNING:Nothing to do, use "-t" or "--plot" options.</pre>
+WARNING:Nothing to do, use &quot;-t&quot; or &quot;--plot&quot; options.
+</pre></div>
 </div>
 <p>There was no error message this time, but the program complains
 about a lack of action.  The pdfgetx3 program does not write any results
@@ -251,11 +258,12 @@ and avoid the unseemly file-exists warnings.</p>
 <a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><em class="xref std std-option">--plot</em></a> option to display the calculated curves.  The
 <em class="xref std std-option">--plot</em> accepts the same arguments as outputtypes, so to
 display the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves we shall run</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
            --composition=Ni --plot=fq,gr
 
 WARNING:qmaxinst reset to last nonzero point qmaxinst=28.0865680161
-WARNING:qmax reset to the data boundary qmaxinst=28.0865680161</pre>
+WARNING:qmax reset to the data boundary qmaxinst=28.0865680161
+</pre></div>
 </div>
 <p>which should open the following plot window:</p>
 <img alt="_images/nickelfqgrnoisy.png" src="_images/nickelfqgrnoisy.png" />
@@ -270,18 +278,20 @@ are going to plot the &#8220;iq&#8221; variable that has the input intensities
 resampled on the <em>Q</em> grid.  The <tt class="docutils literal"><span class="pre">clf()</span></tt> function clears the figure,
 the iq variable is a two-row matrix with <em>Q</em> and <em>I</em> rows, and the
 <tt class="docutils literal"><span class="pre">axis()</span></tt> function let&#8217;s us zoom to a given range:</p>
-<div class="highlight-python"><pre>In [1]: clf()
+<div class="highlight-python"><div class="highlight"><pre>In [1]: clf()
 In [2]: plot(iq[0], iq[1])
 Out[2]: [&lt;matplotlib.lines.Line2D at 0x3e20f50&gt;]
 In [3]: axis([20, 29, 0, 3000])
-Out[3]: [20, 29, 0, 3000]</pre>
+Out[3]: [20, 29, 0, 3000]
+</pre></div>
 </div>
 <p>The graph shows a sudden drop in the raw intensities at 27 Å<sup>-1</sup>.
 The <a class="reference internal" href="options.html#confval-qmaxinst"><tt class="xref std std-confval docutils literal"><span class="pre">qmaxinst</span></tt></a> variable defines a <em>Q</em> cutoff for a meaningful
 instrument intensities and, to be on a safe side, we are going to set
 it to 26.5 Å<sup>-1</sup></p>
-<div class="highlight-python"><pre>In [4]: processFiles(qmaxinst=26.5)
-WARNING:qmax reset to the data boundary qmaxinst=26.5</pre>
+<div class="highlight-python"><div class="highlight"><pre>In [4]: processFiles(qmaxinst=26.5)
+WARNING:qmax reset to the data boundary qmaxinst=26.5
+</pre></div>
 </div>
 <p>The updated curves looks reasonable without any oscillations and
 breakpoints.  The
@@ -296,10 +306,11 @@ polynomial and is an approximate low-<em>r</em> bound of reliable <em>G</em>
 values.  Once the parameters are tuned, they may be set to
 exact values.  We will also turn on the writing of the <em>G</em>(<em>r</em>)
 curve and save it to an output file <tt class="file docutils literal"><span class="pre">nicmd.gr</span></tt>:</p>
-<div class="highlight-python"><pre>In [14]: config.qmax = 26
-In [15]: config.outputtypes = 'gr'
-In [16]: config.output = 'nicmd'
-In [17]: processFiles()</pre>
+<div class="highlight-python"><div class="highlight"><pre>In [14]: config.qmax = 26
+In [15]: config.outputtypes = &#39;gr&#39;
+In [16]: config.output = &#39;nicmd&#39;
+In [17]: processFiles()
+</pre></div>
 </div>
 </div>
 </div>
@@ -331,7 +342,7 @@ terminal and navigate to the <tt class="file docutils literal"><span class="pre"
 <tt class="file docutils literal"><span class="pre">series</span></tt> subdirectory with 6 chi files indexed from 903 to 908.
 At first, let&#8217;s stay in the <tt class="file docutils literal"><span class="pre">Pt</span></tt> directory and run the following
 command</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --list --find
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --list --find
 
 Pt_bulk-00055-pdfgetx2.gr
 Pt_bulk-00055-pdfgetx3.gr
@@ -339,7 +350,8 @@ Pt_bulk-00055.chi
 Pt_bulk-00055.gr
 empty_capillary-00032.chi
 pdfgetx3.cfg
-plotpdfcomparison.py</pre>
+plotpdfcomparison.py
+</pre></div>
 </div>
 <p>Without any patterns the file search matches all files in the current
 directory.  Now let&#8217;s try to add name patterns.  There are few special
@@ -349,27 +361,32 @@ patterns, for example <tt class="docutils literal"><span class="pre">^</span></t
 these characters have special meaning in the shell.  Here are some
 examples how it works.</p>
 <p>Filenames containing &#8220;y&#8221;:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --list --find y
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --list --find y
 empty_capillary-00032.chi
-plotpdfcomparison.py</pre>
+plotpdfcomparison.py
+</pre></div>
 </div>
 <p>Filenames that containing both &#8220;y&#8221; and &#8220;chi&#8221;, here we use the
 abbreviated forms <em class="xref std std-option">-l</em> and <em class="xref std std-option">-f</em>:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -lf y chi
-empty_capillary-00032.chi</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -lf y chi
+empty_capillary-00032.chi
+</pre></div>
 </div>
 <p>Filenames that start with &#8220;e&#8221;:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --list --find "^e"
-empty_capillary-00032.chi</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --list --find &quot;^e&quot;
+empty_capillary-00032.chi
+</pre></div>
 </div>
 <p>Filenames that contain <em>character</em> &#8220;2&#8221;:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --list --find 2
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --list --find 2
 Pt_bulk-00055-pdfgetx2.gr
-empty_capillary-00032.chi</pre>
+empty_capillary-00032.chi
+</pre></div>
 </div>
 <p>Filenames that contain <em>number</em> &#8220;2&#8221;:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -lf "&lt;2&gt;"
-Pt_bulk-00055-pdfgetx2.gr</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -lf &quot;&lt;2&gt;&quot;
+Pt_bulk-00055-pdfgetx2.gr
+</pre></div>
 </div>
 </div>
 <div class="section" id="data-search-path">
@@ -382,14 +399,16 @@ directories.  The data directories can be also defined with the
 the <em class="xref std std-option">-d</em> option to match files in the <tt class="file docutils literal"><span class="pre">series</span></tt>
 subdirectory.  The search stops at the first directory that contains
 any match, therefore</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --datapath=series --list --find Pt chi
-Pt_bulk-00055.chi</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --datapath=series --list --find Pt chi
+Pt_bulk-00055.chi
+</pre></div>
 </div>
 <p>matches just one file in the current working directory, but</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --datapath=series --list --find Pt "&lt;906-&gt;.chi"
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --datapath=series --list --find Pt &quot;&lt;906-&gt;.chi&quot;
 series/Pt_bulk_ramp03-00906.chi
 series/Pt_bulk_ramp03-00907.chi
-series/Pt_bulk_ramp03-00908.chi</pre>
+series/Pt_bulk_ramp03-00908.chi
+</pre></div>
 </div>
 <p>finds 3 files, because only the <tt class="file docutils literal"><span class="pre">series</span></tt> folder contains
 file names with &#8220;Pt&#8221; and a number &#8220;906&#8221; or higher followed
@@ -405,13 +424,15 @@ extension-stripped base name.  In similar faction, &#8220;&#64;o&#8221; is repla
 with the output type extension.  Thus to generate PDFs for all files
 in the <tt class="file docutils literal"><span class="pre">series</span></tt> directory and save them in the
 <tt class="file docutils literal"><span class="pre">series-gr</span></tt> subfolder do</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -d series --find "&lt;900-910&gt;.chi" --output=series-gr/@b.@o</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -d series --find &quot;&lt;900-910&gt;.chi&quot; --output=series-gr/@b.@o
+</pre></div>
 </div>
 <p>The extension &#8221;.&#64;o&#8221; is automatic when not included anywhere in the
 output file name.  Thus to process the Pt series at <em>Q</em><sub>max</sub> = 18 Å<sup>-1</sup>
 while saving the results in the same folder, but with &#8220;qmax18&#8221; in their
 filename can be done with:</p>
-<div class="highlight-python"><pre>$ pdfgetx3 -d series --find "&lt;900-910&gt;.chi" --qmax=18 -o series-gr/@b_qmax18</pre>
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 -d series --find &quot;&lt;900-910&gt;.chi&quot; --qmax=18 -o series-gr/@b_qmax18
+</pre></div>
 </div>
 <p>The <tt class="file docutils literal"><span class="pre">series-gr</span></tt> directory should now contain 12 gr files,
 6 of them processed at the <em>Q</em><sub>max</sub> = 27 Å<sup>-1</sup> from the configuration
@@ -419,7 +440,7 @@ file and 6 other at <em>Q</em><sub>max</sub> = 18 Å<sup>-1</sup>.</p>
 </div>
 </div>
 <div class="section" id="interactive-tuning-of-parameters">
-<span id="my-tuneconfig"></span><h2>Interactive tuning of parameters<a class="headerlink" href="#interactive-tuning-of-parameters" title="Permalink to this headline">¶</a></h2>
+<span id="my-tuneconfig"></span><span id="index-3"></span><h2>Interactive tuning of parameters<a class="headerlink" href="#interactive-tuning-of-parameters" title="Permalink to this headline">¶</a></h2>
 <p>One of the most powerful features of PDFgetX3 is the ability to tune
 PDF processing parameters in an interactive mode and immediately
 visualize their effect on the results.  To demonstrate this feature,
@@ -429,9 +450,10 @@ Because of plotting the program will open an interactive IPython
 session.  The tuning mode can be then entered by calling the
 <a class="reference internal" href="interact.html#diffpy.pdfgetx.tuneconfig" title="diffpy.pdfgetx.tuneconfig"><tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt></a>
 function from the IPython environment</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
 ...
-In [1]: tuneconfig()</pre>
+In [1]: tuneconfig()
+</pre></div>
 </div>
 <p>The
 <tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt>
@@ -461,9 +483,9 @@ transformations involved in the PDF processing and obtain a reference to
 the transformation object <cite>t4</cite> that applies the polynomial correction.
 The transformation object can be then included in a list of plot
 identifiers that are passed to the <tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt> function</p>
-<div class="highlight-python"><pre>$ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
+<div class="highlight-python"><div class="highlight"><pre>$ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
 ...
-Use "%pdfgetx3" for a fresh run without exiting IPython.
+Use &quot;%pdfgetx3&quot; for a fresh run without exiting IPython.
 
 In [1]: clf()
 In [2]: pdfgetter.describe()
@@ -484,22 +506,38 @@ In [2]: pdfgetter.describe()
 7   TransformFQToGr
     Convert F(Q) to G(r).
 In [3]: t4 = pdfgetter.getTransformation(4)
-In [4]: tuneconfig([t4, 'gr'])</pre>
+In [4]: tuneconfig([t4, &#39;gr&#39;])
+</pre></div>
 </div>
-<p>The <cite>clf()</cite> function used above clears the figure to remove the initial
+<p>The <tt class="docutils literal"><span class="pre">clf()</span></tt> function used above clears the figure to remove the initial
 <em>F</em>(<em>Q</em>) line from the first panel.  Overall, this should display the
 following plot:</p>
 <img alt="_images/tunenickelt4gr.png" src="_images/tunenickelt4gr.png" />
-<p>The tuning can be finished by clicking the <em>Done</em> button or closing the
+<p>The tuning can be finished by clicking the <tt class="docutils literal"><span class="pre">Done</span></tt> button or closing the
 tuneconfig GUI window.  The parameter values can be thereafter adjusted
-to a rounded values by setting a corresponding attribute of the
-<a class="reference internal" href="interact.html#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt></a> object, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">config</span><span class="o">.</span><span class="n">bgscale</span> <span class="o">=</span> <span class="mf">1.5</span>
+to a rounded values by setting an attribute of the <a class="reference internal" href="interact.html#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt></a>
+object, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [5]: config.bgscale = 1.5
 </pre></div>
 </div>
-<p>See the
-<a class="reference internal" href="interact.html#diffpy.pdfgetx.tuneconfig" title="diffpy.pdfgetx.tuneconfig"><tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt></a>
-documentation for more details.</p>
+<p>Finally, to save the new results, we shall first confirm
+<a class="reference internal" href="options.html#confval-outputtypes"><tt class="xref std std-confval docutils literal"><span class="pre">outputtypes</span></tt></a> have been correctly set and then use the
+<a class="reference internal" href="interact.html#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function to redo the calculations, plots and
+data output for the updated configuration.  Note that the
+<tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt> function accepts keyword arguments for
+configuration parameters.  This is used at line <tt class="docutils literal"><span class="pre">In&nbsp;[8]</span></tt> to
+turn on the <a class="reference internal" href="options.html#confval-force"><tt class="xref std std-confval docutils literal"><span class="pre">force</span></tt></a> flag and is in effect a shortcut
+for an extra <tt class="docutils literal"><span class="pre">config.force</span> <span class="pre">=</span> <span class="pre">True</span></tt> statement.</p>
+<div class="highlight-python"><div class="highlight"><pre>In [6]: config.outputtypes
+Out[6]: [&#39;gr&#39;]
+In [7]: processFiles()
+WARNING:ni300mesh_300k_nor_1-5.gr already exists.
+WARNING:Use &quot;--force&quot; to overwrite.
+In [8]: processFiles(force=True)
+</pre></div>
+</div>
+<p><tt class="file docutils literal"><span class="pre">ni300mesh_300k_nor_1-5.gr</span></tt> was successfully saved at an
+updated configuration for there were no warnings after the last call.</p>
 </div>
 </div>
 
@@ -563,12 +601,12 @@ documentation for more details.</p>
         <li class="right" >
           <a href="quick-start.html" title="Quick-start guide"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.0-r2491-20130712 documentation</a> &raquo;</li> 
+        <li><a href="index.html">PDFgetX3 1.0-r2814-20140402 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        &copy; Copyright 2014, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

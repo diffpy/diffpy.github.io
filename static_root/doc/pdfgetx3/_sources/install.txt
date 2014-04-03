@@ -18,16 +18,17 @@ also required:
 * PyReadline - required for a full IPython functionality on Windows
 
 Standard Python releases can be obtained from
-http://www.python.org/download/.
+https://www.python.org/download/.
 The third-party libraries can be found at the
-`Python Package Index <http://pypi.python.org/pypi>`_
+`Python Package Index <https://pypi.python.org/pypi>`_
 or using any Internet search engine.
 
 Another, more convenient option is to obtain science-oriented Python
-distributions, such as `PythonXY <https://code.google.com/p/pythonxy/>`_
-or `Enthought Canopy <http://www.enthought.com/>`_.  These distributions
-already include all the necessary libraries, so the required Python
-software can be all installed in one step.
+distributions, such as `PythonXY <https://code.google.com/p/pythonxy/>`_,
+`Enthought Canopy <https://www.enthought.com/>`_ or
+`Anaconda Python <https://store.continuum.io/cshop/anaconda/>`_.
+These distributions already include all the necessary libraries, so the
+required Python software can be all installed in one step.
 
 On Linux operating systems the third-party libraries are usually
 included in a system software package repository.  For example on an

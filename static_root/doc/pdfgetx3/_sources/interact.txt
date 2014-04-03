@@ -21,7 +21,7 @@ variables related to PDF processing are:
    low-level function that calculates the PDF.  This is a callable
    object, which takes as an argument a pair of input arrays for
    (two-theta, intensity).  It can be also called with a keyword
-   argument `filename=FILE`, which would read the input arrays
+   argument ``filename=FILE``, which would read the input arrays
    from the specified file.  When called with no arguments,
    it calculates PDF from the last input data.
 
@@ -30,16 +30,17 @@ variables related to PDF processing are:
 
 .. interactvar:: config
 
-   Instance of the :py:class:`!PDFConfig` class, which stores all the
-   program parameters and a list of input files.  Use ``print config``
-   to show the current configuration values.  This is the same object as
-   :data:`!pdfgetter.config`.  Configuration may be changed by
-   assigning to a :py:data:`!config` object attribute, for example::
+   Instance of the :py:class:`!PDFConfig` class that stores the
+   :ref:`parameters and input files <my-ioparameters>` for the program.
+   Use ``print config`` to display the current configuration values.  This
+   is the same object as :data:`!pdfgetter.config`.  Configuration may
+   be changed by setting a respective attribute of the
+   :interactvar:`!config` object, for example::
 
-      config.qmax = 21
+      In [1]: config.qmax = 21
 
-   The :py:data:`!config` values can be also changed by calling the
-   :py:func:`pdfgetter` or :py:func:`processFiles` with a
+   The :py:data:`!config` values may be also changed by calling the
+   :py:func:`pdfgetter` or :py:func:`processFiles` function with a
    corresponding keyword argument, for example
    ``processFiles(qmax=20, force=True)``.
 
@@ -77,6 +78,14 @@ variables related to PDF processing are:
       optional list of matplotlib Axes for displaying the interactive
       plots.  When None, use subplot(N, 1, i) to create the parent axes.
 
+   .. note::
+
+      Changes from :py:func:`!tuneconfig` apply only to the configuration
+      and results in memory.  Use the :py:func:`processFiles` function
+      to save them to disk.
+
+   .. seealso:: :ref:`my-tuneconfig` tutorial.
+
 .. py:function:: processFiles(filename=None, **kwargs)
 
    Process all input files again with the current configuration values.
@@ -85,16 +94,15 @@ variables related to PDF processing are:
    :interactvar:`config` object.
 
    :arg filename:
-      Input datafile or a list of several input files to be processed
-      to PDFs and saved or plotted according to the :py:data:`!config`
-      values.
+      One or more input files to be converted to PDFs and saved or
+      plotted according to the :py:data:`!config` settings.  Use the
+      previous list of input files when not specified.
 
    :arg kwargs:
       optional keyword arguments that are applied to the :py:data:`!config`
       object, for example `(force=True, qmax=18)`.
 
-   This function also updates the
-   :interactvar:`config.inputfiles <config>`
+   This function updates the :interactvar:`config.inputfiles <config>`
    list and the :interactvar:`iraw`, :interactvar:`iq`,
    :interactvar:`sq`, :interactvar:`fq` and :interactvar:`gr`
    interactive variables.
