@@ -40,16 +40,21 @@
 
 .. |citeShiPRL14| replace:: Chenyang Shi, Majid Beidaghi, Michael
    Naguib, Olha Mashtalir, Yury Gogotsi, and Simon J. L. Billinge,
-   Structure of nanocrystalline Ti\ :sub:`3`\ C\ :sub:`2` MXene using
-   atomic pair distribution function, *Phys. Rev. Lett.*, in press
-   (2014).
+   |ShiPRL14title|_,
+   *Phys. Rev. Lett.* **112**, 125501 (2014).
 
-.. |citeFarrowJac14| replace:: 
+.. |ShiPRL14title| replace::
+   Structure of nanocrystalline Ti\ :sub:`3`\ C\ :sub:`2` MXene using
+   atomic pair distribution function
+.. _ShiPRL14title: http://link.aps.org/doi/10.1103/PhysRevLett.112.125501
+
+.. |citeFarrowJac14| replace::
    Christoper L. Farrow, Chenyang Shi, Pavol Juhás, Xiaogang Peng, and
-   Simon J. L. Billinge, Robust structure and morphology parameters for
+   Simon J. L. Billinge, `Robust structure and morphology parameters for
    CdS nanoparticles by combining small angle X-ray scattering and atomic
-   pair distribution function data in a complex modeling framework, *J.
-   Appl. Crystallogr.* **47**, in press (2014).
+   pair distribution function data in a complex modeling framework
+   <http://dx.doi.org/10.1107/S1600576713034055>`__,
+   *J.  Appl. Crystallogr.* **47**, 561-565 (2014).
 
 .. |citeAbeykoonArxiv14| replace::
    Milinda Abeykoon, Hefei Hu, Lijun Wu, Yimei Zhu, and Simon J. L.
