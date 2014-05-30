@@ -5,7 +5,7 @@
    A rapid and highly automatable program for processing powder
    diffraction data into total scattering pair distribution functions
    <http://scripts.iucr.org/cgi-bin/paper?S0021889813005190>`__,
-   *J.  Appl. Crystallogr.* **46**, 560-566 (2013)
+   *J. Appl. Crystallogr.* **46**, 560-566 (2013)
    |downloadJuhasJac13|
 
 .. |downloadJuhasJac13| image:: /images/pdficon_small.png
@@ -17,9 +17,9 @@
    Th. Proffen and S. J. L. Billinge, `PDFfit2 and PDFgui: computer
    programs for studying nanostructure in crystals
    <http://iopscience.iop.org/0953-8984/19/33/335219/>`__,
-   *J. Phys.: Condens.  Mat.* **19**, 335219 (2007)
+   *J. Phys.: Condens.  Mat.* **19**, 335219 (2007)
    |downloadFarrowJpcm07|
- 
+
 .. |downloadFarrowJpcm07| image:: /images/pdficon_small.png
    :target: /doc/pdfgui/Farrow-jpcm-2007.pdf
 
@@ -28,7 +28,7 @@
    Th. Proffen and S. J. L. Billinge, `PDFFIT a program for full profile
    structural refinement of the atomic pair distribution function
    <http://journals.iucr.org/j/issues/1999/03/00/gl0603/>`__,
-   *J. Appl. Crystallogr.* **32**, 572 (1999)
+   *J. Appl. Crystallogr.* **32**, 572 (1999)
    |downloadProffenJac99|
 
 .. |downloadProffenJac99| image:: /images/pdficon_small.png
@@ -54,7 +54,7 @@
    CdS nanoparticles by combining small angle X-ray scattering and atomic
    pair distribution function data in a complex modeling framework
    <http://dx.doi.org/10.1107/S1600576713034055>`__,
-   *J.  Appl. Crystallogr.* **47**, 561-565 (2014).
+   *J. Appl. Crystallogr.* **47**, 561-565 (2014).
 
 .. |citeAbeykoonArxiv14| replace::
    Milinda Abeykoon, Hefei Hu, Lijun Wu, Yimei Zhu, and Simon J. L.
@@ -62,7 +62,7 @@
    lattice parameter values in electron pair distribution function (ePDF)
    studies <http://arxiv.org/abs/1401.1850>`__, *arXiv*, 1401.1850 (2014).
 
-.. |citeChoiNanol13| replace:: 
+.. |citeChoiNanol13| replace::
    Joshua J. Choi, Xiaohao Yang, Zachariah M.  Norman, Simon J. L.
    Billinge, and Jonathan S. Owen, `Structure of methylammonium lead
    iodide on mesoporous titanium dioxide: active material in high
@@ -86,7 +86,7 @@
    sulfamerazine <http://dx.doi.org/10.1021/cg400179p>`__,
    *Cryst. Growth Des.* **13**, 4239–4244 (2013).
 
-.. |citeYangPccp13| replace:: 
+.. |citeYangPccp13| replace::
    Xiaohao Yang, Ahmad S. Masadeh, James R. McBride, Emil S. Bozin,
    Sandra J. Rosenthal, and Simon J. L. Billinge, `Confirmation of
    disordered structure of ultrasmall CdSe nanoparticles from X-ray
@@ -94,17 +94,18 @@
    <http://dx.doi.org/10.1039/C3CP00111C>`__,
    *Phys. Chem. Chem.  Phys.* **15**, 8480 (2013).
 
-.. |citeFarrowJacs13| replace:: 
+.. |citeFarrowJacs13| replace::
    Christopher L. Farrow, D. Kwabena Bediako, Yogesh Surendranath,
    Daniel G. Nocera, and Simon J. L. Billinge, `Intermediate-range
    structure of self-assembled cobalt-based oxygen evolving catalysts
    <http://dx.doi.org/10.1021/ja401276f>`__,
-   *J. Am. Chem.  Soc.* **135**, 6403-6406 (2013).
+   *J. Am. Chem.  Soc.* **135**, 6403-6406 (2013).
 
 
-.. |citeJensenJacs12| replace:: 
+.. |citeJensenJacs12| replace::
    Kirsten M. Ø. Jensen, Mogens Christensen, Pavol Juhás, Christoffer
    Tyrsted, Espen D. Bøjesen, Nina Lock, Simon J. L. Billinge, and Bo B.
    Iversen, `Revealing the mechanisms behind SnO2 nanoparticle formation
    and growth during hydrothermal synthesis: an in situ total scattering
-   study <http://dx.doi.org/10.1021/ja300978f>`__, *J. Am. Chem. Soc.* **134**, 6785 (2012) 
+   study <http://dx.doi.org/10.1021/ja300978f>`__,
+   *J. Am. Chem. Soc.* **134**, 6785 (2012).
