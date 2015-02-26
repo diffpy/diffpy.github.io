@@ -77,6 +77,7 @@ centered at Columbia University and, before that, Michigan State University.
    products/diffpycmi/license
    products/diffpycmi/updatesources
    products/diffpycmi/contributecode
+   products/xPDFsuite
    products/pdfgui
    products/pdfgetx3
    products/pythonpackages 

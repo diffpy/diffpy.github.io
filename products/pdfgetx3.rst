@@ -10,8 +10,11 @@ as a standalone application or as a Python library of PDF-processing functions. 
 software is free for open academic research, but requires paid license for commercial use.*
 
 PDFgetX3-academic can be obtained from the
-`Columbia flintbox <http://columbia.flintbox.com/public/project/22569/>`_, provided it will
-be used for open academic research.
+`Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_, provided it will
+be used for open academic research. 
+
+The software is also included in `xPDFsuite <xPDFsuite.html>`_, which also provides
+an easy-to-use GUI for PDF transformation. 
 
 * `Installation instructions <../doc/pdfgetx3/install.html>`_
 * `PDFgetX3 user manual <../doc/pdfgetx3/index.html>`__,
