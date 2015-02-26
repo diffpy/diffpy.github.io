@@ -35,7 +35,7 @@ Key features:
 
 * Full featured, easy-to-use GUI;
 * Real time PDF transformation and plotting;
-* Flexiable plotting and analyzing for single and mulitple data sets;
+* Flexible plotting and analyzing for single and multiple data sets;
 * Optimized for high throughput data processing; 
 * 2D powder diffraction image integration;
 * Static and dynamic mask editing on 2D image;
