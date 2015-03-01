@@ -11,6 +11,11 @@ capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data 
 and comes with built in graphical and structure visualization capabilities.
 
+PDFgui is incorporated in the powerful end-to-end x-ray PDF analysis package xPDFsuite.  
+Please see `here <xPDFsuite.html>`_ for more information.  xPDFsuite is designed for flexible, 
+high throughput PDF analyses and contains many features for interrogating, comparing and 
+modeling data as well as simply doing data reduction.
+
 
 .. figure:: ../images/PDFgui_screenshot_small.png
    :align: center 
