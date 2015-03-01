@@ -1,6 +1,6 @@
-#########
-xPDFsuite
-#########
+##################################################################################################################
+xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays
+##################################################################################################################
 
 .. figure:: ../images/xPDFsuite.png
    :align: center 
@@ -8,63 +8,46 @@ xPDFsuite
 Overview
 ========
 
-This suite of algorithms and software, named xPDFsuite, converts X-ray diffraction (XRD) data into total scattering pair distribution functions by
-numerically transforming XRD data from frequency space into position space. This conversion allows characterization of materials including drugs and
-industrial materials in their amorphous and nanocrystalline and liquid states.
+This suite of algorithms and software, named xPDFsuite, is an easy to use graphical user interface (GUI) to a number of Diffpy programs.  
+It provides a raw-data-to-modelled-PDF solution for X-ray PDFs.  It is specially convenient for handling high throughput data with many 
+(hundreds to thousands) of datatsets, such as come from modern synchrotron experiments with 2D detectors. It is equally useful for data 
+from laboratory x-rays.  The software runs on laptops and workstations running windows, mac OSX and linux.
 
-This software implements a number of recent developments in the data analysis and modeling of PDFs derived from X-ray experiments which may be carried out
-at synchrotron or laboratory sources that allow for highly automated and straightforward processing. The software includes a full-featured graphical user
-interface and is designed for the latest generation of studies that involve often many hundreds or thousands of datasets.  The software runs on laptops and
-workstations running windows, mac OSX and linux.
-
+Within the same GUI you can:
+ * visualize the 2D raw data from large numbers of files
+ * integrate 2D data to 1D diffraction patterns
+ * plot and manipulate plots of large numbers of patterns
+ * rapidly and easily process the 1D data to obtain S(Q), F(Q) and G(r) (PDF) functions using the power of the PDFgetX3 engine
+ * use the powerful interactive plotting capabilities to explore these reduced data functions
+ * use built in tools for comparing datasets using Pearson correlations etc.
+ * the widely used PDFgui PDF fitting program is also included in xPDFsuite and is straightforwardly incorporated into your workflow
+ 
 Features
 ========
 
-Improving upon an earlier version of the software, xPDFsuite is programmed in Python instead of IDL (Interactive Data Language), making it more portable
-than its predecessor. The software also gives the user robust and reliable total scattering pair distribution functions by specifying a very small number
-of input parameters.
-
-Unlike other programs for obtaining the pair distribution function,
-the software is exceptionally easy to learn and use. This increases
-the range of people who can use it, decreases training costs, and
-speeding up workflow. xPDFsuite also permits users to run multiple
-data sets using the same input file, allowing for batch processing
-in fractions of a second.
+xPDFsuite is exceptionally easy to learn and use and lowers the barrier to using atomic pair distribution function (PDF) methods, 
+increasing the range of people who can use it, decreasing training costs, and speeding up workflow. xPDFsuite permits users to run 
+multiple data sets using the same input file, allowing for batch processing of large numbers of datasets in fractions of a second.
 
 Key features:
+ * Full featured, easy-to-use GUI
+ * Real time PDF transformation and plotting
+ * Flexible plotting and analysis for single and mulitple data sets
+ * Optimized for high throughput data processing
+ * 2D powder diffraction image integration
+ * Static and dynamic mask editing on 2D image
+ * Pearson correlation analysis on selected data-sets
+ * Written in Python and on Windows, Linux, and MacOSX
 
-* Full featured, easy-to-use GUI;
-* Real time PDF transformation and plotting;
-* Flexiable plotting and analyzing for single and mulitple data sets;
-* Optimized for high throughput data processing; 
-* 2D powder diffraction image integration;
-* Static and dynamic mask editing on 2D image;
-* Pearson correlation analysis on selected data-sets;
-* Written in Python and support Windows, Linux, and MacOSX
+Explore xPDFsuite
+=================
+xPDFsuite is available for purchase for either academic or commercial applications.
+ - To see xPDFsuite in action, please see the video here. (available soon)
+ - To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available `here <http://bit.ly/xPDFsuite>`_. This has all the xPDFsuite functionality, but you will not be able to save your results.
+ - To purchase xPDFsuite (separate academic and commercial license options), please go to `Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_ download site here.
 
-Applications
-============
+Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our 
+free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.  
 
-* Structural characterization of crystalline, nanocrystalline, amorphous or nanoparticle materials, including inorganics, polymers and pharmaceuticals.
-* materials development guidance
-* Testing of compounds to ensure consistency during development
-* Submission for federal agency (e.g., FDA) approval
-* Patent application filing
-* Intellectual property infringement defense
-* Stability studies, e.g., to determine shelf lifetime of drugs
-
-Advantages
-==========
-
-* First viable means of characterizing the structure of amorphous or nanocrystalline compounds
-* Yields information that makes the development of amorphous or nanocrystalline materials much more feasible
-* In contrast to earlier algorithms, the technology can compute the total scattering pair distribution function in several microseconds.
-
-Obtain the software
-===================
-
-The xPDFsuite is currently requires a paid license from Columbia University. The cost and terms depend on 
-whether it is used in an academic or commercial setting. To obtain the software, 
-please consult `Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_
-or contact `Beth Kauderer <techtransfer@columbia.edu>`_ at Columbia Technology Ventures 
-and `Prof. Simon Billinge  <sb2896@columbia.edu>`_ for more information. 
+We hope you enjoy xPDFsuite and that it supercharges your PDF analyses.  Please contact us with feedback and questions by 
+emailing `Prof. Simon Billinge  <sb2896@columbia.edu>`_ 
