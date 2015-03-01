@@ -42,12 +42,16 @@ Key features:
 Explore xPDFsuite
 =================
 xPDFsuite is available for purchase for either academic or commercial applications.
- - To see xPDFsuite in action, please see the video here. (available soon)
- - To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available `here <http://bit.ly/xPDFsuite>`_. This has all the xPDFsuite functionality, but you will not be able to save your results.
- - To purchase xPDFsuite (separate academic and commercial license options), please go to `Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_ download site here.
+ * To see xPDFsuite in action, please see the video here. (available soon)
+ * To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available at |CTV_link|. This has all the xPDFsuite functionality, but you will not be able to save your results.   
+ * To purchase xPDFsuite (separate academic and commercial license options), please go to |CTV_link|.
 
-Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our 
-free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.  
+.. |CTV_link| raw:: html
 
-We hope you enjoy xPDFsuite and that it supercharges your PDF analyses.  Please contact us with feedback and questions by 
+   <a href="http://bit.ly/xPDFsuite" target="_blank">Columbia Technology Ventures</a>
+   
+**Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our 
+free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.**  
+
+**We hope you enjoy xPDFsuite and that it supercharges your PDF analyses.**  Please contact us with feedback and questions by 
 emailing `Prof. Simon Billinge  <sb2896@columbia.edu>`_ 
