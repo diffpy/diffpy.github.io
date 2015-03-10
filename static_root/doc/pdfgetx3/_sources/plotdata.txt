@@ -46,7 +46,8 @@ following options:
    :option:`pdfgetx3 --find <pdfgetx3 -f>` option, however
    :program:`plotdata` does not recognize :confval:`datapath` and
    searches for files only in the current directory.  The filename
-   patterns are described with :option:`pdfgetx3 --find <pdfgetx3 -f>`.
+   patterns are described in the
+   :option:`pdfgetx3 --find <pdfgetx3 -f>` section.
    If patterns contain any special characters `"^$<>"` they need to be
    enclosed in double quotes (") on the command line so they don't get
    interpreted by the command shell.
@@ -130,6 +131,9 @@ supported by the `plotdata` program (and function):
 
    show program version and exit.
 
+.. option:: --manual
+
+   Open this manual page in a Web browser and exit.
 
 
 plotdata examples
