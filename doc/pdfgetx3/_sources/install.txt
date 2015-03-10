@@ -11,7 +11,7 @@ Python 2.7 installed. [#fpy3]_
 In addition, the following third-party Python libraries are
 also required:
 
-* distribute - tools for installing Python packages
+* setuptools - tools for installing Python packages
 * NumPy - library for scientific computing with Python
 * matplotlib - Python plotting library
 * IPython - enhanced interactive Python shell
@@ -36,7 +36,7 @@ Ubuntu Linux computer the software dependencies can be all installed
 with a single shell command ::
 
   sudo apt-get install \
-    python-distribute python-numpy python-matplotlib ipython
+    python-setuptools python-numpy python-matplotlib ipython
 
 This may be, of course, just as well accomplished using the GUI
 driven Synaptic package manager.  Other Linux
