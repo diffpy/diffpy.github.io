@@ -194,7 +194,7 @@ publish-prepare:
 	@test -d _build/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
 	test -d _build/master || \
-	    git clone -b master $(GITREPOPATH) _build/master
+	    git clone -s -b master $(GITREPOPATH) _build/master
 	cd _build/master && \
 	    git pull $(GITREMOTEURL) master
 	rsync -acv --delete --exclude=.git --exclude=.rsync-exclude \
