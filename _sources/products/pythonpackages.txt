@@ -3,14 +3,18 @@ Python Packages
 
 This is a complete list of all Python packages developed by the DiffPy
 team. For more information about a specific package, follow the link to
-the corresponding github page. With the exception of PDFfit2 all of the
-packages listed below are bundled in the |DiffPyCMI| release.
+the corresponding github page. With the exception of PDFfit2 and SrMise
+all of the packages listed below are bundled in the |DiffPyCMI| release.
 
 ======================      ============================================
 Module                      Description
 ======================      ============================================
 `diffpy.srfit`_             Setup and control of general fitting 
                             problems.
+
+`diffpy.srmise`_            Python tool for peak extraction and peak
+                            fitting of atomic pair distribution
+                            functions.
 
 `diffpy.srreal`_            Python library for calculation of pair based 
                             quantities such as the pair distribution 
@@ -32,6 +36,8 @@ Module                      Description
 ======================      ============================================
 
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+
+.. _diffpy.srmise: https://github.com/diffpy/diffpy.srmise
 
 .. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
 

@@ -40,7 +40,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -118,9 +118,9 @@ and comes with built in graphical and structure visualization capabilities.</p>
 Please see <a class="reference external" href="xPDFsuite.html">here</a> for more information.  xPDFsuite is designed for flexible,
 high throughput PDF analyses and contains many features for interrogating, comparing and
 modeling data as well as simply doing data reduction.</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id2">
 <img alt="../_images/PDFgui_screenshot_small.png" src="../_images/PDFgui_screenshot_small.png" />
-<p class="caption">Screen-shot of PDFgui during a refinement of multiple data-sets</p>
+<p class="caption"><span class="caption-text">Screen-shot of PDFgui during a refinement of multiple data-sets</span></p>
 </div>
 </div>
 <div class="section" id="installation">
@@ -130,10 +130,10 @@ conditions specified in the <a class="reference internal" href="pdfguilicense.ht
 <p>Follow one of the links below for installation instructions specific to
 your system:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#unix"><em>Unix, Linux, Mac</em></a></li>
-<li><a class="reference internal" href="#windows"><em>Windows</em></a></li>
-<li><a class="reference internal" href="#updates"><em>PDFgui updates</em></a></li>
-<li><a class="reference internal" href="#releases"><em>PDFgui Releases</em></a></li>
+<li><a class="reference internal" href="#unix"><span>Unix, Linux, Mac</span></a></li>
+<li><a class="reference internal" href="#windows"><span>Windows</span></a></li>
+<li><a class="reference internal" href="#updates"><span>PDFgui updates</span></a></li>
+<li><a class="reference internal" href="#releases"><span>PDFgui Releases</span></a></li>
 </ul>
 </div>
 <div class="section" id="unix-linux-mac">
@@ -150,13 +150,13 @@ the most straightforward way to install is to execute:</p>
 <p>The easy_install command downloads, unzips and installs pdfgui together with
 its requirements,
 diffpy.pdffit2 and diffpy.Structure.
-The program can be then started as <tt class="docutils literal"><span class="pre">pdfgui</span></tt>.</p>
-<p>The <tt class="docutils literal"><span class="pre">easy_install</span></tt> command is a part of the Python setuptools library. If it is not available,
+The program can be then started as <code class="docutils literal"><span class="pre">pdfgui</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">easy_install</span></code> command is a part of the Python setuptools library. If it is not available,
 install the &#8220;python-setuptools&#8221; package with the system package manager or use the &#8221;.tgz&#8221; archive
-below, which comes with <tt class="docutils literal"><span class="pre">easy_install</span></tt> included.</p>
+below, which comes with <code class="docutils literal"><span class="pre">easy_install</span></code> included.</p>
 <p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong>
 from the <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">download archive</a>,
-unpack and run the enclosed <tt class="docutils literal"><span class="pre">easy_install</span></tt> script:</p>
+unpack and run the enclosed <code class="docutils literal"><span class="pre">easy_install</span></code> script:</p>
 <div class="highlight-python"><div class="highlight"><pre>tar -xzf diffpy-VERSION.tgz
 cd diffpy-VERSION
 ./easy_install diffpy.pdfgui
@@ -172,18 +172,18 @@ cd diffpy-VERSION
 run PDFgui. Nevertheless, PDFgui (and other DiffPy components) can be also
 installed under existing Python tree. This requires Python 2.5 with several external
 Python packages, namely setuptools, numpy, wxPython and matplotlib. To add PDFgui to an
-existing Python tree, start Windows command prompt and run the <tt class="docutils literal"><span class="pre">easy_install</span></tt> script from
-the <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt> directory:</p>
+existing Python tree, start Windows command prompt and run the <code class="docutils literal"><span class="pre">easy_install</span></code> script from
+the <code class="docutils literal"><span class="pre">Python25/Scripts</span></code> directory:</p>
 <div class="highlight-python"><div class="highlight"><pre>cd c:\Python25\Scripts
 ..\python.exe easy_install-script.py diffpy.pdfgui
 </pre></div>
 </div>
-<p>This installs library files under <tt class="docutils literal"><span class="pre">Python25/Lib/site-packages</span></tt> and executable scripts for
-<tt class="docutils literal"><span class="pre">pdfgui</span></tt> and <tt class="docutils literal"><span class="pre">pdffit2</span></tt> under <tt class="docutils literal"><span class="pre">Python25/Scripts</span></tt>.</p>
+<p>This installs library files under <code class="docutils literal"><span class="pre">Python25/Lib/site-packages</span></code> and executable scripts for
+<code class="docutils literal"><span class="pre">pdfgui</span></code> and <code class="docutils literal"><span class="pre">pdffit2</span></code> under <code class="docutils literal"><span class="pre">Python25/Scripts</span></code>.</p>
 </div>
 <div class="section" id="pdfgui-updates">
 <span id="updates"></span><h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
-<p>Both Unix and Windows platforms can use the <tt class="docutils literal"><span class="pre">easy_install</span></tt> command to obtain the latest
+<p>Both Unix and Windows platforms can use the <code class="docutils literal"><span class="pre">easy_install</span></code> command to obtain the latest
 updates to the code. To upgrade PDFgui, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>easy_install -U diffpy.pdfgui
 </pre></div>

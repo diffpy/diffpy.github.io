@@ -40,7 +40,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -109,12 +109,12 @@
 <h1>How to Update to the Latest Sources<a class="headerlink" href="#how-to-update-to-the-latest-sources" title="Permalink to this headline">¶</a></h1>
 <p>In order to update and build the source code you must have all the
 dependencies installed. In addition to the dependencies listed in the
-<a class="reference internal" href="install.html"><em>installation instructions</em></a>, you will need <tt class="docutils literal"><span class="pre">mercurial</span></tt>
-and <tt class="docutils literal"><span class="pre">wget</span></tt>.  On Ubuntu and Fedora, the required software can easily be
+<a class="reference internal" href="install.html"><em>installation instructions</em></a>, you will need <code class="docutils literal"><span class="pre">mercurial</span></code>
+and <code class="docutils literal"><span class="pre">wget</span></code>.  On Ubuntu and Fedora, the required software can easily be
 installed using the system package manager using the commands shown
 below.</p>
 <blockquote>
-<div><p>For Ubuntu use <tt class="docutils literal"><span class="pre">apt-get</span></tt>:</p>
+<div><p>For Ubuntu use <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
     python-setuptools python-numpy python-scipy \
@@ -122,7 +122,7 @@ below.</p>
     scons git zsh mercurial wget
 </pre></div>
 </div>
-<p>For Fedora use <tt class="docutils literal"><span class="pre">yum</span></tt>:</p>
+<p>For Fedora use <code class="docutils literal"><span class="pre">yum</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo yum install \
     gsl-devel boost-devel python-devel
     python-setuptools numpy scipy  \
