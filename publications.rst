@@ -6,6 +6,8 @@ References
 The following papers in the literature describe the DiffPy products.
 Please cite us if our software has been used in your research.
 
+* |citeJuhasAca15|
+
 * |citeJuhasJac13|
 
 * |citeFarrowJpcm07|
@@ -19,8 +21,6 @@ Publications using DiffPy-CMI
 
 The following papers made use of DiffPy developed software for analysis
 and/or modeling. 
-
-* |citeJuhasAca15|
 
 * |citePrillAca15|
 
