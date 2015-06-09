@@ -62,13 +62,13 @@
    lattice parameter values in electron pair distribution function (ePDF)
    studies <http://arxiv.org/abs/1401.1850>`__, *arXiv*, 1401.1850 (2014).
 
-.. |citeChoiNanol13| replace::
+.. |citeChoiNanol14| replace::
    Joshua J. Choi, Xiaohao Yang, Zachariah M.  Norman, Simon J. L.
    Billinge, and Jonathan S. Owen, `Structure of methylammonium lead
    iodide on mesoporous titanium dioxide: active material in high
    performance metal-organic solar cells
    <http://pubs.acs.org/doi/abs/10.1021/nl403514x>`__, *Nano Lett.*
-   **14**, 127 (2013).
+   **14**, 127 (2014).
 
 
 .. |citeJacquesNc13| replace::
@@ -101,6 +101,13 @@
    <http://dx.doi.org/10.1021/ja401276f>`__,
    *J. Am. Chem.  Soc.* **135**, 6403-6406 (2013).
 
+.. |citeTyrstedAcie12| replace::
+   Christoffer Tyrsted, Kirsten M. Ø. Jensen, Espen D.  Bøjesen,
+   Nina Lock, Mogens Christensen, Simon J. L. Billinge and Bo
+   B. Iversen, `Understanding the formation and evolution of ceria
+   nanoparticles under hydrothermal conditions
+   <http://dx.doi.org/10.1002/anie.201204747>`__,
+   *Angew. Chem. Int. Edit.* **51**, 9030-9033 (2012).
 
 .. |citeJensenJacs12| replace::
    Kirsten M. Ø. Jensen, Mogens Christensen, Pavol Juhás, Christoffer
@@ -109,3 +116,72 @@
    and growth during hydrothermal synthesis: an in situ total scattering
    study <http://dx.doi.org/10.1021/ja300978f>`__,
    *J. Am. Chem. Soc.* **134**, 6785 (2012).
+
+.. |citeMengqiangZhuGca12| replace::
+   Mengqiang Zhu, Christopher L. Farrow, Jeffrey E. Post, Kenneth J. T.
+   Livi, Simon J. L. Billinge, Matthew Ginder-Vogel and Donald L.
+   Sparks, `Structural study of biotic and abiotic poorly-crystalline
+   manganese oxides using atomic pair distribution function analysis
+   <http://dx.doi.org/10.1016/j.gca.2011.12.006>`__,
+   *Geochim. Cosmochim. Ac.* **81**, 39-55 (2012).
+
+.. |citeMengqiangZhuESTL14| replace::
+   Mengqiang Zhu, Paul Northrup, Chenyang Shi, Simon J. L. Billinge,
+   Donald L. Sparks and Glenn A. Waychunas,
+   `The structure of sulfate adsorption complexes on ferrihydrite
+   <http://pubs.acs.org/doi/abs/10.1021/ez400052r>`__,
+   *Environ. Sci. Technol. Lett.* **1**, 97-101 (2014).
+
+.. |citeGhidiuCC14| replace::
+   Michael Ghidiu, Michael Naguib, Chenyang Shi, Olha Mashtalir, Limei
+   Pan, Bo Zhang, Jian Yang, Yury Gogotsi, Simon J. L. Billinge and
+   Michel W. Barsoum,
+   |GhidiuCC14title|_,
+   *Chem. Commun.* **50**, 9517-9520 (2014).
+
+.. |GhidiuCC14title| replace::
+   Synthesis and charaterization of two-dimensional
+   Nb\ :sub:`4`\ C\ :sub:`3` (MXene)
+.. _GhidiuCC14title: http://dx.doi.org/10.1039/C4CC03366C
+
+.. |citeBeecherJacs14| replace::
+   Alexander N. Beecher, Xiaohao Yang, Joshua H. Palmer, Alexandra L.
+   LaGrassa, Pavol Juhás, Simon J. L. Billinge and Jonathan S. Owen,
+   `Atomic structures and gram scale synthesis of three tetrahedral
+   quantum dots
+   <http://pubs.acs.org/doi/abs/10.1021/ja503590h>`__,
+   *J. Am. Chem. Soc.* **136**, 10645-10653 (2014).
+
+.. |citeDoanNguyenAcsn14| replace::
+   Vicky V. T. Doan-Nguyen, Simon A. J. Kimber, Diego Pontoni, Danielle
+   Reifsnyder Hickey, Benjamin T. Diroll, Xiaohao Yang, Marcel
+   Miglierini, Christopher B. Murray and Simon J. L. Billinge,
+   `Bulk metallic glass-like scattering signal in small metallic
+   nanoparticles <http://dx.doi.org/10.1021/nn501591g>`__,
+   *ACS Nano* **8**, 6163–6170 (2014).
+
+.. |citePrillJac15| replace::
+   Dragica Prill, Pavol Juhás, Martin U. Schmidt and Simon J. L.
+   Billinge, `Modeling pair distribution functions (PDF) of organic
+   compounds: describing both intra- and intermolecular correlation
+   functions in calculated PDFs
+   <http://dx.doi.org/10.1107/S1600576714026454>`__,
+   *J. Appl. Crystallogr.* **48**, 171-178 (2015).
+
+.. FIXME - update when published
+
+.. |citePrillAca15| replace::
+   Dragica Prill, Pavol Juhas, S. J. L. Billinge and Martin U. Schmidt,
+   `Solution and refinement of organic crystal structures by fitting to
+   the atomic pair distribution function (PDF)
+   <http://journals.iucr.org/a/>`__,
+   *submitted to Acta Crystallogr. A*, (2015).
+
+.. FIXME - update when published
+
+.. |citeJuhasAca15| replace::
+   Pavol Juhás, Christopher Farrow, Xiaohao Yang, Kevin Knox and Simon
+   J. L. Billinge, `Towards refinement and solution of complicated
+   structures by Complex Modeling: approach and software framework
+   <http://journals.iucr.org/a/>`__,
+   *submitted to Acta Crystallogr. A*, (2015).
