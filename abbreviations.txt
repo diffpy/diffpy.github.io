@@ -180,8 +180,8 @@
 .. FIXME - update when published
 
 .. |citeJuhasAca15| replace::
-   Pavol Juhás, Christopher Farrow, Xiaohao Yang, Kevin Knox and Simon
-   J. L. Billinge, `Towards refinement and solution of complicated
+   P. Juhás, C. L. Farrow, X. Yang, K. R. Knox and S. J. L. Billinge,
+   `Towards refinement and solution of complicated
    structures by Complex Modeling: approach and software framework
    <http://journals.iucr.org/a/>`__,
    *submitted to Acta Crystallogr. A*, (2015).
