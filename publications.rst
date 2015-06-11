@@ -8,6 +8,8 @@ Please cite us if our software has been used in your research.
 
 * |citeJuhasAca15|
 
+* |citeGranlundAca15|
+
 * |citeJuhasJac13|
 
 * |citeFarrowJpcm07|
