@@ -169,10 +169,11 @@
    *J. Appl. Crystallogr.* **48**, 171-178 (2015).
 
 .. |citeTerbanNan15| replace::
-   Maxwell W. Matthew Johnson, Marco DiMichiel and Simon J. L. Billinge,
-   `Detection and characterization of nanoparticles in suspension at low
-   concentrations using the X-ray total scattering pair distribution function
-   technique <http://dx.doi.org/10.1039/C4NR06486K>`__,
+   Maxwell W. Terban, Matthew Johnson, Marco Di Michiel and Simon J. L.
+   Billinge, `Detection and characterization of nanoparticles in suspension at
+   low concentrations using the X-ray total scattering pair distribution
+   function technique
+   <http://dx.doi.org/10.1039/C4NR06486K>`__,
    *Nanoscale* **7**, 5480 (2015).
 
 .. FIXME - update when published
