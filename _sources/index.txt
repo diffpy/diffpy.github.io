@@ -81,3 +81,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/pdfgui
    products/pdfgetx3
    products/pythonpackages 
+   products/SrMise
