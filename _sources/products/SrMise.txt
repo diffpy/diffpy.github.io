@@ -75,7 +75,8 @@ Enthought Canopy which already includes the required components.
 Installation
 ------------------------------------------------------------------------
 
-The simplest way to obtain diffpy.srmise on Unix, Linux, and Mac systems (see the :doc:`license <SrMiselicense>` for terms and conditions of use) is 
+The simplest way to obtain diffpy.srmise on Unix, Linux, and Mac systems
+(see the :doc:`license <SrMiselicense>` for terms and conditions of use) is 
 using ``pip`` to download and install the latest release from the
 `Python Package Index <https://pypi.python.org>`_ (PyPI). :: 
 
@@ -97,9 +98,10 @@ To install on Windows run either of the commands above omitting ``sudo``.
 
 
 What next?
-==========
+----------
 
-Explore the `SrMise examples <http://diffpy.github.io/diffpy.srmise/examples.html>`_!
+Explore the SrMise tutorial
+`examples <http://diffpy.github.io/diffpy.srmise/examples.html>`_!
 
 .. toctree::
    :hidden:
