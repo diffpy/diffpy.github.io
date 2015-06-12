@@ -15,7 +15,7 @@ The software aids rapid analysis of crystalline and nanostructured
 materials. Reasonable values for nearly all program parameters can be
 estimated directly from the data, although the PDF baseline of non-crystalline
 materials requires user judgment.  Crystalline (linear) and spherical
-nanoparticles baselines are included, but SrMise also supports arbitrary
+nanoparticle baselines are included, and SrMise also supports arbitrary
 polynomial and interpolated baselines.  Other key features include peak
 functions incorporating termination effects, standard uncertainty reporting, and
 a framework enabling a flexible AIC-driven multimodeling analysis.  A
