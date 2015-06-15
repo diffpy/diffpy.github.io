@@ -80,8 +80,8 @@
       <li><a href="xPDFsuite.html">xPDFsuite</a></li>
       <li><a href="pdfgetx3.html">PDFgetX3</a></li>
       <li><a href="pdfgui.html">PDFgui</a></li>
-      <li><a href="pythonpackages.html">Python Packages</a></li>
       <li><a href="#">SrMise</a></li>
+      <li><a href="pythonpackages.html">Python Packages</a></li>
   </ul>
 </li>
 
@@ -115,7 +115,9 @@ criterion (AIC) to generate and rank physically plausible sets of peaks even in
 the absence of a constraining structural model.  This approach to peak
 extraction is premised upon PDFs reporting accurate experimentally-determined
 uncertainties, and when these are unavailable results are contingent on a
-user-specified <em>ad hoc</em> uncertainty.</p>
+user-specified <em>ad hoc</em> uncertainty. PDFs mixing positive and negative
+peaks, such as some neutron PDFs, are compatible with the SrMise peak fitting,
+but not peak extraction, capability.</p>
 <p>The software aids rapid analysis of crystalline and nanostructured
 materials. Reasonable values for nearly all program parameters can be
 estimated directly from the data, although the PDF baseline of non-crystalline
@@ -136,19 +138,67 @@ investigators to use the software even at this early stage, and invites
 feedback and suggestions.</p>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p>The diffpy.srfit package requires Python 2.6 or 2.7 and the following software:</p>
+<p>The diffpy.srmise package requires Python 2.6 or 2.7 and the following software:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">setuptools</span></code> - software distribution tools for Python</li>
 <li><code class="docutils literal"><span class="pre">NumPy</span></code> - numerical mathematics and fast array operations for Python</li>
 <li><code class="docutils literal"><span class="pre">SciPy</span></code> - scientific libraries for Python</li>
 <li><code class="docutils literal"><span class="pre">matplotlib</span></code> - python plotting library</li>
 </ul>
-<p>On Ubuntu Linux, the required software can easily be installed using
-the system package manager:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
-   python-setuptools python-numpy python-scipy python-matplotlib
+<p>See the <a class="reference internal" href="SrMiselicense.html"><em>SrMise license</em></a> for terms and conditions of use.
+Detailed installation instructions for the <a class="reference internal" href="#windows-install"><span>Windows</span></a>,
+<a class="reference internal" href="#macosx-install"><span>Mac OS X</span></a>, and <a class="reference internal" href="#linux-install"><span>Linux</span></a>
+platforms follow.</p>
+<div class="section" id="windows">
+<span id="windows-install"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Several prebuilt Python distributions for Windows include all the
+prerequisite software required to run SrMise, and installing one of these is the
+simplest way to get started.  These distributions are usually free for
+individual and/or academic use, but some also have commercial version.  Links to
+executables, installation instructions, and licensing information
+for some popular options are listed below.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.continuum.io/downloads">Anaconda</a></li>
+<li><a class="reference external" href="https://www.enthought.com/products/canopy/">Enthought Canopy</a></li>
+<li><a class="reference external" href="https://code.google.com/p/pythonxy/">Python(x,y)</a></li>
+<li><a class="reference external" href="http://winpython.github.io">WinPython</a></li>
+</ul>
+<p>Alternately, individual Windows executables for Python and the required
+components can be downloaded and installed.  The official Windows releases of
+Numpy and SciPy do not currently support 64-bit Python installations, so be
+sure to download the 32-bit versions of these packages.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.python.org/downloads/windows/">Python 2.6/2.7</a></li>
+<li><a class="reference external" href="http://sourceforge.net/projects/numpy/files/NumPy/">NumPy</a></li>
+<li><a class="reference external" href="http://sourceforge.net/projects/scipy/files/scipy/">SciPy</a></li>
+<li><a class="reference external" href="http://matplotlib.org/downloads.html">matplotlib</a></li>
+</ul>
+<p>After installing Python and the required packages, we can install SrMise.
+The simplest way to obtain diffpy.srmise on Windows systems
+is using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from the
+<a class="reference external" href="https://pypi.python.org">Python Package Index</a> (PyPI).  To do so, open a
+command window by running <code class="docutils literal"><span class="pre">cmd</span></code> from the Start Menu&#8217;s application search box
+(Windows 7/8/10) or Run command (Windows Vista and earlier).  Verify that the
+<code class="docutils literal"><span class="pre">pip</span></code> program is installed by running</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
+<p>If this command is not found, download and run
+<a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>, which will install both it
+and setuptools.  For example, if your Windows user name is <code class="docutils literal"><span class="pre">MyName</span></code> and you
+download the file to the desktop, you would run the following from the command
+line:</p>
+<div class="highlight-python"><div class="highlight"><pre>cd C:\Users\MyName\Desktop
+python get-pip.py
+</pre></div>
+</div>
+<p>Finally, install the latest version of SrMise by running</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install diffpy.srmise
+</pre></div>
+</div>
+</div>
+<div class="section" id="mac-os-x">
+<span id="macosx-install"></span><h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
 <p>For Mac OS X systems with the MacPorts package manager, the required
 software can be installed with</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install \
@@ -161,29 +211,16 @@ in MacPorts:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port select --set python python27
 </pre></div>
 </div>
-<p>For Windows systems, the easiest way to obtain <code class="docutils literal"><span class="pre">setuptools</span></code> if not already
-installed is downloading the <code class="docutils literal"><span class="pre">pip</span></code> setup script <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a> and running</p>
-<div class="highlight-python"><div class="highlight"><pre>python get-pip.py
-</pre></div>
-</div>
-<p>It is recommended to install all other dependencies using prebuilt binaries.
-Visit <a class="reference external" href="http://www.scipy.org">http://www.scipy.org</a> and <a class="reference external" href="http://www.matplotlib.org">http://www.matplotlib.org</a> for instructions.
-Alternately, install a full Python distribution such as Python(x,y) or
-Enthought Canopy which already includes the required components.</p>
-</div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>The simplest way to obtain diffpy.srmise on Unix, Linux, and Mac systems
-(see the <a class="reference internal" href="SrMiselicense.html"><em>license</em></a> for terms and conditions of use) is
-using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from the
-<a class="reference external" href="https://pypi.python.org">Python Package Index</a> (PyPI).</p>
+<p>The simplest way to obtain diffpy.srmise on Mac OS X systems
+is using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from
+<a class="reference external" href="https://pypi.python.org">PyPI</a>.</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo pip install diffpy.srmise
 </pre></div>
 </div>
 <p>If you prefer to install from sources, download them from the
 <a class="reference external" href="https://github.com/diffpy/diffpy.srmise/releases">GitHub</a> or
-<a class="reference external" href="https://pypi.python.org/pypi/diffpy.srmise">PyPI</a> pages for SrMise.  Then
-run</p>
+<a class="reference external" href="https://pypi.python.org/pypi/diffpy.srmise">PyPI</a> pages for SrMise.
+Uncompress them to a directory, and from that directory run</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo python setup.py install
 </pre></div>
 </div>
@@ -191,7 +228,38 @@ run</p>
 administrator (root) access is not available, see the usage info from
 <code class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span> <span class="pre">--help</span></code> for options to install to user-writable
 directories.</p>
-<p>To install on Windows run either of the commands above omitting <code class="docutils literal"><span class="pre">sudo</span></code>.</p>
+</div>
+<div class="section" id="linux">
+<span id="linux-install"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>On Ubuntu and Debian Linux, the required software can easily be installed using
+the system package manager:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
+   python-setuptools python-numpy python-scipy python-matplotlib
+</pre></div>
+</div>
+<p>Similarly, on Fedora:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install python-setuptools numpy scipy python-matplotlib
+</pre></div>
+</div>
+<p>For other Linux distributions consult the appropriate package manager.</p>
+<p>The simplest way to obtain diffpy.srmise on Linux systems
+is using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from the
+<a class="reference external" href="https://pypi.python.org">PyPI</a>.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install diffpy.srmise
+</pre></div>
+</div>
+<p>If you prefer to install from sources, download them from the
+<a class="reference external" href="https://github.com/diffpy/diffpy.srmise/releases">GitHub</a> or
+<a class="reference external" href="https://pypi.python.org/pypi/diffpy.srmise">PyPI</a> pages for SrMise.
+Uncompress them to a directory, and from that directory run</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py install
+</pre></div>
+</div>
+<p>This installs diffpy.srmise for all users in the default system location. If
+administrator (root) access is not available, see the usage info from
+<code class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span> <span class="pre">--help</span></code> for options to install to user-writable
+directories.</p>
+</div>
 </div>
 <div class="section" id="what-next">
 <h2>What next?<a class="headerlink" href="#what-next" title="Permalink to this headline">¶</a></h2>
