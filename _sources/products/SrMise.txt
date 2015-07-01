@@ -175,8 +175,8 @@ directories.
 What next?
 ============
 
-Explore the SrMise tutorial
-`examples <http://diffpy.github.io/diffpy.srmise/examples.html>`_!
+Explore the SrMise
+`tutorial <http://diffpy.github.io/diffpy.srmise/tutorial/index.html>`_!
 
 .. toctree::
    :hidden:
