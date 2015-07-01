@@ -182,6 +182,10 @@
    functions
    <https://dx.doi.org/10.1107/S2053273315005276>`__,
    *Acta Crystallogr. A* **71**, 392-409 (2015).
+   |downloadGranlundAca15|
+
+.. |downloadGranlundAca15| image:: /images/pdficon_small.png
+   :target: doc/srmise/Granlund-aca-2015.pdf
 
 .. FIXME - update when published
 
