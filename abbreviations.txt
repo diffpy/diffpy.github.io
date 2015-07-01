@@ -176,6 +176,13 @@
    <http://dx.doi.org/10.1039/C4NR06486K>`__,
    *Nanoscale* **7**, 5480 (2015).
 
+.. |citeGranlundAca15| replace::
+   L. Granlund, S. J. L. Billinge and P. M. Duxbury,
+   `Algorithm for systematic peak extraction from atomic pair distribution
+   functions
+   <https://dx.doi.org/10.1107/S2053273315005276>`__,
+   *Acta Crystallogr. A* **71**, 392-409 (2015).
+
 .. FIXME - update when published
 
 .. |citePrillAca15| replace::
@@ -193,13 +200,4 @@
    structures by Complex Modeling: approach and software framework
    <http://journals.iucr.org/a/>`__,
    *submitted to Acta Crystallogr. A*, (2015).
-
-.. FIXME - update page numbers and add download when published
-
-.. |citeGranlundAca15| replace::
-   L. Granlund, S. J. L. Billinge and P. M. Duxbury,
-   `Algorithm for systematic peak extraction from atomic pair distribution
-   functions
-   <https://dx.doi.org/10.1107/S2053273315005276>`__,
-   *Acta Crystallogr. A* **71**, (2015).
 
