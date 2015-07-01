@@ -154,7 +154,7 @@ Similarly, on Fedora::
 For other Linux distributions consult the appropriate package manager.
 
 The simplest way to obtain diffpy.srmise on Linux systems
-is using ``pip`` to download and install the latest release from the
+is using ``pip`` to download and install the latest release from
 `PyPI <https://pypi.python.org>`_. :: 
 
    sudo pip install diffpy.srmise
