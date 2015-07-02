@@ -4,7 +4,7 @@ program by citing the following paper in your publication:
 
     L. Granlund, S.J.L. Billinge, P.M. Duxbury, Algorithm for
     systematic peak extraction from atomic pair distribution
-    functions, Acta Crystallographica A 71(4), ???-??? (2015).
+    functions, Acta Crystallographica A 71(4), 392-409 (2015).
     doi:10.1107/S2053273315005276
 
 Copyright 2014-2015, Board of Trustees of Michigan State University
