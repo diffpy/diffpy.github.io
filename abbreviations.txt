@@ -196,12 +196,16 @@
    <http://journals.iucr.org/a/>`__,
    *submitted to Acta Crystallogr. A*, (2015).
 
-.. FIXME - update when published
+.. FIXME - add page numbers after Nov 2015.
 
 .. |citeJuhasAca15| replace::
    P. Juhás, C. L. Farrow, X. Yang, K. R. Knox and S. J. L. Billinge,
-   `Towards refinement and solution of complicated
-   structures by Complex Modeling: approach and software framework
-   <http://journals.iucr.org/a/>`__,
-   *submitted to Acta Crystallogr. A*, (2015).
+   `Complex modeling: a strategy and software program for combining
+   multiple information sources to solve ill posed structure and
+   nanostructure inverse problems
+   <http://dx.doi.org/10.1107/S2053273315014473>`__,
+   *Acta Crystallogr. A* **71**, (2015).
+   |downloadJuhasJac15|
 
+.. |downloadJuhasJac15| image:: /images/pdficon_small.png
+   :target: doc/diffpy-cmi/Juhas-aca-2015.pdf
