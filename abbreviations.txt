@@ -204,7 +204,7 @@
    multiple information sources to solve ill posed structure and
    nanostructure inverse problems
    <http://dx.doi.org/10.1107/S2053273315014473>`__,
-   *Acta Crystallogr. A* **71**, (2015).
+   *Acta Crystallogr. A* **71**, 562-568 (2015).
    |downloadJuhasJac15|
 
 .. |downloadJuhasJac15| image:: /images/pdficon_small.png
