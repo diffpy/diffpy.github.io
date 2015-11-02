@@ -196,8 +196,6 @@
    <http://journals.iucr.org/a/>`__,
    *submitted to Acta Crystallogr. A*, (2015).
 
-.. FIXME - add page numbers after Nov 2015.
-
 .. |citeJuhasAca15| replace::
    P. Juhás, C. L. Farrow, X. Yang, K. R. Knox and S. J. L. Billinge,
    `Complex modeling: a strategy and software program for combining
