@@ -9,7 +9,7 @@
    |downloadJuhasJac13|
 
 .. |downloadJuhasJac13| image:: /images/pdficon_small.png
-   :target: doc/pdfgetx3/Juhas-jac-2013.pdf
+   :target: /doc/pdfgetx3/Juhas-jac-2013.pdf
 
 
 .. |citeFarrowJpcm07| replace::
@@ -185,7 +185,7 @@
    |downloadGranlundAca15|
 
 .. |downloadGranlundAca15| image:: /images/pdficon_small.png
-   :target: doc/srmise/Granlund-aca-2015.pdf
+   :target: /doc/srmise/Granlund-aca-2015.pdf
 
 .. FIXME - update when published
 
@@ -206,4 +206,4 @@
    |downloadJuhasJac15|
 
 .. |downloadJuhasJac15| image:: /images/pdficon_small.png
-   :target: doc/diffpy-cmi/Juhas-aca-2015.pdf
+   :target: /doc/diffpy-cmi/Juhas-aca-2015.pdf
