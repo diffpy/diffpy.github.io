@@ -184,8 +184,6 @@ GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse HEAD)
 
 
-publish: publish-prepare publish-push
-
 publish-prepare:
 	@test -d _build/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
