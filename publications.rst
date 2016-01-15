@@ -24,7 +24,7 @@ Publications using DiffPy-CMI
 The following papers made use of DiffPy developed software for analysis
 and/or modeling. 
 
-* |citePrillAca15|
+* |citePrillAca16|
 
 * |citeTerbanNan15|
 
