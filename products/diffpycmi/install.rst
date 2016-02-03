@@ -1,14 +1,9 @@
-Installation
-============
+DiffPy-CMI installation from source archive
+===========================================
 
-.. note::
-
-   The current release is for Unix, Linux, and Mac OS X.  Windows
-   support will be added in a future release so please check back.
-
-Once you have downloaded the most recent `DiffPy-CMI tarball
+Downloaded the most recent `DiffPy-CMI tarball
 <https://github.com/diffpy/diffpy-release/releases/latest>`__
-follow the steps below.
+and follow the steps below.
 
 1 Install system software
 ------------------------------------------------------------------------
@@ -89,30 +84,11 @@ Unzip the DiffPy-CMI tarball into a directory of your choice.
 Execute the included :file:`install` script and follow the prompts
 (replace VERSION to match the actual filename)::
 
-    tar xzf diffpy_cmi-VERSION.tar.gz
-    cd diffpy_cmi-VERSION
-    ./install
+   tar xzf diffpy_cmi-VERSION.tar.gz
+   cd diffpy_cmi-VERSION
+   ./install
 
-That should be it, proceed to the Test section.
-
-For binary tarballs the installation can be also accomplished by
-creating a symbolic link to the :file:`diffpy_cmi.pth` file in some Python
-directory that processes :file:`.pth` files.
-
-For a single-user installation the preferred :file:`pth` directory can be
-found using ::
-
-    python -c 'import site; print site.USER_SITE'
-
-whereas for a system-wide installation the standard :file:`pth` locations are ::
-
-    python -c 'import site; print site.getsitepackages()'
-
-.. note::
-
-   It is essential to use a symbolic link; making a copy of the
-   :file:`.pth` file will not work.
-
+That should be it.
 
 3 Test
 ------------------------------------------------------------------------
@@ -124,6 +100,36 @@ nor errors::
 
 If there are failures for binary tarballs, you may need to recompile
 the sources by running ``./install --build``.
+
+4 Remarks
+------------------------------------------------------------------------
+
+The installation of DiffPy-CMI is almost entirely contained under the
+expanded diffpy_cmi directory.  The software can be thus easily
+uninstalled by removing that directory.
+
+The Python interpreter must have a symbolic link pointing to the
+:file:`diffpy_cmi.pth` file in one of the directories where it
+looks for :file:`.pth` files.  This is normally set up by the
+install script.  If that process somehow fails, the preferred
+:file:`pth` directory for a single-user installation can be
+found using ::
+
+   python -c 'import site; print site.USER_SITE'
+
+For a system-wide installation the standard :file:`pth` locations are ::
+
+   python -c 'import site; print site.getsitepackages()'
+
+Once the :file:`pth` directory has been established, navigate to
+the base diffpy_cmi directory and create the symbolic link with ::
+
+   ln -si $PWD/diffpy_cmi.pth /path/to/the/pth/directory/
+
+.. note::
+
+   It is essential to use a symbolic link; making a copy of the
+   :file:`.pth` file will not work.
 
 
 Contacts

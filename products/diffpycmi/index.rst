@@ -28,8 +28,35 @@ updates.
 
 
 
-Getting Started
-===============
+Installation
+============
+
+DiffPy-CMI is available for Linux and Mac operating systems as a
+collection of packages for Anaconda Python.  It is therefore
+essential to download and install `Anaconda Python
+<http://www.continuum.io/downloads>`__ first.  When ready,
+open a system shell (terminal), and install DiffPy-CMI from
+the "diffpy" channel of Anaconda packages ::
+
+   conda config --add channels diffpy
+   conda install diffpy-cmi
+
+.. note::
+
+   Use of this software is subject to the conditions in
+   :doc:`LICENSE.txt <license>`.
+
+We will be publishing frequent software updates which can be
+obtained later using ::
+
+   conda update diffpy-cmi
+
+If you don't want to use Anaconda, there is also an option to
+:doc:`install from source distribution <install>`.  Note that
+this method takes more time and requires some experience with
+building software from sources.
+
+
 
 * `Download <https://github.com/diffpy/diffpy-release/releases/latest>`_
   (use of this software is subject to the conditions in
@@ -37,16 +64,16 @@ Getting Started
 
 * :doc:`Install <install>`
 
-* `Play <https://github.com/diffpy/cmi_exchange#cmi-exchange>`_
-
 
 
 What next?
 ==========
 
-* :doc:`Get tips on using the CMI exchange <cmi_exchange>`
+* Play - visit our collection of example problems and data analysis
+  scripts at `CMI exchange
+  <https://github.com/diffpy/cmi_exchange#cmi-exchange>`__
 
-* :doc:`Update to the latest sources <updatesources>`
+* :doc:`Get tips on using the CMI exchange <cmi_exchange>`
 
 * :doc:`Contribute code <contributecode>`
 
