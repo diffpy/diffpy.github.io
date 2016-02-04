@@ -3,69 +3,89 @@
 DiffPy-CMI Contents
 ===================
 
-The DiffPy-CMI release includes Python and C++ modules developed by the
-DiffPy team as well as external libraries necessary for functionality.
+The DiffPy-CMI release includes Python and C++ libraries developed by
+the DiffPy team as well as external libraries necessary for functionality.
 
-Modules developed by the DiffPy team
-------------------------------------
+Libraries developed by the DiffPy team
+--------------------------------------
 
-======================      ============================================
-Module                      Description
-======================      ============================================
-`diffpy.srfit`_             Setup and control of general fitting
-                            problems.
+.. list-table::
+   :widths: 10, 5, 30
+   :header-rows: 1
 
-`diffpy.srreal`_            Python library for calculation of pair based
-                            quantities such as the pair distribution
-                            function (PDF), bond lengths, and bond
-                            valence sums.
+   * - Library
+     -
+     - Description
 
-`diffpy.Structure`_         Handles storage of crystal structure data.
+   * - `diffpy.srfit`_
+     - `doc <../../doc/srfit>`__
+     - Setup and control of general fitting problems.
 
-`diffpy.utils`_             General purpose shared utilities for the
-                            diffpy libraries.
+   * - `diffpy.srreal`_
+     - `doc <../../doc/srreal/>`__
+     - Python library for calculation of pair based quantities such as
+       the pair distribution function (PDF), bond lengths, and bond
+       valence sums.
 
-`pyobjcryst`_               Python bindings to the ObjCryst++
-                            Object-Oriented Crystallographic
-                            Library.
+   * - `diffpy.Structure`_
+     - `doc <../../doc/Structure/>`__
+     - Light-weigth storage of crystal structure data.
 
-`libdiffpy`_                C++ library for calculation of PDF and
-                            other real-space quantities.
-======================      ============================================
+   * - `diffpy.utils`_
+     - `doc <../../doc/utils/>`__
+     - General purpose utilities for the diffpy libraries.
 
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+   * - `pyobjcryst`_
+     - `doc <../../doc/pyobjcryst/>`__
+     - Python bindings to the ObjCryst++ crystallographic library.
 
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
+   * - `libdiffpy`_
+     - `doc <../../doc/libdiffpy/>`__
+     - C++ library for calculation of PDF and other real-space
+       quantities.
 
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.Structure
-
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-
-.. _libdiffpy: https://github.com/diffpy/libdiffpy
-
-.. _libobjcryst: https://github.com/diffpy/libobjcryst
 
 
 External libraries
--------------------
+------------------
 
-======================      ============================================
-Module                      Description
-======================      ============================================
-`periodictable`_            Extensible periodic table of the elements
-                            with support for mass, density, and
-                            X-ray/neutron scattering information.
+.. list-table::
+   :widths: 10, 5, 30
+   :header-rows: 1
 
+   * - Library
+     -
+     - Description
 
-`libobjcryst`_              ObjCryst++, crystallographic library for C++
-                            re-packaged for installation as a shared
-                            library.
+   * - srfit-sasview_
+     - `doc <http://www.sasview.org/docs/user/user.html>`__
+     - `Selected modules from SasView_, the Small
+       Angle Scattering Analysis Software Package.
 
-`cxxtest`_                  Testing framework for C++.
-======================      ============================================
+   * - `periodictable`_
+     - `doc <http://www.reflectometry.org/danse/docs/elements/>`__
+     - Extensible periodic table of the elements with support for mass,
+       density, and X-ray/neutron scattering information.
 
-.. _periodictable: http://www.reflectometry.org/danse/elements.html
+   * - `libobjcryst`_
+     - `doc <http://vincefn.net/ObjCryst/>`__
+     - ObjCryst++, crystallographic library for C++ re-packaged for
+       installation as a shared library.
+
+   * - `cxxtest`_
+     - `doc <http://cxxtest.com/guide.html>`__
+     - Testing framework for C++.
+
+.. URL definitions below -----------------------------------------------
 
 .. _cxxtest: http://cxxtest.com/
+.. _diffpy.Structure: https://github.com/diffpy/diffpy.Structure
+.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
+.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
+.. _libdiffpy: https://github.com/diffpy/libdiffpy
+.. _libobjcryst: https://github.com/diffpy/libobjcryst
+.. _periodictable: http://www.reflectometry.org/danse/elements.html
+.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
+.. _srfit-sasview: https://github.com/diffpy/srfit-sasview
+.. _SasView: http://www.sasview.org/
