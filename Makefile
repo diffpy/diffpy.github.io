@@ -184,13 +184,17 @@ GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse HEAD)
 
+.create-publish-branch:
+	git rev-parse --verify --quiet $(PUBLISHBRANCH) > /dev/null || \
+	    git branch --track $(PUBLISHBRANCH) origin/$(PUBLISHBRANCH)
 
-publish-prepare:
+publish-prepare: .create-publish-branch
 	@test -d _build/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
 	test -d _build/webpage || \
 	    git clone -s -b $(PUBLISHBRANCH) $(GITREPOPATH) _build/webpage
 	cd _build/webpage && \
+	    git fetch && \
 	    git checkout $(PUBLISHBRANCH)
 	cd _build/webpage && \
 	    git pull $(GITREMOTEURL) $(PUBLISHBRANCH)
