@@ -33,7 +33,7 @@ You'll notice that there are two directories: ``cmi_plugins`` and
 ``cmi_scripts``.  The scripts are standalone python scripts that can be
 run directly from the `IPython`_ command line, whereas the plugins are a
 set of functions and  `IPython extensions`_
-that provide additional functionality to your IPython session. 
+that provide additional functionality to your IPython session.
 
 Scripts
 ^^^^^^^
@@ -52,7 +52,7 @@ the behavior of the shell to add functionality.  They are installed and
 activated from the IPython command line by running::
 
     In [1]: %install_ext name_of_extension.py
-    In [2]: %load_ext name_of_extenstion 
+    In [2]: %load_ext name_of_extenstion
 
 
 .. _ipython: http://ipython.org/
@@ -67,7 +67,7 @@ Contribute Scripts
 
 To contribute your own script to the CMI Exchange you must first fork
 the project on github.  Once you've added your own code you can issue a
-pull request. 
+pull request.
 
 If you're new to git and don't know what it means to fork a project
 `begin here <https://help.github.com/articles/fork-a-repo>`_.

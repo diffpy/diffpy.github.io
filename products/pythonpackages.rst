@@ -9,24 +9,24 @@ all of the packages listed below are bundled in the |DiffPyCMI| release.
 ======================      ============================================
 Module                      Description
 ======================      ============================================
-`diffpy.srfit`_             Setup and control of general fitting 
+`diffpy.srfit`_             Setup and control of general fitting
                             problems.
 
 `diffpy.srmise`_            Python tool for peak extraction and peak
                             fitting of atomic pair distribution
                             functions.
 
-`diffpy.srreal`_            Python library for calculation of pair based 
-                            quantities such as the pair distribution 
-                            function (PDF), bond lengths, and bond 
+`diffpy.srreal`_            Python library for calculation of pair based
+                            quantities such as the pair distribution
+                            function (PDF), bond lengths, and bond
                             valence sums.
 
-`diffpy.Structure`_         Handles storage of crystal structure data.  
-                            
-`diffpy.utils`_             General purpose shared utilities for the 
+`diffpy.Structure`_         Handles storage of crystal structure data.
+
+`diffpy.utils`_             General purpose shared utilities for the
                             diffpy libraries.
 
-`pyobjcryst`_               Python bindings to the ObjCryst++ 
+`pyobjcryst`_               Python bindings to the ObjCryst++
                             Object-Oriented Crystallographic
                             Library.
 

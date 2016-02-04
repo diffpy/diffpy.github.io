@@ -22,7 +22,7 @@ Publications using DiffPy-CMI
 =============================
 
 The following papers made use of DiffPy developed software for analysis
-and/or modeling. 
+and/or modeling.
 
 * |citePrillAca16|
 
@@ -39,7 +39,7 @@ and/or modeling.
 * |citeShiPRL14|
 
 * |citeFarrowJac14|
-  
+
 * |citeAbeykoonArxiv14|
 
 * |citeMengqiangZhuESTL14|
@@ -48,8 +48,8 @@ and/or modeling.
 
 * |citeJacquesNc13|
 
-* |citeDavisCgd13| 
-  
+* |citeDavisCgd13|
+
 * |citeYangPccp13|
 
 * |citeFarrowJacs13|
