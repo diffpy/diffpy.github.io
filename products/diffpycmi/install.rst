@@ -1,5 +1,5 @@
-DiffPy-CMI installation from source archive
-===========================================
+DiffPy-CMI installation from sources
+====================================
 
 Downloaded the most recent `DiffPy-CMI tarball
 <https://github.com/diffpy/diffpy-release/releases/latest>`__
@@ -101,12 +101,15 @@ nor errors::
 If there are failures for binary tarballs, you may need to recompile
 the sources by running ``./install --build``.
 
-4 Remarks
+Remarks
 ------------------------------------------------------------------------
 
-The installation of DiffPy-CMI is almost entirely contained under the
-expanded diffpy_cmi directory.  The software can be thus easily
-uninstalled by removing that directory.
+The expanded diffpy_cmi directory can be renamed or moved
+to a different location and the software should still work.
+The only requirement is to update the :file:`diffpy_cmi.pth`
+symbolic link so it points to the new location.  This can be
+done by running the ``./install`` script again or following
+the steps below.
 
 The Python interpreter must have a symbolic link pointing to the
 :file:`diffpy_cmi.pth` file in one of the directories where it
@@ -128,9 +131,15 @@ the base diffpy_cmi directory and create the symbolic link with ::
 
 .. note::
 
-   It is essential to use a symbolic link; making a copy of the
-   :file:`.pth` file will not work.
+   It is essential to use a symbolic link.  Making a copy of the
+   :file:`diffpy_cmi.pth` file will not work.
 
+.. note::
+
+   The installation of DiffPy-CMI is entirely contained under the
+   expanded diffpy_cmi directory.  The software can be completely
+   uninstalled by deleting that directory and removing the symbolic
+   link.
 
 Contacts
 ------------------------------------------------------------------------
