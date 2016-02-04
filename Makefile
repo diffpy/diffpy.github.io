@@ -209,4 +209,4 @@ publish-prepare: .create-publish-branch
 	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
 
 publish-push:
-	git push $(GITREMOTE) source master
+	git push $(GITREMOTE) source $(PUBLISHBRANCH)
