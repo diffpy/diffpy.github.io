@@ -59,7 +59,7 @@ External libraries
 
    * - srfit-sasview_
      - `doc <http://www.sasview.org/docs/user/user.html>`__
-     - `Selected modules from SasView_, the Small
+     - Selected modules from SasView_, the Small
        Angle Scattering Analysis Software Package.
 
    * - `periodictable`_
