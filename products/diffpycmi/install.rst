@@ -1,3 +1,5 @@
+.. highlight:: bash
+
 DiffPy-CMI installation from sources
 ====================================
 
@@ -74,21 +76,23 @@ the shell environment so that MacPorts Python is the first in the
 PATH.  This can be accomplished by adding the following line to either
 of ``.profile`` or ``.zshenv`` file in your HOME directory ::
 
-    export PATH=/opt/local/bin:${PATH}
+    export PATH="/opt/local/bin:$PATH"
 
 
 2 Install DiffPy-CMI
 ------------------------------------------------------------------------
 
 Unzip the DiffPy-CMI tarball into a directory of your choice.
-Execute the included :file:`install` script and follow the prompts
-(replace VERSION to match the actual filename)::
+Execute the included :file:`install` script and follow the prompts. ::
 
+   # replace VERSION to match the actual filename
    tar xzf diffpy_cmi-VERSION.tar.gz
    cd diffpy_cmi-VERSION
    ./install
 
-That should be it.
+The install process may take a while and produce a plentiful output,
+but should work if all required software is in place.
+
 
 3 Test
 ------------------------------------------------------------------------
@@ -98,8 +102,11 @@ nor errors::
 
    ./runtests.sh
 
-If there are failures for binary tarballs, you may need to recompile
-the sources by running ``./install --build``.
+If there are failures they are most likely due to missing software or
+incorrect versions of Python or other libraries being used together.
+After addressing these issues it may be necessary to recompile the
+sources by running ``./install --build``.
+
 
 Remarks
 ------------------------------------------------------------------------
@@ -108,7 +115,7 @@ The expanded diffpy_cmi directory can be renamed or moved
 to a different location and the software should still work.
 The only requirement is to update the :file:`diffpy_cmi.pth`
 symbolic link so it points to the new location.  This can be
-done by running the ``./install`` script again or following
+done by running the ``./install`` script again or by following
 the steps below.
 
 The Python interpreter must have a symbolic link pointing to the

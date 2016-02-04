@@ -51,7 +51,7 @@ frequent software updates.  To update your installation later use ::
 
    conda update diffpy-cmi
 
-If you don't want to use Anaconda, it is also possible to
+If you don't want to use Anaconda you can
 :doc:`install DiffPy-CMI from sources <install>`.  Note that
 this method takes more time and requires more experience
 with the operating system.
