@@ -31,12 +31,12 @@ updates.
 Installation
 ============
 
-DiffPy-CMI is available for Linux and Mac operating systems as a
-collection of packages for Anaconda Python.  It is therefore
-essential to download and install `Anaconda Python
-<http://www.continuum.io/downloads>`__ first.  When ready,
-open a system shell (terminal), and install DiffPy-CMI from
-the "diffpy" channel of Anaconda packages ::
+As of version 2.0 DiffPy-CMI is available for Linux and
+Mac as a collection of packages for Anaconda Python.  It is
+therefore essential to download and install the `Anaconda
+Python <http://www.continuum.io/downloads>`__ first.  DiffPy-CMI
+can be then installed from the "diffpy" channel of Anaconda
+packages as follows ::
 
    conda config --add channels diffpy
    conda install diffpy-cmi
@@ -46,54 +46,45 @@ the "diffpy" channel of Anaconda packages ::
    Use of this software is subject to the conditions in
    :doc:`LICENSE.txt <license>`.
 
-We will be publishing frequent software updates which can be
-obtained later using ::
+The software distribution over Anaconda makes it easy to publish
+frequent software updates.  To update your installation later use ::
 
    conda update diffpy-cmi
 
-If you don't want to use Anaconda, there is also an option to
-:doc:`install from source distribution <install>`.  Note that
-this method takes more time and requires some experience with
-building software from sources.
-
-
-
-* `Download <https://github.com/diffpy/diffpy-release/releases/latest>`_
-  (use of this software is subject to the conditions in
-  :doc:`LICENSE.txt <license>`)
-
-* :doc:`Install <install>`
-
+If you don't want to use Anaconda, it is also possible to
+:doc:`install DiffPy-CMI from sources <install>`.  Note that
+this method takes more time and requires more experience
+with the operating system.
 
 
 What next?
 ==========
 
-* Play - visit our collection of example problems and data analysis
-  scripts at `CMI exchange
-  <https://github.com/diffpy/cmi_exchange#cmi-exchange>`__
+* `Explore CMI exchange
+  <https://github.com/diffpy/cmi_exchange#cmi-exchange>`__,
+  our collection of example scripts and tutorials
 
 * :doc:`Get tips on using the CMI exchange <cmi_exchange>`
 
 * :doc:`Contribute code <contributecode>`
 
 
-Contents and Documentation
-==========================
+Documentation
+=============
 
-For a list of packages bundled in the DiffPy-CMI release visit the
-:ref:`contents page <contents>`.
+Documentation for packages developed by the DiffPy team is available
+at the links below.
 
-Documentation for modules developed by the DiffPy team can generally be
-found at *diffpy.org/doc/ModuleName* or by following one of the links
-below.
-
-   `diffpy.srfit`_ -
-   `diffpy.srreal`_ -
-   `diffpy.Structure`_ -
-   `pyobjcryst`_ -
-   `diffpy.utils`_ -
-   `libdiffpy`_
+* diffpy.srfit_ -- configuration and control of data-fitting problems
+* diffpy.srreal_ -- calculators for pair distribution function, bond
+  valence sums, etc.
+* diffpy.Structure_ -- light-weight representation of crystal
+  structures
+* pyobjcryst_ -- Python interface to ObjCryst++ crystallographic
+  library
+* diffpy.utils_ -- general purpose utilities for the diffpy libraries
+* libdiffpy_ - C++ library for calculation of PDF and other real-space
+  quantities
 
 .. _diffpy.srfit: ../../doc/srfit/
 
@@ -106,6 +97,11 @@ below.
 .. _pyobjcryst: ../../doc/pyobjcryst/
 
 .. _libdiffpy: ../../doc/libdiffpy/
+
+
+See :ref:`DiffPy-CMI contents <contents>` for a complete list
+of open-source libraries that are included in DiffPy-CMI and
+their respective project pages.
 
 
 Reference
