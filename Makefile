@@ -179,7 +179,8 @@ pseudoxml:
 # Publish to diffpy.github.io
 
 GITREPOPATH = $(CURDIR)/.git
-GITREMOTE = origin
+PUBLISHBRANCH = master
+GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse HEAD)
 
@@ -187,19 +188,21 @@ GITLASTCOMMIT = $(shell git rev-parse HEAD)
 publish-prepare:
 	@test -d _build/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
-	test -d _build/master || \
-	    git clone -s -b master $(GITREPOPATH) _build/master
-	cd _build/master && \
-	    git pull $(GITREMOTEURL) master
+	test -d _build/webpage || \
+	    git clone -s -b $(PUBLISHBRANCH) $(GITREPOPATH) _build/webpage
+	cd _build/webpage && \
+	    git checkout $(PUBLISHBRANCH)
+	cd _build/webpage && \
+	    git pull $(GITREMOTEURL) $(PUBLISHBRANCH)
 	rsync -acv --delete --exclude=.git --exclude=.rsync-exclude \
-	    --exclude-from=_build/master/.rsync-exclude \
-	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/master/
-	cd _build/master && \
+	    --exclude-from=_build/webpage/.rsync-exclude \
+	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/webpage/
+	cd _build/webpage && \
 	    git add --all . && \
 	    git diff --cached --quiet || \
 	    git commit -m "Synchronized with the source at $(GITLASTCOMMIT)."
-	cd _build/master && \
-	    git push $(GITREPOPATH) master
+	cd _build/webpage && \
+	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
 
 publish-push:
 	git push $(GITREMOTE) source master
