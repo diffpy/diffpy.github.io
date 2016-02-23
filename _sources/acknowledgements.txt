@@ -1,4 +1,4 @@
-Acknowledgements 
+Acknowledgements
 ================
 
 
@@ -34,4 +34,4 @@ Additional Contributions
 
 The DiffPy team would like to thank multiple users for their help and
 comments during the development of this release: Dragica Podgorski,
-Valentina Felsen, and Kirsten M. Ø. Jensen. 
+Valentina Felsen, and Kirsten M. Ø. Jensen.

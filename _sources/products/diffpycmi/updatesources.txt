@@ -19,7 +19,7 @@ below.
    For Fedora use ``yum``::
 
     sudo yum install \
-        gsl-devel boost-devel python-devel 
+        gsl-devel boost-devel python-devel
         python-setuptools numpy scipy  \
         python-matplotlib python-lxml \
         python-ipython-notebook scons git zsh \
@@ -30,15 +30,15 @@ installation script that was packaged with the release bundle.
 
 To update the codes::
 
-    ./install --update[=steps]  
-    
-This will perform all or selected software updates from online source repositories.  
-Update steps are comma separated integers or ranges such as '1,3,5-6'. 
+    ./install --update[=steps]
+
+This will perform all or selected software updates from online source repositories.
+Update steps are comma separated integers or ranges such as '1,3,5-6'.
 
 To rebuild the source code::
-    
-    ./install --build[=steps]   
-    
+
+    ./install --build[=steps]
+
 This will rebuild all or specified packages from sources in the src folder. In both
 cases, you could use option -n to display the build steps.
 

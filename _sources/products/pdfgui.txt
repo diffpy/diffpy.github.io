@@ -6,26 +6,26 @@ Overview
 ========
 
 For users who do not have the expertise or necessity for command line analysis, PDFgui is
-a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is 
-capable of full-profile fitting of the atomic pair distribution function (PDF) 
-derived from x-ray or neutron diffraction data 
+a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
+capable of full-profile fitting of the atomic pair distribution function (PDF)
+derived from x-ray or neutron diffraction data
 and comes with built in graphical and structure visualization capabilities.
 
-PDFgui is incorporated in the powerful end-to-end x-ray PDF analysis package xPDFsuite.  
-Please see `here <xPDFsuite.html>`_ for more information.  xPDFsuite is designed for flexible, 
-high throughput PDF analyses and contains many features for interrogating, comparing and 
+PDFgui is incorporated in the powerful end-to-end x-ray PDF analysis package xPDFsuite.
+Please see `here <xPDFsuite.html>`_ for more information.  xPDFsuite is designed for flexible,
+high throughput PDF analyses and contains many features for interrogating, comparing and
 modeling data as well as simply doing data reduction.
 
 
 .. figure:: ../images/PDFgui_screenshot_small.png
-   :align: center 
+   :align: center
 
    Screen-shot of PDFgui during a refinement of multiple data-sets
 
 Installation
 ============
 
-By downloading and using this software you are agreeing to the 
+By downloading and using this software you are agreeing to the
 conditions specified in the :doc:`software license <pdfguilicense>`.
 
 Follow one of the links below for installation instructions specific to
@@ -135,7 +135,7 @@ Documentation and Help
 *  The user manual is available `online in html format <../doc/pdfgui/index.html>`__
    and is also downloadable in `PDF format <../doc/pdfgui/pdfgui.pdf>`__.
 
-*  Tutorial files are available for download as a 
+*  Tutorial files are available for download as a
    `zip archive <../doc/pdfgui/pdfgui-tutorial.zip>`__.
 
 *  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.

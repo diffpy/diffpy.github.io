@@ -46,7 +46,7 @@ The diffpy.srmise package requires Python 2.6 or 2.7 and the following software:
 * ``matplotlib`` - python plotting library
 
 See the :doc:`SrMise license <SrMiselicense>` for terms and conditions of use.
-Detailed installation instructions for the :ref:`Windows <windows_install>`, 
+Detailed installation instructions for the :ref:`Windows <windows_install>`,
 :ref:`Mac OS X <macosx_install>`, and :ref:`Linux <linux_install>`
 platforms follow.
 
@@ -120,7 +120,7 @@ in MacPorts::
 
 The simplest way to obtain diffpy.srmise on Mac OS X systems
 is using ``pip`` to download and install the latest release from
-`PyPI <https://pypi.python.org>`_. :: 
+`PyPI <https://pypi.python.org>`_. ::
 
    sudo pip install diffpy.srmise
 
@@ -131,9 +131,9 @@ Uncompress them to a directory, and from that directory run ::
 
    sudo python setup.py install
 
-This installs diffpy.srmise for all users in the default system location. If 
-administrator (root) access is not available, see the usage info from 
-``python setup.py install --help`` for options to install to user-writable 
+This installs diffpy.srmise for all users in the default system location. If
+administrator (root) access is not available, see the usage info from
+``python setup.py install --help`` for options to install to user-writable
 directories.
 
 .. _linux_install:
@@ -155,7 +155,7 @@ For other Linux distributions consult the appropriate package manager.
 
 The simplest way to obtain diffpy.srmise on Linux systems
 is using ``pip`` to download and install the latest release from
-`PyPI <https://pypi.python.org>`_. :: 
+`PyPI <https://pypi.python.org>`_. ::
 
    sudo pip install diffpy.srmise
 
@@ -166,9 +166,9 @@ Uncompress them to a directory, and from that directory run ::
 
    sudo python setup.py install
 
-This installs diffpy.srmise for all users in the default system location. If 
-administrator (root) access is not available, see the usage info from 
-``python setup.py install --help`` for options to install to user-writable 
+This installs diffpy.srmise for all users in the default system location. If
+administrator (root) access is not available, see the usage info from
+``python setup.py install --help`` for options to install to user-writable
 directories.
 
 
@@ -182,5 +182,3 @@ Explore the SrMise
    :hidden:
 
    SrMiselicense
-
-

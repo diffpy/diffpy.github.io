@@ -123,7 +123,7 @@ Here are installation commands for several supported systems.</p>
 <div class="section" id="ubuntu">
 <h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
 <p>For Ubuntu or other Debian-based Linux distributions use <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
     python-setuptools python-numpy python-scipy \
     python-matplotlib python-lxml ipython \
@@ -134,7 +134,7 @@ Here are installation commands for several supported systems.</p>
 <div class="section" id="fedora">
 <h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal"><span class="pre">yum</span></code> for Fedora or RedHat Linux:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo yum install \
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo yum install \
     gsl-devel boost-devel python-devel \
     python-setuptools numpy scipy  \
     python-matplotlib python-lxml \
@@ -162,14 +162,14 @@ when repeated.  See MacPorts
 for more help.</li>
 </ul>
 <p>To install system dependencies with MacPorts, use:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port install \
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo port install \
     python27 py27-setuptools py27-ipython py27-lxml \
     gsl boost py27-numpy py27-scipy py27-matplotlib scons git
 </pre></div>
 </div>
 <p>Make sure the MacPorts versions of IPython and Python are active by
 running the following commands:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port select --set ipython ipython27
+<div class="highlight-python"><div class="highlight"><pre><span></span>sudo port select --set ipython ipython27
 sudo port select --set python python27
 </pre></div>
 </div>
@@ -177,7 +177,7 @@ sudo port select --set python python27
 the shell environment so that MacPorts Python is the first in the
 PATH.  This can be accomplished by adding the following line to either
 of <code class="docutils literal"><span class="pre">.profile</span></code> or <code class="docutils literal"><span class="pre">.zshenv</span></code> file in your HOME directory</p>
-<div class="highlight-python"><div class="highlight"><pre>export PATH=/opt/local/bin:${PATH}
+<div class="highlight-python"><div class="highlight"><pre><span></span>export PATH=/opt/local/bin:${PATH}
 </pre></div>
 </div>
 </div>
@@ -187,7 +187,7 @@ of <code class="docutils literal"><span class="pre">.profile</span></code> or <c
 <p>Unzip the DiffPy-CMI tarball into a directory of your choice.
 Execute the included <code class="file docutils literal"><span class="pre">install</span></code> script and follow the prompts
 (replace VERSION to match the actual filename):</p>
-<div class="highlight-python"><div class="highlight"><pre>tar xzf diffpy_cmi-VERSION.tar.gz
+<div class="highlight-python"><div class="highlight"><pre><span></span>tar xzf diffpy_cmi-VERSION.tar.gz
 cd diffpy_cmi-VERSION
 ./install
 </pre></div>
@@ -198,11 +198,11 @@ creating a symbolic link to the <code class="file docutils literal"><span class=
 directory that processes <code class="file docutils literal"><span class="pre">.pth</span></code> files.</p>
 <p>For a single-user installation the preferred <code class="file docutils literal"><span class="pre">pth</span></code> directory can be
 found using</p>
-<div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.USER_SITE&#39;
+<div class="highlight-python"><div class="highlight"><pre><span></span>python -c &#39;import site; print site.USER_SITE&#39;
 </pre></div>
 </div>
 <p>whereas for a system-wide installation the standard <code class="file docutils literal"><span class="pre">pth</span></code> locations are</p>
-<div class="highlight-python"><div class="highlight"><pre>python -c &#39;import site; print site.getsitepackages()&#39;
+<div class="highlight-python"><div class="highlight"><pre><span></span>python -c &#39;import site; print site.getsitepackages()&#39;
 </pre></div>
 </div>
 <div class="admonition note">
@@ -215,7 +215,7 @@ found using</p>
 <h2>3 Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
 <p>Execute the included test script, which should report no warnings
 nor errors:</p>
-<div class="highlight-python"><div class="highlight"><pre>./runtests.sh
+<div class="highlight-python"><div class="highlight"><pre><span></span>./runtests.sh
 </pre></div>
 </div>
 <p>If there are failures for binary tarballs, you may need to recompile
