@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &mdash; DiffPy  documentation</title>
+    <title>DiffPy-CMI installation from sources &mdash; DiffPy  documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -106,15 +106,10 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The current release is for Unix, Linux, and Mac OS X.  Windows
-support will be added in a future release so please check back.</p>
-</div>
-<p>Once you have downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
-follow the steps below.</p>
+  <div class="section" id="diffpy-cmi-installation-from-sources">
+<h1>DiffPy-CMI installation from sources<a class="headerlink" href="#diffpy-cmi-installation-from-sources" title="Permalink to this headline">¶</a></h1>
+<p>Downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
+and follow the steps below.</p>
 <div class="section" id="install-system-software">
 <h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Permalink to this headline">¶</a></h2>
 <p>DiffPy-CMI requires the <a class="reference internal" href="#dependencies"><span>system software dependencies</span></a>
@@ -123,10 +118,10 @@ Here are installation commands for several supported systems.</p>
 <div class="section" id="ubuntu">
 <h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
 <p>For Ubuntu or other Debian-based Linux distributions use <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo apt-get install \
-    libgsl0-dev libboost-all-dev python-dev \
-    python-setuptools python-numpy python-scipy \
-    python-matplotlib python-lxml ipython \
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo apt-get install <span class="se">\</span>
+    libgsl0-dev libboost-all-dev python-dev <span class="se">\</span>
+    python-setuptools python-numpy python-scipy <span class="se">\</span>
+    python-matplotlib python-lxml ipython <span class="se">\</span>
     build-essential scons git zsh
 </pre></div>
 </div>
@@ -134,11 +129,11 @@ Here are installation commands for several supported systems.</p>
 <div class="section" id="fedora">
 <h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal"><span class="pre">yum</span></code> for Fedora or RedHat Linux:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo yum install \
-    gsl-devel boost-devel python-devel \
-    python-setuptools numpy scipy  \
-    python-matplotlib python-lxml \
-    python-ipython-notebook \
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo yum install <span class="se">\</span>
+    gsl-devel boost-devel python-devel <span class="se">\</span>
+    python-setuptools numpy scipy  <span class="se">\</span>
+    python-matplotlib python-lxml <span class="se">\</span>
+    python-ipython-notebook <span class="se">\</span>
     gcc-c++ scons git zsh
 </pre></div>
 </div>
@@ -162,22 +157,22 @@ when repeated.  See MacPorts
 for more help.</li>
 </ul>
 <p>To install system dependencies with MacPorts, use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo port install \
-    python27 py27-setuptools py27-ipython py27-lxml \
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo port install <span class="se">\</span>
+    python27 py27-setuptools py27-ipython py27-lxml <span class="se">\</span>
     gsl boost py27-numpy py27-scipy py27-matplotlib scons git
 </pre></div>
 </div>
 <p>Make sure the MacPorts versions of IPython and Python are active by
 running the following commands:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo port select --set ipython ipython27
-sudo port select --set python python27
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sudo port <span class="k">select</span> --set ipython ipython27
+sudo port <span class="k">select</span> --set python python27
 </pre></div>
 </div>
 <p><strong>Important:</strong> When finished installing the Mac OS X dependencies, adjust
 the shell environment so that MacPorts Python is the first in the
 PATH.  This can be accomplished by adding the following line to either
 of <code class="docutils literal"><span class="pre">.profile</span></code> or <code class="docutils literal"><span class="pre">.zshenv</span></code> file in your HOME directory</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>export PATH=/opt/local/bin:${PATH}
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/local/bin:</span>$<span class="s2">PATH&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -185,41 +180,66 @@ of <code class="docutils literal"><span class="pre">.profile</span></code> or <c
 <div class="section" id="install-diffpy-cmi">
 <h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Permalink to this headline">¶</a></h2>
 <p>Unzip the DiffPy-CMI tarball into a directory of your choice.
-Execute the included <code class="file docutils literal"><span class="pre">install</span></code> script and follow the prompts
-(replace VERSION to match the actual filename):</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>tar xzf diffpy_cmi-VERSION.tar.gz
-cd diffpy_cmi-VERSION
+Execute the included <code class="file docutils literal"><span class="pre">install</span></code> script and follow the prompts.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># replace VERSION to match the actual filename</span>
+tar xzf diffpy_cmi-VERSION.tar.gz
+<span class="nb">cd</span> diffpy_cmi-VERSION
 ./install
 </pre></div>
 </div>
-<p>That should be it, proceed to the Test section.</p>
-<p>For binary tarballs the installation can be also accomplished by
-creating a symbolic link to the <code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code> file in some Python
-directory that processes <code class="file docutils literal"><span class="pre">.pth</span></code> files.</p>
-<p>For a single-user installation the preferred <code class="file docutils literal"><span class="pre">pth</span></code> directory can be
-found using</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>python -c &#39;import site; print site.USER_SITE&#39;
-</pre></div>
-</div>
-<p>whereas for a system-wide installation the standard <code class="file docutils literal"><span class="pre">pth</span></code> locations are</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>python -c &#39;import site; print site.getsitepackages()&#39;
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is essential to use a symbolic link; making a copy of the
-<code class="file docutils literal"><span class="pre">.pth</span></code> file will not work.</p>
-</div>
+<p>The install process may take a while and produce a plentiful output,
+but should work if all required software is in place.</p>
 </div>
 <div class="section" id="test">
 <h2>3 Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
 <p>Execute the included test script, which should report no warnings
 nor errors:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>./runtests.sh
+<div class="highlight-bash"><div class="highlight"><pre><span></span>./runtests.sh
 </pre></div>
 </div>
-<p>If there are failures for binary tarballs, you may need to recompile
-the sources by running <code class="docutils literal"><span class="pre">./install</span> <span class="pre">--build</span></code>.</p>
+<p>If there are failures they are most likely due to missing software or
+incorrect versions of Python or other libraries being used together.
+After addressing these issues it may be necessary to recompile the
+sources by running <code class="docutils literal"><span class="pre">./install</span> <span class="pre">--build</span></code>.</p>
+</div>
+<div class="section" id="remarks">
+<h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h2>
+<p>The expanded diffpy_cmi directory can be renamed or moved
+to a different location and the software should still work.
+The only requirement is to update the <code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code>
+symbolic link so it points to the new location.  This can be
+done by running the <code class="docutils literal"><span class="pre">./install</span></code> script again or by following
+the steps below.</p>
+<p>The Python interpreter must have a symbolic link pointing to the
+<code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code> file in one of the directories where it
+looks for <code class="file docutils literal"><span class="pre">.pth</span></code> files.  This is normally set up by the
+install script.  If that process somehow fails, the preferred
+<code class="file docutils literal"><span class="pre">pth</span></code> directory for a single-user installation can be
+found using</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>python -c <span class="s1">&#39;import site; print site.USER_SITE&#39;</span>
+</pre></div>
+</div>
+<p>For a system-wide installation the standard <code class="file docutils literal"><span class="pre">pth</span></code> locations are</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>python -c <span class="s1">&#39;import site; print site.getsitepackages()&#39;</span>
+</pre></div>
+</div>
+<p>Once the <code class="file docutils literal"><span class="pre">pth</span></code> directory has been established, navigate to
+the base diffpy_cmi directory and create the symbolic link with</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ln -si $PWD/diffpy_cmi.pth /path/to/the/pth/directory/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is essential to use a symbolic link.  Making a copy of the
+<code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code> file will not work.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The installation of DiffPy-CMI is entirely contained under the
+expanded diffpy_cmi directory.  The software can be completely
+uninstalled by deleting that directory and removing the symbolic
+link.</p>
+</div>
 </div>
 <div class="section" id="contacts">
 <h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h2>

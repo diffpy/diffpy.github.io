@@ -115,11 +115,12 @@ a convenient and easy to use graphical front end for the PDFfit2 refinement prog
 capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data
 and comes with built in graphical and structure visualization capabilities.</p>
-<p>PDFgui is incorporated in the powerful end-to-end x-ray PDF analysis package xPDFsuite.
-Please see <a class="reference external" href="xPDFsuite.html">here</a> for more information.  xPDFsuite is designed for flexible,
+<p>PDFgui is also included in <a class="reference internal" href="xPDFsuite.html"><em>xPDFsuite</em></a>,
+a powerful end-to-end software for X-ray PDF analysis.
+xPDFsuite is designed for flexible,
 high throughput PDF analyses and contains many features for interrogating, comparing and
 modeling data as well as simply doing data reduction.</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id1">
 <img alt="../_images/PDFgui_screenshot_small.png" src="../_images/PDFgui_screenshot_small.png" />
 <p class="caption"><span class="caption-text">Screen-shot of PDFgui during a refinement of multiple data-sets</span></p>
 </div>
@@ -128,80 +129,66 @@ modeling data as well as simply doing data reduction.</p>
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>By downloading and using this software you are agreeing to the
 conditions specified in the <a class="reference internal" href="pdfguilicense.html"><em>software license</em></a>.</p>
-<p>Follow one of the links below for installation instructions specific to
-your system:</p>
-<ul class="simple">
-<li><a class="reference internal" href="#unix"><span>Unix, Linux, Mac</span></a></li>
-<li><a class="reference internal" href="#windows"><span>Windows</span></a></li>
-<li><a class="reference internal" href="#updates"><span>PDFgui updates</span></a></li>
-<li><a class="reference internal" href="#releases"><span>PDFgui Releases</span></a></li>
-</ul>
-</div>
-<div class="section" id="unix-linux-mac">
-<span id="unix"></span><h2>Unix, Linux, Mac<a class="headerlink" href="#unix-linux-mac" title="Permalink to this headline">¶</a></h2>
-<p>The installation of PDFgui requires several external libraries and applications.
-Consult the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">README.txt</a>
-file included with the distribution and make sure these
-requirements are all in place.</p>
-<p>The PDFgui components are registered at the Python Package Index (PyPI), therefore
-the most straightforward way to install is to execute:</p>
-<div class="highlight-python"><div class="highlight"><pre>easy_install diffpy.pdfgui
+<p>PDFgui is distributed as a software package for
+<a class="reference external" href="https://www.continuum.io">Anaconda Python</a>.  PDFgui is available
+for all operating systems supported by Anaconda, namely for 32 and
+64-bit Linux, Mac OS X, and 32 and 64-bit Windows.</p>
+<p>As a prerequisite for PDFgui installation, download and
+install <strong>Anaconda for Python 2.7</strong> from
+<a class="reference external" href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you already use Anaconda for Python 3.5, create a separate
+Anaconda environment <em>py27</em> which will provide Python 2.7
+instead of 3.5.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda create --name<span class="o">=</span>py27 <span class="nv">python</span><span class="o">=</span>2.7
+<span class="nb">source</span> activate py27
 </pre></div>
 </div>
-<p>The easy_install command downloads, unzips and installs pdfgui together with
-its requirements,
-diffpy.pdffit2 and diffpy.Structure.
-The program can be then started as <code class="docutils literal"><span class="pre">pdfgui</span></code>.</p>
-<p>The <code class="docutils literal"><span class="pre">easy_install</span></code> command is a part of the Python setuptools library. If it is not available,
-install the &#8220;python-setuptools&#8221; package with the system package manager or use the &#8221;.tgz&#8221; archive
-below, which comes with <code class="docutils literal"><span class="pre">easy_install</span></code> included.</p>
-<p>If you prefer to install from local files, download the latest <strong>diffpy-VERSION.tgz</strong>
-from the <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">download archive</a>,
-unpack and run the enclosed <code class="docutils literal"><span class="pre">easy_install</span></code> script:</p>
-<div class="highlight-python"><div class="highlight"><pre>tar -xzf diffpy-VERSION.tgz
-cd diffpy-VERSION
-./easy_install diffpy.pdfgui
+<p class="last">On Windows use just <code class="docutils literal"><span class="pre">activate</span> <span class="pre">py27</span></code>.  Make sure that <em>py27</em>
+environment is activated in your shell prior to running
+the &#8220;install&#8221; or &#8220;update&#8221; commands below.</p>
+</div>
+<p>PDFgui is available from the &#8220;diffpy&#8221; channel of Anaconda packages.
+Open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> on Windows
+and install PDFgui using the <strong class="program">conda</strong> command</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda config --add channels diffpy
+conda install diffpy.pdfgui
 </pre></div>
 </div>
-<p>For more detailed installation instructions see the <a class="reference external" href="../doc/pdfgui/pdfgui.html">PDFgui manual</a>.</p>
-</div>
-<div class="section" id="windows">
-<span id="id1"></span><h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
-<p>PDFgui is provided as a self-installing archive for Windows systems. Download the latest
-<strong>diffpy-VERSION.exe</strong> file below, run it and follow the prompts.</p>
-<p>The self-installing archive includes a complete installation of Python that is used to
-run PDFgui. Nevertheless, PDFgui (and other DiffPy components) can be also
-installed under existing Python tree. This requires Python 2.5 with several external
-Python packages, namely setuptools, numpy, wxPython and matplotlib. To add PDFgui to an
-existing Python tree, start Windows command prompt and run the <code class="docutils literal"><span class="pre">easy_install</span></code> script from
-the <code class="docutils literal"><span class="pre">Python25/Scripts</span></code> directory:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd c:\Python25\Scripts
-..\python.exe easy_install-script.py diffpy.pdfgui
-</pre></div>
-</div>
-<p>This installs library files under <code class="docutils literal"><span class="pre">Python25/Lib/site-packages</span></code> and executable scripts for
-<code class="docutils literal"><span class="pre">pdfgui</span></code> and <code class="docutils literal"><span class="pre">pdffit2</span></code> under <code class="docutils literal"><span class="pre">Python25/Scripts</span></code>.</p>
+<p>All done.  To start PDFgui enter <strong class="program">pdfgui</strong> command in a
+Terminal or use the <em>DiffPy</em> start menu on Windows.  PDFgui can be
+also started from the <em>Launcher</em> application included with Anaconda.</p>
 </div>
 <div class="section" id="pdfgui-updates">
-<span id="updates"></span><h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
-<p>Both Unix and Windows platforms can use the <code class="docutils literal"><span class="pre">easy_install</span></code> command to obtain the latest
-updates to the code. To upgrade PDFgui, run:</p>
-<div class="highlight-python"><div class="highlight"><pre>easy_install -U diffpy.pdfgui
+<h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
+<p>The Anaconda package system makes it easy to prepare and distribute
+software updates and bugfixes.  To update to the latest version of
+PDFgui use</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda update --channel<span class="o">=</span>diffpy diffpy.pdfgui
 </pre></div>
 </div>
-<p>This installs only the changed DiffPy components as they become available at the DiffPy
-<a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/packages/">package repository</a>.
-These packages are smaller and
-will be updated more frequently than the complete installation archives.</p>
+<p>To use a bleeding edge development version, visit the project source
+repository at <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">https://github.com/diffpy/diffpy.pdfgui</a> and consult
+its README file.</p>
 </div>
-<div class="section" id="pdfgui-releases">
-<span id="releases"></span><h2>PDFgui Releases<a class="headerlink" href="#pdfgui-releases" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="other-versions">
+<h2>Other versions<a class="headerlink" href="#other-versions" title="Permalink to this headline">¶</a></h2>
+<p>When Anaconda Python is not available, PDFgui can be installed from
+sources.  The latest source package is at the <a class="reference external" href="https://pypi.python.org/pypi/diffpy.pdfgui">Python Package
+Index</a> and the
+prior versions are at
+<a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui/releases">https://github.com/diffpy/diffpy.pdfgui/releases</a>.  See the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui#pdfgui">README</a> document
+for further details on installation from sources,</p>
+<p>Finally, here are the previous single-file installers.  Although
+quite outdated, they might be handy if there is some problem with
+Anaconda or if one needs to install without Internet connection.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="27%" />
+<col width="26%" />
 <col width="20%" />
 <col width="13%" />
-<col width="39%" />
+<col width="41%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
@@ -219,20 +206,20 @@ will be updated more frequently than the complete installation archives.</p>
 <tr class="row-odd"><td><a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz">diffpy-1.0-r3067.tgz</a></td>
 <td>2009-04-10</td>
 <td>6.4 M</td>
-<td>Unix tarball</td>
+<td>Linux and Mac tarball</td>
 </tr>
 </tbody>
 </table>
-<p>Older releases are available for download
+<p>Older installers are archived
 <a class="reference external" href="https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/">here</a>.</p>
 </div>
 <div class="section" id="documentation-and-help">
-<h2>Documentation and Help<a class="headerlink" href="#documentation-and-help" title="Permalink to this headline">¶</a></h2>
+<h2>Documentation and help<a class="headerlink" href="#documentation-and-help" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>The user manual is available <a class="reference external" href="../doc/pdfgui/index.html">online in html format</a>
-and is also downloadable in <a class="reference external" href="../doc/pdfgui/pdfgui.pdf">PDF format</a>.</li>
-<li>Tutorial files are available for download as a
-<a class="reference external" href="../doc/pdfgui/pdfgui-tutorial.zip">zip archive</a>.</li>
+<li>The user manual is available in <a class="reference external" href="../doc/pdfgui/index.html">HTML</a>
+and <a class="reference external" href="../doc/pdfgui/pdfgui.pdf">PDF</a> formats.</li>
+<li>Tutorial files are available from
+<a class="reference external" href="../doc/pdfgui/pdfgui-tutorial.zip">pdfgui-tutorial.zip</a>.</li>
 <li>Please, join the <a class="reference internal" href="../community.html"><em>community forum</em></a> for tips, tricks, and feedback.</li>
 </ul>
 <div class="toctree-wrapper compound">

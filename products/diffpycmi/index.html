@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="top" title="DiffPy  documentation" href="../../index.html" />
-    <link rel="next" title="Installation" href="install.html" />
+    <link rel="next" title="DiffPy-CMI installation from sources" href="install.html" />
     <link rel="prev" title="Acknowledgements" href="../../acknowledgements.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -127,38 +127,69 @@ updates.</p>
 <div class="figure align-center">
 <img alt="../../_images/diffpycmi_screenshot.png" src="../../_images/diffpycmi_screenshot.png" />
 </div>
-<div class="section" id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">Download</a>
-(use of this software is subject to the conditions in
-<a class="reference internal" href="license.html"><em>LICENSE.txt</em></a>)</li>
-<li><a class="reference internal" href="install.html"><em>Install</em></a></li>
-<li><a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">Play</a></li>
-</ul>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Use of this software is subject to the conditions in
+<a class="reference internal" href="license.html"><em>LICENSE.txt</em></a>.</p>
+<p>As of version 2.0 DiffPy-CMI is available for Linux and
+Mac as a collection of packages for Anaconda Python.  As
+a first step download and install <strong>Anaconda for Python 2.7</strong>
+from <a class="reference external" href="http://www.continuum.io/downloads">http://www.continuum.io/downloads</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you already have Anaconda for Python 3.5, create a separate
+Anaconda environment <em>py27</em> which will provide Python 2.7
+instead of 3.5.  Make sure that <em>py27</em> environment is activated
+when working with DiffPy-CMI.</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span>conda create --name=py27 python=2.7
+source activate py27
+</pre></div>
+</div>
+</div>
+<p>Once Anaconda is ready, DiffPy-CMI can be installed from the &#8220;diffpy&#8221;
+channel of Anaconda packages as follows</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>conda config --add channels diffpy
+conda install diffpy-cmi
+</pre></div>
+</div>
+<p>The software distribution over Anaconda makes it easy to publish
+frequent software updates.  To update your installation later use</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>conda update diffpy-cmi
+</pre></div>
+</div>
+<p>If you don&#8217;t want to use Anaconda you can
+<a class="reference internal" href="install.html"><em>install DiffPy-CMI from sources</em></a>.  Note that
+this method takes more time and requires more experience
+with the operating system.</p>
 </div>
 <div class="section" id="what-next">
 <h2>What next?<a class="headerlink" href="#what-next" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">Explore CMI exchange</a>,
+our collection of example scripts and tutorials</li>
 <li><a class="reference internal" href="cmi_exchange.html"><em>Get tips on using the CMI exchange</em></a></li>
-<li><a class="reference internal" href="updatesources.html"><em>Update to the latest sources</em></a></li>
 <li><a class="reference internal" href="contributecode.html"><em>Contribute code</em></a></li>
 </ul>
 </div>
-<div class="section" id="contents-and-documentation">
-<h2>Contents and Documentation<a class="headerlink" href="#contents-and-documentation" title="Permalink to this headline">¶</a></h2>
-<p>For a list of packages bundled in the DiffPy-CMI release visit the
-<a class="reference internal" href="contents.html#contents"><span>contents page</span></a>.</p>
-<p>Documentation for modules developed by the DiffPy team can generally be
-found at <em>diffpy.org/doc/ModuleName</em> or by following one of the links
-below.</p>
-<blockquote>
-<div><a class="reference external" href="../../doc/srfit/">diffpy.srfit</a> -
-<a class="reference external" href="../../doc/srreal/">diffpy.srreal</a> -
-<a class="reference external" href="../../doc/Structure/">diffpy.Structure</a> -
-<a class="reference external" href="../../doc/pyobjcryst/">pyobjcryst</a> -
-<a class="reference external" href="../../doc/utils/">diffpy.utils</a> -
-<a class="reference external" href="../../doc/libdiffpy/">libdiffpy</a></div></blockquote>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation for packages developed by the DiffPy team is available
+at the links below.</p>
+<ul class="simple">
+<li><a class="reference external" href="../../doc/srfit/">diffpy.srfit</a> &#8211; configuration and control of data-fitting problems</li>
+<li><a class="reference external" href="../../doc/srreal/">diffpy.srreal</a> &#8211; calculators for pair distribution function, bond
+valence sums, etc.</li>
+<li><a class="reference external" href="../../doc/Structure/">diffpy.Structure</a> &#8211; light-weight representation of crystal
+structures</li>
+<li><a class="reference external" href="../../doc/pyobjcryst/">pyobjcryst</a> &#8211; Python interface to ObjCryst++ crystallographic
+library</li>
+<li><a class="reference external" href="../../doc/utils/">diffpy.utils</a> &#8211; general purpose utilities for the diffpy libraries</li>
+<li><a class="reference external" href="../../doc/libdiffpy/">libdiffpy</a> - C++ library for calculation of PDF and other real-space
+quantities</li>
+</ul>
+<p>See <a class="reference internal" href="contents.html#contents"><span>DiffPy-CMI contents</span></a> for a complete list
+of open-source libraries that are included in DiffPy-CMI and
+their respective project pages.</p>
 </div>
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
