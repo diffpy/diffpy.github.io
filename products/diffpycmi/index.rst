@@ -31,20 +31,29 @@ updates.
 Installation
 ============
 
+Use of this software is subject to the conditions in
+:doc:`LICENSE.txt <license>`.
+
 As of version 2.0 DiffPy-CMI is available for Linux and
-Mac as a collection of packages for Anaconda Python.  It is
-therefore essential to download and install the `Anaconda
-Python <http://www.continuum.io/downloads>`__ first.  DiffPy-CMI
-can be then installed from the "diffpy" channel of Anaconda
-packages as follows ::
+Mac as a collection of packages for Anaconda Python.  As
+a first step download and install **Anaconda for Python 2.7**
+from http://www.continuum.io/downloads.
+
+.. note::
+   If you already have Anaconda for Python 3.5, create a separate
+   Anaconda environment *py27* which will provide Python 2.7
+   instead of 3.5.  Make sure that *py27* environment is activated
+   when working with DiffPy-CMI.  ::
+
+      conda create --name=py27 python=2.7
+      source activate py27
+
+      
+Once Anaconda is ready, DiffPy-CMI can be installed from the "diffpy"
+channel of Anaconda packages as follows ::
 
    conda config --add channels diffpy
    conda install diffpy-cmi
-
-.. note::
-
-   Use of this software is subject to the conditions in
-   :doc:`LICENSE.txt <license>`.
 
 The software distribution over Anaconda makes it easy to publish
 frequent software updates.  To update your installation later use ::
