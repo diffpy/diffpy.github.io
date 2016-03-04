@@ -79,12 +79,20 @@ repository at https://github.com/diffpy/diffpy.pdfgui and consult
 its README file.
 
 
-Old versions
-============
+Other versions
+==============
 
-Here is an archive of old single-file installers.  They might be
-handy if there is some problem with Anaconda or if you
-need to install on a machine with no Internet connection.
+When Anaconda Python is not available, PDFgui can be installed from
+sources.  The latest source package is at the `Python Package
+Index <https://pypi.python.org/pypi/diffpy.pdfgui>`__ and the
+prior versions are at
+https://github.com/diffpy/diffpy.pdfgui/releases.  See the `README
+<https://github.com/diffpy/diffpy.pdfgui#pdfgui>`__ document
+for further details on installation from sources,
+
+Finally, here are the previous single-file installers.  Although
+quite outdated, they might be handy if there is some problem with
+Anaconda or if one needs to install without Internet connection.
 
 ======================== ================== ============ =====================================
 Name                     Date               Size         Description
@@ -98,7 +106,7 @@ Name                     Date               Size         Description
 .. _diffpy-1.0-r3067.tgz:
    https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz
 
-Even older releases are available
+Older installers are archived
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
 
 
