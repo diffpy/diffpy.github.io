@@ -179,6 +179,7 @@ pseudoxml:
 # Publish to diffpy.github.io
 
 GITREPOPATH = $(CURDIR)/.git
+SOURCEBRANCH = $(shell git symbolic-ref --short HEAD)
 PUBLISHBRANCH = master
 GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
@@ -209,4 +210,4 @@ publish-prepare: .create-publish-branch
 	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
 
 publish-push:
-	git push $(GITREMOTE) source $(PUBLISHBRANCH)
+	git push $(GITREMOTE) $(SOURCEBRANCH) $(PUBLISHBRANCH)
