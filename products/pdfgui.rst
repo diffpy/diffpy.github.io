@@ -79,18 +79,6 @@ repository at https://github.com/diffpy/diffpy.pdfgui and consult
 its README file.
 
 
-Documentation and help
-======================
-
-*  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
-   and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
-
-*  Tutorial files are available from
-   `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
-
-*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
-
-
 Old versions
 ============
 
@@ -112,6 +100,18 @@ Name                     Date               Size         Description
 
 Even older releases are available
 `here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
+
+
+Documentation and help
+======================
+
+*  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
+   and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
+
+*  Tutorial files are available from
+   `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
+
+*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
 
 
 .. toctree::
