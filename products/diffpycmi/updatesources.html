@@ -81,6 +81,7 @@
       <li><a href="../pdfgetx3.html">PDFgetX3</a></li>
       <li><a href="../pdfgui.html">PDFgui</a></li>
       <li><a href="../SrMise.html">SrMise</a></li>
+      <li><a href="../magPDF.html">magPDF</a></li>
       <li><a href="../pythonpackages.html">Python Packages</a></li>
   </ul>
 </li>
@@ -116,7 +117,7 @@ installed using the system package manager using the commands shown
 below.</p>
 <blockquote>
 <div><p>For Ubuntu use <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo apt-get install \
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
     libgsl0-dev libboost-all-dev python-dev \
     python-setuptools python-numpy python-scipy \
     python-matplotlib python-lxml ipython \
@@ -124,7 +125,7 @@ below.</p>
 </pre></div>
 </div>
 <p>For Fedora use <code class="docutils literal"><span class="pre">yum</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>sudo yum install \
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install \
     gsl-devel boost-devel python-devel
     python-setuptools numpy scipy  \
     python-matplotlib python-lxml \
@@ -136,13 +137,13 @@ below.</p>
 <p>The easiest way to update and recompile the latest sources is to use the
 installation script that was packaged with the release bundle.</p>
 <p>To update the codes:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>./install --update[=steps]
+<div class="highlight-python"><div class="highlight"><pre>./install --update[=steps]
 </pre></div>
 </div>
 <p>This will perform all or selected software updates from online source repositories.
 Update steps are comma separated integers or ranges such as &#8216;1,3,5-6&#8217;.</p>
 <p>To rebuild the source code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>./install --build[=steps]
+<div class="highlight-python"><div class="highlight"><pre>./install --build[=steps]
 </pre></div>
 </div>
 <p>This will rebuild all or specified packages from sources in the src folder. In both
