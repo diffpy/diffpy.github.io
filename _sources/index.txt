@@ -82,4 +82,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/pdfgetx3
    products/pythonpackages 
    products/SrMise
-   products/magPDF
+   products/mPDF
