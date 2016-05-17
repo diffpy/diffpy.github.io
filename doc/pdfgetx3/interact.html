@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Interactive mode &mdash; PDFgetX3 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="top" title="PDFgetX3 1.1 documentation" href="index.html" />
+    <link rel="next" title="Options and parameters" href="options.html" />
+    <link rel="prev" title="Files used by PDFgetX3" href="files.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="options.html" title="Options and parameters"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="Files used by PDFgetX3"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="interactive-mode">
+<h1>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h1>
+<p>The interactive mode is activated by using either the
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-i"><em class="xref std std-option">-i, --interact</em></a> option or a non-empty
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><em class="xref std std-option">--plot</em></a> option.  In the interactive mode
+the program starts an IPython interactive shell and pre-loads several
+functions and variables related to the PDF calculation.  It also defines
+a <tt class="docutils literal"><span class="pre">%pdfgetx3</span></tt> macro, which can be used with a same command-line syntax
+as the <strong class="program">pdfgetx3</strong> program from a system shell.  The interactive
+session is also initialized with all functions from the matplotlib
+<tt class="xref py py-mod docutils literal"><span class="pre">pylab</span></tt> module for convenient plotting.  The functions and
+variables related to PDF processing are:</p>
+<dl class="function">
+<dt id="diffpy.pdfgetx.pdfgetter">
+<tt class="descname">pdfgetter</tt><big>(</big><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.pdfgetter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of the <tt class="xref py py-class docutils literal"><span class="pre">PDFGetter</span></tt> class which serves as a
+low-level function that calculates the PDF.  This is a callable
+object, which takes as an argument a pair of input arrays for
+(two-theta, intensity).  It can be also called with a keyword
+argument <tt class="docutils literal"><span class="pre">filename=FILE</span></tt>, which would read the input arrays
+from the specified file.  When called with no arguments,
+it calculates PDF from the last input data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pair of output arrays <cite>(r, G)</cite>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="interactvar">
+<dt id="interactvar-config">
+<tt class="descname">config</tt><a class="headerlink" href="#interactvar-config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of the <tt class="xref py py-class docutils literal"><span class="pre">PDFConfig</span></tt> class that stores the
+<a class="reference internal" href="options.html#my-ioparameters"><em>parameters and input files</em></a> for the program.
+Use <tt class="docutils literal"><span class="pre">print</span> <span class="pre">config</span></tt> to display the current configuration values.  This
+is the same object as <tt class="xref py py-data docutils literal"><span class="pre">pdfgetter.config</span></tt>.  Configuration may
+be changed by setting a respective attribute of the
+<tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt> object, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre>In [1]: config.qmax = 21
+</pre></div>
+</div>
+<p>The <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> values may be also changed by calling the
+<a class="reference internal" href="#diffpy.pdfgetx.pdfgetter" title="diffpy.pdfgetx.pdfgetter"><tt class="xref py py-func docutils literal"><span class="pre">pdfgetter()</span></tt></a> or <a class="reference internal" href="#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function with a
+corresponding keyword argument, for example
+<tt class="docutils literal"><span class="pre">processFiles(qmax=20,</span> <span class="pre">force=True)</span></tt>.</p>
+</dd></dl>
+
+<dl class="interactvar">
+<dt id="interactvar-iraw">
+<tt class="descname">iraw</tt><a class="headerlink" href="#interactvar-iraw" title="Permalink to this definition">¶</a></dt>
+<dt id="interactvar-iq">
+<tt class="descname">iq</tt><a class="headerlink" href="#interactvar-iq" title="Permalink to this definition">¶</a></dt>
+<dt id="interactvar-sq">
+<tt class="descname">sq</tt><a class="headerlink" href="#interactvar-sq" title="Permalink to this definition">¶</a></dt>
+<dt id="interactvar-fq">
+<tt class="descname">fq</tt><a class="headerlink" href="#interactvar-fq" title="Permalink to this definition">¶</a></dt>
+<dt id="interactvar-gr">
+<tt class="descname">gr</tt><a class="headerlink" href="#interactvar-gr" title="Permalink to this definition">¶</a></dt>
+<dd><p>These variables are assigned the input raw intensities and the
+intermediate results, stored as matrix rows.  The matrix rows
+correspond to twotheta1, intensity1, twotheta2, intensity2, etc.
+Because matrices are iterated row first, the raw intensities
+from all input files can be plotted with the matplotlib plot
+function as <tt class="docutils literal"><span class="pre">plot(*iraw)</span></tt>.</p>
+<p>These variables should be considered read-only and are reset
+with subsequent PDF calculations.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.tuneconfig">
+<tt class="descname">tuneconfig</tt><big>(</big><em>plotids=None</em>, <em>pdfgetter=None</em>, <em>axeslist=None</em><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.tuneconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a GUI dialog for interactive tuning of configuration variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>plotids</strong> &#8211; string or iterable that specify what interactive plots should be
+tuned.  By default the same as config.plot.  Can be also an
+integer index or name of a transformation in pdfgetter or a
+reference to a <tt class="xref py py-class docutils literal"><span class="pre">Transformation</span></tt> object.</li>
+<li><strong>pdfgetter</strong> &#8211; optional PDFGetter object to be tuned.  This is by default
+the interactive <a class="reference internal" href="#diffpy.pdfgetx.pdfgetter" title="diffpy.pdfgetx.pdfgetter"><tt class="xref py py-func docutils literal"><span class="pre">pdfgetter()</span></tt></a> object.</li>
+<li><strong>axeslist</strong> &#8211; optional list of matplotlib Axes for displaying the interactive
+plots.  When None, use subplot(N, 1, i) to create the parent axes.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Changes from <tt class="xref py py-func docutils literal"><span class="pre">tuneconfig()</span></tt> apply only to the configuration
+and results in memory.  Use the <a class="reference internal" href="#diffpy.pdfgetx.processFiles" title="diffpy.pdfgetx.processFiles"><tt class="xref py py-func docutils literal"><span class="pre">processFiles()</span></tt></a> function
+to save them to disk.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="tutorial.html#my-tuneconfig"><em>Interactive tuning of parameters</em></a> tutorial.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.processFiles">
+<tt class="descname">processFiles</tt><big>(</big><em>filename=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.processFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process all input files again with the current configuration values.
+This is a higher-level function than <a class="reference internal" href="#diffpy.pdfgetx.pdfgetter" title="diffpy.pdfgetx.pdfgetter"><tt class="xref py py-func docutils literal"><span class="pre">pdfgetter()</span></tt></a>, as
+it also saves output files and produces plots as specified by the
+<a class="reference internal" href="#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config</span></tt></a> object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> &#8211; One or more input files to be converted to PDFs and saved or
+plotted according to the <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt> settings.  Use the
+previous list of input files when not specified.</li>
+<li><strong>kwargs</strong> &#8211; optional keyword arguments that are applied to the <tt class="xref py py-data docutils literal"><span class="pre">config</span></tt>
+object, for example <cite>(force=True, qmax=18)</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>This function updates the <a class="reference internal" href="#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config.inputfiles</span></tt></a>
+list and the <a class="reference internal" href="#interactvar-iraw"><tt class="xref std std-interactvar docutils literal"><span class="pre">iraw</span></tt></a>, <a class="reference internal" href="#interactvar-iq"><tt class="xref std std-interactvar docutils literal"><span class="pre">iq</span></tt></a>,
+<a class="reference internal" href="#interactvar-sq"><tt class="xref std std-interactvar docutils literal"><span class="pre">sq</span></tt></a>, <a class="reference internal" href="#interactvar-fq"><tt class="xref std std-interactvar docutils literal"><span class="pre">fq</span></tt></a> and <a class="reference internal" href="#interactvar-gr"><tt class="xref std std-interactvar docutils literal"><span class="pre">gr</span></tt></a>
+interactive variables.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.clearSession">
+<tt class="descname">clearSession</tt><big>(</big><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.clearSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all elements from the <a class="reference internal" href="#interactvar-config"><tt class="xref std std-interactvar docutils literal"><span class="pre">config.inputfiles</span></tt></a>
+and also the
+<a class="reference internal" href="#interactvar-iraw"><tt class="xref std std-interactvar docutils literal"><span class="pre">iraw</span></tt></a>, <a class="reference internal" href="#interactvar-iq"><tt class="xref std std-interactvar docutils literal"><span class="pre">iq</span></tt></a>, <a class="reference internal" href="#interactvar-sq"><tt class="xref std std-interactvar docutils literal"><span class="pre">sq</span></tt></a>,
+<a class="reference internal" href="#interactvar-fq"><tt class="xref std std-interactvar docutils literal"><span class="pre">fq</span></tt></a> and <a class="reference internal" href="#interactvar-gr"><tt class="xref std std-interactvar docutils literal"><span class="pre">gr</span></tt></a> variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">No return value.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.loadData">
+<tt class="descname">loadData</tt><big>(</big><em>filename</em>, <em>minrows=10</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.loadData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an array of floating point numbers from a text data file.</p>
+<p>The data reading starts at the first matrix-like block of at least
+<cite>minrows</cite> rows and constant number of columns.  This seems to work
+for most of text data files including those generated by PDFgetX2.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filename</strong> &#8211; File to be loaded.</li>
+<li><strong>minrows</strong> &#8211; Minimum number of rows in the first data block.
+All rows must have the same number of floating point values.</li>
+<li><strong>usecols</strong> &#8211; Indices or names of the columns to be loaded, by default all
+columns in a data block.  Data blocks that do not contain
+sufficient number of columns are skipped.  When <cite>usecols</cite> contains
+string items, these are looked up in the datafile header and
+translated to column indices.  When <cite>usecols</cite> is a single string,
+it gets split to names at any comma or whitespace character.</li>
+<li><strong>unpack</strong> &#8211; Return data as a sequence of columns that allows tuple
+unpacking such as  <cite>x, y = loadData(FILENAME, unpack=True)</cite>.
+Note transposing the loaded array as loadData(FILENAME).T
+has the same effect.</li>
+<li><strong>kwargs</strong> &#8211; Keyword arguments that are passed to the
+<a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">numpy.loadtxt</a>
+function.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns a numpy array of the loaded data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.plotdata.plotdata">
+<tt class="descname">plotdata</tt><big>(</big><em>filenames</em>, <em>style=None</em>, <em>x=None</em>, <em>y=None</em>, <em>hold=None</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.plotdata.plotdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot one or more text data files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filenames</strong> &#8211; Filename or a list of text data files to be plotted.</li>
+<li><strong>style</strong> &#8211; Optional format string for the
+<a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot">matplotlib plot function</a>.</li>
+<li><strong>x,y</strong> &#8211; Column or columns to be used for the x and y data.
+This is most often a single integer or an iterable of
+integer indices.  It can be also a comma separated string
+of column names that are matched against column headers in the
+text data file.  Also accepted is a string integer or an
+integer range formatted as <tt class="docutils literal"><span class="pre">START:STOP</span></tt> or <tt class="docutils literal"><span class="pre">START:STOP:STEP</span></tt>.
+A special symbol <tt class="docutils literal"><span class="pre">&quot;.&quot;</span></tt> can be used for a data-row index.
+Otherwise these arguments must be compatible with the
+<cite>usecols</cite> argument of the <a class="reference internal" href="#diffpy.pdfgetx.loadData" title="diffpy.pdfgetx.loadData"><tt class="xref py py-func docutils literal"><span class="pre">loadData()</span></tt></a>
+function.  When not specified <tt class="xref py py-func docutils literal"><span class="pre">plotdata()</span></tt> uses the first
+column as x and the second column as y data.</li>
+<li><strong>hold</strong> &#8211; Add new lines to the plot when <cite>True</cite>, replace the old lines
+when <cite>False</cite> or reuse the axes hold state if <cite>None</cite>.</li>
+<li><strong>kwargs</strong> &#8211; Any other keyword arguments passed to the
+matplotlib plot function.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">This function returns a list of <a class="reference external" href="http://matplotlib.org/api/artist_api.html#matplotlib.lines.Line2D">matplotlib Line2D</a>
+objects.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="diffpy.pdfgetx.findfiles">
+<tt class="descname">findfiles</tt><big>(</big><em>patterns=()</em>, <em>path=None</em><big>)</big><a class="headerlink" href="#diffpy.pdfgetx.findfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find files in the current directory
+that match all specified patterns.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>patterns</strong> &#8211; String patterns that must all match in returned filenames.
+Can be a single string with patterns separated by whitespace
+characters.  The patterns are matched either as fixed strings
+or as <a class="reference internal" href="options.html#my-findpatterns"><em>special patterns</em></a>.</li>
+<li><strong>path</strong> &#8211; Optional list of directories to be searched instead of the
+current directory.  Can be also a string which is taken as a
+single directory path.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Return a list of matching filenames.  Return all files in the
+current directory when called without <cite>patterns</cite>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="files.html"
+                        title="previous chapter">Files used by PDFgetX3</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="options.html"
+                        title="next chapter">Options and parameters</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="options.html" title="Options and parameters"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="Files used by PDFgetX3"
+             >previous</a> |</li>
+        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

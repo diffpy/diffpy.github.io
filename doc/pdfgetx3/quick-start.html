@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Quick-start guide &mdash; PDFgetX3 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="top" title="PDFgetX3 1.1 documentation" href="index.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tutorial.html" title="Tutorial"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="quick-start-guide">
+<span id="index-0"></span><h1>Quick-start guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this headline">¶</a></h1>
+<p>This guide assumes that the PDFgetX3 program has been correctly
+installed and can be executed by typing <strong class="program">pdfgetx3</strong> in a shell
+window.  Please, refer to the <a class="reference internal" href="install.html"><em>installation</em></a> section if
+this is not working yet.</p>
+<p>The pdfgetx3 program is a command-line application, therefore all
+the input files and run-parameters are supplied either as command-line
+arguments or through a configuration file.  In general, the pdfgetx3 is
+executed from a command shell as</p>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 [options] input1 input2 ... inputN
+</pre></div>
+</div>
+<p>The <tt class="file docutils literal"><span class="pre">inputN</span></tt> stands for an input powder diffraction data.  The
+<tt class="file docutils literal"><span class="pre">inputN</span></tt> file is a simple two-column text file, where the first
+column corresponds to either the 2Θ diffraction angle, or a
+momentum transfer, <em>Q</em>, in inverse nanometer or inverse ångström units.
+The second column contains the corresponding X-ray intensities.  The
+input file may start with a header containing comments or metadata
+related to the measurement.  PDFgetX3 will ignore any text leading to a
+long two-column section.  The example input files in this manual were
+created with the
+<a class="reference external" href="http://www.esrf.eu/computing/scientific/FIT2D/">FIT2D program</a> using
+its &#8220;chi&#8221; output format, thus we will also refer to them as &#8220;chi-files&#8221;.</p>
+<p>The command-line options are arguments that start with a dash &#8220;-&#8221; and
+are used to specify run-parameters or modify the program behavior.  The
+options can be specified in a short form that consists of a dash and
+a single character, or in a long, more descriptive format starting with
+a doubled dash <tt class="docutils literal"><span class="pre">--</span></tt>.  Options may require values.  For short options,
+the value may be joined to the option string, for example
+<em class="xref std std-option">-w0.142774</em>, while for the long options it has to be separated
+with an equal sign, e.g., <em class="xref std std-option">--wavelength=0.142774</em>.  Although
+all the PDF calculation parameters can be passed as command line
+options, it is often more convenient to set them in a configuration
+file.  When run parameter is present both in a configuration file and
+as command-line option, the command-line value takes precedence.  The
+command-line options are all described in the <a class="reference internal" href="options.html"><em>Options and parameters</em></a> section of
+this manual.  A brief summary of options can be also displayed by
+executing</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>The best way of getting familiar with PDFgetX3 is to process
+the example diffraction data described in the <a class="reference internal" href="tutorial.html"><em>Tutorial</em></a>.
+In general, the first step is to create a commented configuration file
+<tt class="docutils literal"><span class="pre">pdfgetx3.cfg</span></tt> using:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">createconfig</span><span class="o">=</span><span class="n">pdfgetx3</span><span class="o">.</span><span class="n">cfg</span>
+</pre></div>
+</div>
+<p>The configuration file can have any name, but it is preferable
+to use either <tt class="file docutils literal"><span class="pre">pdfgetx3.cfg</span></tt> or <tt class="file docutils literal"><span class="pre">.pdfgetx3.cfg</span></tt>,
+for these files are automatically loaded by PDFgetX3.  All
+other configuration files must be passed explicitly to the program
+using the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-c"><em class="xref std std-option">-c, --config</em></a> option.</p>
+<p>Open the pdfgetx3.cfg file in a <strong>text</strong> editor.  The lines that
+start with a hash mark <tt class="docutils literal"><span class="pre">#</span></tt> are comments and are not used.  The lines
+starting with a right brace <tt class="docutils literal"><span class="pre">[</span></tt> denote sections in the configuration
+file.  The active lines are all formatted as
+&#8220;NAME=VALUE&#8221;.  Although PDFgetX3 has many options, in general only a few
+of them are critical for the PDF calculation:</p>
+<ul class="simple">
+<li><a class="reference internal" href="options.html#confval-dataformat"><tt class="xref std std-confval docutils literal"><span class="pre">dataformat</span></tt></a> &#8211; specifies the input data format</li>
+<li><a class="reference internal" href="options.html#confval-wavelength"><tt class="xref std std-confval docutils literal"><span class="pre">wavelength</span></tt></a> &#8211; radiation wavelength in Å required for the
+twotheta format.</li>
+<li><a class="reference internal" href="options.html#confval-composition"><tt class="xref std std-confval docutils literal"><span class="pre">composition</span></tt></a> &#8211; chemical composition of the sample</li>
+<li><a class="reference internal" href="options.html#confval-qmaxinst"><tt class="xref std std-confval docutils literal"><span class="pre">qmaxinst</span></tt></a> &#8211; upper <em>Q</em> boundary for a meaningful measurement
+intensities.</li>
+<li><a class="reference internal" href="options.html#confval-qmax"><tt class="xref std std-confval docutils literal"><span class="pre">qmax</span></tt></a> &#8211; <em>Q</em>-cutoff for the Fourier transformation that
+yields the PDF.</li>
+</ul>
+<p>Save the updated configuration file and run pdfgetx3 on the input data
+<tt class="file docutils literal"><span class="pre">FILENAME.chi</span></tt> as</p>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 --verbose=info -t gr FILENAME.chi
+</pre></div>
+</div>
+<p>Here the <a class="reference internal" href="options.html#cmdoption-pdfgetx3--verbose"><em class="xref std std-option">--verbose=info</em></a> option makes pdfgetx3
+print
+more information about its operation.  This helps to verify
+if the configuration file is indeed loaded and if the parameter
+values are assigned as intended.  The PDFgetX3 will not write
+any output files unless told so.  The <a class="reference internal" href="options.html#cmdoption-pdfgetx3-t"><em class="xref std std-option">-t gr</em></a> option
+tells the program to save the final <em>G</em>(<em>r</em>) curve as a
+<tt class="file docutils literal"><span class="pre">FILENAME.gr</span></tt> file in the working directory.</p>
+<p>The saved .gr file contains a header with all the calculation
+parameters and the input file name.  The .gr file can be therefore
+also used as a configuration file in order to redo the same
+calculation</p>
+<div class="highlight-python"><div class="highlight"><pre>pdfgetx3 -c FILENAME.gr --plot=fq,gr
+</pre></div>
+</div>
+<p>Note this command does not include any .chi file and this will as
+a result process the previously used input <tt class="file docutils literal"><span class="pre">FILENAME.chi</span></tt>.
+The <a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><em class="xref std std-option">--plot=fq,gr</em></a> option tells PDFgetX3 to
+display 2 plots for the reduced structure function <em>F</em>(<em>Q</em>) and the
+final PDF <em>G</em>(<em>r</em>).  The <em class="xref std std-option">--plot</em> option also implies an
+<a class="reference internal" href="interact.html"><em>interactive mode</em></a>
+therefore the program does not exit, but starts an
+interactive IPython session.  To exit the interactive mode,
+type <tt class="docutils literal"><span class="pre">exit()</span></tt> and press Enter.</p>
+<p>Please refer to the <a class="reference internal" href="tutorial.html"><em>tutorial section</em></a> for
+a step-by step processing of the example files and for
+demonstration of the PDFgetX3 functions.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="next chapter">Tutorial</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tutorial.html" title="Tutorial"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

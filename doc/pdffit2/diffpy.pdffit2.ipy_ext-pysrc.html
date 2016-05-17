@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>diffpy.pdffit2.ipy_ext</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="diffpy.pdffit2-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.pdffit2</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;diffpy ::
+        <a href="diffpy.pdffit2-module.html">Package&nbsp;pdffit2</a> ::
+        Module&nbsp;ipy_ext
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="diffpy.pdffit2.ipy_ext-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="diffpy.pdffit2.ipy_ext-module.html">Module diffpy.pdffit2.ipy_ext</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#!/usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">"""This module defines functions within IPython session to simulate</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">the old pdffit2 interactive session.</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">Usage: %load_ext diffpy.pdffit2.ipy_ext</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="load_ipython_extension"></a><div id="load_ipython_extension-def"><a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt> <a class="py-toggle" href="#" id="load_ipython_extension-toggle" onclick="return toggle('load_ipython_extension');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext-module.html#load_ipython_extension">load_ipython_extension</a><tt class="py-op">(</tt><tt class="py-param">ipython</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="load_ipython_extension-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="load_ipython_extension-expanded"><a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">    <tt class="py-keyword">from</tt> <tt class="py-name">diffpy</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Package diffpy.pdffit2=diffpy.pdffit2-module.html,Module diffpy.pdffit2.pdffit2=diffpy.pdffit2.pdffit2-module.html"><a title="diffpy.pdffit2
+diffpy.pdffit2.pdffit2" class="py-name" href="#" onclick="return doclink('link-0', 'pdffit2', 'link-0');">pdffit2</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class diffpy.pdffit2.pdffit.PdfFit=diffpy.pdffit2.pdffit.PdfFit-class.html"><a title="diffpy.pdffit2.pdffit.PdfFit" class="py-name" href="#" onclick="return doclink('link-1', 'PdfFit', 'link-1');">PdfFit</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt class="py-name">pf</tt> <tt class="py-op">=</tt> <tt id="link-2" class="py-name"><a title="diffpy.pdffit2.pdffit.PdfFit" class="py-name" href="#" onclick="return doclink('link-2', 'PdfFit', 'link-1');">PdfFit</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">    <tt class="py-name">pdf</tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name" targets="Class diffpy.pdffit2.ipy_ext.EasyPDFPlotting=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting" class="py-name" href="#" onclick="return doclink('link-3', 'EasyPDFPlotting', 'link-3');">EasyPDFPlotting</a></tt><tt class="py-op">(</tt><tt class="py-name">pf</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt class="py-string">'        Type  help(pdffit)  or  help(topic)  for information.'</tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-name">ns</tt> <tt class="py-op">=</tt> <tt class="py-name">dict</tt><tt class="py-op">(</tt><tt id="link-4" class="py-name" targets="Module diffpy.pdffit2.pdffit=diffpy.pdffit2.pdffit-module.html"><a title="diffpy.pdffit2.pdffit" class="py-name" href="#" onclick="return doclink('link-4', 'pdffit', 'link-4');">pdffit</a></tt><tt class="py-op">=</tt><tt id="link-5" class="py-name"><a title="diffpy.pdffit2.pdffit.PdfFit" class="py-name" href="#" onclick="return doclink('link-5', 'PdfFit', 'link-1');">PdfFit</a></tt><tt class="py-op">,</tt> <tt class="py-name">pdf</tt><tt class="py-op">=</tt><tt class="py-name">pdf</tt><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt class="py-name">pf</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method diffpy.pdffit2.pdffit.PdfFit._exportAll()=diffpy.pdffit2.pdffit.PdfFit-class.html#_exportAll"><a title="diffpy.pdffit2.pdffit.PdfFit._exportAll" class="py-name" href="#" onclick="return doclink('link-6', '_exportAll', 'link-6');">_exportAll</a></tt><tt class="py-op">(</tt><tt class="py-name">ns</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt class="py-name">ipython</tt><tt class="py-op">.</tt><tt class="py-name">user_ns</tt><tt class="py-op">.</tt><tt class="py-name">update</tt><tt class="py-op">(</tt><tt class="py-name">ns</tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="EasyPDFPlotting"></a><div id="EasyPDFPlotting-def"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting-toggle" onclick="return toggle('EasyPDFPlotting');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html">EasyPDFPlotting</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="EasyPDFPlotting-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">    <tt class="py-docstring">"""Convenience functions for accessing and plotting PDFfit2 data.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="EasyPDFPlotting.__init__"></a><div id="EasyPDFPlotting.__init__-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.__init__-toggle" onclick="return toggle('EasyPDFPlotting.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">pdffit_instance</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.__init__-expanded"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pdffit</tt> <tt class="py-op">=</tt> <tt class="py-name">pdffit_instance</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="EasyPDFPlotting.r"></a><div id="EasyPDFPlotting.r-def"><a name="L31"></a><tt class="py-lineno">31</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.r-toggle" onclick="return toggle('EasyPDFPlotting.r');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#r">r</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.r-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.r-expanded"><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">        <tt class="py-docstring">"R-grid for PDF simulation."</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Static Method diffpy.pdffit2.ipy_ext.EasyPDFPlotting._asarray()=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#_asarray"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting._asarray" class="py-name" href="#" onclick="return doclink('link-7', '_asarray', 'link-7');">_asarray</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pdffit</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method diffpy.pdffit2.pdffit.PdfFit.getR()=diffpy.pdffit2.pdffit.PdfFit-class.html#getR,Function diffpy.pdffit2.pdffit2.getR()=diffpy.pdffit2.pdffit2-module.html#getR"><a title="diffpy.pdffit2.pdffit.PdfFit.getR
+diffpy.pdffit2.pdffit2.getR" class="py-name" href="#" onclick="return doclink('link-8', 'getR', 'link-8');">getR</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">dtype</tt><tt class="py-op">=</tt><tt class="py-name">float</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="EasyPDFPlotting.Gobs"></a><div id="EasyPDFPlotting.Gobs-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.Gobs-toggle" onclick="return toggle('EasyPDFPlotting.Gobs');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gobs">Gobs</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.Gobs-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.Gobs-expanded"><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-docstring">"Observed PDF data."</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting._asarray" class="py-name" href="#" onclick="return doclink('link-9', '_asarray', 'link-7');">_asarray</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pdffit</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method diffpy.pdffit2.pdffit.PdfFit.getpdf_obs()=diffpy.pdffit2.pdffit.PdfFit-class.html#getpdf_obs,Function diffpy.pdffit2.pdffit2.getpdf_obs()=diffpy.pdffit2.pdffit2-module.html#getpdf_obs"><a title="diffpy.pdffit2.pdffit.PdfFit.getpdf_obs
+diffpy.pdffit2.pdffit2.getpdf_obs" class="py-name" href="#" onclick="return doclink('link-10', 'getpdf_obs', 'link-10');">getpdf_obs</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">dtype</tt><tt class="py-op">=</tt><tt class="py-name">float</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="EasyPDFPlotting.Gcalc"></a><div id="EasyPDFPlotting.Gcalc-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.Gcalc-toggle" onclick="return toggle('EasyPDFPlotting.Gcalc');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gcalc">Gcalc</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.Gcalc-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.Gcalc-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-docstring">"Calculated PDF data."</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting._asarray" class="py-name" href="#" onclick="return doclink('link-11', '_asarray', 'link-7');">_asarray</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pdffit</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method diffpy.pdffit2.pdffit.PdfFit.getpdf_fit()=diffpy.pdffit2.pdffit.PdfFit-class.html#getpdf_fit,Function diffpy.pdffit2.pdffit2.getpdf_fit()=diffpy.pdffit2.pdffit2-module.html#getpdf_fit"><a title="diffpy.pdffit2.pdffit.PdfFit.getpdf_fit
+diffpy.pdffit2.pdffit2.getpdf_fit" class="py-name" href="#" onclick="return doclink('link-12', 'getpdf_fit', 'link-12');">getpdf_fit</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="EasyPDFPlotting.Gdiff"></a><div id="EasyPDFPlotting.Gdiff-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.Gdiff-toggle" onclick="return toggle('EasyPDFPlotting.Gdiff');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gdiff">Gdiff</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.Gdiff-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.Gdiff-expanded"><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-docstring">"Difference between the observed and simulated PDF."</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Variable diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gobs=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gobs"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gobs" class="py-name" href="#" onclick="return doclink('link-13', 'Gobs', 'link-13');">Gobs</a></tt> <tt class="py-op">-</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Variable diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gcalc=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gcalc"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gcalc" class="py-name" href="#" onclick="return doclink('link-14', 'Gcalc', 'link-14');">Gcalc</a></tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="EasyPDFPlotting.showfit"></a><div id="EasyPDFPlotting.showfit-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.showfit-toggle" onclick="return toggle('EasyPDFPlotting.showfit');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#showfit">showfit</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">offset</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.showfit-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.showfit-expanded"><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-docstring">"""Plot observed and simulated PDFs and the difference curve.</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">        offset   -- offset for the difference curve.</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">        No return value.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-keyword">from</tt> <tt class="py-name">matplotlib</tt><tt class="py-op">.</tt><tt class="py-name">pyplot</tt> <tt class="py-keyword">import</tt> <tt class="py-name">gca</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">        <tt class="py-keyword">from</tt> <tt class="py-name">math</tt> <tt class="py-keyword">import</tt> <tt class="py-name">floor</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">        <tt class="py-name">cr</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Variable diffpy.pdffit2.ipy_ext.EasyPDFPlotting.r=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#r"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.r" class="py-name" href="#" onclick="return doclink('link-15', 'r', 'link-15');">r</a></tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-name">cGobs</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gobs" class="py-name" href="#" onclick="return doclink('link-16', 'Gobs', 'link-13');">Gobs</a></tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">        <tt class="py-name">cGcalc</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gcalc" class="py-name" href="#" onclick="return doclink('link-17', 'Gcalc', 'link-14');">Gcalc</a></tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">        <tt class="py-name">cGdiff</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gdiff=diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#Gdiff"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.Gdiff" class="py-name" href="#" onclick="return doclink('link-18', 'Gdiff', 'link-18');">Gdiff</a></tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">offset</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">            <tt class="py-name">offset</tt> <tt class="py-op">=</tt> <tt class="py-name">floor</tt><tt class="py-op">(</tt><tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-name">cGobs</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-name">cGcalc</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-name">cGdiff</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">        <tt class="py-name">ax</tt> <tt class="py-op">=</tt> <tt class="py-name">gca</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">plot</tt><tt class="py-op">(</tt><tt class="py-name">cr</tt><tt class="py-op">,</tt> <tt class="py-name">cGobs</tt><tt class="py-op">,</tt> <tt class="py-string">'r.'</tt><tt class="py-op">,</tt> <tt class="py-name">cr</tt><tt class="py-op">,</tt> <tt class="py-name">cGcalc</tt><tt class="py-op">,</tt> <tt class="py-string">'b-'</tt><tt class="py-op">,</tt> <tt class="py-name">cr</tt><tt class="py-op">,</tt> <tt class="py-name">cGdiff</tt> <tt class="py-op">+</tt> <tt class="py-name">offset</tt><tt class="py-op">,</tt> <tt class="py-string">'g-'</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">        <tt class="py-name">xl</tt> <tt class="py-op">=</tt> <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">xaxis</tt><tt class="py-op">.</tt><tt class="py-name">get_label</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">get_text</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">        <tt class="py-name">yl</tt> <tt class="py-op">=</tt> <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">yaxis</tt><tt class="py-op">.</tt><tt class="py-name">get_label</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">get_text</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">xl</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">            <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">set_xlabel</tt><tt class="py-op">(</tt><tt class="py-string">'r (A)'</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">yl</tt> <tt class="py-op">==</tt> <tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">            <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">set_ylabel</tt><tt class="py-op">(</tt><tt class="py-string">'G (A**-2)'</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"> </tt>
+<a name="EasyPDFPlotting.showRw"></a><div id="EasyPDFPlotting.showRw-def"><a name="L75"></a><tt class="py-lineno">75</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting.showRw-toggle" onclick="return toggle('EasyPDFPlotting.showRw');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#showRw">showRw</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting.showRw-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting.showRw-expanded"><a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-docstring">"Plot cumulative Rw."</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line">        <tt class="py-keyword">from</tt> <tt class="py-name">matplotlib</tt><tt class="py-op">.</tt><tt class="py-name">pyplot</tt> <tt class="py-keyword">import</tt> <tt class="py-name">gca</tt> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">        <tt class="py-name">cRw</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting._asarray" class="py-name" href="#" onclick="return doclink('link-19', '_asarray', 'link-7');">_asarray</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_pdffit</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method diffpy.pdffit2.pdffit.PdfFit.getcrw()=diffpy.pdffit2.pdffit.PdfFit-class.html#getcrw,Function diffpy.pdffit2.pdffit2.getcrw()=diffpy.pdffit2.pdffit2-module.html#getcrw"><a title="diffpy.pdffit2.pdffit.PdfFit.getcrw
+diffpy.pdffit2.pdffit2.getcrw" class="py-name" href="#" onclick="return doclink('link-20', 'getcrw', 'link-20');">getcrw</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-name">ax</tt> <tt class="py-op">=</tt> <tt class="py-name">gca</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">        <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">plot</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="diffpy.pdffit2.ipy_ext.EasyPDFPlotting.r" class="py-name" href="#" onclick="return doclink('link-21', 'r', 'link-15');">r</a></tt><tt class="py-op">,</tt> <tt class="py-name">cRw</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">        <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">set_title</tt><tt class="py-op">(</tt><tt class="py-string">'Cumulative Rw = %.4f'</tt> <tt class="py-op">%</tt> <tt class="py-name">cRw</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">        <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">set_xlabel</tt><tt class="py-op">(</tt><tt class="py-string">'r'</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">        <tt class="py-name">ax</tt><tt class="py-op">.</tt><tt class="py-name">set_ylabel</tt><tt class="py-op">(</tt><tt class="py-string">'Rw'</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+</div><a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line"> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">staticmethod</tt> </tt>
+<a name="EasyPDFPlotting._asarray"></a><div id="EasyPDFPlotting._asarray-def"><a name="L87"></a><tt class="py-lineno">87</tt> <a class="py-toggle" href="#" id="EasyPDFPlotting._asarray-toggle" onclick="return toggle('EasyPDFPlotting._asarray');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="diffpy.pdffit2.ipy_ext.EasyPDFPlotting-class.html#_asarray">_asarray</a><tt class="py-op">(</tt><tt class="py-param">x</tt><tt class="py-op">,</tt> <tt class="py-param">dtype</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="EasyPDFPlotting._asarray-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="EasyPDFPlotting._asarray-expanded"><a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">        <tt class="py-keyword">import</tt> <tt class="py-name">numpy</tt> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">numpy</tt><tt class="py-op">.</tt><tt class="py-name">asarray</tt><tt class="py-op">(</tt><tt id="link-22" class="py-name" targets="Static Method diffpy.pdffit2.pdffit.PdfFit.x()=diffpy.pdffit2.pdffit.PdfFit-class.html#x,Function diffpy.pdffit2.pdffit2.x()=diffpy.pdffit2.pdffit2-module.html#x"><a title="diffpy.pdffit2.pdffit.PdfFit.x
+diffpy.pdffit2.pdffit2.x" class="py-name" href="#" onclick="return doclink('link-22', 'x', 'link-22');">x</a></tt><tt class="py-op">,</tt> <tt class="py-name">dtype</tt><tt class="py-op">=</tt><tt class="py-name">dtype</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line"><tt class="py-comment"># End of class EasyPDFPlotting</tt> </tt>
+<a name="L92"></a><tt class="py-lineno">92</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="diffpy.pdffit2-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://www.diffpy.org/">diffpy.pdffit2</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Feb 23 16:46:55 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

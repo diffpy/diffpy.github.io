@@ -1,0 +1,51 @@
+Introduction
+========================================================================
+
+PDFgetX3 is a simple yet powerful program for converting X-ray powder
+diffraction data to atomic Pair Distribution Functions (PDFs).
+PDFgetX3 can be used in a batch mode to convert a series of data files
+without user intervention.  PDFgetX3 can be also run in an interactive
+mode that allows to control process parameters and plot the PDFs
+and any intermediate results.  Users can interactively tune the
+PDF processing parameters, visualize their effect on the results and
+adjust them to their optimum values.  The PDFgetX3 software comes with a
+Python library of PDF processing functions, which can be easily used in
+custom Python scripts.
+
+
+.. index:: license
+
+License notice
+------------------------------------------------------------------------
+
+.. include:: ../../LICENSENOTICE.txt
+
+
+.. index:: authors
+
+Authors
+------------------------------------------------------------------------
+
+This code was written by members of the Billinge Group at
+Columbia University including:
+
+Pavol Juhás,
+Timur Davis,
+Christopher Farrow,
+Simon Billinge.
+
+
+.. index:: citation, reference
+
+Reference
+------------------------------------------------------------------------
+
+If you use this program for a scientific research that leads
+to publication, we ask that you acknowledge use of the program
+by citing the following paper in your publication:
+
+   P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge
+   `PDFgetX3: A rapid and highly automatable program for processing
+   powder diffraction data into total scattering pair distribution
+   functions <http://dx.doi.org/10.1107/S0021889813005190>`_,
+   *J. Appl. Cryst.* **46**, 560-566 (2013)

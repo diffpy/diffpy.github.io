@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <title>Bug submission form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+<p>
+This form is for automated error submission and testing.<br>
+If you got here anyway, please report bugs at
+<a href="http://groups.google.com/group/diffpy-dev/">
+http://groups.google.com/group/diffpy-dev/
+</a>
+</p>
+
+<form action="http://slapper.apam.columbia.edu/diffpy/pybin/postbugreport.py/email" method="POST">
+  <input type="hidden" name="bugsender" value="diffpy@diffpy.org">
+  <input type="hidden" name="bugemail" value="diffpy-dev@googlegroups.com">
+  Reporter:
+  <input type="text" name="reporter" size=64 maxlength=256><br>
+
+  Summary:
+  <input type="text" name="summary" size=64 maxlength=1024><br>
+
+  Description:<br>
+  <textarea name="description" rows=10 cols=72></textarea><br>
+  <br>
+
+  Component:
+  <input type="text" name="component" maxlength=256><br>
+
+  Version:
+  <input type="text" name="version" maxlength=256><br>
+
+  Traceback:<br>
+  <textarea name="traceback" rows=10 cols=72></textarea><br>
+
+  <input type="submit">
+</form>
+
+</body>
+
+</html>

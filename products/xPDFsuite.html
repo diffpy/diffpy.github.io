@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays &mdash; DiffPy  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/diffpy-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/diffpy_logo_header.ico"/>
+    <link rel="top" title="DiffPy  documentation" href="../index.html" />
+    <link rel="next" title="PDFgui" href="pdfgui.html" />
+    <link rel="prev" title="How to Contribute Code" href="diffpycmi/contributecode.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/diffpy_logo_header.png">
+          DiffPy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="../community.html">Community</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+            
+            
+
+            
+            
+  <li class="dropdown menu01-container">
+  <a role="button"
+     id="dLabelMenu01"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu menu01"
+      role="menu"
+      aria-labelledby="dLabelMenu01">
+      <li><a href="diffpycmi/index.html">DiffPy-CMI</a></li>
+      <li><a href="#">xPDFsuite</a></li>
+      <li><a href="pdfgetx3.html">PDFgetX3</a></li>
+      <li><a href="pdfgui.html">PDFgui</a></li>
+      <li><a href="SrMise.html">SrMise</a></li>
+      <li><a href="magPDF.html">magPDF</a></li>
+      <li><a href="pythonpackages.html">Python Packages</a></li>
+  </ul>
+</li>
+
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="xpdfsuite-an-easy-to-use-end-to-end-software-solution-for-atomic-pair-distribution-function-analysis-with-x-rays">
+<h1>xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays<a class="headerlink" href="#xpdfsuite-an-easy-to-use-end-to-end-software-solution-for-atomic-pair-distribution-function-analysis-with-x-rays" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<img alt="../_images/xPDFsuite.png" src="../_images/xPDFsuite.png" />
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This suite of algorithms and software, named xPDFsuite, is an easy to use graphical user interface (GUI) to a number of Diffpy programs.
+It provides a raw-data-to-modelled-PDF solution for X-ray PDFs.  It is specially convenient for handling high throughput data with many
+(hundreds to thousands) of datatsets, such as come from modern synchrotron experiments with 2D detectors. It is equally useful for data
+from laboratory x-rays.  The software runs on laptops and workstations running windows, mac OSX and linux.</p>
+<dl class="docutils">
+<dt>Within the same GUI you can:</dt>
+<dd><ul class="first last simple">
+<li>visualize the 2D raw data from large numbers of files</li>
+<li>integrate 2D data to 1D diffraction patterns</li>
+<li>plot and manipulate plots of large numbers of patterns</li>
+<li>rapidly and easily process the 1D data to obtain S(Q), F(Q) and G(r) (PDF) functions using the power of the PDFgetX3 engine</li>
+<li>use the powerful interactive plotting capabilities to explore these reduced data functions</li>
+<li>use built in tools for comparing datasets using Pearson correlations etc.</li>
+<li>the widely used PDFgui PDF fitting program is also included in xPDFsuite and is straightforwardly incorporated into your workflow</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>xPDFsuite is exceptionally easy to learn and use and lowers the barrier to using atomic pair distribution function (PDF) methods,
+increasing the range of people who can use it, decreasing training costs, and speeding up workflow. xPDFsuite permits users to run
+multiple data sets using the same input file, allowing for batch processing of large numbers of datasets in fractions of a second.</p>
+<dl class="docutils">
+<dt>Key features:</dt>
+<dd><ul class="first last simple">
+<li>Full featured, easy-to-use GUI</li>
+<li>Real time PDF transformation and plotting</li>
+<li>Flexible plotting and analysis for single and mulitple data sets</li>
+<li>Optimized for high throughput data processing</li>
+<li>2D powder diffraction image integration</li>
+<li>Static and dynamic mask editing on 2D image</li>
+<li>Pearson correlation analysis on selected data-sets</li>
+<li>Written in Python and on Windows, Linux, and MacOSX</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="explore-xpdfsuite">
+<h2>Explore xPDFsuite<a class="headerlink" href="#explore-xpdfsuite" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>xPDFsuite is available for purchase for either academic or commercial applications.</dt>
+<dd><ul class="first last simple">
+<li>To see xPDFsuite in action, please see the video here. (available soon)</li>
+<li>To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available at <a href="http://bit.ly/xPDFsuite" target="_blank">Columbia Technology Ventures</a>. This has all the xPDFsuite functionality, but you will not be able to save your results.</li>
+<li>To purchase xPDFsuite (separate academic and commercial license options), please go to <a href="http://bit.ly/xPDFsuite" target="_blank">Columbia Technology Ventures</a>.</li>
+</ul>
+</dd>
+</dl>
+<p><strong>Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our
+free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.</strong></p>
+<p><strong>We hope you enjoy xPDFsuite and that it supercharges your PDF analyses.</strong>  Please contact us with feedback and questions by
+emailing <a class="reference external" href="mailto:sb2896&#37;&#52;&#48;columbia&#46;edu">Prof<span>&#46;</span> Simon Billinge</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

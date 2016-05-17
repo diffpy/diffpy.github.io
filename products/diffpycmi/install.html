@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DiffPy-CMI installation from sources &mdash; DiffPy  documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/diffpy-styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
+    <link rel="top" title="DiffPy  documentation" href="../../index.html" />
+    <link rel="next" title="DiffPy-CMI Contents" href="contents.html" />
+    <link rel="prev" title="DiffPy-CMI" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><img src="../../_static/diffpy_logo_header.png">
+          DiffPy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="../../community.html">Community</a></li>
+                <li><a href="../../publications.html">Publications</a></li>
+            
+            
+
+            
+            
+  <li class="dropdown menu01-container">
+  <a role="button"
+     id="dLabelMenu01"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu menu01"
+      role="menu"
+      aria-labelledby="dLabelMenu01">
+      <li><a href="index.html">DiffPy-CMI</a></li>
+      <li><a href="../xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="../pdfgetx3.html">PDFgetX3</a></li>
+      <li><a href="../pdfgui.html">PDFgui</a></li>
+      <li><a href="../SrMise.html">SrMise</a></li>
+      <li><a href="../magPDF.html">magPDF</a></li>
+      <li><a href="../pythonpackages.html">Python Packages</a></li>
+  </ul>
+</li>
+
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="diffpy-cmi-installation-from-sources">
+<h1>DiffPy-CMI installation from sources<a class="headerlink" href="#diffpy-cmi-installation-from-sources" title="Permalink to this headline">¶</a></h1>
+<p>Downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
+and follow the steps below.</p>
+<div class="section" id="install-system-software">
+<h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Permalink to this headline">¶</a></h2>
+<p>DiffPy-CMI requires the <a class="reference internal" href="#dependencies"><span>system software dependencies</span></a>
+which can be installed from command line using a suitable package manager.
+Here are installation commands for several supported systems.</p>
+<div class="section" id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
+<p>For Ubuntu or other Debian-based Linux distributions use <code class="docutils literal"><span class="pre">apt-get</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install <span class="se">\</span>
+    libgsl0-dev libboost-all-dev python-dev <span class="se">\</span>
+    python-setuptools python-numpy python-scipy <span class="se">\</span>
+    python-matplotlib python-lxml ipython <span class="se">\</span>
+    build-essential scons git zsh
+</pre></div>
+</div>
+</div>
+<div class="section" id="fedora">
+<h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal"><span class="pre">yum</span></code> for Fedora or RedHat Linux:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo yum install <span class="se">\</span>
+    gsl-devel boost-devel python-devel <span class="se">\</span>
+    python-setuptools numpy scipy  <span class="se">\</span>
+    python-matplotlib python-lxml <span class="se">\</span>
+    python-ipython-notebook <span class="se">\</span>
+    gcc-c++ scons git zsh
+</pre></div>
+</div>
+</div>
+<div class="section" id="mac-os-x">
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
+<p>For Mac OS X the system dependencies can be installed using the
+<a class="reference external" href="http://www.macports.org">MacPorts</a> software manager.  A similar
+package system <a class="reference external" href="http://brew.sh">Homebrew</a> works as well, but has
+been considerably less tested with DiffPy-CMI.</p>
+<p>For best results with MacPorts follow these tips:</p>
+<ul class="simple">
+<li>We recommend to upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
+<li>Install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>.
+If already present, we recommend to upgrade to the latest version.</li>
+<li>Be patient, it may take several hours to install all the dependencies
+using MacPorts.</li>
+<li>Installation command may fail on the first run, but usually works
+when repeated.  See MacPorts
+<a class="reference external" href="https://trac.macports.org/wiki/FAQ#buildfails">FAQ</a>
+for more help.</li>
+</ul>
+<p>To install system dependencies with MacPorts, use:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo port install <span class="se">\</span>
+    python27 py27-setuptools py27-ipython py27-lxml <span class="se">\</span>
+    gsl boost py27-numpy py27-scipy py27-matplotlib scons git
+</pre></div>
+</div>
+<p>Make sure the MacPorts versions of IPython and Python are active by
+running the following commands:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo port <span class="k">select</span> --set ipython ipython27
+sudo port <span class="k">select</span> --set python python27
+</pre></div>
+</div>
+<p><strong>Important:</strong> When finished installing the Mac OS X dependencies, adjust
+the shell environment so that MacPorts Python is the first in the
+PATH.  This can be accomplished by adding the following line to either
+of <code class="docutils literal"><span class="pre">.profile</span></code> or <code class="docutils literal"><span class="pre">.zshenv</span></code> file in your HOME directory</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="install-diffpy-cmi">
+<h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Permalink to this headline">¶</a></h2>
+<p>Unzip the DiffPy-CMI tarball into a directory of your choice.
+Execute the included <code class="file docutils literal"><span class="pre">install</span></code> script and follow the prompts.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># replace VERSION to match the actual filename</span>
+tar xzf diffpy_cmi-VERSION.tar.gz
+<span class="nb">cd </span>diffpy_cmi-VERSION
+./install
+</pre></div>
+</div>
+<p>The install process may take a while and produce a plentiful output,
+but should work if all required software is in place.</p>
+</div>
+<div class="section" id="test">
+<h2>3 Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<p>Execute the included test script, which should report no warnings
+nor errors:</p>
+<div class="highlight-bash"><div class="highlight"><pre>./runtests.sh
+</pre></div>
+</div>
+<p>If there are failures they are most likely due to missing software or
+incorrect versions of Python or other libraries being used together.
+After addressing these issues it may be necessary to recompile the
+sources by running <code class="docutils literal"><span class="pre">./install</span> <span class="pre">--build</span></code>.</p>
+</div>
+<div class="section" id="remarks">
+<h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h2>
+<p>The expanded diffpy_cmi directory can be renamed or moved
+to a different location and the software should still work.
+The only requirement is to update the <code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code>
+symbolic link so it points to the new location.  This can be
+done by running the <code class="docutils literal"><span class="pre">./install</span></code> script again or by following
+the steps below.</p>
+<p>The Python interpreter must have a symbolic link pointing to the
+<code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code> file in one of the directories where it
+looks for <code class="file docutils literal"><span class="pre">.pth</span></code> files.  This is normally set up by the
+install script.  If that process somehow fails, the preferred
+<code class="file docutils literal"><span class="pre">pth</span></code> directory for a single-user installation can be
+found using</p>
+<div class="highlight-bash"><div class="highlight"><pre>python -c <span class="s1">&#39;import site; print site.USER_SITE&#39;</span>
+</pre></div>
+</div>
+<p>For a system-wide installation the standard <code class="file docutils literal"><span class="pre">pth</span></code> locations are</p>
+<div class="highlight-bash"><div class="highlight"><pre>python -c <span class="s1">&#39;import site; print site.getsitepackages()&#39;</span>
+</pre></div>
+</div>
+<p>Once the <code class="file docutils literal"><span class="pre">pth</span></code> directory has been established, navigate to
+the base diffpy_cmi directory and create the symbolic link with</p>
+<div class="highlight-bash"><div class="highlight"><pre>ln -si <span class="nv">$PWD</span>/diffpy_cmi.pth /path/to/the/pth/directory/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is essential to use a symbolic link.  Making a copy of the
+<code class="file docutils literal"><span class="pre">diffpy_cmi.pth</span></code> file will not work.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The installation of DiffPy-CMI is entirely contained under the
+expanded diffpy_cmi directory.  The software can be completely
+uninstalled by deleting that directory and removing the symbolic
+link.</p>
+</div>
+</div>
+<div class="section" id="contacts">
+<h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h2>
+<p>If you need help with installing this software, please check discussions
+or post your question to the
+<a class="reference external" href="https://groups.google.com/d/forum/diffpy-dev">diffpy-dev</a>
+group.</p>
+<hr class="docutils" />
+<div class="section" id="list-of-software-dependencies">
+<span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</li>
+<li><strong>boost</strong> - a set of useful C++ libraries.</li>
+<li><strong>python-dev</strong> - development tools for Python modules.</li>
+<li><strong>python-setuptools</strong> - enhancements to the Python distutils.</li>
+<li><strong>numpy</strong> - general-purpose array-processing for large multi-dimensional arrays in Python.</li>
+<li><strong>scipy</strong> - the fundamental library for scientific computing with Python.</li>
+<li><strong>matplotlib</strong> - a Python 2D plotting library.</li>
+<li><strong>python-lxml</strong> - a Python library for processing XML.</li>
+<li><strong>ipython</strong> - an enhanced interactive Python shell.</li>
+<li><strong>scons</strong> - a software build tool.</li>
+<li><strong>git</strong> - a version control system.</li>
+<li><strong>zsh</strong> - an interactive shell and powerful scripting language.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

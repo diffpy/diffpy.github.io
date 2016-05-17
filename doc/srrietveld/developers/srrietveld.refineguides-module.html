@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>srrietveld.refineguides</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="srrietveld-module.html">Package&nbsp;srrietveld</a> ::
+        Module&nbsp;refineguides
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="srrietveld.refineguides-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module refineguides</h1><span class="codelink"><a href="srrietveld.refineguides-pysrc.html">source&nbsp;code</a></span><br /><br />
+<pre class="literalblock">
+
+refineguides.py
+    containing various refining guides
+    this is end-user scripts:    
+      the end-user scripts will be build the refineguide list from what 
+    provided here
+    
+RefineGuide will be
+
+Requirements for RefineGuide to work properly:
+1. RefineGuide should work on a Fit object configured properly
+2. Fit object must contain instrument information for correct
+   guidance on instrument related parameters
+3. Fit object must contain measurement information for correct
+   guidance on measuremetn related parameters
+
+In order to guarantee SrRietveld RefineGuide work properly, 
+it is recommended to use SrRietveld-provided scripts to build a Fit instance
+
+Note
+1. the RefinementGuide is refinement engine independent!
+2. the methods in RefinementGuide should be static
+
+Created:    2008.03.25  11:42 EST
+
+RefineGuide 
+  |
+  |-- MeasureGuide
+       |-- BackgroundGuide
+  |
+  |-- InstrumentGuide
+       |-- ZeroGuide
+       |-- WavelengthGuide
+       |-- PeakShapeGuide
+       |-- ScaleGuide (Structure + Instrument + Measurement)
+  |
+  |-- SampleGuide
+       |-- AbsorptionCorrectionGuide
+       |-- LatticeGuide (Structure + Measurement)
+  |-- AtomGuide
+       |-- FractionalCoordinateGuide
+       |-- ADPGuide
+       |-- OccupancyGuide
+
+* Setup Methods
+  -  __init__(self)
+  -  getGuideConfig(self, fit, stage=1):  
+       the name of this method is confusing, but it must be used before setGuideStep()
+  -  setGuideStep(self, fit, step=1, stage=1, dry=False)
+  -  getRefineAllConfig(self, fit, stage=1)
+
+* Reset Methods
+  -  reset(self)
+  -  turnOff(self, fit)
+
+Information Retrieval
+  -  getNumStages(self)
+  -  getRefinedVariablesList(self)
+
+</pre><br /><br />
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.RefineGuide-class.html" class="summary-name">RefineGuide</a><br />
+      Virtual base class to guide refinement semi-automatically
+
+Concept:
+  The way to use RefineGuide follows the procedure as
+  1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.InstrumentGuide-class.html" class="summary-name">InstrumentGuide</a><br />
+      Guidance for instrument related parammeters
+
+Assumption:
+1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.MeasurementGuide-class.html" class="summary-name">MeasurementGuide</a><br />
+      MeasurementGuide is the guidance for parameters related to 
+specific measurement, for example
+1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.SampleGuide-class.html" class="summary-name">SampleGuide</a><br />
+      SampleGuide is the guidance for parameters related to 
+specific sample, including
+1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.AtomGuide-class.html" class="summary-name">AtomGuide</a><br />
+      StructureGuide is to guide the refinement
+on parameters related to structure model
+
+Assumption: 
+1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.AbsorptionCorrectionGuide-class.html" class="summary-name">AbsorptionCorrectionGuide</a><br />
+      Refine guide TOF absorption correction
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.ADPGuide-class.html" class="summary-name">ADPGuide</a><br />
+      class to guide refinement on atomic displacement factor
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.BackgroundGuide-class.html" class="summary-name">BackgroundGuide</a><br />
+      Guidance for backgrounds parameters
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.ExpDecayGuide-class.html" class="summary-name">ExpDecayGuide</a><br />
+      Refinement guidance on exponential decay parameters
+Algorithm:
+    the exponential decay/peak profile of different phases shouldn't interefere with each other, 
+    because they are determining the peaks' shape belonged to different sets,
+    therefore, 
+    1.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.FractionalCoordinateGuide-class.html" class="summary-name">FractionalCoordinateGuide</a><br />
+      Class to guide refinement on atoms' fractional coordinates
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.LatticeGuide-class.html" class="summary-name">LatticeGuide</a><br />
+      Refinement guidance on lattice parameter
+We allow the freedom for each Phase of each Component to
+have different lattice parameter.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.OccupancyGuide-class.html" class="summary-name">OccupancyGuide</a><br />
+      Refine guide on atom's occupancy
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.PeakShapeGuide-class.html" class="summary-name">PeakShapeGuide</a><br />
+      Class to guide the refine of Peak-Shape
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.ScaleGuide-class.html" class="summary-name">ScaleGuide</a><br />
+      Refinement guidance on scale factor
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.WavelengthGuide-class.html" class="summary-name">WavelengthGuide</a><br />
+      Guidance to refine wavelength parameters
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides.ZeroGuide-class.html" class="summary-name">ZeroGuide</a><br />
+      Guidance to refine zero parameters
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="srrietveld.refineguides-module.html#__id__" class="summary-name">__id__</a> = <code title="'$Id: refineguides.py 2874 2009-03-12 20:43:17Z wdzhou $'"><code class="variable-quote">'</code><code class="variable-string">$Id: refineguides.py 2874 2009-03-12 20:43:17Z wdzho</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ETA"></a><span class="summary-name">ETA</span> = <code title="1e-06">1e-06</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_DEBUG"></a><span class="summary-name">_DEBUG</span> = <code title="False">False</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__id__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__id__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">$Id: refineguides.py 2874 2009-03-12 20:43:17Z wdzhou $</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="srrietveld-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Fri Mar 20 14:19:22 2009
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

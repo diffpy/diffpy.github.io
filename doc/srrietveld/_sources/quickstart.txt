@@ -1,0 +1,470 @@
+.. _quickstart:
+
+****************************
+Tutorial
+****************************
+
+============================
+SrRietveld Basics
+============================
+* A command line version of SrRietveld is currently available. A graphical user 
+interface will be developed in the future release. 
+
+* The structure data, refinement strategy, and instrument data will be stored in
+XML files, and the files will be passed to the program as option values
+
+* The SrRietveld input files are in XML format. The syntax of the XML files is 
+illustrated in this user manual. There are some tools provided in SrRietveld to 
+generate XML file templates.
+
+* There are three types of input files:
+
+  * *Instrument file* -- defining the parameters related to the instrument and 
+  experiment by instrument scientists.
+	
+    Importance: **required**
+	
+  * *Crystal structure model file* -- defining the crystal structure model to be
+  refined.
+	
+    Importance: **required**
+	
+  * *Refinement strategy file* -- defining the sequence to refine parameters. 
+	
+    Importance: **optional**
+	
+    *If this file is not given, SrRietveld will perform the refinement by using 
+    a default refinement strategy.*
+
+========================
+SrRietveld Command Lines
+========================
+
+*This introduction is base on Linux / Mac machines. Current release of 
+SrRietveld is not available in Windows*
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+``srr``
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After SrRietveld is correctly installed in the computer, the main command for 
+SrRietveld is ``srr``. 
+
+The format to run the ''srr'' command should be,::
+
+	srr [SCRIPT NAME] [OPTIONs]
+
+The *SCRIPT NAME* is a work or abbreviation to tell the program what kind of 
+task to complete. Then the necessary data will be passed through  *OPTION*s. To 
+get the full list of available *SCRIPT NAME*s, open a terminal, type in:: 
+
+	srr
+	
+or::
+
+	srr --help
+	
+a list of script names, their abbreviations, and a short description for each 
+will be listed in the terminal. 
+
+Similarly, to get immediate help on every script name, simply type in::
+
+srr [SCRIPT NAME] --help
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+``srr SCRIPTNAME``
+^^^^^^^^^^^^^^^^^^^^^^^^^
+If a script name is given, SrRietveld will prompt the help information if the 
+script name is correct. 
+
+* Example 1::
+
+    ``> srr refine``
+
+  Output::
+
+    Automatic Launched Refinement On Single Refinement
+
+    calculatepattern -h  For Help
+
+* Example 2::
+    
+    ``> srr cal``
+
+  Output::
+   
+    Automatic Launched Refinement On Single Refinement
+
+    cal        -h  For Help 
+
+* Example 3::
+
+    ``> srr xyz``
+
+  Output::
+
+	Script xyz        is not supported.  Programm is quit
+	Usage: srr [SCRIPT NAME] [OPTION]...
+	SrRietveld User Interface Application.
+	Run the task defined by the SCRIPT NAME, where the specifications are listed
+	in OPTIONs.
+
+	Supported script names include: 
+#	    cal   , calculatepattern         Simulate diffraction pattern
+#	    pp    , plotpattern              Plot the refinement result (pattern) from
+#			                     script 'refine'
+	    refine, refine                   Multiple step refinement on single
+			                     experiment or co-refinement on several
+			                     data sets
+#	    sc    , saveconfig               Save configuration XML file from existing
+#			                     files to set up SrRietveld
+#	    seqfit, sequentialfit            Sequential fitting on data sets from a
+#			                     series of experiements
+#	    vrr   , viewrefineresult         Viewing the result coming from script
+#			                     'refine'
+#	    vspr  , viewsamplingfitresult    Viewing the result coming from a series
+#			                     of sampling refinements
+#	    vsrr  , viewsequentialfitresult  Viewing the result coming from script
+#			                     'sequentialfit'
+
+		-h, --help
+		      info    display this help and exit
+
+	Note that in parenthesis are the corresponding shortened name of the 
+	application script
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``srr SCRIPTNAME --help`` or ``srr SCRIPTNAME -h``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This command will print the help information of the specified script. 
+
+* Example 1::
+    
+    > srr refine --help
+
+  Output::
+
+Usage: refine [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -i INSTRUMENT, --instrument=INSTRUMENT
+                        (1) Name of Instrument iparm file (2) Name of
+                        Instrument XML File
+  -s STRUCTURE, --structure=STRUCTURE
+                        Name of CIF File (.cif) or SrRietveld Crystal
+                        Structure XML File (.xml)
+  -d DATAFILE, --data=DATAFILE
+                        Full-path Name of Data File
+  -r STRATEGYFILE, --strategy=STRATEGYFILE
+                        (1) Name of Refinement Strategy or (2) Name of
+                        SrRietveld Refinement Strategy File
+  --bank=BANKS          Bank(s) to refine in T.O.F. data
+  -b BACKGROUNDFILE, --background=BACKGROUNDFILE
+                        Name of Data File Containing Background Parameter or
+                        Background XML file
+  -e ENGINE, --engine=ENGINE
+                        Type of Refinement Engine (i.e.,Refinement Backend).
+                        Fullprof or GSAS
+  --excludedregion=EXCLUDEDREGIONFILE
+                        Name of XML file to Indicate User Specified Excluded
+                        Region
+  --infofile=INFOFILE   Information file.  Information file contains 2 columns
+                        fordatafile and value of environment quantity (e.g.
+                        temperature)
+  --datadirectory=DATADIRECTORY
+                        Directory of source data file
+
+  
+
+----------------------
+Calculating Pattern
+----------------------
+The first step is to calculate the pattern according to the proposed structure model,
+to make sure that the model is not obviously incorrect. 
+
+The proposed structure of NaCl is the structure at room temperature.  
+Therefore, by referring to NaCl_Info_All.txt, we choose
+Data/NaCl_ramp01_10f_200ms_1059.chi as the pattern to compare. 
+
+ 1. The simplest option that user can use::
+
+      > srr calculatepattern -s s_nacl.xml
+    
+    The instrument profile will be searched in the current working directory,
+    i.e., *i_rapdf_idd11.xml* 
+
+ #. User is suggested to specify an instrument file instead::
+
+      > srr calculatepattern -i i_rapdf_idd11_cal.xml -s s_nacl.xml
+
+ #. SrRietveld pattern calculation provides more functionalities including
+    
+    * compare the calculated pattern to a given data file;
+
+    Try the complete command as::
+
+      > srr calculatepattern -i i_rapdf_idd11_cal.xml -s s_nacl.xml \
+        -d Data/NaCl_ramp01_10f_200ms_1059.chi \
+        -b backgroundtemp.dat --scale=1.0E-6
+
+    Or::
+
+      > srr calculatepattern --instrument=i_rapdf_idd11_cal.xml --structure=s_nacl.xml \
+        --data=Data/NaCl_ramp01_10f_200ms_1059.chi --background=backgroundtemp.dat \
+        --scale=1.0E-6
+
+    ..image:: figures/f_calculatepattern.png
+
+    The calculated pattern and the real experimental pattern will be plotted against each other.
+    If the magnitude of them are not close enough, the scale factor can be tuned by inputting
+    an appropriate value with option --scale.
+    
+    The --scale factor should not be large, or the calculated pattern may be overflow. 
+
+-----------------------------------------------------
+Refinement on a single measurement ``srr refine``
+-----------------------------------------------------
+It is better to do Rietveld refinement on a single diffraction measurement,
+before starting the sequential refinement. 
+
+Because the starting structure model is at room temperature,
+we pickup the data set *NaCl_ramp01_10f_200ms_1059.chi*, 
+which was measured at room temperature. 
+
+1. Try one of the following commands, which are equivalent to SrRietveld::
+
+     > srr refine -i i_rapdf_idd11_cal.xml -s s_nacl.xml -d Data/NaCl_ramp01_10f_200ms_1059.chi \
+       -b backgrountemp.dat -v refine_1059.proj 
+     > srr refine --instrument=i_rapdf_idd11_cal.xml --structure=s_nacl.xml \
+       --data=Data/NaCl_ramp01_10f_200ms_1059.chi --background=backgrountemp.dat \
+       --saveas=refine_1059.proj
+
+   The refinement will be launched with the convergence strategy defined in SrRietveld. 
+   And the refinement result will be saved in file refine_1059.proj
+   The refinement engine in default is Fullprof. 
+
+   ..image:: figures/f_refineprocess.png
+
+2. If you do not want to use the automatic background selection provided in SrRietveld, 
+   but rather trust the background points selected by yourself,
+   you can add one more option ``-u`` or ``--useinputbackground``::
+
+     > srr refine -i i_rapdf_idd11_cal.xml -s s_nacl.xml -d Data/NaCl_ramp01_10f_200ms_1059.chi \
+       -b backgrountemp.dat -v refine_1059.proj -u
+     > srr refine --instrument=i_rapdf_idd11_cal.xml --structure=s_nacl.xml \
+       --data=Data/NaCl_ramp01_10f_200ms_1059.chi --background=backgrountemp.dat \
+       --saveas=refine_1059.proj --useinputbackground
+
+   The result can be different if you use the background selected by SrRietveld or by yourself. 
+
+3. The default refinement backend is FullProf.  
+   You can specify the refinement backend by option ``--engine`` (``-e``). 
+   The supported engine names are
+
+   * Fullprof
+   * GSAS
+
+   For example, if you want to use GSAS as the refinement backend, the commands can be::
+
+     > srr refine -i i_rapdf_idd11_cal.xml -s s_nacl.xml -d Data/NaCl_ramp01_10f_200ms_1059.chi \
+       -b backgrountemp.dat -v refine_1059.proj -u -e gsas
+     > srr refine --instrument=i_rapdf_idd11_cal.xml --structure=s_nacl.xml \
+       --data=Data/NaCl_ramp01_10f_200ms_1059.chi --background=backgrountemp.dat \
+       --saveas=refine_1059.proj --useinputbackground --engine=gsas
+
+
+---------------------------------------------------------------
+Plotting Pattern From Refinement Result ``srr plotpattern``
+---------------------------------------------------------------
+Script *plotpattern* allows the user to view the calculated diffraction pattern,
+the observed one and the difference between them. 
+
+1. User can view the diffraction pattern of the final result (last round) as::
+
+    > srr plotpattern --project=refine_1059.proj
+    > srr plotpattern -p refine_1059.proj
+
+   ..image:: figures/f_refineplotsingle_best.png
+
+
+2. User can view the diffraction pattern of at a specific step by option ``--step``,
+   such as::
+
+    > srr plotpattern -p refine_1059.proj --step=3
+    > srr plotpattern --project=refine_1059.proj --step=3
+
+  ..image:: figures/f_refineplotsingle_step3.png
+
+
+3. The user can also require the patterns to be plot in d-spacing by option
+   ``--dspacing``. 
+   For example, in this case::
+
+    > srr plotpattern --project=refine_1059.proj --dspacing
+  
+   ..image:: figures/f_refineplotsingle_best_dspacing.png
+
+
+--------------------------------------------------------------------------------
+Viewing Refined Parameter Value From Refinement Result ``srr viewrefineresult``
+--------------------------------------------------------------------------------
+
+User can look up a parameter for its value after refinement by command
+``srr viewrefineresult``. 
+
+1. Example 1: read chi^2::  
+
+     > srr viewrefineresult -p refine_1059.proj --parameter=chi2`
+     > srr viewrefineresult --project=refine_1059.proj --parameter=chi2`
+   
+   ..image:: figures/f_refineresult_chi2.png
+
+#. Example 2: read value of Biso of all atoms::
+
+    > srr viewrefineresult -p refine_1059.proj --parameter=biso
+    > srr viewrefineresult -project=refine_1059.proj --parameter=biso
+
+  These two equivalent commands will give the Biso of both Na and Cl atoms
+  of the step at which the best convergence is made. 
+  
+  ..image:: figures/f_refineresult_step3.png
+
+#. Example 3: Read value of Biso of atom *Na*::
+
+     > srr viewrefineresult -p refine_1059.proj --parameter=biso --atom=Na
+     > srr viewrefineresult -project=refine_1059.proj --parameter=biso --atom=Na
+
+  These will show the parameters' values with uncertainties.  
+  ..image:: figures/f_refineresult_step3.png
+
+
+#. If the user is interested to see how one specific parameters changes 
+   along refinement, he/she can add an option ``--step=all``
+
+
+-----------------------------------------------------------------
+Saving configuration from saved project file ``srr saveconfig``
+-----------------------------------------------------------------
+Script *saveconfig* is multiple purposed to let the user to 
+
+1. extract the information from a refinement project file to a SrRietveld recognizable XML file, 
+   including
+
+   * instrument file
+   * structure file
+
+2. generate the template of SrRietveld recognizable XML file, including
+
+   * instrument file
+   * structure file
+   * ...
+
+After a refinement is completed and saved to a SrRietveld project file,
+user can export the refined crystal structure to a SrRietveld structure file in XML format,
+which can be used as an input for future refinement. 
+
+``> srr saveconfig -p refine_1059.proj -s nacl259.xml``
+
+User can also export the refinement strategy file, 
+such that she/he can modify to the refinement strategy, including sequence of refinement guides,
+to refine the structure model again for better convergence. 
+
+``srr saveconfig -p refine_1059.proj -r refinestrategy_userdefine.xml``
+
+The user can use any text editor or specific XML editor to modify the XML containing
+refinement strategy. 
+
+For example, the user can do further refinement based on the previous refinement result:
+
+``> srr refine -i i_rapdf_idd11_cal.xml -s s_nacl259.xml -d Data/NaCl_ramp01_10f_200ms_1059.chi -b backgrountemp.dat -v refine_1059.proj``
+
+or if with other refinement strategy
+
+``> srr refine -i i_rapdf_idd11_cal.xml -s s_nacl259.xml -d Data/NaCl_ramp01_10f_200ms_1059.chi -b backgrountemp.dat -v refine_1059b.proj -r refinestrategy_userdefine.xml``
+
+
+--------------------------------------------------
+Sequential fitting on a series of measurements
+--------------------------------------------------
+SrRietveld supports sequential refinement on a set of measurements on same material
+but in different environment, for example, temperature or pressure. 
+
+In this tutorial, it is a temperature series.  
+
+Before starting the refinement, the user should have
+
+1. calibrated instrument file: i_rapdf_idd11_cal.xml
+#. proposed structure model file: s_nacl.xml, or s_nacl_X.xml that is exported 
+   from the result of previous refinement, for example refine_1059.proj or refine_1059b.proj
+#. data-environment parameter value list file: NaCl_Info_All.txt
+
+``> srr sequentialfit -i i_radpf_idd11_cal.xml -s s_nacl_02.xml -l Data -f NaCl_Info_All.txt -b backgroundtemp.dat -n T --refinedirection=down --start=295.0 -v seqrefine_nacl.proj``
+
+By this command, SrRietveld will refine all the measurements starting from 295.0 K down to the lowest temperature
+measured int the experiment, while all the data are stored in directory Data.
+The refinement engine in default is Fullprof. 
+
+With additional option, 
+``--engine=gsas`` or ``-e gsas``
+SrRietveld will use GSAS as refinement engine. 
+
+SrRietveld's sequential refinement will save the refinement results in several files and directories. 
+
+In the example just shown, SrRietveld will
+
+1. save all the refinement history and parameter to a single file, seqrefine_nacl.proj.  
+   It will be a large file, but with all information
+#. generate a directory named, seqrefine_nacl
+#. generate a light-weight XML file in directory seqrefine_nacl.   
+   In this XML file, only the information of chi2, Rwp, and crystal structures are saved. 
+#. the project files of refinement on every single measurement.
+   These files will be stored in directory seqrefine_nacl.   
+
+---------------------------------------------------
+View refinement results of sequential refinements
+---------------------------------------------------
+The user will use a different script: srr viewsequentialrefineresult.py (srvsr) to 
+look up the parameters from the result of sequential fitting. 
+
+* ``> srr viewsequentialfitresult -o seqrefine_nacl --parameter=chi2 -p``
+  list chi^2 in all the refinements
+* ``> srr viewsequentialfitresult -o seqrefine_nacl --parameter=biso -p`` 
+  : list Biso of all the atoms in all the refinements
+* ``> srr viewsequentialfitresult -o seqrefine_nacl --parameter=biso --atom=Cl -p`` 
+  : list Biso of atom Cl in all the refinements
+
+The option -p is used to plot the result. 
+
+
+======================================
+Tutorial On X-ray Diffraction Data
+======================================
+The purpose of this example is to familiarize the novice user with the
+SrRietveld basics. 
+
+The goal is to refine a couple of hundreds of measurements on NaCl 
+low resolution X-ray powder diffraction data collected at 
+beamline 11ID-B at at the Advanced Photon Source at Argonne National Laboratory. 
+
+The data files can be 
+
+1. `downloaded <http://dev.danse>`_
+#. copied from diffpy.srrietveld package. 
+
+Select the directory *RAPDF/NaCl*
+
+Inside, you will find 
+
+1. i_rapdf_idd11_cal.xml: the instrument XML file calibrated using Ni data;
+#. s_nacl.xml: the structure of NaCl obtained from the literature;
+#. backgroundtemp.txt:  a background file;
+#. NaCl_Inof_All.txt: 2 column file listing the data file name and their corresponding temperature;
+#. Directory Data/ containing 321 data sets measured at 321 different temperatures. 
+
+
+
+More tutorial can be found in ???
+There are some command scripts files with posfix sh. 
