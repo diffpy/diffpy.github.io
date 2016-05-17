@@ -12,7 +12,7 @@
       <li><a href="{{pathto('products/pdfgetx3')}}">PDFgetX3</a></li>
       <li><a href="{{pathto('products/pdfgui')}}">PDFgui</a></li>
       <li><a href="{{pathto('products/SrMise')}}">SrMise</a></li>
-      <li><a href="{{pathto('products/mPDF')}}">mPDF</a></li>
+      <li><a href="{{pathto('products/magPDF')}}">magPDF</a></li>
       <li><a href="{{pathto('products/pythonpackages')}}">Python Packages</a></li>
   </ul>
 </li>
