@@ -146,9 +146,9 @@ feedback and suggestions.</p>
 <li><code class="docutils literal"><span class="pre">SciPy</span></code> - scientific libraries for Python</li>
 <li><code class="docutils literal"><span class="pre">matplotlib</span></code> - python plotting library</li>
 </ul>
-<p>See the <a class="reference internal" href="SrMiselicense.html"><em>SrMise license</em></a> for terms and conditions of use.
-Detailed installation instructions for the <a class="reference internal" href="#windows-install"><span>Windows</span></a>,
-<a class="reference internal" href="#macosx-install"><span>Mac OS X</span></a>, and <a class="reference internal" href="#linux-install"><span>Linux</span></a>
+<p>See the <a class="reference internal" href="SrMiselicense.html"><span class="doc">SrMise license</span></a> for terms and conditions of use.
+Detailed installation instructions for the <a class="reference internal" href="#windows-install"><span class="std std-ref">Windows</span></a>,
+<a class="reference internal" href="#macosx-install"><span class="std std-ref">Mac OS X</span></a>, and <a class="reference internal" href="#linux-install"><span class="std std-ref">Linux</span></a>
 platforms follow.</p>
 <div class="section" id="windows">
 <span id="windows-install"></span><h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
@@ -181,7 +181,7 @@ is using <code class="docutils literal"><span class="pre">pip</span></code> to d
 command window by running <code class="docutils literal"><span class="pre">cmd</span></code> from the Start Menu&#8217;s application search box
 (Windows 7/8/10) or Run command (Windows Vista and earlier).  Verify that the
 <code class="docutils literal"><span class="pre">pip</span></code> program is installed by running</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
 <p>If this command is not found, download and run
@@ -189,12 +189,12 @@ command window by running <code class="docutils literal"><span class="pre">cmd</
 and setuptools.  For example, if your Windows user name is <code class="docutils literal"><span class="pre">MyName</span></code> and you
 download the file to the desktop, you would run the following from the command
 line:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd C:\Users\MyName\Desktop
-python get-pip.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">MyName</span>\<span class="n">Desktop</span>
+<span class="n">python</span> <span class="n">get</span><span class="o">-</span><span class="n">pip</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Finally, install the latest version of SrMise by running</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install diffpy.srmise
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">srmise</span>
 </pre></div>
 </div>
 </div>
@@ -202,27 +202,27 @@ python get-pip.py
 <span id="macosx-install"></span><h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
 <p>For Mac OS X systems with the MacPorts package manager, the required
 software can be installed with</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port install \
-   python27 py27-setuptools py27-numpy py27-scipy py27-matplotlib
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">install</span> \
+   <span class="n">python27</span> <span class="n">py27</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">py27</span><span class="o">-</span><span class="n">numpy</span> <span class="n">py27</span><span class="o">-</span><span class="n">scipy</span> <span class="n">py27</span><span class="o">-</span><span class="n">matplotlib</span>
 </pre></div>
 </div>
 <p>When installing for MacPorts, make sure the MacPorts bin directory is the first
 in the system PATH and that python27 is selected as the default Python version
 in MacPorts:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port select --set python python27
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">select</span> <span class="o">--</span><span class="nb">set</span> <span class="n">python</span> <span class="n">python27</span>
 </pre></div>
 </div>
 <p>The simplest way to obtain diffpy.srmise on Mac OS X systems
 is using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from
 <a class="reference external" href="https://pypi.python.org">PyPI</a>.</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo pip install diffpy.srmise
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">srmise</span>
 </pre></div>
 </div>
 <p>If you prefer to install from sources, download them from the
 <a class="reference external" href="https://github.com/diffpy/diffpy.srmise/releases">GitHub</a> or
 <a class="reference external" href="https://pypi.python.org/pypi/diffpy.srmise">PyPI</a> pages for SrMise.
 Uncompress them to a directory, and from that directory run</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py install
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>This installs diffpy.srmise for all users in the default system location. If
@@ -234,26 +234,26 @@ directories.</p>
 <span id="linux-install"></span><h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>On Ubuntu and Debian Linux, the required software can easily be installed using
 the system package manager:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
-   python-setuptools python-numpy python-scipy python-matplotlib
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> \
+   <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">python</span><span class="o">-</span><span class="n">numpy</span> <span class="n">python</span><span class="o">-</span><span class="n">scipy</span> <span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span>
 </pre></div>
 </div>
 <p>Similarly, on Fedora:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo yum install python-setuptools numpy scipy python-matplotlib
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">python</span><span class="o">-</span><span class="n">matplotlib</span>
 </pre></div>
 </div>
 <p>For other Linux distributions consult the appropriate package manager.</p>
 <p>The simplest way to obtain diffpy.srmise on Linux systems
 is using <code class="docutils literal"><span class="pre">pip</span></code> to download and install the latest release from
 <a class="reference external" href="https://pypi.python.org">PyPI</a>.</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo pip install diffpy.srmise
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">srmise</span>
 </pre></div>
 </div>
 <p>If you prefer to install from sources, download them from the
 <a class="reference external" href="https://github.com/diffpy/diffpy.srmise/releases">GitHub</a> or
 <a class="reference external" href="https://pypi.python.org/pypi/diffpy.srmise">PyPI</a> pages for SrMise.
 Uncompress them to a directory, and from that directory run</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py install
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>This installs diffpy.srmise for all users in the default system location. If

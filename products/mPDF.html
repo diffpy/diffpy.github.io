@@ -135,7 +135,7 @@ suggestions, and feature requests.</p>
 <li><code class="docutils literal"><span class="pre">diffpy.Structure</span></code> - diffpy package for generating atomic structure</li>
 <li><code class="docutils literal"><span class="pre">diffpy.srreal</span></code> - diffpy package for calculating real-space quantities</li>
 </ul>
-<p>See the <a class="reference internal" href="mPDFlicense.html"><em>mpdf license</em></a> for terms and conditions of use.</p>
+<p>See the <a class="reference internal" href="mPDFlicense.html"><span class="doc">mpdf license</span></a> for terms and conditions of use.</p>
 <div class="section" id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
 <p>The recommended way to install this package is through conda. For help installing conda,
@@ -143,21 +143,21 @@ please visit <a class="reference external" href="https://www.continuum.io/downlo
 Once conda is installed, you can follow the simple steps below to install diffpy.mpdf.
 You will also install the full diffpy-cmi suite along the way.</p>
 <p><em>Step 1: Add the appropriate conda channels to your conda configuration.</em></p>
-<div class="highlight-python"><div class="highlight"><pre>conda config --add channels diffpy
-conda config --add channels benfrandsen
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">diffpy</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">benfrandsen</span>
 </pre></div>
 </div>
 <p>These commands tell conda to look through these channels on the Anaconda cloud server to
 find the appropriate software.</p>
 <p><em>Step 2 (recommended): Create and activate a conda environment for diffpy + diffpy.mpdf.</em></p>
-<div class="highlight-python"><div class="highlight"><pre>conda create --name diffpy python=2.7
-source activate diffpy
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">diffpy</span> <span class="n">python</span><span class="o">=</span><span class="mf">2.7</span>
+<span class="n">source</span> <span class="n">activate</span> <span class="n">diffpy</span>
 </pre></div>
 </div>
 <p>Note that you can name the environment anything you choose by passing it a different name
 after the &#8211;name flag in the first command.</p>
 <p><em>Step 3: Install diffpy.mpdf.</em></p>
-<div class="highlight-python"><div class="highlight"><pre>conda install diffpy.mpdf
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
 </pre></div>
 </div>
 <p>Note that this will also install the full diffpy-cmi suite if it has not already been
@@ -165,7 +165,7 @@ installed in this environment.</p>
 <p><em>Alternative option: Install from the python package index.</em></p>
 <p>If you prefer to use the python package index and have pip installed, please install the
 prerequisite software and then use the command</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install diffpy.mpdf
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
 </pre></div>
 </div>
 <p><em>Alternative option: Download and install from source.</em></p>
@@ -173,7 +173,7 @@ prerequisite software and then use the command</p>
 from <a class="reference external" href="https://pypi.python.org/pypi/diffpy.mpdf">PyPI</a> or
 <a class="reference external" href="https://github.com/benfrandsen/diffpy.mpdf">GitHub</a>, then unzip the file and
 execute the following command from inside the unzipped directory</p>
-<div class="highlight-python"><div class="highlight"><pre>python setup.py install
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>Note that this will only work if all the dependencies are already properly installed.</p>
