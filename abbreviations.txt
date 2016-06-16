@@ -205,3 +205,36 @@
 
 .. |downloadJuhasJac15| image:: /images/pdficon_small.png
    :target: /doc/diffpy-cmi/Juhas-aca-2015.pdf
+
+.. |citeTerbanCgd16| replace::
+   Maxwell W. Terban, Eugene Y. Cheung, Paul Krolikowski,
+   Simon J. L. Billinge,
+   `Recrystallization, phase composition, and local structure of
+   amorphous lactose from the total scattering pair distribution
+   function
+   <http://dx.doi.org/10.1021/acs.cgd.5b01100>`__,
+   *Cryst. Growth Des.* **16**, 210-220 (2016).
+
+.. |citeFrandsenPrl16| replace::
+   Benjamin A. Frandsen, Michela Brunelli, Katharine Page,
+   Yasutomo J. Uemura, Julie B. Staunton, Simon J. L. Billinge,
+   |FrandsenPrl16title|_,
+   *Phys. Rev. Lett.* **116**, 197204 (2016).
+
+.. |FrandsenPrl16title| replace::
+   Verification of Anderson Superexchange in MnO via magnetic pair
+   distribution function analysis and *ab initio* theory
+.. _FrandsenPrl16title: http://link.aps.org/doi/10.1103/PhysRevLett.116.197204
+
+.. FIXME - add page numbers when available after July 2016.
+
+.. |citeJensenNc16| replace::
+   Kirsten M. Ø. Jensen, Pavol Juhás, Marcus A. Tofanelli,
+   Christine L. Heinecke, Gavin Vaughan, Christopher J. Ackerson,
+   Simon J. L. Billinge,
+   |JensenNc16title|_,
+   *Nat. Commun.* **7** (2016)
+
+.. |JensenNc16title| replace::
+   Polymorphism in magic-sized Au\ :sub:`144`\ (SR)\ :sub:`60` clusters
+.. _JensenNc16title: http://dx.doi.org/10.1038/ncomms11859
