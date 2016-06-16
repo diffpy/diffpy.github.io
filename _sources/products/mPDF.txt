@@ -42,7 +42,7 @@ Installation
 The recommended way to install this package is through conda. For help installing conda,
 please visit `https://www.continuum.io/downloads <https://www.continuum.io/downloads>`__.
 Once conda is installed, you can follow the simple steps below to install diffpy.mpdf.
-You will also install the full diffpy-cmi suite along the way. 
+You will also install the full diffpy-cmi suite along the way.
 
 *Step 1: Add the appropriate conda channels to your conda configuration.* ::
 
@@ -59,14 +59,14 @@ find the appropriate software.
 
 Note that you can name the environment anything you choose by passing it a different name
 after the --name flag in the first command.
-    
+
 *Step 3: Install diffpy.mpdf.* ::
 
     conda install diffpy.mpdf
 
 Note that this will also install the full diffpy-cmi suite if it has not already been
 installed in this environment.
-    
+
 *Alternative option: Install from the python package index.*
 
 If you prefer to use the python package index and have pip installed, please install the
