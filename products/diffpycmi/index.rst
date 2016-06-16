@@ -48,7 +48,6 @@ from http://www.continuum.io/downloads.
       conda create --name=py27 python=2.7
       source activate py27
 
-      
 Once Anaconda is ready, DiffPy-CMI can be installed from the "diffpy"
 channel of Anaconda packages as follows ::
 

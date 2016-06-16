@@ -48,7 +48,7 @@ https://www.continuum.io/downloads.
 
       conda create --name=py27 python=2.7
       source activate py27
-      
+
    On Windows use just ``activate py27``.  Make sure that *py27*
    environment is activated in your shell prior to running
    the "install" or "update" commands below.
