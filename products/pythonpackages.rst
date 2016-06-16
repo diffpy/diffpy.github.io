@@ -4,7 +4,7 @@ Python Packages
 This is a complete list of all Python packages developed by the DiffPy
 team. For more information about a specific package, follow the link to
 the corresponding github page. With the exception of PDFfit2, SrMise,
-and magPDF, all of the packages listed below are bundled in the |DiffPyCMI|
+and mPDF, all of the packages listed below are bundled in the |DiffPyCMI|
 release.
 
 ======================      ============================================
@@ -35,7 +35,7 @@ Module                      Description
                             (this is the computational engine used by
                             PDFgui).
 
-`diffpy.magpdf`_            Tools for calculating and refining magnetic
+`diffpy.mpdf`_              Tools for calculating and refining magnetic
                             PDFs.
 ======================      ============================================
 
@@ -53,6 +53,6 @@ Module                      Description
 
 .. _diffpy.pdffit2: https://github.com/diffpy/diffpy.pdffit2
 
-.. _diffpy.magpdf: https://github.com/benfrandsen/diffpy.magpdf
+.. _diffpy.mpdf: https://github.com/benfrandsen/diffpy.magpdf
 
 .. include:: ../abbreviations.txt
