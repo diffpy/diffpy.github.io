@@ -97,17 +97,17 @@ Anaconda or if one needs to install without Internet connection.
 ======================== ================== ============ =====================================
 Name                     Date               Size         Description
 ======================== ================== ============ =====================================
-`diffpy-1.0-r3067.exe`_	 2009-04-10         21.5 M        Windows self extracting installer
-`diffpy-1.0-r3067.tgz`_	 2009-04-10         6.4 M         Linux and Mac tarball
+`diffpy-1.0-r3067.exe`_	 2009-04-10         21.5 M       Windows self extracting installer
+`diffpy-1.0-r3067.tgz`_	 2009-04-10         6.4 M        Linux and Mac tarball
 ======================== ================== ============ =====================================
 
 .. _diffpy-1.0-r3067.exe:
-   https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.exe
+   https://github.com/diffpy/diffpy.pdfgui/releases/download/svn3067/diffpy-1.0-r3067.exe
 .. _diffpy-1.0-r3067.tgz:
-   https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/diffpy-1.0-r3067.tgz
+   https://github.com/diffpy/diffpy.pdfgui/releases/download/svn3067/diffpy-1.0-r3067.tgz
 
-Older installers are archived
-`here <https://googledrive.com/host/0BwRWQI5RTLvCOW9MbG9nR0JoMjQ/download/>`__.
+MD5 check sums for these installer files are available
+`here <https://github.com/diffpy/diffpy.pdfgui/releases/svn3067>`__.
 
 
 Documentation and help
