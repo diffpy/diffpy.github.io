@@ -183,7 +183,7 @@ SOURCEBRANCH = $(shell git symbolic-ref --short HEAD)
 PUBLISHBRANCH = master
 GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
-GITLASTCOMMIT = $(shell git rev-parse HEAD)
+GITLASTCOMMIT = $(shell git --short rev-parse HEAD)
 
 .create-publish-branch:
 	git rev-parse --verify --quiet $(PUBLISHBRANCH) > /dev/null || \
@@ -205,7 +205,7 @@ publish-prepare: .create-publish-branch
 	cd _build/webpage && \
 	    git add --all . && \
 	    git diff --cached --quiet || \
-	    git commit -m "Synchronized with the source at $(GITLASTCOMMIT)."
+	    git commit -m "Sync with the source at $(GITLASTCOMMIT)."
 	cd _build/webpage && \
 	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
 
