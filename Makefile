@@ -183,7 +183,7 @@ SOURCEBRANCH = $(shell git symbolic-ref --short HEAD)
 PUBLISHBRANCH = master
 GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
-GITLASTCOMMIT = $(shell git --short rev-parse HEAD)
+GITLASTCOMMIT = $(shell git rev-parse --short HEAD)
 
 .create-publish-branch:
 	git rev-parse --verify --quiet $(PUBLISHBRANCH) > /dev/null || \
