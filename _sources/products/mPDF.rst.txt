@@ -78,7 +78,7 @@ prerequisite software and then use the command ::
 
 If you prefer to install from source, you can also zip and download the entire package
 from `PyPI <https://pypi.python.org/pypi/diffpy.mpdf>`__ or
-`GitHub <https://github.com/benfrandsen/diffpy.mpdf>`__, then unzip the file and
+`GitHub <https://github.com/benfrandsen/diffpy.magpdf>`__, then unzip the file and
 execute the following command from inside the unzipped directory ::
 
     python setup.py install
