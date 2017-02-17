@@ -98,7 +98,7 @@ at the links below.
 
 .. _diffpy.srreal: ../../doc/srreal/
 
-.. _diffpy.Structure: ../../doc/Structure/
+.. _diffpy.Structure: ../../doc/structure/
 
 .. _diffpy.utils: ../../doc/utils/
 

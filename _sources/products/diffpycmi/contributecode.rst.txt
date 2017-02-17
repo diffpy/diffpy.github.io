@@ -36,7 +36,7 @@ Module                      Description
 
 .. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
 
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.Structure
+.. _diffpy.Structure: https://github.com/diffpy/diffpy.structure
 
 .. _diffpy.utils: https://github.com/diffpy/diffpy.utils
 

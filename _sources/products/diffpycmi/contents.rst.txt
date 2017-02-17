@@ -28,7 +28,7 @@ Libraries developed by the DiffPy team
        valence sums.
 
    * - `diffpy.Structure`_
-     - `doc <../../doc/Structure/>`__
+     - `doc <../../doc/structure/>`__
      - Light-weigth storage of crystal structure data.
 
    * - `diffpy.utils`_
@@ -79,7 +79,7 @@ External libraries
 .. URL definitions below -----------------------------------------------
 
 .. _cxxtest: http://cxxtest.com/
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.Structure
+.. _diffpy.Structure: https://github.com/diffpy/diffpy.structure
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
 .. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
 .. _diffpy.utils: https://github.com/diffpy/diffpy.utils
