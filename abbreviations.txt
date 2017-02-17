@@ -215,6 +215,7 @@
    <http://dx.doi.org/10.1021/acs.cgd.5b01100>`__,
    *Cryst. Growth Des.* **16**, 210-220 (2016).
 
+
 .. |citeFrandsenPrl16| replace::
    Benjamin A. Frandsen, Michela Brunelli, Katharine Page,
    Yasutomo J. Uemura, Julie B. Staunton, Simon J. L. Billinge,
@@ -226,14 +227,13 @@
    distribution function analysis and *ab initio* theory
 .. _FrandsenPrl16title: http://link.aps.org/doi/10.1103/PhysRevLett.116.197204
 
-.. FIXME - add page numbers when available after July 2016.
 
 .. |citeJensenNc16| replace::
    Kirsten M. Ø. Jensen, Pavol Juhás, Marcus A. Tofanelli,
    Christine L. Heinecke, Gavin Vaughan, Christopher J. Ackerson,
    Simon J. L. Billinge,
    |JensenNc16title|_,
-   *Nat. Commun.* **7** (2016)
+   *Nat. Commun.* **7**, 11859 (2016)
 
 .. |JensenNc16title| replace::
    Polymorphism in magic-sized Au\ :sub:`144`\ (SR)\ :sub:`60` clusters
