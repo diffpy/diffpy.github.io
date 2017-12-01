@@ -37,6 +37,11 @@ Module                      Description
 
 `diffpy.mpdf`_              Tools for calculating and refining magnetic
                             PDFs.
+
+
+`diffpy.mappdf`_            Tools for High Throughput data fitting and
+                            visualization.
+
 ======================      ============================================
 
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
@@ -54,5 +59,7 @@ Module                      Description
 .. _diffpy.pdffit2: https://github.com/diffpy/diffpy.pdffit2
 
 .. _diffpy.mpdf: https://github.com/benfrandsen/diffpy.magpdf
+
+.. _diffpy.mappdf: https://github.com/diffpy/mappdf
 
 .. include:: ../abbreviations.txt
