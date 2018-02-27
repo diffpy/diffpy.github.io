@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Release Notes &#8212; PDFgetX3 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The plotdata program" href="plotdata.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plotdata.html" title="The plotdata program"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="release-notes">
+<span id="index-0"></span><h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pdfgetx3-version-1-2">
+<h2>PDFgetX3 version 1.2<a class="headerlink" href="#pdfgetx3-version-1-2" title="Permalink to this headline">¶</a></h2>
+<p>Sources were updated to support Python 3.4, 3.5, 3.6 in addition
+to Python 2.6 and 2.7.</p>
+<p>The egg software package was enhanced to support all Python
+versions.  PDFgetX3 is now distributed in a single egg file
+rather than in multiple eggs per each Python version.</p>
+<p>Added support for <a class="reference external" href="http://ipython.org">IPython 5.0</a> with
+continued compatibility for IPython 0.10 and later.</p>
+<p>Added support for <a class="reference external" href="https://matplotlib.org">matplotlib 2.0</a>.</p>
+<p>Changed <a class="reference internal" href="quick-start.html#cmd-pdfgetx3"><span class="std std-ref">pdfgetx3</span></a> option
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-force"><code class="xref std std-option docutils literal"><span class="pre">--force</span></code></a> to take
+a boolean value (“yes”, “no”, “true”, etc.) or “once”.
+The configuration parameter <a class="reference internal" href="options.html#confval-force"><code class="xref std std-confval docutils literal"><span class="pre">force</span></code></a> can be
+set to a bool or to a string <code class="docutils literal"><span class="pre">'once'</span></code>.  This enables
+safe one-time overwrite of existing output files.</p>
+<p>The <a class="reference internal" href="plotdata.html#cmd-plotdata"><span class="std std-ref">plotdata</span></a> program learned a new option
+<a class="reference internal" href="plotdata.html#cmdoption-plotdata-log"><code class="xref std std-option docutils literal"><span class="pre">--log=LOG</span></code></a> to set logarithmic scale
+for <em>x</em> or <em>y</em> axis.  The <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a> function added a new
+<em>log</em> argument for the same purpose.</p>
+<p>Added <em>ax</em> argument for the <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a> function to select
+a specific matplotlib axis for plotting.</p>
+<p>Removed <em>hold</em> argument from the <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a> function,
+because it was deprecated in matplotlib.</p>
+<p>Added support for Unicode filenames and values in
+the <a class="reference internal" href="interact.html#interactvar-config"><code class="xref std std-interactvar docutils literal"><span class="pre">config</span></code></a> interactive variable.</p>
+<p>Updated plotting code to use the Unicode “Å” (Ångström) symbol in
+axes labels.  The “Å” symbol is also used to denote units in output
+files.</p>
+<p>The parser of chemical formulas learned to read parentheses
+and fractional stoichiometry as in <code class="docutils literal"><span class="pre">'Pb</span> <span class="pre">(Ti</span> <span class="pre">Zr)1/2</span> <span class="pre">O3'</span></code>.</p>
+<p>The <a class="reference internal" href="interact.html#diffpy.pdfgetx.loadData" title="diffpy.pdfgetx.loadData"><code class="xref py py-func docutils literal"><span class="pre">loadData()</span></code></a> argument <em>usecols</em> was updated to accept scalars,
+open-end <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#slice" title="(in Python v3.6)"><code class="xref py py-class docutils literal"><span class="pre">slice</span></code></a> objects and string-specified
+slices, such as <code class="docutils literal"><span class="pre">'1:3'</span></code> or <code class="docutils literal"><span class="pre">'1:'</span></code>.</p>
+<p>The <a class="reference internal" href="plotdata.html#cmd-plotdata"><span class="std std-ref">plotdata</span></a> program and <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a>
+function learned to take open-end slices for the y-columns
+selection.  The plotdata utilities dropped support for
+multiple x-columns.</p>
+<p>The <a class="reference internal" href="quick-start.html#cmd-pdfgetx3"><span class="std std-ref">pdfgetx3</span></a> program learned to
+avoid duplicate extension “.gr.gr” when run with
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-o"><code class="xref std std-option docutils literal"><span class="pre">--output=f.gr</span></code></a>.</p>
+<p>Fixed crash on loading custom configuration section,
+which is missing in global configuration file, but
+is present in the local one.</p>
+<p>Removed import of all <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy" title="(in NumPy v1.14)"><code class="xref py py-mod docutils literal"><span class="pre">numpy</span></code></a> names into the
+interactive session.  NumPy is available under the
+<code class="docutils literal"><span class="pre">np</span></code> name instead.</p>
+<p>Corrected missing checkbox in the <a class="reference internal" href="interact.html#_interactive_.tuneconfig" title="_interactive_.tuneconfig"><code class="xref any py py-func docutils literal"><span class="pre">tuneconfig</span></code></a>
+dialog, which was caused by a bug in matplotlib.</p>
+<p>Added explanatory message for PDFgetX3 installed for
+an incompatible Python version.</p>
+<p>The IPython magic function <a class="reference internal" href="install.html#my-pdfgetx3-magic"><span class="std std-ref">%pdfgetx3</span></a>
+was changed to set <code class="docutils literal"><span class="pre">_exit_code</span></code> as do the shell commands
+run from IPython.</p>
+<p>Inline documentation adopted NumPy-style Napoleon format,
+which is human readable and can be included in the manual.</p>
+<p>The software package files and documentation were updated
+to build in a binary reproducible way.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#pdfgetx3-version-1-2">PDFgetX3 version 1.2</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="plotdata.html"
+                        title="previous chapter">The plotdata program</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="plotdata.html" title="The plotdata program"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>

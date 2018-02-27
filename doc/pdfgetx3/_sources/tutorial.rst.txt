@@ -56,26 +56,25 @@ option, to show more details about the program actions. ::
 
    $ pdfgetx3 --verbose=info ni300mesh_300k_nor_1-5.chi
 
-   INFO:log level set to 20
    INFO:checking for environment variable PDFGETX3PATH
    INFO:searching for default config file /home/user/.pdfgetx3.cfg
    INFO:searching for default config file .pdfgetx3.cfg
    INFO:searching for default config file pdfgetx3.cfg
    INFO:loaded default config file pdfgetx3.cfg
    INFO:parsing config file section [DEFAULT]
-   INFO:set config.rmin = 0.0
-   INFO:set config.rstep = 0.01
-   INFO:set config.rmax = 30.0
-   INFO:set config.qmax = 26.0
-   INFO:set config.outputtypes = ['gr']
-   INFO:set config.dataformat = 'twotheta'
+   INFO:set config.dataformat = twotheta
+   INFO:set config.backgroundfile = kapton_bgrd_300k_nor_2-3.chi
+   INFO:set config.outputtypes = gr
+   INFO:set config.wavelength = 0.142774
+   INFO:set config.composition = Ni
    INFO:set config.qmaxinst = 26.5
-   INFO:set config.backgroundfile = 'kapton_bgrd_300k_nor_2-3.chi'
-   INFO:set config.wavelength = 0.14277400000000001
-   INFO:set config.composition = 'Ni'
+   INFO:set config.qmax = 26.0
+   INFO:set config.rmin = 0.0
+   INFO:set config.rmax = 30.0
+   INFO:set config.rstep = 0.01
    INFO:finished parsing config file
    INFO:processing command line options
-   INFO:set config.verbose = 'info'
+   INFO:set config.verbose = info
    INFO:finished with command line options
    INFO:using 1 input files from the command line.
    INFO:configuring PDFGetter mode 'xray'
@@ -84,8 +83,8 @@ option, to show more details about the program actions. ::
    INFO:processing 'ni300mesh_300k_nor_1-5.chi'
    INFO:resolved output file '' as 'ni300mesh_300k_nor_1-5.gr'
    WARNING:ni300mesh_300k_nor_1-5.gr already exists.
-   WARNING:Use "--force" to overwrite.
-   INFO:elapsed time: 0.13
+   WARNING:Use "--force=yes" or "--force=once" to overwrite.
+   INFO:elapsed time: 0.08
 
 Here we can see what configuration files are searched, which of them
 get loaded and what are the effective values of the processing
@@ -93,8 +92,8 @@ parameters.  Unless the :option:`!--verbose` option is in effect, the
 program will show only messages that have either WARNING or ERROR
 importance.  The warning line above indicates no output has been
 written, because that file already exists.  This safety check can be
-overruled with the :option:`--force` option, upon which pdfgetx3 would
-overwrite any existing files.
+overruled with the :option:`--force=yes <--force>` option, upon
+which pdfgetx3 would overwrite any existing files.
 
 PDFgetX3 output files start with a header that lists all the processing
 parameters and can be used as a valid configuration file with the
@@ -109,28 +108,27 @@ listed in the gr file that is now used as a custom configuration::
 
    $ pdfgetx3 -c ni300mesh_300k_nor_1-5.gr --plot=fq,gr
 
-   Welcome to pylab, a matplotlib-based Python environment [backend: GTKAgg].
-   For more information, type 'help(pylab)'.
    WARNING:ni300mesh_300k_nor_1-5.gr already exists.
-   WARNING:Use "--force" to overwrite.
+   WARNING:Use "--force=yes" or "--force=once" to overwrite.
 
    Variables related to PDF processing:
 
    pdfgetter    -- PDFGetter used for calculation.
    config       -- configuration data used by PDFGetter.
                    See config.inputfiles for a list of inputs.
-   iraw         -- matrix of input raw intensities, 2 rows per file
+   iraw         -- matrix of input raw intensities with 2 rows per file.
    iq sq fq gr  -- intermediate results per each input file stored
-                   as matrix rows
+                   as matrix rows.
 
    Functions:
 
-   tuneconfig   -- dynamically tune configuration variable
-   processFiles -- process specified data files
+   tuneconfig   -- dynamically tune configuration variables.
+   processFiles -- process specified data files.
    clearSession -- clear all elements from the inputfiles, iraw,
-                  iq, sq, fq and gr variables.
-   plotdata     -- plot all or selected columns from a text data file
-   loadData     -- load all or selected columns from a text data file
+                   iq, sq, fq and gr variables.
+   plotdata     -- plot all or selected columns from a text data file.
+   loadData     -- load all or selected columns from a text data file.
+   findfiles    -- search for files matching the specified patterns.
 
    Use "%pdfgetx3" for a fresh run without exiting IPython.
    In [1]:
@@ -145,9 +143,10 @@ enters an IPython session.
 The IPython environment is preloaded with several extra functions
 and variables related to the PDF processing.  For example, the
 :interactvar:`config` variable stores all the configuration parameters,
-and its content can be displayed with the ``print`` statement as ::
+and its content can be displayed with the :py:func:`print`
+function as ::
 
-   In [1]: print config
+   In [1]: print(config)
 
    args = ['-c', 'ni300mesh_300k_nor_1-5.gr', '--plot=fq,gr']
    configfile = ni300mesh_300k_nor_1-5.gr
@@ -155,7 +154,7 @@ and its content can be displayed with the ``print`` statement as ::
    qmax = 26.0
    ...
 
-The :py:func:`processFiles` function allows to redo the
+The :py:func:`.processFiles` function allows to redo the
 whole calculation and plotting process for additional input files or
 for new parameter values.  To plot the |FQ| and |Gr|
 curves calculated at |Qmax| = 22 |Ainv|, we can call
@@ -194,6 +193,7 @@ X-ray wavelength was 0.142774 Å, which can be passed with the
 :option:`-w, --wavelength <-w>` option::
 
    $ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774
+
    ...
    ERROR:Configuration error: Chemical composition not known.
    ERROR:See "--help" for more hints.
@@ -202,7 +202,7 @@ There is still an error.  The PDF calculation needs an average
 X-ray scattering factor of the material, which is obtained from
 sample chemical composition.  The composition can be specified
 with the :option:`--composition` option.  The example
-below uses a "\\" character to indicate the command continues
+below uses a "\\\\" character to indicate the command continues
 on the next line.  Such syntax works in Unix terminals, but
 on Windows the command has to be typed all on a single line::
 
@@ -210,6 +210,7 @@ on Windows the command has to be typed all on a single line::
               --composition=Ni
 
    WARNING:Nothing to do, use "-t" or "--plot" options.
+   ...
 
 There was no error message this time, but the program complains
 about a lack of action.  The pdfgetx3 program does not write any results
@@ -245,9 +246,11 @@ The interactive session is setup with
 :interactvar:`fq`, :interactvar:`gr`
 variables for the original raw data and intermediate results.  We
 are going to plot the "iq" variable that has the input intensities
-resampled on the *Q* grid.  The ``clf()`` function clears the figure,
+resampled on the *Q* grid.  The matplotlib function
+:py:func:`~matplotlib.pyplot.clf` clears the figure,
 the iq variable is a two-row matrix with *Q* and *I* rows, and the
-``axis()`` function let's us zoom to a given range::
+:py:func:`~matplotlib.pyplot.axis`
+function lets us zoom to a given range::
 
    In [1]: clf()
    In [2]: plot(iq[0], iq[1])
@@ -264,9 +267,7 @@ it to 26.5 |Ainv| ::
    WARNING:qmax reset to the data boundary qmaxinst=26.5
 
 The updated curves looks reasonable without any oscillations and
-breakpoints.  The
-:py:func:`tuneconfig()`
-function provides a
+breakpoints.  The :py:func:`.tuneconfig` function provides a
 GUI-driven way for visualizing the processing parameters and their
 effect on the results.  Type ``tuneconfig()`` to execute the function,
 which should open a new window with several sliders.  Try to move
@@ -293,10 +294,10 @@ files need to be entered as command line arguments to the pdfgetx3
 program.  This is usually no problem with Unix-like shells, which
 expand filename patterns to a list of matching files.
 However, such file generation is in general not available on Windows.
-The input file names tend to include scan number that may run in
-thousands, and even Unix most shells do not have an easy facility
-(the `z-shell <http://www.zsh.org/>`_ being a notable exception)
-for matching a range of scan numbers.
+The input file names tend to include scan numbers which are useful
+for selecting desired data, yet even with Unix shells it is
+difficult to match a range of scan numbers
+(`z-shell <http://www.zsh.org/>`_ being a notable exception).
 
 .. _my-findexamples:
 
@@ -332,7 +333,7 @@ Without any patterns the file search matches all files in the current
 directory.  Now let's try to add name patterns.  There are few special
 patterns, for example ``^`` matches at the beginning of the filename,
 ``$`` at the end and ``<N-M>`` matches a range of integer values from
-*N* to *M*.  The patterns containing ``"^$<>"`` need to be quoted as
+*N* to *M*.  The patterns containing ``^$<>`` need to be quoted as
 these characters have special meaning in the shell.  Here are some
 examples how it works.
 
@@ -343,7 +344,8 @@ Filenames containing "y"::
    plotpdfcomparison.py
 
 Filenames that containing both "y" and "chi", here we use the
-abbreviated forms :option:`!-l` and :option:`!-f`::
+options :option:`!--list` and :option:`!--find` in an abbreviated
+form :option:`!-l` and :option:`!-f`::
 
    $ pdfgetx3 -lf y chi
    empty_capillary-00032.chi
@@ -359,7 +361,7 @@ Filenames that contain *character* "2"::
    Pt_bulk-00055-pdfgetx2.gr
    empty_capillary-00032.chi
 
-Filenames that contain *number* "2"::
+Filenames that contain *numeric value* "2"::
 
    $ pdfgetx3 -lf "<2>"
    Pt_bulk-00055-pdfgetx2.gr
@@ -427,11 +429,11 @@ Interactive tuning of parameters
 One of the most powerful features of PDFgetX3 is the ability to tune
 PDF processing parameters in an interactive mode and immediately
 visualize their effect on the results.  To demonstrate this feature,
-navigate to the :file:`examples/Ni` directory in the shall and process
+navigate to the :file:`examples/Ni` directory in the shell and process
 the nickel PDF while plotting the |FQ| and |Gr| curves.
 Because of plotting the program will open an interactive IPython
 session.  The tuning mode can be then entered by calling the
-:py:func:`tuneconfig()`
+:py:func:`.tuneconfig`
 function from the IPython environment ::
 
    $ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
@@ -439,7 +441,7 @@ function from the IPython environment ::
    In [1]: tuneconfig()
 
 The
-:py:func:`!tuneconfig()`
+:py:func:`!tuneconfig`
 function will by default add a second set of live lines
 for the plotted curves and open a GUI dialog with sliders for the
 tunable process parameters.  Changing any slider would immediately
@@ -457,18 +459,18 @@ thus there would be no slider for the :confval:`bgscale` parameter
 if PDF has been processed without any background data.
 
 By default the
-:py:func:`!tuneconfig()`
+:py:func:`!tuneconfig`
 function displays the same curves as
 specified by the :option:`--plot <-p>` option, however it can be
 configured to show arbitrary intermediate results or even visualize
 selected steps in the PDF processing.  We shall demonstrate this by
 showing a live-plot of the polynomial correction together with the final
-PDF.  At first, we shall use the :py:func:`!describe()` method of the
-:py:func:`pdfgetter` object to print out the chain of
+PDF.  At first, we shall use the :py:meth:`!describe` method of the
+:py:func:`.pdfgetter` object to print out the chain of
 transformations involved in the PDF processing and obtain a reference to
-the transformation object `t4` that applies the polynomial correction.
+the transformation object *t4* that applies the polynomial correction.
 The transformation object can be then included in a list of plot
-identifiers that are passed to the :py:func:`!tuneconfig()` function ::
+identifiers that are passed to the :py:func:`!tuneconfig` function ::
 
    $ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
    ...
@@ -495,7 +497,8 @@ identifiers that are passed to the :py:func:`!tuneconfig()` function ::
    In [3]: t4 = pdfgetter.getTransformation(4)
    In [4]: tuneconfig([t4, 'gr'])
 
-The ``clf()`` function used above clears the figure to remove the initial
+The :py:func:`!clf` function used above
+clears the figure to remove the initial
 |FQ| line from the first panel.  Overall, this should display the
 following plot:
 
@@ -510,7 +513,7 @@ object, for example::
 
 Finally, to save the new results, we shall first confirm
 :confval:`outputtypes` have been correctly set and then use the
-:py:func:`processFiles` function to redo the calculations, plots and
+:py:func:`.processFiles` function to redo the calculations, plots and
 data output for the updated configuration.  Note that the
 :py:func:`!processFiles` function accepts keyword arguments for
 configuration parameters.  This is used at line ``In [8]`` to
@@ -521,7 +524,7 @@ for an extra ``config.force = True`` statement. ::
    Out[6]: ['gr']
    In [7]: processFiles()
    WARNING:ni300mesh_300k_nor_1-5.gr already exists.
-   WARNING:Use "--force" to overwrite.
+   WARNING:Use "--force=yes" or "--force=once" to overwrite.
    In [8]: processFiles(force=True)
 
 :file:`ni300mesh_300k_nor_1-5.gr` was successfully saved at an

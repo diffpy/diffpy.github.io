@@ -65,24 +65,24 @@ Program operation
    The input files are searched in the current and :confval:`!datapath`
    directories.  The file search stops at the first directory that
    contains any matching files.  The search patterns are interpreted
-   as fixed strings all of which must be present in the matching file
+   as fixed strings, all of which must be present in the matching file
    name.  The syntax supports several special patterns:
 
    .. tabularcolumns:: |l|p{0.75\textwidth}|
 
    +---------+------------------------------------------------------------+
-   | ^       | match at the beginning of the string, i.e., `^start`       |
-   |         | matches only filenames that start with `start`.            |
+   | ^       | match at the beginning of the string, i.e., ``^start``     |
+   |         | matches only filenames that start with "start".            |
    +---------+------------------------------------------------------------+
-   | $       | match the end of string, for example, `.chi$` matches file |
-   |         | names that end with `.chi`.                                |
+   | $       | match the end of string, for example, ``.chi$`` matches    |
+   |         | file names that end with ".chi".                           |
    +---------+------------------------------------------------------------+
-   | <N>     | match number N preceded by any number of leading zeros,    |
-   |         | e.g., `<7>` would match in f7.chi, f007.chi, but not in    |
-   |         | f77.chi                                                    |
+   | <N>     | match number *N* preceded by any number of leading zeros,  |
+   |         | e.g., ``<7>`` would match in "f7.chi", "f007.chi", but not |
+   |         | in "f77.chi".                                              |
    +---------+------------------------------------------------------------+
-   | <N-M>   | match an integer range from N to M inclusive.  The matched |
-   |         | number may have one or more leading zeros.                 |
+   | <N-M>   | match an integer range from *N* to *M* inclusive.          |
+   |         | The matched number may have one or more leading zeros.     |
    +---------+------------------------------------------------------------+
    | <7->    | match number 7 or larger.                                  |
    +---------+------------------------------------------------------------+
@@ -91,9 +91,9 @@ Program operation
    | <->     | match any integer number.                                  |
    +---------+------------------------------------------------------------+
 
-   The `"^$<>"` characters are often special to the Unix or Windows
+   The ``^$<>`` characters are often special to the Unix or Windows
    command shells, therefore they need to be enclosed in double
-   quotes (") when used on the command line.
+   quotes (\\") when used on the command line.
 
    See also :confval:`datapath`, :envvar:`PDFGETX3PATH` and
    :ref:`tutorial examples <my-findexamples>`.
@@ -111,7 +111,7 @@ Configuration file options
 .. option:: -c CONFIG, --config=CONFIG
 
    Read custom configuration file after loading the default ones.
-   Do not load any configuration file when `NONE`.
+   Do not load any configuration file when "NONE".
 
 .. option:: -s NAME, --section=NAME
 
@@ -145,7 +145,7 @@ Input and output options
    Format of input files.  Available formats are: ``twotheta``, ``QA``,
    ``Qnm`` corresponding to a two-column text data where the first
    column is either the scattering angle |twotheta| in degrees, *Q* in
-   inverse Ångströms or *Q* in inverse nanometers.
+   inverse ångströms or *Q* in inverse nanometers.
 
 .. confval:: backgroundfile
 .. option:: -b FILE, --background=FILE
@@ -189,10 +189,10 @@ Input and output options
    @o       gr                  the output extension iq, sq, fq or gr
    =====    ==================  =======================================
 
-   An empty value works the same as `@b.@o` and saves the data
+   An empty value works the same as "@b.@o" and saves the data
    in the current directory with a proper extension for the
-   saved results.  When `@o` is not present in OUTPUT, it would
-   be appended as a default filename extension.
+   saved results.  When "@o" is not present in the OUTPUT, it is
+   appended as a default filename extension.
 
 .. confval:: outputtypes
 .. option:: -t TYPES, --outputtypes=TYPES
@@ -205,15 +205,16 @@ Input and output options
    Result files are not written when empty, "none" or "NONE".
 
 .. confval:: force
-.. option:: --force
+.. option:: --force=FORCE
 
    Overwrite existing output files.  By default the output
    files are not written if they already exist.  Possible values
-   in a configuration file are "true", "yes", "1" or
-   "false", "no", "0".  Note that in an interactive mode the
-   values assigned to ``config.force`` must be Python booleans, e.g.,
-   ``True``, ``False``, ``1``, ``0``.  The "yes" and "no" strings
-   are only meaningful in the configuration file.
+   in a configuration file are "true", "yes", "on", "1" or
+   "false", "no", "off", "0" or "once".  The special value "once"
+   permits one overwrite and then resets ``config.force`` to
+   ``False``.  Note that in interactive mode the values assigned
+   to ``config.force`` are converted to Python :py:class:`bool`
+   unless equal to "once".
 
 
 .. _my-pdfparameters:
@@ -235,7 +236,7 @@ PDF parameters
 .. confval:: wavelength
 .. option:: -w FLOAT, --wavelength=FLOAT
 
-   X-ray wavelength in Ångströms.  This value is required
+   X-ray wavelength in ångströms.  This value is required
    for the "twotheta" dataformat in order to convert the scattering
    angles |twotheta| to a momentum transfer *Q*.  For other data formats
    the wavelength is not necessary and may be left undefined.
@@ -244,11 +245,12 @@ PDF parameters
 .. option:: --composition=STRING
 
    Chemical composition of the sample.  Supported formats are
-   "PbTi0.5Zr0.5O3", "Pb 1 Ti 0.5 Zr 0.5 O 3" or "CH3 CH2 OH".
+   "PbTi0.5Zr0.5O3", "Pb 1 Ti 1/2 Zr 1/2 O 3" or "CH3 (CH2)3 OH".
    Space characters are ignored, unit counts can be omitted, but it is
    important to use a proper upper and lower case in atom symbols.
    Elements can appear several times in the formula, e.g., "CH3 CH3",
-   but parenthesis are not supported.
+   and the formula may contain parentheses or fractional
+   stoichiometries.
 
 .. confval:: bgscale
 .. option:: --bgscale=FLOAT
@@ -270,7 +272,7 @@ PDF parameters
 .. option:: --qmaxinst
 
    The *Q* cutoff for the meaningful input intensities in inverse
-   Ångströms.  Some data files may contain trailing zeros
+   ångströms.  Some data files may contain trailing zeros
    or unreliable intensities at the upper bound of the detector range.
    The :confval:`!qmaxinst` defines a threshold for unreliable data.
    The parameter is also used as an upper boundary for the polynomial
@@ -280,29 +282,29 @@ PDF parameters
 .. option:: --qmin
 
   The lower *Q*-limit for the Fourier transformation of the |FQ| curve
-  in inverse Ångströms.
+  in inverse ångströms.
 
 .. confval:: qmax
 .. option:: --qmax
 
   The upper *Q*-limit for the Fourier transformation of the |FQ| curve
-  in inverse Ångströms.  This is essentially a limit, where sample
+  in inverse ångströms.  This is essentially a limit, where sample
   signal decays to the level of data noise.
 
 .. confval:: rmin
 .. option:: --rmin=FLOAT
 
-   Lower bound of the *r*-grid for the calculated PDF in Ångströms.
+   Lower bound of the *r*-grid for the calculated PDF in ångströms.
 
 .. confval:: rmax
 .. option:: --rmax=FLOAT
 
-   Upper bound of the *r*-grid for the calculated PDF in Ångströms.
+   Upper bound of the *r*-grid for the calculated PDF in ångströms.
 
 .. confval:: rstep
 .. option:: --rstep=FLOAT
 
-   Spacing of the *r*-grid for the calculated PDF in Ångströms.
+   Spacing of the *r*-grid for the calculated PDF in ångströms.
 
 
 Other parameters
@@ -328,7 +330,7 @@ Other parameters
 .. option:: --verbose=VALUE
 
    Level of detail for the program to report about its actions.
-   Possible values are `error`, `warning`, `info`, `debug`, `all` or an
+   Possible values are "error", "warning", "info", "debug", "all" or an
    integer number from 0 to 5.  Messages are completely suppressed when
    0, all messages are printed when verbose is 5 ("all") or higher.
    This option is useful for diagnostics of any unexpected behavior

@@ -46,7 +46,7 @@ Input files
 
 PDFgetX3 accepts input powder diffraction data in the form of two-column
 text file, where the first column x is either the scattering angle
-twotheta in degrees, momentum transfer *Q* in inverse nanometers or *Q*
+|twotheta| in degrees, momentum transfer *Q* in inverse nanometers or *Q*
 in inverse ångströms.  The second column y contains the corresponding
 scattered intensities normalized per unit solid angle.  The actual type
 of the x-values is identified by the :confval:`dataformat` parameter.
@@ -94,11 +94,11 @@ PDFgetX3 can produce up to four different output data files:
   separation *r* in ångströms and the second is the function *G* in
   Å\ :sup:`-2`.
 
-You can choose which files to output either in the configuration file
-via the :confval:`outputtypes` parameter, or at the command line with
-the :option:`-t, --outputtypes <-t>` option.
+You can specify what output files should be produced by setting the
+:confval:`outputtypes` parameter in the configuration file or by
+passing the :option:`-t, --outputtypes <-t>` on the command line.
 
 The header of all output files contains the parameter values that were
 used in the calculation and thus it is by itself a valid configuration
 file.  When passed as an argument to the :option:`--config <-c>` option,
-the PDFgetX3 will exactly reproduce the previous calculation.
+the PDFgetX3 will reproduce the previous calculation.

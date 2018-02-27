@@ -1,4 +1,5 @@
 .. index:: pdfgetx3 (program)
+.. _cmd-pdfgetx3:
 
 Quick-start guide
 ========================================================================
@@ -71,7 +72,7 @@ of them are critical for the PDF calculation:
 * :confval:`dataformat` -- specifies the input data format
 
 * :confval:`wavelength` -- radiation wavelength in Å required for the
-  twotheta format.
+  "twotheta" format.
 
 * :confval:`composition` -- chemical composition of the sample
 

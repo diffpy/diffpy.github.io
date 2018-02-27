@@ -6,27 +6,27 @@ Software requirements
 ------------------------------------------------------------------------
 
 PDFgetX3 has been written in Python programming language, therefore
-to use the software, you must have Python 2.6 or
-Python 2.7 installed. [#fpy3]_
-In addition, the following third-party Python libraries are
-also required:
+to use the software, you must have Python 3.6, 3.5, 3.4, 2.7 or 2.6
+installed.  In addition, the following third-party Python libraries
+are also required:
 
 * setuptools - tools for installing Python packages
+* six - Python 2 and 3 compatibility library
 * NumPy - library for scientific computing with Python
 * matplotlib - Python plotting library
 * IPython - enhanced interactive Python shell
-* PyReadline - required for a full IPython functionality on Windows
 
 Standard Python releases can be obtained from
-https://www.python.org/download/.
+https://www.python.org/downloads.
 The third-party libraries can be found at the
 `Python Package Index <https://pypi.python.org/pypi>`_
 or using any Internet search engine.
 
-Another, more convenient option is to obtain science-oriented Python
-distributions, such as `PythonXY <https://code.google.com/p/pythonxy/>`_,
+Another more convenient option is to obtain one of the science-oriented
+Python distributions such as
+`Anaconda Python <https://www.anaconda.com/download>`_,
 `Enthought Canopy <https://www.enthought.com/>`_ or
-`Anaconda Python <https://store.continuum.io/cshop/anaconda/>`_.
+`PythonXY <http://python-xy.github.io/>`_,
 These distributions already include all the necessary libraries, so the
 required Python software can be all installed in one step.
 
@@ -36,7 +36,7 @@ Ubuntu Linux computer the software dependencies can be all installed
 with a single shell command ::
 
   sudo apt-get install \
-    python-setuptools python-numpy python-matplotlib ipython
+    python3-six python3-setuptools python3-numpy python3-matplotlib ipython3
 
 This may be, of course, just as well accomplished using the GUI
 driven Synaptic package manager.  Other Linux
@@ -45,8 +45,8 @@ but the names of the necessary packages should be very similar
 to those above.
 
 On Windows operating system, it may be necessary to add the
-``C:\Python27`` directory and the scripts directory
-``C:\Python27\Scripts`` to the system :envvar:`!PATH`.
+``C:\Python35`` directory and the scripts directory
+``C:\Python35\Scripts`` to the system :envvar:`!PATH`.
 Some Python distributions may already do that as a part of their
 installation process.  The easiest way to check is to start the
 :program:`Command Prompt`, type there ``python`` and see if this
@@ -63,16 +63,15 @@ place, start the command prompt on Windows or a Unix terminal on Linux
 or Mac, navigate to the directory that contains the egg file and
 execute the following command::
 
-  easy_install diffpy.pdfgetx-VERSION-pyX.Y.egg
+  python -m easy_install ./diffpy.pdfgetx-VERSION.egg
 
-Here VERSION needs to be replaced to match the actual filename,
-and X.Y is the Python version, for example 2.7.  It is critical to
-use the correct egg file for your Python version as the program
-would not work otherwise.  On Linux and Mac operating systems the
-installation may need to run with root user privileges, for example, by
-prepending ``sudo`` to the command line above.
+Here VERSION needs to be replaced to match the actual filename.
+It is critical to use one of the supported Python versions otherwise
+the program would not work.  On Linux and Mac operating systems the
+installation may need to run with root user privileges, for example,
+by prepending ``sudo`` to the command line above.
 If root access is not available, use the
-easy_install options :option:`!--prefix` or
+easy_install options :option:`!--user`, :option:`!--prefix` or
 :option:`!--install-dir` to install PDFgetX3 to a user-writable
 directory.
 
@@ -88,12 +87,15 @@ command for an easy plotting of text data files.  To verify
 if plotdata works, run the ``plotdata --version`` command.
 
 
+.. index:: %pdfgetx3 IPython magic
+.. _my-pdfgetx3-magic:
+
 IPython magic command
 ------------------------------------------------------------------------
 
 These instructions are intended for IPython users who would like to
 integrate PDFgetX3 into their IPython environment.  If you don't plan
-to use IPython, you can safely ignore this section.
+to use IPython in such way, you can safely skip this section.
 
 When pdfgetx3 is run in an interactive mode, it starts IPython
 interactive shell and defines an extra ``%pdfgetx3``
@@ -106,17 +108,14 @@ preserving all plots or variables that were already created
 within the IPython session.
 
 The ``%pdfgetx3`` magic command can be defined permanently so it is
-available in any IPython sessions.  To make the ``%pdfgetx3`` command
-permanent, first check what is the IPython version.  If it is 0.11 or
-later,
+available in all IPython sessions.  To make the ``%pdfgetx3``
+command permanent
 
 #.  find the ``profile_default/ipython_config.py`` file and open it
-    in a text editor.  If that file does not exists, it can be
-    generated by executing ::
+    in a text editor.  If that file does not exists,
+    create it first by executing ::
 
       ipython profile create
-
-    in a system shell.
 
 #.  navigate to the paragraph that contains the
     :py:data:`!c.InteractiveShellApp.extensions` and add there
@@ -127,17 +126,9 @@ later,
     There must be no leading indent, i.e., the text must start at the
     very first column.
 
-The magic commands can be also defined in an older IPython 0.10,
-but the procedure is slightly different.  The trick is to find the
-``HOME/.ipython/ipy_user_conf.py`` file and add there the following
-statement ::
+.. note::
 
-  import diffpy.pdfgetx.ipy_pdfgetx3
-
-Make sure this line has a correct indentation, i.e., it has the same
-amount of leading whitespace, as do the surrounding lines.
-
-
-.. rubric:: Footnotes
-
-.. [#fpy3] Python 3 is not supported yet.
+   This setup works for the latest IPython 5.0 and for the older
+   versions going back to 0.13.  For IPython 0.11 or 0.12 use
+   ``ipy012_pdfgetx3`` in the extension module name
+   instead of ``ipy_pdfgetx3``.

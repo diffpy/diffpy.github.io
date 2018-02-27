@@ -1,8 +1,10 @@
 .. index:: plotdata (program)
+.. _cmd-plotdata:
 
 The plotdata program
 ========================================================================
 
+.. include:: abbreviations.txt
 .. program:: plotdata
 
 The PDFgetX3 software includes a simple stand-alone utility
@@ -18,8 +20,7 @@ column is used as an *x* variable and the second column is used for the
 interactive session allowing the user to modify or save plots.  The
 IPython session is initialized with the :data:`!filenames` variable
 containing a list of plotted files.  It also pre-loads the
-:py:func:`~diffpy.pdfgetx.plotdata.plotdata` and
-:py:func:`~diffpy.pdfgetx.findfiles` functions just as in the
+|plotdata| and |findfiles| functions just as in the
 :program:`pdfgetx3` interactive session.  The :py:func:`!plotdata`
 function works in a similar way as the :program:`plotdata` program,
 just its arguments need to be passed as Python function arguments
@@ -48,8 +49,8 @@ following options:
    searches for files only in the current directory.  The filename
    patterns are described in the
    :option:`pdfgetx3 --find <pdfgetx3 -f>` section.
-   If patterns contain any special characters `"^$<>"` they need to be
-   enclosed in double quotes (") on the command line so they don't get
+   If patterns contain any special characters ``^$<>`` they need to be
+   enclosed in double quotes (\\") on the command line so they don't get
    interpreted by the command shell.
 
 .. option:: -l, --list
@@ -72,8 +73,7 @@ as follows ::
    $ plotdata -f "<9-13>.dat"
 
 Within an interactive IPython session the equivalent plot could be
-produced by combining the :py:func:`~diffpy.pdfgetx.plotdata.plotdata`
-and :py:func:`~diffpy.pdfgetx.findfiles` functions as ::
+produced by combining the |plotdata| and |findfiles| functions as ::
 
    In [1]: plotdata(findfiles("<9-13>.dat"))
 
@@ -86,23 +86,24 @@ columns for x or y data and for specifying plot markers or line
 formats.  The columns can be specified using their integer index,
 but one needs to keep in mind the index of the first column is "0"
 as per Python indexing conventions.  Here is a list of options
-supported by the `plotdata` program (and function):
+supported by the *plotdata* program (and function):
 
 
 .. option:: -x X
 
    index or name of the x-column to plot.  See the :option:`-y` option
-   for more details.
+   for the supported syntax, but note that *X* may select only one
+   column.  When set to "." use the data-row index for x.
 
 .. option:: -y Y
 
-   index or name of the y-column or columns to plot.  The `Y` column
+   index or name of the y-column or columns to plot.  The *Y* column
    specification can be a comma separated list of indices, column names
    or Python-like ranges, for example "1,2", "G", "1:4" (START:STOP,
-   same as "1,2,3"), "1:4:2" (START:STOP:STEP, same as "1,3").  The
-   column indexing starts at "0" therefore the first column should be
-   specified as "0".  A special column name "." can be used for row
-   index.
+   same as "1,2,3"), "1:4:2" (START:STOP:STEP, same as "1,3"), or
+   "-2:" (same as "-2,-1", i.e, the last 2 columns).  The column
+   indexing starts at "0" therefore the second column needs to be
+   specified as "1".
 
    The column names work if the data section in the file is preceded by
    a headline of unique column names, for example::
@@ -119,9 +120,13 @@ supported by the `plotdata` program (and function):
 .. option:: -s STYLE, --style=STYLE
 
    optional plot format specification.  See the
-   `matplotlib plot function
-   <http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot>`_
+   :func:`matplotlib.pyplot.plot` function
    for a list of available formats.
+
+.. option:: -L LOG, --log=LOG
+
+   axes to be plotted with logarithmic scaling, for example, "x", "y" or
+   "xy".  Axes not listed in *LOG* will use linear scaling.
 
 .. option:: -h, --help
 
@@ -149,7 +154,6 @@ when used from command line - the user is encouraged to try them out::
    plotdata -x . -y 0:3 sincos.dat
    plotdata -y cos sincos.dat
    plotdata -x sin -y cos -sr-- sincos.dat
-   plotdata -x 0,1 -y 1,0 sincos.dat
 
 An equivalent usage from a general IPython session would be::
 
@@ -159,4 +163,3 @@ An equivalent usage from a general IPython session would be::
    In [4]: plotdata('sincos.dat', x='.', y=':3')
    In [5]: plotdata('sincos.dat', y='cos')
    In [6]: plotdata('sincos.dat', x='sin', y='cos', style='r--')
-   In [7]: plotdata('sincos.dat', x=[0,1], y=[1,0])
