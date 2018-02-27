@@ -1,35 +1,34 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Installation &mdash; PDFgetX3 1.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <title>Installation &#8212; PDFgetX3 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1',
+        VERSION:     '1.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.1 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quick-start guide" href="quick-start.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
   <body>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -41,48 +40,48 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="software-requirements">
 <h2>Software requirements<a class="headerlink" href="#software-requirements" title="Permalink to this headline">¶</a></h2>
 <p>PDFgetX3 has been written in Python programming language, therefore
-to use the software, you must have Python 2.6 or
-Python 2.7 installed. <a class="footnote-reference" href="#fpy3" id="id1">[1]</a>
-In addition, the following third-party Python libraries are
-also required:</p>
+to use the software, you must have Python 3.6, 3.5, 3.4, 2.7 or 2.6
+installed.  In addition, the following third-party Python libraries
+are also required:</p>
 <ul class="simple">
 <li>setuptools - tools for installing Python packages</li>
+<li>six - Python 2 and 3 compatibility library</li>
 <li>NumPy - library for scientific computing with Python</li>
 <li>matplotlib - Python plotting library</li>
 <li>IPython - enhanced interactive Python shell</li>
-<li>PyReadline - required for a full IPython functionality on Windows</li>
 </ul>
 <p>Standard Python releases can be obtained from
-<a class="reference external" href="https://www.python.org/download/">https://www.python.org/download/</a>.
+<a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a>.
 The third-party libraries can be found at the
 <a class="reference external" href="https://pypi.python.org/pypi">Python Package Index</a>
 or using any Internet search engine.</p>
-<p>Another, more convenient option is to obtain science-oriented Python
-distributions, such as <a class="reference external" href="https://code.google.com/p/pythonxy/">PythonXY</a>,
+<p>Another more convenient option is to obtain one of the science-oriented
+Python distributions such as
+<a class="reference external" href="https://www.anaconda.com/download">Anaconda Python</a>,
 <a class="reference external" href="https://www.enthought.com/">Enthought Canopy</a> or
-<a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda Python</a>.
+<a class="reference external" href="http://python-xy.github.io/">PythonXY</a>,
 These distributions already include all the necessary libraries, so the
 required Python software can be all installed in one step.</p>
 <p>On Linux operating systems the third-party libraries are usually
 included in a system software package repository.  For example on an
 Ubuntu Linux computer the software dependencies can be all installed
 with a single shell command</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install \
-  python-setuptools python-numpy python-matplotlib ipython
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> \
+  <span class="n">python3</span><span class="o">-</span><span class="n">six</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">python3</span><span class="o">-</span><span class="n">numpy</span> <span class="n">python3</span><span class="o">-</span><span class="n">matplotlib</span> <span class="n">ipython3</span>
 </pre></div>
 </div>
 <p>This may be, of course, just as well accomplished using the GUI
@@ -91,11 +90,11 @@ distributions may use different software management tools,
 but the names of the necessary packages should be very similar
 to those above.</p>
 <p>On Windows operating system, it may be necessary to add the
-<tt class="docutils literal"><span class="pre">C:\Python27</span></tt> directory and the scripts directory
-<tt class="docutils literal"><span class="pre">C:\Python27\Scripts</span></tt> to the system <tt class="xref std std-envvar docutils literal"><span class="pre">PATH</span></tt>.
+<code class="docutils literal"><span class="pre">C:\Python35</span></code> directory and the scripts directory
+<code class="docutils literal"><span class="pre">C:\Python35\Scripts</span></code> to the system <code class="xref std std-envvar docutils literal"><span class="pre">PATH</span></code>.
 Some Python distributions may already do that as a part of their
 installation process.  The easiest way to check is to start the
-<strong class="program">Command Prompt</strong>, type there <tt class="docutils literal"><span class="pre">python</span></tt> and see if this
+<strong class="program">Command Prompt</strong>, type there <code class="docutils literal"><span class="pre">python</span></code> and see if this
 starts the Python interpreter.</p>
 </div>
 <div class="section" id="pdfgetx3-installation">
@@ -106,83 +105,71 @@ Once all the required software is in
 place, start the command prompt on Windows or a Unix terminal on Linux
 or Mac, navigate to the directory that contains the egg file and
 execute the following command:</p>
-<div class="highlight-python"><div class="highlight"><pre>easy_install diffpy.pdfgetx-VERSION-pyX.Y.egg
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">easy_install</span> <span class="o">./</span><span class="n">diffpy</span><span class="o">.</span><span class="n">pdfgetx</span><span class="o">-</span><span class="n">VERSION</span><span class="o">.</span><span class="n">egg</span>
 </pre></div>
 </div>
-<p>Here VERSION needs to be replaced to match the actual filename,
-and X.Y is the Python version, for example 2.7.  It is critical to
-use the correct egg file for your Python version as the program
-would not work otherwise.  On Linux and Mac operating systems the
-installation may need to run with root user privileges, for example, by
-prepending <tt class="docutils literal"><span class="pre">sudo</span></tt> to the command line above.
+<p>Here VERSION needs to be replaced to match the actual filename.
+It is critical to use one of the supported Python versions otherwise
+the program would not work.  On Linux and Mac operating systems the
+installation may need to run with root user privileges, for example,
+by prepending <code class="docutils literal"><span class="pre">sudo</span></code> to the command line above.
 If root access is not available, use the
-easy_install options <em class="xref std std-option">--prefix</em> or
-<em class="xref std std-option">--install-dir</em> to install PDFgetX3 to a user-writable
+easy_install options <code class="xref std std-option docutils literal"><span class="pre">--user</span></code>, <code class="xref std std-option docutils literal"><span class="pre">--prefix</span></code> or
+<code class="xref std std-option docutils literal"><span class="pre">--install-dir</span></code> to install PDFgetX3 to a user-writable
 directory.</p>
 <p>To verify if pdfgetx3 has been correctly installed,
 type the following command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">version</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
 <p>This should display the software version, which should be
 the same as the VERSION string in the egg file name.
 The installation also includes a <strong class="command">plotdata</strong>
 command for an easy plotting of text data files.  To verify
-if plotdata works, run the <tt class="docutils literal"><span class="pre">plotdata</span> <span class="pre">--version</span></tt> command.</p>
+if plotdata works, run the <code class="docutils literal"><span class="pre">plotdata</span> <span class="pre">--version</span></code> command.</p>
 </div>
 <div class="section" id="ipython-magic-command">
-<h2>IPython magic command<a class="headerlink" href="#ipython-magic-command" title="Permalink to this headline">¶</a></h2>
+<span id="my-pdfgetx3-magic"></span><span id="index-0"></span><h2>IPython magic command<a class="headerlink" href="#ipython-magic-command" title="Permalink to this headline">¶</a></h2>
 <p>These instructions are intended for IPython users who would like to
-integrate PDFgetX3 into their IPython environment.  If you don&#8217;t plan
-to use IPython, you can safely ignore this section.</p>
+integrate PDFgetX3 into their IPython environment.  If you don’t plan
+to use IPython in such way, you can safely skip this section.</p>
 <p>When pdfgetx3 is run in an interactive mode, it starts IPython
-interactive shell and defines an extra <tt class="docutils literal"><span class="pre">%pdfgetx3</span></tt>
+interactive shell and defines an extra <code class="docutils literal"><span class="pre">%pdfgetx3</span></code>
 magic command within the IPython session.  The IPython magic
 commands are not valid Python code, but work in a similar
-fashion as standard shell commands.  The <tt class="docutils literal"><span class="pre">%pdfgetx3</span></tt> magic can
+fashion as standard shell commands.  The <code class="docutils literal"><span class="pre">%pdfgetx3</span></code> magic can
 be thus used with the same options and arguments as if run from
 the shell.  This is useful for processing more files, while
 preserving all plots or variables that were already created
 within the IPython session.</p>
-<p>The <tt class="docutils literal"><span class="pre">%pdfgetx3</span></tt> magic command can be defined permanently so it is
-available in any IPython sessions.  To make the <tt class="docutils literal"><span class="pre">%pdfgetx3</span></tt> command
-permanent, first check what is the IPython version.  If it is 0.11 or
-later,</p>
+<p>The <code class="docutils literal"><span class="pre">%pdfgetx3</span></code> magic command can be defined permanently so it is
+available in all IPython sessions.  To make the <code class="docutils literal"><span class="pre">%pdfgetx3</span></code>
+command permanent</p>
 <ol class="arabic">
-<li><p class="first">find the <tt class="docutils literal"><span class="pre">profile_default/ipython_config.py</span></tt> file and open it
-in a text editor.  If that file does not exists, it can be
-generated by executing</p>
-<div class="highlight-python"><div class="highlight"><pre>ipython profile create
+<li><p class="first">find the <code class="docutils literal"><span class="pre">profile_default/ipython_config.py</span></code> file and open it
+in a text editor.  If that file does not exists,
+create it first by executing</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ipython</span> <span class="n">profile</span> <span class="n">create</span>
 </pre></div>
 </div>
-<p>in a system shell.</p>
 </li>
 <li><p class="first">navigate to the paragraph that contains the
-<tt class="xref py py-data docutils literal"><span class="pre">c.InteractiveShellApp.extensions</span></tt> and add there
+<code class="xref py py-data docutils literal"><span class="pre">c.InteractiveShellApp.extensions</span></code> and add there
 the following line:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">c</span><span class="o">.</span><span class="n">InteractiveShellApp</span><span class="o">.</span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;diffpy.pdfgetx.ipy_pdfgetx3&#39;</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">InteractiveShellApp</span><span class="o">.</span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;diffpy.pdfgetx.ipy_pdfgetx3&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>There must be no leading indent, i.e., the text must start at the
 very first column.</p>
 </li>
 </ol>
-<p>The magic commands can be also defined in an older IPython 0.10,
-but the procedure is slightly different.  The trick is to find the
-<tt class="docutils literal"><span class="pre">HOME/.ipython/ipy_user_conf.py</span></tt> file and add there the following
-statement</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">diffpy.pdfgetx.ipy_pdfgetx3</span>
-</pre></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This setup works for the latest IPython 5.0 and for the older
+versions going back to 0.13.  For IPython 0.11 or 0.12 use
+<code class="docutils literal"><span class="pre">ipy012_pdfgetx3</span></code> in the extension module name
+instead of <code class="docutils literal"><span class="pre">ipy_pdfgetx3</span></code>.</p>
 </div>
-<p>Make sure this line has a correct indentation, i.e., it has the same
-amount of leading whitespace, as do the surrounding lines.</p>
-<p class="rubric">Footnotes</p>
-<table class="docutils footnote" frame="void" id="fpy3" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Python 3 is not supported yet.</td></tr>
-</tbody>
-</table>
 </div>
 </div>
 
@@ -190,7 +177,7 @@ amount of leading whitespace, as do the surrounding lines.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -208,24 +195,21 @@ amount of leading whitespace, as do the surrounding lines.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="quick-start.html"
                         title="next chapter">Quick-start guide</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -237,12 +221,12 @@ amount of leading whitespace, as do the surrounding lines.</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

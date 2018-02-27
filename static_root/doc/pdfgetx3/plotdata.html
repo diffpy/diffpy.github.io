@@ -1,74 +1,76 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>The plotdata program &mdash; PDFgetX3 1.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <title>The plotdata program &#8212; PDFgetX3 1.2 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.1',
+        VERSION:     '1.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/sidebar.js"></script>
-    <link rel="top" title="PDFgetX3 1.1 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release Notes" href="release.html" />
     <link rel="prev" title="Options and parameters" href="options.html" /> 
   </head>
   <body>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="release.html" title="Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
           <a href="options.html" title="Options and parameters"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="the-plotdata-program">
-<span id="index-0"></span><h1>The plotdata program<a class="headerlink" href="#the-plotdata-program" title="Permalink to this headline">¶</a></h1>
+<span id="cmd-plotdata"></span><span id="index-0"></span><h1>The plotdata program<a class="headerlink" href="#the-plotdata-program" title="Permalink to this headline">¶</a></h1>
 <p>The PDFgetX3 software includes a simple stand-alone utility
 <strong class="program">plotdata</strong> for plotting text data files.  In most cases
 this program can be invoked from a command-shell as</p>
-<div class="highlight-python"><div class="highlight"><pre>plotdata file1.dat file2.dat
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plotdata</span> <span class="n">file1</span><span class="o">.</span><span class="n">dat</span> <span class="n">file2</span><span class="o">.</span><span class="n">dat</span>
 </pre></div>
 </div>
-<p>which plots the numerical data from the text files <tt class="file docutils literal"><span class="pre">file1.dat</span></tt>,
-<tt class="file docutils literal"><span class="pre">file2.dat</span></tt> together in a single graph.  By default the first
+<p>which plots the numerical data from the text files <code class="file docutils literal"><span class="pre">file1.dat</span></code>,
+<code class="file docutils literal"><span class="pre">file2.dat</span></code> together in a single graph.  By default the first
 column is used as an <em>x</em> variable and the second column is used for the
 <em>y</em> values.  After displaying the plot the program starts an IPython
 interactive session allowing the user to modify or save plots.  The
-IPython session is initialized with the <tt class="xref py py-data docutils literal"><span class="pre">filenames</span></tt> variable
+IPython session is initialized with the <code class="xref py py-data docutils literal"><span class="pre">filenames</span></code> variable
 containing a list of plotted files.  It also pre-loads the
-<a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><tt class="xref py py-func docutils literal"><span class="pre">plotdata()</span></tt></a> and
-<a class="reference internal" href="interact.html#diffpy.pdfgetx.findfiles" title="diffpy.pdfgetx.findfiles"><tt class="xref py py-func docutils literal"><span class="pre">findfiles()</span></tt></a> functions just as in the
-<strong class="program">pdfgetx3</strong> interactive session.  The <tt class="xref py py-func docutils literal"><span class="pre">plotdata()</span></tt>
+<a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a> and <a class="reference internal" href="interact.html#diffpy.pdfgetx.findfiles" title="diffpy.pdfgetx.findfiles"><code class="xref py py-func docutils literal"><span class="pre">findfiles()</span></code></a> functions just as in the
+<strong class="program">pdfgetx3</strong> interactive session.  The <code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code>
 function works in a similar way as the <strong class="program">plotdata</strong> program,
 just its arguments need to be passed as Python function arguments
 instead of command-line options.  Thus an equivalent call of the
-<tt class="xref py py-func docutils literal"><span class="pre">plotdata()</span></tt> function would be:</p>
-<div class="highlight-python"><div class="highlight"><pre>In [1]: plotdata([&#39;file1.dat&#39;, &#39;file2.dat&#39;])
+<code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code> function would be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">([</span><span class="s1">&#39;file1.dat&#39;</span><span class="p">,</span> <span class="s1">&#39;file2.dat&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="section" id="selecting-files">
@@ -77,36 +79,36 @@ instead of command-line options.  Thus an equivalent call of the
 that is useful for selecting a set of files in large
 directories.  It is also convenient for Windows operating systems,
 where the command prompt cannot do filename expansion for patterns
-such as <tt class="docutils literal"><span class="pre">*.dat</span></tt>.  The file search feature is controlled by the
+such as <code class="docutils literal"><span class="pre">*.dat</span></code>.  The file search feature is controlled by the
 following options:</p>
 <dl class="option">
 <dt id="cmdoption-plotdata-f">
-<span id="cmdoption-plotdata--find"></span><tt class="descname">-f</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--find</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-plotdata-f" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-f</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--find</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-plotdata-f" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use the command line arguments as filename patterns and plot the
 files matching all patterns.  This works almost the same as the
-<a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><em class="xref std std-option">pdfgetx3 --find</em></a> option, however
-<strong class="program">plotdata</strong> does not recognize <a class="reference internal" href="options.html#confval-datapath"><tt class="xref std std-confval docutils literal"><span class="pre">datapath</span></tt></a> and
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><code class="xref std std-option docutils literal"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code></a> option, however
+<strong class="program">plotdata</strong> does not recognize <a class="reference internal" href="options.html#confval-datapath"><code class="xref std std-confval docutils literal"><span class="pre">datapath</span></code></a> and
 searches for files only in the current directory.  The filename
 patterns are described in the
-<a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><em class="xref std std-option">pdfgetx3 --find</em></a> section.
-If patterns contain any special characters <cite>&#8220;^$&lt;&gt;&#8221;</cite> they need to be
-enclosed in double quotes (&#8221;) on the command line so they don&#8217;t get
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><code class="xref std std-option docutils literal"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code></a> section.
+If patterns contain any special characters <code class="docutils literal"><span class="pre">^$&lt;&gt;</span></code> they need to be
+enclosed in double quotes (&quot;) on the command line so they don’t get
 interpreted by the command shell.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-plotdata-l">
-<span id="cmdoption-plotdata--list"></span><tt class="descname">-l</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--list</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-plotdata-l" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-l</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--list</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-plotdata-l" title="Permalink to this definition">¶</a></dt>
 <dd><p>List the input files and exit.  This is useful in conjunction
-with the <em class="xref std std-option">-f, --find</em> option to check if data files
+with the <code class="xref std std-option docutils literal"><span class="pre">-f,</span> <span class="pre">--find</span></code> option to check if data files
 are selected as intended.</p>
 </dd></dl>
 
 <p>Assuming the current directory contains 20 files named
-<tt class="file docutils literal"><span class="pre">file1.dat</span></tt>, <tt class="file docutils literal"><span class="pre">file2.dat</span></tt>, ..., <tt class="file docutils literal"><span class="pre">file20.dat</span></tt>,
+<code class="file docutils literal"><span class="pre">file1.dat</span></code>, <code class="file docutils literal"><span class="pre">file2.dat</span></code>, …, <code class="file docutils literal"><span class="pre">file20.dat</span></code>,
 the plotting of files 9 to 13 could be done (with a check listing)
 as follows</p>
-<div class="highlight-python"><div class="highlight"><pre>$ plotdata -fl &quot;&lt;9-13&gt;.dat&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ plotdata -fl &quot;&lt;9-13&gt;.dat&quot;
 file9.dat
 file10.dat
 file11.dat
@@ -116,9 +118,8 @@ $ plotdata -f &quot;&lt;9-13&gt;.dat&quot;
 </pre></div>
 </div>
 <p>Within an interactive IPython session the equivalent plot could be
-produced by combining the <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><tt class="xref py py-func docutils literal"><span class="pre">plotdata()</span></tt></a>
-and <a class="reference internal" href="interact.html#diffpy.pdfgetx.findfiles" title="diffpy.pdfgetx.findfiles"><tt class="xref py py-func docutils literal"><span class="pre">findfiles()</span></tt></a> functions as</p>
-<div class="highlight-python"><div class="highlight"><pre>In [1]: plotdata(findfiles(&quot;&lt;9-13&gt;.dat&quot;))
+produced by combining the <a class="reference internal" href="interact.html#diffpy.pdfgetx.plotdata.plotdata" title="diffpy.pdfgetx.plotdata.plotdata"><code class="xref py py-func docutils literal"><span class="pre">plotdata()</span></code></a> and <a class="reference internal" href="interact.html#diffpy.pdfgetx.findfiles" title="diffpy.pdfgetx.findfiles"><code class="xref py py-func docutils literal"><span class="pre">findfiles()</span></code></a> functions as</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="n">findfiles</span><span class="p">(</span><span class="s2">&quot;&lt;9-13&gt;.dat&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -127,88 +128,94 @@ and <a class="reference internal" href="interact.html#diffpy.pdfgetx.findfiles" 
 <p>The <strong class="program">plotdata</strong> program provides several ways of selecting
 columns for x or y data and for specifying plot markers or line
 formats.  The columns can be specified using their integer index,
-but one needs to keep in mind the index of the first column is &#8220;0&#8221;
+but one needs to keep in mind the index of the first column is “0”
 as per Python indexing conventions.  Here is a list of options
-supported by the <cite>plotdata</cite> program (and function):</p>
+supported by the <em>plotdata</em> program (and function):</p>
 <dl class="option">
 <dt id="cmdoption-plotdata-x">
-<tt class="descname">-x</tt><tt class="descclassname"> X</tt><a class="headerlink" href="#cmdoption-plotdata-x" title="Permalink to this definition">¶</a></dt>
-<dd><p>index or name of the x-column to plot.  See the <a class="reference internal" href="#cmdoption-plotdata-y"><em class="xref std std-option">-y</em></a> option
-for more details.</p>
+<code class="descname">-x</code><code class="descclassname"> X</code><a class="headerlink" href="#cmdoption-plotdata-x" title="Permalink to this definition">¶</a></dt>
+<dd><p>index or name of the x-column to plot.  See the <a class="reference internal" href="#cmdoption-plotdata-y"><code class="xref std std-option docutils literal"><span class="pre">-y</span></code></a> option
+for the supported syntax, but note that <em>X</em> may select only one
+column.  When set to “.” use the data-row index for x.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-plotdata-y">
-<tt class="descname">-y</tt><tt class="descclassname"> Y</tt><a class="headerlink" href="#cmdoption-plotdata-y" title="Permalink to this definition">¶</a></dt>
-<dd><p>index or name of the y-column or columns to plot.  The <cite>Y</cite> column
+<code class="descname">-y</code><code class="descclassname"> Y</code><a class="headerlink" href="#cmdoption-plotdata-y" title="Permalink to this definition">¶</a></dt>
+<dd><p>index or name of the y-column or columns to plot.  The <em>Y</em> column
 specification can be a comma separated list of indices, column names
-or Python-like ranges, for example &#8220;1,2&#8221;, &#8220;G&#8221;, &#8220;1:4&#8221; (START:STOP,
-same as &#8220;1,2,3&#8221;), &#8220;1:4:2&#8221; (START:STOP:STEP, same as &#8220;1,3&#8221;).  The
-column indexing starts at &#8220;0&#8221; therefore the first column should be
-specified as &#8220;0&#8221;.  A special column name &#8221;.&#8221; can be used for row
-index.</p>
+or Python-like ranges, for example “1,2”, “G”, “1:4” (START:STOP,
+same as “1,2,3”), “1:4:2” (START:STOP:STEP, same as “1,3”), or
+“-2:” (same as “-2,-1”, i.e, the last 2 columns).  The column
+indexing starts at “0” therefore the second column needs to be
+specified as “1”.</p>
 <p>The column names work if the data section in the file is preceded by
 a headline of unique column names, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre>x     square      cube
-1     1           1
-2     4           8
-3     9           27
-4     16          64
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span>     <span class="n">square</span>      <span class="n">cube</span>
+<span class="mi">1</span>     <span class="mi">1</span>           <span class="mi">1</span>
+<span class="mi">2</span>     <span class="mi">4</span>           <span class="mi">8</span>
+<span class="mi">3</span>     <span class="mi">9</span>           <span class="mi">27</span>
+<span class="mi">4</span>     <span class="mi">16</span>          <span class="mi">64</span>
 </pre></div>
 </div>
 <p>For this file the plotdata program will recognize column names
-&#8220;x&#8221;, &#8220;square&#8221; and &#8220;cube&#8221; and an implicit &#8221;.&#8221; for row index.</p>
+“x”, “square” and “cube” and an implicit “.” for row index.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-plotdata-s">
-<span id="cmdoption-plotdata--style"></span><tt class="descname">-s</tt><tt class="descclassname"> STYLE</tt><tt class="descclassname">, </tt><tt class="descname">--style</tt><tt class="descclassname">=STYLE</tt><a class="headerlink" href="#cmdoption-plotdata-s" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-s</code><code class="descclassname"> STYLE</code><code class="descclassname">, </code><code class="descname">--style</code><code class="descclassname">=STYLE</code><a class="headerlink" href="#cmdoption-plotdata-s" title="Permalink to this definition">¶</a></dt>
 <dd><p>optional plot format specification.  See the
-<a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot">matplotlib plot function</a>
+<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v2.1.1)"><code class="xref py py-func docutils literal"><span class="pre">matplotlib.pyplot.plot()</span></code></a> function
 for a list of available formats.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-plotdata-log">
+<code class="descname">-L</code><code class="descclassname"> LOG</code><code class="descclassname">, </code><code class="descname">--log</code><code class="descclassname">=LOG</code><a class="headerlink" href="#cmdoption-plotdata-log" title="Permalink to this definition">¶</a></dt>
+<dd><p>axes to be plotted with logarithmic scaling, for example, “x”, “y” or
+“xy”.  Axes not listed in <em>LOG</em> will use linear scaling.</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-plotdata-h">
-<span id="cmdoption-plotdata--help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-plotdata-h" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-plotdata-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>display a brief usage info and exit.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-plotdata-V">
-<span id="cmdoption-plotdata--version"></span><tt class="descname">-V</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">--version</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-plotdata-V" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-plotdata-v">
+<code class="descname">-V</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--version</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-plotdata-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>show program version and exit.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-plotdata--manual">
-<tt class="descname">--manual</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-plotdata--manual" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-plotdata-manual">
+<code class="descname">--manual</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-plotdata-manual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open this manual page in a Web browser and exit.</p>
 </dd></dl>
 
 </div>
 <div class="section" id="plotdata-examples">
 <h2>plotdata examples<a class="headerlink" href="#plotdata-examples" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="file docutils literal"><span class="pre">examples/plotdata</span></tt> directory contains a <tt class="file docutils literal"><span class="pre">sincos.dat</span></tt>
-file that has 3-columns of data labeled as &#8220;x&#8221;, &#8220;sin&#8221; and &#8220;cos&#8221;.
+<p>The <code class="file docutils literal"><span class="pre">examples/plotdata</span></code> directory contains a <code class="file docutils literal"><span class="pre">sincos.dat</span></code>
+file that has 3-columns of data labeled as “x”, “sin” and “cos”.
 Here are several examples of the <strong class="program">plotdata</strong> capabilities
 when used from command line - the user is encouraged to try them out:</p>
-<div class="highlight-python"><div class="highlight"><pre>plotdata sincos.dat
-plotdata -y 1,2 sincos.dat
-plotdata -x . -y 0:3 sincos.dat
-plotdata -y cos sincos.dat
-plotdata -x sin -y cos -sr-- sincos.dat
-plotdata -x 0,1 -y 1,0 sincos.dat
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">plotdata</span> <span class="n">sincos</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">plotdata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span> <span class="n">sincos</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">plotdata</span> <span class="o">-</span><span class="n">x</span> <span class="o">.</span> <span class="o">-</span><span class="n">y</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span> <span class="n">sincos</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">plotdata</span> <span class="o">-</span><span class="n">y</span> <span class="n">cos</span> <span class="n">sincos</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">plotdata</span> <span class="o">-</span><span class="n">x</span> <span class="n">sin</span> <span class="o">-</span><span class="n">y</span> <span class="n">cos</span> <span class="o">-</span><span class="n">sr</span><span class="o">--</span> <span class="n">sincos</span><span class="o">.</span><span class="n">dat</span>
 </pre></div>
 </div>
 <p>An equivalent usage from a general IPython session would be:</p>
-<div class="highlight-python"><div class="highlight"><pre>In [1]: from diffpy.pdfgetx.plotdata import plotdata
-In [2]: plotdata(&#39;sincos.dat&#39;)
-In [3]: plotdata(&#39;sincos.dat&#39;, y=[1,2])
-In [4]: plotdata(&#39;sincos.dat&#39;, x=&#39;.&#39;, y=&#39;:3&#39;)
-In [5]: plotdata(&#39;sincos.dat&#39;, y=&#39;cos&#39;)
-In [6]: plotdata(&#39;sincos.dat&#39;, x=&#39;sin&#39;, y=&#39;cos&#39;, style=&#39;r--&#39;)
-In [7]: plotdata(&#39;sincos.dat&#39;, x=[0,1], y=[1,0])
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">diffpy.pdfgetx.plotdata</span> <span class="k">import</span> <span class="n">plotdata</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="s1">&#39;sincos.dat&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="s1">&#39;sincos.dat&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="s1">&#39;sincos.dat&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;:3&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="s1">&#39;sincos.dat&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;cos&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">plotdata</span><span class="p">(</span><span class="s1">&#39;sincos.dat&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;sin&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;cos&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;r--&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -218,7 +225,7 @@ In [7]: plotdata(&#39;sincos.dat&#39;, x=[0,1], y=[1,0])
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -233,38 +240,41 @@ In [7]: plotdata(&#39;sincos.dat&#39;, x=[0,1], y=[1,0])
   <h4>Previous topic</h4>
   <p class="topless"><a href="options.html"
                         title="previous chapter">Options and parameters</a></p>
-<div id="searchbox" style="display: none">
+  <h4>Next topic</h4>
+  <p class="topless"><a href="release.html"
+                        title="next chapter">Release Notes</a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
+          <a href="release.html" title="Release Notes"
+             >next</a> |</li>
+        <li class="right" >
           <a href="options.html" title="Options and parameters"
              >previous</a> |</li>
-        <li><a href="index.html">PDFgetX3 1.1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">PDFgetX3 1.2 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Pavol Juhás, Timur Davis, Christopher Farrow, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
 </html>

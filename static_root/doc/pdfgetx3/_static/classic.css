@@ -1,10 +1,10 @@
 /*
- * default.css_t
+ * classic.css_t
  * ~~~~~~~~~~~~~
  *
- * Sphinx stylesheet -- default theme.
+ * Sphinx stylesheet -- classic theme.
  *
- * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+ * :copyright: Copyright 2007-2017 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -174,7 +174,7 @@ a.headerlink:hover {
     color: white;
 }
 
-div.body p, div.body dd, div.body li {
+div.body p, div.body dd, div.body li, div.body blockquote {
     text-align: justify;
     line-height: 130%;
 }
@@ -232,7 +232,7 @@ pre {
     border-right: none;
 }
 
-tt {
+code {
     background-color: #ecf0f3;
     padding: 0 1px 0 1px;
     font-size: 0.95em;
@@ -242,11 +242,11 @@ th {
     background-color: #ede;
 }
 
-.warning tt {
+.warning code {
     background: #efc2c2;
 }
 
-.note tt {
+.note code {
     background: #d6d6d6;
 }
 
@@ -258,4 +258,9 @@ div.viewcode-block:target {
     background-color: #f4debf;
     border-top: 1px solid #ac9;
     border-bottom: 1px solid #ac9;
+}
+
+div.code-block-caption {
+    color: #efefef;
+    background-color: #1c4e63;
 }

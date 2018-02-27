@@ -1,0 +1,86 @@
+.. index:: release notes
+
+Release Notes
+========================================================================
+
+.. include:: abbreviations.txt
+
+PDFgetX3 version 1.2
+------------------------------------------------------------------------
+
+Sources were updated to support Python 3.4, 3.5, 3.6 in addition
+to Python 2.6 and 2.7.
+
+The egg software package was enhanced to support all Python
+versions.  PDFgetX3 is now distributed in a single egg file
+rather than in multiple eggs per each Python version.
+
+Added support for `IPython 5.0 <http://ipython.org>`__ with
+continued compatibility for IPython 0.10 and later.
+
+Added support for `matplotlib 2.0 <https://matplotlib.org>`__.
+
+Changed :ref:`pdfgetx3 <cmd-pdfgetx3>` option
+:option:`--force <pdfgetx3 --force>` to take
+a boolean value ("yes", "no", "true", etc.) or "once".
+The configuration parameter :confval:`force` can be
+set to a bool or to a string ``'once'``.  This enables
+safe one-time overwrite of existing output files.
+
+The :ref:`plotdata <cmd-plotdata>` program learned a new option
+:option:`--log=LOG <plotdata -L>` to set logarithmic scale
+for *x* or *y* axis.  The |plotdata| function added a new
+*log* argument for the same purpose.
+
+Added *ax* argument for the |plotdata| function to select
+a specific matplotlib axis for plotting.
+
+Removed *hold* argument from the |plotdata| function,
+because it was deprecated in matplotlib.
+
+Added support for Unicode filenames and values in
+the :interactvar:`config` interactive variable.
+
+Updated plotting code to use the Unicode "Å" (Ångström) symbol in
+axes labels.  The "Å" symbol is also used to denote units in output
+files.
+
+The parser of chemical formulas learned to read parentheses
+and fractional stoichiometry as in ``'Pb (Ti Zr)1/2 O3'``.
+
+The |loadData| argument *usecols* was updated to accept scalars,
+open-end :py:class:`slice` objects and string-specified
+slices, such as ``'1:3'`` or ``'1:'``.
+
+The :ref:`plotdata <cmd-plotdata>` program and |plotdata|
+function learned to take open-end slices for the y-columns
+selection.  The plotdata utilities dropped support for
+multiple x-columns.
+
+The :ref:`pdfgetx3 <cmd-pdfgetx3>` program learned to
+avoid duplicate extension ".gr.gr" when run with
+:option:`--output=f.gr <pdfgetx3 -o>`.
+
+Fixed crash on loading custom configuration section,
+which is missing in global configuration file, but
+is present in the local one.
+
+Removed import of all :py:mod:`numpy` names into the
+interactive session.  NumPy is available under the
+``np`` name instead.
+
+Corrected missing checkbox in the :any:`tuneconfig`
+dialog, which was caused by a bug in matplotlib.
+
+Added explanatory message for PDFgetX3 installed for
+an incompatible Python version.
+
+The IPython magic function :ref:`%pdfgetx3 <my-pdfgetx3-magic>`
+was changed to set ``_exit_code`` as do the shell commands
+run from IPython.
+
+Inline documentation adopted NumPy-style Napoleon format,
+which is human readable and can be included in the manual.
+
+The software package files and documentation were updated
+to build in a binary reproducible way.
