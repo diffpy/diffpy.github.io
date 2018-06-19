@@ -238,3 +238,8 @@
 .. |JensenNc16title| replace::
    Polymorphism in magic-sized Au\ :sub:`144`\ (SR)\ :sub:`60` clusters
 .. _JensenNc16title: http://dx.doi.org/10.1038/ncomms11859
+
+
+.. |citeShiJac18| replace::
+   C.Shi,
+   xINTERPDF: a GUI program for analyzing intermolecular pair distribution functions of organic compounds from X-ray total scattering data, under review, *J. Appl. Cryst.*, (2018).
