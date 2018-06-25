@@ -16,7 +16,7 @@ Currently it supports:
   proposed by Prill *et al*. (`J. Appl. Crystallogr., 48, 171-178, 2015
   <http://scripts.iucr.org/cgi-bin/paper?S1600576714026454>`__).
 * The phase quantification of physical mixtures of organics.
-* Generate Score/Screen plots based on Principle Component Analysis (PCA).
+* Generate Score/Scree plots based on Principle Component Analysis (PCA).
 
 A video demo about installation and usage is available at
 https://www.youtube.com/watch?v=lAFZ5VYEH1g. The code for xINTERPDF
