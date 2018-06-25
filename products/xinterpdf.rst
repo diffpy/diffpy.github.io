@@ -19,11 +19,8 @@ Currently it supports:
 * Generate Score/Screen plots based on Principle Component Analysis (PCA).
 
 A video demo about installation and usage is available at
-`https://www.youtube.com/watch?v=lAFZ5VYEH1g
-<https://www.youtube.com/watch?v=lAFZ5VYEH1g>`__. The code for xINTERPDF
-is hosted at `GitHub page <https://github.com/curieshicy/xINTERPDF>`__.
-
-
+https://www.youtube.com/watch?v=lAFZ5VYEH1g. The code for xINTERPDF
+is hosted on `GitHub <https://github.com/curieshicy/xINTERPDF>`__.
 
 .. figure:: ../images/xinterpdf.png
    :align: center
@@ -52,8 +49,7 @@ Installation
 
 xINTERPDF can be installed on Linux and Mac OS machines. The recommended
 way to install this package is through conda. Please visit
-`https://www.continuum.io/downloads
-<https://www.continuum.io/downloads>`__, and select Python 2.7 version
+https://www.continuum.io/downloads, and select Python 2.7 version
 to download and install. Once conda is installed, you can follow the
 steps below to install xINTERPDF.
 
@@ -81,7 +77,7 @@ the main GUI window of the xINTERPDF program.
 User Guide
 ----------
 
-Please see `User manual <../doc/xinterpdf/xINTERPDF_User_Guide_20180615.pdf>`__
+Please see `user manual <../doc/xinterpdf/xINTERPDF_User_Guide_20180615.pdf>`__
 for more details.
 
 References
