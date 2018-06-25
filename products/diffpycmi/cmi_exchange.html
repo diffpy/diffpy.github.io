@@ -3,6 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>CMI Exchange &#8212; DiffPy  documentation</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -10,16 +11,7 @@
     <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/diffpy-styles.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -36,8 +28,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -79,6 +70,7 @@
       <li><a href="../pdfgui.html">PDFgui</a></li>
       <li><a href="../SrMise.html">SrMise</a></li>
       <li><a href="../mPDF.html">mPDF</a></li>
+      <li><a href="../xinterpdf.html">xINTERPDF</a></li>
       <li><a href="../pythonpackages.html">Python Packages</a></li>
   </ul>
 </li>
@@ -123,8 +115,8 @@ and unpack the zip file to a convenient location on your machine.  If
 you have correctly installed the <a class="reference internal" href="index.html"><span class="doc">DiffPy-CMI</span></a> package you
 can start running the scripts right away. Just follow the instructions
 in <a class="reference external" href="https://github.com/diffpy/cmi_exchange#new-user-tips">New User Tips</a>.</p>
-<p>You’ll notice that there are two directories: <code class="docutils literal"><span class="pre">cmi_plugins</span></code> and
-<code class="docutils literal"><span class="pre">cmi_scripts</span></code>.  The scripts are standalone python scripts that can be
+<p>You’ll notice that there are two directories: <code class="docutils literal notranslate"><span class="pre">cmi_plugins</span></code> and
+<code class="docutils literal notranslate"><span class="pre">cmi_scripts</span></code>.  The scripts are standalone python scripts that can be
 run directly from the <a class="reference external" href="http://ipython.org/">IPython</a> command line, whereas the plugins are a
 set of functions and  <a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a>
 that provide additional functionality to your IPython session.</p>
@@ -132,7 +124,7 @@ that provide additional functionality to your IPython session.</p>
 <h3>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
 <p>To run a script, simply navigate to the directory containing the .py
 file and type:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ ipython --pylab
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ipython --pylab
 In [1]: %run script_name.py
 </pre></div>
 </div>
@@ -142,7 +134,7 @@ In [1]: %run script_name.py
 <p><a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a> are importable IPython modules that can modifpy
 the behavior of the shell to add functionality.  They are installed and
 activated from the IPython command line by running:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="o">%</span><span class="n">install_ext</span> <span class="n">name_of_extension</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="o">%</span><span class="n">install_ext</span> <span class="n">name_of_extension</span><span class="o">.</span><span class="n">py</span>
 <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">load_ext</span> <span class="n">name_of_extenstion</span>
 </pre></div>
 </div>

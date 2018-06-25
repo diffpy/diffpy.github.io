@@ -47,7 +47,7 @@ centered at Columbia University and, before that, Michigan State University.
 
 .. _national science foundation: http://www.nsf.gov/
 
-.. _department of energy, office of basic energy sciences: http://science.energy.gov/bes/
+.. _department of energy, office of basic energy sciences: https://science.energy.gov/bes/
 
 .. _brookhaven national laboratory: http://www.bnl.gov/
 
@@ -83,3 +83,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/pythonpackages
    products/SrMise
    products/mPDF
+   products/xinterpdf

@@ -3,6 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>DiffPy-CMI &#8212; DiffPy  documentation</title>
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -10,16 +11,7 @@
     <link rel="stylesheet" href="../../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/diffpy-styles.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -36,8 +28,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -79,6 +70,7 @@
       <li><a href="../pdfgui.html">PDFgui</a></li>
       <li><a href="../SrMise.html">SrMise</a></li>
       <li><a href="../mPDF.html">mPDF</a></li>
+      <li><a href="../xinterpdf.html">xINTERPDF</a></li>
       <li><a href="../pythonpackages.html">Python Packages</a></li>
   </ul>
 </li>
@@ -139,20 +131,20 @@ from <a class="reference external" href="http://www.continuum.io/downloads">http
 Anaconda environment <em>py27</em> which will provide Python 2.7
 instead of 3.5.  Make sure that <em>py27</em> environment is activated
 when working with DiffPy-CMI.</p>
-<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">py27</span> <span class="n">python</span><span class="o">=</span><span class="mf">2.7</span>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">py27</span> <span class="n">python</span><span class="o">=</span><span class="mf">2.7</span>
 <span class="n">source</span> <span class="n">activate</span> <span class="n">py27</span>
 </pre></div>
 </div>
 </div>
 <p>Once Anaconda is ready, DiffPy-CMI can be installed from the “diffpy”
 channel of Anaconda packages as follows</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">diffpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">diffpy</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">-</span><span class="n">cmi</span>
 </pre></div>
 </div>
 <p>The software distribution over Anaconda makes it easy to publish
 frequent software updates.  To update your installation later use</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">diffpy</span><span class="o">-</span><span class="n">cmi</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">diffpy</span><span class="o">-</span><span class="n">cmi</span>
 </pre></div>
 </div>
 <p>If you don’t want to use Anaconda you can

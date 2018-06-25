@@ -68,7 +68,7 @@ External libraries
        density, and X-ray/neutron scattering information.
 
    * - `libobjcryst`_
-     - `doc <http://vincefn.net/ObjCryst/>`__
+     - `doc <https://vincefn.net/ObjCryst/>`__
      - ObjCryst++, crystallographic library for C++ re-packaged for
        installation as a shared library.
 

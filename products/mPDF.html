@@ -3,6 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>mpdf &#8212; DiffPy  documentation</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -10,16 +11,7 @@
     <link rel="stylesheet" href="../_static/bootswatch-3.1.0/cerulean/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/diffpy-styles.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -36,8 +28,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -79,6 +70,7 @@
       <li><a href="pdfgui.html">PDFgui</a></li>
       <li><a href="SrMise.html">SrMise</a></li>
       <li><a href="#">mPDF</a></li>
+      <li><a href="xinterpdf.html">xINTERPDF</a></li>
       <li><a href="pythonpackages.html">Python Packages</a></li>
   </ul>
 </li>
@@ -126,11 +118,11 @@ suggestions, and feature requests.</p>
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>The diffpy.mpdf package requires Python 2.6 or 2.7 and the following software:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">NumPy</span></code> - numerical mathematics and fast array operations for Python</li>
-<li><code class="docutils literal"><span class="pre">SciPy</span></code> - scientific libraries for Python</li>
-<li><code class="docutils literal"><span class="pre">matplotlib</span></code> - python plotting library</li>
-<li><code class="docutils literal"><span class="pre">diffpy.Structure</span></code> - diffpy package for generating atomic structure</li>
-<li><code class="docutils literal"><span class="pre">diffpy.srreal</span></code> - diffpy package for calculating real-space quantities</li>
+<li><code class="docutils literal notranslate"><span class="pre">NumPy</span></code> - numerical mathematics and fast array operations for Python</li>
+<li><code class="docutils literal notranslate"><span class="pre">SciPy</span></code> - scientific libraries for Python</li>
+<li><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> - python plotting library</li>
+<li><code class="docutils literal notranslate"><span class="pre">diffpy.Structure</span></code> - diffpy package for generating atomic structure</li>
+<li><code class="docutils literal notranslate"><span class="pre">diffpy.srreal</span></code> - diffpy package for calculating real-space quantities</li>
 </ul>
 <p>See the <a class="reference internal" href="mPDFlicense.html"><span class="doc">mpdf license</span></a> for terms and conditions of use.</p>
 <div class="section" id="installation">
@@ -140,21 +132,21 @@ please visit <a class="reference external" href="https://www.continuum.io/downlo
 Once conda is installed, you can follow the simple steps below to install diffpy.mpdf.
 You will also install the full diffpy-cmi suite along the way.</p>
 <p><em>Step 1: Add the appropriate conda channels to your conda configuration.</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">diffpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">diffpy</span>
 <span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">benfrandsen</span>
 </pre></div>
 </div>
 <p>These commands tell conda to look through these channels on the Anaconda cloud server to
 find the appropriate software.</p>
 <p><em>Step 2 (recommended): Create and activate a conda environment for diffpy + diffpy.mpdf.</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">diffpy</span> <span class="n">python</span><span class="o">=</span><span class="mf">2.7</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">diffpy</span> <span class="n">python</span><span class="o">=</span><span class="mf">2.7</span>
 <span class="n">source</span> <span class="n">activate</span> <span class="n">diffpy</span>
 </pre></div>
 </div>
 <p>Note that you can name the environment anything you choose by passing it a different name
 after the –name flag in the first command.</p>
 <p><em>Step 3: Install diffpy.mpdf.</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
 </pre></div>
 </div>
 <p>Note that this will also install the full diffpy-cmi suite if it has not already been
@@ -162,7 +154,7 @@ installed in this environment.</p>
 <p><em>Alternative option: Install from the python package index.</em></p>
 <p>If you prefer to use the python package index and have pip installed, please install the
 prerequisite software and then use the command</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">mpdf</span>
 </pre></div>
 </div>
 <p><em>Alternative option: Download and install from source.</em></p>
@@ -170,7 +162,7 @@ prerequisite software and then use the command</p>
 from <a class="reference external" href="https://pypi.python.org/pypi/diffpy.mpdf">PyPI</a> or
 <a class="reference external" href="https://github.com/benfrandsen/diffpy.magpdf">GitHub</a>, then unzip the file and
 execute the following command from inside the unzipped directory</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>Note that this will only work if all the dependencies are already properly installed.</p>
