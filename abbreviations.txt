@@ -1,5 +1,11 @@
 .. vim: set ft=rst:
 
+.. Named web links -----------------------------------------------------
+
+.. _diffpy-users: https://groups.google.com/d/forum/diffpy-users
+
+.. Citations -----------------------------------------------------------
+
 .. |citeJuhasJac13| replace::
    P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge, `PDFgetX3:
    A rapid and highly automatable program for processing powder
@@ -244,4 +250,4 @@
    C. Shi,
    xINTERPDF: a GUI program for analyzing intermolecular pair
    distribution functions of organic compounds from X-ray total
-   scattering data, under review, *J. Appl. Cryst.*, (2018).
+   scattering data, under review, *J. Appl. Crystallogr.*, (2018).

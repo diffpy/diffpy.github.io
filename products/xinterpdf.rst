@@ -13,10 +13,10 @@ Currently it supports:
   subtracting out the scattering signal(s) of single molecule(s) in real
   space.
 * The PDF model fit of the crystalline organic compound using the method
-  proposed by Prill *et al*. (`J. Appl. Cryst., 48, 171-178, 2015
+  proposed by Prill *et al*. (`J. Appl. Crystallogr., 48, 171-178, 2015
   <http://scripts.iucr.org/cgi-bin/paper?S1600576714026454>`__).
 * The phase quantification of physical mixtures of organics.
-* Generate Score/Scree plots based on Principle Component Analysis (PCA).
+* Generate Score/Screen plots based on Principle Component Analysis (PCA).
 
 A video demo about installation and usage is available at
 `https://www.youtube.com/watch?v=lAFZ5VYEH1g
@@ -30,8 +30,8 @@ is hosted at `GitHub page <https://github.com/curieshicy/xINTERPDF>`__.
 
 This is a first release of the program (v.0.1.0). Comments and
 suggestions are welcome. Please send an email to Chenyang Shi at
-cs3000@columbia.edu and/or post your questions at diffpy-users
-Google Groups.
+cs3000@columbia.edu or post your questions to `diffpy-users`_
+Google Group.
 
 Getting Started
 ===============
@@ -50,7 +50,7 @@ See the :doc:`xINTERPDF license <xinterpdflicense>` for terms and conditions of 
 Installation
 ------------
 
-xINTERPDF can be installed on Linux and macOS machines. The recommended
+xINTERPDF can be installed on Linux and Mac OS machines. The recommended
 way to install this package is through conda. Please visit
 `https://www.continuum.io/downloads
 <https://www.continuum.io/downloads>`__, and select Python 2.7 version
