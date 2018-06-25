@@ -83,3 +83,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/pythonpackages
    products/SrMise
    products/mPDF
+   products/xinterpdf
