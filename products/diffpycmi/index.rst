@@ -37,7 +37,7 @@ Use of this software is subject to the conditions in
 As of version 2.0 DiffPy-CMI is available for Linux and
 Mac as a collection of packages for Anaconda Python.  As
 a first step download and install **Anaconda for Python 2.7**
-from http://www.continuum.io/downloads.
+from |anaconda-download|.
 
 .. note::
    If you already have Anaconda for Python 3.5, create a separate

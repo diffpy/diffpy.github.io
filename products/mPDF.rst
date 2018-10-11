@@ -2,6 +2,8 @@
 mpdf
 ##########
 
+.. include:: ../abbreviations.txt
+
 The diffpy.mpdf package provides a convenient method for computing the magnetic PDF
 (mPDF) from magnetic structures and performing fits to neutron total scattering
 data. The mPDF is calculated by an MPDFcalculator object, which extracts the spin
@@ -40,7 +42,7 @@ Installation
 ------------
 
 The recommended way to install this package is through conda. For help installing conda,
-please visit `https://www.continuum.io/downloads <https://www.continuum.io/downloads>`__.
+please visit |anaconda-download|.
 Once conda is installed, you can follow the simple steps below to install diffpy.mpdf.
 You will also install the full diffpy-cmi suite along the way.
 
