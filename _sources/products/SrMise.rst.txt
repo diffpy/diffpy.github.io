@@ -2,6 +2,8 @@
 SrMise
 ##########
 
+.. include:: ../abbreviations.txt
+
 SrMise is the DiffPy tool for peak extraction and peak fitting from atomic
 pair distribution functions (PDFs). It implements a powerful
 information-theoretic multimodeling approach based on the  Akaike information
@@ -62,10 +64,12 @@ individual and/or academic use, but some also have commercial version.  Links to
 executables, installation instructions, and licensing information
 for some popular options are listed below.
 
-* `Anaconda <http://www.continuum.io/downloads>`_
+* `Anaconda`_
 * `Enthought Canopy <https://www.enthought.com/products/canopy/>`_
 * `Python(x,y) <https://code.google.com/p/pythonxy/>`_
 * `WinPython <http://winpython.github.io>`_
+
+.. _Anaconda: anaconda-download_
 
 Alternately, individual Windows executables for Python and the required
 components can be downloaded and installed.  The official Windows releases of

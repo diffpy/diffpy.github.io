@@ -49,7 +49,7 @@ Installation
 
 xINTERPDF can be installed on Linux and Mac OS machines. The recommended
 way to install this package is through conda. Please visit
-https://www.continuum.io/downloads, and select Python 2.7 version
+|anaconda-download|, and select Python 2.7 version
 to download and install. Once conda is installed, you can follow the
 steps below to install xINTERPDF.
 

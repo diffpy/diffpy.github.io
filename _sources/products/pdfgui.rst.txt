@@ -1,4 +1,5 @@
 .. highlight:: bash
+.. include:: ../abbreviations.txt
 
 ######
 PDFgui
@@ -39,7 +40,7 @@ for all operating systems supported by Anaconda, namely for 32 and
 
 As a prerequisite for PDFgui installation, download and
 install **Anaconda for Python 2.7** from
-https://www.continuum.io/downloads.
+|anaconda-download|.
 
 .. note::
    If you already use Anaconda for Python 3.5, create a separate
