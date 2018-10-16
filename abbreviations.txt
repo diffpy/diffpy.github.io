@@ -17,7 +17,7 @@
    |downloadJuhasJac13|
 
 .. |downloadJuhasJac13| image:: /images/pdficon_small.png
-   :target: /doc/pdfgetx3/Juhas-jac-2013.pdf
+   :target: /doc/pdfgetx/Juhas-jac-2013.pdf
 
 
 .. |citeFarrowJpcm07| replace::
