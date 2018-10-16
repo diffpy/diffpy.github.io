@@ -1,6 +1,9 @@
 PDFgetX3
 ========
 
+.. include:: ../abbreviations.txt
+.. _Columbia Technology Ventures: ctv-xpdfsuite_
+
 PDFgetX3 is a command-line utility for converting X-ray powder diffraction data to
 atomic pair distribution functions (PDF). PDFgetX3 is easy to use, fast and convenient
 for automated batch processing. The interactive mode provides complete access to all
@@ -15,7 +18,7 @@ high throughput PDF analyses and contains many features for interrogating, compa
 modeling data as well as simply doing data reduction.
 
 PDFgetX3-academic can be obtained from the
-`Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_, provided it will
+`Columbia Technology Ventures`_, provided it will
 be used for open academic research.
 
 * `Installation instructions <../doc/pdfgetx3/install.html>`_

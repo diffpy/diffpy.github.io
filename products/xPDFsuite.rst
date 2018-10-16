@@ -2,6 +2,7 @@
 xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays
 ##################################################################################################################
 
+.. include:: ../abbreviations.txt
 .. figure:: ../images/xPDFsuite.png
    :align: center
 
@@ -43,12 +44,11 @@ Explore xPDFsuite
 =================
 xPDFsuite is available for purchase for either academic or commercial applications.
  * To see xPDFsuite in action, please see the video here. (available soon)
- * To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available at |CTV_link|. This has all the xPDFsuite functionality, but you will not be able to save your results.
- * To purchase xPDFsuite (separate academic and commercial license options), please go to |CTV_link|.
+ * To help you explore xPDFsuite on your own data we have made a free evaluation version of the software available at |CTV_link|_. This has all the xPDFsuite functionality, but you will not be able to save your results.
+ * To purchase xPDFsuite (separate academic and commercial license options), please go to |CTV_link|_.
 
-.. |CTV_link| raw:: html
-
-   <a href="http://bit.ly/xPDFsuite" target="_blank">Columbia Technology Ventures</a>
+.. |CTV_link| replace:: Columbia Technology Ventures
+.. _CTV_link: ctv-xpdfsuite_
 
 **Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our
 free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.**
