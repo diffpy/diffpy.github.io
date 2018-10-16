@@ -52,6 +52,9 @@ clean:
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
+	@echo "Copy the static_root directory."
+	rsync -aO static_root/ $(BUILDDIR)/html/
+	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 dirhtml:
