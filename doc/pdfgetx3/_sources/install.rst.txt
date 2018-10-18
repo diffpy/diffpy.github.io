@@ -57,7 +57,8 @@ PDFgetX3 installation
 ------------------------------------------------------------------------
 
 PDFgetX3 is distributed as a Python egg package, which can be obtained
-from the `Columbia Technology Ventures <http://bit.ly/xPDFsuite>`_.
+from the `Columbia Technology Ventures
+<http://innovation.columbia.edu/technologies/m11-120>`__.
 Once all the required software is in
 place, start the command prompt on Windows or a Unix terminal on Linux
 or Mac, navigate to the directory that contains the egg file and
