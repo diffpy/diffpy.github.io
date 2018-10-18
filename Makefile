@@ -209,7 +209,7 @@ publish-prepare: .create-publish-branch
 	cd _build/webpage && \
 	    git add --all . && \
 	    git diff --cached --quiet || \
-	    git commit -m "Sync with the source at $(GITLASTCOMMIT)."
+	    git commit -m "Sync with the source at $(GITLASTCOMMIT)"
 	cd _build/webpage && \
 	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
 
