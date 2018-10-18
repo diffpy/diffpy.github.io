@@ -328,3 +328,37 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# -- Final customizations -------------------------------------------------
+
+from sphinx.transforms import SphinxTransform
+
+class MakeAbsoluteURIsRelative(SphinxTransform):
+
+    '''Convert local root-anchored references to relative.
+
+    Ensure PDF downloads defined in abbreviations.txt work from any document.
+    '''
+
+    default_priority = 750
+
+    def apply(self):
+        from sphinx.util.nodes import traverse_parent
+        from docutils.nodes import reference, document
+        from docutils.utils import relative_path
+        srcdir = self.env.srcdir
+        absolute_reference = lambda o: (isinstance(o, reference) and
+                                        o.get('refuri', '')[:1] == '/')
+        for node in self.document.traverse(absolute_reference):
+            target = srcdir + node['refuri']
+            doc = next(traverse_parent(node, document))
+            trel = relative_path(doc['source'], target)
+            node.replace_attr('refuri', trel)
+        return
+
+# end of class MakeAbsoluteURIsRelative
+
+
+def setup(app):
+    app.add_transform(MakeAbsoluteURIsRelative)
+    return
