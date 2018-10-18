@@ -119,6 +119,6 @@ If you use this software in a research work which leads to publication,
 we ask you to acknowledge the use of DiffPy-CMI by citing the following
 paper:
 
-   |citeJuhasAca15|
+* |citeJuhasAca15|
 
 .. include:: ../../abbreviations.txt
