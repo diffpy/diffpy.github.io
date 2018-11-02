@@ -207,7 +207,7 @@ publish-prepare: .create-publish-branch
 	    --exclude-from=_build/webpage/.rsync-exclude \
 	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/webpage/
 	cd _build/webpage && \
-	    git add --all . && \
+	    git add --force --all . && \
 	    git diff --cached --quiet || \
 	    git commit -m "Sync with the source at $(GITLASTCOMMIT)"
 	cd _build/webpage && \
