@@ -6,3 +6,6 @@ _build
 .project
 .pydevproject
 .settings
+
+# Include zip files present in static_root
+!/static_root/**/*.zip
