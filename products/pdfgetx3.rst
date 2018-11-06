@@ -1,5 +1,6 @@
-PDFgetX3
-========
+#####################
+PDFgetX3 and PDFgetN3
+#####################
 
 PDFgetX3 is a command-line utility for converting X-ray powder diffraction data to
 atomic pair distribution functions (PDF). PDFgetX3 is easy to use, fast and convenient
