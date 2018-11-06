@@ -52,8 +52,15 @@ clean:
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
-	@echo "Copy the static_root directory."
-	rsync -aO static_root/ $(BUILDDIR)/html/
+	@echo "Create hard-linked copy of 'static_root':"
+	@echo
+	rsync -aO -F --ignore-existing --link-dest=$(CURDIR)/static_root/ \
+	    static_root/ $(BUILDDIR)/html/
+	@echo
+	@echo "Validate symbolic links:"
+	@echo
+	@find $(BUILDDIR)/html -type l \( -exec test -e {} \; -or -print \) | \
+	    sed 's/^/[broken] /' | ( ! grep . ) && echo "[OK]"
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
