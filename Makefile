@@ -203,7 +203,7 @@ publish-prepare: .create-publish-branch
 	    git checkout $(PUBLISHBRANCH)
 	cd _build/webpage && \
 	    git pull $(GITREMOTEURL) $(PUBLISHBRANCH)
-	rsync -acv --delete --exclude=.git --exclude=.rsync-exclude \
+	rsync -aOcv --delete --exclude=.git --exclude=.rsync-exclude \
 	    --exclude-from=_build/webpage/.rsync-exclude \
 	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/webpage/
 	cd _build/webpage && \
