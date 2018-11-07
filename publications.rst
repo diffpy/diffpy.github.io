@@ -6,6 +6,8 @@ References
 The following papers in the literature describe the DiffPy products.
 Please cite us if our software has been used in your research.
 
+* |citeJuhasJac18|
+
 * |citeJuhasAca15|
 
 * |citeGranlundAca15|

@@ -5,7 +5,8 @@ To ensure a bright future for the DiffPy project it is essential to build a stro
 of users and contributing developers. There are several Google groups for support and
 development of DiffPy and related applications.
 
-- `diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ Help on usage of DiffPy-CMI, PDFgetX3,
+- `diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ Help on usage of DiffPy-CMI,
+  PDFgetX3, PDFgetN3,
   PDFgui, and other DiffPy components. This group is a knowledge base for PDFgui
   user tips, tricks and troubleshooting. Feel free to search for answers or ask your question here.
 
@@ -16,7 +17,7 @@ development of DiffPy and related applications.
       </form>
 
 - `diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ For bug reports, feature requests, and discussions about development
-  and changes of DiffPy-CMI, PDFgetX3,
+  and changes of DiffPy-CMI, PDFgetX3, PDFgetN3,
   PDFgui, and other DiffPy components. Materials scientists, chemists
   physicists, engineers - please contribute by telling us your needs or sharing your suggestions here.
 

@@ -54,8 +54,13 @@ html:
 	@echo
 	@echo "Create hard-linked copy of 'static_root':"
 	@echo
-	rsync -aO --link-dest=$(CURDIR)/static_root/ \
+	rsync -aO -F --link-dest=$(CURDIR)/static_root/ \
 	    static_root/ $(BUILDDIR)/html/
+	@echo
+	@echo "Validate symbolic links:"
+	@echo
+	@find $(BUILDDIR)/html -type l \( -exec test -e {} \; -or -print \) | \
+	    sed 's/^/[broken] /' | ( ! grep . ) && echo "[OK]"
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
