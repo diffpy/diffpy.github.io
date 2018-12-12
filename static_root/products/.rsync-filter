@@ -1,9 +1,0 @@
-# Filter rules for the rsync command in "make html"
-
-exclude .rsync-filter
-
-# pdfgetx.html is a dummy target for the pdfgetx3.html symbolic link.
-# Copy only the symbolic link so it points to the sphinx-built file.
-
-exclude pdfgetx.html
-include pdfgetx3.html
