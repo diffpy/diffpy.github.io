@@ -7,7 +7,9 @@
 
 .. raw:: html
 
-   <strong>DiffPy-CMI upgrade 2.0 is now available!</strong>
+   <strong>
+   DiffPy-CMI upgrade 3.0 for Python 2 and 3 is now available! (Mar 14, 2019)
+   </strong>
    &nbsp;
    <a href="products/diffpycmi/index.html" class="btn btn-large btn-success btn-flat">Get DiffPy-CMI</a>
    &nbsp;
