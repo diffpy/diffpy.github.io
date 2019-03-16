@@ -15,6 +15,10 @@
    &nbsp;
    <a href="acknowledgements.html">Credits</a></p>
 
+Tutorial files for ADD2019_ are at
+https://github.com/diffpy/add2019-diffpy-cmi.
+
+.. _ADD2019: https://workshops.ill.fr/event/133/page/32-home
 
 
 DiffPy - Atomic Structure Analysis in Python
