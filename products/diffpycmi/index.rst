@@ -77,6 +77,15 @@ What next?
 * :doc:`Contribute code <contributecode>`
 
 
+Tutorials
+=========
+
+* ADD2019_ school and conference --
+  https://github.com/diffpy/add2019-diffpy-cmi
+
+.. _ADD2019: https://workshops.ill.fr/event/133/page/32-home
+
+
 Documentation
 =============
 
@@ -91,7 +100,7 @@ at the links below.
 * pyobjcryst_ -- Python interface to ObjCryst++ crystallographic
   library
 * diffpy.utils_ -- general purpose utilities for the diffpy libraries
-* libdiffpy_ - C++ library for calculation of PDF and other real-space
+* libdiffpy_ -- C++ library for calculation of PDF and other real-space
   quantities
 
 .. _diffpy.srfit: ../../doc/srfit/
