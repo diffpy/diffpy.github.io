@@ -3,7 +3,6 @@ PDFgetX3 and PDFgetN3
 #####################
 
 .. include:: ../abbreviations.txt
-.. _Columbia Technology Ventures: ctv-xpdfsuite_
 
 PDFgetX3 and PDFgetN3 are command-line utilities that
 extract atomic pair distribution function (PDF) from
@@ -26,12 +25,40 @@ xPDFsuite is designed for flexible,
 high throughput PDF analyses and contains many features for interrogating, comparing and
 modeling data as well as simply doing data reduction.
 
-The academic license for PDFgetX3 and PDFgetN3 can be obtained for free from
-the `Columbia Technology Ventures`_, provided the software will
-be used for open academic research.
 
+Download
+========
+
+.. should be easier to use redirected URLs instead of
+   http://innovation.columbia.edu/technologies/m11-120
+
+.. |m11-120| replace:: https://columbia.resoluteinnovation.com/technologies/M11-120
+
+The PDFgetX3 and PDFgetN3 software can be obtained for free from
+`Columbia Technology Ventures <https://techventures.columbia.edu>`__,
+provided it will be used for open academic research.
 If you plan to use the software in any other way, please contact
 `Beth Kauderer <techtransfer@columbia.edu>`_ at Columbia Technology Ventures.
+
+Use the following steps to obtain academic license and download
+the software:
+
+1. Open licensing page |m11-120|.
+
+2. Select "Express Licensing" from the navigation bar and
+   then "Sign In To Continue".
+
+3. Sign In redirects to the top page.
+   Search for ``pdfgetx3`` or ``m11-120`` to return
+   to the licensing page.
+
+4. Select "Express Licensing" again and choose
+   "PDFgetX3 and PDFgetN3, Free Academic".
+
+5. Submit the license request and wait for license confirmation email.
+
+6. The software will be at Top --> More --> "Manage Downloads" or just visit
+   https://columbia.resoluteinnovation.com/downloads.
 
 
 Documentation
