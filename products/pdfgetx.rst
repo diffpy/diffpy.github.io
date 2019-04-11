@@ -36,29 +36,32 @@ Download
 
 The PDFgetX3 and PDFgetN3 software can be obtained for free from
 `Columbia Technology Ventures <https://techventures.columbia.edu>`__,
-provided it will be used for open academic research.
+provided it will be used for open academic research
+(please cite the relevant paper below).
 If you plan to use the software in any other way, please contact
 `Beth Kauderer <techtransfer@columbia.edu>`_ at Columbia Technology Ventures.
 
-Use the following steps to obtain academic license and download
+Use the following steps to obtain the academic license and download
 the software:
 
-1. Open licensing page |m11-120|.
+1. Open new browser window at the licensing page |m11-120|.
 
 2. Select "Express Licensing" from the navigation bar and
    then "Sign In To Continue".
 
-3. Sign In redirects to the top page.
+3. Sign-In redirects to the top page.
    Search for ``pdfgetx3`` or ``m11-120`` to return
-   to the licensing page.
+   to the licensing page again.
 
 4. Select "Express Licensing" again and choose
    "PDFgetX3 and PDFgetN3, Free Academic".
 
 5. Submit the license request and wait for license confirmation email.
 
-6. The software will be at Top --> More --> "Manage Downloads" or just visit
+6. The software will be under Top --> More --> "Manage Downloads" or just visit
    https://columbia.resoluteinnovation.com/downloads.
+
+Sorry for the complicated process.  We hope you enjoy the software!
 
 
 Documentation
