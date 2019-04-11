@@ -200,24 +200,22 @@ GITLASTCOMMIT = $(shell git rev-parse --short HEAD)
 	    git branch --track $(PUBLISHBRANCH) origin/$(PUBLISHBRANCH)
 
 publish-prepare: .create-publish-branch
-	@test -d _build/html || \
+	@test -d $(BUILDDIR)/html || \
 	    ( echo >&2 "Run 'make html' first!"; false )
-	test -d _build/webpage || \
-	    git clone -s -b $(PUBLISHBRANCH) $(GITREPOPATH) _build/webpage
-	cd _build/webpage && \
-	    git fetch && \
-	    git checkout --force $(PUBLISHBRANCH)
-	cd _build/webpage && \
-	    git pull $(GITREMOTEURL) $(PUBLISHBRANCH)
+	test -d $(BUILDDIR)/webpage || \
+	    git clone -s -b $(PUBLISHBRANCH) $(GITREPOPATH) $(BUILDDIR)/webpage
+	git -C $(BUILDDIR)/webpage fetch
+	git -C $(BUILDDIR)/webpage checkout --force $(PUBLISHBRANCH)
+	git -C $(BUILDDIR)/webpage pull $(GITREMOTEURL) $(PUBLISHBRANCH)
 	rsync -aOcv --delete --exclude=.git --exclude=.rsync-exclude \
-	    --exclude-from=_build/webpage/.rsync-exclude \
-	    --link-dest=$(CURDIR)/_build/html _build/html/ _build/webpage/
-	cd _build/webpage && \
-	    git add --force --all . && \
-	    git diff --cached --quiet || \
-	    git commit -m "Sync with the source at $(GITLASTCOMMIT)"
-	cd _build/webpage && \
-	    git push $(GITREPOPATH) $(PUBLISHBRANCH)
+	    --exclude-from=$(BUILDDIR)/webpage/.rsync-exclude \
+	    --link-dest=$(realpath $(BUILDDIR)/html) \
+	    $(BUILDDIR)/html/ $(BUILDDIR)/webpage/
+	git -C $(BUILDDIR)/webpage add --force --all .
+	git -C $(BUILDDIR)/webpage diff --cached --quiet || \
+	    git -C $(BUILDDIR)/webpage \
+		commit -m "Sync with the source at $(GITLASTCOMMIT)"
+	git -C $(BUILDDIR)/webpage push $(GITREPOPATH) $(PUBLISHBRANCH)
 
 publish-push:
 	git push $(GITREMOTE) $(SOURCEBRANCH) $(PUBLISHBRANCH)
