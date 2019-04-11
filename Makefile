@@ -206,7 +206,7 @@ publish-prepare: .create-publish-branch
 	    git clone -s -b $(PUBLISHBRANCH) $(GITREPOPATH) _build/webpage
 	cd _build/webpage && \
 	    git fetch && \
-	    git checkout $(PUBLISHBRANCH)
+	    git checkout --force $(PUBLISHBRANCH)
 	cd _build/webpage && \
 	    git pull $(GITREMOTEURL) $(PUBLISHBRANCH)
 	rsync -aOcv --delete --exclude=.git --exclude=.rsync-exclude \
