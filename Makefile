@@ -191,13 +191,17 @@ pseudoxml:
 GITREPOPATH = $(CURDIR)/.git
 SOURCEBRANCH = $(shell git symbolic-ref --short HEAD)
 PUBLISHBRANCH = master
+PUBFIRSTREMOTE = $(shell git branch -r --list "*/$(PUBLISHBRANCH)" | head -1)
 GITREMOTE = $(shell git config --get branch.$(PUBLISHBRANCH).remote)
 GITREMOTEURL = $(shell git config --get remote.$(GITREMOTE).url)
 GITLASTCOMMIT = $(shell git rev-parse --short HEAD)
 
 .create-publish-branch:
-	git rev-parse --verify --quiet $(PUBLISHBRANCH) > /dev/null || \
-	    git branch --track $(PUBLISHBRANCH) origin/$(PUBLISHBRANCH)
+	@git rev-parse --verify --quiet $(PUBLISHBRANCH) >/dev/null || \
+	    echo $(PUBFIRSTREMOTE) | grep -q . || \
+	    ( echo "No remote found for branch $(PUBLISHBRANCH)" >&2; exit 1 )
+	git rev-parse --verify --quiet $(PUBLISHBRANCH) >/dev/null || \
+	    git branch --track $(PUBLISHBRANCH) $(PUBFIRSTREMOTE)
 
 publish-prepare: .create-publish-branch
 	@test -d $(BUILDDIR)/html || \
