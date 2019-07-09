@@ -35,7 +35,8 @@ though it has not been extensively tested beyond the PDF.
 .. figure:: ../images/pdfmorph_nacl_ex.png
 	:align: center
 
-	Transformation techniques utilized by PDFmorph on an NaCl sample
+	Transformation techniques (scale, smear, and stretch, respectively) 
+	utilized by PDFmorph applied sequentially on an NaCl sample
 
 
 Installation
@@ -62,7 +63,7 @@ from |anaconda-download|.
 		conda create --name=py3x python=3.x 
 		conda activate py3x
 
-	On Windows use just ``activate py27``. Make sure that *py3x* environment is
+	On Windows use just ``activate py3x``. Make sure that *py3x* environment is
 	activated in your shell prior to running the "install" or "update" commands
 	below.
 
@@ -84,7 +85,7 @@ If installed correctly, this command should return PDFmorph's current version nu
 PDFmorph Updates
 ================
 
-The Anaconda package sustem makes it easu to prepare and distribute software
+The Anaconda package sustem makes it easy to prepare and distribute software
 packages and bugfixes. To update the lates version of PDFmorph use ::
 
 	conda update diffpy.pdfmorph
