@@ -86,3 +86,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/SrMise
    products/mPDF
    products/xinterpdf
+   products/PDFmorph
