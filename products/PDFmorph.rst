@@ -31,7 +31,7 @@ There are also a few other morphing transformations in the program.
 Finally, we note that PDFmorph should work on other spectra that are not PDFs, 
 though it has not been extensively tested beyond the PDF.
 
-.. PDFmorph will soon be included in :doc:`xPDFsuite <xPDFsuite>`, a powerful end-to-end software for X-ray PDF analysis. PxPDFsuite is designed for flexible, high throughput PDF analyses and contains many features for interrogating, comparing, and modeling data as well as simply doing data reduction.
+.. PDFmorph will soon be included in :doc:`xPDFsuite <xPDFsuite>`, a powerful end-to-end software for X-ray PDF analysis. xPDFsuite is designed for flexible, high throughput PDF analyses and contains many features for interrogating, comparing, and modeling data as well as simply doing data reduction.
 
 .. figure:: ../images/pdfmorph_nacl_ex.png
 	:align: center
