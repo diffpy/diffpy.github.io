@@ -8,8 +8,8 @@ Overview
 ========
 
 .. note::
-	PDFmorph is an application which makes use of the Command Line Interface. If
-	you are unfamiliar with the CLI, it is recommended that you consult online
+	The PDFmorph application has a Command Line Interface. If you are 
+	unfamiliar with the CLI, it is recommended that you consult online
 	resources and become somewhat familiar before using PDFmorph.
 
 PDFmorph is a Python software package designed to increase the insight researchers
@@ -101,7 +101,7 @@ https://github.com/diffpy/diffpy.pdfmorph and consult its README file.
 Documentation/Help
 ==================
 
-Alpha Version - latest
+0.0.1 - latest
 ----------------------
 
 * User manual (available in HTML and PDF) to be made available soon
