@@ -9,8 +9,9 @@ Overview
 
 .. note::
 	The PDFmorph application has a Command Line Interface. If you are 
-	unfamiliar with the CLI, it is recommended that you consult online
-	resources and become somewhat familiar before using PDFmorph.
+	unfamiliar with the terminal or windows command prompt, it is recommended 
+	that you consult online resources and become somewhat familiar before 
+	using PDFmorph.
 
 PDFmorph is a Python software package designed to increase the insight researchers
 can obtain from measured atomic pair distribution functions (PDFs) in a model 
