@@ -44,7 +44,7 @@ Installation
 ============
 
 By downloading and using this software, you are agreeing to the conditions 
-specified in the :doc:`software license <pdfmorphLICENSE>`.
+specified in the :doc:`software license <pdfmorph_license>`.
 
 PDFmorph is distributed as a software package for `Anaconda Python <https://www.continuum.io>`__.
 PDFmorph is available for all operating systems supported by Anaconda, namely for
