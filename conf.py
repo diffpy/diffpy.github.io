@@ -361,4 +361,5 @@ class MakeAbsoluteURIsRelative(SphinxTransform):
 
 def setup(app):
     app.add_transform(MakeAbsoluteURIsRelative)
+    app.add_css_file('diffpy-styles.css')
     return
