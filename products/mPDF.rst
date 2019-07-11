@@ -9,7 +9,7 @@ The diffpy.mpdf package provides a convenient method for computing the magnetic 
 data. The mPDF is calculated by an MPDFcalculator object, which extracts the spin
 positions and spin vectors from a MagStructure object that the MPDFcalculator
 takes as input. The MagStructure object in turn can contain multiple MagSpecies
-objects, which generate magnetic configurations based on a diffpy.Structure object
+objects, which generate magnetic configurations based on a diffpy.structure object
 and a set of propagation vectors and basis vectors provided by the user.
 Alternatively, the user can manually define a magnetic unit cell that will be used
 to generate the magnetic structure, or the magnetic structure can be defined simply
@@ -33,7 +33,7 @@ The diffpy.mpdf package requires Python 2.6 or 2.7 and the following software:
 * ``NumPy`` - numerical mathematics and fast array operations for Python
 * ``SciPy`` - scientific libraries for Python
 * ``matplotlib`` - python plotting library
-* ``diffpy.Structure`` - diffpy package for generating atomic structure
+* ``diffpy.structure`` - diffpy package for generating atomic structure
 * ``diffpy.srreal`` - diffpy package for calculating real-space quantities
 
 See the :doc:`mpdf license <mPDFlicense>` for terms and conditions of use.

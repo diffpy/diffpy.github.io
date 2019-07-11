@@ -95,7 +95,7 @@ at the links below.
 * diffpy.srfit_ -- configuration and control of data-fitting problems
 * diffpy.srreal_ -- calculators for pair distribution function, bond
   valence sums, etc.
-* diffpy.Structure_ -- light-weight representation of crystal
+* diffpy.structure_ -- light-weight representation of crystal
   structures
 * pyobjcryst_ -- Python interface to ObjCryst++ crystallographic
   library
@@ -107,7 +107,7 @@ at the links below.
 
 .. _diffpy.srreal: ../../doc/srreal/
 
-.. _diffpy.Structure: ../../doc/structure/
+.. _diffpy.structure: ../../doc/structure/
 
 .. _diffpy.utils: ../../doc/utils/
 

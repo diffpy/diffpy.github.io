@@ -27,7 +27,7 @@ Libraries developed by the DiffPy team
        the pair distribution function (PDF), bond lengths, and bond
        valence sums.
 
-   * - `diffpy.Structure`_
+   * - `diffpy.structure`_
      - `doc <../../doc/structure/>`__
      - Light-weigth storage of crystal structure data.
 
@@ -79,7 +79,7 @@ External libraries
 .. URL definitions below -----------------------------------------------
 
 .. _cxxtest: http://cxxtest.com/
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.structure
+.. _diffpy.structure: https://github.com/diffpy/diffpy.structure
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
 .. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
 .. _diffpy.utils: https://github.com/diffpy/diffpy.utils
