@@ -92,15 +92,15 @@ Documentation
 Documentation for packages developed by the DiffPy team is available
 at the links below.
 
-* `diffpy.srfit </doc/srfit>`__ -- configuration and control of data-fitting problems
-* `diffpy.srreal </doc/srreal>`__ -- calculators for pair distribution function, bond
+* |doc-diffpy.srfit|_ -- configuration and control of data-fitting problems
+* |doc-diffpy.srreal|_ -- calculators for pair distribution function, bond
   valence sums, etc.
-* `diffpy.structure </doc/structure>`__ -- light-weight representation of crystal
+* |doc-diffpy.structure|_ -- light-weight representation of crystal
   structures
-* `pyobjcryst </doc/pyobjcryst>`__ -- Python interface to ObjCryst++ crystallographic
+* |doc-pyobjcryst|_ -- Python interface to ObjCryst++ crystallographic
   library
-* `diffpy.utils </doc/utils>`__ -- general purpose utilities for the diffpy libraries
-* `libdiffpy </doc/libdiffpy>`__ -- C++ library for calculation of PDF and other real-space
+* |doc-diffpy.utils|_ -- general purpose utilities for the diffpy libraries
+* |doc-libdiffpy|_ -- C++ library for calculation of PDF and other real-space
   quantities
 
 See :ref:`DiffPy-CMI contents <contents>` for a complete list
@@ -116,5 +116,14 @@ we ask you to acknowledge the use of DiffPy-CMI by citing the following
 paper:
 
 * |citeJuhasAca15|
+
+.. URL definitions below -----------------------------------------------
+
+.. |doc-diffpy.srfit| replace:: diffpy.srfit
+.. |doc-diffpy.srreal| replace:: diffpy.srreal
+.. |doc-diffpy.structure| replace:: diffpy.structure
+.. |doc-diffpy.utils| replace:: diffpy.utils
+.. |doc-pyobjcryst| replace:: pyobjcryst
+.. |doc-libdiffpy| replace:: libdiffpy
 
 .. include:: ../../abbreviations.txt

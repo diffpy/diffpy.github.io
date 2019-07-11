@@ -18,29 +18,29 @@ Libraries developed by the DiffPy team
      - Description
 
    * - `diffpy.srfit`_
-     - `doc <../../doc/srfit>`__
+     - |doc-diffpy.srfit|_
      - Setup and control of general fitting problems.
 
    * - `diffpy.srreal`_
-     - `doc <../../doc/srreal/>`__
+     - |doc-diffpy.srreal|_
      - Python library for calculation of pair based quantities such as
        the pair distribution function (PDF), bond lengths, and bond
        valence sums.
 
    * - `diffpy.structure`_
-     - `doc <../../doc/structure/>`__
+     - |doc-diffpy.structure|_
      - Light-weigth storage of crystal structure data.
 
    * - `diffpy.utils`_
-     - `doc <../../doc/utils/>`__
+     - |doc-diffpy.utils|_
      - General purpose utilities for the diffpy libraries.
 
    * - `pyobjcryst`_
-     - `doc <../../doc/pyobjcryst/>`__
+     - |doc-pyobjcryst|_
      - Python bindings to the ObjCryst++ crystallographic library.
 
    * - `libdiffpy`_
-     - `doc <../../doc/libdiffpy/>`__
+     - |doc-libdiffpy|_
      - C++ library for calculation of PDF and other real-space
        quantities.
 
@@ -77,6 +77,13 @@ External libraries
      - Testing framework for C++.
 
 .. URL definitions below -----------------------------------------------
+
+.. |doc-diffpy.srfit| replace:: doc
+.. |doc-diffpy.srreal| replace:: doc
+.. |doc-diffpy.structure| replace:: doc
+.. |doc-diffpy.utils| replace:: doc
+.. |doc-pyobjcryst| replace:: doc
+.. |doc-libdiffpy| replace:: doc
 
 .. _cxxtest: http://cxxtest.com/
 .. _periodictable: http://www.reflectometry.org/danse/elements.html

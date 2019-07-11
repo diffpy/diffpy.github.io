@@ -19,6 +19,15 @@
 .. _pyobjcryst: https://github.com/diffpy/pyobjcryst
 .. _srfit-sasview: https://github.com/diffpy/srfit-sasview
 
+.. External online documentation ---------------------------------------
+
+.. _doc-diffpy.srfit: https://diffpy.github.io/diffpy.srfit
+.. _doc-diffpy.srreal: https://diffpy.github.io/diffpy.srreal
+.. _doc-diffpy.structure: https://diffpy.github.io/diffpy.structure
+.. _doc-diffpy.utils: https://diffpy.github.io/diffpy.utils
+.. _doc-libdiffpy: https://diffpy.github.io/libdiffpy
+.. _doc-pyobjcryst: https://diffpy.github.io/pyobjcryst
+
 .. Citations -----------------------------------------------------------
 
 .. |citeJuhasJac13| replace::
