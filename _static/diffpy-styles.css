@@ -1,5 +1,1 @@
-/* Restore left-aligned table columns for sphinx 2.0 and later */
-
-table.align-default {
-    text-align: left;
-}
+/* Add CSS style overrides here */
