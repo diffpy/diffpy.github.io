@@ -8,28 +8,30 @@ Overview
 ========
 
 .. note::
-	The PDFmorph application has a Command Line Interface. If you are 
-	unfamiliar with the terminal or windows command prompt, it is recommended 
-	that you consult online resources and become somewhat familiar before 
-	using PDFmorph.
+	The PDFmorph application has a Command Line Interface. If you 
+	are unfamiliar with the terminal or windows command prompt, it 
+	is recommended that you consult online resources and become 
+	somewhat familiar before using PDFmorph.
 
-PDFmorph is a Python software package designed to increase the insight researchers
-can obtain from measured atomic pair distribution functions (PDFs) in a model 
-independent way. The program was designed to help a researcher answer the question: 
-"has my material undergone a phase transition between these two measurements?"
+PDFmorph is a Python software package designed to increase the insight 
+researchers can obtain from measured atomic pair distribution functions 
+(PDFs) in a model-independent way. The program was designed to help a 
+researcher answer the question: Has my material undergone a phase 
+transition between these two measurements?
 
-PDFmorph makes use of several data manipulation techniques to correct for benign
-effects such as thermal expansion and increased thermal motion before computing and
-plotting a difference curve between two PDFs. One PDF is identified as the "target" 
-PDF and the second is "morphed" by "stretching", "smearing", and "scaling". PDFmorph
-will vary amplitude of morphing transformations to obtain the best fit between
-morphed and target PDFs, then plot them along with the difference curve plotted
+PDFmorph makes use of several data manipulation techniques to correct 
+for benign effects such as thermal expansion and increased thermal 
+motion before computing and plotting a difference curve between two PDFs. 
+One PDF is identified as the "target" PDF and the second is "morphed" 
+by "stretching", "smearing", and "scaling". PDFmorph will vary amplitude 
+of morphing transformations to obtain the best fit between morphed and 
+target PDFs, then plot them along with the difference curve plotted
 below.
 
 There are also a few other morphing transformations in the program.
 
-Finally, we note that PDFmorph should work on other spectra that are not PDFs, 
-though it has not been extensively tested beyond the PDF.
+Finally, we note that PDFmorph should work on other spectra that are 
+not PDFs, though it has not been extensively tested beyond the PDF.
 
 .. PDFmorph will soon be included in :doc:`xPDFsuite <xPDFsuite>`, a powerful end-to-end software for X-ray PDF analysis. xPDFsuite is designed for flexible, high throughput PDF analyses and contains many features for interrogating, comparing, and modeling data as well as simply doing data reduction.
 
@@ -46,53 +48,60 @@ Installation
 By downloading and using this software, you are agreeing to the conditions 
 specified in the :doc:`software license <pdfmorph_license>`.
 
-PDFmorph is distributed as a software package for `Anaconda Python <https://www.continuum.io>`__.
-PDFmorph is available for all operating systems supported by Anaconda, namely for
-32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
+PDFmorph is distributed using conda. To install software using conda
+you will first have to download and install ``Anaconda`` or ``mini-conda``
+from `continuum <https://www.continuum.io>`__.
 
-As a prerequisite for PDFmorph installation, download and install Anaconda
-from |anaconda-download|.
+PDFmorph is available for all operating systems supported by Anaconda, 
+namely for 32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
 
 .. note::
-	PDFmorph is a software which operates on any version of Python 3. Anaconda
-	should install the latest version of Python by default, but in case you 
-	already use Anaconda for a prior release of Python, create a separate
-	Anaconda environment *py3x* which will provide your preferred version of 
-	Python 3 (substitute x for your preferred release) instead of Python 2.7 
-	or earlier. ::
+	We recommend that you run PDFmorph in a Python 3 conda virtual
+	environment. With Anaconda or mini-conda installed on your system, 
+	first create the virtual environment by typing ::
+		
+		conda create --name=py3 python=3
 
-		conda create --name=py3x python=3.x 
-		conda activate py3x
+	You can give the environment any name you like but it should 
+	have some Python version 3 installed. You only need to create
+	the environment once, but every time you want to use PDFmorph
+	you will have to activate the environment in which it is installed
+	by typing ::
+	
+		source activate py3
 
-	On Windows use just ``activate py3x``. Make sure that *py3x* environment is
-	activated in your shell prior to running the "install" or "update" commands
-	below.
+	on Mac/Linux, or ::
 
-PDFmorph is available from the "conda-forge" channel of Anaconda packages. Open a 
-*Terminal* window or *Anaconda Command Prompt* on Windows and install PDFmorph
-using the :program:`conda` command ::
+		activate py3
+
+	on Windows.
+
+PDFmorph is available from the "conda-forge" channel of Anaconda packages. 
+Open a *Terminal* window or *Anaconda Command Prompt* on Windows and 
+install PDFmorph using the :program:`conda` command ::
 
 	conda config --add channels conda-forge
 	conda install diffpy.pdfmorph
 
-And it should be installed! To make sure that installation has completed correctly, 
-run the following command from your relevant conda environment :: 
+And it should be installed! To make sure that installation has completed 
+correctly, run the following command from your relevant conda environment :: 
 
 	pdfmorph --version
 
-If installed correctly, this command should return PDFmorph's current version number.
+This command should return PDFmorph's current version number.
 
 
 PDFmorph Updates
 ================
 
-The Anaconda package sustem makes it easy to prepare and distribute software
-packages and bugfixes. To update the lates version of PDFmorph use ::
+The Anaconda package system makes it easy to prepare and distribute 
+software packages and bugfixes. To update the latest version of PDFmorph, 
+use ::
 
 	conda update diffpy.pdfmorph
 
-With other Python distributions, the program can be updated to the latest version
-as follows ::
+With other Python distributions, the program can be updated to the 
+latest version with ::
 
 	easy_install --upgrade diffpy.pdfmorph
 
@@ -106,14 +115,12 @@ Documentation/Help
 0.0.1 - latest
 ----------------------
 
-* User manual (available in HTML and PDF) to be made available soon
-* Installation instructions to come
-* Tutorial files will be made available soon
+* User manual (available in HTML and PDF)
+* Installation instructions
+* `Sample PDF files <https://github.com/diffpy/diffpy.pdfmorph/tree/master/tests/testdata>`__
+* Tutorial
 * Please, join the :doc:`community forum <../community>` for tips, 
   tricks, and feedback.
 
 
-References
-==========
-
-Paper on PDfmorph will be released soon.
+.. References// # update upon paper resease
