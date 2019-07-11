@@ -58,7 +58,7 @@ External libraries
      - Description
 
    * - srfit-sasview_
-     - `doc <http://www.sasview.org/docs/user/user.html>`__
+     - `doc <https://www.sasview.org/docs/user/user.html>`__
      - Selected modules from SasView_, the Small
        Angle Scattering Analysis Software Package.
 
@@ -88,4 +88,4 @@ External libraries
 .. _periodictable: http://www.reflectometry.org/danse/elements.html
 .. _pyobjcryst: https://github.com/diffpy/pyobjcryst
 .. _srfit-sasview: https://github.com/diffpy/srfit-sasview
-.. _SasView: http://www.sasview.org/
+.. _SasView: https://www.sasview.org
