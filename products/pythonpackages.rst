@@ -39,20 +39,9 @@ Module                      Description
                             PDFs.
 ======================      ============================================
 
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+.. URL definitions below -----------------------------------------------
 
 .. _diffpy.srmise: https://github.com/diffpy/diffpy.srmise
-
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
-
-.. _diffpy.structure: https://github.com/diffpy/diffpy.structure
-
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-
 .. _diffpy.pdffit2: https://github.com/diffpy/diffpy.pdffit2
-
-.. _diffpy.mpdf: https://github.com/benfrandsen/diffpy.magpdf
 
 .. include:: ../abbreviations.txt

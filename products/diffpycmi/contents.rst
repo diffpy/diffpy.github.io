@@ -79,13 +79,7 @@ External libraries
 .. URL definitions below -----------------------------------------------
 
 .. _cxxtest: http://cxxtest.com/
-.. _diffpy.structure: https://github.com/diffpy/diffpy.structure
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-.. _libdiffpy: https://github.com/diffpy/libdiffpy
-.. _libobjcryst: https://github.com/diffpy/libobjcryst
 .. _periodictable: http://www.reflectometry.org/danse/elements.html
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-.. _srfit-sasview: https://github.com/diffpy/srfit-sasview
 .. _SasView: https://www.sasview.org
+
+.. include:: ../../abbreviations.txt

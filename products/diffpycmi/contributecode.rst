@@ -32,16 +32,6 @@ Module                      Description
                             as a shared library
 ======================      ============================================
 
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+.. URL definitions below -----------------------------------------------
 
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
-
-.. _diffpy.structure: https://github.com/diffpy/diffpy.structure
-
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-
-.. _libdiffpy: https://github.com/diffpy/libdiffpy
-
-.. _libobjcryst: https://github.com/diffpy/libobjcryst
+.. include:: ../../abbreviations.txt
