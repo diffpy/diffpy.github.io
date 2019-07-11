@@ -1,5 +1,0 @@
-/* Turn off italics for internal references */
-
-a.reference.internal em {
-  font-style: normal;
-}
