@@ -5,7 +5,7 @@
 .. |anaconda-download| replace:: https://www.anaconda.com/download
 .. _anaconda-download: https://www.anaconda.com/download
 .. _diffpy-users: https://groups.google.com/d/forum/diffpy-users
-.. _ctv-xpdfsuite: http://innovation.columbia.edu/technologies/m11-120
+.. _ctv-xpdfsuite: https://columbia.resoluteinnovation.com/technologies/M11-120
 
 .. GitHub repositories -------------------------------------------------
 
