@@ -68,7 +68,7 @@ namely for 32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
 	We recommend that you run PDFmorph in a Python 3 conda virtual
 	environment. With Anaconda or mini-conda installed on your system,
 	first create the virtual environment by typing ::
-		
+
 		conda create --name=<env_name> python=3
 
 	You can give the environment any name you like but it should
@@ -76,7 +76,7 @@ namely for 32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
 	on Python 2.7). You only need to create the environment once,
 	but every time you want to use PDFmorph you will have to
 	reactivate the environment in which it is installed by typing ::
-	
+
 		source activate <env_name>
 
 	on Mac/Linux, or ``activate <env_name>`` on Windows.
