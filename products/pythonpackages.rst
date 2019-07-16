@@ -4,12 +4,13 @@ Python Packages
 This is a complete list of all Python packages developed by the DiffPy
 team. For more information about a specific package, follow the link to
 the corresponding github page. With the exception of PDFfit2, SrMise,
-and mPDF, all of the packages listed below are bundled in the |DiffPyCMI|
-release.
+mPDF, and PDFmorph, all of the packages listed below are bundled in the
+|DiffPyCMI| release.
 
 ======================      ============================================
 Module                      Description
 ======================      ============================================
+
 `diffpy.srfit`_             Setup and control of general fitting
                             problems.
 
@@ -37,6 +38,9 @@ Module                      Description
 
 `diffpy.mpdf`_              Tools for calculating and refining magnetic
                             PDFs.
+
+`diffpy.pdfmorph`_          Tools for comparing and manipulating two
+                            PDFs.
 ======================      ============================================
 
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
@@ -54,5 +58,7 @@ Module                      Description
 .. _diffpy.pdffit2: https://github.com/diffpy/diffpy.pdffit2
 
 .. _diffpy.mpdf: https://github.com/benfrandsen/diffpy.magpdf
+
+.. _diffpy.pdfmorph: https://github.com/diffpy/diffpy.pdfmorph
 
 .. include:: ../abbreviations.txt
