@@ -10,7 +10,6 @@ mPDF, and PDFmorph, all of the packages listed below are bundled in the
 ======================      ============================================
 Module                      Description
 ======================      ============================================
-
 `diffpy.srfit`_             Setup and control of general fitting
                             problems.
 
