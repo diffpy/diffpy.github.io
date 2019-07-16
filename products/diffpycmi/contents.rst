@@ -18,29 +18,29 @@ Libraries developed by the DiffPy team
      - Description
 
    * - `diffpy.srfit`_
-     - `doc <../../doc/srfit>`__
+     - |doc-diffpy.srfit|_
      - Setup and control of general fitting problems.
 
    * - `diffpy.srreal`_
-     - `doc <../../doc/srreal/>`__
+     - |doc-diffpy.srreal|_
      - Python library for calculation of pair based quantities such as
        the pair distribution function (PDF), bond lengths, and bond
        valence sums.
 
-   * - `diffpy.Structure`_
-     - `doc <../../doc/structure/>`__
+   * - `diffpy.structure`_
+     - |doc-diffpy.structure|_
      - Light-weigth storage of crystal structure data.
 
    * - `diffpy.utils`_
-     - `doc <../../doc/utils/>`__
+     - |doc-diffpy.utils|_
      - General purpose utilities for the diffpy libraries.
 
    * - `pyobjcryst`_
-     - `doc <../../doc/pyobjcryst/>`__
+     - |doc-pyobjcryst|_
      - Python bindings to the ObjCryst++ crystallographic library.
 
    * - `libdiffpy`_
-     - `doc <../../doc/libdiffpy/>`__
+     - |doc-libdiffpy|_
      - C++ library for calculation of PDF and other real-space
        quantities.
 
@@ -58,7 +58,7 @@ External libraries
      - Description
 
    * - srfit-sasview_
-     - `doc <http://www.sasview.org/docs/user/user.html>`__
+     - `doc <https://www.sasview.org/docs/user/user.html>`__
      - Selected modules from SasView_, the Small
        Angle Scattering Analysis Software Package.
 
@@ -78,14 +78,15 @@ External libraries
 
 .. URL definitions below -----------------------------------------------
 
+.. |doc-diffpy.srfit| replace:: doc
+.. |doc-diffpy.srreal| replace:: doc
+.. |doc-diffpy.structure| replace:: doc
+.. |doc-diffpy.utils| replace:: doc
+.. |doc-pyobjcryst| replace:: doc
+.. |doc-libdiffpy| replace:: doc
+
 .. _cxxtest: http://cxxtest.com/
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.structure
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-.. _libdiffpy: https://github.com/diffpy/libdiffpy
-.. _libobjcryst: https://github.com/diffpy/libobjcryst
 .. _periodictable: http://www.reflectometry.org/danse/elements.html
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-.. _srfit-sasview: https://github.com/diffpy/srfit-sasview
-.. _SasView: http://www.sasview.org/
+.. _SasView: https://www.sasview.org
+
+.. include:: ../../abbreviations.txt

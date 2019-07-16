@@ -180,7 +180,7 @@ What next?
 ============
 
 Explore the SrMise
-`tutorial <http://diffpy.github.io/diffpy.srmise/tutorial/index.html>`_!
+`tutorial <https://diffpy.github.io/diffpy.srmise/tutorial/index.html>`_!
 
 .. toctree::
    :hidden:

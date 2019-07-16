@@ -5,7 +5,28 @@
 .. |anaconda-download| replace:: https://www.anaconda.com/download
 .. _anaconda-download: https://www.anaconda.com/download
 .. _diffpy-users: https://groups.google.com/d/forum/diffpy-users
-.. _ctv-xpdfsuite: http://innovation.columbia.edu/technologies/m11-120
+.. _ctv-xpdfsuite: https://columbia.resoluteinnovation.com/technologies/M11-120
+
+.. GitHub repositories -------------------------------------------------
+
+.. _diffpy.mpdf: https://github.com/benfrandsen/diffpy.magpdf
+.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
+.. _diffpy.structure: https://github.com/diffpy/diffpy.structure
+.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
+.. _libdiffpy: https://github.com/diffpy/libdiffpy
+.. _libobjcryst: https://github.com/diffpy/libobjcryst
+.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
+.. _srfit-sasview: https://github.com/diffpy/srfit-sasview
+
+.. External online documentation ---------------------------------------
+
+.. _doc-diffpy.srfit: https://diffpy.github.io/diffpy.srfit
+.. _doc-diffpy.srreal: https://diffpy.github.io/diffpy.srreal
+.. _doc-diffpy.structure: https://diffpystructure.readthedocs.io
+.. _doc-diffpy.utils: https://diffpy.github.io/diffpy.utils
+.. _doc-libdiffpy: https://diffpy.github.io/libdiffpy
+.. _doc-pyobjcryst: https://diffpy.github.io/pyobjcryst
 
 .. Citations -----------------------------------------------------------
 
