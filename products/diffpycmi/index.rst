@@ -32,7 +32,7 @@ Installation
 ============
 
 Use of this software is subject to the conditions in
-:doc:`LICENSE.txt <license>`.
+software :doc:`LICENSE <license>`.
 
 As of version 2.0 DiffPy-CMI is available for Linux and
 Mac as a collection of packages for Anaconda Python.  As

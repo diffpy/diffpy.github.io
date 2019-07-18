@@ -2,5 +2,5 @@
 
 .. title:: mPDF License
 
-.. literalinclude:: mPDF_LICENSE.txt
+.. literalinclude:: diffpycmi/LICENSE.txt
    :language: text
