@@ -16,7 +16,7 @@ Module                      Description
                             function (PDF), bond lengths, and bond
                             valence sums.
 
-`diffpy.Structure`_         Handles storage of crystal structure data.
+`diffpy.structure`_         Handles storage of crystal structure data.
 
 `diffpy.utils`_             General purpose shared utilities for the
                             diffpy libraries.
@@ -32,16 +32,6 @@ Module                      Description
                             as a shared library
 ======================      ============================================
 
-.. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
+.. URL definitions below -----------------------------------------------
 
-.. _diffpy.srreal: https://github.com/diffpy/diffpy.srreal
-
-.. _diffpy.Structure: https://github.com/diffpy/diffpy.structure
-
-.. _diffpy.utils: https://github.com/diffpy/diffpy.utils
-
-.. _pyobjcryst: https://github.com/diffpy/pyobjcryst
-
-.. _libdiffpy: https://github.com/diffpy/libdiffpy
-
-.. _libobjcryst: https://github.com/diffpy/libobjcryst
+.. include:: ../../abbreviations.txt

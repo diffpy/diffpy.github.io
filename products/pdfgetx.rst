@@ -32,7 +32,10 @@ Download
 .. should be easier to use redirected URLs instead of
    http://innovation.columbia.edu/technologies/m11-120
 
-.. |m11-120| replace:: https://columbia.resoluteinnovation.com/technologies/M11-120
+.. |m11-120| raw:: html
+
+   <a href="https://columbia.resoluteinnovation.com/technologies/M11-120" target="_blank">
+   https://columbia.resoluteinnovation.com/technologies/M11-120</a>
 
 The PDFgetX3 and PDFgetN3 software can be obtained for free from
 `Columbia Technology Ventures <https://techventures.columbia.edu>`__,
