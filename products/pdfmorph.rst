@@ -68,14 +68,14 @@ for installing the Python 3 version in a conda environment.
 		`continuum <https://www.continuum.io>`__.
 
 		2.) Create a Python 3 environment with the command ::
-		
+
 			conda create --name=<env_name> python=3
 
 	You can give the environment any name you like.
 	You only need to create the environment once, but every time you
 	want to use PDFmorph you will have to reactivate the environment
 	in which it is installed by opening a terminal and typing ::
-	
+
 		source activate <env_name>
 
 	on Mac/Linux, or ``activate <env_name>`` on Windows.
