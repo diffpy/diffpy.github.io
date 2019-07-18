@@ -56,26 +56,27 @@ Installation
 By downloading and using this software, you are agreeing to the conditions
 specified in the :doc:`software license <pdfmorph_license>`.
 
-In order to take automatically take care of software dependency
-downloads, we recomment you install PDFmorph using conda. To do that,
-you will first have to download and install *Anaconda* or *mini-conda*
-from `continuum <https://www.continuum.io>`__.
-
-PDFmorph is available for all operating systems supported by Anaconda,
-namely for 32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
+PDFmorph will run on Python 2.7 or higher, but here we give instructions
+for installing the Python 3 version in a conda environment.
 
 .. note::
-	We recommend that you run PDFmorph in a Python 3 conda virtual
-	environment. With Anaconda or mini-conda installed on your system,
-	first create the virtual environment by typing ::
-		
-		conda create --name=<env_name> python=3
+	PDFmorph is distributed and best installed using conda. It should
+	run in most Python 3 environments and can be directly installed
+	in an existing environment (using the commands listed below). If
+	you do not currently have conda installed, here are some
+	lightweight instructions for getting started:
 
-	You can give the environment any name you like but it should
-	have some Python version 3 installed (though PDFmorph also works
-	on Python 2.7). You only need to create the environment once,
-	but every time you want to use PDFmorph you will have to
-	reactivate the environment in which it is installed by typing ::
+		1.) Download and install *Anaconda* or *mini-conda* from
+		`continuum <https://www.continuum.io>`__.
+
+		2.) Create a Python 3 environment with the command ::
+		
+			conda create --name=<env_name> python=3
+
+	You can give the environment any name you like.
+	You only need to create the environment once, but every time you
+	want to use PDFmorph you will have to reactivate the environment
+	in which it is installed by opening a terminal and typing ::
 	
 		source activate <env_name>
 
@@ -83,7 +84,7 @@ namely for 32 and 64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
 
 Once you're in your desired conda environment, you can install PDFmorph
 from either the ``diffpy`` or ``conda-forge`` channels of Anaconda packages
-by running opening a *Terminal* window or *Anaconda Command Prompt*
+by running opening a *Terminal* window or *Command Prompt*
 on Windows and using the :program:`conda` command ::
 
 	conda config --add channels conda-forge

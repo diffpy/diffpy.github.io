@@ -41,6 +41,7 @@ Module                      Description
 
 `diffpy.pdfmorph`_          Tools for comparing and manipulating two
                             PDFs.
+
 ======================      ============================================
 
 .. _diffpy.srfit: https://github.com/diffpy/diffpy.srfit
