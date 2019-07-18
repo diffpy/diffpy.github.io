@@ -54,50 +54,34 @@ Installation
 By downloading and using this software, you are agreeing to the conditions
 specified in the software :doc:`LICENSE <pdfmorph_license>`.
 
-PDFmorph will run on Python 2.7 or higher, but here we give instructions
-for installing the Python 3 version in a conda environment.
+PDFmorph will run on Python 3.5 or higher or on Python 2.7.
+We recommend to use Anaconda Python which can be obtained from
+|anaconda-download|.
+PDFmorph is available from the ``diffpy`` channel of Anaconda
+packages and also from `conda-forge <https://conda-forge.org>`__.
+To install open a *Terminal* window (*Anaconda Command Prompt*
+on Windows) and use the :program:`conda` command as follows ::
 
-.. note::
-	PDFmorph is distributed and best installed using conda. It should
-	run in most Python 3 environments and can be directly installed
-	in an existing environment (using the commands listed below). If
-	you do not currently have conda installed, here are some
-	lightweight instructions for getting started:
+   conda install --channel=diffpy diffpy.pdfmorph
 
-		1.) Download and install *Anaconda* or *mini-conda* from
-		`continuum <https://www.continuum.io>`__.
+If you prefer to use ``conda-forge`` make sure it is configured as
+the priority channel for Anaconda packages, which will allow you
+to install without the ``--channel`` option ::
 
-		2.) Create a Python 3 environment with the command ::
+   conda config --add channels conda-forge
+   conda install diffpy.pdfmorph
+   
+For all other Python distributions use the standard
+:program:`pip` installation program::
 
-			conda create --name=<env_name> python=3
+   pip install diffpy.pdfmorph
 
-	You can give the environment any name you like.
-	You only need to create the environment once, but every time you
-	want to use PDFmorph you will have to reactivate the environment
-	in which it is installed by opening a terminal and typing ::
+To make sure that the installation has completed correctly,
+run the following command from a *Terminal* ::
 
-		source activate <env_name>
+   pdfmorph --version
 
-	on Mac/Linux, or ``activate <env_name>`` on Windows.
-
-Once you're in your desired conda environment, you can install PDFmorph
-from either the ``diffpy`` or ``conda-forge`` channels of Anaconda packages
-by running opening a *Terminal* window or *Command Prompt*
-on Windows and using the :program:`conda` command ::
-
-	conda config --add channels conda-forge
-	conda install diffpy.pdfmorph
-
-If you prefer to install from the diffpy channel, simply replace
-``conda-forge`` with ``diffpy`` in the commands above.
-
-By then it should be installed! To make sure that installation has
-completed correctly, run the following command from your PDFmorph-equipped
-conda environment ::
-
-	pdfmorph --version
-
-This command should return the version of PDFmorph you have on your
+If all is good this should display the version of PDFmorph installed on your
 machine.
 
 
@@ -105,7 +89,7 @@ PDFmorph Updates
 ================
 
 The Anaconda package system makes it easy to prepare and distribute
-software packages and bugfixes. To update the latest version of PDFmorph,
+software packages and bugfixes. To obtain the latest version of PDFmorph,
 use ::
 
 	conda update diffpy.pdfmorph
@@ -113,9 +97,9 @@ use ::
 With other Python distributions, the program can be updated to the
 latest version with ::
 
-	easy_install --upgrade diffpy.pdfmorph
+	pip --upgrade diffpy.pdfmorph
 
-To use a development version, visit the project source repository at
+To use a development version, visit the project source repository
 https://github.com/diffpy/diffpy.pdfmorph and consult its README file.
 
 
@@ -139,3 +123,7 @@ Documentation/Help
     :hidden:
 
     pdfmorph_license
+
+.. URL definitions below -----------------------------------------------
+
+.. include:: ../abbreviations.txt
