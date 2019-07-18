@@ -20,7 +20,7 @@ transition between these two measurements?"
 
 PDFmorph makes use of several data manipulation techniques to correct
 for benign effects such as thermal expansion (peak shift) and increased
-thermal motion (peak broadening) or a cahnge in scale due to differences
+thermal motion (peak broadening) or a change in scale due to differences
 in incident flux, for example. PDFmorph will do its best to correct
 for these benign effects before computing and plotting a difference
 curve.
@@ -44,15 +44,15 @@ not PDFs, though it has not been extensively tested beyond the PDF.
 .. figure:: ../images/pdfmorph_nacl_ex.png
 	:align: center
 
-	Transformation techniques (scale, smear, and stretch, respectively)
-	utilized by PDFmorph applied sequentially on an NaCl sample
+	PDFmorph transformation techniques (scale, smear, and stretch)
+	applied sequentially to a PDF from NaCl sample
 
 
 Installation
 ============
 
 By downloading and using this software, you are agreeing to the conditions
-specified in the :doc:`software license <pdfmorph_license>`.
+specified in the software :doc:`LICENSE <pdfmorph_license>`.
 
 PDFmorph will run on Python 2.7 or higher, but here we give instructions
 for installing the Python 3 version in a conda environment.
