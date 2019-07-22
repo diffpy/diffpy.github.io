@@ -42,10 +42,26 @@ As a prerequisite for PDFgui installation, download and
 install **Anaconda for Python 2.7** from
 |anaconda-download|.
 
+.. TODO -- remove when PDFgui is compatible with wxpython 4
+
+.. important::
+
+   As of July 2019 Anaconda stopped providing older versions
+   of several packages that are required by PDFgui
+   (details `here
+   <https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7>`__).
+   We are working on making PDFgui compatible with the current
+   set of Anaconda packages.
+   In the meantime to install PDFgui you must
+   re-activate the old Anaconda packages as follows ::
+
+      conda update -n base conda
+      conda config --set restore_free_channel true
+
 .. note::
-   If you already use Anaconda for Python 3.5, create a separate
+   If you already use Anaconda for Python 3.7, create a separate
    Anaconda environment *py27* which will provide Python 2.7
-   instead of 3.5. ::
+   instead of 3.7. ::
 
       conda create --name=py27 python=2.7
       source activate py27
