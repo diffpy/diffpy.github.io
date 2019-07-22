@@ -75,7 +75,7 @@ Open a *Terminal* window or *Anaconda Command Prompt* on Windows
 and install PDFgui using the :program:`conda` command ::
 
    conda config --add channels diffpy
-   conda install diffpy.pdfgui
+   conda install "diffpy.pdfgui>=1.1.2"
 
 All done.  To start PDFgui enter :program:`pdfgui` command in a
 Terminal or use the *DiffPy* start menu on Windows.  PDFgui can be
