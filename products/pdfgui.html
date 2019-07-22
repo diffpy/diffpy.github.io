@@ -122,11 +122,25 @@ for all operating systems supported by Anaconda, namely for 32 and
 <p>As a prerequisite for PDFgui installation, download and
 install <strong>Anaconda for Python 2.7</strong> from
 <a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>As of July 2019 Anaconda stopped providing older versions
+of several packages that are required by PDFgui
+(details <a class="reference external" href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7">here</a>).
+We are working on making PDFgui compatible with the current
+set of Anaconda packages.
+In the meantime to install PDFgui you must
+re-activate the old Anaconda packages as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -n base conda
+conda config --set restore_free_channel <span class="nb">true</span>
+</pre></div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you already use Anaconda for Python 3.5, create a separate
+<p>If you already use Anaconda for Python 3.7, create a separate
 Anaconda environment <em>py27</em> which will provide Python 2.7
-instead of 3.5.</p>
+instead of 3.7.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name<span class="o">=</span>py27 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
 <span class="nb">source</span> activate py27
 </pre></div>
@@ -139,7 +153,7 @@ the “install” or “update” commands below.</p>
 Open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> on Windows
 and install PDFgui using the <strong class="program">conda</strong> command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels diffpy
-conda install diffpy.pdfgui
+conda install <span class="s2">&quot;diffpy.pdfgui&gt;=1.1.2&quot;</span>
 </pre></div>
 </div>
 <p>All done.  To start PDFgui enter <strong class="program">pdfgui</strong> command in a
