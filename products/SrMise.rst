@@ -65,8 +65,8 @@ executables, installation instructions, and licensing information
 for some popular options are listed below.
 
 * `Anaconda`_
-* `Enthought Canopy <https://www.enthought.com/products/canopy/>`_
-* `Python(x,y) <https://code.google.com/p/pythonxy/>`_
+* `Enthought Canopy <https://www.enthought.com/product/canopy/>`_
+* `Python(x,y) <https://python-xy.github.io>`_
 * `WinPython <http://winpython.github.io>`_
 
 .. _Anaconda: anaconda-download_
@@ -77,14 +77,14 @@ Numpy and SciPy do not currently support 64-bit Python installations, so be
 sure to download the 32-bit versions of these packages.
 
 * `Python 2.6/2.7 <https://www.python.org/downloads/windows/>`_
-* `NumPy <http://sourceforge.net/projects/numpy/files/NumPy/>`_
-* `SciPy <http://sourceforge.net/projects/scipy/files/scipy/>`_
-* `matplotlib <http://matplotlib.org/downloads.html>`_
+* `NumPy <https://sourceforge.net/projects/numpy/files/NumPy/>`_
+* `SciPy <https://sourceforge.net/projects/scipy/files/scipy/>`_
+* `matplotlib <https://matplotlib.org/downloads.html>`_
 
 After installing Python and the required packages, we can install SrMise.
 The simplest way to obtain diffpy.srmise on Windows systems
 is using ``pip`` to download and install the latest release from the
-`Python Package Index <https://pypi.python.org>`_ (PyPI).  To do so, open a
+`Python Package Index <https://pypi.org>`_ (PyPI).  To do so, open a
 command window by running ``cmd`` from the Start Menu's application search box
 (Windows 7/8/10) or Run command (Windows Vista and earlier).  Verify that the
 ``pip`` program is installed by running ::
@@ -124,13 +124,13 @@ in MacPorts::
 
 The simplest way to obtain diffpy.srmise on Mac OS X systems
 is using ``pip`` to download and install the latest release from
-`PyPI <https://pypi.python.org>`_. ::
+`PyPI <https://pypi.org>`_. ::
 
    sudo pip install diffpy.srmise
 
 If you prefer to install from sources, download them from the
 `GitHub <https://github.com/diffpy/diffpy.srmise/releases>`__ or
-`PyPI <https://pypi.python.org/pypi/diffpy.srmise>`__ pages for SrMise.
+`PyPI <https://pypi.org/project/diffpy.srmise>`__ pages for SrMise.
 Uncompress them to a directory, and from that directory run ::
 
    sudo python setup.py install
@@ -159,13 +159,13 @@ For other Linux distributions consult the appropriate package manager.
 
 The simplest way to obtain diffpy.srmise on Linux systems
 is using ``pip`` to download and install the latest release from
-`PyPI <https://pypi.python.org>`_. ::
+`PyPI <https://pypi.org>`_. ::
 
    sudo pip install diffpy.srmise
 
 If you prefer to install from sources, download them from the
 `GitHub <https://github.com/diffpy/diffpy.srmise/releases>`__ or
-`PyPI <https://pypi.python.org/pypi/diffpy.srmise>`__ pages for SrMise.
+`PyPI <https://pypi.org/project/diffpy.srmise>`__ pages for SrMise.
 Uncompress them to a directory, and from that directory run ::
 
    sudo python setup.py install

@@ -36,6 +36,6 @@ the beamtime is over. PDFgui has numerous extensions
 that are described in more detail in [#]_. The beta version of PDFgui
 is now in public release, available for Windows, Linux and Mac OSX platforms,
 and in the first month has been downloaded 220 times. More information can be
-found at http://www.diffpy.org.
+found at https://www.diffpy.org.
 
 .. [#] |citeFarrowJpcm07|

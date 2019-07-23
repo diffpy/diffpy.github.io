@@ -2,8 +2,8 @@
 
 .. Named web links -----------------------------------------------------
 
-.. |anaconda-download| replace:: https://www.anaconda.com/download
-.. _anaconda-download: https://www.anaconda.com/download
+.. |anaconda-download| replace:: https://www.anaconda.com/distribution
+.. _anaconda-download: https://www.anaconda.com/distribution
 .. _diffpy-users: https://groups.google.com/d/forum/diffpy-users
 .. _ctv-xpdfsuite: https://columbia.resoluteinnovation.com/technologies/M11-120
 
@@ -46,7 +46,7 @@
    C. L. Farrow, P. Juhás, J. W. Liu, D. Bryndin, E. S. Božin, J. Bloch,
    Th. Proffen and S. J. L. Billinge, `PDFfit2 and PDFgui: computer
    programs for studying nanostructure in crystals
-   <http://iopscience.iop.org/0953-8984/19/33/335219/>`__,
+   <https://doi.org/10.1088/0953-8984/19/33/335219>`__,
    *J. Phys.: Condens.  Mat.* **19**, 335219 (2007)
    |downloadFarrowJpcm07|
 

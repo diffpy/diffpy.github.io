@@ -34,7 +34,7 @@ By downloading and using this software you are agreeing to the
 conditions specified in the :doc:`software license <pdfguilicense>`.
 
 PDFgui is distributed as a software package for
-`Anaconda Python <https://www.continuum.io>`__.  PDFgui is available
+`Anaconda Python <https://www.anaconda.com>`__.  PDFgui is available
 for all operating systems supported by Anaconda, namely for
 Linux, Mac OS X, and Windows.
 
@@ -110,7 +110,7 @@ Other versions
 
 When Anaconda Python is not available, PDFgui can be installed from
 sources.  The latest source package is at the `Python Package
-Index <https://pypi.python.org/pypi/diffpy.pdfgui>`__ and the
+Index <https://pypi.org/project/diffpy.pdfgui>`__ and the
 prior versions are at
 https://github.com/diffpy/diffpy.pdfgui/releases.  See the `README
 <https://github.com/diffpy/diffpy.pdfgui#pdfgui>`__ document

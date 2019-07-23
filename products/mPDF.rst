@@ -79,7 +79,7 @@ prerequisite software and then use the command ::
 *Alternative option: Download and install from source.*
 
 If you prefer to install from source, you can also zip and download the entire package
-from `PyPI <https://pypi.python.org/pypi/diffpy.mpdf>`__ or
+from `PyPI <https://pypi.org/project/diffpy.mpdf>`__ or
 `GitHub <https://github.com/benfrandsen/diffpy.magpdf>`__, then unzip the file and
 execute the following command from inside the unzipped directory ::
 
@@ -89,7 +89,7 @@ Note that this will only work if all the dependencies are already properly insta
 
 Documentation
 -------------
-Please see `http://pythonhosted.org/diffpy.mpdf/ <http://pythonhosted.org/diffpy.mpdf/>`__
+Please see https://pythonhosted.org/diffpy.mpdf
 for the documentation.
 
 What next?

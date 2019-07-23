@@ -41,8 +41,8 @@ Mac OS X
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For Mac OS X the system dependencies can be installed using the
-`MacPorts <http://www.macports.org>`_ software manager.  A similar
-package system `Homebrew <http://brew.sh>`_ works as well, but has
+`MacPorts <https://www.macports.org>`_ software manager.  A similar
+package system `Homebrew <https://brew.sh>`_ works as well, but has
 been considerably less tested with DiffPy-CMI.
 
 For best results with MacPorts follow these tips:

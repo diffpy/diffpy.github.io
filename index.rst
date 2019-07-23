@@ -47,11 +47,11 @@ centered at Columbia University and, before that, Michigan State University.
 
 .. _danse: http://danse.us/
 
-.. _national science foundation: http://www.nsf.gov/
+.. _national science foundation: https://www.nsf.gov/
 
 .. _department of energy, office of basic energy sciences: https://science.energy.gov/bes/
 
-.. _brookhaven national laboratory: http://www.bnl.gov/
+.. _brookhaven national laboratory: https://www.bnl.gov/
 
 .. image:: images/blank1x1.png
    :align: left
