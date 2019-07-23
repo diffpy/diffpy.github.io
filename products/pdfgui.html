@@ -116,12 +116,12 @@ modeling data as well as simply doing data reduction.</p>
 <p>By downloading and using this software you are agreeing to the
 conditions specified in the <a class="reference internal" href="pdfguilicense.html"><span class="doc">software license</span></a>.</p>
 <p>PDFgui is distributed as a software package for
-<a class="reference external" href="https://www.continuum.io">Anaconda Python</a>.  PDFgui is available
-for all operating systems supported by Anaconda, namely for 32 and
-64-bit Linux, Mac OS X, and 32 and 64-bit Windows.</p>
+<a class="reference external" href="https://www.anaconda.com">Anaconda Python</a>.  PDFgui is available
+for all operating systems supported by Anaconda, namely for
+Linux, Mac OS X, and Windows.</p>
 <p>As a prerequisite for PDFgui installation, download and
-install <strong>Anaconda for Python 2.7</strong> from
-<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>.</p>
+install <strong>Anaconda Python</strong> from
+<a class="reference external" href="https://www.anaconda.com/distribution">https://www.anaconda.com/distribution</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>As of July 2019 Anaconda stopped providing older versions
@@ -129,36 +129,44 @@ of several packages that are required by PDFgui
 (details <a class="reference external" href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7">here</a>).
 We are working on making PDFgui compatible with the current
 set of Anaconda packages.
-In the meantime to install PDFgui you must
-re-activate the old Anaconda packages as follows</p>
+In the meantime you must re-activate the old packages
+as follows</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -n base conda
 conda config --set restore_free_channel <span class="nb">true</span>
 </pre></div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you already use Anaconda for Python 3.7, create a separate
-Anaconda environment <em>py27</em> which will provide Python 2.7
-instead of 3.7.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name<span class="o">=</span>py27 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
-<span class="nb">source</span> activate py27
-</pre></div>
-</div>
-<p>On Windows use just <code class="docutils literal notranslate"><span class="pre">activate</span> <span class="pre">py27</span></code>.  Make sure that <em>py27</em>
-environment is activated in your shell prior to running
-the “install” or “update” commands below.</p>
-</div>
 <p>PDFgui is available from the “diffpy” channel of Anaconda packages.
-Open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> on Windows
-and install PDFgui using the <strong class="program">conda</strong> command</p>
+Because PDFgui requires Python 2.7 and wxpython 3,
+it is strongly recommended to install it in a dedicated
+Anaconda environment <em>py27</em>.
+To do so open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> on Windows
+and use the <strong class="program">conda</strong> command as follows</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels diffpy
+conda create --name<span class="o">=</span>py27 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
+conda activate py27
 conda install <span class="s2">&quot;diffpy.pdfgui&gt;=1.1.2&quot;</span>
 </pre></div>
 </div>
 <p>All done.  To start PDFgui enter <strong class="program">pdfgui</strong> command in a
 Terminal or use the <em>DiffPy</em> start menu on Windows.  PDFgui can be
 also started from the <em>Launcher</em> application included with Anaconda.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To start PDFgui from a Terminal make sure <em>py27</em> is
+the active Anaconda environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate py27
+</pre></div>
+</div>
+<p>Alternatively you can add the following line to your shell startup
+file <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> to define an alias which will work in
+any Anaconda environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/py27/bin/pdfgui&quot;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">/path/to</span></code> needs to be adjusted according to the output of
+<code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">pdfgui</span></code> command.</p>
+</div>
 </div>
 <div class="section" id="pdfgui-updates">
 <h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
@@ -175,7 +183,7 @@ its README file.</p>
 <div class="section" id="other-versions">
 <h2>Other versions<a class="headerlink" href="#other-versions" title="Permalink to this headline">¶</a></h2>
 <p>When Anaconda Python is not available, PDFgui can be installed from
-sources.  The latest source package is at the <a class="reference external" href="https://pypi.python.org/pypi/diffpy.pdfgui">Python Package
+sources.  The latest source package is at the <a class="reference external" href="https://pypi.org/project/diffpy.pdfgui">Python Package
 Index</a> and the
 prior versions are at
 <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui/releases">https://github.com/diffpy/diffpy.pdfgui/releases</a>.  See the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui#pdfgui">README</a> document
