@@ -35,11 +35,11 @@ conditions specified in the :doc:`software license <pdfguilicense>`.
 
 PDFgui is distributed as a software package for
 `Anaconda Python <https://www.continuum.io>`__.  PDFgui is available
-for all operating systems supported by Anaconda, namely for 32 and
-64-bit Linux, Mac OS X, and 32 and 64-bit Windows.
+for all operating systems supported by Anaconda, namely for
+Linux, Mac OS X, and Windows.
 
 As a prerequisite for PDFgui installation, download and
-install **Anaconda for Python 2.7** from
+install **Anaconda Python** from
 |anaconda-download|.
 
 .. TODO -- remove when PDFgui is compatible with wxpython 4
@@ -52,34 +52,43 @@ install **Anaconda for Python 2.7** from
    <https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7>`__).
    We are working on making PDFgui compatible with the current
    set of Anaconda packages.
-   In the meantime to install PDFgui you must
-   re-activate the old Anaconda packages as follows ::
+   In the meantime you must re-activate the old packages
+   as follows ::
 
       conda update -n base conda
       conda config --set restore_free_channel true
 
-.. note::
-   If you already use Anaconda for Python 3.7, create a separate
-   Anaconda environment *py27* which will provide Python 2.7
-   instead of 3.7. ::
-
-      conda create --name=py27 python=2.7
-      source activate py27
-
-   On Windows use just ``activate py27``.  Make sure that *py27*
-   environment is activated in your shell prior to running
-   the "install" or "update" commands below.
 
 PDFgui is available from the "diffpy" channel of Anaconda packages.
-Open a *Terminal* window or *Anaconda Command Prompt* on Windows
-and install PDFgui using the :program:`conda` command ::
+Because PDFgui requires Python 2.7 and wxpython 3,
+it is strongly recommended to install it in a dedicated
+Anaconda environment *py27*.
+To do so open a *Terminal* window or *Anaconda Command Prompt* on Windows
+and use the :program:`conda` command as follows ::
 
    conda config --add channels diffpy
+   conda create --name=py27 python=2.7
+   conda activate py27
    conda install "diffpy.pdfgui>=1.1.2"
 
 All done.  To start PDFgui enter :program:`pdfgui` command in a
 Terminal or use the *DiffPy* start menu on Windows.  PDFgui can be
 also started from the *Launcher* application included with Anaconda.
+
+.. note::
+   To start PDFgui from a Terminal make sure *py27* is
+   the active Anaconda environment::
+
+      conda activate py27
+
+   Alternatively you can add the following line to your shell startup
+   file :file:`.bashrc` to define an alias which will work in
+   any Anaconda environment ::
+
+      alias pdfgui="/path/to/py27/bin/pdfgui"
+
+   where ``/path/to`` needs to be adjusted according to the output of
+   ``which pdfgui`` command.
 
 
 PDFgui updates
