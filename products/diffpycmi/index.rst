@@ -34,19 +34,17 @@ Installation
 Use of this software is subject to the conditions in
 software :doc:`LICENSE <license>`.
 
-As of version 2.0 DiffPy-CMI is available for Linux and
+As of version 3.0 DiffPy-CMI is available for Linux and
 Mac as a collection of packages for Anaconda Python.  As
-a first step download and install **Anaconda for Python 2.7**
+a first step download and install **Anaconda for Python 3.7**
 from |anaconda-download|.
 
 .. note::
-   If you already have Anaconda for Python 3.5, create a separate
-   Anaconda environment *py27* which will provide Python 2.7
-   instead of 3.5.  Make sure that *py27* environment is activated
-   when working with DiffPy-CMI.  ::
+   DiffPy-CMI is available from the "diffpy" channel of Anaconda packages. It requires Python 3.5 or later or 2.7. It is recommended to install it in a separate Anaconda environment, for example *py37* or other preferred python versions.
+   Make sure that *py37* environment is activated when working with DiffPy-CMI. ::
 
-      conda create --name=py27 python=2.7
-      source activate py27
+      conda create --name=py37 python=3.7
+      conda activate py37
 
 Once Anaconda is ready, DiffPy-CMI can be installed from the "diffpy"
 channel of Anaconda packages as follows ::
