@@ -1,17 +1,17 @@
-#####################
-PDFgetX3 and PDFgetN3
-#####################
+###############################
+PDFgetX3, PDFgetN3 and PDFgetS3
+###############################
 
 .. include:: ../abbreviations.txt
 
-PDFgetX3 and PDFgetN3 are command-line utilities that
+PDFgetX3, PDFgetN3 and PDFgetS3 are command-line utilities that
 extract atomic pair distribution function (PDF) from
-X-ray or constant-wavelength neutron powder diffraction data.
-PDFgetX3 and PDFgetN3 are easy to use, fast and convenient
+X-ray, constant-wavelength neutron powder or small-angle diffraction data.
+PDFgetX3, PDFgetN3 and PDFgetS3 are easy to use, fast and convenient
 for automated batch processing. The interactive mode provides complete access to all
 parameters and intermediate results, as well as live-plotting feature
 that helps to tune conversion parameters and visualize their effect on the results.
-PDFgetX3 and PDFgetN3 are distributed together with
+PDFgetX3, PDFgetN3 and PDFgetS3 are distributed together with
 Python library diffpy.pdfgetx, which provides the
 underlying PDF-processing functions and can be
 utilized in custom PDF-conversion scripts.
@@ -37,7 +37,7 @@ Download
    <a href="https://columbia.resoluteinnovation.com/technologies/M11-120" target="_blank">
    https://columbia.resoluteinnovation.com/technologies/M11-120</a>
 
-The PDFgetX3 and PDFgetN3 software can be obtained for free from
+The PDFgetX3, PDFgetN3 and PDFgetS3 software can be obtained for free from
 `Columbia Technology Ventures <https://techventures.columbia.edu>`__,
 provided it will be used for open academic research
 (please cite the relevant paper below).
@@ -70,8 +70,17 @@ Sorry for the complicated process.  We hope you enjoy the software!
 Documentation
 =============
 
-Version 2.0.0 - latest
+Version 2.1.0 - latest
 ----------------------
+
+* `installation instructions <../doc/pdfgetx/2.0.0/install.html>`__
+* `user manual <../doc/pdfgetx/2.0.0/index.html>`__,
+  `printable manual <../doc/pdfgetx/2.0.0/PDFgetXN3_manual.pdf>`__
+* `tutorial files <../doc/pdfgetx/2.0.0/pdfgetxn3-examples.zip>`__
+* `release notes <../doc/pdfgetx/2.0.0/release.html>`__
+
+Version 2.0.0
+-------------
 
 * `installation instructions <../doc/pdfgetx/2.0.0/install.html>`__
 * `user manual <../doc/pdfgetx/2.0.0/index.html>`__,
