@@ -5,10 +5,7 @@ PDFgetX3, PDFgetN3 and PDFgetS3
 .. include:: ../abbreviations.txt
 
 PDFgetX3, PDFgetN3 and PDFgetS3 are command-line utilities that
-extract atomic pair distribution function (PDF) from
-X-ray, constant-wavelength neutron powder or small-angle diffraction data.
-PDFgetX3, PDFgetN3 and PDFgetS3 are easy to use, fast and convenient
-for automated batch processing. The interactive mode provides complete access to all
+for automated batch processing. PDFgetX3, PDFgetN3 and PDFgetS3 are easy to use, fast and convenient for automated batch processing. The interactive mode provides complete access to all
 parameters and intermediate results, as well as live-plotting feature
 that helps to tune conversion parameters and visualize their effect on the results.
 PDFgetX3, PDFgetN3 and PDFgetS3 are distributed together with
