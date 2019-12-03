@@ -70,11 +70,11 @@ Documentation
 Version 2.1.0 - latest
 ----------------------
 
-* `installation instructions <../doc/pdfgetx/2.0.0/install.html>`__
-* `user manual <../doc/pdfgetx/2.0.0/index.html>`__,
-  `printable manual <../doc/pdfgetx/2.0.0/PDFgetXN3_manual.pdf>`__
-* `tutorial files <../doc/pdfgetx/2.0.0/pdfgetxn3-examples.zip>`__
-* `release notes <../doc/pdfgetx/2.0.0/release.html>`__
+* `installation instructions <../doc/pdfgetx/2.1.0/install.html>`__
+* `user manual <../doc/pdfgetx/2.1.0/index.html>`__,
+  `printable manual <../doc/pdfgetx/2.1.0/PDFgetXNS3_manual.pdf>`__
+* `tutorial files <../doc/pdfgetx/2.1.0/pdfgetxn3-examples.zip>`__
+* `release notes <../doc/pdfgetx/2.1.0/release.html>`__
 
 Version 2.0.0
 -------------
