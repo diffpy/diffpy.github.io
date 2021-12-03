@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Release notes &#8212; diffpy.pdfgetx 2.1.1.post45 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The plotdata program" href="plotdata.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.1.1.post45 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="release-notes">
+<span id="index-0"></span><h1>Release notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<section id="version-2-2-2-2021-11-31">
+<h2>Version 2.2.2 - 2021-11-31<a class="headerlink" href="#version-2-2-2-2021-11-31" title="Permalink to this headline">¶</a></h2>
+<section id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for Python 3.9</p></li>
+<li><p>Unittests for testing CLI functionality.</p></li>
+<li><p>Tutorial example for multiple background subtractions (see
+<code class="docutils literal notranslate"><span class="pre">diffpy.pdfgetx/doc/examples/Multiple_Background_Subtraction</span></code>).</p></li>
+<li><p>New functionality for allowing multiple backgrounds to be subtracted from a
+dataset accessed via using the plural name equivalent of any previously
+singularly named variable (i.e., <code class="docutils literal notranslate"><span class="pre">bgscale</span></code>-&gt;<code class="docutils literal notranslate"><span class="pre">bgscales</span></code>, <code class="docutils literal notranslate"><span class="pre">backgroundfile</span></code>-&gt;
+<code class="docutils literal notranslate"><span class="pre">backgroundfiles</span></code>, etc.) in both static config files (i.e. <em>.cfg) and
+interactive plotting sessions. Each set of parameters corresponding to a
+given background subtraction can also be manipulated by a set of sliders
+present in the ``tuneconfig`` window of an interactive shell session. In total,
+the multiple background subtraction functionality should work identically to
+the previous single background subtraction functionality *except</em> that the
+multiple background files and initial scale values <em>cannot</em> be specified
+through a pure CLI command (i.e., it must be specified either in a <a href="#id1"><span class="problematic" id="id2">*</span></a>.cfg file
+or added/modified during an interactive plotting session).</p></li>
+<li><p>Added extra test cases for testing the PDFGetter class.</p></li>
+<li><p>Added extra test cases for testing the PDFConfig class.</p></li>
+</ul>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Changed Sphinx dependency <code class="docutils literal notranslate"><span class="pre">m2r</span></code> to <code class="docutils literal notranslate"><span class="pre">m2r2</span></code>.</p></li>
+<li><p>Added Connor J. Bracy and Zach Thatcher to contributors in AUTHORS.txt</p></li>
+<li><p>Added Connor J. Bracy to internal authors list and <code class="docutils literal notranslate"><span class="pre">PDFgetXNS3_manual.pdf</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="version-2-1-1-2020-09-01">
+<h2>Version 2.1.1 - 2020-09-01<a class="headerlink" href="#version-2-1-1-2020-09-01" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for Python 3.8</p></li>
+</ul>
+</section>
+</section>
+<section id="version-2-1-0-2020-07-15">
+<h2>Version 2.1.0 – 2020-07-15<a class="headerlink" href="#version-2-1-0-2020-07-15" title="Permalink to this headline">¶</a></h2>
+<section id="id4">
+<h3>Added<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>New mode <code class="docutils literal notranslate"><span class="pre">sas</span></code> for processing Small Angle Scattering data and
+for using custom scattering factors.</p></li>
+<li><p><em>qmax-pushes-qmin</em> coupling of sliders in the <code class="docutils literal notranslate"><span class="pre">tuneconfig</span></code> tool.</p></li>
+<li><p>New program <code class="docutils literal notranslate"><span class="pre">pdfgets3</span></code> and IPython magic <code class="docutils literal notranslate"><span class="pre">%pdfgets3</span></code>.</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Changed<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Software distribution format to a universal Python wheel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tuneconfig</span></code> dialog to access full Q-range with all <em>qmin</em>, <em>qmax</em>, and
+<em>qmaxinst</em> sliders.  Increased range for the <em>rpoly</em> slider.</p></li>
+</ul>
+</section>
+<section id="deprecated">
+<h3>Deprecated<a class="headerlink" href="#deprecated" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Software distribution in setuptools egg package.</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for Python 3.4.</p></li>
+</ul>
+</section>
+<section id="fixed">
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support backslash in the <code class="docutils literal notranslate"><span class="pre">--find</span></code> option path argument on Windows.
+Both forward and back slashes are allowed on Windows, but other
+platforms must use forward slash.</p></li>
+<li><p>Recipe for platform-dependent Anaconda package.</p></li>
+<li><p>Bogus test failure when installed in symlinked directory.</p></li>
+</ul>
+</section>
+</section>
+<section id="version-2-0-0-2018-11-02">
+<h2>Version 2.0.0 – 2018-11-02<a class="headerlink" href="#version-2-0-0-2018-11-02" title="Permalink to this headline">¶</a></h2>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>New mode <code class="docutils literal notranslate"><span class="pre">neutron</span></code> for processing constant-wavelength
+neutron scattering data.</p></li>
+<li><p>Correction for an offset of diffractometer zero angle.</p></li>
+<li><p>Configuration parameter <code class="docutils literal notranslate"><span class="pre">twothetazero</span></code> and command-line option
+<code class="docutils literal notranslate"><span class="pre">--twothetazero</span></code> for position of the actual zero angle
+in diffractometer degrees.</p></li>
+<li><p>New program <code class="docutils literal notranslate"><span class="pre">pdfgetn3</span></code> and IPython magic <code class="docutils literal notranslate"><span class="pre">%pdfgetn3</span></code>.</p></li>
+<li><p>Separate configuration file <code class="docutils literal notranslate"><span class="pre">pdfgetn3.cfg</span></code> for the <code class="docutils literal notranslate"><span class="pre">pdfgetn3</span></code> program.</p></li>
+<li><p>New sub-package <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgetx.apps</span></code> for entry points to all programs.</p></li>
+<li><p>Table of electron scattering factors from E. J. Kirkland,
+Advanced Computing in Electron Microscopy.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator for additive pattern groups when matching input files
+with <code class="docutils literal notranslate"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code>.</p></li>
+<li><p>An optional slash-containing entry, e.g., <code class="docutils literal notranslate"><span class="pre">dir/</span></code>, to set the search path
+for <code class="docutils literal notranslate"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code>.  Each pattern group may have one path entry which
+affects the current and subsequent pattern groups.  Pattern groups that
+have only the path entry reuse the previous file patterns, for example,
+<code class="docutils literal notranslate"><span class="pre">dir1/</span> <span class="pre">.dat$</span> <span class="pre">+</span> <span class="pre">dir2/</span> <span class="pre">+</span> <span class="pre">dir3/</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">dotfiles</span></code> flag argument to <code class="docutils literal notranslate"><span class="pre">functs.findfiles</span></code> to also find
+dot-starting files without an explicit pattern.</p></li>
+<li><p>Support for Python 3.7.</p></li>
+<li><p>Tutorial examples for constant-wavelength neutron diffraction data.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Initialization arguments of <code class="docutils literal notranslate"><span class="pre">PDFConfig</span></code> to set initial configuration values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> argument of <code class="docutils literal notranslate"><span class="pre">functs.findfiles</span></code> to give one search path instead
+of a list of paths.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code> to search only the current directory and stop searching
+in <code class="docutils literal notranslate"><span class="pre">--datapath</span></code>.</p></li>
+<li><p>Improved PDF accuracy by removing repeated Q-grid interpolation.</p></li>
+<li><p>Handling of dot files by <code class="docutils literal notranslate"><span class="pre">pdfgetx3</span> <span class="pre">--find</span></code> and the <code class="docutils literal notranslate"><span class="pre">functs.findfiles</span></code>
+function.  The dotfiles are by default ignored unless explicitly selected
+by a <code class="docutils literal notranslate"><span class="pre">&quot;^.&quot;</span></code> pattern.</p></li>
+<li><p>Return type of <code class="docutils literal notranslate"><span class="pre">functs.findfiles</span></code> from IPython <code class="docutils literal notranslate"><span class="pre">SList</span></code> to a simple <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p></li>
+<li><p>Rename camel case interactive functions to lowercase, i.e., to <code class="docutils literal notranslate"><span class="pre">loaddata</span></code>,
+<code class="docutils literal notranslate"><span class="pre">processfiles</span></code>, <code class="docutils literal notranslate"><span class="pre">clearsession</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">config.datapath</span></code> lookup in <code class="docutils literal notranslate"><span class="pre">processfiles(filename)</span></code>.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Deprecated<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Function <code class="docutils literal notranslate"><span class="pre">cromermann.felectronatq</span></code> for electron scattering
+factors calculation using Mott-Bethe approximate formula.</p></li>
+<li><p>IPython extension module <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgetx.ipy_pdfgetx3</span></code>.
+Use <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgetx.ipy_magics</span></code> instead.</p></li>
+<li><p>Camel case functions <code class="docutils literal notranslate"><span class="pre">loadData</span></code>, <code class="docutils literal notranslate"><span class="pre">processFiles</span></code>, <code class="docutils literal notranslate"><span class="pre">clearSession</span></code>.</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>Removed<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for Python 2.6.</p></li>
+<li><p>Processing of environment variable <code class="docutils literal notranslate"><span class="pre">PDFGETX3PATH</span></code>.</p></li>
+<li><p>Support for IPython 0.x.</p></li>
+<li><p>Obsolete variable <code class="docutils literal notranslate"><span class="pre">__gitsha__</span></code> from the <code class="docutils literal notranslate"><span class="pre">version</span></code> module.</p></li>
+<li><p>Processing of command line options in <code class="docutils literal notranslate"><span class="pre">PDFConfig</span></code> class.</p></li>
+<li><p>Implicit loading of configuration files in <code class="docutils literal notranslate"><span class="pre">PDFConfig</span></code> instantiation.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Fixed<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Import of all objects from <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> into
+an interactive session started by <code class="docutils literal notranslate"><span class="pre">plotdata</span></code>.</p></li>
+<li><p>Inaccurate G interpolation when rstep is comparable to <code class="docutils literal notranslate"><span class="pre">pi</span> <span class="pre">/</span> <span class="pre">qmax</span></code>.</p></li>
+<li><p>Lone anchor patterns <code class="docutils literal notranslate"><span class="pre">^</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span></code> to match everything.</p></li>
+</ul>
+</section>
+</section>
+<section id="version-1-2-2018-01-12">
+<h2>Version 1.2 – 2018-01-12<a class="headerlink" href="#version-1-2-2018-01-12" title="Permalink to this headline">¶</a></h2>
+<section id="id11">
+<h3>Added<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Support for Python 3.4, 3.5, 3.6 in addition to Python 2.6 and 2.7.</p></li>
+<li><p>Support for <a class="reference external" href="https://ipython.org">IPython 5.0</a> with preserved
+compatibility with IPython 0.10 and later.</p></li>
+<li><p>Support for <a class="reference external" href="https://matplotlib.org">matplotlib 2.0</a>.</p></li>
+<li><p>New option <code class="docutils literal notranslate"><span class="pre">--log=LOG</span></code> for the <code class="docutils literal notranslate"><span class="pre">plotdata</span></code> program to set logarithmic
+scale for either of <em>x</em> or <em>y</em> axis.  The <code class="docutils literal notranslate"><span class="pre">plotdata()</span></code> function learnt
+a new <code class="docutils literal notranslate"><span class="pre">log</span></code> argument with the same purpose.</p></li>
+<li><p>New argument <code class="docutils literal notranslate"><span class="pre">ax</span></code> for the <code class="docutils literal notranslate"><span class="pre">plotdata()</span></code> function that select a specific
+matplotlib axis for plotting.</p></li>
+<li><p>Support for Unicode filenames and values in the <code class="docutils literal notranslate"><span class="pre">config</span></code>
+interactive variable.</p></li>
+<li><p>Processing of parentheses and fractional stoichiometries in chemical
+formulas as in <code class="docutils literal notranslate"><span class="pre">Pb</span> <span class="pre">(Ti</span> <span class="pre">Zr)1/2</span> <span class="pre">O3</span></code>.</p></li>
+<li><p>Explanatory error message when PDFgetX3 was installed for
+unsupported Python.</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Changed<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The egg package file was enhanced to support all Python
+versions.  The software is now distributed in a single
+egg rather than multiple eggs per each Python version.</p></li>
+<li><p>PDFgetX3 option <code class="docutils literal notranslate"><span class="pre">--force</span></code> to take a boolean argument
+(<code class="docutils literal notranslate"><span class="pre">yes</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code>, etc.) or <code class="docutils literal notranslate"><span class="pre">once</span></code>.  The configuration
+parameter <code class="docutils literal notranslate"><span class="pre">force</span></code> can be likewise set to a bool or to
+a string <code class="docutils literal notranslate"><span class="pre">&quot;once&quot;</span></code>.  This enables a safer one-time
+overwrite of existing output files.</p></li>
+<li><p>Plot labels to use a proper Unicode “Å” (Ångström) symbols.
+The “Å” symbol is also used within units in output files.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">usecols</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">loadData()</span></code> function to also
+accept scalars, open-end <code class="docutils literal notranslate"><span class="pre">slice</span></code> objects and string-denoted
+slices such as <code class="docutils literal notranslate"><span class="pre">&quot;1:3&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;1:&quot;</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">plotdata</span></code> program and <code class="docutils literal notranslate"><span class="pre">plotdata()</span></code> function to accept
+open-end slices for the y-columns selection.</p></li>
+<li><p>The IPython magic function <code class="docutils literal notranslate"><span class="pre">%pdfgetx3</span></code> to set the <code class="docutils literal notranslate"><span class="pre">_exit_code</span></code>
+variable as do generic shell commands run from IPython.</p></li>
+<li><p>Inline documentation to use NumPy-style Napoleon format,
+which is human readable and can be included in the manual.</p></li>
+<li><p>Release scripts to build software package bundles and
+documentation in binary-reproducible way.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Deprecated<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Compatibility with Python 2.6.</p></li>
+<li><p>Support for IPython 0.x.</p></li>
+<li><p>Variable <code class="docutils literal notranslate"><span class="pre">__gitsha__</span></code> in the <code class="docutils literal notranslate"><span class="pre">version</span></code> module which was renamed
+to <code class="docutils literal notranslate"><span class="pre">__git_commit__</span></code>.</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Removed<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">hold</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">plotdata()</span></code> function,
+because it was deprecated in matplotlib.</p></li>
+<li><p>Support for multiple x-columns in <code class="docutils literal notranslate"><span class="pre">plotdata</span></code> program and
+<code class="docutils literal notranslate"><span class="pre">plotdata()</span></code> function.</p></li>
+<li><p>Import of all objects from <code class="docutils literal notranslate"><span class="pre">numpy</span></code> module into the interactive
+session.  NumPy is available under the <code class="docutils literal notranslate"><span class="pre">np</span></code> name instead.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Fixed<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Avoid duplicate “.gr.gr” extension when <code class="docutils literal notranslate"><span class="pre">pdfgetx3</span></code> is run
+with option <code class="docutils literal notranslate"><span class="pre">--output=f.gr</span></code>.</p></li>
+<li><p>Crash on loading custom configuration section from a local
+file, when that section is missing in global configuration.</p></li>
+<li><p>Missing checkbox in the <code class="docutils literal notranslate"><span class="pre">tuneconfig</span></code> dialog caused by matplotlib bug.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Release notes</a><ul>
+<li><a class="reference internal" href="#version-2-2-2-2021-11-31">Version 2.2.2 - 2021-11-31</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-2-1-1-2020-09-01">Version 2.1.1 - 2020-09-01</a><ul>
+<li><a class="reference internal" href="#id3">Added</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-2-1-0-2020-07-15">Version 2.1.0 – 2020-07-15</a><ul>
+<li><a class="reference internal" href="#id4">Added</a></li>
+<li><a class="reference internal" href="#id5">Changed</a></li>
+<li><a class="reference internal" href="#deprecated">Deprecated</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-2-0-0-2018-11-02">Version 2.0.0 – 2018-11-02</a><ul>
+<li><a class="reference internal" href="#id6">Added</a></li>
+<li><a class="reference internal" href="#id7">Changed</a></li>
+<li><a class="reference internal" href="#id8">Deprecated</a></li>
+<li><a class="reference internal" href="#id9">Removed</a></li>
+<li><a class="reference internal" href="#id10">Fixed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-1-2-2018-01-12">Version 1.2 – 2018-01-12</a><ul>
+<li><a class="reference internal" href="#id11">Added</a></li>
+<li><a class="reference internal" href="#id12">Changed</a></li>
+<li><a class="reference internal" href="#id13">Deprecated</a></li>
+<li><a class="reference internal" href="#id14">Removed</a></li>
+<li><a class="reference internal" href="#id15">Fixed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="plotdata.html"
+                        title="previous chapter">The plotdata program</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/release.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plotdata.html" title="The plotdata program"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>
