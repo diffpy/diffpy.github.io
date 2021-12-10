@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>DiffPy-CMI installation from sources &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="DiffPy-CMI Contents" href="contents.html" />
@@ -92,16 +93,16 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="diffpy-cmi-installation-from-sources">
+  <section id="diffpy-cmi-installation-from-sources">
 <h1>DiffPy-CMI installation from sources<a class="headerlink" href="#diffpy-cmi-installation-from-sources" title="Permalink to this headline">¶</a></h1>
 <p>Downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
 and follow the steps below.</p>
-<div class="section" id="install-system-software">
+<section id="install-system-software">
 <h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Permalink to this headline">¶</a></h2>
 <p>DiffPy-CMI requires the <a class="reference internal" href="#dependencies"><span class="std std-ref">system software dependencies</span></a>
 which can be installed from command line using a suitable package manager.
 Here are installation commands for several supported systems.</p>
-<div class="section" id="ubuntu">
+<section id="ubuntu">
 <h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
 <p>For Ubuntu or other Debian-based Linux distributions use <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install <span class="se">\</span>
@@ -111,8 +112,8 @@ Here are installation commands for several supported systems.</p>
     build-essential scons git zsh
 </pre></div>
 </div>
-</div>
-<div class="section" id="fedora">
+</section>
+<section id="fedora">
 <h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">yum</span></code> for Fedora or RedHat Linux:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum install <span class="se">\</span>
@@ -123,8 +124,8 @@ Here are installation commands for several supported systems.</p>
     gcc-c++ scons git zsh
 </pre></div>
 </div>
-</div>
-<div class="section" id="mac-os-x">
+</section>
+<section id="mac-os-x">
 <h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
 <p>For Mac OS X the system dependencies can be installed using the
 <a class="reference external" href="https://www.macports.org">MacPorts</a> software manager.  A similar
@@ -161,9 +162,9 @@ of <code class="docutils literal notranslate"><span class="pre">.profile</span><
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="install-diffpy-cmi">
+</section>
+</section>
+<section id="install-diffpy-cmi">
 <h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Permalink to this headline">¶</a></h2>
 <p>Unzip the DiffPy-CMI tarball into a directory of your choice.
 Execute the included <code class="file docutils literal notranslate"><span class="pre">install</span></code> script and follow the prompts.</p>
@@ -175,8 +176,8 @@ tar xzf diffpy_cmi-VERSION.tar.gz
 </div>
 <p>The install process may take a while and produce a plentiful output,
 but should work if all required software is in place.</p>
-</div>
-<div class="section" id="test">
+</section>
+<section id="test">
 <h2>3 Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
 <p>Execute the included test script, which should report no warnings
 nor errors:</p>
@@ -187,8 +188,8 @@ nor errors:</p>
 incorrect versions of Python or other libraries being used together.
 After addressing these issues it may be necessary to recompile the
 sources by running <code class="docutils literal notranslate"><span class="pre">./install</span> <span class="pre">--build</span></code>.</p>
-</div>
-<div class="section" id="remarks">
+</section>
+<section id="remarks">
 <h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this headline">¶</a></h2>
 <p>The expanded diffpy_cmi directory can be renamed or moved
 to a different location and the software should still work.
@@ -226,15 +227,15 @@ expanded diffpy_cmi directory.  The software can be completely
 uninstalled by deleting that directory and removing the symbolic
 link.</p>
 </div>
-</div>
-<div class="section" id="contacts">
+</section>
+<section id="contacts">
 <h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h2>
 <p>If you need help with installing this software, please check discussions
 or post your question to the
 <a class="reference external" href="https://groups.google.com/d/forum/diffpy-dev">diffpy-dev</a>
 group.</p>
 <hr class="docutils" />
-<div class="section" id="list-of-software-dependencies">
+<section id="list-of-software-dependencies">
 <span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</p></li>
@@ -250,9 +251,9 @@ group.</p>
 <li><p><strong>git</strong> - a version control system.</p></li>
 <li><p><strong>zsh</strong> - an interactive shell and powerful scripting language.</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
     </div>
