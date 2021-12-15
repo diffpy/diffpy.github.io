@@ -7,6 +7,9 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
 
+CURRENT_DOC_DIR = ./static_root/doc
+TEMP_TEST_DOC_DIR = ./doc
+
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
@@ -166,7 +169,45 @@ changes:
 	@echo "The overview file is in $(BUILDDIR)/changes."
 
 linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	# For some reason, the doc directory for our sources is set to
+	# ./static_root/doc but Sphinx expects it to be at ./doc and this has yet to
+	# be addressed. The effect of this discontinuity is that when Sphinx is
+	# running, it looks in the incorrect location with relative paths for static
+	# files we are serving up. This ultimately is not an issue for the
+	# functionality of the website as the links are indeed consistent in the
+	# static files generated, but it causes tests such as `linkcheck` to fail.
+	# For this reason, this make command has been modified to accoun for this
+	# discontinuity to preserve the validity of the test, but this change may
+	# have impact on future modifications to the website's internal structure
+	# and/or a fix for this issue, hence the in-line documentation of the problem
+	# (which gets printed to the console upon `linkcheck`'s failure).
+	#
+	# Here's what the make command was prior to this modification (and likely
+	# should be converted back to after addressing the issue):
+	#
+	# 	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	# 	@echo
+	# 	@echo "Link check complete; look for any errors in the above output " \
+	# 	      "or in $(BUILDDIR)/linkcheck/output.txt."
+	#
+	# Here's an overview of the logic for circumventing the issue:
+	#
+	# (1) Attempt to create the symlink to the actual doc directory in the
+	#     location that Sphinx expects it to be.
+	#     => Success
+	#         (a) Run linkcheck as we've properly configured our local structure
+	#             to be what Sphinx expects.
+	#         (b) Delete the symlink hack/patch, regardless of `linkcheck`'s
+	#             success as we know we create ./doc as a symlink in (1) (as
+	#             opposed to it being a directory containing its own data
+	#             possibly created at a later time without knowledge of this
+	#             fix).
+	#     => Failure
+	#         (a) Do no proceed and let this message be printed for future
+	#             debugging/maintainance effors.
+	ln -sT $(CURRENT_DOC_DIR) $(TEMP_TEST_DOC_DIR) \
+	&& $(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck \
+	;  rm $(TEMP_TEST_DOC_DIR)
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
