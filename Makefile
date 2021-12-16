@@ -204,12 +204,11 @@ linkcheck:
 	#             fix).
 	#     => Failure
 	#         (a) Do no proceed and let this message be printed for future
-	##             debugging/maintainance effors.
-	#test -h  $(TEMP_TEST_DOC_DIR) \
-	#|| ln -sT $(CURRENT_DOC_DIR) $(TEMP_TEST_DOC_DIR) \
-	#&& $(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck \
-	#;  rm $(TEMP_TEST_DOC_DIR)
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	#             debugging/maintainance effors.
+	test -h  $(TEMP_TEST_DOC_DIR) \
+	|| ln -sT $(CURRENT_DOC_DIR) $(TEMP_TEST_DOC_DIR) \
+	&& $(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck \
+	;  rm $(TEMP_TEST_DOC_DIR)
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
