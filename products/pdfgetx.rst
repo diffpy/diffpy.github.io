@@ -67,7 +67,17 @@ Sorry for the complicated process.  We hope you enjoy the software!
 Documentation
 =============
 
-Version 2.1.0 - latest
+Version 2.1.1 - latest
+----------------------
+
+* `installation instructions <../doc/pdfgetx/2.1.1/install.html>`__
+* `user manual <../doc/pdfgetx/2.1.1/index.html>`__,
+  `printable manual <../doc/pdfgetx/2.1.1/PDFgetXNS3_manual.pdf>`__
+* `tutorial files <../doc/pdfgetx/2.1.1/pdfgetxn3-examples.zip>`__
+* `release notes <../doc/pdfgetx/2.1.1/release.html>`__
+
+
+Version 2.1.0
 ----------------------
 
 * `installation instructions <../doc/pdfgetx/2.1.0/install.html>`__
@@ -75,6 +85,7 @@ Version 2.1.0 - latest
   `printable manual <../doc/pdfgetx/2.1.0/PDFgetXNS3_manual.pdf>`__
 * `tutorial files <../doc/pdfgetx/2.1.0/pdfgetxn3-examples.zip>`__
 * `release notes <../doc/pdfgetx/2.1.0/release.html>`__
+
 
 Version 2.0.0
 -------------
