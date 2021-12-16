@@ -293,3 +293,15 @@
 
 .. |downloadJuhasJac18| image:: /images/pdficon_small.png
    :target: /doc/pdfgetx/Juhas-jac-2018.pdf
+
+
+.. |citeLiuJac20| replace::
+   CH Liu, E. Janke, R. Li, P. Juhás, O. Gang, D. V. Talapin,
+   S. J. L. Billinge,
+   `sasPDF: pair distribution function analysis of nanoparticle assemblies
+   from small-angle-scattering data
+   <https://arxiv.org/abs/1910.08186>`__.
+   |downloadLiuJac20|
+
+.. |downloadLiuJac20| image:: /images/pdficon_small.png
+   :target: /doc/pdfgetx/Liu-jac-2020.pdf
