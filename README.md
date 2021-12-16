@@ -5,13 +5,17 @@ Sphinx sources for the [diffpy.org][site] web page.
 
 ### Quick Jump:
 
-- [Structure](#structure)
+- [GitHub Structure](#github-structure)
 - [Where to Make Changes](#where-to-make-changes)
   - [Adding Citations](#adding-citations)
-    - [Adding Publications that Describe a DiffPy Project (the "Reference" Section)](#reference-section-2)
+    - [Adding Publications that Describe a DiffPy Project (the "Reference" Section)](#reference-section-1)
     - [Adding Other Publications (the "Publication Using DiffPy-CMI" Section)](#reference-section-2)
-- [Publishing Changes](#submitting-changes)
-- [Updating Project Pages](#updating-project-pages)
+- [Publishing New Version of Existing Project](#new-version)
+- [Publishing New Project](#publishing-new-project)
+- [Publishing Changes](#publishing-changes)
+  - [Testing Changes](#testing-changes)
+  - [Contributors (Submitting Changes)](#submitting-changes)
+  - [Maintainers (Publishing Changes)](#publishing-changes)
 
 
 # GitHub Structure
@@ -109,12 +113,44 @@ You will need to create a directory for the project to live in within (e.g., [/s
 
 # Publishing Changes
 
-In order to update the [diffpy.org][site] page, in your local fork of this repo, edit the files as needed in the [`source`][source] branch, push your changes to your fork's remote (typically called `origin`), then open a pull-request (PR) for the changes to be reviewed and merged. In order to ensure your changes are valid, run the following Makefile commands within the root directory of your local fork of this repo:
+In order to test and/or publish changes, activate a conda environment that has a working installation of Sphinx (or make sure you have the necessary packages installed at a system level). If unsure how to achieve this, see the [Install Sphinx](https://gitlab.thebillingegroup.com/resources/group-wiki/-/wikis/Finalizing-a-Project's-(Re)-Release#install-sphinx) section of the projecct release wiki.
+
+## Testing Changes
+
+Make sure you have an active installation of Sphinx as per [Publishing Changes](#publishing-changes), run the set of Sphinx validation command(s) to check that the static files that Sphinx will create to be served on the website are written properly:
 ```
-$ make Makefile linkcheck
+$ make Makefile linkcheck SPHINXOPTS="-W"
+```
+*NOTE:* the `"-W"` flag forces warnings to be treated as errors. If you believe there is a falsely reported warning that should be ignored that is preventing the test from passing, rerun the above command with the `SPHINXOPTS="-W"` portion omitted.
+
+Additionally, one can visually/user-experience validate that the changes are what is expected by running:
+```
+$ make Makefile html
+```
+Then opening `/_build/html/index.html` which will open a local instance of the website with the proposed changes in place.
+
+<a name="submitting-changes"></a>
+## Contributors (Submitting Changes)
+
+In order to update the contents of [diffpy.org][site], create a new branch off of [`source`][source] in your local fork of this repo and make whatever changes you need to. Once the desired edits are complete, follow the steps outlined in [Testing Changes](#testing-changes) to verify the site won't break as a result of these changes. Finally, after verifying that the changes won't break things, push your changes to your fork and open a pull-request to submit the changes back into this repo.
+
+<a name="publishing-changes"></a>
+## Maintainers (Publishing Changes)
+
+First, follow the steps outlines in [Testing Changes](#testing-changes) to verify that the changes won't mess things up (too bad). Note that these tests, as they currently exist, are not extensive and it's quite possible that something indeed may appear incorrectly on the website (hence the manual review portion). After reviewing the changes, have Sphinx generate the static files to be hosted on the website:
+```
+$ make Makefile html
 ```
 
+Prepare the changes to be published:
+```
+$ make Makefile publish-prepare
+```
 
+Finally, publish the changes:
+```
+$ make Makefile publish-push
+```
 
 
 
