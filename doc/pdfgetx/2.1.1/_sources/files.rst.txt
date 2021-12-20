@@ -1,0 +1,102 @@
+Files used in PDF extraction
+========================================================================
+
+.. include:: abbreviations.txt
+.. _my-configfile:
+.. program:: pdfgetx3
+
+Configuration file
+------------------------------------------------------------------------
+
+Configuration files may define the PDF processing parameters.
+By default, the :program:`pdfgetx3` program attempts to read
+:file:`.pdfgetx3.cfg` file from the user HOME directory,
+then :file:`.pdfgetx3.cfg` and :file:`pdfgetx3.cfg` files
+from the current working directory.
+If configuration file has a different name, it needs to be specified
+with the :option:`-c, --config <-c>` option.
+The :program:`pdfgetn3` program works in the same way,
+except it checks for configuration files
+:file:`~/.pdfgetn3.cfg`, :file:`.pdfgetn3.cfg` and :file:`pdfgetn3.cfg`.
+
+The easiest way of creating a configuration file is to generate
+a template content using the :option:`--createconfig` option as ::
+
+   pdfgetx3 --createconfig=test.cfg
+
+and then change the generated test.cfg file in your favorite text
+editor.  The configuration file follows a simple "varname=value" syntax,
+any lines starting with "#" are ignored as comments.
+
+The configuration file has several sections marked as ``[SECTIONNAME]``.
+The ``[DEFAULT]`` section is mandatory and it contains the default
+global settings.  Any other sections are optional and they are applied
+only when selected with the :option:`-s, --section <-s>` option on the
+command line.  Thus ::
+
+   pdfgetx3 --config=test.cfg --section=nacl
+
+would read the parameters from the ``[nacl]`` section after reading the
+defaults.  Having several sections in the configuration
+file is useful when there are multiple measurements that share most of
+the parameters, but differ in a few of them, for example in chemical
+composition.  The configuration file can then contain sections per each
+sample that define only the composition, while all other parameters are
+specified just once in the global DEFAULT section.
+
+
+Input files
+------------------------------------------------------------------------
+
+PDFgetX3 and PDFgetN3 accept input powder diffraction data
+in the form of two-column text file,
+where the first column x is either the scattering angle
+|twotheta| in degrees, momentum transfer *Q* in inverse nanometers or *Q*
+in inverse ångströms.  The second column y contains the corresponding
+scattered intensities normalized per unit solid angle.  The actual type
+of the x-values is identified by the :confval:`dataformat` parameter.
+The input files may contain header with comments or metadata, and the
+actual data are read from the first long section of numerical values.
+
+The input files are usually passed as command-line arguments to
+:program:`pdfgetx3` or :program:`pdfgetn3` programs and must be paths
+accessible from the current working directory.
+
+Input files can be also defined by setting the :confval:`inputfile`
+value in the configuration file.  The :option:`-d, --datapath <-d>`
+option can be then used to provide additional data directories to
+search for these inputs and for the :confval:`backgroundfile`.
+This is to support configuration files located in a different
+directory than the data.
+
+When the :option:`--find <-f>` option is active, the pdfgetx3 arguments
+are understood as filename patterns and the input files are found
+in the current or specified directory.
+
+
+Output files
+------------------------------------------------------------------------
+
+PDFgetX3 and PDFgetN3 can produce up to four different output data files:
+
+* .iq -- |IQ|, the background-corrected
+  intensities sampled on a regular *Q*-space grid in inverse ångströms,
+
+* .sq -- |SQ|, the total scattering structure function,
+  with intensities normalized by average scattering factors and
+  corrected by a polynomial fit,
+
+* .fq -- |FQ|, the reduced structure function equal to *Q*\ (|SQ| - 1),
+
+* .gr -- |Gr|, the resultant PDF, where the first column is the
+  separation *r* in ångströms and the second is the function *G* in
+  Å\ :sup:`-2`.
+
+You can specify what output files should be produced by setting the
+:confval:`outputtypes` parameter in the configuration file or by
+passing the :option:`-t, --outputtypes <-t>` on the command line.
+
+The header of all output files contains the parameter values that were
+used in the calculation and thus it is by itself a valid configuration
+file.  When passed as an argument to the :option:`--config <-c>` option,
+the PDFgetX3 will reproduce the previous calculation.

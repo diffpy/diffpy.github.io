@@ -7,7 +7,7 @@ Software requirements
 ------------------------------------------------------------------------
 
 This software is written in Python programming language, therefore
-you must have Python 3.7, 3.6, 3.5, 3.4 or 2.7 installed.  In addition,
+you must have Python 3.7, 3.6, 3.5 or 2.7 installed.  In addition,
 the following third-party Python libraries are also required:
 
 * pip - Python package installer

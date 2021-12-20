@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     
-    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <script src="_static/sidebar.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -52,7 +52,7 @@ IPython commands <code class="docutils literal notranslate"><span class="pre">%p
 the same syntax as the <strong class="program">pdfgetx3</strong> and <strong class="program">pdfgetn3</strong> in
 system shell.
 The interactive session is also initialized with all functions from the
-<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" title="(in Matplotlib v3.1.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></a> module for convenient plotting.
+<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" title="(in Matplotlib v3.3.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></a> module for convenient plotting.
 The functions and variables related to PDF processing are:</p>
 <dl class="function">
 <dt id="_interactive_.pdfgetter">
@@ -227,7 +227,7 @@ the same effect.  The default is False.</p></li>
 </dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="(in NumPy v1.17)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.loadtxt()</span></code></a></p>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="(in NumPy v1.19)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.loadtxt()</span></code></a></p>
 </div>
 <p>This function can be imported from the
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">diffpy.pdfgetx</span></code> module.</p>
@@ -245,7 +245,7 @@ block (e.g., when <code class="docutils literal notranslate"><span class="pre">y
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filenames</strong> (<em>str or an iterable of string file names</em>) – One or more text data files to be plotted.</p></li>
-<li><p><strong>style</strong> (<em>str</em>) – Optional style argument for the matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.1.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
+<li><p><strong>style</strong> (<em>str</em>) – Optional style argument for the matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.3.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
 <li><p><strong>x</strong> (<em>int, str, or iterable, optional</em>) – The column to be used for the x data.  This can be a zero-based
 index of the desired column or a column name from data header.
 A special symbol “.” can be used for a sequential data index.
@@ -263,11 +263,11 @@ to the x-axis and logarithmic to the y-axis.  Keep the current
 axis scaling when not specified.</p></li>
 <li><p><strong>ax</strong> (<em>matplotlib.axes.Axes, optional</em>) – The axes to plot to.  The plotting will be performed using the
 <code class="docutils literal notranslate"><span class="pre">ax.plot</span></code> method.  The default is <code class="docutils literal notranslate"><span class="pre">pyplot.gca()</span></code>.</p></li>
-<li><p><strong>kwargs</strong> (<em>misc, optional</em>) – Keyword arguments for the matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.1.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
+<li><p><strong>kwargs</strong> (<em>misc, optional</em>) – Keyword arguments for the matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.3.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>lines</strong> (<em>list</em>) – The matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.1.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line2D</span></code></a> objects added to the current axis.</p>
+<dd class="field-even"><p><strong>lines</strong> (<em>list</em>) – The matplotlib <a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.3.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line2D</span></code></a> objects added to the current axis.</p>
 </dd>
 </dl>
 <div class="admonition seealso">
@@ -357,7 +357,7 @@ by adding the <code class="docutils literal notranslate"><span class="pre">^.</s
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -378,8 +378,8 @@ by adding the <code class="docutils literal notranslate"><span class="pre">^.</s
     </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Christopher Wright, Christopher Farrow, Simon Billinge.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+        &#169; Copyright 2020, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Christopher Wright, Christopher Farrow, Hung Vuong, Songsheng Tao, Simon Billinge.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
 </html>
