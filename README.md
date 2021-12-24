@@ -79,23 +79,24 @@ In what follows, [pdfgetx v2.1.1](https://github.com/diffpy/diffpy.pdfgetx/relea
 
 After following the steps necessary for releasing your project, grab the set of documentation that will be provided with the deliverable upon user's request (typically, this would be something like the files hosted by GitHub on the GitHub releases page). Create a new directory for the updated version's documentation to live in
 ```
-$ mkdir diffpy.github.io/doc/pdfgetx/2.1.1
+diffpy.github.io (source)$ mkdir static_root/doc/pdfgetx/2.1.1
 ```
 Copy the updated documentation to this directory
 ```
-$ tar --directory=static_root/doc/pdfgetx/2.1.1/ \
-  --strip-components=4 \
-  -vxzf ~/Downloads/diffpy.pdfgetx-2.1.1.tar.gz \
-  diffpy.pdfgetx-2.1.1/doc/manual/_build/PDFgetXNS3_manual.pdf
+diffpy.github.io (source)$ tar --directory=static_root/doc/pdfgetx/2.1.1/ \
+                               --strip-components=4 \
+                               -vxzf ~/Downloads/diffpy.pdfgetx-2.1.1.tar.gz \
+                               diffpy.pdfgetx-2.1.1/doc/manual/_build/PDFgetXNS3_manual.pdf
 
-$ tar --directory=static_root/doc/pdfgetx/2.1.1/ \
-  --strip-components=5 \
-  --exclude=objects.inv \
-  --exclude=.buildinfo \
-  -vxzf ~/Downloads/diffpy.pdfgetx-2.1.1.tar.gz \
-  diffpy.pdfgetx-2.1.1/doc/manual/_build/html/
+diffpy.github.io (source)$ tar --directory=static_root/doc/pdfgetx/2.1.1/ \
+                               --strip-components=5 \
+                               --exclude=objects.inv \
+                               --exclude=.buildinfo \
+                               -vxzf ~/Downloads/diffpy.pdfgetx-2.1.1.tar.gz \
+                               diffpy.pdfgetx-2.1.1/doc/manual/_build/html/
 
-$ cp ~/Downloads/pdfgetxn3-examples.zip static_root/doc/pdfgetx/2.1.1/
+diffpy.github.io (source)$ cp ~/Downloads/pdfgetxn3-examples.zip \
+                              static_root/doc/pdfgetx/2.1.1/
 ```
 Make sure to include all relevant files (e.g., `PDFgetXNS3_manual.pdf` and `pdfgetxn3-examples.zip`), exclude any files we don't want to provide to the user (e.g., `objects.inv` and `.buildinfo` from `diffpy.pdfgetx-2.1.1.tar.gz`)
 
@@ -105,8 +106,6 @@ Finally, edit the [landing page of your project](https://github.com/diffpy/diffp
 # Publishing New Project
 
 For adding a new project to the website, see one of the existing projects (e.g., [pdfgetx](https://www.diffpy.org/products/pdfgetx.html)) as reference.
-
-In what follows in this section, you will be working within the [`source`][source] branch, unless otherwise specified.
 
 You will need to create a directory for the project to live in within (e.g., [/static_root/doc/pdfgetx](https://github.com/diffpy/diffpy.github.io/tree/source/static_root/doc/pdfgetx)), then write a landing page for the project (e.g., [/products/pdfgetx.rst](https://github.com/diffpy/diffpy.github.io/blob/source/products/pdfgetx.rst)) which will provide any necessary information or files needed for a user to use the project. Once this is complete, see [Publishing New Version of Existing Project](#new-version) for steps on publishing the project.
 
@@ -119,13 +118,13 @@ In order to test and/or publish changes, activate a conda environment that has a
 
 Make sure you have an active installation of Sphinx as per [Publishing Changes](#publishing-changes), run the set of Sphinx validation command(s) to check that the static files that Sphinx will create to be served on the website are written properly:
 ```
-$ make Makefile linkcheck SPHINXOPTS="-W"
+diffpy.github.io (source)$ make Makefile linkcheck SPHINXOPTS="-W"
 ```
 *NOTE:* the `"-W"` flag forces warnings to be treated as errors. If you believe there is a falsely reported warning that should be ignored that is preventing the test from passing, rerun the above command with the `SPHINXOPTS="-W"` portion omitted.
 
 Additionally, one can visually/user-experience validate that the changes are what is expected by running:
 ```
-$ make Makefile html
+diffpy.github.io (source)$ make Makefile html
 ```
 Then opening `/_build/html/index.html` which will open a local instance of the website with the proposed changes in place.
 
@@ -139,17 +138,17 @@ In order to update the contents of [diffpy.org][site], create a new branch off o
 
 First, follow the steps outlines in [Testing Changes](#testing-changes) to verify that the changes won't mess things up (too bad). Note that these tests, as they currently exist, are not extensive and it's quite possible that something indeed may appear incorrectly on the website (hence the manual review portion). After reviewing the changes, have Sphinx generate the static files to be hosted on the website:
 ```
-$ make Makefile html
+diffpy.github.io (source)$ make Makefile html
 ```
 
 Prepare the changes to be published:
 ```
-$ make Makefile publish-prepare
+diffpy.github.io (source)$ make Makefile publish-prepare
 ```
 
 Finally, publish the changes:
 ```
-$ make Makefile publish-push
+diffpy.github.io (source)$ make Makefile publish-push
 ```
 
 
