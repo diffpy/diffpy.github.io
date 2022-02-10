@@ -1,0 +1,370 @@
+Options and parameters
+========================================================================
+
+.. include:: abbreviations.txt
+.. program:: pdfgetx3
+
+PDFgetX3, PDFgetN3 and PDFgetS3 are very flexible in allowing users to customize
+the actions of the program.  They have a number of parameters that can
+be specified either in configuration file or as command line options.
+Here is a complete description of the parameters and options used by
+either program.
+
+
+.. Note ::
+
+   The command line options start with a leading "-" and can
+   be only used as command line arguments when starting the
+   :program:`pdfgetx3` program.  Within configuration file the parameter
+   names are plain words without any leading dashes.  Finally,
+   parameters can be also set in the interactive mode as attributes of
+   the :interactvar:`config` object, but the assignments must be valid
+   Python statements.  Here are examples of setting composition of
+   a processed specimen using each of these forms:
+
+   #. assigned in configuration file::
+
+         ...
+         composition = CaTiO3
+         ...
+
+   #. set as a command-line option when starting :program:`pdfgetx3` or
+      :program:`pdfgetn3`::
+
+         pdfgetx3 --composition=CaTiO3
+
+   #. set in the IPython interactive mode::
+
+         pdfgetx3 -i
+         ...
+         In [1]: config.composition = "CaTiO3"
+
+
+Program operation
+------------------------------------------------------------------------
+
+.. option:: -h, --help
+
+   Display a brief usage information with a list of command line options
+   and exit.
+
+.. option:: -V, --version
+
+   Display the program version and exit.
+
+.. option:: --manual
+
+   Open this manual in a Web browser and exit.
+
+.. option:: -f, --find
+.. _my-findpatterns:
+
+   Select input files that match all patterns.  The command
+   line arguments are by default taken as input files.  However,
+   with the :option:`!--find` option they are processed as
+   file patterns and the matching files are then used as inputs.
+   The input files are by default searched in the current directory
+   unless there is a path entry (e.g., :file:`data/`) that
+   selects a different search path.  The search patterns are
+   interpreted as fixed strings, all of which must be present
+   in the file name.  A single argument ``+`` starts
+   a new group of patterns to match more files that are not
+   covered by one set of patterns.  Additional pattern
+   groups reuse the current search path unless they provide
+   their own path value.  Pattern groups containing only
+   a path entry reuse file patterns from the last group.
+   When pattern groups overlap the repeated matches are ignored
+   to make the resulting list of files unique.  Files starting
+   with ``.`` are ignored unless there is ``^.`` pattern
+   that explicitly matches them.  The search
+   syntax provides the following special patterns:
+
+   .. tabularcolumns:: |l|p{0.75\textwidth}|
+
+   +---------+------------------------------------------------------------+
+   | ^       | match at the beginning of the string, i.e., ``^start``     |
+   |         | matches only filenames that start with "start".            |
+   +---------+------------------------------------------------------------+
+   | $       | match at the end of string, for example, ``.chi$`` selects |
+   |         | file names ending with ".chi".   A ``$`` on its own        |
+   |         | matches every string and can be used to select all files.  |
+   +---------+------------------------------------------------------------+
+   | <N>     | match number *N* preceded by any number of leading zeros,  |
+   |         | e.g., ``<7>`` would match in "f7.chi", "f007.chi", but not |
+   |         | in "f77.chi".                                              |
+   +---------+------------------------------------------------------------+
+   | <N-M>   | match an integer range from *N* to *M* inclusive.          |
+   |         | The matched number may have one or more leading zeros.     |
+   +---------+------------------------------------------------------------+
+   | <7->    | match number 7 or larger.                                  |
+   +---------+------------------------------------------------------------+
+   | <-7>    | match number 7 or smaller.                                 |
+   +---------+------------------------------------------------------------+
+   | <->     | match any integer number.                                  |
+   +---------+------------------------------------------------------------+
+   | \+      | start a new pattern group, for example, ``.chi$ + .dat$``  |
+   +---------+------------------------------------------------------------+
+   | /       | set search path.  An argument containing the ``/`` symbol  |
+   |         | is taken as the search path, for example, ``data/`` or     |
+   |         | ``./``.  Each pattern group may provide its own search     |
+   |         | path effective for that and any subsequent pattern group.  |
+   +---------+------------------------------------------------------------+
+
+   The ``^$<>`` characters are often special to Unix or Windows
+   command shells, therefore they need to be enclosed in double
+   quotes (\\") when used on command line.
+
+   .. seealso:: tutorial on :ref:`my-findexamples`
+
+.. option:: -l, --list
+
+   List all input files and exit.  This is useful with the
+   :option:`!--find` option to verify if input files
+   are matched as intended.
+
+
+Configuration file options
+------------------------------------------------------------------------
+
+.. option:: -c CONFIG, --config=CONFIG
+
+   Read custom configuration file after loading the default ones.
+   Do not load any configuration file when "NONE".
+
+.. option:: -s NAME, --section=NAME
+
+   Load the custom configuration file section ``[SectionName]`` after
+   loading the ``[DEFAULT]`` section.  This is useful for creating
+   several configuration variants in a single configuration file.
+
+.. option:: --createconfig=FILE
+
+   Write template configuration to a new FILE and exit.  Write
+   to the standard output when FILE is "-".
+
+See also the :ref:`configuration file <my-configfile>` section
+for further details.
+
+.. _my-ioparameters:
+
+Input and output options
+------------------------------------------------------------------------
+
+.. confval:: inputfile
+
+   This parameter allows to specify one or more input files in the
+   configuration file, one file per line.  The :confval:`!inputfile`
+   is only used if no input files were provided on the
+   :program:`pdfgetx3` or :program:`pdfgetn3` command line.
+
+.. confval:: dataformat
+.. option:: --format=FORMAT
+
+   Format of input files.  Available formats are: ``twotheta``, ``QA``,
+   ``Qnm`` corresponding to a two-column text data where the first
+   column is either the scattering angle |twotheta| in degrees, *Q* in
+   inverse ångströms or *Q* in inverse nanometers.
+
+.. confval:: backgroundfile
+.. option:: -b FILE, --background=FILE
+
+   Optional datafile with background intensities from an empty sample
+   holder.  It must be in the same dataformat as other input files.
+
+.. Note ::
+
+    The following input is only used in ``sas`` mode.
+
+.. confval:: formfactorfile
+.. option:: -ff FILE, --formfactorfile=FILE
+
+   Form factor intensities of the scatterers. This is required for ``sas`` mode. The form factor file is expected to be in two-column format with (Q, f2avg) data or three-column format with (Q, f2avg, favg2) data. The unit of Q is required to be A^-1.
+
+.. _my-datapath:
+.. confval:: datapath
+.. option:: -d DATAPATH, --datapath=DATAPATH
+
+   One or more extra directories to be searched for input or
+   background data files.  The :option:`!-d` option can be specified
+   several times to add more directories, these are prepended in front
+   of any default value.  Within configuration file the datapath
+   directories have to be listed each on a separate line.
+
+   A special value "NONE" (or "none") clears any previously defined
+   paths and only the further paths, if any, would be searched for
+   inputs.
+
+.. confval:: output
+.. option:: -o OUTPUT, --output=OUTPUT
+
+   Output file name, write to the standard output when "-".  The
+   :option:`-t, --outputtypes <-t>` option controls what results are
+   being saved.  Normally the OUTPUT is used as a custom basename for
+   the output files.  The OUTPUT may contain @f, @h, @r, @e, @t, @b, @o
+   tokens, which are expanded as follows:
+
+   =====    ==================  =======================================
+   token    example             definition
+   =====    ==================  =======================================
+   @h       dir1/dir2           the input file directory or "."
+   @r       dir1/dir2/filename  the input path with extension removed
+   @e       dat                 the input file extension without "."
+   @t       filename.dat        the tail component of the input file
+   @b       filename            the tail component with extension removed
+   @o       gr                  the output extension iq, sq, fq or gr
+   =====    ==================  =======================================
+
+   An empty value works the same as "@b.@o" and saves the data
+   in the current directory with a proper extension for the
+   saved results.  When "@o" is not present in the OUTPUT, it is
+   appended as a default filename extension.
+
+.. confval:: outputtypes
+.. option:: -t TYPES, --outputtypes=TYPES
+
+   Result types to be saved, one or more comma separated values.
+   Supported values are "iq", "sq", "fq", "gr", corresponding to the
+   |IQ|, |SQ|, |FQ| and |Gr| curves; these are also used as output
+   file extensions.
+
+   Result files are not written when empty, "none" or "NONE".
+
+.. confval:: force
+.. option:: --force=FORCE
+
+   Overwrite existing output files.  By default the output
+   files are not written if they already exist.  Possible values
+   in a configuration file are "true", "yes", "on", "1" or
+   "false", "no", "off", "0" or "once".  The special value "once"
+   permits one overwrite and then resets ``config.force`` to
+   ``False``.  Note that in interactive mode the values assigned
+   to ``config.force`` are converted to Python :py:class:`bool`
+   unless equal to "once".
+
+
+.. _my-pdfparameters:
+
+PDF parameters
+------------------------------------------------------------------------
+
+
+.. confval:: mode
+.. option:: --mode=STRING
+
+   The PDF conversion mode, i.e., the name of the
+   :py:func:`.pdfgetter` setup.  The available modes correspond
+   to the radiation type used in powder diffraction experiment and can
+   be "xray" or "neutron".
+
+.. confval:: wavelength
+.. option:: -w FLOAT, --wavelength=FLOAT
+
+   X-ray wavelength in ångströms.  This value is required
+   for the "twotheta" dataformat in order to convert the scattering
+   angles |twotheta| to a momentum transfer *Q*.  For other data formats
+   the wavelength is not necessary and may be left undefined.
+
+.. confval:: twothetazero
+.. option:: --twothetazero=FLOAT
+
+   Position of the zero scattering angle in diffractometer degrees.
+   This parameter corrects for a constant offset in the
+   measured |twotheta| values.  When loading configuration file
+   it is assumed 0 unless specified otherwise.  This parameter
+   is only effective for the "twotheta" dataformat.
+
+.. confval:: composition
+.. option:: --composition=STRING
+
+   Chemical composition of the sample.  Supported formats are
+   "PbTi0.5Zr0.5O3", "Pb 1 Ti 1/2 Zr 1/2 O 3" or "CH3 (CH2)3 OH".
+   Space characters are ignored, unit counts can be omitted, but it is
+   important to use a proper upper and lower case in atom symbols.
+   Elements can appear several times in the formula, e.g., "CH3 CH3",
+   and the formula may contain parentheses or fractional
+   stoichiometries.
+
+.. confval:: bgscale
+.. option:: --bgscale=FLOAT
+
+   Scaling of the background intensities loaded from the
+   :confval:`backgroundfile`, by default 1.
+
+.. confval:: rpoly
+.. option:: --rpoly=FLOAT
+
+   *r*-limit for the maximum frequency in the |FQ| correction polynomial.
+   The PDF is unreliable at shorter *r*, however a
+   very small :confval:`!rpoly` would disable polynomial correction and
+   give noisy PDF.
+   Larger values produce closer fits with a higher degree polynomial,
+   but when too large, they might smooth-out a useful signal in the
+   data.  The default is 0.9.
+
+.. confval:: qmaxinst
+.. option:: --qmaxinst
+
+   The *Q* cutoff for the meaningful input intensities in inverse
+   ångströms.  Some data files may contain trailing zeros
+   or unreliable intensities at the upper bound of the detector range.
+   The :confval:`!qmaxinst` defines a threshold for unreliable data.
+   The parameter is also used as an upper boundary for the polynomial
+   fit correction of the |SQ| data.
+
+.. confval:: qmin
+.. option:: --qmin
+
+  The lower *Q*-limit for the Fourier transformation of the |FQ| curve
+  in inverse ångströms.
+
+.. confval:: qmax
+.. option:: --qmax
+
+  The upper *Q*-limit for the Fourier transformation of the |FQ| curve
+  in inverse ångströms.  This is essentially a limit, where sample
+  signal decays to the level of data noise.
+
+.. confval:: rmin
+.. option:: --rmin=FLOAT
+
+   Lower bound of the *r*-grid for the calculated PDF in ångströms.
+
+.. confval:: rmax
+.. option:: --rmax=FLOAT
+
+   Upper bound of the *r*-grid for the calculated PDF in ångströms.
+
+.. confval:: rstep
+.. option:: --rstep=FLOAT
+
+   Spacing of the *r*-grid for the calculated PDF in ångströms.
+
+
+Other parameters
+------------------------------------------------------------------------
+
+.. confval:: plot
+.. option:: -p TYPES, --plot=TYPES
+
+   Plot the specified results.  A comma separated list with one or
+   more items from "iq", "sq", "fq", "gr".  No plot is produced when
+   empty, "none" or "NONE".  Setting this option turns on the
+   interactive mode.
+
+.. confval:: interact
+.. option:: -i, --interact
+
+   Start an IPython interactive session after processing all files.
+   Useful for tuning the configuration parameters or interactive
+   plotting.  This is always on when plot option has been set.
+   See also :doc:`interact` for further details.
+
+.. confval:: verbose
+.. option:: --verbose=VALUE
+
+   Level of detail for the program to report about its actions.
+   Possible values are "error", "warning", "info", "debug", "all" or an
+   integer number from 0 to 5.  Messages are completely suppressed when
+   0, all messages are printed when verbose is 5 ("all") or higher.
+   This option is useful for diagnostics of any unexpected behavior
+   in the program.
