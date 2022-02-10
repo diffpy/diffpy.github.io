@@ -118,13 +118,13 @@ In order to test and/or publish changes, activate a conda environment that has a
 
 Make sure you have an active installation of Sphinx as per [Publishing Changes](#publishing-changes), run the set of Sphinx validation command(s) to check that the static files that Sphinx will create to be served on the website are written properly:
 ```
-diffpy.github.io (source)$ make Makefile linkcheck SPHINXOPTS="-W"
+diffpy.github.io (source)$ make linkcheck SPHINXOPTS="-W"
 ```
 *NOTE:* the `"-W"` flag forces warnings to be treated as errors. If you believe there is a falsely reported warning that should be ignored that is preventing the test from passing, rerun the above command with the `SPHINXOPTS="-W"` portion omitted.
 
 Additionally, one can visually/user-experience validate that the changes are what is expected by running:
 ```
-diffpy.github.io (source)$ make Makefile html
+diffpy.github.io (source)$ make html
 ```
 Then opening `/_build/html/index.html` which will open a local instance of the website with the proposed changes in place.
 
@@ -138,17 +138,17 @@ In order to update the contents of [diffpy.org][site], create a new branch off o
 
 First, follow the steps outlines in [Testing Changes](#testing-changes) to verify that the changes won't mess things up (too bad). Note that these tests, as they currently exist, are not extensive and it's quite possible that something indeed may appear incorrectly on the website (hence the manual review portion). After reviewing the changes, have Sphinx generate the static files to be hosted on the website:
 ```
-diffpy.github.io (source)$ make Makefile html
+diffpy.github.io (source)$ make html
 ```
 
 Prepare the changes to be published:
 ```
-diffpy.github.io (source)$ make Makefile publish-prepare
+diffpy.github.io (source)$ make publish-prepare
 ```
 
 Finally, publish the changes:
 ```
-diffpy.github.io (source)$ make Makefile publish-push
+diffpy.github.io (source)$ make publish-push
 ```
 
 
