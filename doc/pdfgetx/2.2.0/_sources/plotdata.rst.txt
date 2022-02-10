@@ -1,0 +1,161 @@
+.. index:: plotdata (program)
+.. _cmd-plotdata:
+
+The plotdata program
+========================================================================
+
+.. include:: abbreviations.txt
+.. program:: plotdata
+
+The PDFgetX3 software includes a simple stand-alone utility
+:program:`plotdata` for plotting text data files.  In most cases
+this program can be invoked from a command-shell as ::
+
+   plotdata file1.dat file2.dat
+
+which plots the numerical data from the text files :file:`file1.dat`,
+:file:`file2.dat` together in a single graph.  By default the first
+column is used as an *x* variable and the second column is used for the
+*y* values.  After displaying the plot the program starts an `IPython`_
+interactive session allowing the user to modify or save plots.  The
+IPython session is initialized with the :data:`!filenames` variable
+containing a list of plotted files.  It also pre-loads the
+|plotdata| and |findfiles| functions just as in PDFgetX3
+interactive session.  The :py:func:`!plotdata`
+function works in a similar way as the :program:`plotdata` program,
+just its arguments need to be passed as Python function arguments
+instead of command-line options.  Thus an equivalent call of the
+:py:func:`!plotdata` function would be::
+
+   In [1]: plotdata(['file1.dat', 'file2.dat'])
+
+
+Selecting files
+------------------------------------------------------------------------
+
+The :program:`plotdata` program includes a file searching feature
+that is useful for selecting a set of files in large
+directories.  It is also convenient for Windows operating systems,
+where the command prompt cannot do filename expansion for patterns
+such as ``*.dat``.  The file search feature is controlled by the
+following options:
+
+.. option:: -f, --find
+
+   Use command line arguments as filename patterns and plot all matching
+   files.  This option works in the same way as for
+   :program:`pdfgetx3`, for full details see the
+   :option:`pdfgetx3 --find <pdfgetx3 -f>` documentation.  Note that
+   within command line the special patterns ``^$<>`` need to be quoted
+   in double quotes (\\") so they are not processed by command shell.
+
+.. option:: -l, --list
+
+   List the input files and exit.  This is useful in conjunction
+   with the :option:`!-f, --find` option to check if data files
+   are selected as intended.
+
+Assuming the current directory contains 20 files named
+:file:`file1.dat`, :file:`file2.dat`, ..., :file:`file20.dat`,
+the plotting of files 9 to 13 could be done (with a check listing)
+as follows ::
+
+   $ plotdata -fl "<9-13>.dat"
+   file9.dat
+   file10.dat
+   file11.dat
+   file12.dat
+   file13.dat
+   $ plotdata -f "<9-13>.dat"
+
+Within an interactive IPython session the equivalent plot could be
+produced by combining the |plotdata| and |findfiles| functions as ::
+
+   In [1]: plotdata(findfiles("<9-13>.dat"))
+
+
+Selecting x and y data
+------------------------------------------------------------------------
+
+The :program:`plotdata` program provides several ways of selecting
+columns for *x* or *y* data and for specifying plot markers or line
+formats.  The columns can be specified using their integer index,
+but one needs to keep in mind the index of the first column is "0"
+as per Python indexing conventions.  Here is a list of options
+supported by the plotdata program (and function):
+
+
+.. option:: -x X
+
+   index or name of the *x*-column to plot.  See the :option:`-y` option
+   for the supported syntax, but note that ``X`` may select only one
+   column.  When set to "." use the data-row index for *x*.
+
+.. option:: -y Y
+
+   index or name of the *y*-column or columns to plot.  The ``Y`` column
+   specification can be a comma separated list of indices, column names
+   or Python-like ranges, for example "1,2", "G", "1:4" (START:STOP,
+   same as "1,2,3"), "1:4:2" (START:STOP:STEP, same as "1,3"), or
+   "-2:" (same as "-2,-1", i.e, the last 2 columns).  Because column
+   indexing starts at "0" the second column must be specified as "1".
+
+   The column names work if the data section in the file is preceded by
+   a headline of unique column names, for example::
+
+      x     square      cube
+      1     1           1
+      2     4           8
+      3     9           27
+      4     16          64
+
+   For such data file the plotdata program will recognize column names
+   "x", "square" and "cube" and an implicit "." for row index.
+
+.. option:: -s STYLE, --style=STYLE
+
+   optional plot format specification.  See the
+   :func:`matplotlib.pyplot.plot` function
+   for a list of available formats.
+
+.. option:: -L LOG, --log=LOG
+
+   axes to be plotted with logarithmic scaling, for example, "x", "y" or
+   "xy".  Axes not listed in ``LOG`` will use linear scaling.
+
+.. option:: -h, --help
+
+   display a brief usage info and exit.
+
+.. option:: -V, --version
+
+   show program version and exit.
+
+.. option:: --manual
+
+   Open this manual page in a Web browser and exit.
+
+
+Examples
+------------------------------------------------------------------------
+
+The examples directory :file:`plotdata` contains a :file:`sincos.dat`
+file that has 3-columns of values labeled as "x", "sin" and "cos".
+Here are several examples of the :program:`plotdata` capabilities
+when used from command line - the user is encouraged to try them out::
+
+   plotdata sincos.dat
+   plotdata -y 1,2 sincos.dat
+   plotdata -x . -y 0:3 sincos.dat
+   plotdata -y cos sincos.dat
+   plotdata -x sin -y cos -sr-- sincos.dat
+
+An equivalent usage from a general IPython session would be::
+
+   ipython --matplotlib=auto
+   In [1]: from diffpy.pdfgetx.plotdata import plotdata
+   In [2]: plotdata('sincos.dat')
+   In [3]: plotdata('sincos.dat', y=[1,2])
+   In [4]: plotdata('sincos.dat', x='.', y=':3')
+   In [5]: plotdata('sincos.dat', y='cos')
+   In [6]: plotdata('sincos.dat', x='sin', y='cos', style='r--')
