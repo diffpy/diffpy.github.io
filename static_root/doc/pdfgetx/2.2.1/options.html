@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Options and parameters &#8212; diffpy.pdfgetx 2.2.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The plotdata program" href="plotdata.html" />
+    <link rel="prev" title="Interactive mode" href="interact.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.2.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="options-and-parameters">
+<h1>Options and parameters<a class="headerlink" href="#options-and-parameters" title="Permalink to this headline">¶</a></h1>
+<p>PDFgetX3, PDFgetN3 and PDFgetS3 are very flexible in allowing users to customize
+the actions of the program.  They have a number of parameters that can
+be specified either in configuration file or as command line options.
+Here is a complete description of the parameters and options used by
+either program.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The command line options start with a leading “-” and can
+be only used as command line arguments when starting the
+<strong class="program">pdfgetx3</strong> program.  Within configuration file the parameter
+names are plain words without any leading dashes.  Finally,
+parameters can be also set in the interactive mode as attributes of
+the <a class="reference internal" href="interact.html#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config</span></code></a> object, but the assignments must be valid
+Python statements.  Here are examples of setting composition of
+a processed specimen using each of these forms:</p>
+<ol class="arabic">
+<li><p>assigned in configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">composition</span> <span class="o">=</span> <span class="n">CaTiO3</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</li>
+<li><p>set as a command-line option when starting <strong class="program">pdfgetx3</strong> or
+<strong class="program">pdfgetn3</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">composition</span><span class="o">=</span><span class="n">CaTiO3</span>
+</pre></div>
+</div>
+</li>
+<li><p>set in the IPython interactive mode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">-</span><span class="n">i</span>
+<span class="o">...</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">composition</span> <span class="o">=</span> <span class="s2">&quot;CaTiO3&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="program-operation">
+<h2>Program operation<a class="headerlink" href="#program-operation" title="Permalink to this headline">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-h">
+<span id="cmdoption-pdfgetx3-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a brief usage information with a list of command line options
+and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-V">
+<span id="cmdoption-pdfgetx3-v"></span><span id="cmdoption-pdfgetx3-version"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-V" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the program version and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-manual">
+<span class="sig-name descname"><span class="pre">--manual</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-manual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open this manual in a Web browser and exit.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-f">
+<span id="cmdoption-pdfgetx3-find"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--find</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-f" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<blockquote id="my-findpatterns">
+<div><p>Select input files that match all patterns.  The command
+line arguments are by default taken as input files.  However,
+with the <code class="xref std std-option docutils literal notranslate"><span class="pre">--find</span></code> option they are processed as
+file patterns and the matching files are then used as inputs.
+The input files are by default searched in the current directory
+unless there is a path entry (e.g., <code class="file docutils literal notranslate"><span class="pre">data/</span></code>) that
+selects a different search path.  The search patterns are
+interpreted as fixed strings, all of which must be present
+in the file name.  A single argument <code class="docutils literal notranslate"><span class="pre">+</span></code> starts
+a new group of patterns to match more files that are not
+covered by one set of patterns.  Additional pattern
+groups reuse the current search path unless they provide
+their own path value.  Pattern groups containing only
+a path entry reuse file patterns from the last group.
+When pattern groups overlap the repeated matches are ignored
+to make the resulting list of files unique.  Files starting
+with <code class="docutils literal notranslate"><span class="pre">.</span></code> are ignored unless there is <code class="docutils literal notranslate"><span class="pre">^.</span></code> pattern
+that explicitly matches them.  The search
+syntax provides the following special patterns:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>^</p></td>
+<td><p>match at the beginning of the string, i.e., <code class="docutils literal notranslate"><span class="pre">^start</span></code>
+matches only filenames that start with “start”.</p></td>
+</tr>
+<tr class="row-even"><td><p>$</p></td>
+<td><p>match at the end of string, for example, <code class="docutils literal notranslate"><span class="pre">.chi$</span></code> selects
+file names ending with “.chi”.   A <code class="docutils literal notranslate"><span class="pre">$</span></code> on its own
+matches every string and can be used to select all files.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;N&gt;</p></td>
+<td><p>match number <em>N</em> preceded by any number of leading zeros,
+e.g., <code class="docutils literal notranslate"><span class="pre">&lt;7&gt;</span></code> would match in “f7.chi”, “f007.chi”, but not
+in “f77.chi”.</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;N-M&gt;</p></td>
+<td><p>match an integer range from <em>N</em> to <em>M</em> inclusive.
+The matched number may have one or more leading zeros.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;7-&gt;</p></td>
+<td><p>match number 7 or larger.</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;-7&gt;</p></td>
+<td><p>match number 7 or smaller.</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;-&gt;</p></td>
+<td><p>match any integer number.</p></td>
+</tr>
+<tr class="row-even"><td><p>+</p></td>
+<td><p>start a new pattern group, for example, <code class="docutils literal notranslate"><span class="pre">.chi$</span> <span class="pre">+</span> <span class="pre">.dat$</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>/</p></td>
+<td><p>set search path.  An argument containing the <code class="docutils literal notranslate"><span class="pre">/</span></code> symbol
+is taken as the search path, for example, <code class="docutils literal notranslate"><span class="pre">data/</span></code> or
+<code class="docutils literal notranslate"><span class="pre">./</span></code>.  Each pattern group may provide its own search
+path effective for that and any subsequent pattern group.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">^$&lt;&gt;</span></code> characters are often special to Unix or Windows
+command shells, therefore they need to be enclosed in double
+quotes (\”) when used on command line.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>tutorial on <a class="reference internal" href="tutorial.html#my-findexamples"><span class="std std-ref">matching input files</span></a></p>
+</div>
+</div></blockquote>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-l">
+<span id="cmdoption-pdfgetx3-list"></span><span class="sig-name descname"><span class="pre">-l</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--list</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-l" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all input files and exit.  This is useful with the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">--find</span></code> option to verify if input files
+are matched as intended.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="configuration-file-options">
+<h2>Configuration file options<a class="headerlink" href="#configuration-file-options" title="Permalink to this headline">¶</a></h2>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-c">
+<span id="cmdoption-pdfgetx3-config"></span><span class="sig-name descname"><span class="pre">-c</span></span><span class="sig-prename descclassname"> <span class="pre">CONFIG</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--config</span></span><span class="sig-prename descclassname"><span class="pre">=CONFIG</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read custom configuration file after loading the default ones.
+Do not load any configuration file when “NONE”.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-s">
+<span id="cmdoption-pdfgetx3-section"></span><span class="sig-name descname"><span class="pre">-s</span></span><span class="sig-prename descclassname"> <span class="pre">NAME</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--section</span></span><span class="sig-prename descclassname"><span class="pre">=NAME</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the custom configuration file section <code class="docutils literal notranslate"><span class="pre">[SectionName]</span></code> after
+loading the <code class="docutils literal notranslate"><span class="pre">[DEFAULT]</span></code> section.  This is useful for creating
+several configuration variants in a single configuration file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-createconfig">
+<span class="sig-name descname"><span class="pre">--createconfig</span></span><span class="sig-prename descclassname"><span class="pre">=FILE</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-createconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write template configuration to a new FILE and exit.  Write
+to the standard output when FILE is “-“.</p>
+</dd></dl>
+
+<p>See also the <a class="reference internal" href="files.html#my-configfile"><span class="std std-ref">configuration file</span></a> section
+for further details.</p>
+</div>
+<div class="section" id="input-and-output-options">
+<span id="my-ioparameters"></span><h2>Input and output options<a class="headerlink" href="#input-and-output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-inputfile">
+<span class="sig-name descname"><span class="pre">inputfile</span></span><a class="headerlink" href="#confval-inputfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This parameter allows to specify one or more input files in the
+configuration file, one file per line.  The <code class="xref std std-confval docutils literal notranslate"><span class="pre">inputfile</span></code>
+is only used if no input files were provided on the
+<strong class="program">pdfgetx3</strong> or <strong class="program">pdfgetn3</strong> command line.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-dataformat">
+<span class="sig-name descname"><span class="pre">dataformat</span></span><a class="headerlink" href="#confval-dataformat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-format">
+<span class="sig-name descname"><span class="pre">--format</span></span><span class="sig-prename descclassname"><span class="pre">=FORMAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format of input files.  Available formats are: <code class="docutils literal notranslate"><span class="pre">twotheta</span></code>, <code class="docutils literal notranslate"><span class="pre">QA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Qnm</span></code> corresponding to a two-column text data where the first
+column is either the scattering angle 2Θ in degrees, <em>Q</em> in
+inverse ångströms or <em>Q</em> in inverse nanometers.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-backgroundfile">
+<span class="sig-name descname"><span class="pre">backgroundfile</span></span><a class="headerlink" href="#confval-backgroundfile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-b">
+<span id="cmdoption-pdfgetx3-background"></span><span class="sig-name descname"><span class="pre">-b</span></span><span class="sig-prename descclassname"> <span class="pre">FILE</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--background</span></span><span class="sig-prename descclassname"><span class="pre">=FILE</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional datafile with background intensities from an empty sample
+holder.  It must be in the same dataformat as other input files.</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following input is only used in <code class="docutils literal notranslate"><span class="pre">sas</span></code> mode.</p>
+</div>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-formfactorfile">
+<span class="sig-name descname"><span class="pre">formfactorfile</span></span><a class="headerlink" href="#confval-formfactorfile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-ff">
+<span id="cmdoption-pdfgetx3-formfactorfile"></span><span class="sig-name descname"><span class="pre">-ff</span></span><span class="sig-prename descclassname"> <span class="pre">FILE</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--formfactorfile</span></span><span class="sig-prename descclassname"><span class="pre">=FILE</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-ff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form factor intensities of the scatterers. This is required for <code class="docutils literal notranslate"><span class="pre">sas</span></code> mode. The form factor file is expected to be in two-column format with (Q, f2avg) data or three-column format with (Q, f2avg, favg2) data. The unit of Q is required to be A^-1.</p>
+</dd></dl>
+
+<span class="target" id="my-datapath"></span><dl class="std confval">
+<dt class="sig sig-object std" id="confval-datapath">
+<span class="sig-name descname"><span class="pre">datapath</span></span><a class="headerlink" href="#confval-datapath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-d">
+<span id="cmdoption-pdfgetx3-datapath"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"> <span class="pre">DATAPATH</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--datapath</span></span><span class="sig-prename descclassname"><span class="pre">=DATAPATH</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more extra directories to be searched for input or
+background data files.  The <code class="xref std std-option docutils literal notranslate"><span class="pre">-d</span></code> option can be specified
+several times to add more directories, these are prepended in front
+of any default value.  Within configuration file the datapath
+directories have to be listed each on a separate line.</p>
+<p>A special value “NONE” (or “none”) clears any previously defined
+paths and only the further paths, if any, would be searched for
+inputs.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-output">
+<span class="sig-name descname"><span class="pre">output</span></span><a class="headerlink" href="#confval-output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-o">
+<span id="cmdoption-pdfgetx3-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"> <span class="pre">OUTPUT</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"><span class="pre">=OUTPUT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output file name, write to the standard output when “-“.  The
+<a class="reference internal" href="#cmdoption-pdfgetx3-t"><code class="xref std std-option docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--outputtypes</span></code></a> option controls what results are
+being saved.  Normally the OUTPUT is used as a custom basename for
+the output files.  The OUTPUT may contain &#64;f, &#64;h, &#64;r, &#64;e, &#64;t, &#64;b, &#64;o
+tokens, which are expanded as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 28%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>token</p></th>
+<th class="head"><p>example</p></th>
+<th class="head"><p>definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&#64;h</p></td>
+<td><p>dir1/dir2</p></td>
+<td><p>the input file directory or “.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>&#64;r</p></td>
+<td><p>dir1/dir2/filename</p></td>
+<td><p>the input path with extension removed</p></td>
+</tr>
+<tr class="row-even"><td><p>&#64;e</p></td>
+<td><p>dat</p></td>
+<td><p>the input file extension without “.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>&#64;t</p></td>
+<td><p>filename.dat</p></td>
+<td><p>the tail component of the input file</p></td>
+</tr>
+<tr class="row-even"><td><p>&#64;b</p></td>
+<td><p>filename</p></td>
+<td><p>the tail component with extension removed</p></td>
+</tr>
+<tr class="row-odd"><td><p>&#64;o</p></td>
+<td><p>gr</p></td>
+<td><p>the output extension iq, sq, fq or gr</p></td>
+</tr>
+</tbody>
+</table>
+<p>An empty value works the same as “&#64;b.&#64;o” and saves the data
+in the current directory with a proper extension for the
+saved results.  When “&#64;o” is not present in the OUTPUT, it is
+appended as a default filename extension.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-outputtypes">
+<span class="sig-name descname"><span class="pre">outputtypes</span></span><a class="headerlink" href="#confval-outputtypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-t">
+<span id="cmdoption-pdfgetx3-outputtypes"></span><span class="sig-name descname"><span class="pre">-t</span></span><span class="sig-prename descclassname"> <span class="pre">TYPES</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--outputtypes</span></span><span class="sig-prename descclassname"><span class="pre">=TYPES</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Result types to be saved, one or more comma separated values.
+Supported values are “iq”, “sq”, “fq”, “gr”, corresponding to the
+<em>I</em>(<em>Q</em>), <em>S</em>(<em>Q</em>), <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves; these are also used as output
+file extensions.</p>
+<p>Result files are not written when empty, “none” or “NONE”.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-force">
+<span class="sig-name descname"><span class="pre">force</span></span><a class="headerlink" href="#confval-force" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-force">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"><span class="pre">=FORCE</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite existing output files.  By default the output
+files are not written if they already exist.  Possible values
+in a configuration file are “true”, “yes”, “on”, “1” or
+“false”, “no”, “off”, “0” or “once”.  The special value “once”
+permits one overwrite and then resets <code class="docutils literal notranslate"><span class="pre">config.force</span></code> to
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.  Note that in interactive mode the values assigned
+to <code class="docutils literal notranslate"><span class="pre">config.force</span></code> are converted to Python <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>
+unless equal to “once”.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="pdf-parameters">
+<span id="my-pdfparameters"></span><h2>PDF parameters<a class="headerlink" href="#pdf-parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-mode">
+<span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#confval-mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-mode">
+<span class="sig-name descname"><span class="pre">--mode</span></span><span class="sig-prename descclassname"><span class="pre">=STRING</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The PDF conversion mode, i.e., the name of the
+<a class="reference internal" href="interact.html#interactive_.pdfgetter" title="_interactive_.pdfgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code></a> setup.  The available modes correspond
+to the radiation type used in powder diffraction experiment and can
+be “xray” or “neutron”.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-wavelength">
+<span class="sig-name descname"><span class="pre">wavelength</span></span><a class="headerlink" href="#confval-wavelength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-w">
+<span id="cmdoption-pdfgetx3-wavelength"></span><span class="sig-name descname"><span class="pre">-w</span></span><span class="sig-prename descclassname"> <span class="pre">FLOAT</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--wavelength</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-w" title="Permalink to this definition">¶</a></dt>
+<dd><p>X-ray wavelength in ångströms.  This value is required
+for the “twotheta” dataformat in order to convert the scattering
+angles 2Θ to a momentum transfer <em>Q</em>.  For other data formats
+the wavelength is not necessary and may be left undefined.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-twothetazero">
+<span class="sig-name descname"><span class="pre">twothetazero</span></span><a class="headerlink" href="#confval-twothetazero" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-twothetazero">
+<span class="sig-name descname"><span class="pre">--twothetazero</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-twothetazero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Position of the zero scattering angle in diffractometer degrees.
+This parameter corrects for a constant offset in the
+measured 2Θ values.  When loading configuration file
+it is assumed 0 unless specified otherwise.  This parameter
+is only effective for the “twotheta” dataformat.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-composition">
+<span class="sig-name descname"><span class="pre">composition</span></span><a class="headerlink" href="#confval-composition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-composition">
+<span class="sig-name descname"><span class="pre">--composition</span></span><span class="sig-prename descclassname"><span class="pre">=STRING</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-composition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chemical composition of the sample.  Supported formats are
+“PbTi0.5Zr0.5O3”, “Pb 1 Ti 1/2 Zr 1/2 O 3” or “CH3 (CH2)3 OH”.
+Space characters are ignored, unit counts can be omitted, but it is
+important to use a proper upper and lower case in atom symbols.
+Elements can appear several times in the formula, e.g., “CH3 CH3”,
+and the formula may contain parentheses or fractional
+stoichiometries.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-bgscale">
+<span class="sig-name descname"><span class="pre">bgscale</span></span><a class="headerlink" href="#confval-bgscale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-bgscale">
+<span class="sig-name descname"><span class="pre">--bgscale</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-bgscale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling of the background intensities loaded from the
+<a class="reference internal" href="#confval-backgroundfile"><code class="xref std std-confval docutils literal notranslate"><span class="pre">backgroundfile</span></code></a>, by default 1.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-rpoly">
+<span class="sig-name descname"><span class="pre">rpoly</span></span><a class="headerlink" href="#confval-rpoly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-rpoly">
+<span class="sig-name descname"><span class="pre">--rpoly</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-rpoly" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>r</em>-limit for the maximum frequency in the <em>F</em>(<em>Q</em>) correction polynomial.
+The PDF is unreliable at shorter <em>r</em>, however a
+very small <code class="xref std std-confval docutils literal notranslate"><span class="pre">rpoly</span></code> would disable polynomial correction and
+give noisy PDF.
+Larger values produce closer fits with a higher degree polynomial,
+but when too large, they might smooth-out a useful signal in the
+data.  The default is 0.9.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-qmaxinst">
+<span class="sig-name descname"><span class="pre">qmaxinst</span></span><a class="headerlink" href="#confval-qmaxinst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-qmaxinst">
+<span class="sig-name descname"><span class="pre">--qmaxinst</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-qmaxinst" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <em>Q</em> cutoff for the meaningful input intensities in inverse
+ångströms.  Some data files may contain trailing zeros
+or unreliable intensities at the upper bound of the detector range.
+The <code class="xref std std-confval docutils literal notranslate"><span class="pre">qmaxinst</span></code> defines a threshold for unreliable data.
+The parameter is also used as an upper boundary for the polynomial
+fit correction of the <em>S</em>(<em>Q</em>) data.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-qmin">
+<span class="sig-name descname"><span class="pre">qmin</span></span><a class="headerlink" href="#confval-qmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-qmin">
+<span class="sig-name descname"><span class="pre">--qmin</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-qmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lower <em>Q</em>-limit for the Fourier transformation of the <em>F</em>(<em>Q</em>) curve
+in inverse ångströms.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-qmax">
+<span class="sig-name descname"><span class="pre">qmax</span></span><a class="headerlink" href="#confval-qmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-qmax">
+<span class="sig-name descname"><span class="pre">--qmax</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-qmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>The upper <em>Q</em>-limit for the Fourier transformation of the <em>F</em>(<em>Q</em>) curve
+in inverse ångströms.  This is essentially a limit, where sample
+signal decays to the level of data noise.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-rmin">
+<span class="sig-name descname"><span class="pre">rmin</span></span><a class="headerlink" href="#confval-rmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-rmin">
+<span class="sig-name descname"><span class="pre">--rmin</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-rmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lower bound of the <em>r</em>-grid for the calculated PDF in ångströms.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-rmax">
+<span class="sig-name descname"><span class="pre">rmax</span></span><a class="headerlink" href="#confval-rmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-rmax">
+<span class="sig-name descname"><span class="pre">--rmax</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-rmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper bound of the <em>r</em>-grid for the calculated PDF in ångströms.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-rstep">
+<span class="sig-name descname"><span class="pre">rstep</span></span><a class="headerlink" href="#confval-rstep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-rstep">
+<span class="sig-name descname"><span class="pre">--rstep</span></span><span class="sig-prename descclassname"><span class="pre">=FLOAT</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-rstep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spacing of the <em>r</em>-grid for the calculated PDF in ångströms.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="other-parameters">
+<h2>Other parameters<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><a class="headerlink" href="#confval-plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-p">
+<span id="cmdoption-pdfgetx3-plot"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"> <span class="pre">TYPES</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--plot</span></span><span class="sig-prename descclassname"><span class="pre">=TYPES</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the specified results.  A comma separated list with one or
+more items from “iq”, “sq”, “fq”, “gr”.  No plot is produced when
+empty, “none” or “NONE”.  Setting this option turns on the
+interactive mode.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-interact">
+<span class="sig-name descname"><span class="pre">interact</span></span><a class="headerlink" href="#confval-interact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-i">
+<span id="cmdoption-pdfgetx3-interact"></span><span class="sig-name descname"><span class="pre">-i</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--interact</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-pdfgetx3-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start an IPython interactive session after processing all files.
+Useful for tuning the configuration parameters or interactive
+plotting.  This is always on when plot option has been set.
+See also <a class="reference internal" href="interact.html"><span class="doc">Interactive mode</span></a> for further details.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-verbose">
+<span class="sig-name descname"><span class="pre">verbose</span></span><a class="headerlink" href="#confval-verbose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-pdfgetx3-verbose">
+<span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"><span class="pre">=VALUE</span></span><a class="headerlink" href="#cmdoption-pdfgetx3-verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Level of detail for the program to report about its actions.
+Possible values are “error”, “warning”, “info”, “debug”, “all” or an
+integer number from 0 to 5.  Messages are completely suppressed when
+0, all messages are printed when verbose is 5 (“all”) or higher.
+This option is useful for diagnostics of any unexpected behavior
+in the program.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Options and parameters</a><ul>
+<li><a class="reference internal" href="#program-operation">Program operation</a></li>
+<li><a class="reference internal" href="#configuration-file-options">Configuration file options</a></li>
+<li><a class="reference internal" href="#input-and-output-options">Input and output options</a></li>
+<li><a class="reference internal" href="#pdf-parameters">PDF parameters</a></li>
+<li><a class="reference internal" href="#other-parameters">Other parameters</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="interact.html"
+                          title="previous chapter">Interactive mode</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="plotdata.html"
+                          title="next chapter">The plotdata program</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/options.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plotdata.html" title="The plotdata program"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="interact.html" title="Interactive mode"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
