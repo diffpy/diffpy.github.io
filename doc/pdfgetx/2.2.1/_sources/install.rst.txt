@@ -1,0 +1,146 @@
+Installation
+========================================================================
+
+.. include:: abbreviations.txt
+
+Software requirements
+------------------------------------------------------------------------
+
+This software is written in Python programming language, therefore
+you must have Python 3.10, 3.9, 3.8, 3.7 or 2.7 installed.  In addition,
+the following third-party Python libraries are also required:
+
+* pip - Python package installer
+* setuptools - tools for installing Python packages
+* six - Python 2 and 3 compatibility library
+* NumPy - library for scientific computing with Python
+* matplotlib - Python plotting library
+* IPython - enhanced interactive Python shell
+
+Standard Python releases can be obtained from
+https://www.python.org/downloads.
+The third-party libraries can be found at the
+`Python Package Index <https://pypi.org>`__
+or using any Internet search engine.
+
+Another more convenient option is to obtain one of the science-oriented
+Python distributions such as
+`Anaconda Python`_,
+`Enthought Canopy <https://www.enthought.com/>`_ or
+`PythonXY <https://python-xy.github.io/>`_,
+These distributions already include all the necessary libraries, so the
+required Python software can be all installed in one step.
+
+On Linux operating systems the third-party libraries are usually
+included in a system software repository.  For example on an
+Ubuntu Linux computer the software dependencies can be all installed
+with a single shell command ::
+
+  sudo apt-get install \
+    python3-pip python3-setuptools python3-six \
+    python3-numpy python3-matplotlib ipython3
+
+This may be, of course, as well accomplished using the GUI
+driven Synaptic package manager.  Other Linux
+distributions may use different software management tools,
+but the names of the necessary packages should be very similar
+to those above.
+
+On Windows operating system, it may be necessary to add the
+``C:\Python37`` directory and the scripts directory
+``C:\Python37\Scripts`` to the system :envvar:`!PATH`. Some Python
+distributions already do so as a part of their installation process. The
+easiest way to check is to start the :program:`Command Prompt`, type
+there ``python`` and see if this starts the Python interpreter.
+
+Alternately, if you want to run the diffpy.pdfgetx software with a specific version of Python,
+we recommend using a virtual environment, such as ``conda``. For example, if you have Anaconda Python installed,
+you can create a conda virtual environment to install the software as follow ::
+
+  conda create --name pdfgetx_env python=3.8 numpy matplotlib ipython
+
+You can choose the name of the environment and python version as you desire. You can choose any of the 
+supported Python versions. Then, activate this environment and follow the instructions in the
+next section to install the software ::
+
+  conda activate pdfgetx_env
+
+Installation
+------------------------------------------------------------------------
+
+The diffpy.pdfgetx software is distributed as a Python wheel file,
+which can be obtained from the
+`Columbia Technology Ventures
+<http://innovation.columbia.edu/technologies/m11-120>`__.
+Once all the required software is in
+place, start the command prompt on Windows or a Unix terminal on Linux
+or Mac, navigate to the directory that contains the wheel file and
+execute the following command::
+
+  pip install ./diffpy.pdfgetx-VERSION.whl
+
+Here VERSION needs to be replaced to match the actual filename. It is
+critical that pip installer is from a supported Python version otherwise
+the program would not work. On Linux and Mac operating systems the installation may need to run with root user privileges, for example, by prepending ``sudo`` to the command line above. If root access is not available, use the ``pip install`` options :option:`!--user` or :option:`!--prefix` to install the software to a user-writable directory.
+
+The package provides three programs for PDF conversion, :program:`pdfgetx3`, :program:`pdfgetn3` and :program:`pdfgets3`. To check if they are correctly installed run ::
+
+  pdfgetx3 --version
+  pdfgetn3 --version
+  pdfgets3 --version
+
+This should display the software version, which should agree
+with the VERSION string in the wheel package name.
+The installation also includes a :program:`plotdata`
+command for an easy plotting of text data files.  To verify
+if plotdata works, run the ``plotdata --version`` command.
+Finally, a comprehensive test of the installed software can
+be executed using ::
+
+  python -m diffpy.pdfgetx.tests.run
+
+.. note::
+
+   Older versions of diffpy.pdfgetx use Python egg format
+   instead of Python wheel.
+   To install these use the easy_install command as follows::
+
+      python -m easy_install ./diffpy.pdfgetx-VERSION.egg
+
+.. index:: %pdfgetx3 IPython magic
+.. index:: %pdfgetn3 IPython magic
+.. index:: %pdfgets3 IPython magic
+
+IPython magic command
+------------------------------------------------------------------------
+
+These instructions are intended for `IPython`_ users who would like to
+integrate PDFgetX3, PDFgetN3 and PDFgetS3 into their IPython environment.  If
+you don't plan to customize IPython in such way you can safely skip
+this paragraph.
+
+When pdfgetx3 or pdfgetn3 or pdfgets3 is run in interactive mode, it start
+IPython interactive shell and define an extra ``%pdfgetx3``, ``%pdfgetn3`` and ``%pdfgets3`` magic commands within the IPython session.  The IPython
+magic commands are not valid Python code, but work in a similar
+fashion as standard shell commands.  The ``%pdfgetx3``, ``%pdfgetn3`` and ``%pdfgets3`` magics can be thus used with the same options and arguments as if run from the shell.  This is useful for processing more files, while
+preserving all plots or variables that were already created
+in an IPython session.
+
+The ``%pdfgetx3``, ``%pdfgetn3`` and ``%pdfgets3`` magic commands can be defined
+permanently so they are available in all IPython sessions.  To set
+this up
+
+#.  find the ``profile_default/ipython_config.py`` file and open it
+    in a text editor.  If that file does not exists,
+    create it first by executing ::
+
+      ipython profile create
+
+#.  navigate to the paragraph that contains the
+    :py:data:`!c.InteractiveShellApp.extensions` and add there
+    the following line ::
+
+      c.InteractiveShellApp.extensions = ['diffpy.pdfgetx.ipy_magics']
+
+    There must be no leading indent, i.e., the text must start at the
+    very first column.

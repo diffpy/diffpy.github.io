@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files used in PDF extraction &#8212; diffpy.pdfgetx 2.2.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interactive mode" href="interact.html" />
+    <link rel="prev" title="Tutorial" href="tutorial.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.2.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="files-used-in-pdf-extraction">
+<h1>Files used in PDF extraction<a class="headerlink" href="#files-used-in-pdf-extraction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="configuration-file">
+<span id="my-configfile"></span><h2>Configuration file<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>Configuration files may define the PDF processing parameters.
+By default, the <strong class="program">pdfgetx3</strong> program attempts to read
+<code class="file docutils literal notranslate"><span class="pre">.pdfgetx3.cfg</span></code> file from the user HOME directory,
+then <code class="file docutils literal notranslate"><span class="pre">.pdfgetx3.cfg</span></code> and <code class="file docutils literal notranslate"><span class="pre">pdfgetx3.cfg</span></code> files
+from the current working directory.
+If configuration file has a different name, it needs to be specified
+with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--config</span></code></a> option.
+The <strong class="program">pdfgetn3</strong> program works in the same way,
+except it checks for configuration files
+<code class="file docutils literal notranslate"><span class="pre">~/.pdfgetn3.cfg</span></code>, <code class="file docutils literal notranslate"><span class="pre">.pdfgetn3.cfg</span></code> and <code class="file docutils literal notranslate"><span class="pre">pdfgetn3.cfg</span></code>.</p>
+<p>The easiest way of creating a configuration file is to generate
+a template content using the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-createconfig"><code class="xref std std-option docutils literal notranslate"><span class="pre">--createconfig</span></code></a> option as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">createconfig</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">cfg</span>
+</pre></div>
+</div>
+<p>and then change the generated test.cfg file in your favorite text
+editor.  The configuration file follows a simple “varname=value” syntax,
+any lines starting with “#” are ignored as comments.</p>
+<p>The configuration file has several sections marked as <code class="docutils literal notranslate"><span class="pre">[SECTIONNAME]</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">[DEFAULT]</span></code> section is mandatory and it contains the default
+global settings.  Any other sections are optional and they are applied
+only when selected with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-s"><code class="xref std std-option docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--section</span></code></a> option on the
+command line.  Thus</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">cfg</span> <span class="o">--</span><span class="n">section</span><span class="o">=</span><span class="n">nacl</span>
+</pre></div>
+</div>
+<p>would read the parameters from the <code class="docutils literal notranslate"><span class="pre">[nacl]</span></code> section after reading the
+defaults.  Having several sections in the configuration
+file is useful when there are multiple measurements that share most of
+the parameters, but differ in a few of them, for example in chemical
+composition.  The configuration file can then contain sections per each
+sample that define only the composition, while all other parameters are
+specified just once in the global DEFAULT section.</p>
+</div>
+<div class="section" id="input-files">
+<h2>Input files<a class="headerlink" href="#input-files" title="Permalink to this headline">¶</a></h2>
+<p>PDFgetX3 and PDFgetN3 accept input powder diffraction data
+in the form of two-column text file,
+where the first column x is either the scattering angle
+2Θ in degrees, momentum transfer <em>Q</em> in inverse nanometers or <em>Q</em>
+in inverse ångströms.  The second column y contains the corresponding
+scattered intensities normalized per unit solid angle.  The actual type
+of the x-values is identified by the <a class="reference internal" href="options.html#confval-dataformat"><code class="xref std std-confval docutils literal notranslate"><span class="pre">dataformat</span></code></a> parameter.
+The input files may contain header with comments or metadata, and the
+actual data are read from the first long section of numerical values.</p>
+<p>The input files are usually passed as command-line arguments to
+<strong class="program">pdfgetx3</strong> or <strong class="program">pdfgetn3</strong> programs and must be paths
+accessible from the current working directory.</p>
+<p>Input files can be also defined by setting the <a class="reference internal" href="options.html#confval-inputfile"><code class="xref std std-confval docutils literal notranslate"><span class="pre">inputfile</span></code></a>
+value in the configuration file.  The <a class="reference internal" href="options.html#cmdoption-pdfgetx3-d"><code class="xref std std-option docutils literal notranslate"><span class="pre">-d,</span> <span class="pre">--datapath</span></code></a>
+option can be then used to provide additional data directories to
+search for these inputs and for the <a class="reference internal" href="options.html#confval-backgroundfile"><code class="xref std std-confval docutils literal notranslate"><span class="pre">backgroundfile</span></code></a>.
+This is to support configuration files located in a different
+directory than the data.</p>
+<p>When the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><code class="xref std std-option docutils literal notranslate"><span class="pre">--find</span></code></a> option is active, the pdfgetx3 arguments
+are understood as filename patterns and the input files are found
+in the current or specified directory.</p>
+</div>
+<div class="section" id="output-files">
+<h2>Output files<a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<p>PDFgetX3 and PDFgetN3 can produce up to four different output data files:</p>
+<ul class="simple">
+<li><p>.iq – <em>I</em>(<em>Q</em>), the background-corrected
+intensities sampled on a regular <em>Q</em>-space grid in inverse ångströms,</p></li>
+<li><p>.sq – <em>S</em>(<em>Q</em>), the total scattering structure function,
+with intensities normalized by average scattering factors and
+corrected by a polynomial fit,</p></li>
+<li><p>.fq – <em>F</em>(<em>Q</em>), the reduced structure function equal to <em>Q</em>(<em>S</em>(<em>Q</em>) - 1),</p></li>
+<li><p>.gr – <em>G</em>(<em>r</em>), the resultant PDF, where the first column is the
+separation <em>r</em> in ångströms and the second is the function <em>G</em> in
+Å<sup>-2</sup>.</p></li>
+</ul>
+<p>You can specify what output files should be produced by setting the
+<a class="reference internal" href="options.html#confval-outputtypes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outputtypes</span></code></a> parameter in the configuration file or by
+passing the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-t"><code class="xref std std-option docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--outputtypes</span></code></a> on the command line.</p>
+<p>The header of all output files contains the parameter values that were
+used in the calculation and thus it is by itself a valid configuration
+file.  When passed as an argument to the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">--config</span></code></a> option,
+the PDFgetX3 will reproduce the previous calculation.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Files used in PDF extraction</a><ul>
+<li><a class="reference internal" href="#configuration-file">Configuration file</a></li>
+<li><a class="reference internal" href="#input-files">Input files</a></li>
+<li><a class="reference internal" href="#output-files">Output files</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tutorial.html"
+                          title="previous chapter">Tutorial</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="interact.html"
+                          title="next chapter">Interactive mode</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/files.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="interact.html" title="Interactive mode"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="Tutorial"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
