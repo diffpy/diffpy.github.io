@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive mode &#8212; diffpy.pdfgetx 2.2.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Options and parameters" href="options.html" />
+    <link rel="prev" title="Files used in PDF extraction" href="files.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.2.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="interactive-mode">
+<h1>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h1>
+<p>The interactive mode is activated by using either the
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-i"><code class="xref std std-option docutils literal notranslate"><span class="pre">-i,</span> <span class="pre">--interact</span></code></a> option or a non-empty
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--plot</span></code></a> option.  In the interactive mode
+the program starts an <a class="reference external" href="https://ipython.org">IPython</a> interactive shell and pre-loads several
+functions and variables related to the PDF calculation.  It also defines
+IPython commands <code class="docutils literal notranslate"><span class="pre">%pdfgetx3</span></code> and <code class="docutils literal notranslate"><span class="pre">%pdfgetn3</span></code>, which can be used with
+the same syntax as the <strong class="program">pdfgetx3</strong> and <strong class="program">pdfgetn3</strong> in
+system shell.
+The interactive session is also initialized with all functions from the
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" title="(in Matplotlib v3.5.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code></a> module for convenient plotting.
+The functions and variables related to PDF processing are:</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="interactive_.pdfgetter">
+<span id="_interactive_.pdfgetter"></span><span class="sig-name descname"><span class="pre">pdfgetter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interactive_.pdfgetter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of the <code class="xref py py-class docutils literal notranslate"><span class="pre">PDFGetter</span></code> class which serves as a
+low-level function that calculates the PDF.  This is a callable
+object, which takes as an argument a pair of input arrays for
+(<em>Q</em>, intensity) or (2Θ, intensity) depending on
+<a class="reference internal" href="options.html#confval-dataformat"><code class="xref std std-confval docutils literal notranslate"><span class="pre">dataformat</span></code></a>.  It can be also called with a keyword
+argument <code class="docutils literal notranslate"><span class="pre">filename=FILE</span></code>, which would read the input arrays
+from the specified file.  When called with no arguments,
+it calculates PDF from the last input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray, optional</em>) –
+The <em>Q</em> or 2Θ values in powder diffraction pattern.</p></li>
+<li><p><strong>y</strong> (<em>numpy.ndarray, optional</em>) –
+The scattered intensities in powder diffraction pattern</p></li>
+<li><p><strong>filename</strong> (<em>str, optional</em>) –
+The text data file for loading the <cite>x</cite>, <cite>y</cite> values when
+they are not specified.</p></li>
+<li><p><strong>kwargs</strong> (<em>misc, optional</em>) –
+Extra keyword arguments that are applied to
+the <code class="xref py py-data docutils literal notranslate"><span class="pre">config</span></code> object, for example <code class="docutils literal notranslate"><span class="pre">qmax=20</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A pair of output arrays <em>(r, G)</em>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std interactvar">
+<dt class="sig sig-object std" id="interactvar-config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#interactvar-config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance of the <code class="xref py py-class docutils literal notranslate"><span class="pre">PDFConfig</span></code> class that stores the
+<a class="reference internal" href="options.html#my-ioparameters"><span class="std std-ref">parameters and input files</span></a> for the program.
+Use <code class="docutils literal notranslate"><span class="pre">print(config)</span></code> to display the current configuration values.
+This is the same object as <code class="xref py py-data docutils literal notranslate"><span class="pre">pdfgetter.config</span></code>.  Configuration
+may be changed by setting a respective attribute of the
+<code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config</span></code> object, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">qmax</span> <span class="o">=</span> <span class="mi">21</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-data docutils literal notranslate"><span class="pre">config</span></code> values may be also changed by calling the
+<a class="reference internal" href="#interactive_.pdfgetter" title="_interactive_.pdfgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code></a> or <a class="reference internal" href="#interactive_.processfiles" title="_interactive_.processfiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code></a> function with a
+corresponding keyword argument, for example
+<code class="docutils literal notranslate"><span class="pre">processfiles(qmax=20,</span> <span class="pre">force=&quot;once&quot;)</span></code>.</p>
+</dd></dl>
+
+<dl class="std interactvar">
+<dt class="sig sig-object std" id="interactvar-iraw">
+<span class="sig-name descname"><span class="pre">iraw</span></span><a class="headerlink" href="#interactvar-iraw" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="interactvar-iq">
+<span class="sig-name descname"><span class="pre">iq</span></span><a class="headerlink" href="#interactvar-iq" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="interactvar-sq">
+<span class="sig-name descname"><span class="pre">sq</span></span><a class="headerlink" href="#interactvar-sq" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="interactvar-fq">
+<span class="sig-name descname"><span class="pre">fq</span></span><a class="headerlink" href="#interactvar-fq" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="interactvar-gr">
+<span class="sig-name descname"><span class="pre">gr</span></span><a class="headerlink" href="#interactvar-gr" title="Permalink to this definition">¶</a></dt>
+<dd><p>These variables are assigned the input raw intensities and the
+intermediate results, stored as matrix rows.  The matrix rows
+correspond to twotheta1, intensity1, twotheta2, intensity2, etc.
+Because matrices are iterated row first, the raw intensities
+from all input files can be plotted with the matplotlib plot
+function as <code class="docutils literal notranslate"><span class="pre">plot(*iraw)</span></code>.</p>
+<p>These variables should be considered read-only and are reset
+with subsequent PDF calculations.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interactive_.tuneconfig">
+<span id="_interactive_.tuneconfig"></span><span class="sig-name descname"><span class="pre">tuneconfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdfgetter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axeslist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interactive_.tuneconfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a GUI dialog for interactive tuning of configuration variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plotids</strong> – The string or iterable that specify what interactive plots should be
+tuned.  By default the same as <code class="docutils literal notranslate"><span class="pre">config.plot</span></code>.  It can be also an
+integer index or name of a transformation in <a class="reference internal" href="#interactive_.pdfgetter" title="_interactive_.pdfgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code></a> or
+a reference to a <code class="xref py py-class docutils literal notranslate"><span class="pre">Transformation</span></code> object.</p></li>
+<li><p><strong>pdfgetter</strong> – The optional <code class="xref py py-class docutils literal notranslate"><span class="pre">PDFGetter</span></code> object to be tuned.
+This is by default the interactive <code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code> object.</p></li>
+<li><p><strong>axeslist</strong> – An optional list of matplotlib Axes for showing interactive plots.
+When None, use <code class="docutils literal notranslate"><span class="pre">subplot(N,</span> <span class="pre">1,</span> <span class="pre">i)</span></code> to create any necessary axes.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes from <code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code> apply only to the configuration
+and results in memory.  Use the <a class="reference internal" href="#interactive_.processfiles" title="_interactive_.processfiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code></a> function
+to save them to disk.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="tutorial.html#my-tuneconfig"><span class="std std-ref">Interactive tuning of parameters</span></a> tutorial</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interactive_.processfiles">
+<span id="_interactive_.processfiles"></span><span class="sig-name descname"><span class="pre">processfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#interactive_.processfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process all input files again with the current configuration values.
+This is a higher-level function than <a class="reference internal" href="#interactive_.pdfgetter" title="_interactive_.pdfgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code></a>, as
+it also saves output files and produces plots as specified by the
+<a class="reference internal" href="#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config</span></code></a> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – One or more input files to be converted to PDFs and saved or
+plotted according to the <code class="xref py py-data docutils literal notranslate"><span class="pre">config</span></code> settings.  Use the
+previous list of input files when not specified.</p></li>
+<li><p><strong>kwargs</strong> – An optional keyword arguments to set for the <code class="xref py py-data docutils literal notranslate"><span class="pre">config</span></code>
+object, for example <code class="docutils literal notranslate"><span class="pre">(force=&quot;once&quot;,</span> <span class="pre">qmax=18)</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<p>This function updates the <a class="reference internal" href="#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config.inputfiles</span></code></a>
+list and the <a class="reference internal" href="#interactvar-iraw"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iraw</span></code></a>, <a class="reference internal" href="#interactvar-iq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iq</span></code></a>,
+<a class="reference internal" href="#interactvar-sq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">sq</span></code></a>, <a class="reference internal" href="#interactvar-fq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">fq</span></code></a> and <a class="reference internal" href="#interactvar-gr"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">gr</span></code></a>
+interactive variables.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="interactive_.clearsession">
+<span id="_interactive_.clearsession"></span><span class="sig-name descname"><span class="pre">clearsession</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interactive_.clearsession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all elements from the <a class="reference internal" href="#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config.inputfiles</span></code></a>
+and also the
+<a class="reference internal" href="#interactvar-iraw"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iraw</span></code></a>, <a class="reference internal" href="#interactvar-iq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iq</span></code></a>, <a class="reference internal" href="#interactvar-sq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">sq</span></code></a>,
+<a class="reference internal" href="#interactvar-fq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">fq</span></code></a> and <a class="reference internal" href="#interactvar-gr"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">gr</span></code></a> variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>No return value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffpy.pdfgetx.loaddata">
+<span class="sig-name descname"><span class="pre">loaddata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minrows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usecols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffpy.pdfgetx.loaddata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and load data from a text file.</p>
+<p>The data reading starts at the first matrix block of at least minrows rows
+and constant number of columns.  This seems to work for most of the
+datafiles including those generated by PDFGetX2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Name of the file to load the text data from.</p></li>
+<li><p><strong>minrows</strong> (<em>int, optional</em>) – Minimum number of rows in the first data block, by default 10.
+All rows must have the same number of floating point values.</p></li>
+<li><p><strong>usecols</strong> (<em>int, str, slice, iterable, optional</em>) – Indices or names of the columns to be loaded from the data block,
+the default is all columns.  Data blocks that do not contain
+sufficient number of columns are skipped.  When usecols contain
+string items, they are translated to column indices by looking
+up a header line preceding the data block.  String items formatted
+as <code class="docutils literal notranslate"><span class="pre">i:j:k</span></code> are converted to <cite>slice</cite> objects.  When usecols type
+is string it is split to a list of names at comma and whitespace
+characters.</p></li>
+<li><p><strong>unpack</strong> (<em>bool, optional</em>) – Return data as a sequence of columns that allows tuple unpacking
+such as <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">loaddata(FILENAME,</span> <span class="pre">unpack=True)</span></code>.  Note that
+transposing the loaded array as <code class="docutils literal notranslate"><span class="pre">loaddata(FILENAME).T</span></code> has
+the same effect.  The default is False.</p></li>
+<li><p><strong>kwargs</strong> (<em>misc, optional</em>) – Extra keyword arguments that are passed to <cite>numpy.loadtxt</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data</strong> (<em>numpy.ndarray</em>) – The data block loaded from the text file.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code></a></p>
+</div>
+<p>This function can be imported from the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">diffpy.pdfgetx</span></code> module.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffpy.pdfgetx.plotdata.plotdata">
+<span class="sig-name descname"><span class="pre">plotdata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffpy.pdfgetx.plotdata.plotdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot one or more text data files.</p>
+<p>The files are searched for data blocks which have enough columns
+to satisfy both <cite>x</cite> and <cite>y</cite> selectors of the plotted data.  This
+may result in an empty plot when file has none wide-enough data
+block (e.g., when <code class="docutils literal notranslate"><span class="pre">y=100</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filenames</strong> (<em>str or an iterable of string file names</em>) – One or more text data files to be plotted.</p></li>
+<li><p><strong>style</strong> (<em>str</em>) – Optional style argument for the matplotlib <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
+<li><p><strong>x</strong> (<em>int, str, or iterable, optional</em>) – The column to be used for the x data.  This can be a zero-based
+index of the desired column or a column name from data header.
+A special symbol “.” can be used for a sequential data index.
+When not specified, use the first column.</p></li>
+<li><p><strong>y</strong> (<em>int, str, iterable, or slice, optional</em>) – One or more columns to be used for the y data.  This can be
+a single zero-based index of the desired column or an iterable
+of several indices.  The <cite>y</cite> value can be also a string which
+is split at commas and converted to integers, column names
+or slice objects, e.g. “0,sine,4:7”.  The <cite>slice</cite> instances
+are applied to the entire data block from each loaded file.
+Use the second column when not specified.</p></li>
+<li><p><strong>log</strong> (<em>{‘x’, ‘y’}, optional</em>) – Set logarithmic scaling for the specified axis and linear scaling
+for all others.  For example, <code class="docutils literal notranslate"><span class="pre">log=&quot;y&quot;</span></code> applies linear scaling
+to the x-axis and logarithmic to the y-axis.  Keep the current
+axis scaling when not specified.</p></li>
+<li><p><strong>ax</strong> (<em>matplotlib.axes.Axes, optional</em>) – The axes to plot to.  The plotting will be performed using the
+<code class="docutils literal notranslate"><span class="pre">ax.plot</span></code> method.  The default is <code class="docutils literal notranslate"><span class="pre">pyplot.gca()</span></code>.</p></li>
+<li><p><strong>kwargs</strong> (<em>misc, optional</em>) – Keyword arguments for the matplotlib <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>lines</strong> (<em>list</em>) – The matplotlib <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line2D</span></code></a> objects added to the current axis.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#diffpy.pdfgetx.loaddata" title="diffpy.pdfgetx.loaddata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diffpy.pdfgetx.loaddata</span></code></a></p>
+</div>
+<p>This function can be imported from the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">diffpy.pdfgetx.plotdata</span></code> module.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="diffpy.pdfgetx.findfiles">
+<span class="sig-name descname"><span class="pre">findfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dotfiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#diffpy.pdfgetx.findfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find files that match all specified patterns.</p>
+<p>Pattern syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">^start</span></code> - match “start” only at the beginning of the string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end$</span></code> - match “end” only at the end of string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;7&gt;</span></code> - match number 7 preceded by any number of leading zeros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;1-34&gt;</span></code> - match an integer range from 1 to 34 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;7-&gt;</span></code> - match an integer greater or equal 7.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;-&gt;</span></code> - match any integer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> - start a new group of patterns to match more files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dir/</span></code> - set search path effective from the current pattern group.</p></li>
+</ul>
+<p>All integer ranges <code class="docutils literal notranslate"><span class="pre">&lt;N-M&gt;</span></code> above allow one or more leading zeros.
+The range syntax does not support matching of negative numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patterns</strong> (<em>iterable of strings or str, optional</em>) – String patterns that must all match in returned filenames.
+Can be also a single string with patterns separated by
+whitespace characters.  When empty match all files in the
+current directory or in the <cite>path</cite>.  A single <code class="docutils literal notranslate"><span class="pre">+</span></code> starts
+a new pattern group for additional matches.  Each pattern
+group may have one entry containing <code class="docutils literal notranslate"><span class="pre">/</span></code>, for example,
+<code class="docutils literal notranslate"><span class="pre">dir/</span></code> or <code class="docutils literal notranslate"><span class="pre">./</span></code>, which sets the search directory for
+this and subsequent pattern groups.  When pattern group
+contains only the path entry it reuses file patterns from
+the previous group.</p></li>
+<li><p><strong>path</strong> (<em>str, optional</em>) – Directory to be searched for the files.  The default is “.”
+to search the current directory.</p></li>
+<li><p><strong>dotfiles</strong> (<em>bool, optional</em>) – When True search also the hidden “.” starting files.  These
+files are by default ignored, but can be explicitly selected
+by adding the <code class="docutils literal notranslate"><span class="pre">^.</span></code> pattern.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>filenames</strong> (<em>list</em>) – The list of matching filenames.  Return all files when
+<cite>patterns</cite> are not specified.</p>
+</dd>
+</dl>
+<p>This function can be imported from the
+<code class="xref py py-mod docutils literal notranslate"><span class="pre">diffpy.pdfgetx</span></code> module.</p>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="files.html"
+                          title="previous chapter">Files used in PDF extraction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="options.html"
+                          title="next chapter">Options and parameters</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/interact.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="options.html" title="Options and parameters"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="files.html" title="Files used in PDF extraction"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
