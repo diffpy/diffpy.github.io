@@ -1,18 +1,17 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DiffPy-CMI installation from sources &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="DiffPy-CMI Contents" href="contents.html" />
@@ -133,15 +132,15 @@ package system <a class="reference external" href="https://brew.sh">Homebrew</a>
 been considerably less tested with DiffPy-CMI.</p>
 <p>For best results with MacPorts follow these tips:</p>
 <ul class="simple">
-<li>We recommend to upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</li>
-<li>Install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>.
-If already present, we recommend to upgrade to the latest version.</li>
-<li>Be patient, it may take several hours to install all the dependencies
-using MacPorts.</li>
-<li>Installation command may fail on the first run, but usually works
+<li><p>We recommend to upgrade to the <a class="reference external" href="https://www.apple.com/osx/">latest version of OS X</a>.</p></li>
+<li><p>Install <a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>.
+If already present, we recommend to upgrade to the latest version.</p></li>
+<li><p>Be patient, it may take several hours to install all the dependencies
+using MacPorts.</p></li>
+<li><p>Installation command may fail on the first run, but usually works
 when repeated.  See MacPorts
 <a class="reference external" href="https://trac.macports.org/wiki/FAQ#buildfails">FAQ</a>
-for more help.</li>
+for more help.</p></li>
 </ul>
 <p>To install system dependencies with MacPorts, use:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo port install <span class="se">\</span>
@@ -216,13 +215,13 @@ the base diffpy_cmi directory and create the symbolic link with</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is essential to use a symbolic link.  Making a copy of the
+<p class="admonition-title">Note</p>
+<p>It is essential to use a symbolic link.  Making a copy of the
 <code class="file docutils literal notranslate"><span class="pre">diffpy_cmi.pth</span></code> file will not work.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The installation of DiffPy-CMI is entirely contained under the
+<p class="admonition-title">Note</p>
+<p>The installation of DiffPy-CMI is entirely contained under the
 expanded diffpy_cmi directory.  The software can be completely
 uninstalled by deleting that directory and removing the symbolic
 link.</p>
@@ -238,18 +237,18 @@ group.</p>
 <div class="section" id="list-of-software-dependencies">
 <span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</li>
-<li><strong>boost</strong> - a set of useful C++ libraries.</li>
-<li><strong>python-dev</strong> - development tools for Python modules.</li>
-<li><strong>python-setuptools</strong> - enhancements to the Python distutils.</li>
-<li><strong>numpy</strong> - general-purpose array-processing for large multi-dimensional arrays in Python.</li>
-<li><strong>scipy</strong> - the fundamental library for scientific computing with Python.</li>
-<li><strong>matplotlib</strong> - a Python 2D plotting library.</li>
-<li><strong>python-lxml</strong> - a Python library for processing XML.</li>
-<li><strong>ipython</strong> - an enhanced interactive Python shell.</li>
-<li><strong>scons</strong> - a software build tool.</li>
-<li><strong>git</strong> - a version control system.</li>
-<li><strong>zsh</strong> - an interactive shell and powerful scripting language.</li>
+<li><p><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</p></li>
+<li><p><strong>boost</strong> - a set of useful C++ libraries.</p></li>
+<li><p><strong>python-dev</strong> - development tools for Python modules.</p></li>
+<li><p><strong>python-setuptools</strong> - enhancements to the Python distutils.</p></li>
+<li><p><strong>numpy</strong> - general-purpose array-processing for large multi-dimensional arrays in Python.</p></li>
+<li><p><strong>scipy</strong> - the fundamental library for scientific computing with Python.</p></li>
+<li><p><strong>matplotlib</strong> - a Python 2D plotting library.</p></li>
+<li><p><strong>python-lxml</strong> - a Python library for processing XML.</p></li>
+<li><p><strong>ipython</strong> - an enhanced interactive Python shell.</p></li>
+<li><p><strong>scons</strong> - a software build tool.</p></li>
+<li><p><strong>git</strong> - a version control system.</p></li>
+<li><p><strong>zsh</strong> - an interactive shell and powerful scripting language.</p></li>
 </ul>
 </div>
 </div>

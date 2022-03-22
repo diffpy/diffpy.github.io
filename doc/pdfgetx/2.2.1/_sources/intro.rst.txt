@@ -1,0 +1,71 @@
+Introduction
+========================================================================
+
+diffpy.pdfgetx is a simple yet powerful software for converting X-ray or
+neutron powder diffraction data to atomic Pair Distribution Functions
+(PDFs). In addition, it also allows the extraction of PDFs from small-angle
+scattering (SAS) data. The software includes three command line programs
+PDFgetX3, PDFgetN3 and PDFgetS3 for processing X-ray,
+constant-wavelength neutron and small-angle diffraction data
+respectively. PDFgetX3, PDFgetN3 and PDFgetS3 can be used in a batch
+mode to convert a series of data files without user intervention. The
+programs can be also run in an interactive mode that allows to control
+process parameters and plot the PDFs and any intermediate results. Users
+can interactively tune the PDF processing parameters, visualize their effect on the results and adjust them to their optimum values. The programs are bundled with Python library diffpy.pdfgetx for PDF processing functions, which can be used in custom Python scripts.
+
+
+.. index:: license
+
+License notice
+------------------------------------------------------------------------
+
+.. include:: ../../LICENSENOTICE.txt
+
+
+.. index:: authors
+
+Authors
+------------------------------------------------------------------------
+
+This code was written by members of the Billinge Group at
+Columbia University and Brookhaven National Laboratory including
+Pavol Juhás,
+Timur Davis,
+Chia-Hao (Timothy) Liu,
+Christopher Wright,
+Christopher Farrow,
+Connor J. Bracy,
+Hung Vuong,
+Songsheng Tao,
+Simon Billinge.
+
+
+.. index:: citations, references
+
+References
+------------------------------------------------------------------------
+
+If you use this program for a scientific research that leads
+to publication, we ask that you acknowledge use of the program
+by citing the following paper in your publication:
+
+   P. Juhás and T. Davis, C. L. Farrow, S. J. L. Billinge
+   `PDFgetX3: A rapid and highly automatable program for processing
+   powder diffraction data into total scattering pair distribution
+   functions <https://dx.doi.org/10.1107/S0021889813005190>`__,
+   *J. Appl. Crystallogr.* **46**, 560-566 (2013)
+
+For research publications that use this software to process neutron
+diffraction data we ask you to also cite:
+
+   P. Juhás, J. N. Louwen, L. van Eijck, E. T. C. Vogt,
+   S. J. L.  Billinge
+   `PDFgetN3: atomic pair distribution functions from neutron
+   powder diffraction data using ad hoc corrections
+   <https://dx.doi.org/10.1107/S1600576718010002>`__,
+   *J. Appl. Crystallogr.* **51** (2018)
+
+For research publications utilising the sasPDF utility, PDFGetS3, we ask you to acknowledge the use of the program by citing following paper in your publication:
+
+   CH Liu, E. Janke, R. Li, P. Juhás, O. Gang, D. V. Talapin, S. J. L. Billinge
+   `sasPDF: pair distribution function analysis of nanoparticle assemblies from small-angle-scattering data <https://arxiv.org/abs/1910.08186>`__.

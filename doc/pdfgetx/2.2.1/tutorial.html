@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial &#8212; diffpy.pdfgetx 2.2.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Files used in PDF extraction" href="files.html" />
+    <link rel="prev" title="Quick-start guide" href="quick-start.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.2.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">In this tutorial we will convert several X-ray powder diffraction
+patterns to corresponding PDFs.  Open a terminal on a Unix-based system
+or a Command Prompt on Windows and navigate to the <code class="file docutils literal notranslate"><span class="pre">examples</span></code>
+folder included with the PDFgetX3 distribution.  The <code class="file docutils literal notranslate"><span class="pre">examples</span></code>
+folder can be found in the parent “doc” directory relative to this
+document or another option is to just search your file system for
+one of the input files mentioned below.
+The example files are also available at
+<a class="reference external" href="https://www.diffpy.org/doc/pdfgetx/2.2.1/pdfgetxn3-examples.zip">https://www.diffpy.org/doc/pdfgetx/2.2.1/pdfgetxn3-examples.zip</a>.</p>
+<div class="section" id="nickel-x-ray-pdf">
+<span id="index-1"></span><h2>Nickel X-ray PDF<a class="headerlink" href="#nickel-x-ray-pdf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="predefined-configuration-file">
+<h3>predefined configuration file<a class="headerlink" href="#predefined-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>Change to the <code class="file docutils literal notranslate"><span class="pre">Ni</span></code> directory.  The file named
+<code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5.chi</span></code> contains powder X-ray data
+measured from nickel at the Advanced Photon Source beamline
+6ID-D.  The file contains two columns for the 2Θ scattering
+angles and X-ray intensities.  The second file
+<code class="file docutils literal notranslate"><span class="pre">kapton_bgrd_300k_nor_2-3.chi</span></code> contains the background
+measurement, i.e., the intensities from an empty capillary.
+Finally, the <code class="file docutils literal notranslate"><span class="pre">pdfgetx3.cfg</span></code> contains a complete configuration
+parameters for converting the powder pattern to a PDF.  Since all
+processing parameters are already defined in the configuration file,
+the first PDF calculation is very simple and involves running the
+<a class="reference internal" href="quick-start.html#cmd-pdfgetx3"><span class="std std-ref">pdfgetx3</span></a> program
+with the powder data file as an argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 ni300mesh_300k_nor_1-5.chi
+</pre></div>
+</div>
+<p>For the first run there should be no output on the screen,
+however a new file, <code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5.gr</span></code> should appear
+in the work directory.
+We can use the <a class="reference internal" href="plotdata.html#cmd-plotdata"><span class="std std-ref">plotdata</span></a> program,
+included with this software, to plot the output data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ plotdata ni300mesh_300k_nor_1-5.gr
+</pre></div>
+</div>
+<p>This will open a graph window and start an <a class="reference external" href="https://ipython.org">IPython</a> interactive session.
+To exit and close the figure, type <code class="docutils literal notranslate"><span class="pre">exit()</span></code> on the IPython prompt.
+Let’s run the program again, but now with a
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-verbose"><code class="xref std std-option docutils literal notranslate"><span class="pre">--verbose=info</span></code></a>
+option, to show more details about the program actions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --verbose=info ni300mesh_300k_nor_1-5.chi
+
+INFO:applying pdfgetx3 defaults
+INFO:set config.mode = xray
+INFO:searching for default config file /home/user/.pdfgetx3.cfg
+INFO:searching for default config file .pdfgetx3.cfg
+INFO:searching for default config file pdfgetx3.cfg
+INFO:loaded default config file pdfgetx3.cfg
+INFO:reset config.twothetazero = 0.0
+INFO:parsing config file section [DEFAULT]
+INFO:set config.dataformat = twotheta
+INFO:set config.backgroundfile = kapton_bgrd_300k_nor_2-3.chi
+INFO:set config.outputtypes = gr
+INFO:set config.wavelength = 0.142774
+INFO:set config.composition = Ni
+INFO:set config.qmaxinst = 26.5
+INFO:set config.qmax = 26.0
+INFO:set config.rmin = 0.0
+INFO:set config.rmax = 30.0
+INFO:set config.rstep = 0.01
+INFO:finished parsing config file
+INFO:processing command line options
+INFO:set config.verbose = info
+INFO:finished with command line options
+INFO:using 1 input files from the command line.
+INFO:configuring PDFGetter mode &#39;xray&#39;
+INFO:calling config_xray
+INFO:started PDF processing.
+INFO:processing &#39;ni300mesh_300k_nor_1-5.chi&#39;
+INFO:resolved output file &#39;&#39; as &#39;ni300mesh_300k_nor_1-5.gr&#39;
+WARNING:ni300mesh_300k_nor_1-5.gr already exists.
+WARNING:Use &quot;--force=yes&quot; or &quot;--force=once&quot; to overwrite.
+INFO:elapsed time: 0.095
+</pre></div>
+</div>
+<p>Here we can see what configuration files are searched, which of them
+get loaded and what are the effective values of the processing
+parameters.  Unless the <code class="xref std std-option docutils literal notranslate"><span class="pre">--verbose</span></code> option is in effect, the
+program will show only messages that have either WARNING or ERROR
+importance.  The warning line above indicates no output has been
+written, because that file already exists.  This safety check can be
+overruled with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-force"><code class="xref std std-option docutils literal notranslate"><span class="pre">--force=yes</span></code></a> option, upon
+which pdfgetx3 would overwrite any existing files.</p>
+<p>PDFgetX3 output files start with a header that lists all the processing
+parameters and can be used as a valid configuration file with the
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-c</span></code></a> option.  Another option, <a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--plot=[iq,sq,fq,gr]</span></code></a> turns on plotting of the final PDF or of some other result.  A
+side effect of the <code class="xref std std-option docutils literal notranslate"><span class="pre">--plot</span></code> option is that pdfgetx3 starts in
+an interactive mode, so the user can manipulate or save the plots.  To
+put it all together, we are now going to redo the original PDF and plot
+its reduced total scattering function <em>F</em>(<em>Q</em>) and the PDF curve <em>G</em>(<em>r</em>).  This
+time the chi file is not necessary, because the input file is already
+listed in the gr file that is now used as a custom configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c ni300mesh_300k_nor_1-5.gr --plot=fq,gr
+
+WARNING:ni300mesh_300k_nor_1-5.gr already exists.
+WARNING:Use &quot;--force=yes&quot; or &quot;--force=once&quot; to overwrite.
+
+Variables related to PDF processing:
+
+pdfgetter    -- PDFGetter used for calculation.
+config       -- configuration data used by PDFGetter.
+                See config.inputfiles for a list of inputs.
+iraw         -- matrix of input raw intensities with 2 rows per file.
+iq sq fq gr  -- intermediate results per each input file stored
+                as matrix rows.
+
+Functions:
+
+tuneconfig   -- dynamically tune configuration variables.
+processfiles -- process specified data files.
+clearsession -- clear all elements from the inputfiles, iraw,
+                iq, sq, fq and gr variables.
+plotdata     -- plot all or selected columns from a text data file.
+loaddata     -- load all or selected columns from a text data file.
+findfiles    -- search for files matching the specified patterns.
+
+Use &quot;%pdfgetx3&quot; for a fresh run without exiting IPython.
+In [1]:
+</pre></div>
+</div>
+<p>This will open a plot figure similar to</p>
+<img alt="_images/nickelfqgr.png" src="_images/nickelfqgr.png" />
+<p>Because of the <a class="reference internal" href="interact.html"><span class="doc">interactive mode</span></a> implied by plotting,
+the program enters an IPython session.
+The IPython environment is preloaded with several extra functions
+and variables related to the PDF processing.  For example, the
+<a class="reference internal" href="interact.html#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config</span></code></a> variable stores all the configuration parameters,
+and its content can be displayed with the <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#print" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">print()</span></code></a>
+function as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="n">configfile</span> <span class="o">=</span> <span class="n">ni300mesh_300k_nor_1</span><span class="o">-</span><span class="mf">5.</span><span class="n">gr</span>
+<span class="n">configsection</span> <span class="o">=</span> <span class="n">DEFAULT</span>
+<span class="n">dataformat</span> <span class="o">=</span> <span class="n">twotheta</span>
+<span class="o">...</span>
+<span class="n">qmax</span> <span class="o">=</span> <span class="mf">26.0</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="interact.html#interactive_.processfiles" title="_interactive_.processfiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code></a> function allows to redo the
+whole calculation and plotting process for additional input files or
+for new parameter values.  To plot the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>)
+curves calculated at <em>Q</em><sub>max</sub> = 22 Å<sup>-1</sup>, we can call
+<code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code> and pass it a keyword argument for
+the new qmax as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">processfiles</span><span class="p">(</span><span class="n">qmax</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+
+<span class="c1"># the qmax parameter was updated to a new value, thus</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">qmax</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">22</span>
+</pre></div>
+</div>
+<p>There should be now two lines in each plot axis corresponding to
+the results at <em>Q</em><sub>max</sub> equal 26 and 22 Å<sup>-1</sup>.  To exit the program,
+type <code class="docutils literal notranslate"><span class="pre">exit()</span></code>.</p>
+</div>
+<div class="section" id="processing-from-scratch">
+<h3>processing from scratch<a class="headerlink" href="#processing-from-scratch" title="Permalink to this headline">¶</a></h3>
+<p>We have already encountered the command-line <a class="reference internal" href="options.html#cmdoption-pdfgetx3-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">option</span> <span class="pre">-c</span></code></a>
+for specifying a custom configuration file.  A special argument “NONE”,
+will make pdfgetx3 ignore any configuration files and start up in a
+default state.  We can use this feature to process the nickel PDF as if
+we did not have any configuration file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi
+
+WARNING:Nothing to do, use &quot;-t&quot; or &quot;--plot&quot; options.
+ERROR:Configuration error: wavelength not specified.
+ERROR:See &quot;--help&quot; for more hints.
+</pre></div>
+</div>
+<p>There is an error, for the wavelength is necessary to convert
+the scattering angle 2Θ to momentum transfer <em>Q</em>.  The
+X-ray wavelength was 0.142774 Å, which can be passed with the
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-w"><code class="xref std std-option docutils literal notranslate"><span class="pre">-w,</span> <span class="pre">--wavelength</span></code></a> option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774
+
+...
+ERROR:Configuration error: Chemical composition not known.
+ERROR:See &quot;--help&quot; for more hints.
+</pre></div>
+</div>
+<p>There is still an error.  The PDF calculation needs an average
+X-ray scattering factor of the material, which is obtained from
+sample chemical composition.  The composition can be specified
+with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-composition"><code class="xref std std-option docutils literal notranslate"><span class="pre">--composition</span></code></a> option.  The example
+below uses a “\\” character to indicate the command continues
+on the next line.  Such syntax works in Unix terminals, but
+on Windows the command has to be typed all on a single line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
+           --composition=Ni
+
+WARNING:Nothing to do, use &quot;-t&quot; or &quot;--plot&quot; options.
+...
+</pre></div>
+</div>
+<p>There was no error message this time, but the program complains
+about a lack of action.  The pdfgetx3 program does not write any results
+unless instructed by the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-t"><code class="xref std std-option docutils literal notranslate"><span class="pre">-t,</span> <span class="pre">--outputtypes</span></code></a> option.
+The outputtypes option recognizes the following result types:
+“iq”, “sq”, “fq”, “gr”.  One or more of these type strings,
+separated by a comma, can be included with the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">-t</span></code> option, which will produce the corresponding
+output files.  An empty string, such as <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">&quot;&quot;</span></code>, or <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">NONE</span></code>
+may be used to clear any outputtypes defined in the configuration file,
+and avoid the unseemly file-exists warnings.</p>
+<p>At this point, we will not write any output files, but will use the
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--plot</span></code></a> option to display the calculated curves.  The
+<code class="xref std std-option docutils literal notranslate"><span class="pre">--plot</span></code> accepts the same arguments as outputtypes, so to
+display the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves we shall run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c NONE ni300mesh_300k_nor_1-5.chi -w 0.142774 \
+           --composition=Ni --plot=fq,gr
+
+WARNING:qmaxinst reset to last nonzero point qmaxinst=28.0865680161
+WARNING:qmax reset to the data boundary qmaxinst=28.0865680161
+</pre></div>
+</div>
+<p>which should open the following plot window:</p>
+<img alt="_images/nickelfqgrnoisy.png" src="_images/nickelfqgrnoisy.png" />
+<p>The graphs look terrible.  The PDF is very noisy and the <em>F</em>(<em>Q</em>) curve
+shows a sudden break at about 27 Å<sup>-1</sup>.  What happened?  The powder
+intensities are inaccurate at a very top of the detector angular range.
+The interactive session is setup with
+<a class="reference internal" href="interact.html#interactvar-iraw"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iraw</span></code></a>, <a class="reference internal" href="interact.html#interactvar-iq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">iq</span></code></a>, <a class="reference internal" href="interact.html#interactvar-sq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">sq</span></code></a>,
+<a class="reference internal" href="interact.html#interactvar-fq"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">fq</span></code></a>, <a class="reference internal" href="interact.html#interactvar-gr"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">gr</span></code></a>
+variables for the original raw data and intermediate results.  We
+are going to plot the “iq” variable that has the input intensities
+resampled on the <em>Q</em> grid.  The matplotlib function
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.clf.html#matplotlib.pyplot.clf" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">clf()</span></code></a> clears the figure,
+the iq variable is a two-row matrix with <em>Q</em> and <em>I</em> rows, and the
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axis.html#matplotlib.pyplot.axis" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">axis()</span></code></a>
+function lets us zoom to a given range:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">clf</span><span class="p">()</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">plot</span><span class="p">(</span><span class="n">iq</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">iq</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">lines</span><span class="o">.</span><span class="n">Line2D</span> <span class="n">at</span> <span class="mh">0x3e20f50</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">axis</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3000</span><span class="p">])</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The graph shows a sudden drop in the raw intensities at 27 Å<sup>-1</sup>.
+The <a class="reference internal" href="options.html#confval-qmaxinst"><code class="xref std std-confval docutils literal notranslate"><span class="pre">qmaxinst</span></code></a> variable defines a <em>Q</em> cutoff for a meaningful
+instrument intensities and, to be on a safe side, we are going to set
+it to 26.5 Å<sup>-1</sup></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">processfiles</span><span class="p">(</span><span class="n">qmaxinst</span><span class="o">=</span><span class="mf">26.5</span><span class="p">)</span>
+<span class="n">WARNING</span><span class="p">:</span><span class="n">qmax</span> <span class="n">reset</span> <span class="n">to</span> <span class="n">the</span> <span class="n">data</span> <span class="n">boundary</span> <span class="n">qmaxinst</span><span class="o">=</span><span class="mf">26.5</span>
+</pre></div>
+</div>
+<p>The updated curves looks reasonable without any oscillations and
+breakpoints.  The <a class="reference internal" href="interact.html#interactive_.tuneconfig" title="_interactive_.tuneconfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code></a> function provides a
+GUI-driven way for visualizing the processing parameters and their
+effect on the results.  Type <code class="docutils literal notranslate"><span class="pre">tuneconfig()</span></code> to execute the function,
+which should open a new window with several sliders.  Try to move
+different sliders and see how do the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves change.
+The <a class="reference internal" href="options.html#confval-rpoly"><code class="xref std std-confval docutils literal notranslate"><span class="pre">rpoly</span></code></a> parameter controls the degree of data-correction
+polynomial and is an approximate low-<em>r</em> bound of reliable <em>G</em>
+values.  Once the parameters are tuned, they may be set to
+exact values.  We will also turn on the writing of the <em>G</em>(<em>r</em>)
+curve and save it to an output file <code class="file docutils literal notranslate"><span class="pre">nicmd.gr</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">qmax</span> <span class="o">=</span> <span class="mi">26</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">outputtypes</span> <span class="o">=</span> <span class="s1">&#39;gr&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;nicmd&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">17</span><span class="p">]:</span> <span class="n">processfiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="platinum-x-ray-series">
+<h2>Platinum X-ray series<a class="headerlink" href="#platinum-x-ray-series" title="Permalink to this headline">¶</a></h2>
+<p>PDFgetX3 has been designed to handle large series of data files.
+With the fast area-detectors it is easy to measure hundreds of X-ray
+patterns in a time or temperature series.  Normally, these input
+files need to be entered as command line arguments to the pdfgetx3
+program.  This is usually no problem with Unix-like shells, which
+expand filename patterns to a list of matching files.
+However, such file generation is in general not available on Windows.
+The input file names tend to include scan numbers which are useful
+for selecting desired data, yet even with Unix shells it is
+difficult to match a range of scan numbers
+(<a class="reference external" href="http://www.zsh.org/">z-shell</a> being a notable exception).</p>
+<div class="section" id="matching-input-files">
+<span id="my-findexamples"></span><h3>matching input files<a class="headerlink" href="#matching-input-files" title="Permalink to this headline">¶</a></h3>
+<p>The <strong class="program">pdfgetx3</strong> program includes a built-in function for finding
+a set of input files.  The command line arguments are normally taken as
+input file names.  However, if the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-f"><code class="xref std std-option docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--find</span></code></a> option is
+present, the arguments are understood as patterns and the program looks
+for files that match ALL of them.  Another option
+<a class="reference internal" href="options.html#cmdoption-pdfgetx3-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l,</span> <span class="pre">--list</span></code></a> makes pdfgetx3 print out the matching files
+without any other action, which can be used to verify if the patterns
+match intended files.</p>
+<p>We will try out this file search on platinum example files.  Open a
+terminal and navigate to the <code class="file docutils literal notranslate"><span class="pre">Pt</span></code> directory.  There should be a
+<code class="file docutils literal notranslate"><span class="pre">series</span></code> subdirectory with 6 chi files indexed from 903 to 908.
+At first, let’s stay in the <code class="file docutils literal notranslate"><span class="pre">Pt</span></code> directory and run the following
+command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --list --find
+
+Pt_bulk-00055-pdfgetx2.gr
+Pt_bulk-00055-pdfgetx3.gr
+Pt_bulk-00055.chi
+empty_capillary-00032.chi
+pdfgetx3.cfg
+plotpdfcomparison.py
+</pre></div>
+</div>
+<p>Without any patterns the file search matches all files in the current
+directory.  Now let’s try to add name patterns.  There are few special
+patterns, for example <code class="docutils literal notranslate"><span class="pre">^</span></code> matches at the beginning of the filename, <code class="docutils literal notranslate"><span class="pre">$</span></code> at the end and <code class="docutils literal notranslate"><span class="pre">&lt;N-M&gt;</span></code> matches a range of integer values from
+<em>N</em> to <em>M</em>.  The patterns containing <code class="docutils literal notranslate"><span class="pre">^$&lt;&gt;</span></code> need to be quoted as
+these characters have special meaning in the shell.  Here are some
+examples how it works.</p>
+<p>Filenames containing “y”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --list --find y
+empty_capillary-00032.chi
+plotpdfcomparison.py
+</pre></div>
+</div>
+<p>Filenames that containing both “y” and “chi”, here we use the
+options <code class="xref std std-option docutils literal notranslate"><span class="pre">--list</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">--find</span></code> in an abbreviated
+form <code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">-f</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf y chi
+empty_capillary-00032.chi
+</pre></div>
+</div>
+<p>Filenames that start with “e”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --list --find &quot;^e&quot;
+empty_capillary-00032.chi
+</pre></div>
+</div>
+<p>Filenames that contain <em>character</em> “2”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --list --find 2
+Pt_bulk-00055-pdfgetx2.gr
+empty_capillary-00032.chi
+</pre></div>
+</div>
+<p>Filenames that contain <em>numeric value</em> “2”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf &quot;&lt;2&gt;&quot;
+Pt_bulk-00055-pdfgetx2.gr
+</pre></div>
+</div>
+<p>The special argument <code class="docutils literal notranslate"><span class="pre">+</span></code> starts a new group of patterns to
+generate extra files when they cannot be all covered by
+a single set of patterns.  For example, to match files that
+contain contain both “bulk” and “chi” substrings and then
+also those that have “empty” and “chi” in their names, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf bulk chi + empty chi
+Pt_bulk-00055.chi
+empty_capillary-00032.chi
+</pre></div>
+</div>
+<p>When pattern groups overlap the resulting matches are
+made unique and each file is listed only once</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf bulk chi + chi
+Pt_bulk-00055.chi
+empty_capillary-00032.chi
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-search-path">
+<h3>data search path<a class="headerlink" href="#data-search-path" title="Permalink to this headline">¶</a></h3>
+<p>Each group of PDFgetX3 patterns can have one entry containing
+forward slash “/” to specify a non-current path that is searched
+for input files.  The path specification affects the current and
+the following pattern groups unless they provide their own path.
+The chi files numbered “903” to “905” and “908” from the
+<code class="file docutils literal notranslate"><span class="pre">series</span></code> subdirectory can be therefore matched using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf series/ &quot;&lt;903-905&gt;&quot; + 908
+series/Pt_bulk_ramp03-00903.chi
+series/Pt_bulk_ramp03-00904.chi
+series/Pt_bulk_ramp03-00905.chi
+series/Pt_bulk_ramp03-00908.chi
+</pre></div>
+</div>
+<p>The current directory can be selected using <cite>./</cite></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf series/ 903 + ./ bulk chi
+series/Pt_bulk_ramp03-00903.chi
+Pt_bulk-00055.chi
+</pre></div>
+</div>
+<p>When additional pattern groups contain only the path
+argument, they reuse the existing set of patterns.  The
+“.chi”-ending files in the current and <code class="file docutils literal notranslate"><span class="pre">series</span></code>
+directories can be thus found using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -lf &quot;.chi$&quot; + series/
+Pt_bulk-00055.chi
+empty_capillary-00032.chi
+series/Pt_bulk_ramp03-00903.chi
+series/Pt_bulk_ramp03-00904.chi
+series/Pt_bulk_ramp03-00905.chi
+series/Pt_bulk_ramp03-00906.chi
+series/Pt_bulk_ramp03-00907.chi
+series/Pt_bulk_ramp03-00908.chi
+</pre></div>
+</div>
+</div>
+<div class="section" id="output-file-names">
+<h3>output file names<a class="headerlink" href="#output-file-names" title="Permalink to this headline">¶</a></h3>
+<p>By default the output files are saved in the current directory.  The
+output path, can be changed with the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-o"><code class="xref std std-option docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">--output</span></code></a> option.
+The <code class="xref std std-option docutils literal notranslate"><span class="pre">-o</span></code> recognizes several tokens that are replaced with
+parts of the input file name, for example, “&#64;b” expands to an
+extension-stripped base name.  In similar faction, “&#64;o” is replaced
+with the output type extension.  Thus to generate PDFs for all files
+in the <code class="file docutils literal notranslate"><span class="pre">series</span></code> directory and save them in the
+<code class="file docutils literal notranslate"><span class="pre">series-gr</span></code> subfolder do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --find series/ &quot;&lt;900-910&gt;.chi&quot; --output=series-gr/@b.@o
+</pre></div>
+</div>
+<p>The extension “.&#64;o” is automatic when not included anywhere in the
+output file name.  Thus to process the Pt series at <em>Q</em><sub>max</sub> = 18 Å<sup>-1</sup>
+while saving the results in the same folder, but with a “_qmax18” suffix
+in their filenames do</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --find series/ &quot;&lt;900-910&gt;.chi&quot; --qmax=18 -o series-gr/@b_qmax18
+</pre></div>
+</div>
+<p>For input file <code class="file docutils literal notranslate"><span class="pre">Pt_bulk_ramp03-00903.chi</span></code> the <code class="xref std std-option docutils literal notranslate"><span class="pre">-o</span></code> option
+above expands to output path <code class="file docutils literal notranslate"><span class="pre">series-gr/Pt_bulk_ramp03-00903_qmax18.gr</span></code>.
+The <code class="file docutils literal notranslate"><span class="pre">series-gr</span></code> directory should now contain 12 “gr” files,
+6 of them processed at <em>Q</em><sub>max</sub> = 27 Å<sup>-1</sup> as given by configuration
+file and 6 others processed at <em>Q</em><sub>max</sub> = 18 Å<sup>-1</sup>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="options.html#cmdoption-pdfgetx3-o"><code class="xref std std-option docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">--output</span></code></a> for a list of output tokens</p>
+</div>
+</div>
+</div>
+<div class="section" id="interactive-tuning-of-parameters">
+<span id="my-tuneconfig"></span><span id="index-2"></span><h2>Interactive tuning of parameters<a class="headerlink" href="#interactive-tuning-of-parameters" title="Permalink to this headline">¶</a></h2>
+<p>One of the most powerful features of PDFgetX3 is the ability to tune
+PDF processing parameters in an interactive mode and immediately
+visualize their effect on the results.  To demonstrate this feature,
+navigate to the <code class="file docutils literal notranslate"><span class="pre">Ni</span></code> directory in the shell and process
+the nickel PDF while plotting the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) curves.
+Because of plotting the program will open an interactive IPython
+session.  The tuning mode can be then entered by calling the
+<a class="reference internal" href="interact.html#interactive_.tuneconfig" title="_interactive_.tuneconfig"><code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code></a>
+function from the IPython environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 --plot=fq,gr ni300mesh_300k_nor_1-5.chi
+...
+In [1]: tuneconfig()
+</pre></div>
+</div>
+<p>The
+<code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code>
+function will by default add a second set of live lines
+for the plotted curves and open a GUI dialog with sliders for the
+tunable process parameters.  Changing any slider would immediately
+recalculate the PDF and update live lines in the plot.</p>
+<img alt="_images/tunenickelfqgr.png" src="_images/tunenickelfqgr.png" />
+<p>The <em>constant data scale</em> check-box rescales the result curves to a
+constant maximum value.  This is useful for assessing if a parameter
+change produces different curve shape or if it just rescales the
+results.  The tunable parameters are described in the
+<a class="reference internal" href="options.html#my-pdfparameters"><span class="std std-ref">PDF parameters section</span></a>.
+Only the active parameters are displayed in the tuneconfig GUI,
+thus there would be no slider for the <a class="reference internal" href="options.html#confval-bgscale"><code class="xref std std-confval docutils literal notranslate"><span class="pre">bgscale</span></code></a> parameter
+if PDF has been processed without any background data.</p>
+<p>By default the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code>
+function displays the same curves as
+specified by the <a class="reference internal" href="options.html#cmdoption-pdfgetx3-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--plot</span></code></a> option, however it can be
+configured to show arbitrary intermediate results or even visualize
+selected steps in the PDF processing.  We shall demonstrate this by
+showing a live-plot of the polynomial correction together with the final
+PDF.  At first, we shall use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">describe()</span></code> method of the
+<a class="reference internal" href="interact.html#interactive_.pdfgetter" title="_interactive_.pdfgetter"><code class="xref py py-func docutils literal notranslate"><span class="pre">pdfgetter()</span></code></a> object to print out the chain of
+transformations involved in the PDF processing and obtain a reference to
+the transformation object <em>t4</em> that applies the polynomial correction.
+The transformation object can be then included in a list of plot
+identifiers that are passed to the <code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code> function</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -i ni300mesh_300k_nor_1-5.chi
+...
+Use &quot;%pdfgetx3&quot; for a fresh run without exiting IPython.
+
+In [1]: fig, ax = subplots(2)
+In [2]: pdfgetter.describe()
+0   TransformTwoThetaToQA
+    convert x data from twotheta to Q in 1/A
+1   TransformQGridRegular
+    Remove the data outside the (qmin, qmaxinst) range
+2   TransformBackground
+    subtract background intensity
+3   TransformXrayASFnormChris
+    scale and normalize intensities by x-ray scattering factors
+4   TransformSQnormRPoly
+    Normalize S(Q) by fitting a polynomial
+5   TransformSQToFQ
+    Convert S(Q) to F(Q).
+6   TransformFQgrid
+    Resample F(Q) to a regular grid suitable for FFT
+7   TransformFQToGr
+    Convert F(Q) to G(r).
+In [3]: t4 = pdfgetter.getTransformation(4)
+In [4]: tuneconfig([t4, &#39;gr&#39;], axeslist=ax)
+In [5]: ax[0].legend(loc=2)
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">subplots()</span></code></a> function above
+is to create a new figure with 2 axes on top of each other.
+Overall, the code above should display the following plot
+and a GUI window:</p>
+<img alt="_images/tunenickelt4gr.png" src="_images/tunenickelt4gr.png" />
+<p>The tuning can be finished by clicking the <code class="docutils literal notranslate"><span class="pre">Done</span></code> button or closing the
+tuneconfig GUI window.  The parameter values can be thereafter adjusted
+to a rounded values by setting an attribute of the <a class="reference internal" href="interact.html#interactvar-config"><code class="xref std std-interactvar docutils literal notranslate"><span class="pre">config</span></code></a>
+object, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">bgscale</span> <span class="o">=</span> <span class="mf">1.5</span>
+</pre></div>
+</div>
+<p>Finally, to save the new results, we shall first confirm
+<a class="reference internal" href="options.html#confval-outputtypes"><code class="xref std std-confval docutils literal notranslate"><span class="pre">outputtypes</span></code></a> have been correctly set and then use the
+<a class="reference internal" href="interact.html#interactive_.processfiles" title="_interactive_.processfiles"><code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code></a> function to redo the calculations, plots and
+data output for the updated configuration.  Note that the
+<code class="xref py py-func docutils literal notranslate"><span class="pre">processfiles()</span></code> function accepts keyword arguments for
+configuration parameters.  This is used at line <code class="docutils literal notranslate"><span class="pre">In [8]</span></code> to
+turn on the <a class="reference internal" href="options.html#confval-force"><code class="xref std std-confval docutils literal notranslate"><span class="pre">force</span></code></a> flag and is in effect a shortcut
+for an extra <code class="docutils literal notranslate"><span class="pre">config.force</span> <span class="pre">=</span> <span class="pre">True</span></code> statement.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">config</span><span class="o">.</span><span class="n">outputtypes</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="p">[</span><span class="s1">&#39;gr&#39;</span><span class="p">]</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">processfiles</span><span class="p">()</span>
+<span class="n">WARNING</span><span class="p">:</span><span class="n">ni300mesh_300k_nor_1</span><span class="o">-</span><span class="mf">5.</span><span class="n">gr</span> <span class="n">already</span> <span class="n">exists</span><span class="o">.</span>
+<span class="n">WARNING</span><span class="p">:</span><span class="n">Use</span> <span class="s2">&quot;--force=yes&quot;</span> <span class="ow">or</span> <span class="s2">&quot;--force=once&quot;</span> <span class="n">to</span> <span class="n">overwrite</span><span class="o">.</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">processfiles</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5.gr</span></code> was successfully saved at an
+updated configuration for there were no warnings after the last call.</p>
+</div>
+<div class="section" id="neutron-pdf">
+<h2>Neutron PDF<a class="headerlink" href="#neutron-pdf" title="Permalink to this headline">¶</a></h2>
+<p>This example illustrates PDF extraction from
+neutron powder data using <a class="reference internal" href="quick-start.html#cmd-pdfgetn3"><span class="std std-ref">pdfgetn3</span></a>.
+Navigate to the <code class="file docutils literal notranslate"><span class="pre">n-Sapphire</span></code> directory in the shell.
+The <code class="file docutils literal notranslate"><span class="pre">sapphire755.dat</span></code> file contains powder diffraction data from
+sapphire (α-Al<sub>2</sub>O<sub>3</sub>)
+measured at the constant-wavelength PEARL instrument
+at the Delft University of Technology.
+The <code class="file docutils literal notranslate"><span class="pre">pdfgetn3.cfg</span></code> configuration file specifies
+processing parameters such as <a class="reference internal" href="options.html#confval-wavelength"><code class="xref std std-confval docutils literal notranslate"><span class="pre">wavelength</span></code></a>,
+<a class="reference internal" href="options.html#confval-twothetazero"><code class="xref std std-confval docutils literal notranslate"><span class="pre">twothetazero</span></code></a>, <a class="reference internal" href="options.html#confval-composition"><code class="xref std std-confval docutils literal notranslate"><span class="pre">composition</span></code></a>, and <a class="reference internal" href="options.html#confval-mode"><code class="xref std std-confval docutils literal notranslate"><span class="pre">mode</span></code></a>.</p>
+<p>To extract the sapphire neutron PDF run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetn3 --verbose=info sapphire755.dat
+
+INFO:applying pdfgetn3 defaults
+INFO:set config.mode = neutron
+INFO:searching for default config file /home/user/.pdfgetn3.cfg
+INFO:searching for default config file .pdfgetn3.cfg
+INFO:searching for default config file pdfgetn3.cfg
+INFO:loaded default config file pdfgetn3.cfg
+INFO:reset config.twothetazero = 0.0
+INFO:parsing config file section [DEFAULT]
+INFO:set config.dataformat = twotheta
+INFO:set config.backgroundfile =
+INFO:set config.outputtypes = fq, gr
+INFO:set config.mode = neutron
+INFO:set config.wavelength = 1.0989
+INFO:set config.twothetazero = -0.38
+INFO:set config.composition = Al2O3
+INFO:set config.qmaxinst = 11.2
+INFO:set config.qmax = 11.2
+INFO:set config.rmin = 0.0
+INFO:set config.rmax = 20.0
+INFO:set config.rstep = 0.01
+INFO:finished parsing config file
+INFO:processing command line options
+INFO:set config.verbose = info
+INFO:finished with command line options
+INFO:using 1 input files from the command line.
+INFO:configuring PDFGetter mode &#39;neutron&#39;
+INFO:calling config_neutron
+INFO:started PDF processing.
+INFO:processing &#39;sapphire755.dat&#39;
+INFO:resolved output file &#39;&#39; as &#39;sapphire755.fq&#39;
+INFO:written outpufile sapphire755.fq
+INFO:resolved output file &#39;&#39; as &#39;sapphire755.gr&#39;
+INFO:written outpufile sapphire755.gr
+INFO:elapsed time: 0.097
+</pre></div>
+</div>
+<p>This will produce two files <code class="file docutils literal notranslate"><span class="pre">sapphire755.fq</span></code>, <code class="file docutils literal notranslate"><span class="pre">sapphire755.gr</span></code>
+for the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) functions.
+To compare them with expected results use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ plotdata sapphire755-expected.fq sapphire755.fq
+$ plotdata sapphire755-expected.gr sapphire755.gr
+</pre></div>
+</div>
+</div>
+<div class="section" id="fit-twothetazero">
+<h2>Fit twothetazero<a class="headerlink" href="#fit-twothetazero" title="Permalink to this headline">¶</a></h2>
+<p>For a good quality PDF it is essential to use powder patterns with
+accurate values of <em>Q</em>.  Some instruments may produce spectra with
+a slightly offset scattering angle 2Θ which
+causes inaccurate <em>Q</em> and a noticeably worse PDF.
+In this example we fit a constant-wavelength neutron PDF from nickel
+together with the <a class="reference internal" href="options.html#confval-twothetazero"><code class="xref std std-confval docutils literal notranslate"><span class="pre">twothetazero</span></code></a> correction parameter for
+diffractometer offset.
+The procedure can be used to calibrate the zero correction from
+a standard sample and then use it for subsequent PDF extractions.
+The protocol can be also applied to fit zero correction in
+a full-fledged PDF refinement in case
+the zero offset may change for different samples.</p>
+<p>This tutorial requires either Linux or Mac OS X platforms,
+because the PDF fitting is conducted with
+<a class="reference external" href="https://www.diffpy.org/products/diffpycmi/index.html">DiffPy-CMI</a>,
+which is not yet available for Windows.
+If DiffPy-CMI is not yet installed,
+we recommend to use <a class="reference external" href="https://www.anaconda.com/download">Anaconda Python</a> and set up a dedicated
+Anaconda environment <em>nbcmi</em> for this tutorial.
+This can be accomplished using the following steps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n nbcmi -c diffpy python=2 diffpy-cmi
+$ conda activate nbcmi
+$ pip install path/to/diffpy.pdfgetx-VERSION.whl
+</pre></div>
+</div>
+<p>When these prerequisites are in place,
+change to the <code class="file docutils literal notranslate"><span class="pre">n-twothetazero-fit</span></code> directory
+and open the self documented Jupyter notebook as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter notebook fit-twothetazero.ipynb
+</pre></div>
+</div>
+<p>The notebook sets up and executes several PDF refinements and
+compares the results from fits on uncorrected data and with
+a fitted <code class="xref std std-confval docutils literal notranslate"><span class="pre">twothetazero</span></code>.
+After running all cells the notebook should produce similar graphs
+as in the figure below.</p>
+<div class="figure align-default" id="id2">
+<img alt="_images/twothetazerofit.svgz" src="_images/twothetazerofit.svgz" /><p class="caption"><span class="caption-text">Refinement of nickel neutron PDF for <strong>(a)</strong> uncorrected data
+and <strong>(b)</strong> with a refined zero correction.
+The extracted PDFs are plotted as blue circles,
+simulated PDFs as red lines and
+the difference is plotted offset in green below.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The final refined zero offset in the notebook should be approximately -0.36°.
+The correction produces experimental PDF with a remarkably better fit
+residual R<sub>w</sub> which is lowered from (a) 0.18 to (b) 0.05.</p>
+</div>
+<div class="section" id="small-angle-scattering-pdf-saspdf">
+<h2>Small-angle-scattering PDF (sasPDF)<a class="headerlink" href="#small-angle-scattering-pdf-saspdf" title="Permalink to this headline">¶</a></h2>
+<p>Here we illustrate how to extract a PDF from small-angle-scattering (sas) data using <a class="reference internal" href="quick-start.html#cmd-pdfgets3"><span class="std std-ref">pdfgets3</span></a>.
+To do this, navigate to the <code class="file docutils literal notranslate"><span class="pre">Au_DNA_NPA</span></code> directory in your terminal.
+In this folder, you will find <code class="file docutils literal notranslate"><span class="pre">Au_DNA_NPA.chi</span></code> and
+<code class="file docutils literal notranslate"><span class="pre">Au_DNA_FF.chi</span></code> files which correspond to diffraction data from
+DNA-capped Au nanoparticle assemblies and from a DNA-capped Au
+nanoparticle colloidal solution respectively. Those two files were
+measured at X21 beamline, NSLS and published in <a class="reference external" href="https://www.nature.com/articles/nature06560">D. Nykypanchuk, M. M.
+Maye, D. van der Lelie, and O. Gang, Nature 451, 549 (2008).</a>. We thank Prof. Oleg Gang (Columbia University) for sharing this data. The <code class="file docutils literal notranslate"><span class="pre">pdfgets3.cfg</span></code>
+configuration file specifies processing parameters such as <a class="reference internal" href="options.html#confval-formfactorfile"><code class="xref std std-confval docutils literal notranslate"><span class="pre">formfactorfile</span></code></a> (required by <code class="docutils literal notranslate"><span class="pre">sas</span></code> mode), <a class="reference internal" href="options.html#confval-qmin"><code class="xref std std-confval docutils literal notranslate"><span class="pre">qmin</span></code></a>, <a class="reference internal" href="options.html#confval-qmax"><code class="xref std std-confval docutils literal notranslate"><span class="pre">qmax</span></code></a>, and <a class="reference internal" href="options.html#confval-mode"><code class="xref std std-confval docutils literal notranslate"><span class="pre">mode</span></code></a>.</p>
+<p>To extract the PDF of DNA-capped DNA nanoparticle assemblies</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgets3 --verbose=info Au_DNA_NPA.chi
+
+INFO:applying pdfgets3 defaults
+INFO:set config.mode = sas
+INFO:searching for default config file /home/user/.pdfgets3.cfg
+INFO:searching for default config file .pdfgets3.cfg
+INFO:searching for default config file pdfgets3.cfg
+INFO:loaded default config file pdfgets3.cfg
+INFO:reset config.twothetazero = 0.0
+INFO:parsing config file section [DEFAULT]
+INFO:set config.dataformat = QA
+INFO:set config.backgroundfile =
+INFO:set config.datapath = []
+INFO:set config.formfactorfile = Au_DNA_FF.chi
+INFO:set config.output =
+INFO:set config.outputtypes = fq, gr
+INFO:set config.force = yes
+INFO:set config.mode = sas
+INFO:set config.rpoly = 240.605
+INFO:set config.qmaxinst = 0.075
+INFO:set config.qmin = 0.01
+INFO:set config.qmax = 0.072
+INFO:set config.rmin = 100.0
+INFO:set config.rmax = 5000.0
+INFO:set config.rstep = 1.0
+INFO:set config.plot = iq, fq, gr
+INFO:set config.verbose = info
+INFO:finished parsing config file
+INFO:processing command line options
+INFO:set config.verbose = info
+INFO:finished with command line options
+INFO:using 1 input files from the command line.
+INFO:configuring PDFGetter mode &#39;sas&#39;
+INFO:calling config_sas
+INFO:started PDF processing.
+INFO:processing &#39;Au_DNA_NPA.chi&#39;
+INFO:resolved output file &#39;&#39; as &#39;Au_DNA_NPA.fq&#39;
+INFO:written outpufile Au_DNA_NPA.fq
+INFO:resolved output file &#39;&#39; as &#39;Au_DNA_NPA.gr&#39;
+INFO:written outpufile Au_DNA_NPA.gr
+INFO:elapsed time: 0.947
+</pre></div>
+</div>
+<p>This will save two files <code class="file docutils literal notranslate"><span class="pre">Au_DNA_NPA.fq</span></code>, <code class="file docutils literal notranslate"><span class="pre">Au_DNA_NPA.gr</span></code> in the same directoy for the <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) functions. This also plots <em>F</em>(<em>Q</em>) and <em>G</em>(<em>r</em>) functions in a pop-up window and the processing parameters such as <a class="reference internal" href="options.html#confval-rpoly"><code class="xref std std-confval docutils literal notranslate"><span class="pre">rpoly</span></code></a> or so may be tuned interactively by issuing command <code class="xref py py-func docutils literal notranslate"><span class="pre">tuneconfig()</span></code> in the <a class="reference external" href="https://ipython.org">IPython</a> session as discussed above.</p>
+</div>
+<div class="section" id="multiple-background-subtraction">
+<h2>Multiple Background Subtraction<a class="headerlink" href="#multiple-background-subtraction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Predefined configuration file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>In this tutorial, we will show how to use the multiple-background subtraction
+functionality by obtainining equivalent outputs from different, but equivalent,
+subtractions.  Change directory to the <code class="file docutils literal notranslate"><span class="pre">doc/examples/</span>
+<span class="pre">Multiple_Background_Subtraction</span></code> directory.  The file named
+<code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5.chi</span></code> contains powder X-ray data measured from
+nickel at the Advanced Photon Source beamline 6ID-D.  The file contains two
+columns for the 2Θ scattering angles and X-ray intensities.  Similarly,
+<code class="file docutils literal notranslate"><span class="pre">kapton_bgrd_300k_nor_2-3.chi</span></code> contains the background data (i.e., the
+intensities from an empty kapton capillary), and a duplicate file
+<code class="file docutils literal notranslate"><span class="pre">kapton_bgrd_300k_nor_2-3_copy.chi</span></code> contains the same dataset (this
+duplication of the data is necessary when using the same background multiple
+times as the internal system only stores a set of unique background filenames).
+The last <code class="file docutils literal notranslate"><span class="pre">.chi</span></code> file, <code class="file docutils literal notranslate"><span class="pre">TEST_blank-00000.chi</span></code>, simply stores a null
+dataset and can be used to show the invariance of the PDF under permutation of
+the order of background subtractions as well as the fact that more than just
+two backgrounds can be subtracted.  There are also two config files
+<code class="file docutils literal notranslate"><span class="pre">nickel.cfg</span></code> and <code class="file docutils literal notranslate"><span class="pre">nickel_sub_two_half_backgrounds.cfg</span></code>, each of
+which contain a set of complete configuration parameters for converting the Ni
+powder pattern to a PDF for the case of doing so via a single background
+subtraction and a multiple background subtraction, respectively.  Finally, there
+is a fully processed G(r) file <code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5-expected.gr</span></code> which
+contains the expected output of producing the PDF of the Ni sample after
+subtracting the kapton background.  Since all processing parameters are already
+defined in these configuration files, producing the PDF using multiple
+background subtractions is very simple and involves running the <a class="reference internal" href="quick-start.html#cmd-pdfgetx3"><span class="std std-ref">pdfgetx3</span></a> program and specifying the multiple background subtraction
+config file and the powder data file as arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pdfgetx3 -c nickel_sub_two_half_backgrounds.cfg ni300mesh_300k_nor_1-5.chi
+</pre></div>
+</div>
+<p>The resulting G(r) file, <code class="file docutils literal notranslate"><span class="pre">ni300mesh_300k_nor_1-5.gr</span></code>, is the result of
+producing the PDF according to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;ni300mesh_300k_nor_1-5.chi&quot;</span> <span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="s2">&quot;kapton_bgrd_300k_nor_2-3.chi&quot;</span>
+<span class="o">-</span> <span class="mf">0.5</span><span class="o">*</span><span class="s2">&quot;kapton_bgrd_300k_nor_2-3.chi&quot;</span>
+</pre></div>
+</div>
+<p>Which should be equivalent to the case where the following single background
+subtraction had been performed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;ni300mesh_300k_nor_1-5.chi&quot;</span> <span class="o">-</span> <span class="mf">1.0</span><span class="o">*</span><span class="s2">&quot;kapton_bgrd_300k_nor_2-3.chi&quot;</span>
+</pre></div>
+</div>
+<p>The fact that both of these result in the same PDF can be verified by comparing
+the produced G(r) with the expected G(r) provided in the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ plotdata ni300mesh_300k_nor_1-5-expected.gr ni300mesh_300k_nor_1-5.gr
+</pre></div>
+</div>
+</div>
+<div class="section" id="interactive-multiple-background-subtraction">
+<h3>Interactive Multiple Background Subtraction<a class="headerlink" href="#interactive-multiple-background-subtraction" title="Permalink to this headline">¶</a></h3>
+<p>The multiple background subtraction functionality can also be carried out
+interactively, as per the <a class="reference internal" href="#my-tuneconfig"><span class="std std-ref">Interactive tuning of parameters</span></a> section, using the plural forms
+of the relevant variables (i.e., <cite>config.bgscales</cite>, <cite>config.backgroundfiles</cite>,
+etc.).</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#nickel-x-ray-pdf">Nickel X-ray PDF</a><ul>
+<li><a class="reference internal" href="#predefined-configuration-file">predefined configuration file</a></li>
+<li><a class="reference internal" href="#processing-from-scratch">processing from scratch</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#platinum-x-ray-series">Platinum X-ray series</a><ul>
+<li><a class="reference internal" href="#matching-input-files">matching input files</a></li>
+<li><a class="reference internal" href="#data-search-path">data search path</a></li>
+<li><a class="reference internal" href="#output-file-names">output file names</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interactive-tuning-of-parameters">Interactive tuning of parameters</a></li>
+<li><a class="reference internal" href="#neutron-pdf">Neutron PDF</a></li>
+<li><a class="reference internal" href="#fit-twothetazero">Fit twothetazero</a></li>
+<li><a class="reference internal" href="#small-angle-scattering-pdf-saspdf">Small-angle-scattering PDF (sasPDF)</a></li>
+<li><a class="reference internal" href="#multiple-background-subtraction">Multiple Background Subtraction</a><ul>
+<li><a class="reference internal" href="#id1">Predefined configuration file</a></li>
+<li><a class="reference internal" href="#interactive-multiple-background-subtraction">Interactive Multiple Background Subtraction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="quick-start.html"
+                          title="previous chapter">Quick-start guide</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="files.html"
+                          title="next chapter">Files used in PDF extraction</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="files.html" title="Files used in PDF extraction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quick-start.html" title="Quick-start guide"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
