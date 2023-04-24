@@ -38,54 +38,36 @@ PDFgui is distributed as a software package for
 for all operating systems supported by Anaconda, namely for
 Linux, Mac OS X, and Windows.
 
-As a prerequisite for PDFgui installation, download and
-install **Anaconda Python** from
-|anaconda-download|.
+As a prerequisite for PDFgui installation, download and install
+**Miniconda** (https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links)
+or Anaconda Python (https://www.anaconda.com/download).
 
-.. TODO -- remove when PDFgui is compatible with wxpython 4
+PDFgui is available from the "conda-forge" channel of Anaconda packages.
+To do so open a *Terminal* window or *Anaconda Command Prompt* and use
+the :program:`conda` command as follows ::
 
-.. important::
+   conda create --name=pdfgui2 python=3.9
+   conda activate pdfgui2
+   conda install -c conda-forge diffpy.pdfgui
 
-   As of July 2019 Anaconda stopped providing older versions
-   of several packages that are required by PDFgui
-   (details `here
-   <https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7>`__).
-   We are working on making PDFgui compatible with the current
-   set of Anaconda packages.
-   In the meantime you must re-activate the old packages
-   as follows ::
+PDFgui can be then started from a *Terminal* window or *Anaconda Command Prompt* by typing ::
 
-      conda update -n base conda
-      conda config --set restore_free_channel true
+   pdfgui
 
-
-PDFgui is available from the "diffpy" channel of Anaconda packages.
-Because PDFgui requires Python 2.7 and wxpython 3,
-it is strongly recommended to install it in a dedicated
-Anaconda environment *py27*.
-To do so open a *Terminal* window or *Anaconda Command Prompt* on Windows
-and use the :program:`conda` command as follows ::
-
-   conda config --add channels diffpy
-   conda create --name=py27 python=2.7
-   conda activate py27
-   conda install "diffpy.pdfgui>=1.1.2"
-
-All done.  To start PDFgui enter :program:`pdfgui` command in a
-Terminal or use the *DiffPy* start menu on Windows.  PDFgui can be
-also started from the *Launcher* application included with Anaconda.
+The PDFgui window will appear automatically. An alternative method on Windows is to start
+PDFgui through the *Diffpy* start menu.
 
 .. note::
-   To start PDFgui from a Terminal make sure *py27* is
+   To start PDFgui from a Terminal make sure *pdfgui2* is
    the active Anaconda environment::
 
-      conda activate py27
+      conda activate pdfgui2
 
    Alternatively you can add the following line to your shell startup
    file :file:`.bashrc` to define an alias which will work in
    any Anaconda environment ::
 
-      alias pdfgui="/path/to/py27/bin/pdfgui"
+      alias pdfgui="/path/to/pdfgui2/bin/pdfgui"
 
    where ``/path/to`` needs to be adjusted according to the output of
    ``which pdfgui`` command.
@@ -98,7 +80,7 @@ The Anaconda package system makes it easy to prepare and distribute
 software updates and bugfixes.  To update to the latest version of
 PDFgui use ::
 
-   conda update --channel=diffpy diffpy.pdfgui
+   conda update -c conda-forge diffpy.pdfgui
 
 To use a bleeding edge development version, visit the project source
 repository at https://github.com/diffpy/diffpy.pdfgui and consult
@@ -107,6 +89,15 @@ its README file.
 
 Other versions
 ==============
+v1.1.2 is the last python 2 version of PDFgui. It is no longer supported,
+but may be needed to open python 2 generated `.ddp` project files. It can
+be installed in a python2 anaconda environment using the commands::
+
+   conda config --set restore_free_channel true
+   conda config --add channels diffpy
+   conda create --name=py27 python=2.7
+   conda activate py27
+   conda install -c diffpy "diffpy.pdfgui==1.1.2"
 
 When Anaconda Python is not available, PDFgui can be installed from
 sources.  The latest source package is at the `Python Package
@@ -141,6 +132,15 @@ Documentation and help
 
 *  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
    and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
+
+*  Search "PDFgui" on YouTube for some video tutorials on how to use
+   PDFgui.
+
+*  For in-depth help in using PDFgui to solve scientific problems please
+   see the book "Atomic Pair Distribution Function Analysis: A primer" by
+   Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
+   published by Oxford University Press. Data for the worked examples can
+   be found here: https://github.com/Billingegroup/pdfttp_data
 
 *  Tutorial files are available from
    `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
