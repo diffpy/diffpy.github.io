@@ -1,0 +1,163 @@
+Quick-start guide
+========================================================================
+
+.. include:: abbreviations.txt
+.. program:: pdfgetx3
+
+This guide assumes that the software has been correctly installed and
+its command line programs PDFgetX3, PDFgetN3 and PDFgetS3 can be
+executed by typing :program:`pdfgetx3`, :program:`pdfgetn3`, or
+:program:`pdfgets3` in a shell window. Please, refer to the :doc:`installation </install>` section if this is not working yet.
+
+.. index:: pdfgetx3 (program)
+.. _cmd-pdfgetx3:
+
+pdfgetx3 command
+------------------------------------------------------------------------
+
+The pdfgetx3 program is a command-line application, therefore all
+the input files and run-parameters are supplied either as command-line
+arguments or through a configuration file.  In general, the pdfgetx3 is
+executed from a command shell as ::
+
+   pdfgetx3 [options] input1 input2 ... inputN
+
+The :file:`inputN` stands for an input powder diffraction data.  The
+:file:`inputN` file is a simple two-column text file, where the first
+column corresponds to either the |twotheta| diffraction angle, or a
+momentum transfer, *Q*, in inverse nanometer or inverse ångström units.
+The second column contains the corresponding X-ray intensities.  The
+input file may start with a header containing comments or metadata
+related to the measurement.  PDFgetX3 will ignore any text leading to a
+long two-column section.  The example input files in this manual were
+created with the
+`FIT2D program <http://www.esrf.eu/computing/scientific/FIT2D/>`_ using
+its "chi" output format, thus we will also refer to them as "chi-files".
+A typical content of a "chi" file looks as folows:
+
+.. code-block:: none
+
+   Pt_bulk-00055.tif: 2-theta Scan
+   2-Theta Angle (Degrees)
+
+          1465
+    2.0003892E-02  0.0000000E+00
+    6.0011677E-02  0.0000000E+00
+    1.0001946E-01  0.0000000E+00
+    1.4002724E-01  0.0000000E+00
+    1.8003502E-01  0.0000000E+00
+    ...
+
+The command-line options are arguments that start with a dash "-" and
+are used to specify run-parameters or modify the program behavior.  The
+options can be specified in a short form that consists of a dash and
+a single character, or in a long, more descriptive format starting with
+a doubled dash ``--``.  Options may require values.  For short options,
+the value may be joined to the option string, for example
+:option:`!-w0.142774`, while for the long options it has to be separated
+with an equal sign, e.g., :option:`!--wavelength=0.142774`.  Although
+all the PDF calculation parameters can be passed as command line
+options, it is often more convenient to set them in a configuration
+file.  When run parameter is present both in a configuration file and
+as command-line option, the command-line value takes precedence.  The
+command-line options are all described in the :doc:`options` section of
+this manual.  A brief summary of options can be also displayed by
+executing ::
+
+   pdfgetx3 --help
+
+The best way of getting familiar with PDFgetX3 is to process
+the example diffraction data described in the :doc:`tutorial`.
+In general, the first step is to create a commented configuration file ``pdfgetx3.cfg`` using::
+
+   pdfgetx3 --createconfig=pdfgetx3.cfg
+
+The configuration file can have any name, but it is preferable
+to use either :file:`pdfgetx3.cfg` or :file:`.pdfgetx3.cfg`,
+for these files are automatically loaded by PDFgetX3.  All
+other configuration files must be passed explicitly to the program
+using the :option:`-c, --config <-c>` option.
+
+Open the pdfgetx3.cfg file in a **text** editor.  The lines that
+start with a hash mark ``#`` are comments and are not used.  The lines
+starting with a right brace ``[`` denote sections in the configuration
+file.  The active lines are all formatted as
+"NAME=VALUE".  Although PDFgetX3 has many options, in general only a few
+of them are critical for the PDF calculation:
+
+* :confval:`dataformat` -- specifies the input data format
+
+* :confval:`wavelength` -- radiation wavelength in Å required for the
+  "twotheta" format.
+
+* :confval:`composition` -- chemical composition of the sample
+
+* :confval:`qmaxinst` -- upper *Q* boundary for a meaningful measurement
+  intensities.
+
+* :confval:`qmax` -- *Q*-cutoff for the Fourier transformation that
+  yields the PDF.
+
+Save the updated configuration file and run pdfgetx3 on the input data
+:file:`FILENAME.chi` as ::
+
+   pdfgetx3 --verbose=info -t gr FILENAME.chi
+
+Here the :option:`--verbose=info <--verbose>` option makes pdfgetx3
+print
+more information about its operation.  This helps to verify
+if the configuration file is indeed loaded and if the parameter
+values are assigned as intended.  The PDFgetX3 will not write
+any output files unless told so.  The :option:`-t gr <-t>` option
+tells the program to save the final |Gr| curve as a
+:file:`FILENAME.gr` file in the working directory.
+
+The saved .gr file contains a header with all the calculation
+parameters and the input file name.  The .gr file can be therefore
+also used as a configuration file in order to redo the same
+calculation ::
+
+   pdfgetx3 -c FILENAME.gr --plot=fq,gr
+
+Note this command does not include any .chi file and this will as
+a result process the previously used input :file:`FILENAME.chi`.
+The :option:`--plot=fq,gr <-p>` option tells PDFgetX3 to
+display 2 plots for the reduced structure function |FQ| and the
+final PDF |Gr|.  The :option:`!--plot` option also implies an
+:doc:`interactive mode </interact>`
+therefore the program does not exit, but starts an
+interactive `IPython`_ session.  To exit the interactive mode,
+type ``exit()`` and press Enter.
+
+.. index:: pdfgetn3 (program)
+.. _cmd-pdfgetn3:
+
+pdfgetn3 command
+------------------------------------------------------------------------
+
+The pdfgetx3 and pdfgetn3 programs operate in a very similar fashion
+apart from being set to assume X-ray and neutron data respectively.
+The type of the scattering data can be also specified using the
+:option:`--mode` option.  Running ``pdfgetn3`` is nearly identical
+to executing ``pdfgetx3 --mode=neutron``.  The only difference between
+these commands is that pdfgetx3 checks for configuration files
+:file:`pdfgetx3.cfg` and :file:`.pdfgetx3.cfg`, whereas
+pdfgetn3 looks for :file:`pdfgetn3.cfg` and :file:`.pdfgetn3.cfg`.
+
+.. index:: pdfgets3 (program)
+.. _cmd-pdfgets3:
+
+pdfgets3 command
+------------------------------------------------------------------------
+
+The pdfgets3 program is virtually the same as its counterparts for x-ray
+(pdfgetx3) and neutron (pdfgetn3) diffraction data. The only difference
+is that instead of referencing the well documented x-ray or neutron
+scattering form factor data, a user-defined form factor data is used
+for getting the PDF from a small-angle scattering (SAS) data. This
+behavior is enabled by specifying ``mode = sas`` in the configuration
+file or in the command line tool. The pdfgets3 program by default
+searches for a configuration named :file:`pdfgets3.cfg` and
+:file:`.pdfgets3.cfg` in order, when no configuration file is specified.
+
+Please refer to the :doc:`tutorial section </tutorial>` for a step-by-step processing of the example data files and for demonstration of the capabilities in PDFgetX3, PDFgetN3 and PDFgetS3.

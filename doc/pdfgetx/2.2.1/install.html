@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation &#8212; diffpy.pdfgetx 2.2.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <script src="_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quick-start guide" href="quick-start.html" />
+    <link rel="prev" title="Introduction" href="intro.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="index.html">diffpy.pdfgetx 2.2.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="software-requirements">
+<h2>Software requirements<a class="headerlink" href="#software-requirements" title="Permalink to this headline">¶</a></h2>
+<p>This software is written in Python programming language, therefore
+you must have Python 3.10, 3.9, 3.8, 3.7 or 2.7 installed.  In addition,
+the following third-party Python libraries are also required:</p>
+<ul class="simple">
+<li><p>pip - Python package installer</p></li>
+<li><p>setuptools - tools for installing Python packages</p></li>
+<li><p>six - Python 2 and 3 compatibility library</p></li>
+<li><p>NumPy - library for scientific computing with Python</p></li>
+<li><p>matplotlib - Python plotting library</p></li>
+<li><p>IPython - enhanced interactive Python shell</p></li>
+</ul>
+<p>Standard Python releases can be obtained from
+<a class="reference external" href="https://www.python.org/downloads">https://www.python.org/downloads</a>.
+The third-party libraries can be found at the
+<a class="reference external" href="https://pypi.org">Python Package Index</a>
+or using any Internet search engine.</p>
+<p>Another more convenient option is to obtain one of the science-oriented
+Python distributions such as
+<a class="reference external" href="https://www.anaconda.com/download">Anaconda Python</a>,
+<a class="reference external" href="https://www.enthought.com/">Enthought Canopy</a> or
+<a class="reference external" href="https://python-xy.github.io/">PythonXY</a>,
+These distributions already include all the necessary libraries, so the
+required Python software can be all installed in one step.</p>
+<p>On Linux operating systems the third-party libraries are usually
+included in a system software repository.  For example on an
+Ubuntu Linux computer the software dependencies can be all installed
+with a single shell command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> \
+  <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">python3</span><span class="o">-</span><span class="n">six</span> \
+  <span class="n">python3</span><span class="o">-</span><span class="n">numpy</span> <span class="n">python3</span><span class="o">-</span><span class="n">matplotlib</span> <span class="n">ipython3</span>
+</pre></div>
+</div>
+<p>This may be, of course, as well accomplished using the GUI
+driven Synaptic package manager.  Other Linux
+distributions may use different software management tools,
+but the names of the necessary packages should be very similar
+to those above.</p>
+<p>On Windows operating system, it may be necessary to add the
+<code class="docutils literal notranslate"><span class="pre">C:\Python37</span></code> directory and the scripts directory
+<code class="docutils literal notranslate"><span class="pre">C:\Python37\Scripts</span></code> to the system <code class="xref std std-envvar docutils literal notranslate"><span class="pre">PATH</span></code>. Some Python
+distributions already do so as a part of their installation process. The
+easiest way to check is to start the <strong class="program">Command Prompt</strong>, type
+there <code class="docutils literal notranslate"><span class="pre">python</span></code> and see if this starts the Python interpreter.</p>
+<p>Alternately, if you want to run the diffpy.pdfgetx software with a specific version of Python,
+we recommend using a virtual environment, such as <code class="docutils literal notranslate"><span class="pre">conda</span></code>. For example, if you have Anaconda Python installed,
+you can create a conda virtual environment to install the software as follow</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">pdfgetx_env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.8</span> <span class="n">numpy</span> <span class="n">matplotlib</span> <span class="n">ipython</span>
+</pre></div>
+</div>
+<p>You can choose the name of the environment and python version as you desire. You can choose any of the
+supported Python versions. Then, activate this environment and follow the instructions in the
+next section to install the software</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">pdfgetx_env</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The diffpy.pdfgetx software is distributed as a Python wheel file,
+which can be obtained from the
+<a class="reference external" href="http://innovation.columbia.edu/technologies/m11-120">Columbia Technology Ventures</a>.
+Once all the required software is in
+place, start the command prompt on Windows or a Unix terminal on Linux
+or Mac, navigate to the directory that contains the wheel file and
+execute the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">./</span><span class="n">diffpy</span><span class="o">.</span><span class="n">pdfgetx</span><span class="o">-</span><span class="n">VERSION</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>Here VERSION needs to be replaced to match the actual filename. It is
+critical that pip installer is from a supported Python version otherwise
+the program would not work. On Linux and Mac operating systems the installation may need to run with root user privileges, for example, by prepending <code class="docutils literal notranslate"><span class="pre">sudo</span></code> to the command line above. If root access is not available, use the <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code> options <code class="xref std std-option docutils literal notranslate"><span class="pre">--user</span></code> or <code class="xref std std-option docutils literal notranslate"><span class="pre">--prefix</span></code> to install the software to a user-writable directory.</p>
+<p>The package provides three programs for PDF conversion, <strong class="program">pdfgetx3</strong>, <strong class="program">pdfgetn3</strong> and <strong class="program">pdfgets3</strong>. To check if they are correctly installed run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pdfgetx3</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pdfgetn3</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pdfgets3</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>This should display the software version, which should agree
+with the VERSION string in the wheel package name.
+The installation also includes a <strong class="program">plotdata</strong>
+command for an easy plotting of text data files.  To verify
+if plotdata works, run the <code class="docutils literal notranslate"><span class="pre">plotdata</span> <span class="pre">--version</span></code> command.
+Finally, a comprehensive test of the installed software can
+be executed using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">diffpy</span><span class="o">.</span><span class="n">pdfgetx</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">run</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Older versions of diffpy.pdfgetx use Python egg format
+instead of Python wheel.
+To install these use the easy_install command as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">easy_install</span> <span class="o">./</span><span class="n">diffpy</span><span class="o">.</span><span class="n">pdfgetx</span><span class="o">-</span><span class="n">VERSION</span><span class="o">.</span><span class="n">egg</span>
+</pre></div>
+</div>
+</div>
+<span class="target" id="index-0"></span><span class="target" id="index-1"></span></div>
+<div class="section" id="ipython-magic-command">
+<span id="index-2"></span><h2>IPython magic command<a class="headerlink" href="#ipython-magic-command" title="Permalink to this headline">¶</a></h2>
+<p>These instructions are intended for <a class="reference external" href="https://ipython.org">IPython</a> users who would like to
+integrate PDFgetX3, PDFgetN3 and PDFgetS3 into their IPython environment.  If
+you don’t plan to customize IPython in such way you can safely skip
+this paragraph.</p>
+<p>When pdfgetx3 or pdfgetn3 or pdfgets3 is run in interactive mode, it start
+IPython interactive shell and define an extra <code class="docutils literal notranslate"><span class="pre">%pdfgetx3</span></code>, <code class="docutils literal notranslate"><span class="pre">%pdfgetn3</span></code> and <code class="docutils literal notranslate"><span class="pre">%pdfgets3</span></code> magic commands within the IPython session.  The IPython
+magic commands are not valid Python code, but work in a similar
+fashion as standard shell commands.  The <code class="docutils literal notranslate"><span class="pre">%pdfgetx3</span></code>, <code class="docutils literal notranslate"><span class="pre">%pdfgetn3</span></code> and <code class="docutils literal notranslate"><span class="pre">%pdfgets3</span></code> magics can be thus used with the same options and arguments as if run from the shell.  This is useful for processing more files, while
+preserving all plots or variables that were already created
+in an IPython session.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">%pdfgetx3</span></code>, <code class="docutils literal notranslate"><span class="pre">%pdfgetn3</span></code> and <code class="docutils literal notranslate"><span class="pre">%pdfgets3</span></code> magic commands can be defined
+permanently so they are available in all IPython sessions.  To set
+this up</p>
+<ol class="arabic">
+<li><p>find the <code class="docutils literal notranslate"><span class="pre">profile_default/ipython_config.py</span></code> file and open it
+in a text editor.  If that file does not exists,
+create it first by executing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipython</span> <span class="n">profile</span> <span class="n">create</span>
+</pre></div>
+</div>
+</li>
+<li><p>navigate to the paragraph that contains the
+<code class="xref py py-data docutils literal notranslate"><span class="pre">c.InteractiveShellApp.extensions</span></code> and add there
+the following line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">InteractiveShellApp</span><span class="o">.</span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;diffpy.pdfgetx.ipy_magics&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>There must be no leading indent, i.e., the text must start at the
+very first column.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#software-requirements">Software requirements</a></li>
+<li><a class="reference internal" href="#id1">Installation</a></li>
+<li><a class="reference internal" href="#ipython-magic-command">IPython magic command</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="intro.html"
+                          title="previous chapter">Introduction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="quick-start.html"
+                          title="next chapter">Quick-start guide</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="quick-start.html" title="Quick-start guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Pavol Juhás, Timur Davis, Chia-Hao (Timothy) Liu, Connor J. Bracy,Christopher Wright, Christopher Farrow, Simon Billinge.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

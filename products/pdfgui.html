@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>PDFgui &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="pdfguilicense.html" />
+    <link rel="next" title="PDFgui License" href="pdfguilicense.html" />
     <link rel="prev" title="xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays" href="xPDFsuite.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -62,7 +65,7 @@
       aria-labelledby="dLabelMenu01">
       <li><a href="diffpycmi/index.html">DiffPy-CMI</a></li>
       <li><a href="xPDFsuite.html">xPDFsuite</a></li>
-      <li><a href="pdfgetx.html">PDFgetX3 and PDFgetN3</a></li>
+      <li><a href="pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
       <li><a href="#">PDFgui</a></li>
       <li><a href="SrMise.html">SrMise</a></li>
       <li><a href="mPDF.html">mPDF</a></li>
@@ -92,10 +95,10 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="pdfgui">
-<h1>PDFgui<a class="headerlink" href="#pdfgui" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="pdfgui">
+<h1>PDFgui<a class="headerlink" href="#pdfgui" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>For users who do not have the expertise or necessity for command line analysis, PDFgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
 capable of full-profile fitting of the atomic pair distribution function (PDF)
@@ -106,82 +109,79 @@ a powerful end-to-end software for X-ray PDF analysis.
 xPDFsuite is designed for flexible,
 high throughput PDF analyses and contains many features for interrogating, comparing and
 modeling data as well as simply doing data reduction.</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <img alt="../_images/PDFgui_screenshot_small.png" src="../_images/PDFgui_screenshot_small.png" />
-<p class="caption"><span class="caption-text">Screen-shot of PDFgui during a refinement of multiple data-sets</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Screen-shot of PDFgui during a refinement of multiple data-sets</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
 <p>By downloading and using this software you are agreeing to the
 conditions specified in the <a class="reference internal" href="pdfguilicense.html"><span class="doc">software license</span></a>.</p>
 <p>PDFgui is distributed as a software package for
 <a class="reference external" href="https://www.anaconda.com">Anaconda Python</a>.  PDFgui is available
 for all operating systems supported by Anaconda, namely for
 Linux, Mac OS X, and Windows.</p>
-<p>As a prerequisite for PDFgui installation, download and
-install <strong>Anaconda Python</strong> from
-<a class="reference external" href="https://www.anaconda.com/distribution">https://www.anaconda.com/distribution</a>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>As of July 2019 Anaconda stopped providing older versions
-of several packages that are required by PDFgui
-(details <a class="reference external" href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7">here</a>).
-We are working on making PDFgui compatible with the current
-set of Anaconda packages.
-In the meantime you must re-activate the old packages
-as follows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -n base conda
-conda config --set restore_free_channel <span class="nb">true</span>
+<p>As a prerequisite for PDFgui installation, download and install
+<strong>Miniconda</strong> (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a>)
+or Anaconda Python (<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>).</p>
+<p>PDFgui is available from the “conda-forge” channel of Anaconda packages.
+To do so open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> and use
+the <strong class="program">conda</strong> command as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>pdfgui2<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+conda<span class="w"> </span>activate<span class="w"> </span>pdfgui2
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
 </pre></div>
 </div>
-</div>
-<p>PDFgui is available from the “diffpy” channel of Anaconda packages.
-Because PDFgui requires Python 2.7 and wxpython 3,
-it is strongly recommended to install it in a dedicated
-Anaconda environment <em>py27</em>.
-To do so open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> on Windows
-and use the <strong class="program">conda</strong> command as follows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels diffpy
-conda create --name<span class="o">=</span>py27 <span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
-conda activate py27
-conda install <span class="s2">&quot;diffpy.pdfgui&gt;=1.1.2&quot;</span>
+<p>PDFgui can be then started from a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> by typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdfgui
 </pre></div>
 </div>
-<p>All done.  To start PDFgui enter <strong class="program">pdfgui</strong> command in a
-Terminal or use the <em>DiffPy</em> start menu on Windows.  PDFgui can be
-also started from the <em>Launcher</em> application included with Anaconda.</p>
+<p>The PDFgui window will appear automatically. An alternative method on Windows is to start
+PDFgui through the <em>Diffpy</em> start menu.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To start PDFgui from a Terminal make sure <em>py27</em> is
+<p>To start PDFgui from a Terminal make sure <em>pdfgui2</em> is
 the active Anaconda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate py27
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui2
 </pre></div>
 </div>
 <p>Alternatively you can add the following line to your shell startup
 file <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> to define an alias which will work in
 any Anaconda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/py27/bin/pdfgui&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/pdfgui2/bin/pdfgui&quot;</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">/path/to</span></code> needs to be adjusted according to the output of
 <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">pdfgui</span></code> command.</p>
 </div>
-</div>
-<div class="section" id="pdfgui-updates">
-<h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pdfgui-updates">
+<h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Permalink to this heading">¶</a></h2>
 <p>The Anaconda package system makes it easy to prepare and distribute
 software updates and bugfixes.  To update to the latest version of
 PDFgui use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update --channel<span class="o">=</span>diffpy diffpy.pdfgui
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
 </pre></div>
 </div>
 <p>To use a bleeding edge development version, visit the project source
 repository at <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">https://github.com/diffpy/diffpy.pdfgui</a> and consult
 its README file.</p>
+</section>
+<section id="other-versions">
+<h2>Other versions<a class="headerlink" href="#other-versions" title="Permalink to this heading">¶</a></h2>
+<p>v1.1.2 is the last python 2 version of PDFgui. It is no longer supported,
+but may be needed to open python 2 generated <cite>.ddp</cite> project files. It can
+be installed in a python2 anaconda environment using the commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>restore_free_channel<span class="w"> </span><span class="nb">true</span>
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>diffpy
+conda<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>py27<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">2</span>.7
+conda<span class="w"> </span>activate<span class="w"> </span>py27
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>diffpy<span class="w"> </span><span class="s2">&quot;diffpy.pdfgui==1.1.2&quot;</span>
+</pre></div>
 </div>
-<div class="section" id="other-versions">
-<h2>Other versions<a class="headerlink" href="#other-versions" title="Permalink to this headline">¶</a></h2>
 <p>When Anaconda Python is not available, PDFgui can be installed from
 sources.  The latest source package is at the <a class="reference external" href="https://pypi.org/project/diffpy.pdfgui">Python Package
 Index</a> and the
@@ -192,12 +192,6 @@ for further details on installation from sources,</p>
 quite outdated, they might be handy if there is some problem with
 Anaconda or if one needs to install without Internet connection.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 20%" />
-<col style="width: 13%" />
-<col style="width: 41%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Date</p></th>
@@ -220,20 +214,27 @@ Anaconda or if one needs to install without Internet connection.</p>
 </table>
 <p>MD5 check sums for these installer files are available
 <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui/releases/svn3067">here</a>.</p>
-</div>
-<div class="section" id="documentation-and-help">
-<h2>Documentation and help<a class="headerlink" href="#documentation-and-help" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="documentation-and-help">
+<h2>Documentation and help<a class="headerlink" href="#documentation-and-help" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>The user manual is available in <a class="reference external" href="../doc/pdfgui/index.html">HTML</a>
 and <a class="reference external" href="../doc/pdfgui/pdfgui.pdf">PDF</a> formats.</p></li>
+<li><p>Search “PDFgui” on YouTube for some video tutorials on how to use
+PDFgui.</p></li>
+<li><p>For in-depth help in using PDFgui to solve scientific problems please
+see the book “Atomic Pair Distribution Function Analysis: A primer” by
+Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
+published by Oxford University Press. Data for the worked examples can
+be found here: <a class="reference external" href="https://github.com/Billingegroup/pdfttp_data">https://github.com/Billingegroup/pdfttp_data</a></p></li>
 <li><p>Tutorial files are available from
 <a class="reference external" href="../doc/pdfgui/pdfgui-tutorial.zip">pdfgui-tutorial.zip</a>.</p></li>
 <li><p>Please, join the <a class="reference internal" href="../community.html"><span class="doc">community forum</span></a> for tips, tricks, and feedback.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>

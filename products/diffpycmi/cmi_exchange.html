@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>CMI Exchange &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="license.html" />
+    <link rel="next" title="DiffPy-CMI License" href="license.html" />
     <link rel="prev" title="DiffPy-CMI Contents" href="contents.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -62,7 +65,7 @@
       aria-labelledby="dLabelMenu01">
       <li><a href="index.html">DiffPy-CMI</a></li>
       <li><a href="../xPDFsuite.html">xPDFsuite</a></li>
-      <li><a href="../pdfgetx.html">PDFgetX3 and PDFgetN3</a></li>
+      <li><a href="../pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
       <li><a href="../pdfgui.html">PDFgui</a></li>
       <li><a href="../SrMise.html">SrMise</a></li>
       <li><a href="../mPDF.html">mPDF</a></li>
@@ -92,15 +95,15 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="cmi-exchange">
-<h1>CMI Exchange<a class="headerlink" href="#cmi-exchange" title="Permalink to this headline">¶</a></h1>
+  <section id="cmi-exchange">
+<h1>CMI Exchange<a class="headerlink" href="#cmi-exchange" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">CMI Exchange</a> is a collection of community developed scripts,
 functions, and IPython plugins that make use of the DiffPy-CMI
 framework. If you are new to DiffPy-CMI it is a great place to get
 started.  If you’ve been working with DiffPy-CMI for a while and feel
 that others would benefit from seeing your code please contribute!</p>
-<div class="section" id="for-new-users">
-<span id="new-users"></span><h2>For New Users<a class="headerlink" href="#for-new-users" title="Permalink to this headline">¶</a></h2>
+<section id="for-new-users">
+<span id="new-users"></span><h2>For New Users<a class="headerlink" href="#for-new-users" title="Permalink to this heading">¶</a></h2>
 <p>Begin by visiting the <a class="reference external" href="https://github.com/diffpy/cmi_exchange#cmi-exchange">CMI Exchange on github</a>.  As with all
 github projects you will see the following two buttons in the sidebar
 allowing you to clone the project in your desktop or download a zip
@@ -116,17 +119,17 @@ in <a class="reference external" href="https://github.com/diffpy/cmi_exchange#ne
 run directly from the <a class="reference external" href="http://ipython.org/">IPython</a> command line, whereas the plugins are a
 set of functions and  <a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a>
 that provide additional functionality to your IPython session.</p>
-<div class="section" id="scripts">
-<h3>Scripts<a class="headerlink" href="#scripts" title="Permalink to this headline">¶</a></h3>
+<section id="scripts">
+<h3>Scripts<a class="headerlink" href="#scripts" title="Permalink to this heading">¶</a></h3>
 <p>To run a script, simply navigate to the directory containing the .py
 file and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ipython --pylab
 In [1]: %run script_name.py
 </pre></div>
 </div>
-</div>
-<div class="section" id="extensions">
-<h3>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="extensions">
+<h3>Extensions<a class="headerlink" href="#extensions" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference external" href="http://ipython.org/ipython-doc/rel-0.12.1/config/extensions/index.html">IPython extensions</a> are importable IPython modules that can modifpy
 the behavior of the shell to add functionality.  They are installed and
 activated from the IPython command line by running:</p>
@@ -134,17 +137,17 @@ activated from the IPython command line by running:</p>
 <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="o">%</span><span class="n">load_ext</span> <span class="n">name_of_extenstion</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="contribute-scripts">
-<span id="id2"></span><h2>Contribute Scripts<a class="headerlink" href="#contribute-scripts" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="contribute-scripts">
+<span id="id2"></span><h2>Contribute Scripts<a class="headerlink" href="#contribute-scripts" title="Permalink to this heading">¶</a></h2>
 <p>To contribute your own script to the CMI Exchange you must first fork
 the project on github.  Once you’ve added your own code you can issue a
 pull request.</p>
 <p>If you’re new to git and don’t know what it means to fork a project
 <a class="reference external" href="https://help.github.com/articles/fork-a-repo">begin here</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
