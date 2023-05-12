@@ -5,10 +5,10 @@ Acknowledgements
 Developers
 ----------
 
-The active DiffPy development team is Pavol Juhas, Kevin Knox, Xiaohao
-Yang, Michael McKerns, Chris Farrow, and Simon J. L. Billinge. Former
-members of the project are Emil Bozin, Wenduo Zhou, Peng Tian, Timur
-Davis, Jiwu Liu, and Dmitriy Bryndin.
+The active DiffPy development team is Pavol Juhas, Long Yang, Kevin Knox,
+Xiaohao Yang, Michael McKerns, Chris Farrow, and Simon J. L. Billinge.
+Former members of the project are Emil Bozin, Wenduo Zhou, Peng Tian,
+Timur Davis, Jiwu Liu, and Dmitriy Bryndin.
 
 
 Funding
