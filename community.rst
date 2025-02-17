@@ -2,30 +2,20 @@ Community
 =========
 
 To ensure a bright future for the DiffPy project it is essential to build a strong community
-of users and contributing developers. There are several Google groups for support and
-development of DiffPy and related applications.
+of users and contributing developers. News about updates and new releases will be made at the
+`diffpy-users <https://groups.google.com/d/forum/diffpy-users>`__ Google group,
+as well as it being a place to ask questions
+and find answers about using all diffpy programs.
+When you sign up,
+please leave a short message about why you are requesting to join as we have had spam accounts requesting access
+and so we want to know you are a legitimate user.
 
-- `diffpy-users <https://groups.google.com/d/forum/diffpy-users>`_ Help on usage of DiffPy-CMI,
-  PDFgetX3, PDFgetN3, PDFgetS3,
-  PDFgui, and other DiffPy components. This group is a knowledge base for PDFgui
-  user tips, tricks and troubleshooting. Feel free to search for answers or ask your question here.
+.. raw:: html
 
-   .. raw:: html
+  <form action="http://groups.google.com/group/diffpy-users/boxsubscribe">
+  <input type="submit" name="sub" value="Subscribe">
+  </form>
 
-      <form action="http://groups.google.com/group/diffpy-users/boxsubscribe">
-       <input type="submit" name="sub" value="Subscribe">
-      </form>
-
-- `diffpy-dev <https://groups.google.com/d/forum/diffpy-dev>`_ For bug reports, feature requests, and discussions about development
-  and changes of DiffPy-CMI, PDFgetX3, PDFgetN3, PDFgetS3,
-  PDFgui, and other DiffPy components. Materials scientists, chemists
-  physicists, engineers - please contribute by telling us your needs or sharing your suggestions here.
-
-   .. raw:: html
-
-      <form action="http://groups.google.com/group/diffpy-dev/boxsubscribe">
-       <input type="submit" name="sub" value="Subscribe">
-      </form>
 
 You can also share your comments, suggestions, praise or complaints by sending email to
 `Simon J. L. Billinge <sb2896@columbia.edu>`_.

@@ -14,13 +14,6 @@ capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data
 and comes with built in graphical and structure visualization capabilities.
 
-PDFgui is also included in :doc:`xPDFsuite <xPDFsuite>`,
-a powerful end-to-end software for X-ray PDF analysis.
-xPDFsuite is designed for flexible,
-high throughput PDF analyses and contains many features for interrogating, comparing and
-modeling data as well as simply doing data reduction.
-
-
 .. figure:: ../images/PDFgui_screenshot_small.png
    :align: center
 
@@ -31,7 +24,7 @@ Installation
 ============
 
 By downloading and using this software you are agreeing to the
-conditions specified in the :doc:`software license <pdfguilicense>`.
+conditions specified in the `software license <https://github.com/diffpy/diffpy.pdfgui/blob/main/LICENSE.rst>`__.
 
 PDFgui is distributed as a software package for
 `Anaconda Python <https://www.anaconda.com>`__.  PDFgui is available
@@ -43,48 +36,41 @@ As a prerequisite for PDFgui installation, download and install
 or Anaconda Python (https://www.anaconda.com/download).
 
 PDFgui is available from the "conda-forge" channel of Anaconda packages.
-To do so open a *Terminal* window or *Anaconda Command Prompt* and use
+
+To install it, first open a *Terminal* window or *Anaconda Command Prompt* and use
 the :program:`conda` command as follows ::
 
-   conda create --name=pdfgui2 python=3.9
-   conda activate pdfgui2
-   conda install -c conda-forge diffpy.pdfgui
+   conda create --name=pdfgui_env --channel conda-forge diffpy.pdfgui
 
-PDFgui can be then started from a *Terminal* window or *Anaconda Command Prompt* by typing ::
+To use PDFgui you then have to activate this conda environment and type pdfgui. ::
 
+   conda activate pdfgui_env
    pdfgui
 
-The PDFgui window will appear automatically. An alternative method on Windows is to start
+After a brief pause he PDFgui window will appear automatically. An alternative method on Windows is to start
 PDFgui through the *Diffpy* start menu.
 
 .. note::
-   To start PDFgui from a Terminal make sure *pdfgui2* is
+   To start PDFgui from a Terminal make sure *pdfgui_env* is
    the active Anaconda environment::
 
-      conda activate pdfgui2
+      conda activate pdfgui_env
 
-   Alternatively you can add the following line to your shell startup
+   Alternatively, on bash terminals you can add the following line to your shell startup
    file :file:`.bashrc` to define an alias which will work in
    any Anaconda environment ::
 
-      alias pdfgui="/path/to/pdfgui2/bin/pdfgui"
+      alias pdfgui="/path/to/pdfgui_env/bin/pdfgui"
 
    where ``/path/to`` needs to be adjusted according to the output of
    ``which pdfgui`` command.
 
-
-PDFgui updates
-==============
-
-The Anaconda package system makes it easy to prepare and distribute
-software updates and bugfixes.  To update to the latest version of
-PDFgui use ::
-
-   conda update -c conda-forge diffpy.pdfgui
-
-To use a bleeding edge development version, visit the project source
-repository at https://github.com/diffpy/diffpy.pdfgui and consult
-its README file.
+Please consider joining the `diffpy-users <https://www.diffpy.org/community.html>`__ Google group.
+News about updates and new releases will be made there, as well as it being a place to ask questions
+and find answers about using all diffpy programs.
+When you sign up,
+please leave a short message about why you are requesting to join as we have had spam accounts requesting access
+and so we want to know you are a legitimate user.
 
 
 Other versions
