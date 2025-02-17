@@ -1,21 +1,18 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>DiffPy-CMI installation from sources &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../_static/diffpy_logo_header.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css?v=158b04a8" />
+    <script src="../../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="DiffPy-CMI Contents" href="contents.html" />
     <link rel="prev" title="DiffPy-CMI" href="index.html" />
@@ -39,7 +36,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/diffpy_logo_header.png"></span>
+        <a class="navbar-brand" href="../../index.html">
           DiffPy</a>
         <span class="navbar-text navbar-version pull-left"><b></b></span>
       </div>
@@ -96,16 +93,16 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="diffpy-cmi-installation-from-sources">
-<h1>DiffPy-CMI installation from sources<a class="headerlink" href="#diffpy-cmi-installation-from-sources" title="Permalink to this heading">¶</a></h1>
+<h1>DiffPy-CMI installation from sources<a class="headerlink" href="#diffpy-cmi-installation-from-sources" title="Link to this heading">¶</a></h1>
 <p>Downloaded the most recent <a class="reference external" href="https://github.com/diffpy/diffpy-release/releases/latest">DiffPy-CMI tarball</a>
 and follow the steps below.</p>
 <section id="install-system-software">
-<h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Permalink to this heading">¶</a></h2>
+<h2>1 Install system software<a class="headerlink" href="#install-system-software" title="Link to this heading">¶</a></h2>
 <p>DiffPy-CMI requires the <a class="reference internal" href="#dependencies"><span class="std std-ref">system software dependencies</span></a>
 which can be installed from command line using a suitable package manager.
 Here are installation commands for several supported systems.</p>
 <section id="ubuntu">
-<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading">¶</a></h3>
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">¶</a></h3>
 <p>For Ubuntu or other Debian-based Linux distributions use <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>libgsl0-dev<span class="w"> </span>libboost-all-dev<span class="w"> </span>python-dev<span class="w"> </span><span class="se">\</span>
@@ -116,7 +113,7 @@ Here are installation commands for several supported systems.</p>
 </div>
 </section>
 <section id="fedora">
-<h3>Fedora<a class="headerlink" href="#fedora" title="Permalink to this heading">¶</a></h3>
+<h3>Fedora<a class="headerlink" href="#fedora" title="Link to this heading">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">yum</span></code> for Fedora or RedHat Linux:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>gsl-devel<span class="w"> </span>boost-devel<span class="w"> </span>python-devel<span class="w"> </span><span class="se">\</span>
@@ -128,7 +125,7 @@ Here are installation commands for several supported systems.</p>
 </div>
 </section>
 <section id="mac-os-x">
-<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this heading">¶</a></h3>
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Link to this heading">¶</a></h3>
 <p>For Mac OS X the system dependencies can be installed using the
 <a class="reference external" href="https://www.macports.org">MacPorts</a> software manager.  A similar
 package system <a class="reference external" href="https://brew.sh">Homebrew</a> works as well, but has
@@ -167,7 +164,7 @@ of <code class="docutils literal notranslate"><span class="pre">.profile</span><
 </section>
 </section>
 <section id="install-diffpy-cmi">
-<h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Permalink to this heading">¶</a></h2>
+<h2>2 Install DiffPy-CMI<a class="headerlink" href="#install-diffpy-cmi" title="Link to this heading">¶</a></h2>
 <p>Unzip the DiffPy-CMI tarball into a directory of your choice.
 Execute the included <code class="file docutils literal notranslate"><span class="pre">install</span></code> script and follow the prompts.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># replace VERSION to match the actual filename</span>
@@ -180,7 +177,7 @@ tar<span class="w"> </span>xzf<span class="w"> </span>diffpy_cmi-VERSION.tar.gz
 but should work if all required software is in place.</p>
 </section>
 <section id="test">
-<h2>3 Test<a class="headerlink" href="#test" title="Permalink to this heading">¶</a></h2>
+<h2>3 Test<a class="headerlink" href="#test" title="Link to this heading">¶</a></h2>
 <p>Execute the included test script, which should report no warnings
 nor errors:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./runtests.sh
@@ -192,7 +189,7 @@ After addressing these issues it may be necessary to recompile the
 sources by running <code class="docutils literal notranslate"><span class="pre">./install</span> <span class="pre">--build</span></code>.</p>
 </section>
 <section id="remarks">
-<h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this heading">¶</a></h2>
+<h2>Remarks<a class="headerlink" href="#remarks" title="Link to this heading">¶</a></h2>
 <p>The expanded diffpy_cmi directory can be renamed or moved
 to a different location and the software should still work.
 The only requirement is to update the <code class="file docutils literal notranslate"><span class="pre">diffpy_cmi.pth</span></code>
@@ -231,14 +228,14 @@ link.</p>
 </div>
 </section>
 <section id="contacts">
-<h2>Contacts<a class="headerlink" href="#contacts" title="Permalink to this heading">¶</a></h2>
+<h2>Contacts<a class="headerlink" href="#contacts" title="Link to this heading">¶</a></h2>
 <p>If you need help with installing this software, please check discussions
 or post your question to the
 <a class="reference external" href="https://groups.google.com/d/forum/diffpy-dev">diffpy-dev</a>
 group.</p>
 <hr class="docutils" />
 <section id="list-of-software-dependencies">
-<span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Permalink to this heading">¶</a></h3>
+<span id="dependencies"></span><h3>List of software dependencies<a class="headerlink" href="#list-of-software-dependencies" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><strong>gsl</strong> -  GNU Scientific Library is collection of routines for numerical analysis.</p></li>
 <li><p><strong>boost</strong> - a set of useful C++ libraries.</p></li>
