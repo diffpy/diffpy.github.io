@@ -101,11 +101,6 @@ a convenient and easy to use graphical front end for the PDFfit2 refinement prog
 capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data
 and comes with built in graphical and structure visualization capabilities.</p>
-<p>PDFgui is also included in <a class="reference internal" href="xPDFsuite.html"><span class="doc">xPDFsuite</span></a>,
-a powerful end-to-end software for X-ray PDF analysis.
-xPDFsuite is designed for flexible,
-high throughput PDF analyses and contains many features for interrogating, comparing and
-modeling data as well as simply doing data reduction.</p>
 <figure class="align-center" id="id1">
 <img alt="../_images/PDFgui_screenshot_small.png" src="../_images/PDFgui_screenshot_small.png" />
 <figcaption>
@@ -116,7 +111,7 @@ modeling data as well as simply doing data reduction.</p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>By downloading and using this software you are agreeing to the
-conditions specified in the <a class="reference internal" href="pdfguilicense.html"><span class="doc">software license</span></a>.</p>
+conditions specified in the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui/blob/main/LICENSE.rst">software license</a>.</p>
 <p>PDFgui is distributed as a software package for
 <a class="reference external" href="https://www.anaconda.com">Anaconda Python</a>.  PDFgui is available
 for all operating systems supported by Anaconda, namely for
@@ -124,48 +119,41 @@ Linux, Mac OS X, and Windows.</p>
 <p>As a prerequisite for PDFgui installation, download and install
 <strong>Miniconda</strong> (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a>)
 or Anaconda Python (<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>).</p>
-<p>PDFgui is available from the “conda-forge” channel of Anaconda packages.
-To do so open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> and use
+<p>PDFgui is available from the “conda-forge” channel of Anaconda packages.</p>
+<p>To install it, first open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> and use
 the <strong class="program">conda</strong> command as follows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>pdfgui2<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
-conda<span class="w"> </span>activate<span class="w"> </span>pdfgui2
-conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>pdfgui_env<span class="w"> </span>--channel<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
 </pre></div>
 </div>
-<p>PDFgui can be then started from a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> by typing</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdfgui
+<p>To use PDFgui you then have to activate this conda environment and type pdfgui.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui_env
+pdfgui
 </pre></div>
 </div>
-<p>The PDFgui window will appear automatically. An alternative method on Windows is to start
+<p>After a brief pause he PDFgui window will appear automatically. An alternative method on Windows is to start
 PDFgui through the <em>Diffpy</em> start menu.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To start PDFgui from a Terminal make sure <em>pdfgui2</em> is
+<p>To start PDFgui from a Terminal make sure <em>pdfgui_env</em> is
 the active Anaconda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui_env
 </pre></div>
 </div>
-<p>Alternatively you can add the following line to your shell startup
+<p>Alternatively, on bash terminals you can add the following line to your shell startup
 file <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> to define an alias which will work in
 any Anaconda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/pdfgui2/bin/pdfgui&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/pdfgui_env/bin/pdfgui&quot;</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">/path/to</span></code> needs to be adjusted according to the output of
 <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">pdfgui</span></code> command.</p>
 </div>
-</section>
-<section id="pdfgui-updates">
-<h2>PDFgui updates<a class="headerlink" href="#pdfgui-updates" title="Link to this heading">¶</a></h2>
-<p>The Anaconda package system makes it easy to prepare and distribute
-software updates and bugfixes.  To update to the latest version of
-PDFgui use</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
-</pre></div>
-</div>
-<p>To use a bleeding edge development version, visit the project source
-repository at <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">https://github.com/diffpy/diffpy.pdfgui</a> and consult
-its README file.</p>
+<p>Please consider joining the <a class="reference external" href="https://www.diffpy.org/community.html">diffpy-users</a> Google group.
+News about updates and new releases will be made there, as well as it being a place to ask questions
+and find answers about using all diffpy programs.
+When you sign up,
+please leave a short message about why you are requesting to join as we have had spam accounts requesting access
+and so we want to know you are a legitimate user.</p>
 </section>
 <section id="other-versions">
 <h2>Other versions<a class="headerlink" href="#other-versions" title="Link to this heading">¶</a></h2>
