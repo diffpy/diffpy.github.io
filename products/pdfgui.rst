@@ -37,18 +37,56 @@ or Anaconda Python (https://www.anaconda.com/download).
 
 PDFgui is available from the "conda-forge" channel of Anaconda packages.
 
-To install it, first open a *Terminal* window or *Anaconda Command Prompt* and use
-the :program:`conda` command as follows ::
+There are currently two different sets of instructions o install it depending on your platform.
+If you want to install it on Windows, Linux, or a non-arm64 Mac OSX (i.e., if at the time of writing
+your Mac does not have an M1 or M2 chip) use the first set, otherwise the second set of instructions
 
-   conda create --name=pdfgui_env --channel conda-forge diffpy.pdfgui
+Windows, macOS (non-Arm64), Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To use PDFgui you then have to activate this conda environment and type pdfgui. ::
+Add the "conda-forge" channel by running the following command in a terminal: ::
 
-   conda activate pdfgui_env
-   pdfgui
+        conda config --add channels conda-forge
 
-After a brief pause he PDFgui window will appear automatically. An alternative method on Windows is to start
-PDFgui through the *Diffpy* start menu.
+Create a new environment named ``diffpy.pdfgui_env`` (or any name of your choice) and
+install ``diffpy.pdfgui``: ::
+
+        conda create -n diffpy.pdfgui_env diffpy.pdfgui
+
+Activate the environment: ::
+
+        conda activate diffpy.pdfgui_env
+
+Confirm that the installation was successful: ::
+
+        python -c "import diffpy.pdfgui; print(diffpy.pdfgui.__version__)"
+
+macOS (Arm64)
+~~~~~~~~~~~~~
+
+Create a new conda environment ``diffpy.pdfgui_env``: ::
+
+       conda config --add channels conda-forge
+       conda create -n diffpy.pdfgui_env python=3.13
+
+Activate the environment: ::
+
+        conda activate diffpy.pdfgui_env
+
+It is necessary to get versions of pdffit2 built for Mac from Python package index (Pypi).  To install
+pdffit2 from Pypi using ``pip`` to download and install the latest version from `Python Package Index <https://pypi.python.org>`_: ::
+
+        conda install wxpython diffpy.utils matplotlib-base pycifrw
+        pip install diffpy.pdffit2
+
+Finally, we want to install PDFgui from conda-forge: ::
+
+        conda install diffpy.pdfgui --no-deps
+
+
+
+Running pdfgui:
+===============
 
 .. note::
    To start PDFgui from a Terminal make sure *pdfgui_env* is
