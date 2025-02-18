@@ -120,18 +120,54 @@ Linux, Mac OS X, and Windows.</p>
 <strong>Miniconda</strong> (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a>)
 or Anaconda Python (<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>).</p>
 <p>PDFgui is available from the “conda-forge” channel of Anaconda packages.</p>
-<p>To install it, first open a <em>Terminal</em> window or <em>Anaconda Command Prompt</em> and use
-the <strong class="program">conda</strong> command as follows</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="o">=</span>pdfgui_env<span class="w"> </span>--channel<span class="w"> </span>conda-forge<span class="w"> </span>diffpy.pdfgui
+<p>There are currently two different sets of instructions o install it depending on your platform.
+If you want to install it on Windows, Linux, or a non-arm64 Mac OSX (i.e., if at the time of writing
+your Mac does not have an M1 or M2 chip) use the first set, otherwise the second set of instructions</p>
+<section id="windows-macos-non-arm64-linux">
+<h3>Windows, macOS (non-Arm64), Linux<a class="headerlink" href="#windows-macos-non-arm64-linux" title="Link to this heading">¶</a></h3>
+<p>Add the “conda-forge” channel by running the following command in a terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
 </pre></div>
 </div>
-<p>To use PDFgui you then have to activate this conda environment and type pdfgui.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui_env
-pdfgui
+<p>Create a new environment named <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui_env</span></code> (or any name of your choice) and
+install <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>diffpy.pdfgui_env<span class="w"> </span>diffpy.pdfgui
 </pre></div>
 </div>
-<p>After a brief pause he PDFgui window will appear automatically. An alternative method on Windows is to start
-PDFgui through the <em>Diffpy</em> start menu.</p>
+<p>Activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>diffpy.pdfgui_env
+</pre></div>
+</div>
+<p>Confirm that the installation was successful:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import diffpy.pdfgui; print(diffpy.pdfgui.__version__)&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="macos-arm64">
+<h3>macOS (Arm64)<a class="headerlink" href="#macos-arm64" title="Link to this heading">¶</a></h3>
+<p>Create a new conda environment <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui_env</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>diffpy.pdfgui_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13
+</pre></div>
+</div>
+<p>Activate the environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>diffpy.pdfgui_env
+</pre></div>
+</div>
+<p>It is necessary to get versions of pdffit2 built for Mac from Python package index (Pypi).  To install
+pdffit2 from Pypi using <code class="docutils literal notranslate"><span class="pre">pip</span></code> to download and install the latest version from <a class="reference external" href="https://pypi.python.org">Python Package Index</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>wxpython<span class="w"> </span>diffpy.utils<span class="w"> </span>matplotlib-base<span class="w"> </span>pycifrw
+pip<span class="w"> </span>install<span class="w"> </span>diffpy.pdffit2
+</pre></div>
+</div>
+<p>Finally, we want to install PDFgui from conda-forge:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>diffpy.pdfgui<span class="w"> </span>--no-deps
+</pre></div>
+</div>
+</section>
+</section>
+<section id="running-pdfgui">
+<h2>Running pdfgui:<a class="headerlink" href="#running-pdfgui" title="Link to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To start PDFgui from a Terminal make sure <em>pdfgui_env</em> is
