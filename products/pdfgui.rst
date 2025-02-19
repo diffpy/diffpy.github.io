@@ -111,8 +111,30 @@ please leave a short message about why you are requesting to join as we have had
 and so we want to know you are a legitimate user.
 
 
-Other versions
-==============
+Documentation and help
+======================
+
+*  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
+   and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
+
+*  Search "PDFgui" on YouTube for some video tutorials on how to use
+   PDFgui.
+
+*  For in-depth help in using PDFgui to solve scientific problems please
+   see the book "Atomic Pair Distribution Function Analysis: A primer" by
+   Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
+   published by Oxford University Press. Data for the worked examples can
+   be found here: https://github.com/Billingegroup/pdfttp_data
+
+*  Tutorial files are available from
+   `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
+
+*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
+
+
+Legacy versions
+===============
+
 v1.1.2 is the last python 2 version of PDFgui. It is no longer supported,
 but may be needed to open python 2 generated `.ddp` project files. It can
 be installed in a python2 anaconda environment using the commands::
@@ -149,28 +171,6 @@ Name                     Date               Size         Description
 
 MD5 check sums for these installer files are available
 `here <https://github.com/diffpy/diffpy.pdfgui/releases/svn3067>`__.
-
-
-Documentation and help
-======================
-
-*  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
-   and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
-
-*  Search "PDFgui" on YouTube for some video tutorials on how to use
-   PDFgui.
-
-*  For in-depth help in using PDFgui to solve scientific problems please
-   see the book "Atomic Pair Distribution Function Analysis: A primer" by
-   Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
-   published by Oxford University Press. Data for the worked examples can
-   be found here: https://github.com/Billingegroup/pdfttp_data
-
-*  Tutorial files are available from
-   `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
-
-*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
-
 
 .. toctree::
    :hidden:
