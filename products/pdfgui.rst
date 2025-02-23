@@ -20,6 +20,19 @@ and comes with built in graphical and structure visualization capabilities.
    Screen-shot of PDFgui during a refinement of multiple data-sets
 
 
+Reference
+=========
+
+If you use this program for a scientific research that leads to publication,
+we ask that you acknowledge use of the program by citing the following paper
+in your publication:
+
+   C L Farrow, P Juhas, J W Liu, D Bryndin, E S Božin,
+   J Bloch, Th Proffen and S J L Billinge, `PDFfit2 and PDFgui:
+   computer programs for studying nanostructure in crystals <https://doi.org/10.1088/0953-8984/19/33/335219>`_,
+   J. Phys.: Condens. Matter 19 (2007) 335219.
+
+
 Installation
 ============
 
@@ -81,7 +94,7 @@ the dependencies from conda-forge and then the pdffit2 itself from Pypi using th
 
 Finally, we want to install PDFgui, again from conda-forge: ::
 
-        conda install diffpy.pdfgui --no-deps
+        pip install diffpy.pdfgui
 
 
 
