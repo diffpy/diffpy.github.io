@@ -1,26 +1,19 @@
 ##########
-DiffPy-CMI
+DiffPy.CMI
 ##########
 
-DiffPy-CMI is our complex modeling framework. It is a highly flexible
-library of Python modules for robust modeling of nanostructures in
-crystals, nanomaterials, and amorphous materials.
+Diffpy.cmi is designed as an extensible complex modeling infrastructure. 
+Users and developers can readily integrate novel data types and constraints 
+into custom workflows. While widely used for advanced analysis of structural 
+data, the framework is general and can be applied to any problem where model 
+parameters are refined to fit calculated quantities to data.
 
-The software provides functionality for storage and manipulation of
-structure data and calculation of structure-based quantities, such as
-PDF, SAS, bond valence sums, atom overlaps, bond lengths, and
-coordinations. Most importantly the DiffPy-CMI package contains a
-fitting framework for combining multiple experimental inputs in a single
-optimization problem.
-
-This is an early release of code that is under intense development, with
-support for installation on Unix, Linux, and Macintosh machines.  The
-scope and documentation of the project will evolve rapidly, but we want
-to make the code available at the earliest possible date. Please make
-use of the software and provide feedback and suggestions for
-improvement, but please be patient and check back frequently for
-updates.
-
+Diffpy.cmi is a community-driven project that supports Unix, Linux, macOS, 
+and Windows platforms. It is designed to be used in Python scripts enabling 
+flexible scripting and automation for advanced and reproducible workflows. 
+Users are encouraged to leverage the software for their modeling needs and 
+to contribute feedback, use cases, and extensions through the project 
+community.
 
 
 .. figure:: ../../images/diffpycmi_screenshot.png
@@ -30,38 +23,135 @@ updates.
 
 Installation
 ============
+To install ``diffpy.cmi``, create a new conda environment or activate an existing environment and install the package from the conda-forge channel.
 
-Use of this software is subject to the conditions in
-software :doc:`LICENSE <license>`.
+.. code-block:: bash
 
-As of version 3.0 DiffPy-CMI is available for Linux and
-Mac as a collection of packages for Anaconda Python.  As
-a first step download and install **Anaconda for Python 3.7**
-from |anaconda-download|.
+    conda create -n diffpy.cmi-env
+    conda install -c conda-forge diffpy.cmi
+    conda activate diffpy.cmi-env
 
-.. note::
-   DiffPy-CMI is available from the "diffpy" channel of Anaconda packages. It requires Python 3.5 or later or 2.7. It is recommended to install it in a separate Anaconda environment, for example *py37* or other preferred python versions.
-   Make sure that *py37* environment is activated when working with DiffPy-CMI. ::
+To confirm that the installation was successful, type
 
-      conda create --name=py37 python=3.7
-      conda activate py37
+.. code-block:: bash
 
-Once Anaconda is ready, DiffPy-CMI can be installed from the "diffpy"
-channel of Anaconda packages as follows ::
+        cmi --version
 
-   conda config --add channels diffpy
-   conda install diffpy-cmi
+The output should print the latest version.
 
-The software distribution over Anaconda makes it easy to publish
-frequent software updates.  To update your installation later use ::
+If the above does not work, you can use ``pip`` to download and install the latest release from
+`Python Package Index <https://pypi.python.org>`_.
+To install using ``pip`` into your ``diffpy.cmi_env`` environment, type
 
-   conda update diffpy-cmi
+.. code-block:: bash
 
-If you don't want to use Anaconda you can
-:doc:`install DiffPy-CMI from sources <install>`.  Note that
-this method takes more time and requires more experience
-with the operating system.
+        pip install diffpy.cmi
 
+Pack and Profile Installation
+-----------------------------
+
+Use the `cmi` command-line interface to install and manage modular optional dependencies, known as `packs`,
+and to configure or execute user-defined workflows that combine multiple packs with optional post-installation steps,
+known as `profiles`. To use `cmi`, you can run the following example commands:
+
+Show available commands and options with,
+
+.. code-block:: bash
+
+    cmi -h
+
+List installed and available packs and profiles,
+
+.. code-block:: bash
+
+    cmi pack list
+    cmi profile list
+
+Show details of a specific pack or profile,
+
+.. code-block:: bash
+
+    cmi pack show <pack_name>
+    cmi profile show <profile_name>
+
+Install a pack or profile (by name or path),
+
+.. code-block:: bash
+
+    cmi install <pack_name>
+    cmi install <profile_name>
+    cmi install </absolute/path/to/profile>
+
+.. admonition:: Example installation
+
+    For example, to install the pack for PDF modeling, type,
+
+    .. code-block:: bash
+
+        cmi install pdf
+
+    To check to see if the pack was installed, type,
+
+    .. code-block:: bash
+
+        cmi pack list
+
+    The output should look something like this,
+
+    .. code-block:: bash
+
+        Installed:
+            - core
+            - pdf
+        Available to install:
+            - plotting
+            - tests
+            - docs
+
+
+Download examples
+-----------------
+
+To list and copy example scripts and data to your working directory, type,
+
+.. code-block:: bash
+
+    cmi example list
+    cmi example copy <example_name>
+
+.. admonition:: Example
+
+    For example, to see the example scripts for PDF fitting, type,
+
+    .. code-block:: bash
+
+        cmi example list
+
+    The output should look something like this,
+
+    .. code-block:: bash
+
+        ch03NiModelling
+        ch05Fit2Phase
+        ch06RefineCrystalStructureGen
+        ch07StructuralPhaseTransitions
+        ch08NPRefinement
+        ch11ClusterXYZ
+
+    To copy the example for bulk Ni PDF fitting, type,
+
+    .. code-block:: bash
+
+        cmi example copy ch03NiModelling
+
+    This will copy the example directory ``ch03NiModelling`` to your current working directory. Within this directory exists
+    the scripts and data to fit the bulk Ni PDF.
+
+    You can then run the fitting script with,
+
+    .. code-block:: bash
+
+        python ch03NiModelling/solutions/diffpy-cmi/fitBulkNi.py
 
 What next?
 ==========
@@ -78,11 +168,11 @@ What next?
 Tutorials
 =========
 
-* ADD2019_ school and conference --
+* Worked examples and experimental data from the book are freely available at our
+  `GitHub repository <https://github.com/Billingegroup/pdfttp_data>`_.
+
+* ADD2019 school and conference --
   https://github.com/diffpy/add2019-diffpy-cmi
-
-.. _ADD2019: https://workshops.ill.fr/event/133/page/32-home
-
 
 Documentation
 =============
@@ -101,8 +191,8 @@ at the links below.
 * |doc-libdiffpy|_ -- C++ library for calculation of PDF and other real-space
   quantities
 
-See :ref:`DiffPy-CMI contents <contents>` for a complete list
-of open-source libraries that are included in DiffPy-CMI and
+See :ref:`DiffPy.CMI contents <contents>` for a complete list
+of open-source libraries that are included in DiffPy.CMI and
 their respective project pages.
 
 
@@ -110,7 +200,7 @@ Reference
 =========
 
 If you use this software in a research work which leads to publication,
-we ask you to acknowledge the use of DiffPy-CMI by citing the following
+we ask you to acknowledge the use of DiffPy.CMI by citing the following
 paper:
 
 * |citeJuhasAca15|
