@@ -168,11 +168,14 @@ What next?
 Tutorials
 =========
 
-* Worked examples and experimental data from the book are freely available at our
+* A step-by-step tutorial on using diffpy.cmi for PDF analysis is available at the documentation site for
+  ``DiffPy.CMI`` -- https://www.diffpy.org/diffpy.cmi/tutorials/index.html.
+
+* Worked examples and experimental data from the book *Atomic Pair Distribution Function Analysis: A Primer* are freely available at our
   `GitHub repository <https://github.com/Billingegroup/pdfttp_data>`_.
 
 * ADD2019 school and conference --
-  https://github.com/diffpy/add2019-diffpy-cmi
+  https://github.com/diffpy/add2019-diffpy-cmi.
 
 Documentation
 =============
