@@ -645,14 +645,14 @@ the zero offset may change for different samples.
 
 This tutorial requires either Linux or Mac OS X platforms,
 because the PDF fitting is conducted with
-`DiffPy-CMI <https://www.diffpy.org/products/diffpycmi/index.html>`__,
+`DiffPy.CMI <https://www.diffpy.org/products/diffpycmi/index.html>`__,
 which is not yet available for Windows.
-If DiffPy-CMI is not yet installed,
+If DiffPy.CMI is not yet installed,
 we recommend to use `Anaconda Python`_ and set up a dedicated
 Anaconda environment *nbcmi* for this tutorial.
 This can be accomplished using the following steps::
 
-   $ conda create -n nbcmi -c diffpy python=2 diffpy-cmi
+   $ conda create -n nbcmi -c diffpy python=2 diffpy.cmi
    $ conda activate nbcmi
    $ python -m easy_install path/to/diffpy.pdfgetx-VERSION.egg
 

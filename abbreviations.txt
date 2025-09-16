@@ -66,7 +66,7 @@
 
 
 .. |DiffPyCMI| replace::
-   :doc:`DiffPy-CMI </products/diffpycmi/index>`
+   :doc:`DiffPy.CMI </products/diffpycmi/index>`
 
 .. |citeShiPRL14| replace:: Chenyang Shi, Majid Beidaghi, Michael
    Naguib, Olha Mashtalir, Yury Gogotsi, and Simon J. L. Billinge,

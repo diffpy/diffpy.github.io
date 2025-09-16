@@ -51,7 +51,7 @@ xPDFsuite is available for purchase for either academic or commercial applicatio
 .. _CTV_link: ctv-xpdfsuite_
 
 **Thank you for purchasing xPDFsuite. Funds we raise from sales help us to develop user interfaces and useful features on top of our
-free for academics and open source Diffpy products, such as Diffpy-CMI, PDFgetX3 and PDFgui.**
+free for academics and open source Diffpy products, such as DiffPy.CMI, PDFgetX3 and PDFgui.**
 
 **We hope you enjoy xPDFsuite and that it supercharges your PDF analyses.**  Please contact us with feedback and questions by
 emailing `Prof. Simon Billinge  <sb2896@columbia.edu>`_

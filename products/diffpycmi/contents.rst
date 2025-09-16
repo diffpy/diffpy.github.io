@@ -1,9 +1,9 @@
 .. _contents:
 
-DiffPy-CMI Contents
+DiffPy.CMI Contents
 ===================
 
-The DiffPy-CMI release includes Python and C++ libraries developed by
+The DiffPy.CMI release includes Python and C++ libraries developed by
 the DiffPy team as well as external libraries necessary for functionality.
 
 Libraries developed by the DiffPy team
