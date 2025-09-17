@@ -1,7 +1,7 @@
 How to Contribute Code
 ======================
 
-The DiffPy.CMI bundle consists of the following projects, all hosted on
+The |diffpycmi| bundle consists of the following projects, all hosted on
 github.  To contribute code simply fork the project you'd like to work
 on and issue a pull request.
 

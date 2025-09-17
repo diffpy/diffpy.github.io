@@ -14,15 +14,15 @@ Copyright (c) 2014-2019, Brookhaven Science Associates, Brookhaven National
     Laboratory
 
 
-The "DiffPy.CMI" is distributed subject to the following license conditions:
+The "diffpy.cmi" is distributed subject to the following license conditions:
 
 
 SOFTWARE LICENSE AGREEMENT
 
-    Software: DiffPy.CMI
+    Software: diffpy.cmi
 
 
-(1) The "Software", below, refers to the aforementioned DiffPy.CMI (in either
+(1) The "Software", below, refers to the aforementioned diffpy.cmi (in either
 source code, or binary form and accompanying documentation).
 
 Part of the software was derived from the DANSE, ObjCryst++ (with permission),

@@ -4,7 +4,7 @@ xINTERPDF
 
 xINTERPDF is a Python GUI program for analyzing X-ray pair distribution
 function (PDF) data of organic compounds collected at synchrotron and/or
-laboratory X-ray sources. It uses DiffPy.CMI as a backend for simulation
+laboratory X-ray sources. It uses |diffpycmi| as a backend for simulation
 of PDFs.
 
 Currently it supports:
@@ -39,7 +39,7 @@ The xINTERPDF package requires Python 2.7 and the following dependency packages:
 * ``SciPy`` - Scientific libraries for Python
 * ``matplotlib`` - Python plotting library
 * ``Scikit-Learn`` - Python machine learning library; its PCA module is called.
-* ``DiffPy.CMI`` - Versatile Python packages for simulation of atomic pair distribution functions
+* ``diffpy.cmi`` - Versatile Python packages for simulation of atomic pair distribution functions
 * ``Tkinter`` - Python default library for creation of graphical user interface
 
 See the :doc:`xINTERPDF license <xinterpdflicense>` for terms and conditions of use.

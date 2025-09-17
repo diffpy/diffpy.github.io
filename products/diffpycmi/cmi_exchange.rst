@@ -2,9 +2,9 @@ CMI Exchange
 =============
 
 The `CMI Exchange`_ is a collection of community developed scripts,
-functions, and IPython plugins that make use of the DiffPy.CMI
-framework. If you are new to DiffPy.CMI it is a great place to get
-started.  If you've been working with DiffPy.CMI for a while and feel
+functions, and IPython plugins that make use of the |diffpycmi|
+framework. If you are new to |diffpycmi| it is a great place to get
+started.  If you've been working with |diffpycmi| for a while and feel
 that others would benefit from seeing your code please contribute!
 
 .. _cmi exchange: https://github.com/diffpy/cmi_exchange#cmi-exchange

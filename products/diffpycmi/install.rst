@@ -1,16 +1,16 @@
 .. highlight:: bash
 
-DiffPy.CMI installation from sources
+|diffpycmi| installation from sources
 ====================================
 
-Downloaded the most recent `DiffPy.CMI tarball
+Downloaded the most recent `diffpy.cmi tarball
 <https://github.com/diffpy/diffpy-release/releases/latest>`__
 and follow the steps below.
 
 1 Install system software
 ------------------------------------------------------------------------
 
-DiffPy.CMI requires the :ref:`system software dependencies <dependencies>`
+|diffpycmi| requires the :ref:`system software dependencies <dependencies>`
 which can be installed from command line using a suitable package manager.
 Here are installation commands for several supported systems.
 
@@ -43,7 +43,7 @@ Mac OS X
 For Mac OS X the system dependencies can be installed using the
 `MacPorts <https://www.macports.org>`_ software manager.  A similar
 package system `Homebrew <https://brew.sh>`_ works as well, but has
-been considerably less tested with DiffPy.CMI.
+been considerably less tested with |diffpycmi|.
 
 For best results with MacPorts follow these tips:
 
@@ -79,10 +79,10 @@ of ``.profile`` or ``.zshenv`` file in your HOME directory ::
     export PATH="/opt/local/bin:$PATH"
 
 
-2 Install DiffPy.CMI
+2 Install |diffpycmi|
 ------------------------------------------------------------------------
 
-Unzip the DiffPy.CMI tarball into a directory of your choice.
+Unzip the |diffpycmi| tarball into a directory of your choice.
 Execute the included :file:`install` script and follow the prompts. ::
 
    # replace VERSION to match the actual filename
@@ -143,7 +143,7 @@ the base diffpy_cmi directory and create the symbolic link with ::
 
 .. note::
 
-   The installation of DiffPy.CMI is entirely contained under the
+   The installation of |diffpycmi| is entirely contained under the
    expanded diffpy_cmi directory.  The software can be completely
    uninstalled by deleting that directory and removing the symbolic
    link.

@@ -1,5 +1,5 @@
 ##########
-DiffPy.CMI
+|diffpycmi|
 ##########
 
 Diffpy.cmi is designed as an extensible complex modeling infrastructure. 
@@ -169,7 +169,7 @@ Tutorials
 =========
 
 * A step-by-step tutorial on using diffpy.cmi for PDF analysis is available at the documentation site for
-  ``DiffPy.CMI`` -- https://www.diffpy.org/diffpy.cmi/tutorials/index.html.
+  ``diffpy.cmi`` -- https://www.diffpy.org/diffpy.cmi/tutorials/index.html.
 
 * Worked examples and experimental data from the book *Atomic Pair Distribution Function Analysis: A Primer* are freely available at our
   `GitHub repository <https://github.com/Billingegroup/pdfttp_data>`_.
@@ -194,8 +194,8 @@ at the links below.
 * |doc-libdiffpy|_ -- C++ library for calculation of PDF and other real-space
   quantities
 
-See :ref:`DiffPy.CMI contents <contents>` for a complete list
-of open-source libraries that are included in DiffPy.CMI and
+See :ref:`diffpy.cmi contents <contents>` for a complete list
+of open-source libraries that are included in |diffpycmi| and
 their respective project pages.
 
 
@@ -203,7 +203,7 @@ Reference
 =========
 
 If you use this software in a research work which leads to publication,
-we ask you to acknowledge the use of DiffPy.CMI by citing the following
+we ask you to acknowledge the use of |diffpycmi| by citing the following
 paper:
 
 * |citeJuhasAca15|

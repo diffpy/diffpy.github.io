@@ -1,6 +1,6 @@
-.. this page only contains the LICENSE text for DiffPy.CMI
+.. this page only contains the LICENSE text for |diffpycmi|
 
-.. title:: DiffPy.CMI License
+.. title:: |diffpycmi| License
 
 .. literalinclude:: LICENSE.txt
    :language: text

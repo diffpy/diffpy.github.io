@@ -40,6 +40,11 @@ source_suffix = '.rst'
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
+# The reST default prolog, included at the beginning of every source file.
+rst_prolog = """
+.. include:: _includes/substitutions.rst
+"""
+
 # The master toctree document.
 master_doc = 'index'
 
