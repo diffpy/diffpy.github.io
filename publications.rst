@@ -24,7 +24,7 @@ Please cite us if our software has been used in your research.
 
 
 
-Publications using DiffPy-CMI
+Publications using |diffpycmi|
 =============================
 
 The following papers made use of DiffPy developed software for analysis

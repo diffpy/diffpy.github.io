@@ -9,7 +9,7 @@ Sphinx sources for the [diffpy.org][site] web page.
 - [Where to Make Changes](#where-to-make-changes)
   - [Adding Citations](#adding-citations)
     - [Adding Publications that Describe a DiffPy Project (the "Reference" Section)](#reference-section-1)
-    - [Adding Other Publications (the "Publication Using DiffPy-CMI" Section)](#reference-section-2)
+    - [Adding Other Publications (the "Publication Using diffpy.cmi" Section)](#reference-section-2)
 - [New Version of Existing Project](#new-version)
 - [New Project](#publishing-new-project)
 - [Publishing Changes](#publishing-changes)
@@ -107,8 +107,8 @@ you add the reference to the proper section and do so in descending reverse chro
 (i.e., the newest citations should appear at the top of their respective sections).
 
 <a name="reference-section-note">*Note:*</a> In this example, the citation is for a publication 
-which describes a product of the DiffPy-CMI project (namely, PDFgetN3). For publications which 
-describe a component of DiffPy-CMI, we provide a link to download the publication directly from
+which describes a product of the diffpy.cmi project (namely, PDFgetN3). For publications which 
+describe a component of diffpy.cmi, we provide a link to download the publication directly from
 the [diffpy.org][site] website. Here, the link is provided via the `|downloadJuhasJac18|` tag
 which is the identifier for another snippet within [abbreviations.txt](https://github.com/diffpy/diffpy.github.io/blob/source/abbreviations.txt#L294) following the definition
 of `|citeJuhasJac18|`, seen here as:
@@ -130,10 +130,10 @@ placed within `pdfgetx`'s documentation directory and referenced accordingly wit
 
 
 <a name="reference-section-2"></a>
-### Adding Other Publications (the "Publication Using DiffPy-CMI" Section)
+### Adding Other Publications (the "Publication Using diffpy.cmi" Section)
 
-Adding references to publications that do not describe the release/use of a product within the DiffPy-CMI 
-project (e.g., papers which use some component of DiffPy-CMI), we simply provide the usual citation text (with
+Adding references to publications that do not describe the release/use of a product within the diffpy.cmi 
+project (e.g., papers which use some component of diffpy.cmi), we simply provide the usual citation text (with
 appropriate DOI link). To add a citation of this type, refer to the information in [Reference Section](#reference-section-1), but
 disregard everything starting at, and following, the [Note](#reference-section-note).
 

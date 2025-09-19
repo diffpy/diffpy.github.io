@@ -48,4 +48,4 @@ cases, you could use option -n to display the build steps.
    other than system Python (e.g. the Enthought Python Distribution) it
    may be incompatible with the system boost library and the build may
    fail. To resolve the problem, you should rebuild the boost library
-   against Enthought Python and then rebuild all DiffPy-CMI modules.
+   against Enthought Python and then rebuild all diffpy.cmi modules.
