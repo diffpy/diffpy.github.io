@@ -117,7 +117,7 @@ To list and copy example scripts and data to your working directory, type,
 .. code-block:: bash
 
     cmi example list
-    cmi example copy <example_name>
+    cmi example copy <pack_name>/<example_name>
 
 .. admonition:: Example
 
@@ -131,18 +131,22 @@ To list and copy example scripts and data to your working directory, type,
 
     .. code-block:: bash
 
-        ch03NiModelling
-        ch05Fit2Phase
-        ch06RefineCrystalStructureGen
-        ch07StructuralPhaseTransitions
-        ch08NPRefinement
-        ch11ClusterXYZ
+      $ cmi example list
+      core:
+        - linefit
+      pdf:
+        - ch03NiModelling
+        - ch05Fit2Phase
+        - ch06RefineCrystalStructureGen
+        - ch07StructuralPhaseTransitions
+        - ch08NPRefinement
+        - ch11ClusterXYZ
 
     To copy the example for bulk Ni PDF fitting, type,
 
     .. code-block:: bash
 
-        cmi example copy ch03NiModelling
+        cmi example copy pdf/ch03NiModelling
 
     This will copy the example directory ``ch03NiModelling`` to your current working directory. Within this directory exists
     the scripts and data to fit the bulk Ni PDF.
