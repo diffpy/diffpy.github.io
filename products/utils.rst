@@ -18,12 +18,6 @@ diffpy libraries.
 .. figure:: ../images/srmise_screenshot.png
    :align: center
 
-This is an alpha release of SrMise, and the capabilities and documentation of
-the project will evolve.  In particular, the multimodeling API is expected to
-change significantly in a future version.  The DiffPy team encourages
-investigators to use the software even at this early stage, and invites
-feedback and suggestions.
-
 
 Citation
 --------
