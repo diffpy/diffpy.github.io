@@ -75,6 +75,11 @@ Documentation
 
 Version 2.4.0 - Latest
 ----------------------
+
+* `installation instructions <../doc/pdfgetx/2.4.0/install.html>`__
+* `user manual <../doc/pdfgetx/2.4.0/index.html>`__
+* `tutorial files <../doc/pdfgetx/2.4.0/pdfgetxn3-examples.zip>`__
+
 **Added:**
 
 * New ``transformterminationfunctions`` infrastructure to allow non-trivial termination functions
@@ -92,10 +97,6 @@ Please reach out to `<techtransfer@columbia.edu>`_ if you need one of these vers
 
 Version 2.3.0
 -------------
-
-* `installation instructions <../doc/pdfgetx/2.4.0/install.html>`__
-* `user manual <../doc/pdfgetx/2.4.0/index.html>`__
-* `tutorial files <../doc/pdfgetx/2.4.0/pdfgetxn3-examples.zip>`__
 
 **Added:**
 
