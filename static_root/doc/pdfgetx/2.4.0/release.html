@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Release notes &mdash; diffpy.pdfgetx No version found. The correct version will appear in the released version. documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7bacdcf5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=cca77546"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The plotdata program" href="plotdata.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            diffpy.pdfgetx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick-start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">Files used in PDF extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interact.html">Interactive mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotdata.html">The plotdata program</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Release notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">2.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">2.1.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">1.2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">diffpy.pdfgetx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Release notes</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/diffpy/diffpy.pdfgetx/blob/main/docs/source/release.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="release-notes">
+<span id="index-0"></span><h1>Release notes<a class="headerlink" href="#release-notes" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>2.4.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Description of terminationfunctions to docs</p></li>
+<li><p>New <cite>transformterminationfunctions</cite> transformation</p></li>
+<li><p>CLI/CFG <cite>terminationfunctions</cite> options (<cite>step</cite>, <cite>lorch</cite>)</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Build docs using the correct scikit-package script name</p></li>
+<li><p>Reapply the Sphinx dependency <cite>m2r</cite> to <cite>m2r2</cite> fix that seems to have inadvertently been lost</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>2.3.0<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Added Cython build support.</p></li>
+<li><p>Added <cite>.gitattribute</cite> for github release export.</p></li>
+<li><p>Support for Python 3.11, 3.12, 3.13.</p></li>
+<li><p>Use bg-mpl-stylesheets as a style for matplotlib plots.</p></li>
+<li><p>test for the Q-array issue</p></li>
+<li><p>Added instructions in wheels bundle.</p></li>
+<li><p>Added <cite>pdfgetx3 –list-examples</cite> and <cite>pdfgetx3 –example</cite> commands to list available examples and copy example dir into pwd.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>Changed build process. Now build <cite>*.c</cite> sdist and c binary wheels for each platform and python version.</p></li>
+<li><p>Updated <code class="code docutils literal notranslate"><span class="pre">tuneconfig.py</span></code> to use the latest api from matplotlib.</p></li>
+<li><p>Renamed get_atol() to get_atol_from_rtol() in test_pdfgetter.py</p></li>
+<li><p>Standardized checking if a variable is an iterable.</p></li>
+<li><p>Removed <cite>docs/source</cite> directory and makefiles in installation.</p></li>
+<li><p>Changed <cite>twothetazerofit.ipy</cite> to output <cite>.png</cite> files instead of <cite>.pdf`and `.svgz</cite> files.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Refactored code for prefer_nodisplay_backend and suppress warnings.</p></li>
+<li><p>Support scikit-package Level 5 standard (<a class="reference external" href="https://scikit-package.github.io/scikit-package/">https://scikit-package.github.io/scikit-package/</a>).</p></li>
+<li><p>Replaced <code class="code docutils literal notranslate"><span class="pre">setup.py</span></code> with <code class="code docutils literal notranslate"><span class="pre">pyproject.toml</span></code> for releases.</p></li>
+<li><p>Patched issue in kirkland.py that Q-array was being erroneously updated globally by the felectronatq function.</p></li>
+<li><p>Fixed example import errors <cite>diffpy.structure</cite> because of <cite>Structure</cite> deprecation.</p></li>
+<li><p>Fixed tutorial missing image file.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Removed deprecated support for <cite>loadData</cite>, <cite>pdfgetxApplication.processFiles</cite>, <cite>pdfgetxApplication.clearSession</cite>, <cite>pdfgetxApplication.loadData</cite>.</p></li>
+<li><p>Removed unused <cite>.coveragerc</cite>, <cite>.gitarchive.cfg</cite>, <cite>.gitattributes</cite>.</p></li>
+<li><p>Support for Python 2.7, and Python &lt;= 3.10</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">six</span></code>, and other Py2 legacy code</p></li>
+<li><p>Removed pre-commit run in merge-to-main workflow</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Release notes<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+</section>
+<section id="id4">
+<h2>2.2.2<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Changed <cite>self.guifigure.canvas.set_window_title</cite> to
+<cite>self.guifigure.canvas.manager.set_window_title</cite> in
+<cite>tuneconfig()</cite> to satisfy deprecated usage in matplotlib &gt; 3.4</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>2.2.1<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Added new API for accessing intermediate I(Q) plots as properties on
+<cite>PDFGetter</cite> instances via properties following a naming convention of
+<cite>PDFGetter.iq_&lt;i&gt;</cite>, where <cite>i</cite> is a zero‐based index of the intermediate
+I(Q) to be returned. That is, rather than a single property returning an
+array of the I(Q)’s that would then be indexed, users may directly name
+an intermediate I(Q) (say, the first I(Q)) via a statement such as
+<cite>PDFGetter.iq_0</cite>.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Restored previous API behavior of <cite>PDFGetter.iq</cite> returning the I(Q) plot
+of the data. Since there are now multiple I(Q) plots (one after each
+subsequent background subtraction), this property now returns the final
+I(Q) data (i.e., the result of applying all background subtractions).</p></li>
+<li><p>Fixed formatting of authors list on <cite>PDFgetXNS3_manual.pdf</cite> cover page.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>2.2.0<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Support for Python 3.10</p></li>
+<li><p>Support for Python 3.9</p></li>
+<li><p>Unittests for testing CLI functionality.</p></li>
+<li><p>Tutorial example for multiple background subtractions (see
+<cite>diffpy.pdfgetx/docs/examples/Multiple_Background_Subtraction</cite>).</p></li>
+<li><p>New functionality for allowing multiple backgrounds to be subtracted from a
+dataset accessed via using the plural name equivalent of any previously
+singularly named variable (i.e., <cite>bgscale</cite> → <cite>bgscales</cite>,
+<cite>backgroundfile</cite> → <cite>backgroundfiles</cite>, etc.) in both static config files
+(i.e., <cite>*.cfg</cite>) and interactive plotting sessions. Each set of parameters
+corresponding to a given background subtraction can also be manipulated by
+a set of sliders present in the <cite>tuneconfig</cite> window of an interactive shell
+session. In total, the multiple background subtraction functionality should
+work identically to the previous single background subtraction functionality
+<em>except</em> that the multiple background files and initial scale values <em>cannot</em>
+be specified through a pure CLI command (i.e., it must be specified either in
+a config file or added/modified during an interactive plotting session).</p></li>
+<li><p>Added extra test cases for testing the <cite>PDFGetter</cite> class.</p></li>
+<li><p>Added extra test cases for testing the <cite>PDFConfig</cite> class.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>Changed <cite>python</cite> versions specified in requirements.txt files to be in the range
+of the respective minor version rather than fixed to the Python X.Y.0 version.</p></li>
+<li><p>Python version support policy now follows NEP 29 &lt;<a class="reference external" href="https://numpy.org/neps/nep-0029-deprecation_policy.html">https://numpy.org/neps/nep-0029-deprecation_policy.html</a>&gt;.</p></li>
+<li><p>Changed versions used in <cite>conda-recipe/build.sh</cite> to reflect currently supported
+Python versions.</p></li>
+<li><p>Changed Sphinx dependency <cite>m2r</cite> to <cite>m2r2</cite>.</p></li>
+<li><p>Added Connor J. Bracy and Zach Thatcher to contributors in <cite>AUTHORS.rst</cite>.</p></li>
+<li><p>Added Connor J. Bracy to internal authors list and <cite>PDFgetXNS3_manual.pdf</cite>.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Removed support for Python 3.5 and 3.6.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>2.1.2<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Fixed the command provided to the users in the installation instructions which
+incorrectly instructed them to setup a Python environment in which <cite>pdfgetx</cite>
+could be installed by using the flag <cite>–python=3.8</cite> to the correct usage of
+this flag as <cite>python=3.8</cite>.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>2.1.1<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Support for Python 3.8</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>2.1.0<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>New mode <cite>sas</cite> for processing Small Angle Scattering data and for using custom
+scattering factors.</p></li>
+<li><p><cite>qmax-pushes-qmin</cite> coupling of sliders in the <cite>tuneconfig</cite> tool.</p></li>
+<li><p>New program <cite>pdfgets3</cite> and IPython magic <cite>%pdfgets3</cite>.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>Software distribution format to a universal Python wheel.</p></li>
+<li><p><cite>tuneconfig</cite> dialog to access full Q-range with all <cite>qmin</cite>, <cite>qmax</cite>, and <cite>qmaxinst</cite>
+sliders. Increased range for the <cite>rpoly</cite> slider.</p></li>
+</ul>
+<p><strong>Deprecated:</strong></p>
+<ul class="simple">
+<li><p>Software distribution in setuptools egg package.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Removed support for Python 3.4.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Support backslash in the <cite>–find</cite> option path argument on Windows.
+Both forward and back slashes are allowed on Windows, but other
+platforms must use forward slash.</p></li>
+<li><p>Recipe for platform-dependent Anaconda package.</p></li>
+<li><p>Bogus test failure when installed in symlinked directory.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>2.0.0<a class="headerlink" href="#id10" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>New mode <cite>neutron</cite> for processing constant-wavelength neutron scattering data.</p></li>
+<li><p>Correction for an offset of diffractometer zero angle.</p></li>
+<li><p>Configuration parameter <cite>twothetazero</cite> and command-line option <cite>–twothetazero</cite>
+for position of the actual zero angle in diffractometer degrees.</p></li>
+<li><p>New program <cite>pdfgetn3</cite> and IPython magic <cite>%pdfgetn3</cite>.</p></li>
+<li><p>Separate configuration file <cite>pdfgetn3.cfg</cite> for the <cite>pdfgetn3</cite> program.</p></li>
+<li><p>New sub-package <cite>diffpy.pdfgetx.apps</cite> for entry points to all programs.</p></li>
+<li><p>Table of electron scattering factors from E. J. Kirkland, Advanced Computing in
+Electron Microscopy.</p></li>
+<li><p>The <cite>+</cite> operator for additive pattern groups when matching input files with
+<cite>pdfgetx3 –find</cite>.</p></li>
+<li><p>An optional slash-containing entry, e.g., <cite>dir/</cite>, to set the search path for
+<cite>pdfgetx3 –find</cite>. Each pattern group may have one path entry which affects
+the current and subsequent pattern groups. Pattern groups that have only the
+path entry reuse the previous file patterns, for example, <cite>dir1/ .dat$ + dir2/ + dir3/</cite>.</p></li>
+<li><p>The <cite>dotfiles</cite> flag argument to <cite>functs.findfiles</cite> to also find dot-starting files
+without an explicit pattern.</p></li>
+<li><p>Support for Python 3.7.</p></li>
+<li><p>Tutorial examples for constant-wavelength neutron diffraction data.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>Initialization arguments of <cite>PDFConfig</cite> to set initial configuration values.</p></li>
+<li><p><cite>path</cite> argument of <cite>functs.findfiles</cite> to give one search path instead of a list of paths.</p></li>
+<li><p><cite>pdfgetx3 –find</cite> to search only the current directory and stop searching in <cite>–datapath</cite>.</p></li>
+<li><p>Improved PDF accuracy by removing repeated Q-grid interpolation.</p></li>
+<li><p>Handling of dot files by <cite>pdfgetx3 –find</cite> and the <cite>functs.findfiles</cite> function. The
+dotfiles are by default ignored unless explicitly selected by a <cite>“^.”</cite> pattern.</p></li>
+<li><p>Return type of <cite>functs.findfiles</cite> from IPython <cite>SList</cite> to a simple <cite>list</cite>.</p></li>
+<li><p>Rename camel-case interactive functions to lowercase, i.e., <cite>loaddata</cite>, <cite>processfiles</cite>, <cite>clearsession</cite>.</p></li>
+<li><p>Use <cite>config.datapath</cite> lookup in <cite>processfiles(filename)</cite>.</p></li>
+</ul>
+<p><strong>Deprecated:</strong></p>
+<ul class="simple">
+<li><p>Function <cite>cromermann.felectronatq</cite> for electron scattering factors calculation using
+Mott-Bethe approximate formula.</p></li>
+<li><p>IPython extension module <cite>diffpy.pdfgetx.ipy_pdfgetx3</cite>. Use <cite>diffpy.pdfgetx.ipy_magics</cite> instead.</p></li>
+<li><p>Camel-case functions <cite>loadData</cite>, <cite>processFiles</cite>, <cite>clearSession</cite>.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Support for Python 2.6.</p></li>
+<li><p>Processing of environment variable <cite>PDFGETX3PATH</cite>.</p></li>
+<li><p>Support for IPython 0.x.</p></li>
+<li><p>Obsolete variable <cite>__gitsha__</cite> from the <cite>version</cite> module.</p></li>
+<li><p>Processing of command-line options in <cite>PDFConfig</cite> class.</p></li>
+<li><p>Implicit loading of configuration files in <cite>PDFConfig</cite> instantiation.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Import of all objects from <cite>matplotlib.pyplot</cite> into an interactive session started by <cite>plotdata</cite>.</p></li>
+<li><p>Inaccurate G interpolation when <cite>rstep</cite> is comparable to <cite>pi / qmax</cite>.</p></li>
+<li><p>Lone anchor patterns <cite>^</cite>, <cite>$</cite> to match everything.</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>1.2<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Support for Python 3.4, 3.5, 3.6 in addition to Python 2.6 and 2.7.</p></li>
+<li><p>Support for IPython 5.0 &lt;<a class="reference external" href="https://ipython.org">https://ipython.org</a>&gt; with preserved compatibility with
+IPython 0.10 and later.</p></li>
+<li><p>Support for <cite>matplotlib 2.0 &lt;https://matplotlib.org&gt;</cite>.</p></li>
+<li><p>New option <cite>–log=LOG</cite> for the <cite>plotdata</cite> program to set logarithmic scale for either
+of <em>x</em> or <em>y</em> axis. The <cite>plotdata()</cite> function learnt a new <cite>log</cite> argument with the same purpose.</p></li>
+<li><p>New argument <cite>ax</cite> for the <cite>plotdata()</cite> function that select a specific matplotlib axis for plotting.</p></li>
+<li><p>Support for Unicode filenames and values in the <cite>config</cite> interactive variable.</p></li>
+<li><p>Processing of parentheses and fractional stoichiometries in chemical formulas as in
+<cite>Pb (Ti Zr)1/2 O3</cite>.</p></li>
+<li><p>Explanatory error message when PDFgetX3 was installed for unsupported Python.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>The egg package file was enhanced to support all Python versions. The software is now
+distributed in a single egg rather than multiple eggs per each Python version.</p></li>
+<li><p>PDFgetX3 option <cite>–force</cite> to take a boolean argument (<cite>yes</cite>, <cite>no</cite>, <cite>true</cite>, etc.) or
+<cite>once</cite>. The configuration parameter <cite>force</cite> can be likewise set to a bool or to a string
+<cite>“once”</cite>. This enables a safer one-time overwrite of existing output files.</p></li>
+<li><p>Plot labels to use a proper Unicode “Å” (Ångström) symbols. The “Å” symbol is also used within
+units in output files.</p></li>
+<li><p>The <cite>usecols</cite> argument of the <cite>loadData()</cite> function to also accept scalars, open-end <cite>slice</cite>
+objects and string-denoted slices such as <cite>“1:3”</cite> or <cite>“1:”</cite>.</p></li>
+<li><p>The <cite>plotdata</cite> program and <cite>plotdata()</cite> function to accept open-end slices for the y-columns selection.</p></li>
+<li><p>The IPython magic function <cite>%pdfgetx3</cite> to set the <cite>_exit_code</cite> variable as do generic shell commands run from IPython.</p></li>
+<li><p>Inline documentation to use NumPy-style Napoleon format, which is human readable and can be included in the manual.</p></li>
+<li><p>Release scripts to build software package bundles and documentation in binary-reproducible way.</p></li>
+</ul>
+<p><strong>Deprecated:</strong></p>
+<ul class="simple">
+<li><p>Compatibility with Python 2.6.</p></li>
+<li><p>Support for IPython 0.x.</p></li>
+<li><p>Variable <cite>__gitsha__</cite> in the <cite>version</cite> module which was renamed to <cite>__git_commit__</cite>.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>The <cite>hold</cite> argument of the <cite>plotdata()</cite> function, because it was deprecated in matplotlib.</p></li>
+<li><p>Support for multiple x-columns in <cite>plotdata</cite> program and <cite>plotdata()</cite> function.</p></li>
+<li><p>Import of all objects from <cite>numpy</cite> module into the interactive session. NumPy is available under the <cite>np</cite> name instead.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Avoid duplicate “.gr.gr” extension when <cite>pdfgetx3</cite> is run with option <cite>–output=f.gr</cite>.</p></li>
+<li><p>Crash on loading custom configuration section from a local file, when that section is missing in global configuration.</p></li>
+<li><p>Missing checkbox in the <cite>tuneconfig</cite> dialog caused by matplotlib bug.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plotdata.html" class="btn btn-neutral float-left" title="The plotdata program" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, The Trustees of Columbia University in the City of New York.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
