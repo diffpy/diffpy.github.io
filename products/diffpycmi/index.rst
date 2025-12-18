@@ -23,191 +23,52 @@ community.
 
 Installation
 ============
-To install ``diffpy.cmi``, create a new conda environment or activate an existing environment and install the package from the conda-forge channel.
-
-.. code-block:: bash
-
-    conda create -n diffpy.cmi-env
-    conda install -c conda-forge diffpy.cmi
-    conda activate diffpy.cmi-env
-
-To confirm that the installation was successful, type
-
-.. code-block:: bash
-
-        cmi --version
-
-The output should print the latest version.
-
-If the above does not work, you can use ``pip`` to download and install the latest release from
-`Python Package Index <https://pypi.python.org>`_.
-To install using ``pip`` into your ``diffpy.cmi_env`` environment, type
-
-.. code-block:: bash
-
-        pip install diffpy.cmi
+For the most up-to-date installation instructions, please refer to the
+`diffpy.cmi README page on GitHub <https://github.com/diffpy/diffpy.cmi>`_.
 
 Pack and Profile Installation
------------------------------
+=============================
 
-Use the `cmi` command-line interface to install and manage modular optional dependencies, known as `packs`,
-and to configure or execute user-defined workflows that combine multiple packs with optional post-installation steps,
-known as `profiles`. To use `cmi`, you can run the following example commands:
+Diffpy.cmi is designed to be modular and extensible through the use of optional
+dependencies known as `packs`. Additionally, users can define custom workflows
+that combine multiple packs with optional post-installation steps, known as `profiles`.
 
-Show available commands and options with,
+For more information on packs and profiles please refer to the
+`diffpy.cmi overview page <https://www.diffpy.org/diffpy.cmi/overview.html>`_.
 
-.. code-block:: bash
-
-    cmi -h
-
-List installed and available packs and profiles,
-
-.. code-block:: bash
-
-    cmi pack list
-    cmi profile list
-
-Show details of a specific pack or profile,
-
-.. code-block:: bash
-
-    cmi pack show <pack_name>
-    cmi profile show <profile_name>
-
-Install a pack or profile (by name or path),
-
-.. code-block:: bash
-
-    cmi install <pack_name>
-    cmi install <profile_name>
-    cmi install </absolute/path/to/profile>
-
-.. admonition:: Example installation
-
-    For example, to install the pack for PDF modeling, type,
-
-    .. code-block:: bash
-
-        cmi install pdf
-
-    To check to see if the pack was installed, type,
-
-    .. code-block:: bash
-
-        cmi pack list
-
-    The output should look something like this,
-
-    .. code-block:: bash
-
-        Installed:
-            - core
-            - pdf
-        Available to install:
-            - plotting
-            - tests
-            - docs
-
-
-Download examples
------------------
-
-To list and copy example scripts and data to your working directory, type,
-
-.. code-block:: bash
-
-    cmi example list
-    cmi example copy <pack_name>/<example_name>
-
-.. admonition:: Example
-
-    For example, to see the example scripts for PDF fitting, type,
-
-    .. code-block:: bash
-
-        cmi example list
-
-    The output should look something like this,
-
-    .. code-block:: bash
-
-      $ cmi example list
-      core:
-        - linefit
-      pdf:
-        - ch03NiModelling
-        - ch05Fit2Phase
-        - ch06RefineCrystalStructureGen
-        - ch07StructuralPhaseTransitions
-        - ch08NPRefinement
-        - ch11ClusterXYZ
-
-    To copy the example for bulk Ni PDF fitting, type,
-
-    .. code-block:: bash
-
-        cmi example copy pdf/ch03NiModelling
-
-    This will copy the example directory ``ch03NiModelling`` to your current working directory. Within this directory exists
-    the scripts and data to fit the bulk Ni PDF.
-
-    You can then run the fitting script with,
-
-    .. code-block:: bash
-
-        python ch03NiModelling/solutions/diffpy-cmi/fitBulkNi.py
-
-What next?
-==========
-
-* `Explore CMI exchange
-  <https://github.com/diffpy/cmi_exchange#cmi-exchange>`__,
-  our collection of example scripts and tutorials
-
-* :doc:`Get tips on using the CMI exchange <cmi_exchange>`
-
-* :doc:`Contribute code <contributecode>`
+For information how to install packs and profiles, please refer to the
+`diffpy.cmi command-line interface page <https://www.diffpy.org/diffpy.cmi/cli-commands.html#cmi-install-command>`_.
 
 
 Tutorials
 =========
 
-* A step-by-step tutorial on using diffpy.cmi for PDF analysis is available at the documentation site for
-  ``diffpy.cmi`` -- https://www.diffpy.org/diffpy.cmi/tutorials/index.html.
+Many examples exist for diffpy.cmi. Using the command-line interface (CLI), these
+examples can be copied directly to your computer.
+For information on how to use the command-line interface to access the examples,
+please refer to the 
+`diffpy.cmi CLI documentation <https://www.diffpy.org/diffpy.cmi/cli-commands.html#cmi-copy-command>`_.
+Additionally, here are some direct links to other tutorials and examples,
+
+* A step-by-step tutorial on using diffpy.cmi to `fit a nickel PDF <https://www.diffpy.org/diffpy.cmi/tutorials/pdf.html#ni-pdf-fitting-tutorial>`_.
 
 * Worked examples and experimental data from the book *Atomic Pair Distribution Function Analysis: A Primer* are freely available at our
   `GitHub repository <https://github.com/Billingegroup/pdfttp_data>`_.
 
-* ADD2019 school and conference --
+* Worked examples from ADD2019 school and conference --
   https://github.com/diffpy/add2019-diffpy-cmi.
 
 Documentation
 =============
 
-Documentation for packages developed by the DiffPy team is available
-at the links below.
-
-* |doc-diffpy.srfit|_ -- configuration and control of data-fitting problems
-* |doc-diffpy.srreal|_ -- calculators for pair distribution function, bond
-  valence sums, etc.
-* |doc-diffpy.structure|_ -- light-weight representation of crystal
-  structures
-* |doc-pyobjcryst|_ -- Python interface to ObjCryst++ crystallographic
-  library
-* |doc-diffpy.utils|_ -- general purpose utilities for the diffpy libraries
-* |doc-libdiffpy|_ -- C++ library for calculation of PDF and other real-space
-  quantities
-
-See :ref:`diffpy.cmi contents <contents>` for a complete list
-of open-source libraries that are included in |diffpycmi| and
-their respective project pages.
+Documentation for diffpy.cmi is available at https://www.diffpy.org/diffpy.cmi. 
 
 
 Reference
 =========
 
 If you use this software in a research work which leads to publication,
-we ask you to acknowledge the use of |diffpycmi| by citing the following
+we ask you to acknowledge the use of diffpy.cmi by citing the following
 paper:
 
 * |citeJuhasAca15|
