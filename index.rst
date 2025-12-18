@@ -30,17 +30,14 @@ diffraction analysis and the study of the atomic structure of materials.
 
 .. include:: abbreviations.txt
 
-DiffPy is the home of the |DiffPyCMI|
-Complex Modeling framework, a modular software framework for robust and extensible
-modeling of diffraction data.  We welcome contributions to this project from the
-community.
 
-The project is currently centered at `Brookhaven National Laboratory`_, a US `Department of
-Energy, Office of Basic Energy Sciences`_ funded laboratory.
+The project is currently maintained by the Billinge Group and DiffPy community members.
+
 Many parts of the code were developed under the diffraction part of the DANSE_ project,
 a software construction project funded by the `National Science Foundation`_ to provide
-data analysis software tools for neutron scattering experiments.  This project was previously
-centered at Columbia University and, before that, Michigan State University.
+data analysis software tools for neutron scattering experiments. The DiffPy project has 
+been a collaborative effort, centered in many institutions, including Brookhaven National
+Laboratory, Columbia University, and Michigan State University.
 
 
 
@@ -53,17 +50,30 @@ centered at Columbia University and, before that, Michigan State University.
 
 .. _brookhaven national laboratory: https://www.bnl.gov/
 
-.. image:: images/blank1x1.png
-   :align: left
-   :height: 10
+About DiffPy
+----------------
 
-.. figure:: logos/BNL_logo.jpg
-   :align: left
-   :target: `Brookhaven National Laboratory`_
-
-.. figure:: logos/DOE_logo.png
+.. image:: images/pdfprimer.png
    :align: right
-   :target: `Department of Energy, Office of Basic Energy Sciences`_
+   :width: 200
+
+
+DiffPy is the home of a number of software products for atomic structure
+analysis. A large portion of the DiffPy project consists of tools for atomic pair
+distribution function (PDF) analysis. For detailed instructions
+and in-depth examples of modeling Pair Distribution Function data, we highly recommend the book,
+
+
+*Atomic Pair Distribution Function Analysis: A Primer* by Simon J. L. Billinge and Kirsten M. Ø. Jensen (Oxford University Press, 2023).
+
+
+To purchase this book, please visit `this link <https://www.amazon.com/Atomic-Pair-Distribution-Function-Analysis/dp/0198885806>`_.
+
+The DiffPy project is also home to many other software tools for analysis of scientific data. 
+One of which is diffpy.cmi, a general-purpose
+complex modeling infrastructure for analysis of *any* type of data.
+For more information about diffpy.cmi, please visit the
+`diffpy.cmi documentation <https://www.diffpy.org/diffpy.cmi>`_.
 
 .. toctree::
    :hidden:
@@ -86,3 +96,4 @@ centered at Columbia University and, before that, Michigan State University.
    products/SrMise
    products/mPDF
    products/xinterpdf
+   products/utils
