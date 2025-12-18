@@ -6,7 +6,7 @@ diffpy.pdfgui
 #############
 
 
-For users who do not have the expertise or necessity for command line analysis, PDFgui is
+For users who do not have the expertise or necessity for command line analysis, diffpy.pdfgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
 capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data
@@ -43,30 +43,27 @@ To run diffpy.pdfgui after installation, type the command::
 
    pdfgui
 
+Tutorials
+=========
 
-Documentation and help
-======================
+Search "PDFgui" on YouTube for some video tutorials on how to use diffpy.pdfgui.
+
+For in-depth help in using diffpy.pdfgui to solve scientific problems please
+see the book "Atomic Pair Distribution Function Analysis: A primer" by
+Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
+published by Oxford University Press. Data for the worked examples can
+be found here: https://github.com/Billingegroup/pdfttp_data.
+
+Tutorial files are available from `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
+
+Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
+
+Documentation
+=============
 
 Documentation for diffpy.pdfgui is available at https://www.diffpy.org/diffpy.pdfgui.
-Additional help resources include:
-
-*  The user manual is available in `HTML <../doc/pdfgui/index.html>`__
-   and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
-
-*  Search "PDFgui" on YouTube for some video tutorials on how to use
-   PDFgui.
-
-*  For in-depth help in using PDFgui to solve scientific problems please
-   see the book "Atomic Pair Distribution Function Analysis: A primer" by
-   Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
-   published by Oxford University Press. Data for the worked examples can
-   be found here: https://github.com/Billingegroup/pdfttp_data
-
-*  Tutorial files are available from
-   `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
-
-*  Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
-
+Additionally, a user manual is available in `HTML <../doc/pdfgui/index.html>`__
+and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
 
 Legacy versions
 ===============
