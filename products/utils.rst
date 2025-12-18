@@ -1,5 +1,5 @@
 ############
-Diffpy.utils
+diffpy.utils
 ############
 
 .. include:: ../abbreviations.txt
