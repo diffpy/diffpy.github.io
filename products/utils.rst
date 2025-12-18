@@ -1,6 +1,6 @@
-##########
-Utils
-##########
+############
+Diffpy.utils
+############
 
 .. include:: ../abbreviations.txt
 
@@ -13,11 +13,6 @@ data files, ``DiffractionObjects`` that allow you to do algebra on diffraction p
 tools for better capture and propagation of metadata,
 diffraction-friendly interpolation routines, as well as some other tools used across
 diffpy libraries.
-
-
-.. figure:: ../images/srmise_screenshot.png
-   :align: center
-
 
 Citation
 --------
@@ -117,8 +112,8 @@ For more information on diffpy.utils please visit the project `web-page <https:/
 What next?
 ============
 
-Explore the SrMise
-`tutorial <https://www.diffpy.org/diffpy.utils/>`_!
+Explore the diffpy.utils
+`tutorials <https://www.diffpy.org/diffpy.utils/>`_!
 
 .. toctree::
    :hidden:
