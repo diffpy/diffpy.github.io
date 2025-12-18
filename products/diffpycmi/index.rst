@@ -23,7 +23,7 @@ community.
 
 Installation
 ============
-For the most up-to-date installation instructions, please refer to the
+For the most up-to-date installation instructions, please refer to the installation section of the
 `diffpy.cmi README page on GitHub <https://github.com/diffpy/diffpy.cmi>`_.
 
 Pack and Profile Installation
