@@ -1,6 +1,7 @@
 _build
 *.bak
 *~
+.DS_Store
 
 #eclipse
 .project
