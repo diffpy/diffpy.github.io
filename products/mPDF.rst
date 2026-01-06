@@ -28,9 +28,8 @@ Reference
 
 If you use diffpy.mpdf in scientific research, please acknowledge it by citing:
 
-   B. Frandsen, `diffpy.mpdf: a Python package for magnetic pair distribution function analysis
-   <https://github.com/FrandsenGroup/diffpy.mpdf>`_, GitHub repository.
-
+   Frandsen et al., "diffpy.mpdf: open-source software for magnetic pair distribution function analysis", 
+   J. Appl. Cryst. (2022) 55, 1377-1382. https://doi.org/10.1107/S1600576722007257
 
 Installation
 ============
