@@ -15,7 +15,7 @@ and comes with built in graphical and structure visualization capabilities.
 .. figure:: ../images/PDFgui_screenshot_small.png
    :align: center
 
-   Screen-shot of PDFgui during a refinement of multiple data-sets
+   Screen-shot of diffpy.pdfgui during a refinement of multiple data-sets
 
 
 Reference
@@ -54,16 +54,12 @@ Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
 published by Oxford University Press. Data for the worked examples can
 be found here: https://github.com/Billingegroup/pdfttp_data.
 
-Tutorial files are available from `pdfgui-tutorial.zip <../doc/pdfgui/pdfgui-tutorial.zip>`__.
-
 Please, join the :doc:`community forum <../community>` for tips, tricks, and feedback.
 
 Documentation
 =============
 
 Documentation for diffpy.pdfgui is available at https://www.diffpy.org/diffpy.pdfgui.
-Additionally, a user manual is available in `HTML <../doc/pdfgui/index.html>`__
-and `PDF <../doc/pdfgui/pdfgui.pdf>`__ formats.
 
 Legacy versions
 ===============

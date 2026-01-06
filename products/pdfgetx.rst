@@ -213,3 +213,8 @@ For publications that use this software to process neutron
 diffraction data we ask you to also cite:
 
 * |citeJuhasJac18|
+
+For publication that use this software to process small-angle
+scattering data we ask you to also cite:
+
+* |citeLiuJac20|

@@ -12,25 +12,30 @@ in incident flux, for example. diffpy.morph will do its best to correct
 for these benign effects before computing and plotting a difference
 curve.
 
-One dataset is identified as the "target" and the second is "morphed"
-by "stretching" (changing the x-axis to simulate a uniform 
-expansion), "smearing" (broadening peaks through a uniform convolution),
-and "scaling" (self-explanatory). diffpy.morph will vary
-amplitude of morphing transformations to obtain the best fit between
-morphed and target datasets, then plot them along with the difference curve
-plotted below.
+One dataset is designated as the "target", while the second is morphed.
+Such morphs include stretching (modifying the x-axis to simulate uniform expansion),
+smearing (broadening peaks via uniform convolution), and scaling. In addition
+to these operations, diffpy.morph offers other morphing transformations, though
+stretching, smearing, and scaling are the most commonly used. The software
+automatically varies the amplitudes of the selected transformations to obtain
+the best fit between the morphed and target datasets, and then plots both
+datasets along with the resulting difference curve shown below.
 
-There are also a few other morphing transformations in the program.
-
-Note that diffpy.morph should work on other spectra, not just pair distribution functions (PDFs).
+Note that diffpy.morph works on other spectra, not just pair distribution functions (PDFs).
 
 .. diffpy.morph will soon be included in :doc:`xPDFsuite <xPDFsuite>`, a powerful end-to-end software for X-ray PDF analysis. xPDFsuite is designed for flexible, high throughput PDF analyses and contains many features for interrogating, comparing, and modeling data as well as simply doing data reduction.
 
-.. figure:: ../images/pdfmorph.png
+.. figure:: ../images/morph.png
 	:align: center
 
-	diffpy.morph transformation techniques (scale, smear, and stretch)
-	applied sequentially to a PDF from NaCl sample
+	diffpy.morph transformation techniques applied to PDFs of IrTe\ :sub:`2` doped with
+	different atomic species at different temperatures.
+	The left column (a, b, and c) shows the unmorphed PDFs at 10K (blue) and 300K (red) and 
+	their corresponding difference curves. The right column (d, e, and f) shows the same PDFs
+	after applying the stretch, smear, and scale transformations to the 10K PDFs. No phase transition
+	is observed for PDFs in d and e as the difference curves are flat (low R\ :sub:`w`). 
+	However, a large difference curve (high R\ :sub:`w`) is observed in
+	f, signifying a structural phase transition between 10K and 300K.
 
 
 Installation

@@ -20,6 +20,9 @@ diffractometers before using PDFgetX3 to obtain PDFs. The app currently
 carries out an absorption correction assuming a parallel beam capillary 
 geometry which is the most common geometry for lab PDF measurements.
 
+.. figure:: ../images/labpdfproc.png
+	:align: center
+
 Installation
 ============
 

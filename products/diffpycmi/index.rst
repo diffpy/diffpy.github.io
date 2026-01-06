@@ -52,7 +52,7 @@ Additionally, here are some direct links to other tutorials and examples,
 
 * A step-by-step tutorial on using diffpy.cmi to `fit a nickel PDF <https://www.diffpy.org/diffpy.cmi/tutorials/pdf.html#ni-pdf-fitting-tutorial>`_.
 
-* Worked examples and experimental data from the book *Atomic Pair Distribution Function Analysis: A Primer* are freely available at our
+* Examples and experimental data from the book *Atomic Pair Distribution Function Analysis: A Primer* are freely available at our
   `GitHub repository <https://github.com/Billingegroup/pdfttp_data>`_.
 
 * Worked examples from ADD2019 school and conference --
