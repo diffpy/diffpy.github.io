@@ -3,21 +3,37 @@
 References
 ==========
 
-The following papers in the literature describe the DiffPy products.
-Please cite us if our software has been used in your research.
+The following publications describe DiffPy software packages.  
+Please cite the appropriate papers if you use these tools in your research.
+For other DiffPy packages not listed here, please refer to the respective
+`GitHub repository <https://github.com/diffpy>`_ for any relevant publications to cite.
 
-* |citeLiuJac20|
+**diffpy.cmi**  
 
-* |citeJuhasJac18|
+|citeJuhasAca15|
 
-* |citeShiJac18|
+**diffpy.pdfgui, diffpy.pdffit2**
 
-* |citeJuhasAca15|
+|citeFarrowJpcm07|
 
-* |citeGranlundAca15|
+**PDFgetX3, PDFgetN3** 
 
-* |citeJuhasJac13|
+|citeJuhasJac13|
 
-* |citeFarrowJpcm07|
+|citeJuhasJac18|
 
-* |citeProffenJac99|
+**diffpy.srmise**
+
+|citeGranlundAca15|
+
+**PDFfit**
+
+|citeProffenJac99|
+
+**sasPDF**
+
+|citeLiuJac20|
+
+**xINTERPDF**
+
+|citeShiJac18|
