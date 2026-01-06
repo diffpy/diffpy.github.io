@@ -5,17 +5,6 @@
 
 .. _home:
 
-.. raw:: html
-
-   <strong>
-   Please update your PDFgui to PDFgui v2.0, the first Python 3 version of the software (May 10, 2023)
-   </strong>
-   &nbsp;
-   <a href="products/pdfgui.html" class="btn btn-large btn-success btn-flat">Get PDFgui v2.0</a>
-   &nbsp;
-   <a href="acknowledgements.html">Credits</a></p>
-
-
 
 DiffPy - Atomic Structure Analysis in Python
 ============================================
