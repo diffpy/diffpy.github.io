@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>diffpy.pdfgetx.plotdata &mdash; diffpy.pdfgetx No version found. The correct version will appear in the released version. documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7bacdcf5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=cca77546"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            diffpy.pdfgetx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick-start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files.html">Files used in PDF extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interact.html">Interactive mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../options.html">Options and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../plotdata.html">The plotdata program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">diffpy.pdfgetx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">diffpy.pdfgetx.plotdata</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for diffpy.pdfgetx.plotdata</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">##############################################################################</span>
+<span class="c1">#</span>
+<span class="c1"># diffpy.pdfgetx    by DANSE Diffraction group</span>
+<span class="c1">#                   Simon J. L. Billinge</span>
+<span class="c1">#                   (c) 2008 Trustees of the Columbia University</span>
+<span class="c1">#                   in the City of New York.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># File coded by:    Pavol Juhas</span>
+<span class="c1">#</span>
+<span class="c1"># See AUTHORS.rst for a list of people who contributed.</span>
+<span class="c1"># See LICENSENOTICE.rst for license information.</span>
+<span class="c1">#</span>
+<span class="c1">##############################################################################</span>
+<span class="sd">&quot;&quot;&quot;Program for quick plotting of text data files.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.log</span><span class="w"> </span><span class="kn">import</span> <span class="n">plog</span>
+
+<span class="c1"># Constants ------------------------------------------------------------------</span>
+
+<span class="n">_PLOTDATA_BANNER</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">Use &quot;plotdata&quot; for more plots and &quot;findfiles&quot; to generate file names.</span>
+<span class="s2">See &quot;filenames&quot; for the current data files.</span>
+
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Functions ------------------------------------------------------------------</span>
+
+
+<div class="viewcode-block" id="plotdata">
+<a class="viewcode-back" href="../../../interact.html#diffpy.pdfgetx.plotdata.plotdata">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">plotdata</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot one or more text data files.</span>
+
+<span class="sd">    The files are searched for data blocks which have enough columns</span>
+<span class="sd">    to satisfy both `x` and `y` selectors of the plotted data.  This</span>
+<span class="sd">    may result in an empty plot when file has none wide-enough data</span>
+<span class="sd">    block (e.g., when ``y=100``).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filenames : str or an iterable of string file names</span>
+<span class="sd">        One or more text data files to be plotted.</span>
+<span class="sd">    style : str</span>
+<span class="sd">        Optional style argument for the matplotlib |plot| function.</span>
+<span class="sd">    x : int, str, or iterable, optional</span>
+<span class="sd">        The column to be used for the x data.  This can be a zero-based</span>
+<span class="sd">        index of the desired column or a column name from data header.</span>
+<span class="sd">        A special symbol &quot;.&quot; can be used for a sequential data index.</span>
+<span class="sd">        When not specified, use the first column.</span>
+<span class="sd">    y : int, str, iterable, or slice, optional</span>
+<span class="sd">        One or more columns to be used for the y data.  This can be</span>
+<span class="sd">        a single zero-based index of the desired column or an iterable</span>
+<span class="sd">        of several indices.  The `y` value can be also a string which</span>
+<span class="sd">        is split at commas and converted to integers, column names</span>
+<span class="sd">        or slice objects, e.g. &quot;0,sine,4:7&quot;.  The `slice` instances</span>
+<span class="sd">        are applied to the entire data block from each loaded file.</span>
+<span class="sd">        Use the second column when not specified.</span>
+<span class="sd">    log : {&#39;x&#39;, &#39;y&#39;}, optional</span>
+<span class="sd">        Set logarithmic scaling for the specified axis and linear scaling</span>
+<span class="sd">        for all others.  For example, ``log=&quot;y&quot;`` applies linear scaling</span>
+<span class="sd">        to the x-axis and logarithmic to the y-axis.  Keep the current</span>
+<span class="sd">        axis scaling when not specified.</span>
+<span class="sd">    ax : matplotlib.axes.Axes, optional</span>
+<span class="sd">        The axes to plot to.  The plotting will be performed using the</span>
+<span class="sd">        ``ax.plot`` method.  The default is ``pyplot.gca()``.</span>
+<span class="sd">    kwargs : misc, optional</span>
+<span class="sd">        Keyword arguments for the matplotlib |plot| function.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lines : list</span>
+<span class="sd">        The matplotlib |Line2D| objects added to the current axis.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    diffpy.pdfgetx.loaddata</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">filenames</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filenames</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">log</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">log</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;xy&quot;</span><span class="p">):</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;log argument may only contain the &#39;x&#39; or &#39;y&#39; characters.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">filenames</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rv</span>
+    <span class="n">xydatasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">_loadplotdata</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">]</span>
+    <span class="n">linelabels</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">]</span>
+    <span class="c1"># import pyplot which starts backend only when unavoidable</span>
+    <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">bg_mpl_stylesheets.styles</span><span class="w"> </span><span class="kn">import</span> <span class="n">all_styles</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">all_styles</span><span class="p">[</span><span class="s2">&quot;bg-style&quot;</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">pargs</span><span class="p">,</span> <span class="n">plabel</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">xydatasets</span><span class="p">,</span> <span class="n">linelabels</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pargs</span> <span class="o">+=</span> <span class="p">(</span><span class="n">style</span><span class="p">,)</span>
+        <span class="n">rv</span> <span class="o">+=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">pargs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">plabel</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">log</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">xscale</span> <span class="o">=</span> <span class="s2">&quot;log&quot;</span> <span class="k">if</span> <span class="s2">&quot;x&quot;</span> <span class="ow">in</span> <span class="n">log</span> <span class="k">else</span> <span class="s2">&quot;linear&quot;</span>
+        <span class="n">yscale</span> <span class="o">=</span> <span class="s2">&quot;log&quot;</span> <span class="k">if</span> <span class="s2">&quot;y&quot;</span> <span class="ow">in</span> <span class="n">log</span> <span class="k">else</span> <span class="s2">&quot;linear&quot;</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xscale</span><span class="o">=</span><span class="n">xscale</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="n">yscale</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The entry point for the &quot;plotdata&quot; application.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    args : list of strings, optional</span>
+<span class="sd">        Command line arguments for the &quot;plotdata&quot; program.</span>
+<span class="sd">        When not specified, use ``sys.argv[1:]``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    exitcode : int</span>
+<span class="sd">        The shell exit code of the &quot;plotdata&quot; program:</span>
+
+<span class="sd">        =   ============================================</span>
+<span class="sd">        0   successful run</span>
+<span class="sd">        1   data file does not exist or invalid argument</span>
+<span class="sd">        2   any other fatal failure</span>
+<span class="sd">        =   ============================================</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.functs</span><span class="w"> </span><span class="kn">import</span> <span class="n">asunicodepath</span><span class="p">,</span> <span class="n">findfiles</span><span class="p">,</span> <span class="n">pylab_draw_show</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.interaction</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_ipython_interface</span><span class="p">,</span> <span class="n">is_ipython_running</span><span class="p">,</span> <span class="n">to_slist</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">args</span>
+    <span class="n">ipyface</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">exitcode</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">opts</span><span class="p">,</span> <span class="n">pargs</span> <span class="o">=</span> <span class="n">_processoptions</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">openmanual</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.manual</span><span class="w"> </span><span class="kn">import</span> <span class="n">openHTMLManual</span>
+
+            <span class="n">openHTMLManual</span><span class="p">(</span><span class="s2">&quot;plotdata.html&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span><span class="n">asunicodepath</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">pargs</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">find</span><span class="p">:</span>
+            <span class="n">filenames</span> <span class="o">=</span> <span class="n">findfiles</span><span class="p">(</span><span class="n">pargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">opts</span><span class="o">.</span><span class="n">listfiles</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filenames</span><span class="p">:</span>
+            <span class="n">plog</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No input files, nothing to do.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_ipython_running</span><span class="p">():</span>
+            <span class="n">ipyface</span> <span class="o">=</span> <span class="n">create_ipython_interface</span><span class="p">()</span>
+        <span class="n">plotdata</span><span class="p">(</span><span class="n">filenames</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">style</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">pylab_draw_show</span><span class="p">()</span>
+        <span class="n">exitcode</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">ipyface</span><span class="p">:</span>
+            <span class="c1"># inject the pyplot functions</span>
+            <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">bg_mpl_stylesheets.styles</span><span class="w"> </span><span class="kn">import</span> <span class="n">all_styles</span>
+
+            <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">all_styles</span><span class="p">[</span><span class="s2">&quot;bg-style&quot;</span><span class="p">])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+            <span class="n">plotfunctions</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">plt</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span>
+            <span class="n">ipyface</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">plotfunctions</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="c1"># inject plotdata-related functions and variables</span>
+            <span class="n">ipyface</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">plotdata</span><span class="o">=</span><span class="n">plotdata</span><span class="p">),</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">ipyface</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">findfiles</span><span class="o">=</span><span class="n">findfiles</span><span class="p">),</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">filenames</span> <span class="o">=</span> <span class="n">to_slist</span><span class="p">(</span><span class="n">filenames</span><span class="p">)</span>
+            <span class="n">ipyface</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">filenames</span><span class="o">=</span><span class="n">filenames</span><span class="p">),</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">ipyface</span><span class="o">.</span><span class="n">mainloop</span><span class="p">(</span><span class="n">banner</span><span class="o">=</span><span class="n">_PLOTDATA_BANNER</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">OSError</span><span class="p">,</span> <span class="ne">IOError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span><span class="p">)</span>
+        <span class="n">exitcode</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">except</span> <span class="ne">SystemExit</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">exitcode</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span>
+    <span class="c1"># All done here.</span>
+    <span class="k">return</span> <span class="n">exitcode</span>
+
+
+<span class="c1"># Local Helpers --------------------------------------------------------------</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_loadplotdata</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load x and y arrays from filename as per the xi, yi identifiers.</span>
+
+<span class="sd">    Return a tuple of (xdata, ydata) that can be used with the plot</span>
+<span class="sd">    function.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.functs</span><span class="w"> </span><span class="kn">import</span> <span class="n">_resolveUsedColumns</span><span class="p">,</span> <span class="n">loaddata</span>
+
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">_parsecolumnid</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    <span class="n">yi</span> <span class="o">=</span> <span class="n">_parsecolumnid</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">yi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">xi</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;y-column must be specified for explicit x.&quot;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+        <span class="c1"># xi and yi are both None here</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">loaddata</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="n">d</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">d</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">d</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">rv</span>
+    <span class="c1"># here yi is not None</span>
+    <span class="k">if</span> <span class="n">xi</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">xi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">yi</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+    <span class="n">ucx</span> <span class="o">=</span> <span class="n">_resolveUsedColumns</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ucx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;x may not specify more than one column.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ucx</span><span class="p">):</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;slice is not allowed for x identifier.&quot;</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="n">useindex</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span> <span class="ow">in</span> <span class="n">ucx</span>
+    <span class="n">uc</span> <span class="o">=</span> <span class="n">yi</span> <span class="k">if</span> <span class="n">useindex</span> <span class="k">else</span> <span class="n">xi</span> <span class="o">+</span> <span class="n">yi</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">loaddata</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">uc</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">d</span>
+    <span class="c1"># ensure 2-dimensional data array</span>
+    <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c1"># determine if this is a single row or single column</span>
+        <span class="n">ucr</span> <span class="o">=</span> <span class="n">_resolveUsedColumns</span><span class="p">(</span><span class="n">uc</span><span class="p">)</span>
+        <span class="n">onerow</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ucr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">ucr</span><span class="p">)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="k">if</span> <span class="n">onerow</span> <span class="k">else</span> <span class="n">d</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">d</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="n">nrows</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">useindex</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nrows</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="n">d</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">d</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_processoptions</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Process the command line options and arguments.</span>
+
+<span class="sd">    args -- command line arguments without argzero</span>
+
+<span class="sd">    Return a (opts, pargs) tuple of option values and</span>
+<span class="sd">    the remaining positional arguments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">optparse</span><span class="w"> </span><span class="kn">import</span> <span class="n">OptionParser</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx</span><span class="w"> </span><span class="kn">import</span> <span class="n">__version__</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">(</span><span class="s2">&quot;usage: %prog [options] file1.dat file2.dat ...&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">allow_interspersed_args</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;%prog &quot;</span> <span class="o">+</span> <span class="n">__version__</span>
+    <span class="c1"># fix help string for --help</span>
+    <span class="n">oh</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">get_option</span><span class="p">(</span><span class="s2">&quot;--help&quot;</span><span class="p">)</span>
+    <span class="n">oh</span><span class="o">.</span><span class="n">help</span> <span class="o">=</span> <span class="s2">&quot;Show this help message and exit.&quot;</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s2">&quot;-V&quot;</span><span class="p">,</span> <span class="s2">&quot;--version&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Show program version and exit.&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;--manual&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;openmanual&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Open manual in a web browser and exit.&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-f&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--find&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Use arguments as file name patterns and &quot;</span> <span class="s2">&quot;plot the matching files.&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-l&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--list&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;listfiles&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;List all input files without plotting.  &quot;</span> <span class="s2">&quot;Should be used with the --find option.&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-x&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Index or name of the x-column to plot.  &quot;</span> <span class="s1">&#39;When &quot;.&quot; use the data-row index as x.&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-y&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Index or name of the y-column to plot.  &quot;</span>
+        <span class="s2">&quot;May contain a comma separated list of several names or &quot;</span>
+        <span class="s1">&#39;indices or Python-like ranges, like &quot;1,2&quot;, &quot;G&quot;, &quot;0:6:2&quot;.  &#39;</span>
+        <span class="s2">&quot;Column indices are zero based therefore the second column &quot;</span>
+        <span class="s1">&#39;is specified as &quot;1&quot;.&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-s&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--style&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Optional plot style string.  See matplotlib &quot;</span>
+        <span class="s2">&quot;documentation for the plot function for a list of &quot;</span>
+        <span class="s2">&quot;available styles.&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span>
+        <span class="s2">&quot;-L&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;--log&quot;</span><span class="p">,</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Set logarithmic scaling for the specified x or y axis &quot;</span>
+        <span class="s1">&#39;and linear for all others, for example, &quot;xy&quot;, &quot;y&quot; or &quot;&quot;.&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">opts</span><span class="p">,</span> <span class="n">pargs</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">opts</span><span class="p">,</span> <span class="n">pargs</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_parsecolumnid</span><span class="p">(</span><span class="n">sx</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Helper function that converts a string column identifier to</span>
+<span class="sd">    either None or a list of integer indices, slice objects and string</span>
+<span class="sd">    column names, aka something that is digestable as the loaddata</span>
+<span class="sd">    usecols argument.&quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.functs</span><span class="w"> </span><span class="kn">import</span> <span class="n">isiterable</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sx</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">sx</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">sx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">sx</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span> <span class="k">if</span> <span class="n">isiterable</span><span class="p">(</span><span class="n">sx</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">sx</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="c1"># Kick starter ---------------------------------------------------------------</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, The Trustees of Columbia University in the City of New York.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

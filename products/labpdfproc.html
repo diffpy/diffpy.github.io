@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>diffpy.labpdfproc &#8212; DiffPy  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=158b04a8" />
+    <script src="../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/diffpy_logo_header.ico"/>
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          DiffPy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../community.html">Community</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+            
+            
+
+            
+            
+  <li class="dropdown menu01-container">
+  <a role="button"
+     id="dLabelMenu01"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Products <b class="caret"></b></a>
+  <ul class="dropdown-menu menu01"
+      role="menu"
+      aria-labelledby="dLabelMenu01">
+      <li><a href="xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="pdfgui.html">diffpy.pdfgui</a></li>
+      <li><a href="diffpycmi/index.html">diffpy.cmi</a></li>
+      <li><a href="morph.html">diffpy.morph</a></li>
+      <li><a href="#">diffpy.labpdfproc</a></li>
+      <li><a href="mPDF.html">diffpy.mpdf</a></li>
+      <li><a href="pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
+      <li><a href="xinterpdf.html">xINTERPDF</a></li>
+      <li><a href="pythonpackages.html">Other Python Packages</a></li>
+  </ul>
+</li>
+
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <section id="diffpy-labpdfproc">
+<h1>diffpy.labpdfproc<a class="headerlink" href="#diffpy-labpdfproc" title="Link to this heading">¶</a></h1>
+<p>Tools for processing x-ray powder diffraction data from laboratory
+sources.</p>
+<p>PDFgetX3 has revolutionized how pair distribution function (PDF) methods
+can be applied to solve
+nanostructure problems. However, the program was designed for use with
+Rapid Acquisition PDF (RAPDF) data from synchrotron sources. A key
+approximation inherent in the use of PDFgetX3 for RAPDF data is that
+absorption effects are negligible. This is typically not the case for
+laboratory x-ray diffractometers, where absorption effects can be
+significant.</p>
+<p>This app is designed to preprocess data from laboratory x-ray
+diffractometers before using PDFgetX3 to obtain PDFs. The app currently
+carries out an absorption correction assuming a parallel beam capillary
+geometry which is the most common geometry for lab PDF measurements.</p>
+<figure class="align-center">
+<img alt="../_images/labpdfproc.png" src="../_images/labpdfproc.png" />
+</figure>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>For the most up-to-date installation instructions, please refer to the installation section of the
+<a class="reference external" href="https://github.com/diffpy/diffpy.labpdfproc">diffpy.labpdfproc README page on GitHub</a>.</p>
+</section>
+<section id="running-labpdfproc">
+<h2>Running labpdfproc<a class="headerlink" href="#running-labpdfproc" title="Link to this heading">¶</a></h2>
+<p>To run diffpy.labpdfproc after installation, type the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">labpdfproc</span>
+</pre></div>
+</div>
+</section>
+<section id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">¶</a></h2>
+<p>Tutorials on how to use diffpy.labpdfproc can be found
+at the <a class="reference external" href="https://www.diffpy.org/diffpy.labpdfproc/">diffpy.labpdfproc documentation</a>.</p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
+<p>Documentation for diffpy.labpdfproc is available at <a class="reference external" href="https://www.diffpy.org/diffpy.labpdfproc">https://www.diffpy.org/diffpy.labpdfproc</a>.</p>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

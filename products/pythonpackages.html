@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Python Packages &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=158b04a8" />
     <script src="../_static/documentation_options.js?v=7f41d439"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../search.html" />
@@ -60,14 +60,15 @@
   <ul class="dropdown-menu menu01"
       role="menu"
       aria-labelledby="dLabelMenu01">
-      <li><a href="diffpycmi/index.html">DiffPy-CMI</a></li>
       <li><a href="xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="pdfgui.html">diffpy.pdfgui</a></li>
+      <li><a href="diffpycmi/index.html">diffpy.cmi</a></li>
+      <li><a href="morph.html">diffpy.morph</a></li>
+      <li><a href="labpdfproc.html">diffpy.labpdfproc</a></li>
+      <li><a href="mPDF.html">diffpy.mpdf</a></li>
       <li><a href="pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
-      <li><a href="pdfgui.html">PDFgui</a></li>
-      <li><a href="SrMise.html">SrMise</a></li>
-      <li><a href="mPDF.html">mPDF</a></li>
       <li><a href="xinterpdf.html">xINTERPDF</a></li>
-      <li><a href="#">Python Packages</a></li>
+      <li><a href="#">Other Python Packages</a></li>
   </ul>
 </li>
 
@@ -96,51 +97,41 @@
 <h1>Python Packages<a class="headerlink" href="#python-packages" title="Link to this heading">¶</a></h1>
 <p>This is a complete list of all Python packages developed by the DiffPy
 team. For more information about a specific package, follow the link to
-the corresponding github page. With the exception of PDFfit2, SrMise,
-and mPDF, all of the packages listed below are bundled in the <a class="reference internal" href="diffpycmi/index.html"><span class="doc">DiffPy-CMI</span></a>
-release.</p>
-<table class="docutils align-default">
+the corresponding documentation page.</p>
+<table class="wrap-text docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Module</p></th>
 <th class="head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.srfit">diffpy.srfit</a></p></td>
-<td><p>Setup and control of general fitting
-problems.</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.srfit">diffpy.srfit</a></p></td>
+<td><p>Setup and control of general fitting problems.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.srmise">diffpy.srmise</a></p></td>
-<td><p>Python tool for peak extraction and peak
-fitting of atomic pair distribution
-functions.</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.srmise">diffpy.srmise</a></p></td>
+<td><p>Python tool for peak extraction and peak fitting of atomic pair distribution functions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.srreal">diffpy.srreal</a></p></td>
-<td><p>Python library for calculation of pair based
-quantities such as the pair distribution
-function (PDF), bond lengths, and bond
-valence sums.</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.srreal">diffpy.srreal</a></p></td>
+<td><p>Python library for calculation of pair-based quantities such as the pair distribution function (PDF), bond lengths, and bond valence sums.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.structure">diffpy.structure</a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.structure">diffpy.structure</a></p></td>
 <td><p>Handles storage of crystal structure data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.utils">diffpy.utils</a></p></td>
-<td><p>General purpose shared utilities for the
-diffpy libraries.</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.utils">diffpy.utils</a></p></td>
+<td><p>General purpose shared utilities for the diffpy libraries.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/diffpy/pyobjcryst">pyobjcryst</a></p></td>
-<td><p>Python bindings to the ObjCryst++
-Object-Oriented Crystallographic
-Library.</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.diffpy.org/pyobjcryst">pyobjcryst</a></p></td>
+<td><p>Python bindings to the ObjCryst++ Object-Oriented Crystallographic Library.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="https://github.com/diffpy/diffpy.pdffit2">diffpy.pdffit2</a></p></td>
-<td><p>Atomic structure refinement and PDF fitting
-(this is the computational engine used by
-PDFgui).</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.diffpy.org/diffpy.pdffit2">diffpy.pdffit2</a></p></td>
+<td><p>Atomic structure refinement and PDF fitting (this is the computational engine used by PDFgui).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/benfrandsen/diffpy.magpdf">diffpy.mpdf</a></p></td>
-<td><p>Tools for calculating and refining magnetic
-PDFs.</p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="https://frandsengroup.github.io/diffpy.mpdf/index.html">diffpy.mpdf</a></p></td>
+<td><p>Tools for calculating and refining magnetic PDFs.</p></td>
 </tr>
 </tbody>
 </table>
