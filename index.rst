@@ -31,7 +31,7 @@ Laboratory, Columbia University, and Michigan State University.
 
 
 
-.. _danse: http://danse.us/
+.. _danse: https://www.its.caltech.edu/~matsci/btf/DANSE_web_page.html
 
 .. _national science foundation: https://www.nsf.gov/
 
@@ -56,7 +56,7 @@ and in-depth examples of modeling Pair Distribution Function data, we highly rec
 *Atomic Pair Distribution Function Analysis: A Primer* by Simon J. L. Billinge and Kirsten M. Ø. Jensen (Oxford University Press, 2023).
 
 
-To purchase this book, please visit `this link <https://www.amazon.com/Atomic-Pair-Distribution-Function-Analysis/dp/0198885806>`_.
+To purchase this book, please visit `this link <https://global.oup.com/academic/product/atomic-pair-distribution-function-analysis-9780198885801?cc=us&lang=en&>`_.
 
 The DiffPy project is also home to many other software tools for analysis of scientific data. 
 One of which is diffpy.cmi, a general-purpose
