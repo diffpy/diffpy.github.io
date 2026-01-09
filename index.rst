@@ -31,7 +31,7 @@ Laboratory, Columbia University, and Michigan State University.
 
 
 
-.. _danse: http://danse.us/
+.. _danse: https://www.its.caltech.edu/~matsci/btf/DANSE_web_page.html
 
 .. _national science foundation: https://www.nsf.gov/
 

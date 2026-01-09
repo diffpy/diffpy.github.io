@@ -22,7 +22,7 @@ under contract DE-AC02-98CH10886. Previous funding for DiffPy was
 provided by the Distributed Data Analysis of Neutron Scattering
 Experiments (DANSE) project funded by the US National Science Foundation
 under award DMR-0520547.  More information on DANSE can be found
-at http://danse.us.  The early developments of PDFfit2 were funded by
+`here <https://www.its.caltech.edu/~matsci/btf/DANSE_web_page.html>`_.  The early developments of PDFfit2 were funded by
 NSF grant DMR-0304391 in the Billinge-group, and with support from
 Michigan State University.  Any opinions, findings, and conclusions or
 recommendations expressed in this material are those of the author(s)
