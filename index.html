@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>DiffPy - Atomic Structure Analysis in Python &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=158b04a8" />
     <script src="_static/documentation_options.js?v=7f41d439"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="search.html" />
@@ -59,14 +59,15 @@
   <ul class="dropdown-menu menu01"
       role="menu"
       aria-labelledby="dLabelMenu01">
-      <li><a href="products/diffpycmi/index.html">DiffPy-CMI</a></li>
       <li><a href="products/xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="products/pdfgui.html">diffpy.pdfgui</a></li>
+      <li><a href="products/diffpycmi/index.html">diffpy.cmi</a></li>
+      <li><a href="products/morph.html">diffpy.morph</a></li>
+      <li><a href="products/labpdfproc.html">diffpy.labpdfproc</a></li>
+      <li><a href="products/mPDF.html">diffpy.mpdf</a></li>
       <li><a href="products/pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
-      <li><a href="products/pdfgui.html">PDFgui</a></li>
-      <li><a href="products/SrMise.html">SrMise</a></li>
-      <li><a href="products/mPDF.html">mPDF</a></li>
       <li><a href="products/xinterpdf.html">xINTERPDF</a></li>
-      <li><a href="products/pythonpackages.html">Python Packages</a></li>
+      <li><a href="products/pythonpackages.html">Other Python Packages</a></li>
   </ul>
 </li>
 
@@ -91,42 +92,38 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <strong>
-Please update your PDFgui to PDFgui v2.0, the first Python 3 version of the software (May 10, 2023)
-</strong>
-&nbsp;
-<a href="products/pdfgui.html" class="btn btn-large btn-success btn-flat">Get PDFgui v2.0</a>
-&nbsp;
-<a href="acknowledgements.html">Credits</a></p><section id="diffpy-atomic-structure-analysis-in-python">
-<h1>DiffPy - Atomic Structure Analysis in Python<a class="headerlink" href="#diffpy-atomic-structure-analysis-in-python" title="Link to this heading">¶</a></h1>
+  <section id="diffpy-atomic-structure-analysis-in-python">
+<span id="home"></span><h1>DiffPy - Atomic Structure Analysis in Python<a class="headerlink" href="#diffpy-atomic-structure-analysis-in-python" title="Link to this heading">¶</a></h1>
 <p>A free and open source software project to provide python software for
 diffraction analysis and the study of the atomic structure of materials.</p>
 <figure class="align-center">
 <img alt="_images/CMI-logo.png" src="_images/CMI-logo.png" />
 </figure>
 <img alt="_images/blank1x1.png" src="_images/blank1x1.png" />
-<p>DiffPy is the home of the <a class="reference internal" href="products/diffpycmi/index.html"><span class="doc">DiffPy-CMI</span></a>
-Complex Modeling framework, a modular software framework for robust and extensible
-modeling of diffraction data.  We welcome contributions to this project from the
-community.</p>
-<p>The project is currently centered at <a class="reference external" href="https://www.bnl.gov/">Brookhaven National Laboratory</a>, a US <a class="reference external" href="https://science.energy.gov/bes/">Department of
-Energy, Office of Basic Energy Sciences</a> funded laboratory.
-Many parts of the code were developed under the diffraction part of the <a class="reference external" href="http://danse.us/">DANSE</a> project,
+<p>The project is currently maintained by the Billinge Group and DiffPy community members.</p>
+<p>Many parts of the code were developed under the diffraction part of the <a class="reference external" href="https://www.its.caltech.edu/~matsci/btf/DANSE_web_page.html">DANSE</a> project,
 a software construction project funded by the <a class="reference external" href="https://www.nsf.gov/">National Science Foundation</a> to provide
-data analysis software tools for neutron scattering experiments.  This project was previously
-centered at Columbia University and, before that, Michigan State University.</p>
-<a class="reference internal image-reference" href="_images/blank1x1.png"><img alt="_images/blank1x1.png" class="align-left" src="_images/blank1x1.png" style="height: 10px;" />
+data analysis software tools for neutron scattering experiments. The DiffPy project has
+been a collaborative effort, centered in many institutions, including Brookhaven National
+Laboratory, Columbia University, and Michigan State University.</p>
+<section id="about-diffpy">
+<h2>About DiffPy<a class="headerlink" href="#about-diffpy" title="Link to this heading">¶</a></h2>
+<a class="reference internal image-reference" href="_images/pdfprimer.png"><img alt="_images/pdfprimer.png" class="align-right" src="_images/pdfprimer.png" style="width: 200px;" />
 </a>
-<figure class="align-left">
-<a class="reference external image-reference" href="https://www.bnl.gov/"><img alt="_images/BNL_logo.jpg" src="_images/BNL_logo.jpg" />
-</a>
-</figure>
-<figure class="align-right">
-<a class="reference external image-reference" href="https://science.energy.gov/bes/"><img alt="_images/DOE_logo.png" src="_images/DOE_logo.png" />
-</a>
-</figure>
+<p>DiffPy is the home of a number of software products for atomic structure
+analysis. A large portion of the DiffPy project consists of tools for atomic pair
+distribution function (PDF) analysis. For detailed instructions
+and in-depth examples of modeling Pair Distribution Function data, we highly recommend the book,</p>
+<p><em>Atomic Pair Distribution Function Analysis: A Primer</em> by Simon J. L. Billinge and Kirsten M. Ø. Jensen (Oxford University Press, 2023).</p>
+<p>To purchase this book, please visit <a class="reference external" href="https://global.oup.com/academic/product/atomic-pair-distribution-function-analysis-9780198885801?cc=us&amp;lang=en&amp;">this link</a>.</p>
+<p>The DiffPy project is also home to many other software tools for analysis of scientific data.
+One of which is diffpy.cmi, a general-purpose
+complex modeling infrastructure for analysis of <em>any</em> type of data.
+For more information about diffpy.cmi, please visit the
+<a class="reference external" href="https://www.diffpy.org/diffpy.cmi">diffpy.cmi documentation</a>.</p>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 

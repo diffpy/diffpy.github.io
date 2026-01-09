@@ -6,16 +6,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PDFgui &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <title>diffpy.pdfgui &#8212; DiffPy  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=158b04a8" />
     <script src="../_static/documentation_options.js?v=7f41d439"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="PDFgui License" href="pdfguilicense.html" />
-    <link rel="prev" title="xPDFsuite - an easy to use end-to-end software solution for atomic pair distribution function analysis with x-rays" href="xPDFsuite.html" />
+    <link rel="prev" title="xPDFsuite" href="xPDFsuite.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -60,14 +60,15 @@
   <ul class="dropdown-menu menu01"
       role="menu"
       aria-labelledby="dLabelMenu01">
-      <li><a href="diffpycmi/index.html">DiffPy-CMI</a></li>
       <li><a href="xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="#">diffpy.pdfgui</a></li>
+      <li><a href="diffpycmi/index.html">diffpy.cmi</a></li>
+      <li><a href="morph.html">diffpy.morph</a></li>
+      <li><a href="labpdfproc.html">diffpy.labpdfproc</a></li>
+      <li><a href="mPDF.html">diffpy.mpdf</a></li>
       <li><a href="pdfgetx.html">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
-      <li><a href="#">PDFgui</a></li>
-      <li><a href="SrMise.html">SrMise</a></li>
-      <li><a href="mPDF.html">mPDF</a></li>
       <li><a href="xinterpdf.html">xINTERPDF</a></li>
-      <li><a href="pythonpackages.html">Python Packages</a></li>
+      <li><a href="pythonpackages.html">Other Python Packages</a></li>
   </ul>
 </li>
 
@@ -92,11 +93,9 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <section id="pdfgui">
-<h1>PDFgui<a class="headerlink" href="#pdfgui" title="Link to this heading">¶</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
-<p>For users who do not have the expertise or necessity for command line analysis, PDFgui is
+  <section id="diffpy-pdfgui">
+<h1>diffpy.pdfgui<a class="headerlink" href="#diffpy-pdfgui" title="Link to this heading">¶</a></h1>
+<p>For users who do not have the expertise or necessity for command line analysis, diffpy.pdfgui is
 a convenient and easy to use graphical front end for the PDFfit2 refinement program. It is
 capable of full-profile fitting of the atomic pair distribution function (PDF)
 derived from x-ray or neutron diffraction data
@@ -104,10 +103,9 @@ and comes with built in graphical and structure visualization capabilities.</p>
 <figure class="align-center" id="id1">
 <img alt="../_images/PDFgui_screenshot_small.png" src="../_images/PDFgui_screenshot_small.png" />
 <figcaption>
-<p><span class="caption-text">Screen-shot of PDFgui during a refinement of multiple data-sets</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Screen-shot of diffpy.pdfgui during a refinement of multiple data-sets</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-</section>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">¶</a></h2>
 <p>If you use this program for a scientific research that leads to publication,
@@ -122,103 +120,29 @@ J. Phys.: Condens. Matter 19 (2007) 335219.</p>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
-<p>By downloading and using this software you are agreeing to the
-conditions specified in the <a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui/blob/main/LICENSE.rst">software license</a>.</p>
-<p>PDFgui is distributed as a software package for
-<a class="reference external" href="https://www.anaconda.com">Anaconda Python</a>.  PDFgui is available
-for all operating systems supported by Anaconda, namely for
-Linux, Mac OS X, and Windows.</p>
-<p>As a prerequisite for PDFgui installation, download and install
-<strong>Miniconda</strong> (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links">https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links</a>)
-or Anaconda Python (<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a>).</p>
-<p>PDFgui is available from the “conda-forge” channel of Anaconda packages.</p>
-<p>There are currently two different sets of instructions to install it depending on your platform.
-If you want to install it on Windows, Linux, or a non-arm64 Mac OSX (i.e., if at the time of writing
-your Mac does not have an M1 or M2 chip) use the first set, otherwise the second set of instructions</p>
-<section id="windows-macos-non-arm64-linux">
-<h3>Windows, macOS (non-Arm64), Linux<a class="headerlink" href="#windows-macos-non-arm64-linux" title="Link to this heading">¶</a></h3>
-<p>Add the “conda-forge” channel by running the following command in a terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
-</pre></div>
-</div>
-<p>Create a new environment named <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui_env</span></code> (or any name of your choice) and
-install <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>diffpy.pdfgui_env<span class="w"> </span>diffpy.pdfgui
-</pre></div>
-</div>
-<p>Activate the environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>diffpy.pdfgui_env
-</pre></div>
-</div>
-<p>Confirm that the installation was successful:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import diffpy.pdfgui; print(diffpy.pdfgui.__version__)&quot;</span>
-</pre></div>
-</div>
-</section>
-<section id="macos-arm64">
-<h3>macOS (Arm64)<a class="headerlink" href="#macos-arm64" title="Link to this heading">¶</a></h3>
-<p>Create a new conda environment <code class="docutils literal notranslate"><span class="pre">diffpy.pdfgui_env</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
-conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>diffpy.pdfgui_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13
-</pre></div>
-</div>
-<p>Activate the environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>diffpy.pdfgui_env
-</pre></div>
-</div>
-<p>It is necessary to get versions of pdffit2 built for Mac from Python package index (Pypi).  First we will install all
-the dependencies from conda-forge and then the pdffit2 itself from Pypi using the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>wxpython<span class="w"> </span>diffpy.utils<span class="w"> </span>matplotlib-base<span class="w"> </span>pycifrw
-pip<span class="w"> </span>install<span class="w"> </span>diffpy.pdffit2
-</pre></div>
-</div>
-<p>Finally, we want to install PDFgui, again from conda-forge:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>diffpy.pdfgui
-</pre></div>
-</div>
-</section>
+<p>For the most up-to-date installation instructions, please refer to the installation section of the
+<a class="reference external" href="https://github.com/diffpy/diffpy.pdfgui">diffpy.pdfgui README page on GitHub</a>.</p>
 </section>
 <section id="running-pdfgui">
-<h2>Running pdfgui:<a class="headerlink" href="#running-pdfgui" title="Link to this heading">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To start PDFgui from a Terminal make sure <em>pdfgui_env</em> is
-the active Anaconda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>pdfgui_env
+<h2>Running pdfgui<a class="headerlink" href="#running-pdfgui" title="Link to this heading">¶</a></h2>
+<p>To run diffpy.pdfgui after installation, type the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdfgui
 </pre></div>
 </div>
-<p>Alternatively, on bash terminals you can add the following line to your shell startup
-file <code class="file docutils literal notranslate"><span class="pre">.bashrc</span></code> to define an alias which will work in
-any Anaconda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">pdfgui</span><span class="o">=</span><span class="s2">&quot;/path/to/pdfgui_env/bin/pdfgui&quot;</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal notranslate"><span class="pre">/path/to</span></code> needs to be adjusted according to the output of
-<code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">pdfgui</span></code> command.</p>
-</div>
-<p>Please consider joining the <a class="reference external" href="https://www.diffpy.org/community.html">diffpy-users</a> Google group.
-News about updates and new releases will be made there, as well as it being a place to ask questions
-and find answers about using all diffpy programs.
-When you sign up,
-please leave a short message about why you are requesting to join as we have had spam accounts requesting access
-and so we want to know you are a legitimate user.</p>
 </section>
-<section id="documentation-and-help">
-<h2>Documentation and help<a class="headerlink" href="#documentation-and-help" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>The user manual is available in <a class="reference external" href="../doc/pdfgui/index.html">HTML</a>
-and <a class="reference external" href="../doc/pdfgui/pdfgui.pdf">PDF</a> formats.</p></li>
-<li><p>Search “PDFgui” on YouTube for some video tutorials on how to use
-PDFgui.</p></li>
-<li><p>For in-depth help in using PDFgui to solve scientific problems please
+<section id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">¶</a></h2>
+<p>Search “PDFgui” on YouTube for some video tutorials on how to use diffpy.pdfgui.</p>
+<p>For in-depth help in using diffpy.pdfgui to solve scientific problems please
 see the book “Atomic Pair Distribution Function Analysis: A primer” by
 Simon Billinge, Kirsten Jensen, and past and present Billinge group members,
 published by Oxford University Press. Data for the worked examples can
-be found here: <a class="reference external" href="https://github.com/Billingegroup/pdfttp_data">https://github.com/Billingegroup/pdfttp_data</a></p></li>
-<li><p>Tutorial files are available from
-<a class="reference external" href="../doc/pdfgui/pdfgui-tutorial.zip">pdfgui-tutorial.zip</a>.</p></li>
-<li><p>Please, join the <a class="reference internal" href="../community.html"><span class="doc">community forum</span></a> for tips, tricks, and feedback.</p></li>
-</ul>
+be found here: <a class="reference external" href="https://github.com/Billingegroup/pdfttp_data">https://github.com/Billingegroup/pdfttp_data</a>.</p>
+<p>Please, join the <a class="reference internal" href="../community.html"><span class="doc">community forum</span></a> for tips, tricks, and feedback.</p>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
+<p>Documentation for diffpy.pdfgui is available at <a class="reference external" href="https://www.diffpy.org/diffpy.pdfgui">https://www.diffpy.org/diffpy.pdfgui</a>.</p>
 </section>
 <section id="legacy-versions">
 <h2>Legacy versions<a class="headerlink" href="#legacy-versions" title="Link to this heading">¶</a></h2>

@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>diffpy.pdfgetx.functs &mdash; diffpy.pdfgetx No version found. The correct version will appear in the released version. documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=7bacdcf5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=cca77546"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            diffpy.pdfgetx
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quick-start.html">Quick-start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files.html">Files used in PDF extraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../interact.html">Interactive mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../options.html">Options and parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../plotdata.html">The plotdata program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release.html">Release notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">diffpy.pdfgetx</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">diffpy.pdfgetx.functs</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for diffpy.pdfgetx.functs</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1">##############################################################################</span>
+<span class="c1">#</span>
+<span class="c1"># diffpy.pdfgetx    by DANSE Diffraction group</span>
+<span class="c1">#                   Simon J. L. Billinge</span>
+<span class="c1">#                   (c) 2008 Trustees of the Columbia University</span>
+<span class="c1">#                   in the City of New York.  All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># File coded by:    Timur Dykhne</span>
+<span class="c1">#</span>
+<span class="c1"># See AUTHORS.rst for a list of people who contributed.</span>
+<span class="c1"># See LICENSENOTICE.rst for license information.</span>
+<span class="c1">#</span>
+<span class="c1">##############################################################################</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">composition_analysis</span><span class="p">(</span><span class="n">compstring</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Pulls out elements and their ratios from the config file.</span>
+
+<span class="sd">    compstring   -- chemical composition of the sample, e.g.,</span>
+<span class="sd">                    &quot;NaCl&quot;, &quot;H2SO4&quot;, &quot;(LaCa)1/2 Mn O3&quot;.  Blank</span>
+<span class="sd">                    characters are ignored, unit counts can be omitted.</span>
+<span class="sd">                    It is critical to use proper upper-lower case for atom</span>
+<span class="sd">                    symbols as this is used to delimit them in the formula.</span>
+
+<span class="sd">    Returns a list of atom symbols and a corresponding list of their counts.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># check if parentheses are balanced</span>
+    <span class="k">if</span> <span class="n">compstring</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">compstring</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;)&quot;</span><span class="p">):</span>
+        <span class="n">emsgbal</span> <span class="o">=</span> <span class="s1">&#39;imbalanced parentheses in &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">compstring</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsgbal</span><span class="p">)</span>
+    <span class="c1"># make sure there is at least one uppercase character in the compstring</span>
+    <span class="n">upcasechars</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compstring</span><span class="p">)</span>
+    <span class="n">nonblank</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">compstring</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">upcasechars</span> <span class="ow">and</span> <span class="n">nonblank</span><span class="p">:</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s1">&#39;invalid chemical composition &quot;</span><span class="si">%s</span><span class="s1">&quot;&#39;</span> <span class="o">%</span> <span class="n">compstring</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;(&quot;</span> <span class="ow">in</span> <span class="n">compstring</span><span class="p">:</span>
+        <span class="n">head</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">_parse_parentheses</span><span class="p">(</span><span class="n">compstring</span><span class="p">)</span>
+        <span class="n">ca_head</span> <span class="o">=</span> <span class="n">composition_analysis</span><span class="p">(</span><span class="n">head</span><span class="p">)</span>
+        <span class="n">ca_body</span> <span class="o">=</span> <span class="n">composition_analysis</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+        <span class="n">ca_tail</span> <span class="o">=</span> <span class="n">composition_analysis</span><span class="p">(</span><span class="n">tail</span><span class="p">)</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="n">ca_head</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">ca_body</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">ca_tail</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">fractions</span> <span class="o">=</span> <span class="n">ca_head</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">count</span> <span class="o">*</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ca_body</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="n">ca_tail</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">names</span><span class="p">,</span> <span class="n">fractions</span>
+    <span class="c1"># simple composition string here</span>
+    <span class="k">assert</span> <span class="s2">&quot;)&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">compstring</span>
+    <span class="c1"># split at every upper-case letter, possibly followed by a lower case</span>
+    <span class="c1"># one and charge specification</span>
+    <span class="n">namefracs</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">_re_atomtype</span><span class="p">,</span> <span class="n">compstring</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">namefracs</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+    <span class="c1"># use unit count when empty, convert to float otherwise</span>
+    <span class="n">fractions</span> <span class="o">=</span> <span class="p">[</span><span class="n">_parse_fraction</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">namefracs</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="n">names</span><span class="p">,</span> <span class="n">fractions</span>
+
+
+<span class="n">_re_atomtype</span> <span class="o">=</span> <span class="s2">&quot;([A-Z][a-z]?(?:[1-8]?[+-])?)&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_parentheses</span><span class="p">(</span><span class="n">compstring</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Split fragment of chemical formula at the first pair of</span>
+<span class="sd">    parentheses.</span>
+
+<span class="sd">    compstring   -- chemical formula that contains one or more pairs</span>
+<span class="sd">                    of parentheses.</span>
+
+<span class="sd">    Return a tuple of (head, body, count, tail) where</span>
+
+<span class="sd">    head     -- is the input string up to the opening parenthesis</span>
+<span class="sd">    body     -- compstring fragment enclosed by the first parentheses.</span>
+<span class="sd">                It may contain more parentheses.</span>
+<span class="sd">    count    -- floating point ratio following the closing parenthesis.</span>
+<span class="sd">                Defaults to 1 when not present.</span>
+<span class="sd">    tail     -- trailing part of the compstring after the count.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">psign</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;(&quot;</span><span class="p">:</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;)&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
+    <span class="n">ptotal</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">compstring</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;(&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p2</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">compstring</span><span class="p">[</span><span class="n">p1</span><span class="p">:],</span> <span class="n">p1</span><span class="p">):</span>
+        <span class="n">ptotal</span> <span class="o">+=</span> <span class="n">psign</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ptotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">_re_atomtype</span> <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;|\(&quot;</span><span class="p">,</span> <span class="n">compstring</span><span class="p">[</span><span class="n">p2</span><span class="p">:])</span>
+    <span class="n">p3</span> <span class="o">=</span> <span class="p">(</span><span class="n">mx</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="o">+</span> <span class="n">p2</span><span class="p">)</span> <span class="k">if</span> <span class="n">mx</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">compstring</span><span class="p">)</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">compstring</span><span class="p">[:</span><span class="n">p1</span><span class="p">]</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="n">compstring</span><span class="p">[</span><span class="n">p1</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">p2</span><span class="p">]</span>
+    <span class="n">scnt</span> <span class="o">=</span> <span class="n">compstring</span><span class="p">[</span><span class="n">p2</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">p3</span><span class="p">]</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">_parse_fraction</span><span class="p">(</span><span class="n">scnt</span><span class="p">)</span>
+    <span class="n">tail</span> <span class="o">=</span> <span class="n">compstring</span><span class="p">[</span><span class="n">p3</span><span class="p">:]</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">head</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">tail</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_parse_fraction</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert fraction strings in chemical formulas to floats.</span>
+
+<span class="sd">    s    -- string convertible to float or a fraction &quot;1/3&quot;.</span>
+
+<span class="sd">    Return floating point value parsed from s.  Return 1.0 when</span>
+<span class="sd">    s is empty or of space characters only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+
+    <span class="k">if</span> <span class="s2">&quot;/&quot;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<div class="viewcode-block" id="findfiles">
+<a class="viewcode-back" href="../../../interact.html#diffpy.pdfgetx.findfiles">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">findfiles</span><span class="p">(</span><span class="n">patterns</span><span class="o">=</span><span class="p">(),</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">dotfiles</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find files that match all specified patterns.</span>
+
+<span class="sd">    Pattern syntax:</span>
+
+<span class="sd">    * ``^start`` - match &quot;start&quot; only at the beginning of the string.</span>
+<span class="sd">    * ``end$`` - match &quot;end&quot; only at the end of string.</span>
+<span class="sd">    * ``&lt;7&gt;`` - match number 7 preceded by any number of leading zeros.</span>
+<span class="sd">    * ``&lt;1-34&gt;`` - match an integer range from 1 to 34 inclusive.</span>
+<span class="sd">    * ``&lt;7-&gt;`` - match an integer greater or equal 7.</span>
+<span class="sd">    * ``&lt;-&gt;`` - match any integer.</span>
+<span class="sd">    * ``+`` - start a new group of patterns to match more files.</span>
+<span class="sd">    * ``dir/`` - set search path effective from the current pattern group.</span>
+
+<span class="sd">    All integer ranges ``&lt;N-M&gt;`` above allow one or more leading zeros.</span>
+<span class="sd">    The range syntax does not support matching of negative numbers.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    patterns : iterable of strings or str, optional</span>
+<span class="sd">        String patterns that must all match in returned filenames.</span>
+<span class="sd">        Can be also a single string with patterns separated by</span>
+<span class="sd">        whitespace characters.  When empty match all files in the</span>
+<span class="sd">        current directory or in the `path`.  A single ``+`` starts</span>
+<span class="sd">        a new pattern group for additional matches.  Each pattern</span>
+<span class="sd">        group may have one entry containing ``/``, for example,</span>
+<span class="sd">        ``dir/`` or ``./``, which sets the search directory for</span>
+<span class="sd">        this and subsequent pattern groups.  When pattern group</span>
+<span class="sd">        contains only the path entry it reuses file patterns from</span>
+<span class="sd">        the previous group.</span>
+<span class="sd">    path : str, optional</span>
+<span class="sd">        Directory to be searched for the files.  The default is &quot;.&quot;</span>
+<span class="sd">        to search the current directory.</span>
+<span class="sd">    dotfiles : bool, optional</span>
+<span class="sd">        When True search also the hidden &quot;.&quot; starting files.  These</span>
+<span class="sd">        files are by default ignored, but can be explicitly selected</span>
+<span class="sd">        by adding the ``^.`` pattern.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    filenames : list</span>
+<span class="sd">        The list of matching filenames.  Return all files when</span>
+<span class="sd">        `patterns` are not specified.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">shlex</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">groupby</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">PurePath</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">diffpy.pdfgetx.multipattern</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiPattern</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">patterns</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span>
+    <span class="n">dirfiles</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="c1"># split patterns into groups separated by the &#39;+&#39; item</span>
+    <span class="n">pgroups</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">groupby</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">&quot;+&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">k</span><span class="p">]</span>
+    <span class="n">pgroups</span> <span class="o">=</span> <span class="n">pgroups</span> <span class="ow">or</span> <span class="p">[[]]</span>
+    <span class="n">cpath</span> <span class="o">=</span> <span class="n">asunicodepath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">cpatterns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Support backslash to identify directory entry on Windows</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hasslash</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">PurePath</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="n">s</span>
+
+    <span class="k">for</span> <span class="n">pg</span> <span class="ow">in</span> <span class="n">pgroups</span><span class="p">:</span>
+        <span class="n">gpath</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pg</span> <span class="k">if</span> <span class="n">hasslash</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gpath</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;Too many directories </span><span class="si">{!r}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gpath</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+        <span class="n">gpatterns</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pg</span> <span class="k">if</span> <span class="n">p</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gpath</span><span class="p">]</span>
+        <span class="c1"># update current path and patterns when provided</span>
+        <span class="k">if</span> <span class="n">gpath</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">cpath</span><span class="p">,)</span> <span class="o">=</span> <span class="n">gpath</span>
+        <span class="k">if</span> <span class="n">gpatterns</span><span class="p">:</span>
+            <span class="n">cpatterns</span> <span class="o">=</span> <span class="n">gpatterns</span>
+        <span class="n">ap</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">cpath</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ap</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dirfiles</span><span class="p">:</span>
+            <span class="n">dirfiles</span><span class="p">[</span><span class="n">ap</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">ap</span><span class="p">)</span>
+            <span class="n">dirfiles</span><span class="p">[</span><span class="n">ap</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">sortKeyNumericString</span><span class="p">)</span>
+        <span class="n">keepdotfiles</span> <span class="o">=</span> <span class="n">dotfiles</span> <span class="ow">or</span> <span class="nb">any</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;^.&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">cpatterns</span><span class="p">)</span>
+        <span class="n">mp</span> <span class="o">=</span> <span class="n">MultiPattern</span><span class="p">(</span><span class="n">cpatterns</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">fileok</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">PurePath</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">(</span><span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">keepdotfiles</span><span class="p">)</span> <span class="ow">and</span> <span class="n">mp</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+
+        <span class="n">files</span> <span class="o">+=</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cpath</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">dirfiles</span><span class="p">[</span><span class="n">ap</span><span class="p">]</span> <span class="k">if</span> <span class="n">fileok</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+    <span class="c1"># make matching files unique and filter out any directories</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">unique_everseen</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">rv</span></div>
+
+
+
+<div class="viewcode-block" id="loaddata">
+<a class="viewcode-back" href="../../../interact.html#diffpy.pdfgetx.loaddata">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">loaddata</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">minrows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find and load data from a text file.</span>
+
+<span class="sd">    The data reading starts at the first matrix block of at least minrows rows</span>
+<span class="sd">    and constant number of columns.  This seems to work for most of the</span>
+<span class="sd">    datafiles including those generated by PDFGetX2.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    filename : str</span>
+<span class="sd">        Name of the file to load the text data from.</span>
+<span class="sd">    minrows : int, optional</span>
+<span class="sd">        Minimum number of rows in the first data block, by default 10.</span>
+<span class="sd">        All rows must have the same number of floating point values.</span>
+<span class="sd">    usecols : int, str, slice, iterable, optional</span>
+<span class="sd">        Indices or names of the columns to be loaded from the data block,</span>
+<span class="sd">        the default is all columns.  Data blocks that do not contain</span>
+<span class="sd">        sufficient number of columns are skipped.  When usecols contain</span>
+<span class="sd">        string items, they are translated to column indices by looking</span>
+<span class="sd">        up a header line preceding the data block.  String items formatted</span>
+<span class="sd">        as ``i:j:k`` are converted to `slice` objects.  When usecols type</span>
+<span class="sd">        is string it is split to a list of names at comma and whitespace</span>
+<span class="sd">        characters.</span>
+<span class="sd">    unpack : bool, optional</span>
+<span class="sd">        Return data as a sequence of columns that allows tuple unpacking</span>
+<span class="sd">        such as ``x, y = loaddata(FILENAME, unpack=True)``.  Note that</span>
+<span class="sd">        transposing the loaded array as ``loaddata(FILENAME).T`` has</span>
+<span class="sd">        the same effect.  The default is False.</span>
+<span class="sd">    kwargs : misc, optional</span>
+<span class="sd">        Extra keyword arguments that are passed to `numpy.loadtxt`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    data : numpy.ndarray</span>
+<span class="sd">        The data block loaded from the text file.</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    numpy.loadtxt</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="n">loadtxt</span>
+
+    <span class="c1"># determine the arguments</span>
+    <span class="n">delimiter</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;delimiter&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">delimiter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">delimiter</span> <span class="o">=</span> <span class="n">delimiter</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+    <span class="c1"># required at least one column of floating point values</span>
+    <span class="n">mincv</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># but if usecols is specified, require sufficient number of columns</span>
+    <span class="c1"># where the used columns contain floats</span>
+    <span class="k">if</span> <span class="n">usecols</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">usecols</span> <span class="o">=</span> <span class="n">_resolveUsedColumns</span><span class="p">(</span><span class="n">usecols</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">ucx</span> <span class="o">=</span> <span class="n">_expandSliceItems</span><span class="p">(</span><span class="n">usecols</span><span class="p">)</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">hiidx</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">ucx</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">ucx</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">mincv</span> <span class="o">=</span> <span class="p">(</span><span class="n">hiidx</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">ucx</span><span class="p">)))</span>
+    <span class="n">_ucx_cache</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getucx</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_ucx_cache</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">_expandSliceItems</span><span class="p">(</span><span class="n">usecols</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+
+    <span class="c1"># Check if a line consists of floats only and return their count</span>
+    <span class="c1"># Return zero if some strings cannot be converted.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">countcolumnsvalues</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">delimiter</span><span class="p">)</span>
+        <span class="c1"># remove trailing blank columns</span>
+        <span class="k">while</span> <span class="n">words</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">words</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">():</span>
+            <span class="n">words</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">nc</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+        <span class="c1"># build a list of selected words `wsel`</span>
+        <span class="n">wsel</span> <span class="o">=</span> <span class="n">words</span>
+        <span class="k">if</span> <span class="n">usecols</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">wsel</span> <span class="o">=</span> <span class="p">[</span><span class="n">words</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">getucx</span><span class="p">(</span><span class="n">nc</span><span class="p">)]</span>
+            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="c1"># test if all selected words can be converted to float</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">nv</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wsel</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">nc</span> <span class="o">=</span> <span class="n">nv</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">nc</span><span class="p">,</span> <span class="n">nv</span>
+
+    <span class="c1"># make sure fid gets cleaned up</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fid</span><span class="p">:</span>
+        <span class="c1"># search for the start of datablock</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">ncvblock</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">fpos</span> <span class="o">=</span> <span class="n">nrows</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fid</span><span class="p">:</span>
+            <span class="n">fpos</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">ncv</span> <span class="o">=</span> <span class="n">countcolumnsvalues</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ncv</span> <span class="o">&lt;</span> <span class="n">mincv</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">continue</span>
+            <span class="c1"># ncv is acceptable here, require the same number of columns</span>
+            <span class="c1"># throughout the datablock</span>
+            <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">ncv</span> <span class="o">!=</span> <span class="n">ncvblock</span><span class="p">:</span>
+                <span class="n">ncvblock</span> <span class="o">=</span> <span class="n">ncv</span>
+                <span class="n">nrows</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="n">fpos</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">nrows</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="c1"># block was found here!</span>
+            <span class="k">if</span> <span class="n">nrows</span> <span class="o">&gt;=</span> <span class="n">minrows</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="c1"># Return an empty array when no data found.</span>
+        <span class="c1"># loadtxt would otherwise raise an exception on loading from EOF.</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fid</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+            <span class="c1"># always use usecols argument so that loadtxt does not crash</span>
+            <span class="c1"># in case of trailing delimiters.</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">ncvblock</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;usecols&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="k">if</span> <span class="n">usecols</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">getucx</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">loadtxt</span><span class="p">(</span><span class="n">fid</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">findColumnNames</span><span class="p">(</span><span class="n">headlines</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Obtain a list of unique column names from a list of header</span>
+<span class="sd">    lines.&quot;&quot;&quot;</span>
+    <span class="n">mxtwospace</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?:\t|  )\s*&quot;</span><span class="p">)</span>
+    <span class="n">colnames</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">headlines</span><span class="p">):</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">isfloat</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">]:</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;#L&quot;</span><span class="p">:</span>
+            <span class="n">w1</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">s1</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#L&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">w2</span> <span class="o">=</span> <span class="n">mxtwospace</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="n">w2</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">w2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">w1</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">words</span> <span class="ow">and</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+            <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="n">words</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">words</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">([</span><span class="n">w</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]):</span>
+            <span class="n">colnames</span> <span class="o">=</span> <span class="n">words</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">colnames</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">loadColumnNames</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Obtain unique column names from a text file header section.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">headlines</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">readlines</span><span class="p">(</span><span class="mi">32768</span><span class="p">)</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">findColumnNames</span><span class="p">(</span><span class="n">headlines</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_resolveUsedColumns</span><span class="p">(</span><span class="n">usecols</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Translate any column names to corresponding integer indices.</span>
+
+<span class="sd">    usecols  -- an iterable of integers and/or strings.  Can be also</span>
+<span class="sd">                an integer or a comma or space-separated string.</span>
+<span class="sd">                String names are translated to integers according</span>
+<span class="sd">                to column names find in the filename.</span>
+<span class="sd">    filename -- text data file where column names are looked up.</span>
+<span class="sd">                Do not translate column names when not specified.</span>
+
+<span class="sd">    Return a new usecols list containing integers only.</span>
+<span class="sd">    Raise ValueError if a column name cannot be resolved.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">isstr</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+
+    <span class="c1"># (1) convert usecols to a list</span>
+    <span class="n">uc1</span> <span class="o">=</span> <span class="p">[</span><span class="n">usecols</span><span class="p">]</span> <span class="k">if</span> <span class="n">isstr</span><span class="p">(</span><span class="n">usecols</span><span class="p">)</span> <span class="k">else</span> <span class="nb">list</span><span class="p">(</span><span class="n">usecols</span><span class="p">)</span> <span class="k">if</span> <span class="n">isiterable</span><span class="p">(</span><span class="n">usecols</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">usecols</span><span class="p">]</span>
+    <span class="c1"># (2) split string items at &quot;,&quot;</span>
+    <span class="n">uc2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">c</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc1</span><span class="p">),</span> <span class="p">[])</span>
+    <span class="c1"># (3) convert integer string items to int</span>
+    <span class="n">uc3</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">if</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isint</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc2</span><span class="p">]</span>
+    <span class="c1"># (4) convert slice-like string items to slices</span>
+    <span class="n">uc4</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+            <span class="n">uc4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">uc4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="n">a0</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">w</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span> <span class="ow">or</span> <span class="n">isint</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">a0</span><span class="p">):</span>
+            <span class="n">uc4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="c1"># pad a0 to have 3 elements for sure</span>
+        <span class="n">a0</span> <span class="o">+=</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">if</span> <span class="n">w</span> <span class="k">else</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">a0</span><span class="p">[:</span><span class="mi">3</span><span class="p">]]</span>
+        <span class="n">ss</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="o">*</span><span class="n">a1</span><span class="p">)</span>
+        <span class="n">uc4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
+    <span class="c1"># if there are no string identifiers we are done here</span>
+    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span><span class="ow">not</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc4</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">uc4</span>
+    <span class="c1"># (5) otherwise we need to translate column names to indices</span>
+    <span class="n">colnames</span> <span class="o">=</span> <span class="n">loadColumnNames</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">colnamesnum</span> <span class="o">=</span> <span class="p">[(</span><span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colnames</span><span class="p">)]</span>
+    <span class="n">colnamesfixed</span> <span class="o">=</span> <span class="n">_fixColumnNames</span><span class="p">(</span><span class="n">colnames</span><span class="p">)</span>
+    <span class="c1"># use the first matching column in case of repeated names.</span>
+    <span class="n">cnmtoidx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">colnamesnum</span><span class="p">))</span>
+    <span class="c1"># fixed names do not repeat so use them as they are.</span>
+    <span class="n">cnmtoidx</span><span class="o">.</span><span class="n">update</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colnamesfixed</span><span class="p">))</span>
+    <span class="n">uc5</span> <span class="o">=</span> <span class="p">[</span><span class="n">cnmtoidx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="k">if</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc4</span><span class="p">]</span>
+    <span class="c1"># any string items left are bad names</span>
+    <span class="n">badnames</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">uc5</span> <span class="k">if</span> <span class="n">isstr</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span>
+    <span class="k">if</span> <span class="n">badnames</span><span class="p">:</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;invalid column names: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">badnames</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="c1"># phew, done here.</span>
+    <span class="k">return</span> <span class="n">uc5</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_fixColumnNames</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove any parentheses and non-alphabetic symbols from a list of</span>
+<span class="sd">    names. Ensure the new list of names is still unique.</span>
+
+<span class="sd">    Return a new list of names.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">nameindices</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">mxpar</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[(][^)]*[)]&quot;</span><span class="p">)</span>
+    <span class="n">mxnoword</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\W&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">nm</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+        <span class="k">while</span> <span class="n">mxpar</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">nm</span><span class="p">):</span>
+            <span class="n">nm</span> <span class="o">=</span> <span class="n">mxpar</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nm</span><span class="p">)</span>
+        <span class="n">nm</span> <span class="o">=</span> <span class="n">mxnoword</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">nm</span><span class="p">)</span>
+        <span class="n">rv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nm</span><span class="p">)</span>
+        <span class="n">nameindices</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">nm</span><span class="p">,</span> <span class="p">[])</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">nm</span><span class="p">,</span> <span class="n">indices</span> <span class="ow">in</span> <span class="n">nameindices</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">indices</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+            <span class="n">rv</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_expandSliceItems</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Replace slice items in a list with corresponding indices.</span>
+
+<span class="sd">    When `size` is not specified, extract available *start* and</span>
+<span class="sd">    *stop* values to determine the necessary length of the sliced</span>
+<span class="sd">    array.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    lst : list</span>
+<span class="sd">        The list which may contain `slice` objects.</span>
+<span class="sd">    size : int, optional</span>
+<span class="sd">        The size of the iterable to be sliced.  When specified</span>
+<span class="sd">        expand slice objects to corresponding indices.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    lst2 : list</span>
+<span class="sd">        The new list with slice items expanded.  All other items</span>
+<span class="sd">        in the input list `lst` are passed unmodified.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">))</span> <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+            <span class="n">rv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="c1"># x is a slice here</span>
+        <span class="c1"># (1) expand indices when size is specified</span>
+        <span class="k">if</span> <span class="n">size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">+=</span> <span class="n">indices</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+            <span class="k">continue</span>
+        <span class="c1"># (2) otherwise extract known slice bounds</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">start</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">)</span>
+        <span class="c1"># keep it simple and process only positive x.stop</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">stop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">stop</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">step</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">step</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">stop</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="n">rv</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">twoThetaToQ</span><span class="p">(</span><span class="n">twotheta</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts an array from having values in Two-Theta to Q in</span>
+<span class="sd">    angstroms.</span>
+
+<span class="sd">    twotheta   -- An array of two-theta values in degrees</span>
+<span class="sd">    wavelength -- The wavelength of the x-ray beam that was used in Angstroms.</span>
+
+<span class="sd">    Returns an array of Q values in 1/A units.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span>
+
+    <span class="n">Q</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">twotheta</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span><span class="p">)</span> <span class="o">/</span> <span class="n">wavelength</span>
+    <span class="k">return</span> <span class="n">Q</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pylab_draw_show</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Same as calling pyplot draw and show functions.&quot;&quot;&quot;</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">bg_mpl_stylesheets.styles</span><span class="w"> </span><span class="kn">import</span> <span class="n">all_styles</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">all_styles</span><span class="p">[</span><span class="s2">&quot;bg-style&quot;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">unique_everseen</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a generator to unique ordered elements in an iterable.</span>
+
+<span class="sd">    iterable -- an iterable object</span>
+<span class="sd">    key      -- function that returns key for finding unique items.</span>
+<span class="sd">                Use the item value when None.</span>
+
+<span class="sd">    unique_everseen(&#39;AAAABBBCCDAABBB&#39;) --&gt; A B C D</span>
+<span class="sd">    unique_everseen(&#39;ABBCcAD&#39;, str.lower) --&gt; A B C D</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">element</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">key</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+            <span class="k">yield</span> <span class="n">element</span>
+    <span class="k">pass</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">isiterable</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True if object supports iteration protocol.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">iter</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">isfloat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True if string is convertible to float.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">isint</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True if string is convertible to int.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getbooleanorpass</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert value to a boolean or pass it when ignored.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    value : str, number, object</span>
+<span class="sd">        The value to be converted to `bool` or passed unchanged.</span>
+<span class="sd">    ignore : container or callable, optional</span>
+<span class="sd">        Specify values that should be passed unchanged.  When callable</span>
+<span class="sd">        pass the `value` as is when `ignore(value)` is true; otherwise</span>
+<span class="sd">        check ``value in ignore``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : bool or `value`</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        When `value` cannot be converted to `bool` and is not ignored.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># check if the value is ignored</span>
+    <span class="k">if</span> <span class="n">ignore</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">yesignore</span> <span class="o">=</span> <span class="n">ignore</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">ignore</span><span class="p">)</span> <span class="k">else</span> <span class="p">(</span><span class="n">value</span> <span class="ow">in</span> <span class="n">ignore</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">yesignore</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">value</span>
+    <span class="c1"># here we need to convert to bool</span>
+    <span class="k">if</span> <span class="n">isint</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">boolean_states</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;yes&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;true&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;on&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;false&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;off&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">boolean_states</span><span class="p">:</span>
+        <span class="n">emsg</span> <span class="o">=</span> <span class="s2">&quot;not a boolean: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">value</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">emsg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">boolean_states</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sortKeyNumericString</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function can be used as a key argument for sort to order</span>
+<span class="sd">    string items in numeric, rather than alphabetic order.</span>
+
+<span class="sd">    s    -- string entry</span>
+
+<span class="sd">    Return a key for comparison in sorting.  The string s is split at</span>
+<span class="sd">    integer segments that are then converted to integers.  Signs, decimal</span>
+<span class="sd">    points and exponents in s are ignored.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">sortKeyNumericString</span><span class="p">,</span> <span class="s2">&quot;rxdigits&quot;</span><span class="p">):</span>
+        <span class="n">sortKeyNumericString</span><span class="o">.</span><span class="n">rxdigits</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d+)&quot;</span><span class="p">)</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">sortKeyNumericString</span><span class="o">.</span><span class="n">rxdigits</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">rv</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">rv</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">asunicodepath</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert path to unicode if it has any non-ASCII characters.</span>
+
+<span class="sd">    f    -- file or directory path.  May be already unicode or a bytes</span>
+<span class="sd">            array.</span>
+
+<span class="sd">    Return f if it is already a unicode.  Otherwise decode it to unicode</span>
+<span class="sd">    using filesystem encoding.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">f</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getfilesystemencoding</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">rv</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">multi_delim_split</span><span class="p">(</span><span class="n">delims</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extend Python string splitting to splitting on multiple</span>
+<span class="sd">    delimiters.</span>
+
+<span class="sd">    delims -- an iterable of strings to be used as delimiters for splitting the</span>
+<span class="sd">              given string.</span>
+<span class="sd">    string -- the string to be split</span>
+
+<span class="sd">    Returns a list of strings identical to if str.split(delim) had been called</span>
+<span class="sd">    if specifying multiple delimiters in the arguments were supported.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">delim</span><span class="p">)</span> <span class="k">for</span> <span class="n">delim</span> <span class="ow">in</span> <span class="n">delims</span><span class="p">),</span> <span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, The Trustees of Columbia University in the City of New York.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

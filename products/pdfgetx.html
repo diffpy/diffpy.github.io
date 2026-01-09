@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PDFgetX3, PDFgetN3 and PDFgetS3 &#8212; DiffPy  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=158b04a8" />
     <script src="../_static/documentation_options.js?v=7f41d439"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/diffpy_logo_header.ico"/>
     <link rel="search" title="Search" href="../search.html" />
@@ -60,14 +60,15 @@
   <ul class="dropdown-menu menu01"
       role="menu"
       aria-labelledby="dLabelMenu01">
-      <li><a href="diffpycmi/index.html">DiffPy-CMI</a></li>
       <li><a href="xPDFsuite.html">xPDFsuite</a></li>
+      <li><a href="pdfgui.html">diffpy.pdfgui</a></li>
+      <li><a href="diffpycmi/index.html">diffpy.cmi</a></li>
+      <li><a href="morph.html">diffpy.morph</a></li>
+      <li><a href="labpdfproc.html">diffpy.labpdfproc</a></li>
+      <li><a href="mPDF.html">diffpy.mpdf</a></li>
       <li><a href="#">PDFgetX3, PDFgetN3 and PDFgetS3</a></li>
-      <li><a href="pdfgui.html">PDFgui</a></li>
-      <li><a href="SrMise.html">SrMise</a></li>
-      <li><a href="mPDF.html">mPDF</a></li>
       <li><a href="xinterpdf.html">xINTERPDF</a></li>
-      <li><a href="pythonpackages.html">Python Packages</a></li>
+      <li><a href="pythonpackages.html">Other Python Packages</a></li>
   </ul>
 </li>
 
@@ -94,21 +95,26 @@
       
   <section id="pdfgetx3-pdfgetn3-and-pdfgets3">
 <h1>PDFgetX3, PDFgetN3 and PDFgetS3<a class="headerlink" href="#pdfgetx3-pdfgetn3-and-pdfgets3" title="Link to this heading">¶</a></h1>
-<p>PDFgetX3, PDFgetN3 and PDFgetS3 are command-line utilities that
-for automated batch processing. PDFgetX3, PDFgetN3 and PDFgetS3 are easy to use, fast and convenient for automated batch processing. The interactive mode provides complete access to all
+<p>PDFgetX3, PDFgetN3 and PDFgetS3 are command-line utilities
+for automated batch processing of 1D powder diffraction data to obtain
+PDFs. For an affordable GUI that allows for high throughput conversion of
+multiple files with interactive graphics, please consider purchasing
+<a class="reference internal" href="xPDFsuite.html"><span class="doc">xPDFsuite</span></a>.
+A version of PDFgetX3 that processes electron diffraction data is available
+by contacting NanoMegas (see <a class="reference external" href="https://nanomegas.com/epdf/">here</a> for more details)</p>
+<p>PDFgetX3, PDFgetN3 and PDFgetS3 are easy to use, fast and convenient for automated batch processing. The interactive mode provides complete access to all
 parameters and intermediate results, as well as live-plotting feature
 that helps to tune conversion parameters and visualize their effect on the results.
 PDFgetX3, PDFgetN3 and PDFgetS3 are distributed together with
 Python library diffpy.pdfgetx, which provides the
 underlying PDF-processing functions and can be
 utilized in custom PDF-conversion scripts.</p>
+<p>User PDFgetX3 for converting x-ray data, PDFgetN3 for neutron data (designed
+for reactor data explicitly and not tested on neutron time-of-flight data), and
+PDFgetS3 for converting correlation functions from nanoparticle assemblies in
+small angle scattering data into superlattice assembly structures.</p>
 <p><em>The software is free for open academic research,
 but requires paid license for commercial use.</em></p>
-<p>PDFgetX3 is incorporated in the powerful end-to-end x-ray PDF analysis package
-<a class="reference internal" href="xPDFsuite.html"><span class="doc">xPDFsuite</span></a>.
-xPDFsuite is designed for flexible,
-high throughput PDF analyses and contains many features for interrogating, comparing and
-modeling data as well as simply doing data reduction.</p>
 <section id="download">
 <h2>Download<a class="headerlink" href="#download" title="Link to this heading">¶</a></h2>
 <p>The PDFgetX3, PDFgetN3 and PDFgetS3 software can be obtained for free from
@@ -116,27 +122,88 @@ modeling data as well as simply doing data reduction.</p>
 provided it will be used for open academic research
 (please cite the relevant paper below).
 If you plan to use the software in any other way, please contact
-<a class="reference external" href="mailto:techtransfer&#37;&#52;&#48;columbia&#46;edu">Beth Kauderer</a> at Columbia Technology Ventures.</p>
+<a class="reference external" href="mailto:techtransfer&#37;&#52;&#48;columbia&#46;edu">mailto:techtransfer<span>&#64;</span>columbia<span>&#46;</span>edu</a> at Columbia Technology Ventures.</p>
 <p>Use the following steps to obtain the academic license and download
 the software:</p>
 <ol class="arabic simple">
 <li><p>Open new browser window at the licensing page <a href="https://columbia.resoluteinnovation.com/technologies/M11-120" target="_blank">
 https://columbia.resoluteinnovation.com/technologies/M11-120</a>.</p></li>
-<li><p>Select “Express Licensing” from the navigation bar and
-then “Sign In To Continue”.</p></li>
-<li><p>Sign-In redirects to the top page.
-Search for <code class="docutils literal notranslate"><span class="pre">pdfgetx3</span></code> or <code class="docutils literal notranslate"><span class="pre">m11-120</span></code> to return
-to the licensing page again.</p></li>
-<li><p>Select “Express Licensing” again and choose
-“PDFgetX3 and PDFgetN3, Free Academic”.</p></li>
-<li><p>Submit the license request and wait for license confirmation email.</p></li>
-<li><p>The software will be under Top –&gt; More –&gt; “Manage Downloads” or just visit
-<a class="reference external" href="https://columbia.resoluteinnovation.com/downloads">https://columbia.resoluteinnovation.com/downloads</a>.</p></li>
+<li><p>Select “Request License”</p></li>
+<li><p>Click on the link for the free or paid license that is appropriate
+for your needs and situation</p></li>
+<li><p>Follow the link to sign in (or sign up if you don’t already have a login)</p></li>
+<li><p>Follow the prompts to submit the license request and wait for license confirmation email.
+Make a note of the URL so you can easily navigate back to this page.</p></li>
+<li><p>Once the license is approved, the download link on the product page will become live and
+you can download the software to your local computer.</p></li>
+<li><p>The download will be a zip file that contains versions of the software for all
+available Python versions and platforms.  Extract the files from the zip file, open
+<code class="docutils literal notranslate"><span class="pre">INSTRUCTIONS.txt</span></code> in a text editor and follow the instructions for installation.</p></li>
 </ol>
-<p>Sorry for the complicated process.  We hope you enjoy the software!</p>
 </section>
 <section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
+<section id="version-2-4-0-latest">
+<h3>Version 2.4.0 - Latest<a class="headerlink" href="#version-2-4-0-latest" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="../doc/pdfgetx/2.4.0/install.html">installation instructions</a></p></li>
+<li><p><a class="reference external" href="../doc/pdfgetx/2.4.0/index.html">user manual</a></p></li>
+<li><p><a class="reference external" href="../doc/pdfgetx/2.4.0/pdfgetxn3-examples.zip">tutorial files</a></p></li>
+</ul>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>New <code class="docutils literal notranslate"><span class="pre">transformterminationfunctions</span></code> infrastructure to allow non-trivial termination functions</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">Lorch</span></code> termination function option</p></li>
+<li><p>Description of terminationfunctions to docs</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Build docs using the correct scikit-package script name</p></li>
+<li><p>Reapply the Sphinx dependency <cite>m2r</cite> to <cite>m2r2</cite> fix that seems to have inadvertently been lost</p></li>
+</ul>
+</section>
+</section>
+<section id="previous-versions">
+<h2>Previous Versions<a class="headerlink" href="#previous-versions" title="Link to this heading">¶</a></h2>
+<p>Please reach out to <a class="reference external" href="mailto:techtransfer&#37;&#52;&#48;columbia&#46;edu">mailto:techtransfer<span>&#64;</span>columbia<span>&#46;</span>edu</a> if you need one of these versions</p>
+<section id="version-2-3-0">
+<h3>Version 2.3.0<a class="headerlink" href="#version-2-3-0" title="Link to this heading">¶</a></h3>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Support for Python 3.11, 3.12, 3.13.</p></li>
+<li><p>Added Cython build support.</p></li>
+<li><p>Added <cite>.gitattribute</cite> for github release export.</p></li>
+<li><p>Use bg-mpl-stylesheets as a style for matplotlib plots.</p></li>
+<li><p>test for the Q-array issue</p></li>
+<li><p>Added instructions in wheels bundle.</p></li>
+<li><p>Added <cite>pdfgetx3 –list-examples</cite> and <cite>pdfgetx3 –example</cite> commands to list available examples and copy example dir into pwd.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>Changed build process. Now build <cite>*.c</cite> sdist and c binary wheels for each platform and python version.</p></li>
+<li><p>Updated <code class="code docutils literal notranslate"><span class="pre">tuneconfig.py</span></code> to use the latest api from matplotlib.</p></li>
+<li><p>Renamed get_atol() to get_atol_from_rtol() in test_pdfgetter.py</p></li>
+<li><p>Standardized checking if a variable is an iterable.</p></li>
+<li><p>Removed <cite>docs/source</cite> directory and makefiles in installation.</p></li>
+<li><p>Changed <cite>twothetazerofit.ipy</cite> to output <cite>.png</cite> files instead of <cite>.pdf`and `.svgz</cite> files.</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Refactored code for prefer_nodisplay_backend and suppress warnings.</p></li>
+<li><p>Support scikit-package Level 5 standard (<a class="reference external" href="https://scikit-package.github.io/scikit-package/">https://scikit-package.github.io/scikit-package/</a>).</p></li>
+<li><p>Replaced <code class="code docutils literal notranslate"><span class="pre">setup.py</span></code> with <code class="code docutils literal notranslate"><span class="pre">pyproject.toml</span></code> for releases.</p></li>
+<li><p>Fixed example import errors <cite>diffpy.structure</cite> because of <cite>Structure</cite> deprecation.</p></li>
+<li><p>Fixed tutorial missing image file.</p></li>
+</ul>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Removed deprecated support for <cite>loadData</cite>, <cite>pdfgetxApplication.processFiles</cite>, <cite>pdfgetxApplication.clearSession</cite>, <cite>pdfgetxApplication.loadData</cite>.</p></li>
+<li><p>Removed unused <cite>.coveragerc</cite>, <cite>.gitarchive.cfg</cite>, <cite>.gitattributes</cite>.</p></li>
+<li><p>Support for Python 2.7, and Python &lt;= 3.10</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">six</span></code>, and other Py2 legacy code</p></li>
+<li><p>Removed pre-commit run in merge-to-main workflow</p></li>
+</ul>
+</section>
 <section id="version-2-2-1-latest">
 <h3>Version 2.2.1 - latest<a class="headerlink" href="#version-2-2-1-latest" title="Link to this heading">¶</a></h3>
 <ul class="simple">
@@ -227,6 +294,15 @@ diffraction data we ask you to also cite:</p>
 neutron powder diffraction data using ad hoc corrections</a>,
 <em>J. Appl. Crystallogr.</em>, <strong>51</strong>, 1492–1497 (2018)
 <a class="reference external" href="../doc/pdfgetx/Juhas-jac-2018.pdf"><img alt="downloadJuhasJac18" src="../_images/pdficon_small.png" /></a></p></li>
+</ul>
+<p>For publication that use this software to process small-angle
+scattering data we ask you to also cite:</p>
+<ul class="simple">
+<li><p>CH Liu, E. Janke, R. Li, P. Juhás, O. Gang, D. V. Talapin,
+S. J. L. Billinge,
+<a class="reference external" href="https://arxiv.org/abs/1910.08186">sasPDF: pair distribution function analysis of nanoparticle assemblies
+from small-angle-scattering data</a>.
+<a class="reference external" href="../doc/pdfgetx/Liu-jac-2020.pdf"><img alt="downloadLiuJac20" src="../_images/pdficon_small.png" /></a></p></li>
 </ul>
 </section>
 </section>

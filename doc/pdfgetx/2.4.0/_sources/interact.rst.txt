@@ -1,0 +1,154 @@
+Interactive mode
+========================================================================
+
+.. include:: abbreviations.txt
+.. program:: pdfgetx3
+.. py:currentmodule:: _interactive_
+
+The interactive mode is activated by using either the
+:option:`-i, --interact <-i>` option or a non-empty
+:option:`--plot <-p>` option.  In the interactive mode
+the program starts an `IPython`_ interactive shell and pre-loads several
+functions and variables related to the PDF calculation.  It also defines
+IPython commands ``%pdfgetx3`` and ``%pdfgetn3``, which can be used with
+the same syntax as the :program:`pdfgetx3` and :program:`pdfgetn3` in
+system shell.
+The interactive session is also initialized with all functions from the
+:py:mod:`matplotlib.pyplot` module for convenient plotting.
+The functions and variables related to PDF processing are:
+
+.. py:function:: pdfgetter(x=None, y=None, filename='', **kwargs)
+
+   Instance of the :py:class:`!PDFGetter` class which serves as a
+   low-level function that calculates the PDF.  This is a callable
+   object, which takes as an argument a pair of input arrays for
+   (*Q*, intensity) or (|twotheta|, intensity) depending on
+   :confval:`dataformat`.  It can be also called with a keyword
+   argument ``filename=FILE``, which would read the input arrays
+   from the specified file.  When called with no arguments,
+   it calculates PDF from the last input data.
+
+   :parameters:
+      * **x** (*numpy.ndarray, optional*) --
+        The *Q* or |twotheta| values in powder diffraction pattern.
+
+      * **y** (*numpy.ndarray, optional*) --
+        The scattered intensities in powder diffraction pattern
+
+      * **filename** (*str, optional*) --
+        The text data file for loading the `x`, `y` values when
+        they are not specified.
+
+      * **kwargs** (*misc, optional*) --
+        Extra keyword arguments that are applied to
+        the :data:`!config` object, for example ``qmax=20``.
+
+   :return:
+      A pair of output arrays *(r, G)*.
+
+.. interactvar:: config
+
+   Instance of the :py:class:`!PDFConfig` class that stores the
+   :ref:`parameters and input files <my-ioparameters>` for the program.
+   Use ``print(config)`` to display the current configuration values.
+   This is the same object as :data:`!pdfgetter.config`.  Configuration
+   may be changed by setting a respective attribute of the
+   :interactvar:`!config` object, for example::
+
+      In [1]: config.qmax = 21
+
+   The :py:data:`!config` values may be also changed by calling the
+   :py:func:`pdfgetter` or :py:func:`processfiles` function with a
+   corresponding keyword argument, for example
+   ``processfiles(qmax=20, force="once")``.
+
+.. interactvar:: iraw
+             iq
+             sq
+             fq
+             gr
+
+   These variables are assigned the input raw intensities and the
+   intermediate results, stored as matrix rows.  The matrix rows
+   correspond to twotheta1, intensity1, twotheta2, intensity2, etc.
+   Because matrices are iterated row first, the raw intensities
+   from all input files can be plotted with the matplotlib plot
+   function as ``plot(*iraw)``.
+
+   These variables should be considered read-only and are reset
+   with subsequent PDF calculations.
+
+.. py:function:: tuneconfig(plotids=None, pdfgetter=None, axeslist=None)
+
+   Show a GUI dialog for interactive tuning of configuration variables.
+
+   :arg plotids:
+      The string or iterable that specify what interactive plots should be
+      tuned.  By default the same as ``config.plot``.  It can be also an
+      integer index or name of a transformation in :py:func:`pdfgetter` or
+      a reference to a :py:class:`!Transformation` object.
+
+   :arg pdfgetter:
+      The optional :py:class:`!PDFGetter` object to be tuned.
+      This is by default the interactive :py:func:`!pdfgetter` object.
+
+   :arg axeslist:
+      An optional list of matplotlib Axes for showing interactive plots.
+      When None, use ``subplot(N, 1, i)`` to create any necessary axes.
+
+   .. note::
+
+      Changes from :py:func:`!tuneconfig` apply only to the configuration
+      and results in memory.  Use the :py:func:`processfiles` function
+      to save them to disk.
+
+   .. seealso:: :ref:`my-tuneconfig` tutorial
+
+.. py:function:: processfiles(filename=None, **kwargs)
+
+   Process all input files again with the current configuration values.
+   This is a higher-level function than :py:func:`pdfgetter`, as
+   it also saves output files and produces plots as specified by the
+   :interactvar:`config` object.
+
+   :arg filename:
+      One or more input files to be converted to PDFs and saved or
+      plotted according to the :py:data:`!config` settings.  Use the
+      previous list of input files when not specified.
+
+   :arg kwargs:
+      An optional keyword arguments to set for the :py:data:`!config`
+      object, for example ``(force="once", qmax=18)``.
+
+   This function updates the :interactvar:`config.inputfiles <config>`
+   list and the :interactvar:`iraw`, :interactvar:`iq`,
+   :interactvar:`sq`, :interactvar:`fq` and :interactvar:`gr`
+   interactive variables.
+
+.. py:function:: clearsession()
+
+   Clear all elements from the :interactvar:`config.inputfiles <config>`
+   and also the
+   :interactvar:`iraw`, :interactvar:`iq`, :interactvar:`sq`,
+   :interactvar:`fq` and :interactvar:`gr` variables.
+
+   :return:
+      No return value.
+
+.. py:currentmodule:: diffpy.pdfgetx
+.. autofunction:: loaddata
+
+   This function can be imported from the
+   :py:mod:`!diffpy.pdfgetx` module.
+
+.. py:currentmodule:: diffpy.pdfgetx.plotdata
+.. autofunction:: plotdata
+
+   This function can be imported from the
+   :py:mod:`!diffpy.pdfgetx.plotdata` module.
+
+.. py:currentmodule:: diffpy.pdfgetx
+.. autofunction:: findfiles
+
+   This function can be imported from the
+   :py:mod:`!diffpy.pdfgetx` module.
