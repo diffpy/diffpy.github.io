@@ -19,7 +19,7 @@ The program is distributed under the BSD License.
 	1. Wenduo Zhou, Peng Tian, Yingrui Shang, Christopher L. Farrow, P. Juhas and S. J. L. Billinge, 
 	To be published.
 
-  For more information please visit the project web-page: `http://www.diffpy.org/ <http://www.diffpy.org/>`_ or email Prof. Simon Billinge at sb2896@@columbia.edu
+  For more information please visit the project web-page: `http://www.diffpy.org/ <http://www.diffpy.org/>`_ or email Prof. Simon Billinge at sbillinge@ucsb.edu
 
 * Current version of SrRietveld makes use of the FullProf and GSAS Rietveld refinement engine. If you use this program, as well as citing the paper above, please kindly acknowledge use of FullProf and/or GSAS by citing the following to instruction paper FullProf and/or GSAS: 
 

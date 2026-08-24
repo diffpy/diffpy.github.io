@@ -111,6 +111,6 @@ or instructions on subscription and posting.
 
 `srrietveld-dev <http://groups.google.com/group/srrietveld-dev>`_
 Please share your comments, desires and suggestions with the developers 
-by posting to the Diffpy developers' forum, or by emailing Simon Billinge (sb2896@columbia.edu).
+by posting to the Diffpy developers' forum, or by emailing Simon Billinge (sbillinge@ucsb.edu).
 Since we are in the alpha-testing phase there are no user community pages. 
 

@@ -16,7 +16,7 @@ Current version of SrRietveld makes use of the FullProf and GSAS Rietveld refine
     
     A. C. Larson and R. B. Von Dreele, General Structure Analysis System(GSAS), Los Alamos National Laboratory Report, LAUR 86-748, (2004).
 
-For more information please visit the project web-page: http://www.diffpy.org/ or email Prof. Simon Billinge at sb2896@columbia.edu.
+For more information please visit the project web-page: http://www.diffpy.org/ or email Prof. Simon Billinge at sbillinge@ucsb.edu.
 
 
 Copyright 2007, Board of Trustees of Michigan State University, Copyright 2008-2010, Board of Trustees of Columbia University in the city of New York.  (Copyright holder indicated in each source file).

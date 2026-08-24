@@ -84,10 +84,11 @@ posting to the DiffPy developers' forum.
 Contact Us
 ===========
 
-   | Professor Simon Billinge
-   | Applied Physics and Applied Mathematics Department
-   | The Fu Foundation School of Engineering and Applied Science
-   | 200 S. W. Mudd Building
-   | MC 4701, 500 W. 120th Street
-   | New York, NY 10027
-   | email: sb2896@columbia.edu
+   | Simon Billinge
+   | Distinguished Professor
+   | Director of California Nanosystems Institute
+   | Materials Department
+   | Engineering II Building, 1355
+   | University of California, Santa Barbara
+   | Santa Barbara, CA 93106-5050
+   | email: sbillinge@ucsb.edu
